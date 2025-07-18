@@ -53,6 +53,14 @@
 					"codePoints": ["U+0061", "U+007A"],
 					"range": [97, 122]
 				},
+				"𓆛𓆟": {
+					"codes": "𓆛𓆜𓆝𓆞𓆟",
+					"name": "Fish 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+1319B", "U+1319F"],
+					"range": [7963, 7967]
+				},				
 				"𓅷𓅽":{
 					"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
 					"name": "Birds 1",
