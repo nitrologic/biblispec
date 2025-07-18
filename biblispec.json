@@ -76,7 +76,16 @@
 					"category": "Nd",
 					"codePoints": ["U+130C9", "U+130D1"],
 					"range": [7881, 7889]
-				}
+				},
+				"𓍢𓍪": {
+					"codes": "𓍢𓍣𓍤𓍥𓍦𓍧𓍨𓍩𓍪",
+					"name": "Tens",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13362", "U+1336A"],
+					"range": [78690, 78698],
+					"usage": "Hieroglyphic numerals representing multiples of ten"
+				}				
 			}
 		}
 	}
