@@ -4,6 +4,9 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 see [biblispec.json](biblispec.json)
 
+This project is a work in progress - [some notes](notes.txt).
+
+
 # Egyptian Hieroglyphs
 
 Reconnect with the ancient written language of the Egyptians.
@@ -16,8 +19,8 @@ Unicode version 5.2
 
 # Latest Additions
 
-# Women 𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩"
-# Eyes 𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀"
+# Women 𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩
+# Eyes 𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀
 # Fish 𓆛𓆜𓆝𓆞𓆟
 # Birds 𓅷𓅸𓅹𓅺𓅻𓅼𓅽
 # Animals 𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽
@@ -100,4 +103,3 @@ and the entire unicode block of interest
 
 To Be Continued
 
-see also [notes.txt](notes.txt)
