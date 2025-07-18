@@ -19,9 +19,27 @@
 			"description": "Unicode Character Database",
 			"features": "Selected codepoint sequences from Unicode blocks.",
 			"data": {
+				"ascii": {
+					"codes": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+					"name": "ASCII",
+					"block": "Basic Latin",
+					"category": "Multiple",
+					"codePoints": ["U+0020", "U+007E"],
+					"range": [32, 126],
+					"usage": "Printable characters from the American Standard Code for Information Interchange (ASCII)"
+				},
+				"09": {
+					"codes": "0123456789",
+					"name": "Decimal Digits",
+					"block": "Basic Latin",
+					"category": "Nd",
+					"codePoints": ["U+0030", "U+0039"],
+					"range": [48, 57],
+					"usage": "Numeric digits for decimal notation"
+				},
 				"AZ": {
 					"codes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-					"name": "LATIN UPPER CASE",
+					"name": "Latin Upper Case",
 					"block": "Basic Latin",
 					"category": "Lu",
 					"codePoints": ["U+0041", "U+005A"],
@@ -29,7 +47,7 @@
 				},
 				"az": {
 					"codes": "abcdefghijklmnopqrstuvwxyz",
-					"name": "LATIN LOWER CASE",
+					"name": "Latin Lower Case",
 					"block": "Basic Latin",
 					"category": "Ll",
 					"codePoints": ["U+0061", "U+007A"],
@@ -37,11 +55,20 @@
 				},
 				"𓅷𓅽":{
 					"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
-					"name": "Hieroglyph Birds 1",
+					"name": "Birds 1",
 					"block": "Egyptian Hieroglyphs",
 					"category": "So",
 					"codePoints": ["U+13037", "U+1303D"],
 					"range": [7783, 7789]
+				},
+				"𓃒𓃽":{
+					"codes":"𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽",
+					"name": "Animals 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+130D2", "U+130FE"],
+					"range": [7890, 7934],
+					"usage": "Egyptian hieroglyphs representing various animals"
 				}
 			}
 		}
