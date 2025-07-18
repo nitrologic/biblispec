@@ -17,13 +17,13 @@ Unicode version 5.2
 
 see [notes.txt](notes.txt)
 
-# A hall of mirrors
+# A big block of Unicode
 
-All are not left facing - a collecition of mirrored souls is collected
+All are not left facing - mirrored souls under observation
 
 ## 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
 
-# the entire unicode block
+and the entire unicode block of interest
 
 # U+1300x	𓀀	𓀁	𓀂	𓀃	𓀄	𓀅	𓀆	𓀇	𓀈	𓀉	𓀊	𓀋	𓀌	𓀍	𓀎	𓀏
 # U+1301x	𓀐	𓀑	𓀒	𓀓	𓀔	𓀕	𓀖	𓀗	𓀘	𓀙	𓀚	𓀛	𓀜	𓀝	𓀞	𓀟
