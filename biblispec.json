@@ -1,0 +1,41 @@
+{
+	"name": "bibli",
+	"description": "Bibliographic index of specifications",
+	"copyright": "2025 Simon Armstrong",
+	"version": "1.0.0",
+	"date": "2025-07-19T04:20:00+12:00",
+	"repository":{
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"bibli": {
+		"unicode": {
+			"name": "Unicode",
+			"version": "15.1",
+			"description": "Unicode Character Database",
+			"features": "Selected codepoint sequences from Unicode blocks.",
+			"data": {
+				"AZ": {
+					"codes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+					"name": "LATIN UPPER CASE",
+					"block": "Basic Latin",
+					"category": "Lu",
+					"codePoints": ["U+0041", "U+005A"],
+					"range": [65, 90]
+				},
+				"az": {
+					"codes": "abcdefghijklmnopqrstuvwxyz",
+					"name": "LATIN LOWER CASE",
+					"block": "Basic Latin",
+					"category": "Ll",
+					"codePoints": ["U+0061", "U+007A"],
+					"range": [97, 122]
+				}
+			}
+		}
+	}
+}
