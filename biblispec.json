@@ -75,7 +75,8 @@
 					"block": "Egyptian Hieroglyphs",
 					"category": "Nd",
 					"codePoints": ["U+130C9", "U+130D1"],
-					"range": [7881, 7889]
+					"range": [7881, 7889],
+					"usage": "Hieroglyphic numerals"
 				},
 				"𓍢𓍪": {
 					"codes": "𓍢𓍣𓍤𓍥𓍦𓍧𓍨𓍩𓍪",
@@ -94,6 +95,15 @@
 					"codePoints": ["U+13406", "U+1340E"],
 					"range": [78854, 78862],
 					"usage": "Hieroglyphic numerals representing multiples of one hundred"
+				},
+				"𓁐𓁩": {
+					"codes": "𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩",
+					"name": "Women and Female Figures 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13050", "U+13069"],
+					"range": [7784, 7801],
+					"usage": "Hieroglyphic women and female figures"
 				}
 			}
 		}
