@@ -60,7 +60,7 @@
 					"category": "So",
 					"codePoints": ["U+1319B", "U+1319F"],
 					"range": [7963, 7967]
-				},				
+				},
 				"𓅷𓅽":{
 					"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
 					"name": "Birds 1",
@@ -112,6 +112,15 @@
 					"codePoints": ["U+13050", "U+13069"],
 					"range": [7784, 7801],
 					"usage": "Hieroglyphic women and female figures"
+				},
+				"𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀": {
+					"codes": "𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀",
+					"name": "Eyes",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13079","U+13080"],
+					"range": [49241, 49248],
+					"usage": "Hieroglyphic eyes"
 				}
 			}
 		}
