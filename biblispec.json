@@ -67,8 +67,15 @@
 					"block": "Egyptian Hieroglyphs",
 					"category": "So",
 					"codePoints": ["U+130D2", "U+130FE"],
-					"range": [7890, 7934],
-					"usage": "Egyptian hieroglyphs representing various animals"
+					"range": [7890, 7934]
+				},
+				"𓃉𓃑": {
+					"codes": "𓃉𓃊𓃋𓃌𓃍𓃎𓃏𓃐𓃑",
+					"name": "Dots",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+130C9", "U+130D1"],
+					"range": [7881, 7889]
 				}
 			}
 		}
