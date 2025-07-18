@@ -4,8 +4,7 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 see [biblispec.json](biblispec.json)
 
-
-## Egyptian Hieroglyphs
+# Egyptian Hieroglyphs
 
 Reconnect with the ancient written language of the Egyptians.
 
@@ -15,13 +14,19 @@ Separating 1072 hiero glyphic codepoints.
 
 Unicode version 5.2
 
-see [notes.txt](notes.txt)
+# Latest Additions
+
+# Women 𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩"
+# Eyes 𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀"
+# Fish 𓆛𓆜𓆝𓆞𓆟
+# Birds 𓅷𓅸𓅹𓅺𓅻𓅼𓅽
+# Animals 𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽
 
 # A big block of Unicode
 
 All are not left facing - mirrored souls under observation
 
-## 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
+# 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
 
 and the entire unicode block of interest
 
@@ -94,3 +99,5 @@ and the entire unicode block of interest
 # U+1342x	𓐠	𓐡	𓐢	𓐣	𓐤	𓐥	𓐦	𓐧	𓐨	𓐩	𓐪	𓐫	𓐬	𓐭	𓐮	𓐯
 
 To Be Continued
+
+see also [notes.txt](notes.txt)
