@@ -85,7 +85,16 @@
 					"codePoints": ["U+13362", "U+1336A"],
 					"range": [78690, 78698],
 					"usage": "Hieroglyphic numerals representing multiples of ten"
-				}				
+				},
+				"𓎆𓎎": {
+					"codes": "𓎆𓎇𓎈𓎉𓎊𓎋𓎌𓎍𓎎",
+					"name": "Hundreds",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13406", "U+1340E"],
+					"range": [78854, 78862],
+					"usage": "Hieroglyphic numerals representing multiples of one hundred"
+				}
 			}
 		}
 	}
