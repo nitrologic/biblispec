@@ -13,6 +13,19 @@
 		"url": "https://opensource.org/licenses/MIT"
 	},
 	"bibli": {
+		"pheme":{
+			"pre62": {
+				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
+				"nature13": "aero agro eco entom ichthyo litho meteo morpho myco nepho paleo zoo zo",
+				"body12": "angio cardio dermato gastro hemato histo neuro noso odonto osteo phreno",
+				"human11": "anthro archaeo biblio bio crimino dem ethno onco orni psycho socio",
+				"meta8": "astro eno philo pomo theo vexillo"
+			},
+			"suff27":{
+				"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
+				"etc13": "al ance ence ese ism ity oid ous ty ure y archy pathy"
+			}
+		},
 		"unicode": {
 			"name": "Unicode",
 			"version": "15.1",

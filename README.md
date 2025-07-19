@@ -1,11 +1,41 @@
-# biblispec.json
+# bibli spec
 
 A bibliographic index of specifications including Unicode codepoints of interest.
 
-see [biblispec.json](biblispec.json)
+* word building
+* unicode blocks
 
-This project is a work in progress - [some notes](notes.txt).
+# bibli
 
+Is in json format.
+
+[biblispec.json](biblispec.json)
+
+[json format](https://www.json.org/json-en.html)
+
+This project is a work in progress.
+
+[some notes](notes.txt).
+
+# pheme word building
+
+```
+		"pheme":{
+			"pre62": {
+				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
+				"nature13": "aero agro eco entom ichthyo litho meteo morpho myco nepho paleo zoo zo",
+				"body12": "angio cardio dermato gastro hemato histo neuro noso odonto osteo phreno",
+				"human11": "anthro archaeo biblio bio crimino dem ethno onco orni psycho socio",
+				"meta8": "astro eno philo pomo theo vexillo"
+			},
+			"suff27":{
+				"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
+				"etc13": "al ance ence ese ism ity oid ous ty ure y archy pathy"
+			}
+		},
+```
+
+----
 
 # Egyptian Hieroglyphs
 
@@ -17,21 +47,27 @@ Separating 1072 hiero glyphic codepoints.
 
 Unicode version 5.2
 
-# Latest Additions
+### bibli.unicode.data
+Women
+# 𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩
+Eyes
+# 𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀
+Fish
+# 𓆛𓆜𓆝𓆞𓆟
+Birds
+# 𓅷𓅸𓅹𓅺𓅻𓅼𓅽
+Animals
+# 𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽
 
-# Women 𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩
-# Eyes 𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀
-# Fish 𓆛𓆜𓆝𓆞𓆟
-# Birds 𓅷𓅸𓅹𓅺𓅻𓅼𓅽
-# Animals 𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽
+----
 
-# A big block of Unicode
+# Digging into big blocks of Unicode
 
 All are not left facing - mirrored souls under observation
 
 # 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
 
-and the entire unicode block of interest
+# The entire unicode block of interest
 
 # U+1300x	𓀀	𓀁	𓀂	𓀃	𓀄	𓀅	𓀆	𓀇	𓀈	𓀉	𓀊	𓀋	𓀌	𓀍	𓀎	𓀏
 # U+1301x	𓀐	𓀑	𓀒	𓀓	𓀔	𓀕	𓀖	𓀗	𓀘	𓀙	𓀚	𓀛	𓀜	𓀝	𓀞	𓀟
