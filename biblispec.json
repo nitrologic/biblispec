@@ -1,16 +1,16 @@
 {
-	"name": "bibli",
+	"name": "biblispec",
 	"description": "Bibliographic index of specifications",
 	"copyright": "2025 Simon Armstrong",
-	"version": "1.0.1",
-	"date": "2025-07-19T04:20:00+12:00",
-	"repository":{
-		"type": "git",
-		"url": "https://github.com/nitrologic/biblispec"
-	},
+	"version": "1.0.3",
+	"date": "2025-07-20T04:20:00+12:00",
 	"license": {
 		"name": "MIT",
 		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository":{
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
 		"pheme":{
@@ -26,12 +26,61 @@
 				"etc13": "al ance ence ese ism ity oid ous ty ure y archy pathy"
 			}
 		},
+		"coptic": {
+			"name": "Coptic",
+			"description": "Final stage of Egyptian, written with Greek-derived script",
+			"alphabet": {
+				"lower": "ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ",
+				"upper": "ⲀⲂⲄⲆⲈⲊⲌⲎⲐⲒⲔⲖⲘⲚⲜⲞⲠⲢⲤⲦⲨⲪⲮⲰ",
+				"extras": "ϢϤϦϨϪϬϮ"
+			}
+		},
+		"greek": {
+			"name": "Greek",
+			"description": "Greek linguistic roots and Unicode characters",
+			"alphabet": {
+				"lower": "αβγδεζηθικλμνξοπρστυφχψω",
+				"upper": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
+				"uncommon": "ϝϛϟϡϣϥϧϩϫϭϯϰϱϲϳ"
+			},
+			"lingua": {
+				"core": "lexis glossa onoma logos morphe phone rhema sema gramma",
+				"verbs": "gno grapho lego logo mne poie phero",
+				"concepts": "aletheia arete chaos chronos demos ethos kosmos mimesis psyche techne",
+				"ends": {
+					"abstract": "ia isis ma osis sis mos",
+					"agent": "tes ter tor tris",
+					"state": "ma syne teia",
+					"diminutive": "ion iskos idion"
+				}
+			}
+		},
+		"latin": {
+			"name": "Latin",
+			"description": "Latin linguistic roots and Unicode characters",
+			"alphabet": {
+				"lower": "abcdefghijklmnopqrstuvwxyz",
+				"upper": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+				"uncommon": "ÆæŒœÞþÐðƷʒȜȝ"
+			},
+			"lingua": {
+				"core": "verbum nomen ratio vox forma scriptum",
+				"verbs": "ago dico facio scribo video voco",
+				"concepts": "veritas virtus tempus lex ars scientia",
+				"ends": {
+					"noun": "us a um io ix io",
+					"verb": "are ere ire ior",
+					"abstract": "tio io tas men",
+					"agent": "tor trix or"
+				}
+			}
+		},
 		"unicode": {
 			"name": "Unicode",
 			"version": "15.1",
 			"description": "Unicode Character Database",
 			"features": "Selected codepoint sequences from Unicode blocks.",
-			"data": {
+			"lexis": {
 				"ascii": {
 					"codes": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
 					"name": "ASCII",
