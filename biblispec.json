@@ -2,7 +2,7 @@
 	"name": "bibli",
 	"description": "Bibliographic index of specifications",
 	"copyright": "2025 Simon Armstrong",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"date": "2025-07-19T04:20:00+12:00",
 	"repository":{
 		"type": "git",
@@ -12,7 +12,7 @@
 		"name": "MIT",
 		"url": "https://opensource.org/licenses/MIT"
 	},
-	"bibli": {
+	"spec": {
 		"pheme":{
 			"pre62": {
 				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
