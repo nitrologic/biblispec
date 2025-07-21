@@ -5,7 +5,27 @@ A bibliographic index of specifications including Unicode codepoints of interest
 * word building
 * unicode blocks
 
-# bibli
+# fountain dump
+
+	[BIBLI] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	[BIBLI] pheme pre61 suff28
+	[BIBLI] hebrew name description alphabet lingua
+	[BIBLI] alphabet: {"lower":"אבגדהוזחטיכלמנסעפצקרשת","upper":"אבגדהוזחטיכלמנסעפצקרשת","uncommon":"ךםןףץ"}
+	[BIBLI] coptic name description alphabet
+	[BIBLI] alphabet: {"lower":"ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ","upper":"ⲀⲂⲄⲆⲈⲊⲌⲎⲐⲒⲔⲖⲘⲚⲜⲞⲠⲢⲤⲦⲨⲪⲮⲰ","extras":"ϢϤϦϨϪϬϮ"}
+	[BIBLI] greek name description alphabet lingua
+	[BIBLI] alphabet: {"lower":"αβγδεζηθικλμνξοπρστυφχψω","upper":"ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ","uncommon":"ϝϛϟϡϣϥϧϩϫϭϯϰϱϲϳ"}
+	[BIBLI] latin name description alphabet lingua
+	[BIBLI] alphabet: {"lower":"abcdefghijklmnopqrstuvwxyz","upper":"ABCDEFGHIJKLMNOPQRSTUVWXYZ","uncommon":"ÆæŒœÞþÐðƷʒȜȝ"}
+	[BIBLI] reo name description alphabet
+	[BIBLI] alphabet: {"lower":"aāeēhikmnoprtuw","upper":"AĀEĒHIKMNOPRTUW","uncommon":""}
+	[BIBLI] unicode name version description features lexis
+	[BIBLI] lexis: ascii 09 AZ az 𓆛𓆟 𓄰𓄱 𓄲𓄷 𓅷𓅽 𓃒𓃽 𓃉𓃑 𓍢𓍪 𓎆𓎎 𓆼𓇄 𓐄𓐌 𓁐𓁩 𓁹𓂀 𓂁𓂇 ♈♓
+	[BIBLI] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	[BIBLI] Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ
+	[BIBLI] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# biblispec.json
 
 Is in json format.
 
