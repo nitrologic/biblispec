@@ -1,6 +1,6 @@
 {
 	"name": "biblispec",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -15,6 +15,30 @@
 	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
+		"scales":{
+			"name":"Common Practice Tonality",
+			"tuning":"12-TET",
+			"tags": ["equal tempered","music scale"],
+			"major":{
+				"degrees":["tonic","supertonic","mediant","subdominant","dominant","submediant","leading"],
+				"intervals":[0,2,4,5,7,9,11]
+			},
+			"minor":{
+				"degrees":["tonic","supertonic","mediant","subdominant","dominant","submediant","subtonic"],
+				"forms":{
+					"melodic":[0,2,3,5,7,9,11,12,10,8,7,5,3,2,0]},
+					"harmonic":[0,2,3,5,7,8,11],
+					"aeolian":[0,2,3,5,7,8,10]
+				}
+			},
+			"blues": {
+				"degrees": ["tonic", "minor third", "perfect fourth", "diminished fifth", "perfect fifth", "minor seventh"],
+				"intervals": [0,3,5,6,7,10]
+			},
+			"chromatic":{
+				"intervals": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+			}
+		},
 		"pheme":{
 			"pre61": {
 				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
