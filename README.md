@@ -1,4 +1,9 @@
-# bibli spec
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![JSON Data](https://img.shields.io/badge/Data-JSON-%23f5de19?logo=json)](https://www.json.org)
+
+A living document of linguistic latitude.
+
+# What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
 
@@ -8,11 +13,11 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 > a grimoire of human communication - 🐋 deepseek-chat
 
-# biblispec.json
+# About the biblispec.json file
 
-Is in json format.
+The data payload for this project is [biblispec.json](biblispec.json)
 
-[biblispec.json](biblispec.json)
+The file is in json format where no comments allowed = careful attention to structure
 
 [json format](https://www.json.org/json-en.html)
 
@@ -44,7 +49,7 @@ This project is a work in progress.
 
 The bibli project was begun to provide a source of truth for [Slop Fountain](https://github.com/nitrologic).
 
-	[BIBLI] 
+	[BIBLI]
 	[BIBLI] pheme pre61 suff28
 	[BIBLI] hebrew name description alphabet lingua
 	[BIBLI] alphabet: {"lower":"אבגדהוזחטיכלמנסעפצקרשת","upper":"אבגדהוזחטיכלמנסעפצקרשת","uncommon":"ךםןףץ"}
@@ -58,7 +63,7 @@ The bibli project was begun to provide a source of truth for [Slop Fountain](htt
 	[BIBLI] alphabet: {"lower":"aāeēhikmnoprtuw","upper":"AĀEĒHIKMNOPRTUW","uncommon":""}
 	[BIBLI] unicode name version description features lexis
 	[BIBLI] lexis: ascii 09 AZ az 𓆛𓆟 𓄰𓄱 𓄲𓄷 𓅷𓅽 𓃒𓃽 𓃉𓃑 𓍢𓍪 𓎆𓎎 𓆼𓇄 𓐄𓐌 𓁐𓁩 𓁹𓂀 𓂁𓂇 ♈♓
-	[BIBLI] 
+	[BIBLI]
 	[BIBLI] Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ
 	[BIBLI] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
