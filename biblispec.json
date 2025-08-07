@@ -1,6 +1,6 @@
 {
 	"name": "biblispec",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -348,6 +348,48 @@
 					"category": "So",
 					"codePoints": ["U+2800","U+28FF"],
 					"range": [10240, 10495]
+				},
+				"ＡＺ":{
+					"name": "Fullwidth Latin",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes":"ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
+					"category": "Lu",
+					"codePoints": ["U+FF21", "U+FF3A"],
+					"range": [65313, 65338]
+				},
+				"ａｚ": {
+					"name": "Fullwidth Latin Lower Case",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"],
+					"category": "Ll",
+					"codePoints": ["U+FF41", "U+FF5A"],
+					"range": [65345, 65370]
+				},
+				"０９": {
+					"name": "Fullwidth Digits",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["０１２３４５６７８９"],
+					"category": "Nd",
+					"codePoints": ["U+FF10", "U+FF19"],
+					"range": [65296, 65305]
+				},
+				"！～": {
+					"name": "Fullwidth ASCII Punctuation and Symbols",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～",
+					"category": "Multiple",
+					"codePoints": ["U+FF01", "U+FF5E"],
+					"range": [65281, 65374],
+					"usage": "Fullwidth versions of ASCII punctuation and symbols for East Asian scripts"
+				},
+				"㊀㊉": {
+					"name": "CJK Enclosed Digits",
+					"block": "CJK Symbols and Punctuation",
+					"codes": "㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉",
+					"category": "So",
+					"codePoints": ["U+3280", "U+3289"],
+					"range": [12928, 12937],
+					"usage": "Circled digits for East Asian scripts"
 				}
 			}
 		}
