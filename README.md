@@ -25,6 +25,19 @@ This project is a work in progress.
 
 [some notes](notes.txt).
 
+
+# Recent additions
+
+## CJK Enclosed Digits
+
+# ㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ ㊉
+
+
+## Fullwidth Latin
+
+# ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ
+
+
 # pheme word building
 
 ```
