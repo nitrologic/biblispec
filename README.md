@@ -35,10 +35,15 @@ This project is a work in progress.
 
 ## Fullwidth Latin
 
-# ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ
+# ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
+# ＰＱＲＳＴＵＶＷＸＹＺ０１２３
+# ４５６７８９ａｂｃｄｅｆｇｈｉ
+# ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘ
+# ｙｚ！＂＃＄％＆＇（）＊＋，－
+# ．／：；＜＝＞？＠［＼］＾＿｀
+# ｛｜｝～
 
-
-# pheme word building
+## pheme word building
 
 ```
 		"pheme":{
