@@ -27,6 +27,47 @@ This project is a work in progress.
 
 # Recent additions
 
+## Ogham
+
+Ogham, an ancient Irish script, embodies the mystique of Celtic heritage and early written communication:
+
+# ᚁ ᚂ ᚃ ᚄ ᚅ 
+# ᚆ ᚇ ᚈ ᚉ ᚊ 
+# ᚋ ᚌ ᚍ ᚎ ᚏ
+
+# ᚐ ᚑ ᚒ ᚓ ᚔ
+# ᚕ ᚖ ᚗ ᚘ ᚙ ᚚ
+
+Attributed to the mythical figure Ogma, the Celtic god of eloquence and learning
+Primarily inscribed on stone monuments in Ireland and western Britain (4th–9th centuries CE)
+Known as the "Celtic tree alphabet" due to letter names tied to trees and nature
+
+### Cultural Impact
+
+Used for Old Irish inscriptions, often memorials or boundary markers on Ogham stones
+Reflects early Celtic oral traditions, linking language to the natural world
+Revived in modern times for neo-pagan practices, art, and Irish cultural identity
+Inspires contemporary designs in jewelry, tattoos, and calligraphy
+
+### The System
+
+20 primary letters (feda) in four aicmí (groups of five), with strokes or notches relative to a central line (flesc)
+Five additional forfeda for diphthongs and later sounds
+Typically read bottom-to-top on stone edges, though manuscripts show horizontal writing
+Represents consonants and vowels, tailored to the phonetics of Old Irish
+Cultural Preservation
+Preserves early Irish language and genealogy, with ~400 surviving inscriptions
+Documented in medieval texts like the Ogam Tract in the Book of Ballymote
+Symbolizes Celtic resilience and connection to nature in modern Irish culture
+Used in education and cultural programs to teach about ancient Irish heritage
+Unicode ImplementationThe Ogham block (U+1680-U+169F) includes:
+20 primary letters (ᚁ–ᚔ) for Old Irish phonemes
+Five forfeda (ᚕ–ᚚ) for extended sounds
+
+> Ogham stands as a testament to Ireland’s ancient literary tradition, bridging mythology, nature, and language.
+
+> fountain 1.3.5 ⛲ grok-3 🌐
+
 ## Cherokee
 
 The Cherokee syllabary represents a remarkable achievement in linguistic innovation and cultural
@@ -69,10 +110,9 @@ The Cherokee block (U+13A0-U+13FF) includes:
 - Modern additions for contemporary Cherokee writing
 - Both the traditional and modern forms used by the Cherokee Nation
 
-This represents not just a writing system, but a powerful symbol of indigenous innovation and
-cultural resilience. 
+> This represents not just a writing system, but a powerful symbol of indigenous innovation and cultural resilience. 
 
-- fountain 1.3.5 ⛲  claude-sonnet-4 🌐 
+> fountain 1.3.5 ⛲  claude-sonnet-4 🌐 
 
 ## CJK Enclosed Digits
 

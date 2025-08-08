@@ -57,6 +57,28 @@
 				"etc14": "al ance ence ese ism ity oid ous ty ure y archy pathy phile"
 			}
 		},
+		"phoenician": {
+			"name": "Phoenician",
+			"description": "Ancient Semitic abjad used by the Phoenicians for trade and inscriptions, precursor to Hebrew, Greek, and Latin alphabets, written right-to-left.",
+			"alphabet": {
+				"letters": {
+					"codes": "𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕",
+					"name": "Phoenician Letters",
+					"block": "Phoenician",
+					"category": "Lo",
+					"codePoints": ["U+10900", "U+1091F"],
+					"range": [67840, 67871],
+					"usage": "Consonantal alphabet for the Phoenician language, used in Mediterranean inscriptions."
+				}
+			},
+			"lingua": {
+				"core": "alef bet gimel dalet he waw zayin het",
+				"verbs": "ktb (write), qn (acquire), bny (build)",
+				"concepts": "yam (sea), mlk (king), bt (house)",
+				"notes": "Abjad system with 22 consonants; no vowel notation. Influenced Greek and subsequent alphabets."
+			},
+			"tags": ["semitic", "abjad", "phoenician", "mediterranean", "alphabetic", "ancient"]
+		},
 		"hebrew": {
 			"name": "Hebrew",
 			"description": "Semitic script, abjad layout with Unicode vowel points",
@@ -420,6 +442,10 @@
 				"ᎠᏛ": {
 					"name": "Cherokee Syllabary",
 					"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛ"
+				},
+				"ᚁᚚ":{
+					"name":"Ogham",
+					"codes":"ᚁᚂᚃᚄᚅᚆᚇᚈᚉᚊᚋᚌᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ"
 				}
 			}
 		}
