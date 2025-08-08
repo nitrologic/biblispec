@@ -1,6 +1,6 @@
 {
 	"name": "biblispec",
-	"version": "1.0.9",
+	"version": "1.1.0",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -390,6 +390,22 @@
 					"codePoints": ["U+3280", "U+3289"],
 					"range": [12928, 12937],
 					"usage": "Circled digits for East Asian scripts"
+				},
+				"①⑳":{
+					"name":"Enclosed Digits",
+					"codes":"①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+					"category": "No",
+					"codePoints": ["U+2460", "U+2473"],
+					"range": [9312, 9331],
+					"usage": "Circled digits 1-20 for lists and numbering"
+				},
+				"㊊㊏":{
+					"name":"Moon and Five Elements - Wu Xing cosmology",
+					"codes":"㊊㊋㊌㊍㊎㊏",
+					"category": "So",
+					"codePoints": ["U+328A", "U+328F"],
+					"range": [12938, 12943],
+					"usage": "Moon, Fire, Water, Wood, Metal, Earth"
 				}
 			}
 		}
