@@ -227,7 +227,7 @@
 							"range": ["U+1D468", "U+1D49B"]
 						},
 						"script": {
-							"upper": "𝒜𝒞𝒟𝒢𝒥𝒦𝒩𝒪𝒫𝒬𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵",
+							"upper": "𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵",
 							"lower": "𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃",
 							"range": ["U+1D49C", "U+1D4CF", "U+1D4EA", "U+1D503"]
 						},
@@ -479,13 +479,13 @@
 					"range": [9312, 9331],
 					"usage": "Circled digits 1-20 for lists and numbering"
 				},
-				"㊊㊏":{
-					"name":"Moon and Five Elements - Wu Xing cosmology",
-					"codes":"㊊㊋㊌㊍㊎㊏",
+				"㊊㊐":{
+					"name":"Moon Five Elements and Sun - Wu Xing cosmology",
+					"codes":"㊊㊋㊌㊍㊎㊏㊐",
 					"category": "So",
 					"codePoints": ["U+328A", "U+328F"],
 					"range": [12938, 12943],
-					"usage": "Moon, Fire, Water, Wood, Metal, Earth"
+					"usage": "Moon, Fire, Water, Wood, Metal, Earth, Sun"
 				},
 				"ᚠᛪ": {
 					"name": "Runic",
