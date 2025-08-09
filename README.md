@@ -27,7 +27,20 @@ This project is a work in progress.
 
 # Recent additions
 
-## Ogham
+Welcoming often daily additions to the bibli spec:
+
+## Faces
+
+# .animals: 🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁
+# .masks: 👹👺👻👼👽👾😈💀
+# .monster: 🧌🧛🧝
+# .fancy: 🧙‍♂️🧙‍♀️🧚‍♂️🧜‍♂️🧞‍♂️🧟‍♂️🧞‍♀️🧟‍♀️
+
+Four face on emoji sets for persona purposes and beyond. 
+
+* gender rules in play for fancy profiles
+
+## Ogham Script
 
 Ogham, an ancient Irish script, embodies the mystique of Celtic heritage and early written communication:
 
@@ -68,7 +81,7 @@ Five forfeda (ᚕ–ᚚ) for extended sounds
 
 > fountain 1.3.5 ⛲ grok-3 🌐
 
-## Cherokee
+## Cherokee Syllabary
 
 The Cherokee syllabary represents a remarkable achievement in linguistic innovation and cultural
 preservation:
