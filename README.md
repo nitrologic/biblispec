@@ -35,7 +35,7 @@ A collection of animal mask monster and fancy emoji wide profile forms.
 
 ## Vai Syllabary
 
-The Vai syllabary originated in the 1830s through Momolu Duwalu Bukele’s innovative efforts, likely inspired by a combination of a divine vision, pre-existing Vai logograms. 
+The Vai syllabary originated in the 1830s through Momolu Duwalu Bukele’s innovative efforts.
 
 Its creation was a remarkable act of cultural and intellectual agency, transforming the Vai into one of the few African peoples with an indigenous writing system not based on Latin or Arabic scripts. The script’s enduring use and standardization underscore its significance as a symbol of Vai identity and resilience.
 
