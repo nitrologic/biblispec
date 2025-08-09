@@ -1,6 +1,6 @@
 {
 	"name": "biblispec",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -497,10 +497,10 @@
 					"usage": "Runic characters used in ancient Germanic and Scandinavian inscriptions",
 					"tags": ["runes", "germanic", "scandinavian", "ancient script"]
 				},
-				"ᎠᏛ": {
+				"ᎠᏯ": {
 					"name": "Cherokee Syllabary",
 					"creator": "Sequoyah",
-					"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛ"
+					"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯ"
 				},
 				"ᚁᚚ":{
 					"name":"Ogham",

@@ -27,6 +27,47 @@ This project is a work in progress.
 
 # Recent additions
 
+## Cherokee
+
+# Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ Ꭶ Ꭷ Ꭸ Ꭹ Ꭺ Ꭻ Ꭼ Ꭽ Ꭾ Ꭿ
+# Ꮀ Ꮁ Ꮂ Ꮃ Ꮄ Ꮅ Ꮆ Ꮇ Ꮈ Ꮉ Ꮊ Ꮋ Ꮌ Ꮍ
+# Ꮎ Ꮏ Ꮐ Ꮑ Ꮒ Ꮓ Ꮔ Ꮕ Ꮖ Ꮗ Ꮘ Ꮙ Ꮚ
+# Ꮛ Ꮜ Ꮝ Ꮞ Ꮟ Ꮠ Ꮡ Ꮢ Ꮣ Ꮤ Ꮥ Ꮦ Ꮧ Ꮨ Ꮩ
+# Ꮪ Ꮫ Ꮬ Ꮭ Ꮮ Ꮯ Ꮰ Ꮱ Ꮲ Ꮳ Ꮴ Ꮵ Ꮶ Ꮷ Ꮸ
+# Ꮹ Ꮺ Ꮻ Ꮼ Ꮽ Ꮾ Ꮿ
+
+- Created by Sequoyah (also known as George Gist), a Cherokee silversmith who was monolingual in Cherokee
+- Developed independently without knowledge of how other writing systems worked
+- One of the few writing systems created by a single person in recorded history
+
+Cultural Impact
+- Transformed Cherokee society almost overnight - literacy rates soared
+- Enabled the Cherokee Nation to publish newspapers, legal documents, and literature
+- The Cherokee Phoenix (1828) was the first Native American newspaper
+- Used for official Cherokee Nation documents and the Cherokee Constitution
+
+The System
+- 85 characters representing syllables (not individual sounds like alphabets)
+- Based on Cherokee spoken language structure where syllables are the natural units
+- Incorporates some modified Latin letters but with completely different phonetic values
+- Each symbol represents a consonant-vowel combination or standalone vowel
+
+Cultural Preservation
+- Helped maintain Cherokee language during periods of forced assimilation
+- Used to preserve traditional stories, songs, and cultural knowledge
+- Today still used in Cherokee language education and cultural programs
+- Symbol of Cherokee intellectual sovereignty and resistance to cultural erasure
+
+Unicode Implementation
+The Cherokee block (U+13A0-U+13FF) includes:
+- Original syllabary characters
+- Modern additions for contemporary Cherokee writing
+- Both the traditional and modern forms used by the Cherokee Nation
+
+> This represents not just a writing system, but a powerful symbol of indigenous innovation and cultural resilience. 
+
+> fountain 1.3.5 ⛲  claude-sonnet-4 🌐 
+
 ## Vai Syllabary
 
 > creator : Momolu Duwalu Bukele
@@ -79,52 +120,6 @@ Five forfeda (ᚕ–ᚚ) for extended sounds
 > Ogham stands as a testament to Ireland’s ancient literary tradition, bridging mythology, nature, and language.
 
 > fountain 1.3.5 ⛲ grok-3 🌐
-
-## Cherokee
-
-The Cherokee syllabary represents a remarkable achievement in linguistic innovation and cultural
-preservation:
-
-# ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯ
-# ᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽ
-# ᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊ
-# ᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙ
-# ᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨ
-# ᏩᏪᏫᏬᏭᏮᏯᏀᏁᏂᏃᏄᏅᏆ
-# ᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓ
-# ᏔᏕᏖᏗᏘᏙᏚᏛ
-
-- Created by Sequoyah (also known as George Gist), a Cherokee silversmith who was monolingual in Cherokee
-- Developed independently without knowledge of how other writing systems worked
-- One of the few writing systems created by a single person in recorded history
-
-Cultural Impact
-- Transformed Cherokee society almost overnight - literacy rates soared
-- Enabled the Cherokee Nation to publish newspapers, legal documents, and literature
-- The Cherokee Phoenix (1828) was the first Native American newspaper
-- Used for official Cherokee Nation documents and the Cherokee Constitution
-
-The System
-- 85 characters representing syllables (not individual sounds like alphabets)
-- Based on Cherokee spoken language structure where syllables are the natural units
-- Incorporates some modified Latin letters but with completely different phonetic values
-- Each symbol represents a consonant-vowel combination or standalone vowel
-
-Cultural Preservation
-- Helped maintain Cherokee language during periods of forced assimilation
-- Used to preserve traditional stories, songs, and cultural knowledge
-- Today still used in Cherokee language education and cultural programs
-- Symbol of Cherokee intellectual sovereignty and resistance to cultural erasure
-
-Unicode Implementation
-The Cherokee block (U+13A0-U+13FF) includes:
-- Original syllabary characters
-- Modern additions for contemporary Cherokee writing
-- Both the traditional and modern forms used by the Cherokee Nation
-
-> This represents not just a writing system, but a powerful symbol of indigenous innovation and cultural resilience. 
-
-> fountain 1.3.5 ⛲  claude-sonnet-4 🌐 
 
 ## CJK Enclosed Digits
 
