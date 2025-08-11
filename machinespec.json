@@ -362,6 +362,22 @@
 						"styles": ["emotional", "accented"],
 						"regions": ["British", "American"]
 				}
+			},
+			"coqui": {
+					"homepage": "https://coqui.ai",
+					"voices": [
+							"LJSpeech", "VCTKp225", "VCTKp228", "VCTKp229", "VCTKp230",
+							"VCTKp231", "VCTKp232", "VCTKp233", "VCTKp234", "VCTK_p236"
+					],
+					"languages": {
+							"en-US": ["LJSpeech", "VCTK_p225"],
+							"fr-FR": ["VCTK_p228"],
+							"ja-JP": ["VCTK_p229"]
+					},
+					"metadata": {
+							"styles": ["neural", "customizable"],
+							"regions": ["open-source flexibility"]
+					}
 			}
 		}
 	}
