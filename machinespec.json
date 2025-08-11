@@ -68,247 +68,300 @@
 		},
 		"AI-voices": {
 			"gpt": {
-			"homepage": "https://openai.com",
-			"voices": ["alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"],
-			"languages": {
-				"en-US": ["alloy", "nova"],
-				"fr-FR": ["echo", "fable"],
-				"ja-JP": ["sage", "verse"]
-			},
-			"metadata": {
-				"styles": ["conversational", "narrative"],
-				"regions": ["American", "European", "Asian"]
-			}
+				"homepage": "https://openai.com",
+				"voices": ["alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"],
+				"languages": {
+					"en-US": ["alloy", "nova"],
+					"fr-FR": ["echo", "fable"],
+					"ja-JP": ["sage", "verse"]
+				},
+				"metadata": {
+					"styles": ["conversational", "narrative"],
+					"regions": ["American", "European", "Asian"]
+				}
 			},
 			"gemini": {
-			"homepage": "https://gemini.google.com",
-			"voices": [
-				"Zephyr", "Puck", "Charon", "Kore", "Fenrir", "Leda", "Orus", "Aoede",
-				"Callirrhoe", "Autonoe", "Enceladus", "Iapetus", "Umbriel", "Algieba", "Despina", "Erinome",
-				"Algenib", "Rasalgethi", "Laomedeia", "Achernar", "Alnilam", "Schedar", "Gacrux", "Pulcherrima",
-				"Achird", "Zubenelgenubi", "Vindemiatrix", "Sadachbia", "Sadaltager", "Sulafat"
-			],
-			"languages": {
-				"en-US": ["Zephyr", "Puck"],
-				"fr-FR": ["Charon", "Kore"],
-				"ja-JP": ["Aoede", "Callirrhoe"],
-				"hi-IN": ["Algieba", "Despina"],
-				"pt-BR": ["Erinome", "Algenib"]
-			},
-			"metadata": {
-				"styles": ["expressive", "formal", "conversational"],
-				"regions": ["American", "European", "Indian", "Latin American"]
-			}
+				"homepage": "https://gemini.google.com",
+				"voices": [
+					"Zephyr", "Puck", "Charon", "Kore", "Fenrir", "Leda", "Orus", "Aoede",
+					"Callirrhoe", "Autonoe", "Enceladus", "Iapetus", "Umbriel", "Algieba", "Despina", "Erinome",
+					"Algenib", "Rasalgethi", "Laomedeia", "Achernar", "Alnilam", "Schedar", "Gacrux", "Pulcherrima",
+					"Achird", "Zubenelgenubi", "Vindemiatrix", "Sadachbia", "Sadaltager", "Sulafat"
+				],
+				"languages": {
+					"en-US": ["Zephyr", "Puck"],
+					"fr-FR": ["Charon", "Kore"],
+					"ja-JP": ["Aoede", "Callirrhoe"],
+					"hi-IN": ["Algieba", "Despina"],
+					"pt-BR": ["Erinome", "Algenib"]
+				},
+				"metadata": {
+					"styles": ["expressive", "formal", "conversational"],
+					"regions": ["American", "European", "Indian", "Latin American"]
+				}
 			},
 			"amazon": {
-			"homepage": "https://aws.amazon.com/polly",
-			"voices": [
-				"Zeina", "Hala", "Zayd", "Lisa", "Arlet", "Jitka", "Hiujin", "Zhiyu", "Naja", "Mads", "Sofie",
-				"Laura", "Lotte", "Ruben", "Nicole", "Olivia", "Russell", "Amy", "Emma", "Brian", "Arthur",
-				"Aditi", "Raveena", "Kajal", "Niamh", "Aria", "Jasmine", "Ayanda", "Danielle", "Gregory", "Ivy",
-				"Joanna", "Kendra", "Kimberly", "Salli", "Joey", "Justin", "Kevin", "Matthew", "Ruth", "Stephen",
-				"Patrick", "Geraint", "Suvi", "Céline", "Léa", "Mathieu", "Rémi", "Isabelle", "Chantal", "Gabrielle",
-				"Liam", "Marlene", "Vicki", "Hans", "Daniel", "Hannah", "Sabrina", "Dóra", "Karl", "Carla", "Bianca",
-				"Giorgio", "Adriano", "Mizuki", "Takumi", "Kazuha", "Tomoko", "Seoyeon", "Jihye", "Liv", "Ida",
-				"Ewa", "Maja", "Jacek", "Jan", "Ola", "Camila", "Vitória", "Ricardo", "Thiago", "Inês", "Cristiano",
-				"Carmen", "Tatyana", "Maxim", "Conchita", "Lucia", "Alba", "Enrique", "Sergio", "Raúl", "Mia",
-				"Andrés", "Lupe", "Penélope", "Miguel", "Pedro", "Astrid", "Elin", "Filiz", "Burcu", "Gwyneth"
-			],
-			"languages": {
-				"en-US": ["Joanna", "Matthew"],
-				"fr-FR": ["Léa", "Mathieu"],
-				"ja-JP": ["Mizuki", "Takumi"],
-				"hi-IN": ["Aditi", "Kajal"],
-				"pt-BR": ["Camila", "Vitória"]
-			},
-			"metadata": {
-				"styles": ["conversational", "formal", "newsreader"],
-				"regions": ["American", "British", "Indian", "European", "African"]
-			}
+				"homepage": "https://aws.amazon.com/polly",
+				"voices": [
+					"Zeina", "Hala", "Zayd", "Lisa", "Arlet", "Jitka", "Hiujin", "Zhiyu", "Naja", "Mads", "Sofie",
+					"Laura", "Lotte", "Ruben", "Nicole", "Olivia", "Russell", "Amy", "Emma", "Brian", "Arthur",
+					"Aditi", "Raveena", "Kajal", "Niamh", "Aria", "Jasmine", "Ayanda", "Danielle", "Gregory", "Ivy",
+					"Joanna", "Kendra", "Kimberly", "Salli", "Joey", "Justin", "Kevin", "Matthew", "Ruth", "Stephen",
+					"Patrick", "Geraint", "Suvi", "Céline", "Léa", "Mathieu", "Rémi", "Isabelle", "Chantal", "Gabrielle",
+					"Liam", "Marlene", "Vicki", "Hans", "Daniel", "Hannah", "Sabrina", "Dóra", "Karl", "Carla", "Bianca",
+					"Giorgio", "Adriano", "Mizuki", "Takumi", "Kazuha", "Tomoko", "Seoyeon", "Jihye", "Liv", "Ida",
+					"Ewa", "Maja", "Jacek", "Jan", "Ola", "Camila", "Vitória", "Ricardo", "Thiago", "Inês", "Cristiano",
+					"Carmen", "Tatyana", "Maxim", "Conchita", "Lucia", "Alba", "Enrique", "Sergio", "Raúl", "Mia",
+					"Andrés", "Lupe", "Penélope", "Miguel", "Pedro", "Astrid", "Elin", "Filiz", "Burcu", "Gwyneth"
+				],
+				"languages": {
+					"en-US": ["Joanna", "Matthew"],
+					"fr-FR": ["Léa", "Mathieu"],
+					"ja-JP": ["Mizuki", "Takumi"],
+					"hi-IN": ["Aditi", "Kajal"],
+					"pt-BR": ["Camila", "Vitória"]
+				},
+				"metadata": {
+					"styles": ["conversational", "formal", "newsreader"],
+					"regions": ["American", "British", "Indian", "European", "African"]
+				}
 			},
 			"azure": {
-			"homepage": "https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech",
-			"voices": [
-				"Jenny", "Guy", "Aria", "Davis", "Amber", "Ashley", "Brandon", "Christopher", "Cora", "Elizabeth",
-				"Eric", "Jacob", "Jason", "Michelle", "Monica", "Nancy", "Sara", "Ava", "Emma",
-				"Xiaoxiao", "Yunyang", "Xiaohan", "Yunxi", "Liwen", "Yunjian", "Xiaoxuan", "Yunhao",
-				"Natasha", "James", "Libby", "Olivia", "Thomas", "Sophie", "Luc", "Isabelle",
-				"Antoine", "Colette", "Claude", "Denise", "Henri", "Anu", "Arnav", "Kalpana", "Neerja",
-				"Sonia", "Ananya", "Hiroshi", "Daichi", "Mayu", "Nanami", "Keita", "Hyunsu", "BongJin",
-				"InJoon", "GookMin", "JiMin", "SeoHyeon", "SoonBok", "YuJin", "Elena", "Pablo",
-				"Catalina", "Manuel", "Dalia", "Luna", "Juan", "Valentina", "Salma", "Yara"
-			],
-			"languages": {
-				"en-US": ["Jenny", "Guy"],
-				"fr-FR": ["Denise", "Henri"],
-				"ja-JP": ["Nanami", "Keita"],
-				"hi-IN": ["Neerja", "Ananya"],
-				"pt-BR": ["Francisca", "Thiago"]
-			},
-			"metadata": {
-				"styles": ["conversational", "expressive", "professional"],
-				"regions": ["American", "European", "Asian", "Latin American"]
-			}
+				"homepage": "https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech",
+				"voices": [
+					"Jenny", "Guy", "Aria", "Davis", "Amber", "Ashley", "Brandon", "Christopher", "Cora", "Elizabeth",
+					"Eric", "Jacob", "Jason", "Michelle", "Monica", "Nancy", "Sara", "Ava", "Emma",
+					"Xiaoxiao", "Yunyang", "Xiaohan", "Yunxi", "Liwen", "Yunjian", "Xiaoxuan", "Yunhao",
+					"Natasha", "James", "Libby", "Olivia", "Thomas", "Sophie", "Luc", "Isabelle",
+					"Antoine", "Colette", "Claude", "Denise", "Henri", "Anu", "Arnav", "Kalpana", "Neerja",
+					"Sonia", "Ananya", "Hiroshi", "Daichi", "Mayu", "Nanami", "Keita", "Hyunsu", "BongJin",
+					"InJoon", "GookMin", "JiMin", "SeoHyeon", "SoonBok", "YuJin", "Elena", "Pablo",
+					"Catalina", "Manuel", "Dalia", "Luna", "Juan", "Valentina", "Salma", "Yara"
+				],
+				"languages": {
+					"en-US": ["Jenny", "Guy"],
+					"fr-FR": ["Denise", "Henri"],
+					"ja-JP": ["Nanami", "Keita"],
+					"hi-IN": ["Neerja", "Ananya"],
+					"pt-BR": ["Francisca", "Thiago"]
+				},
+				"metadata": {
+					"styles": ["conversational", "expressive", "professional"],
+					"regions": ["American", "European", "Asian", "Latin American"]
+				}
 			},
 			"elevenlabs": {
-			"homepage": "https://elevenlabs.io",
-			"voices": [
-				"Adam", "Antoni", "Arnold", "Bella", "Charlotte", "Clyde", "Domi", "Dorothy", "Elli",
-				"Emily", "George", "Giovanni", "Grace", "James", "Josh", "Lily", "Matilda", "Michael",
-				"Nicole", "Rachel", "Sam", "Sarah", "Thomas", "William"
-			],
-			"languages": {
-				"en-US": ["Adam", "Bella"],
-				"fr-FR": ["Charlotte", "Josh"],
-				"ja-JP": ["Emily", "Michael"],
-				"hi-IN": ["Grace"],
-				"pt-BR": ["Rachel", "Sam"]
-			},
-			"metadata": {
-				"styles": ["realistic", "narrative", "expressive"],
-				"regions": ["American", "British", "European"]
-			}
+				"homepage": "https://elevenlabs.io",
+				"voices": [
+					"Adam", "Antoni", "Arnold", "Bella", "Charlotte", "Clyde", "Domi", "Dorothy", "Elli",
+					"Emily", "George", "Giovanni", "Grace", "James", "Josh", "Lily", "Matilda", "Michael",
+					"Nicole", "Rachel", "Sam", "Sarah", "Thomas", "William"
+				],
+				"languages": {
+					"en-US": ["Adam", "Bella"],
+					"fr-FR": ["Charlotte", "Josh"],
+					"ja-JP": ["Emily", "Michael"],
+					"hi-IN": ["Grace"],
+					"pt-BR": ["Rachel", "Sam"]
+				},
+				"metadata": {
+					"styles": ["realistic", "narrative", "expressive"],
+					"regions": ["American", "British", "European"]
+				}
 			},
 			"ibm_watson": {
-			"homepage": "https://www.ibm.com/cloud/watson-text-to-speech",
-			"voices": [
-				"en-US_MichaelV3Voice", "en-US_AllisonV3Voice", "en-US_LisaV3Voice", "en-US_KevinV3Voice",
-				"en-US_EmilyV3Voice", "en-US_HenryV3Voice", "en-GB_KateV3Voice", "en-GB_CharlotteV3Voice",
-				"en-GB_JamesV3Voice", "en-AU_CraigV2Voice", "en-AU_MadisonV2Voice", "es-ES_EnriqueV3Voice",
-				"es-ES_LauraV3Voice", "es-LA_SofiaV3Voice", "fr-FR_ReneeV3Voice", "fr-FR_NicolasV3Voice",
-				"de-DE_BirgitV3Voice", "de-DE_DieterV3Voice", "it-IT_FrancescaV3Voice", "ja-JP_EmiV3Voice"
-			],
-			"languages": {
-				"en-US": ["MichaelV3Voice", "AllisonV3Voice"],
-				"fr-FR": ["ReneeV3Voice", "NicolasV3Voice"],
-				"ja-JP": ["EmiV3Voice"],
-				"pt-BR": ["IsabelV3Voice"]
-			},
-			"metadata": {
-				"styles": ["conversational", "formal"],
-				"regions": ["American", "British", "European", "Latin American"]
-			}
+				"homepage": "https://www.ibm.com/cloud/watson-text-to-speech",
+				"voices": [
+					"en-US_MichaelV3Voice", "en-US_AllisonV3Voice", "en-US_LisaV3Voice", "en-US_KevinV3Voice",
+					"en-US_EmilyV3Voice", "en-US_HenryV3Voice", "en-GB_KateV3Voice", "en-GB_CharlotteV3Voice",
+					"en-GB_JamesV3Voice", "en-AU_CraigV2Voice", "en-AU_MadisonV2Voice", "es-ES_EnriqueV3Voice",
+					"es-ES_LauraV3Voice", "es-LA_SofiaV3Voice", "fr-FR_ReneeV3Voice", "fr-FR_NicolasV3Voice",
+					"de-DE_BirgitV3Voice", "de-DE_DieterV3Voice", "it-IT_FrancescaV3Voice", "ja-JP_EmiV3Voice"
+				],
+				"languages": {
+					"en-US": ["MichaelV3Voice", "AllisonV3Voice"],
+					"fr-FR": ["ReneeV3Voice", "NicolasV3Voice"],
+					"ja-JP": ["EmiV3Voice"],
+					"pt-BR": ["IsabelV3Voice"]
+				},
+				"metadata": {
+					"styles": ["conversational", "formal"],
+					"regions": ["American", "British", "European", "Latin American"]
+				}
 			},
 			"deepgram": {
-			"homepage": "https://deepgram.com",
-			"voices": [
-				"Luna", "Orion", "Stella", "Atlas", "Nova", "Phoenix", "Aurora", "Elara",
-				"Cassian", "Lyra", "Mira", "Vega", "Aster", "Zoe", "Finn"
-			],
-			"languages": {
-				"en-US": ["Luna", "Orion"],
-				"fr-FR": ["Stella", "Finn"],
-				"ja-JP": ["Mira", "Vega"]
-			},
-			"metadata": {
-				"styles": ["natural", "expressive"],
-				"regions": ["American", "European"]
-			}
+				"homepage": "https://deepgram.com",
+				"voices": [
+					"Luna", "Orion", "Stella", "Atlas", "Nova", "Phoenix", "Aurora", "Elara",
+					"Cassian", "Lyra", "Mira", "Vega", "Aster", "Zoe", "Finn"
+				],
+				"languages": {
+					"en-US": ["Luna", "Orion"],
+					"fr-FR": ["Stella", "Finn"],
+					"ja-JP": ["Mira", "Vega"]
+				},
+				"metadata": {
+					"styles": ["natural", "expressive"],
+					"regions": ["American", "European"]
+				}
 			},
 			"speechify": {
-			"homepage": "https://speechify.com",
-			"voices": [
-				"Alex", "Samantha", "Ethan", "Olivia", "Snoop", "Gwyneth", "Cliff", "Nora",
-				"Tyler", "Ava", "Sophia", "Henry", "Emma", "Liam", "Isabella"
-			],
-			"languages": {
-				"en-US": ["Alex", "Samantha"],
-				"fr-FR": ["Nora", "Liam"],
-				"ja-JP": ["Henry"],
-				"hi-IN": ["Isabella"],
-				"pt-BR": ["Tyler", "Sophia"]
-			},
-			"metadata": {
-				"styles": ["celebrity", "conversational", "narrative"],
-				"regions": ["American", "European", "Indian"]
-			}
+				"homepage": "https://speechify.com",
+				"voices": [
+					"Alex", "Samantha", "Ethan", "Olivia", "Snoop", "Gwyneth", "Cliff", "Nora",
+					"Tyler", "Ava", "Sophia", "Henry", "Emma", "Liam", "Isabella"
+				],
+				"languages": {
+					"en-US": ["Alex", "Samantha"],
+					"fr-FR": ["Nora", "Liam"],
+					"ja-JP": ["Henry"],
+					"hi-IN": ["Isabella"],
+					"pt-BR": ["Tyler", "Sophia"]
+				},
+				"metadata": {
+					"styles": ["celebrity", "conversational", "narrative"],
+					"regions": ["American", "European", "Indian"]
+				}
 			},
 			"wellsaid": {
-			"homepage": "https://www.wellsaidlabs.com",
-			"voices": [
-				"Ava M", "Liam W", "Sophie R", "Noah T", "Emma S", "James C", "Olivia P",
-				"Mason L", "Isabella G", "Ethan B", "Aria H", "Lucas K", "Amelia N", "Jacob D"
-			],
-			"languages": {
-				"en-US": ["Ava M", "Liam W"],
-				"fr-FR": ["Sophie R"]
-			},
-			"metadata": {
-				"styles": ["professional", "conversational"],
-				"regions": ["American", "European"]
-			}
+				"homepage": "https://www.wellsaidlabs.com",
+				"voices": [
+					"Ava M", "Liam W", "Sophie R", "Noah T", "Emma S", "James C", "Olivia P",
+					"Mason L", "Isabella G", "Ethan B", "Aria H", "Lucas K", "Amelia N", "Jacob D"
+				],
+				"languages": {
+					"en-US": ["Ava M", "Liam W"],
+					"fr-FR": ["Sophie R"]
+				},
+				"metadata": {
+					"styles": ["professional", "conversational"],
+					"regions": ["American", "European"]
+				}
 			},
 			"playht": {
-			"homepage": "https://play.ht",
-			"voices": [
-				"William", "Frederick", "Lottie", "Clark", "Amy", "Brian", "Emma", "Matthew",
-				"Olivia", "James", "Sophia", "Daniel"
-			],
-			"languages": {
-				"en-US": ["William", "Amy"],
-				"fr-FR": ["Frederick", "Lottie"],
-				"ja-JP": ["Clark", "Emma"],
-				"hi-IN": ["Sophia", "Daniel"],
-				"pt-BR": ["Olivia", "James"]
-			},
-			"metadata": {
-				"styles": ["confident", "formal", "newsreader", "energetic", "conversational"],
-				"regions": ["American", "British", "Australian", "Indian"]
-			}
+				"homepage": "https://play.ht",
+				"voices": [
+					"William", "Frederick", "Lottie", "Clark", "Amy", "Brian", "Emma", "Matthew",
+					"Olivia", "James", "Sophia", "Daniel"
+				],
+				"languages": {
+					"en-US": ["William", "Amy"],
+					"fr-FR": ["Frederick", "Lottie"],
+					"ja-JP": ["Clark", "Emma"],
+					"hi-IN": ["Sophia", "Daniel"],
+					"pt-BR": ["Olivia", "James"]
+				},
+				"metadata": {
+					"styles": ["confident", "formal", "newsreader", "energetic", "conversational"],
+					"regions": ["American", "British", "Australian", "Indian"]
+				}
 			},
 			"murf": {
-			"homepage": "https://murf.ai",
-			"voices": [
-				"Albert", "Alice", "David", "Emma", "Grace", "Henry", "Ivy", "Jack",
-				"Kara", "Leo", "Mia", "Noah"
-			],
-			"languages": {
-				"en-US": ["Albert", "Emma"],
-				"fr-FR": ["David", "Grace"],
-				"ja-JP": ["Henry", "Ivy"],
-				"hi-IN": ["Jack", "Kara"],
-				"pt-BR": ["Leo", "Mia"]
-			},
-			"metadata": {
-				"styles": ["young adult", "middle-aged", "children", "narrator", "deep", "sad", "angry"],
-				"regions": ["American", "British", "Indian", "European"]
-			}
+				"homepage": "https://murf.ai",
+				"voices": [
+					"Albert", "Alice", "David", "Emma", "Grace", "Henry", "Ivy", "Jack",
+					"Kara", "Leo", "Mia", "Noah"
+				],
+				"languages": {
+					"en-US": ["Albert", "Emma"],
+					"fr-FR": ["David", "Grace"],
+					"ja-JP": ["Henry", "Ivy"],
+					"hi-IN": ["Jack", "Kara"],
+					"pt-BR": ["Leo", "Mia"]
+				},
+				"metadata": {
+					"styles": ["young adult", "middle-aged", "children", "narrator", "deep", "sad", "angry"],
+					"regions": ["American", "British", "Indian", "European"]
+				}
 			},
 			"lovo": {
-			"homepage": "https://lovo.ai",
-			"voices": [
-				"Aaron", "Bella", "Carlos", "Diana", "Ethan", "Fiona", "Gabriel", "Hannah",
-				"Ian", "Jasmine", "Kyle", "Luna"
-			],
-			"languages": {
-				"en-US": ["Aaron", "Bella"],
-				"fr-FR": ["Carlos", "Diana"],
-				"ja-JP": ["Ethan", "Fiona"],
-				"hi-IN": ["Gabriel", "Hannah"],
-				"pt-BR": ["Ian", "Jasmine"]
-			},
-			"metadata": {
-				"styles": ["expressive", "emotional", "conversational", "professional"],
-				"regions": ["American", "British", "Latin American", "Asian"]
-			}
+				"homepage": "https://lovo.ai",
+				"voices": [
+					"Aaron", "Bella", "Carlos", "Diana", "Ethan", "Fiona", "Gabriel", "Hannah",
+					"Ian", "Jasmine", "Kyle", "Luna"
+				],
+				"languages": {
+					"en-US": ["Aaron", "Bella"],
+					"fr-FR": ["Carlos", "Diana"],
+					"ja-JP": ["Ethan", "Fiona"],
+					"hi-IN": ["Gabriel", "Hannah"],
+					"pt-BR": ["Ian", "Jasmine"]
+				},
+				"metadata": {
+					"styles": ["expressive", "emotional", "conversational", "professional"],
+					"regions": ["American", "British", "Latin American", "Asian"]
+				}
 			},
 			"readspeaker": {
-			"homepage": "https://www.readspeaker.com",
-			"voices": [
-				"Taha", "Tarik", "Nizar", "Salma", "Paul", "Kate", "James", "Susan",
-				"Pierre", "Julie", "Hans", "Ingrid"
-			],
-			"languages": {
-				"en-US": ["Paul", "Kate"],
-				"fr-FR": ["Pierre", "Julie"],
-				"ja-JP": ["James", "Susan"],
-				"hi-IN": ["Hans", "Ingrid"],
-				"pt-BR": ["Taha", "Tarik"]
+				"homepage": "https://www.readspeaker.com",
+				"voices": [
+					"Taha", "Tarik", "Nizar", "Salma", "Paul", "Kate", "James", "Susan",
+					"Pierre", "Julie", "Hans", "Ingrid"
+				],
+				"languages": {
+					"en-US": ["Paul", "Kate"],
+					"fr-FR": ["Pierre", "Julie"],
+					"ja-JP": ["James", "Susan"],
+					"hi-IN": ["Hans", "Ingrid"],
+					"pt-BR": ["Taha", "Tarik"]
+				},
+				"metadata": {
+					"styles": ["neutral", "expressive", "conversational", "narrative"],
+					"regions": ["American", "British", "Australian", "European", "Middle Eastern"]
+				}
 			},
-			"metadata": {
-				"styles": ["neutral", "expressive", "conversational", "narrative"],
-				"regions": ["American", "British", "Australian", "European", "Middle Eastern"]
-			}
+			"nuance": {
+				"homepage": "https://www.nuance.com",
+				"voices": [
+						"Tom", "Ava", "Samantha", "Allison", "Susan", "Paul", "Kate", "Daniel",
+						"Moira", "Fiona", "Tessa", "Veena"
+				],
+				"languages": {
+						"en-US": ["Tom", "Ava"],
+						"fr-FR": ["Allison", "Paul"],
+						"ja-JP": ["Kate", "Daniel"],
+						"hi-IN": ["Veena"],
+						"pt-BR": ["Tessa"]
+				},
+				"metadata": {
+						"styles": ["expressive", "automotive"],
+						"regions": ["American", "European"]
+				}
+			},
+			"acapela": {
+				"homepage": "https://www.acapela-group.com",
+				"voices": [
+						"Heather", "Ryan", "Alice", "Sharon", "Peter", "Graham", "Rachel", "Bruno",
+						"Claire", "Manon", "Rod", "Nizar"
+				],
+				"languages": {
+						"en-US": ["Heather", "Ryan"],
+						"fr-FR": ["Alice", "Bruno"],
+						"ja-JP": ["Claire", "Manon"],
+						"hi-IN": ["Rod"],
+						"pt-BR": ["Nizar"]
+				},
+				"metadata": {
+						"styles": ["emotional", "child voices"],
+						"regions": ["multilingual"]
+				}
+			},
+			"cereproc": {
+				"homepage": "https://www.cereproc.com",
+				"voices": [
+						"Heather", "William", "Katherine", "Lauren", "Jack", "Hannah", "Adam",
+						"Suzanne", "Caitlin", "Giles", "Jess", "Nathan"
+				],
+				"languages": {
+						"en-US": ["Heather", "William"],
+						"fr-FR": ["Katherine", "Lauren"],
+						"ja-JP": ["Jack", "Hannah"],
+						"ga-IE": ["Adam", "Suzanne"]
+				},
+				"metadata": {
+						"styles": ["emotional", "accented"],
+						"regions": ["British", "American"]
+				}
 			}
 		}
 	}
