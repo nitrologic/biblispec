@@ -14,6 +14,14 @@
 	},
 	"spec": {
 		"BCP47": {
+			"mi-NZ": "Māori (New Zealand)",
+			"sm-WS": "Samoan (Samoa)",
+			"to-TO": "Tongan (Tonga)",
+			"fj-FJ": "Fijian (Fiji)",
+			"niu-NU": "Niuean (Niue)",
+			"rar-CK": "Cook Islands Māori (Cook Islands)",
+			"tkl-TK": "Tokelauan (Tokelau)",
+			"pih-NZ": "Pitkern/Norf'k (Pitcairn & Norfolk Islands)",			
 			"ar-EG": "Arabic (Egyptian)",
 			"de-DE": "German (Germany)",
 			"en-US": "English (US)",
