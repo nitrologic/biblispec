@@ -1,0 +1,150 @@
+{
+	"name": "machinespec biblispec appendum",
+	"version": "1.0.0",
+	"description": "AI text-to-speech voice index and friends",
+	"status": "A living document of machine marvels",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
+	"separator": "𓆛𓆜𓆝𓆞𓆟",
+	"spec": {
+		"AI-voices": {
+			"gpt": {
+				"voices": ["alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"],
+				"languages": {
+					"en-US": ["alloy", "nova"],
+					"fr-FR": ["echo", "fable"],
+					"ja-JP": ["sage", "verse"]
+				}
+			},
+			"gemini": {
+				"voices": [
+					"Zephyr", "Puck", "Charon", "Kore", "Fenrir", "Leda", "Orus", "Aoede",
+					"Callirrhoe", "Autonoe", "Enceladus", "Iapetus", "Umbriel", "Algieba", "Despina", "Erinome",
+					"Algenib", "Rasalgethi", "Laomedeia", "Achernar", "Alnilam", "Schedar", "Gacrux", "Pulcherrima",
+					"Achird", "Zubenelgenubi", "Vindemiatrix", "Sadachbia", "Sadaltager", "Sulafat"
+				],
+				"languages": {
+					"en-US": ["Zephyr", "Puck"],
+					"fr-FR": ["Charon", "Kore"],
+					"ja-JP": ["Aoede", "Callirrhoe"],
+					"hi-IN": ["Algieba", "Despina"],
+					"pt-BR": ["Erinome", "Algenib"]
+				}
+			},
+			"amazon": {
+				"voices": [
+					"Zeina", "Hala", "Zayd", "Lisa", "Arlet", "Jitka", "Hiujin", "Zhiyu", "Naja", "Mads", "Sofie",
+					"Laura", "Lotte", "Ruben", "Nicole", "Olivia", "Russell", "Amy", "Emma", "Brian", "Arthur",
+					"Aditi", "Raveena", "Kajal", "Niamh", "Aria", "Jasmine", "Ayanda", "Danielle", "Gregory", "Ivy",
+					"Joanna", "Kendra", "Kimberly", "Salli", "Joey", "Justin", "Kevin", "Matthew", "Ruth", "Stephen",
+					"Patrick", "Geraint", "Suvi", "Céline", "Léa", "Mathieu", "Rémi", "Isabelle", "Chantal", "Gabrielle",
+					"Liam", "Marlene", "Vicki", "Hans", "Daniel", "Hannah", "Sabrina", "Dóra", "Karl", "Carla", "Bianca",
+					"Giorgio", "Adriano", "Mizuki", "Takumi", "Kazuha", "Tomoko", "Seoyeon", "Jihye", "Liv", "Ida",
+					"Ewa", "Maja", "Jacek", "Jan", "Ola", "Camila", "Vitória", "Ricardo", "Thiago", "Inês", "Cristiano",
+					"Carmen", "Tatyana", "Maxim", "Conchita", "Lucia", "Alba", "Enrique", "Sergio", "Raúl", "Mia",
+					"Andrés", "Lupe", "Penélope", "Miguel", "Pedro", "Astrid", "Elin", "Filiz", "Burcu", "Gwyneth"
+				],
+				"languages": {
+					"en-US": ["Joanna", "Matthew"],
+					"fr-FR": ["Léa", "Mathieu"],
+					"ja-JP": ["Mizuki", "Takumi"],
+					"hi-IN": ["Aditi", "Kajal"],
+					"pt-BR": ["Camila", "Vitória"]
+				}
+			},
+			"azure": {
+				"voices": [
+					"Jenny", "Guy", "Aria", "Davis", "Amber", "Ashley", "Brandon", "Christopher", "Cora", "Elizabeth",
+					"Eric", "Jacob", "Jason", "Michelle", "Monica", "Nancy", "Sara", "Ava", "Emma", "Sophie",
+					"Xiaoxiao", "Yunyang", "Xiaohan", "Yunxi", "Liwen", "Yunjian", "Xiaoxuan", "Yunhao",
+					"Natasha", "James", "Libby", "Sophie", "Olivia", "Thomas", "Sophie", "Luc", "Isabelle",
+					"Antoine", "Colette", "Claude", "Denise", "Henri", "Anu", "Arnav", "Kalpana", "Neerja",
+					"Sonia", "Ananya", "Hiroshi", "Daichi", "Mayu", "Nanami", "Keita", "Hyunsu", "BongJin",
+					"InJoon", "GookMin", "JiMin", "SeoHyeon", "SoonBok", "YuJin", "Elena", "Pablo",
+					"Catalina", "Manuel", "Dalia", "Luna", "Juan", "Valentina", "Salma", "Yara"
+				],
+				"languages": {
+					"en-US": ["Jenny", "Guy"],
+					"fr-FR": ["Denise", "Henri"],
+					"ja-JP": ["Nanami", "Keita"],
+					"hi-IN": ["Neerja", "Ananya"],
+					"pt-BR": ["Francisca", "Thiago"]
+				}
+			},
+			"elevenlabs": {
+				"voices": [
+					"Adam", "Antoni", "Arnold", "Bella", "Charlotte", "Clyde", "Domi", "Dorothy", "Elli",
+					"Emily", "George", "Giovanni", "Grace", "James", "Josh", "Lily", "Matilda", "Michael",
+					"Nicole", "Rachel", "Sam", "Sarah", "Thomas", "William"
+				],
+				"languages": {
+					"en-US": ["Adam", "Bella"],
+					"fr-FR": ["Charlotte", "Josh"],
+					"ja-JP": ["Emily", "Michael"],
+					"hi-IN": ["Grace"],
+					"pt-BR": ["Rachel", "Sam"]
+				}
+			},
+			"ibm_watson": {
+				"voices": [
+					"en-US_MichaelV3Voice", "en-US_AllisonV3Voice", "en-US_LisaV3Voice", "en-US_KevinV3Voice",
+					"en-US_EmilyV3Voice", "en-US_HenryV3Voice", "en-GB_KateV3Voice", "en-GB_CharlotteV3Voice",
+					"en-GB_JamesV3Voice", "en-AU_CraigV2Voice", "en-AU_MadisonV2Voice", "es-ES_EnriqueV3Voice",
+					"es-ES_LauraV3Voice", "es-LA_SofiaV3Voice", "fr-FR_ReneeV3Voice", "fr-FR_NicolasV3Voice",
+					"de-DE_BirgitV3Voice", "de-DE_DieterV3Voice", "it-IT_FrancescaV3Voice", "ja-JP_EmiV3Voice"
+				],
+				"languages": {
+					"en-US": ["MichaelV3Voice", "AllisonV3Voice"],
+					"fr-FR": ["ReneeV3Voice", "NicolasV3Voice"],
+					"ja-JP": ["EmiV3Voice"],
+					"pt-BR": ["IsabelV3Voice"]
+				}
+			},
+			"deepgram": {
+				"voices": [
+					"Luna", "Orion", "Stella", "Atlas", "Nova", "Phoenix", "Aurora", "Elara",
+					"Cassian", "Lyra", "Mira", "Vega", "Aster", "Zoe", "Finn"
+				],
+				"languages": {
+					"en-US": ["Luna", "Orion"],
+					"fr-FR": ["Stella", "Finn"],
+					"ja-JP": ["Mira", "Vega"]
+				}
+			},
+			"speechify": {
+				"voices": [
+					"Alex", "Samantha", "Ethan", "Olivia", "Snoop", "Gwyneth", "Cliff", "Nora",
+					"Tyler", "Ava", "Sophia", "Henry", "Emma", "Liam", "Isabella"
+				],
+				"languages": {
+					"en-US": ["Alex", "Samantha"],
+					"fr-FR": ["Nora", "Liam"],
+					"ja-JP": ["Henry"],
+					"hi-IN": ["Isabella"],
+					"pt-BR": ["Tyler", "Sophia"]
+				}
+			},
+			"wellsaid": {
+				"voices": [
+					"Ava M", "Liam W", "Sophie R", "Noah T", "Emma S", "James C", "Olivia P",
+					"Mason L", "Isabella G", "Ethan B", "Aria H", "Lucas K", "Amelia N", "Jacob D"
+				],
+				"languages": {
+					"en-US": ["Ava M", "Liam W"],
+					"fr-FR": ["Sophie R"]
+				}
+			}
+		},
+		"notes": {
+			"BCP47": "Language tags reference biblispec.json BCP47 section for full list and descriptions."
+		}
+	}
+}
