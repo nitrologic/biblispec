@@ -1,7 +1,7 @@
 {
 	"name": "machinespec biblispec appendum",
-	"version": "1.0.2",
-	"description": "AI text-to-speech voice index and friends",
+	"version": "1.0.3",
+	"description": "Audio circuits, AI voice index",
 	"status": "A living document of machine made murmurons",
 	"copyright": "(C) 2025 Simon Armstrong",
 	"license": {
@@ -13,11 +13,28 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"audio-circuit":{
+			"pinball":{
+				"designer": "Gottlieb",
+				"year": 1960,
+				"description": "Electro-mechanical chime and bell system driven by transistor switches and RC timing networks in pinball machines."
+			}
+		},
 		"audio-ic": {
+			"2N2222 Transistor Oscillator": {
+				"manufacturer": "Multiple (Fairchild, Motorola)",
+				"year": 1960,
+				"description": "Common NPN transistor used to build discrete oscillators for tones and sound effects in early electro-mechanical games."
+			},
 			"7400 Series": {
 				"manufacturer": "Texas Instruments/Fairchild",
 				"year": 1964,
 				"description": "TTL Logic Gates used to build oscillators in early games like Pong."
+			},
+			"µA709 Op-Amp": {
+				"manufacturer": "Fairchild",
+				"year": 1965,
+				"description": "One of the first monolithic operational amplifiers; used for audio mixing and filtering before dedicated game sound ICs."
 			},
 			"LM741 Op-Amp": {
 				"manufacturer": "Fairchild",
@@ -178,7 +195,7 @@
 				"te-IN": "Telugu (India)"
 			}
 		},
-		"AI-voices": {
+		"ai-voices": {
 			"gpt": {
 				"homepage": "https://openai.com",
 				"voices": ["alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"],

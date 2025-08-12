@@ -10,6 +10,7 @@ A bibliographic index of specifications including Unicode codepoints of interest
 * unicode blocks
 * music scales
 * alphabets
+* machine specs
 
 > a grimoire of human communication - 🐋 deepseek-chat
 
@@ -17,9 +18,15 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
-The file is in json format where no comments allowed = careful attention to structure
+New appendum include
 
-[json format](https://www.json.org/json-en.html)
+- machine spec 1.0.3 [machinespec.json](machinespec.json) 
+	- audio-ic 
+	- ai-voices
+
+Files are [JSON](https://www.json.org/json-en.html) format. 
+
+JSON where commentary is unwelcome - no comments allowed = careful attention to structure required!
 
 # Recent additions
 
