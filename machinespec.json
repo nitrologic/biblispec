@@ -13,13 +13,6 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
-		"audio-circuit":{
-			"pinball":{
-				"designer": "Gottlieb",
-				"year": 1960,
-				"description": "Electro-mechanical chime and bell system driven by transistor switches and RC timing networks in pinball machines."
-			}
-		},
 		"audio-ic": {
 			"2N2222 Transistor Oscillator": {
 				"manufacturer": "Multiple (Fairchild, Motorola)",
@@ -332,6 +325,29 @@
 				"metadata": {
 					"styles": ["natural", "expressive"],
 					"regions": ["American", "European"]
+				}
+			},
+			"siri": {
+				"homepage": "https://www.apple.com/siri/",
+				"voices": [
+					"Aaron", "Nicky", "Ava", "Fred", "Sandy", "Moira", "Tessa", "Daniel",
+					"Karen", "Rishi", "Arthur", "Martha", "Nova", "Catherine", "Gordon", "Aria"
+				],
+				"languages": {
+					"en-US": ["Aaron", "Ava"],
+					"en-GB": ["Daniel", "Martha"],
+					"en-AU": ["Karen", "Gordon"],
+					"fr-FR": ["Nicky", "Aria"],
+					"ja-JP": ["Sandy", "Fred"],
+					"de-DE": ["Tessa", "Rishi"],
+					"es-ES": ["Moira", "Arthur"],
+					"hi-IN": ["Nova"],
+					"pt-BR": ["Catherine"]
+				},
+				"metadata": {
+					"styles": ["conversational", "assistant"],
+					"regions": ["American", "British", "Australian", "European", "Asian"],
+					"notes": "Proprietary voices optimized for low-latency responses. Includes gender-neutral options (e.g., 'Nova')."
 				}
 			},
 			"speechify": {

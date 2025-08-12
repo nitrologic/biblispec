@@ -1,3 +1,49 @@
+"theremin": {
+	"designer": "Léon Theremin",
+	"name": "Theremin",
+	"year": 1920,
+	"type": "instrument/oscillator",
+	"components": ["vacuum tubes", "antennas", "oscillators"],
+	"description": "Gesture-controlled electronic instrument using heterodyning for pitch/volume; earliest fully electronic sound generator.",
+	"notes": "Pioneered capacitive sensing for sound modulation."
+},
+"tonewheel-organ": {
+	"designer": "Laurens Hammond",
+	"name": "Hammond Tonewheel Organ",
+	"year": 1934,
+	"type": "instrument/electromechanical",
+	"components": ["rotating tonewheels", "electromagnetic pickups", "drawbars"],
+	"description": "Electromechanical organ generating tones via spinning wheels and pickups; precursor to additive synthesis.",
+	"notes": "Used in early arcades and influenced sampled sound tech."
+},
+"novachord": {
+	"designer": "Hammond Organ Company",
+	"name": "Novachord",
+	"year": 1939,
+	"type": "instrument/synth",
+	"components": ["vacuum tubes (over 150)", "divide-down oscillators", "envelope generators"],
+	"description": "First polyphonic synthesizer with vibrato and filters; vacuum-tube based tone shaping.",
+	"notes": "Produced only ~1,000 units; used in film scores."
+},
+"clavioline": {
+	"designer": "Constant Martin",
+	"name": "Clavioline",
+	"year": 1947,
+	"type": "instrument/keyboard",
+	"components": ["vacuum tubes", "vibrato circuit", "knee-lever volume control"],
+	"description": "Portable monophonic keyboard synth with vibrato effects; attached to pianos for electronic tones.",
+	"notes": "Featured in hits like 'Telstar' (1962); transistor versions followed."
+},
+"transistor-amp": {
+	"designer": "Sidney Darlington",
+	"name": "Darlington Transistor Amplifier",
+	"year": 1953,
+	"type": "amplifier",
+	"components": ["Darlington pair transistors", "resistors", "capacitors"],
+	"description": "Early transistor-based audio amplifier using paired transistors for high gain; replaced vacuum tubes in portable audio.",
+	"notes": "Patented at Bell Labs; enabled compact, low-power audio in games."
+}
+
 "google_cloud": {
 	"homepage": "https://cloud.google.com/text-to-speech",
 	"voices": [

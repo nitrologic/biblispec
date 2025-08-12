@@ -21,8 +21,9 @@ The data payload for this project is [biblispec.json](biblispec.json)
 New appendum include
 
 - machine spec 1.0.3 [machinespec.json](machinespec.json) 
-	- audio-ic 
-	- ai-voices
+	- audio-ic - 22 integrated circuit solutions 
+	- audio-circuit - *experimental markdorwn circuits
+	- ai-voices - 17 providers 308 names
 
 Files are [JSON](https://www.json.org/json-en.html) format. 
 
