@@ -11,6 +11,7 @@ A bibliographic index of specifications including Unicode codepoints of interest
 * music scales
 * alphabets
 * machine specs
+* audio circuits
 
 > a grimoire of human communication - 🐋 deepseek-chat
 
@@ -22,8 +23,9 @@ New appendum include
 
 - machine spec 1.0.3 [machinespec.json](machinespec.json) 
 	- audio-ic - 22 integrated circuit solutions 
-	- audio-circuit - *experimental markdorwn circuits
 	- ai-voices - 17 providers 308 names
+- audio circuits 1.0.7 [audiocircuit.json](audiocircuit.json)
+	- 22 audio circuits from 1906 to 1981
 
 Files are [JSON](https://www.json.org/json-en.html) format. 
 

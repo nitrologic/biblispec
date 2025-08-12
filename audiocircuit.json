@@ -1,6 +1,6 @@
 {
 	"name": "audio circuit machinespec biblispec appendum",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Audio circuits",
 	"status": "A living document of soldered circuitry",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -14,6 +14,64 @@
 	},
 	"spec": {
 		"audio-circuit":{
+			"moog-ladder-filter": {
+				"designer": "Robert Moog",
+				"name": "Moog Ladder Filter",
+				"year": 1965,
+				"type": "filter",
+				"components": ["4x transistors", "4x capacitors", "feedback resistor"],
+				"description": "Four-pole lowpass filter with resonance control."
+			},
+			"stylophone": {
+				"designer": "Brian Jarvis",
+				"name": "Stylophone Reed Oscillator",
+				"year": 1968,
+				"type": "instrument/keyboard",
+				"components": ["metal reeds", "stylus contact", "transistor amplifier"],
+				"description": "Pocket electronic organ using physical metal reeds contacted by stylus"
+			},
+			"crystal-radio": {
+				"designer": "Greenleaf Whittier Pickard",
+				"name": "Crystal Radio Detector",
+				"year": 1906,
+				"type": "receiver/detector",
+				"components": ["galena crystal", "cat's whisker wire", "tuning coil"],
+				"description": "Passive AM radio receiver using mineral crystal rectification."
+			},
+			"ring-modulator": {
+				"designer": "Harald Bode",
+				"name": "Ring Modulator",
+				"year": 1934,
+				"type": "modulator",
+				"components": ["transformer", "4x diodes (ring)", "carrier oscillator"],
+				"description": "Amplitude modulator creating metallic 'robot voice' effects; used in sci-fi films and experimental music."
+			},
+			"buchla-lowpass-gate": {
+				"designer": "Don Buchla",
+				"name": "Buchla Lowpass Gate",
+				"year": 1966,
+				"type": "filter/vca",
+				"components": ["vactrol (LED+LDR)", "op-amp", "control voltage input"],
+				"description": "Combined VCA and filter using light-dependent resistor; creates organic 'breathing' envelope effects."
+			},
+			"tape-echo": {
+				"designer": "Les Paul",
+				"name": "Tape Echo/Delay",
+				"year": 1950,
+				"type": "delay/effect",
+				"components": ["tape loop", "record head", "playback head", "motor drive"],
+				"description": "Mechanical delay using continuous tape loop with multiple playback heads; created iconic slapback echo."
+			},
+			"stepped-tone-generator": {
+				"designer": "Forrest M. Mims III",
+				"name": "Stepped Tone Generator",
+				"year": 1980,
+				"source": "Engineer's Notebook (Radio Shack, 1980)",
+				"type": "noise-generator",
+				"components": ["2x 555 timers", "potentiometers", "speaker"],
+				"description": "Dual-555 stepped tone generator producing video game-like sound effects.",
+				"notes": "Later dubbed 'Atari Punk Console' by DIY electronics community."
+			},
 			"theremin": {
 				"designer": "Léon Theremin",
 				"name": "Theremin",
