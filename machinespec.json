@@ -14,71 +14,115 @@
 	},
 	"spec": {
 		"audio-ic": {
-				"7400 Series": {
-						"manufacturer": "Texas Instruments/Fairchild",
-						"year": 1964,
-						"description": "TTL Logic Gates used to build oscillators in early games like Pong."
-				},
-				"NE555 Timer IC": {
-						"manufacturer": "Signetics",
-						"year": 1971,
-						"description": "Pong's core sound generator. Versatile astable multivibrator for square-wave tones (e.g., 500-1000 Hz beeps)."
-				},
-				"3262 Timing Generator": {
-						"manufacturer": "Fairchild",
-						"year": 1972,
-						"description": "Video sync generator for display timing, used in early arcade tech."
-				},
-				"MC1408 DAC": {
-						"manufacturer": "Motorola",
-						"year": 1976,
-						"description": "8-bit Digital-to-Analog Converter used in TRS-80 Color Computer for basic waveform sound generation."
-				},
-				"SN76477": {
-						"manufacturer": "Texas Instruments",
-						"year": 1978,
-						"description": "Complex Sound Generator chip with noise, envelope, and VCO; used in Space Invaders for effects."
-				},
-				"AY-3-8910": {
-						"manufacturer": "General Instrument",
-						"year": 1978,
-						"description": "Programmable Sound Generator with 3 square-wave channels; popular in arcades, MSX, and ZX Spectrum."
-				},
-				"MC1377": {
-						"manufacturer": "Motorola",
-						"year": 1979,
-						"description": "Synced TV signals, indirectly gating audio via horizontal/vertical blanks."
-				},
-				"POKEY": {
-						"manufacturer": "Atari",
-						"year": 1979,
-						"description": "Pot Keyboard Integrated Circuit for sound and input; used in Atari 8-bit computers with 4 voices and distortion effects."
-				},
-				"MC6883 SAM": {
-						"manufacturer": "Motorola",
-						"year": 1980,
-						"description": "Synchronous Address Multiplexer in TRS-80 CoCo; handled timing for 6-bit DAC audio output."
-				},
-				"SP0256": {
-						"manufacturer": "General Instrument",
-						"year": 1980,
-						"description": "Allophone-based speech synthesizer; used in Intellivision and early educational toys for voice effects."
-				},
-				"TMS9919": {
-						"manufacturer": "Texas Instruments",
-						"year": 1981,
-						"description": "Sound chip with 3 tones + noise channel; powered TI-99/4A home computer audio."
-				},
-				"SID": {
-						"manufacturer": "MOS Technology",
-						"year": 1982,
-						"description": "Sound Interface Device with 3 voices, programmable waveforms, filters, and ADSR envelopes; iconic in Commodore 64."
-				},
-				"ULA (ZX Spectrum)": {
-						"manufacturer": "Ferranti",
-						"year": 1982,
-						"description": "Custom Uncommitted Logic Array; handled basic beeper sound via single-channel square waves in early ZX Spectrum."
-				}
+			"7400 Series": {
+				"manufacturer": "Texas Instruments/Fairchild",
+				"year": 1964,
+				"description": "TTL Logic Gates used to build oscillators in early games like Pong."
+			},
+			"LM741 Op-Amp": {
+				"manufacturer": "Fairchild",
+				"year": 1968,
+				"description": "General-purpose operational amplifier used for mixing, filtering, and shaping game audio."
+			},
+			"NE555 Timer IC": {
+				"manufacturer": "Signetics",
+				"year": 1971,
+				"description": "Pong's core sound generator. Versatile astable multivibrator for square-wave tones (e.g., 500-1000 Hz beeps)."
+			},
+			"3262 Timing Generator": {
+				"manufacturer": "Fairchild",
+				"year": 1972,
+				"description": "Video sync generator for display timing, used in early arcade tech."
+			},
+			"TMS1000": {
+				"manufacturer": "Texas Instruments",
+				"year": 1974,
+				"description": "First microcontroller, used in handheld games with simple tone generation capabilities."
+			},
+			"MC1408 DAC": {
+				"manufacturer": "Motorola",
+				"year": 1976,
+				"description": "8-bit Digital-to-Analog Converter used in TRS-80 Color Computer for basic waveform sound generation."
+			},
+			"MM5837": {
+				"manufacturer": "National Semiconductor",
+				"year": 1977,
+				"description": "Dedicated noise generator IC for sound effects in arcade and pinball machines."
+			},
+			"SN76477": {
+				"manufacturer": "Texas Instruments",
+				"year": 1978,
+				"description": "Complex Sound Generator chip with noise, envelope, and VCO; used in Space Invaders for effects."
+			},
+			"AY-3-8910": {
+				"manufacturer": "General Instrument",
+				"year": 1978,
+				"description": "Programmable Sound Generator with 3 square-wave channels; popular in arcades, MSX, and ZX Spectrum."
+			},
+			"MC1377": {
+				"manufacturer": "Motorola",
+				"year": 1979,
+				"description": "Synced TV signals, indirectly gating audio via horizontal/vertical blanks."
+			},
+			"POKEY": {
+				"manufacturer": "Atari",
+				"year": 1979,
+				"description": "Pot Keyboard Integrated Circuit for sound and input; used in Atari 8-bit computers with 4 voices and distortion effects."
+			},
+			"Votrax SC-01": {
+				"manufacturer": "Votrax",
+				"year": 1979,
+				"description": "Phoneme-based speech synthesizer used in arcade games like Wizard of Wor and Gorf."
+			},
+			"ZX80/ZX81 Video Circuit": {
+				"manufacturer": "Sinclair Research",
+				"year": 1980,
+				"description": "No dedicated audio chip; crude square-wave tones generated by manipulating the video circuitry."
+			},
+			"MC6883 SAM": {
+				"manufacturer": "Motorola",
+				"year": 1980,
+				"description": "Synchronous Address Multiplexer in TRS-80 CoCo; handled timing for 6-bit DAC audio output."
+			},
+			"SN76489": {
+				"manufacturer": "Texas Instruments",
+				"year": 1980,
+				"description": "3-tone plus noise PSG used in Sega consoles, ColecoVision, and BBC Micro."
+			},
+			"SP0256": {
+				"manufacturer": "General Instrument",
+				"year": 1980,
+				"description": "Allophone-based speech synthesizer; used in Intellivision and early educational toys for voice effects."
+			},
+			"K145IK17": {
+				"manufacturer": "Soviet Union",
+				"year": 1980,
+				"description": "Noise and tone generator IC used in electronic toys and simple audio devices in the USSR."
+			},
+			"KR580GF24": {
+				"manufacturer": "Angstrem (USSR)",
+				"year": 1981,
+				"description": "Soviet clone of the AY-3-8910 PSG; used in Spectrum clones and other Soviet microcomputers."
+			},
+			"TMS9919": {
+				"manufacturer": "Texas Instruments",
+				"year": 1981,
+				"description": "Sound chip with 3 tones + noise channel; powered TI-99/4A home computer audio."
+			},
+			"SID": {
+				"manufacturer": "MOS Technology",
+				"year": 1982,
+				"description": "Sound Interface Device with 3 voices, programmable waveforms, filters, and ADSR envelopes; iconic in Commodore 64."
+			},
+			"ULA ZX Spectrum": {
+				"manufacturer": "Ferranti",
+				"year": 1982,
+				"description": "Custom Uncommitted Logic Array; handled basic beeper sound via single-channel square waves in early ZX Spectrum."
+			},
+			"AY-3-8912": {
+				"manufacturer": "General Instrument",
+				"year": 1985,
+				"description": "Compact 28-pin version of the AY-3-8910; used in Sinclair ZX Spectrum 128K and later models for 3-voice audio."
 			}
 		},
 		"BCP47": {
