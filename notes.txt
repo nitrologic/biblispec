@@ -1,3 +1,23 @@
+"google_cloud": {
+	"homepage": "https://cloud.google.com/text-to-speech",
+	"voices": [
+		"en-US-Wavenet-A", "en-US-Wavenet-B", "en-US-Wavenet-C", "en-US-Wavenet-D",
+		"en-US-Wavenet-E", "en-US-Wavenet-F", "en-US-Wavenet-G", "en-US-Wavenet-H",
+		"en-US-Wavenet-I", "en-US-Wavenet-J", "fr-FR-Wavenet-A", "ja-JP-Wavenet-A"
+	],
+	"languages": {
+		"en-US": ["en-US-Wavenet-A", "en-US-Wavenet-B"],
+		"fr-FR": ["fr-FR-Wavenet-A"],
+		"ja-JP": ["ja-JP-Wavenet-A"],
+		"hi-IN": ["hi-IN-Wavenet-A"],
+		"pt-BR": ["pt-BR-Wavenet-A"]
+	},
+	"metadata": {
+		"styles": ["conversational", "narrative"],
+		"regions": ["global"]
+	}
+},
+
 𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣
 𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾
 𐂿𐃀𐃁𐃂𐃃𐃄𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖
