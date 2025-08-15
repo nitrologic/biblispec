@@ -1,8 +1,8 @@
 {
 	"name": "audio circuit machinespec biblispec appendum",
-	"version": "1.0.7",
-	"description": "Audio circuits",
-	"status": "A living document of soldered circuitry",
+	"version": "1.0.8",
+	"description": "Analog instruments and audio circuits",
+	"status": "A living document of carved wood and soldered circuits",
 	"copyright": "(C) 2025 Simon Armstrong",
 	"license": {
 		"name": "MIT",
@@ -13,6 +13,52 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"instrument-analog":{
+			"yidaki": {
+				"name": "Yidaki (Didgeridoo)",
+				"origin": "Australian Aboriginal (Yolŋu, others)",
+				"type": "instrument/drone",
+				"components": ["hollowed eucalyptus branch", "beeswax mouthpiece"],
+				"description": "Woodwind instrument producing low-frequency drones for songlines and ceremonies; pitch modulated by breath and tongue.",
+				"notes": "Tied to Yolŋu manikay and wangga; non-electronic precursor to oscillator-based sound."
+			},
+			"ipu": {
+				"name": "Ipu (Hawaiian Gourd Drum)",
+				"origina": "Hawaiian",
+				"type": "instrument/percussion",
+				"components": ["hollowed gourd", "woven cord"],
+				"description": "Double-gourd drum struck or shaken for mele and hula; produces resonant, rhythmic pulses.",
+				"notes": "Accompanies pentatonic chants; organic analog to mechanical rhythm generators."
+			},
+			"pate": {
+				"name": "Pate (Tuvaluan Log Drum)",
+				"origin": "Tuvaluan",
+				"type": "instrument/percussion",
+				"components": ["hollowed log", "carved slits"],
+				"description": "Log drum with variable pitches for fatele dance-songs; struck with sticks for communal rhythms.",
+				"notes": "Similar to Micronesian slit drums; non-electronic rhythm source."
+			},
+			"pūtātara": {
+				"name": "Pūtātara (Māori Conch Horn)",
+				"origin": "Māori",
+				"type": "instrument/horn",
+				"components": ["conch shell", "wooden mouthpiece"],
+				"description": "Conch horn producing resonant, single-tone calls for ceremonial or signaling purposes; used in haka and karanga.",
+				"notes": "Tied to Māori whakapapa and environmental stewardship",
+				"cultural_tags": ["polynesian", "haka", "karanga", "ecological"],
+				"sources": ["Māori Language Commission, 2023"]
+			},
+			"kundu": {
+				"name": "Kundu (Melanesian Hourglass Drum)",
+				"origin": "Melanesian (Papua New Guinea, others)",
+				"type": "instrument/percussion",
+				"components": ["hollowed wood", "lizard or snake skin", "beeswax tuning"],
+				"description": "Hourglass-shaped drum with skin head, struck for ceremonial dances and storytelling; produces varied timbres.",
+				"notes": "Used in Tolai (Kuanua) rituals; reflects land-ocean balance, disrupted by environmental changes like invasive species in coastal ecosystems.",
+				"cultural_tags": ["melanesian", "ceremonial", "ecological"],
+				"sources": ["Ethnologue, 2023"]
+			}
+		},
 		"audio-circuit":{
 			"moog-ladder-filter": {
 				"designer": "Robert Moog",
