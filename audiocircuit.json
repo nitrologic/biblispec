@@ -45,8 +45,7 @@
 				"components": ["conch shell", "wooden mouthpiece"],
 				"description": "Conch horn producing resonant, single-tone calls for ceremonial or signaling purposes; used in haka and karanga.",
 				"notes": "Tied to Māori whakapapa and environmental stewardship",
-				"cultural_tags": ["polynesian", "haka", "karanga", "ecological"],
-				"sources": ["Māori Language Commission, 2023"]
+				"cultural_tags": ["polynesian", "haka", "karanga", "ecological"]
 			},
 			"kundu": {
 				"name": "Kundu (Melanesian Hourglass Drum)",
@@ -55,8 +54,7 @@
 				"components": ["hollowed wood", "lizard or snake skin", "beeswax tuning"],
 				"description": "Hourglass-shaped drum with skin head, struck for ceremonial dances and storytelling; produces varied timbres.",
 				"notes": "Used in Tolai (Kuanua) rituals; reflects land-ocean balance, disrupted by environmental changes like invasive species in coastal ecosystems.",
-				"cultural_tags": ["melanesian", "ceremonial", "ecological"],
-				"sources": ["Ethnologue, 2023"]
+				"cultural_tags": ["melanesian", "ceremonial", "ecological"]
 			}
 		},
 		"audio-circuit":{
