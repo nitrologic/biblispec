@@ -1,6 +1,6 @@
 {
 	"name": "biblispec",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -141,7 +141,7 @@
 				"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
 				"etc14": "al ance ence ese ism ity oid ous ty ure y archy pathy phile"
 			}
-		},		
+		},
 		"scales":{
 			"name":"Common Practice Tonality",
 			"tuning":"12-TET",
@@ -683,6 +683,65 @@
 					"creator":"Momolu Duwalu Bukele",
 					"codes":"ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
 				}
+			}
+		},
+		"riffTags":{
+			"name" :"riff tags",
+			"description": "Standard four-character tags for embedding metadata in the INFO chunk of RIFF-based WAV files.",
+			"source": "RIFF Specification (Microsoft/IBM, 1991)",
+			"usage": "Key-value pairs in the LIST/INFO chunk; values are null-terminated strings padded to even bytes.",
+			"tags": ["metadata", "audio", "file-format", "riff"],
+			"tag": {
+				"IARL": "Archival Location",
+				"IART": "Artist",
+				"ICAS": "Default Audio Stream",
+				"ICMS": "Commissioned",
+				"ICMT": "Comment",
+				"ICNM": "Cinematographer",
+				"ICNT": "Country",
+				"ICOP": "Copyright",
+				"ICRD": "Creation Date",
+				"ICRP": "Cropped",
+				"IDIM": "Dimensions",
+				"IDIT": "Date Time Original",
+				"IDPI": "Dots Per Inch",
+				"IDST": "Distributed By",
+				"IEDT": "Edited By",
+				"IENC": "Encoded By",
+				"IENG": "Engineer",
+				"IGNR": "Genre",
+				"IKEY": "Keywords",
+				"ILGT": "Lightness",
+				"ILNG": "Language",
+				"IMED": "Medium",
+				"IMIT": "More Info Text",
+				"IMUS": "Music By",
+				"INAM": "Title",
+				"IPDS": "Production Designer",
+				"IPLT": "Num Colors",
+				"IPRD": "Product",
+				"IPRO": "Produced By",
+				"IRIP": "Ripped By",
+				"IRTD": "Rating",
+				"ISBJ": "Subject",
+				"ISFT": "Software",
+				"ISGN": "Secondary Genre",
+				"ISHP": "Sharpness",
+				"ISMP": "Time Code",
+				"ISRC": "Source",
+				"ISRF": "Source Form",
+				"ISTR": "Starring",
+				"ITCH": "Technician",
+				"ITRK": "Track Number",
+				"IWRI": "Written By",
+				"LOCA": "Location",
+				"PRT1": "Part",
+				"PRT2": "Number Of Parts",
+				"RATE": "Rate",
+				"STAT": "Statistics",
+				"TAPE": "Tape Name",
+				"TCDO": "End Timecode",
+				"TCOD": "Start Timecode"
 			}
 		}
 	}
