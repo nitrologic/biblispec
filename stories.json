@@ -1,0 +1,42 @@
+{
+	"name": "stories biblispec appendum",
+	"version": "1.0.0",
+	"description": "Anthology of tales.",
+	"status": "A living document of human pathways",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"spec": {
+		"stories":[{
+			"origin":"greek",
+			"story": [
+				"Narcissus, a beautiful young man, spurns all suitors, including the nymph Echo.",
+				"Cursed by Nemesis for his arrogance, he falls in love with his own reflection in a pool."
+			]
+		},{
+			"origin": "aztec",
+			"story": [
+				"Tezcatlipoca, god of sorcery, gazes into his obsidian smoking mirror, captivated by his divine power.",
+				"His pride fuels rivalry with Quetzalcoatl, sparking cosmic conflict and chaos among mortals."
+			]
+		},{
+			"origin":"european",
+			"story": [
+				"The wicked queen, consumed by vanity, consults her magic mirror daily, asking who is the fairest.",
+				"Its truthful answers fuel her jealousy of Snow White, leading to her destructive schemes and ultimate downfall."
+			]
+		},{
+			"origin": "yoruba",
+			"story": [
+				"Oshun, goddess of love, admires her beauty in a river’s reflection, speaking affirmations to enhance her charm.",
+				"Her vanity stirs rivalry with other deities, but her wisdom balances her allure, earning her adoration."
+			]
+		}]
+	}
+}
