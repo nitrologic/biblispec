@@ -13,6 +13,61 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"video-game":{
+			"Speed Race": {
+				"developer": "Taito",
+				"year": 1974,
+				"audio-ic": "Discrete circuits, NE555 Timer IC",
+				"description": "Vertical racing game."
+			},
+			"Space Invaders": {
+				"developer": "Taito",
+				"year": 1978,
+				"audio-ic": "SN76477",
+				"description": "The iconic wall of bad guys raining bombs from above."
+			},
+			"Lunar Lander": {
+				"developer": "Atari",
+				"year": 1979,
+				"display":"vector",
+				"audio-ic": "Discrete circuits",
+				"description": "Landing simulation vector based."
+			},
+			"Monaco GP": {
+				"developer": "Sega",
+				"year": 1979,
+				"display": "CRT",
+				"audio-ic": "Discrete circuits",
+				"description": "Top-down racing with evolving track complexity."
+			},
+			"Asteroids": {
+				"developer": "Atari",
+				"year": 1979,
+				"display":"vector",
+				"audio-ic": "Discrete circuits, POKEY (later versions)",
+				"description": "Space vector shooter with toroidal momentum."
+			},
+			"Galaxian":{
+				"developer":"Namco",
+				"year":1979,
+				"display":"crt",
+				"description":"Colorful pixel fixed shooter."
+			},
+			"Carnival": {
+				"developer": "Exidy",
+				"year": 1977,
+				"display": "CRT",
+				"audio-ic": "Discrete circuits",
+				"description": "Bouncing clowns, so fun."
+			},
+			"Death Race": {
+				"developer": "Exidy",
+				"year": 1976,
+				"display": "CRT",
+				"audio-ic": "Discrete circuits",
+				"description": "Top-down racing with destructibles and 'gremlin' targets."
+			}
+		},
 		"audio-ic": {
 			"2N2222 Transistor Oscillator": {
 				"manufacturer": "Multiple (Fairchild, Motorola)",
