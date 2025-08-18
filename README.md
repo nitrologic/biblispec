@@ -21,7 +21,10 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 New appendum include
 
+- stories [stories.json](stories.json)
+	- tales of narcissism - 4
 - machine spec 1.0.3 [machinespec.json](machinespec.json) 
+	- software-architecture - 1 - transformers
 	- audio-ic - 22 integrated circuit solutions 
 	- ai-voices - 17 providers 308 names
 - audio circuits 1.0.7 [audiocircuit.json](audiocircuit.json)
