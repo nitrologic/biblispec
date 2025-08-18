@@ -13,6 +13,27 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"software-architecture": [{
+			"name": "Transformers",
+			"introduced": "Vaswani et al., Google Research",
+			"year": 2017,
+			"summary": "Processes text sequences using attention for tasks like translation and generation.",
+			"stages": {
+				"Tokenization": "Splits text into tokens for processing.",
+				"Embedding": "Maps tokens to vectors capturing meaning.",
+				"Transformer": "Weighs token importance via multi-head attention.",
+				"Output Projection": "Converts vectors to output text or probabilities."
+			},
+			"tags": ["machine-learning", "nlp", "attention", "deep-learning", "transformers"],
+			"source": {
+				"authors": ["Vaswani, Ashish", "Shazeer, Noam", "Parmar, Niki", "Uszoreit, Jakob", "Jones, Llion", "Gomez, Aidan N.", "Kaiser, Łukasz", "Polosukhin, Illia"],
+				"title": "Attention is All You Need",
+				"journal": "arXiv",
+				"identifier": "arXiv:1706.03762",
+				"url": "https://arxiv.org/abs/1706.03762",
+				"doi": "10.48550/arXiv.1706.03762"
+			}
+		}],
 		"video-game":{
 			"Speed Race": {
 				"developer": "Taito",
