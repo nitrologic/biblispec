@@ -21,6 +21,8 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 New appendum include
 
+- songs [songs.json](songs.json)
+	- songs of freedom - 3  
 - stories [stories.json](stories.json)
 	- tales of narcissism - 4
 - machine spec 1.0.3 [machinespec.json](machinespec.json) 

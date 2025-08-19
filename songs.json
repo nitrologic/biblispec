@@ -1,0 +1,50 @@
+{
+	"name": "songs biblispec addendum appendum",
+	"version": "1.0.0",
+	"description": "Sing to the lord.",
+	"status": "A living document of tonal beats.",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"spec": {
+		"songs":[{
+			"name":"come by yah",
+			"source":"Gullah Geechee",
+			"lyric":[
+				"Some sons are crying me Gawd come by yah",
+				"Some mas are crying me Gawd come by yah",
+				"Some young are dieing me Gawd come by yah",
+				"Me Gawd come by yah"
+			]
+		},{
+			"name":"take this hammer",
+			"source":"Lead Belly",
+			"lyric":[
+				"take this hammer and pass it to the captain",
+				"you tell him im gone"
+			]
+		},{
+			"name": "helpless",
+			"source": "Neil Young",
+			"chords": ["A","E","D"],
+			"lyric": [
+				"There is a town in north Ontario",
+				"With dream comfort memory to spare",
+				"And in my mind I still need a place to go",
+				"All my changes were there.",
+				"Blue blue windows behind the stars",
+				"Yellow moon on the rise",
+				"Big birds flying across the sky",
+				"Throwing shadows on our eyes.",
+				"Leave us",
+				"Helpless, helpless, helpless"
+			]
+		}]
+	}
+}
