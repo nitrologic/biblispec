@@ -24,8 +24,9 @@ The data payload for this project is [biblispec.json](biblispec.json)
 ## docs pdf test
 
 Frustrated with broken links and modern models continuing habit of making shit up project
-bibli creates a docs files and adds the first wayback pdf. The year is 1945 and John has
-been up all night...
+bibli creates a docs folder and adds the first wayback pdf. 
+
+The year is 1945 and John has been up all night...
 
 [First Draft of a Report on the EDVAC](/docs/vnedvac.pdf)
 
