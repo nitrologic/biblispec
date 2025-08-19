@@ -27,7 +27,7 @@ Frustrated with broken links and modern models continuing habit of making shit u
 bibli creates a docs files and adds the first wayback pdf. The year is 1945 and John has
 been up all night...
 
-[First Draft of a Report on the EDVAC](docs/vnedvac.pdf)
+[First Draft of a Report on the EDVAC](/docs/vnedvac.pdf)
 
 ```
 by John von Neumann
