@@ -62,6 +62,9 @@ JSON where commentary is unwelcome - no comments allowed = careful attention to 
 
 Please welcome these fresh additions to the bibli spec.
 
+## ASCII ANSI lookups
+
+As the raw keyboard manager in Slop Fountain becomes more advanced our thirst for raw code names increase.
 
 ## Linear B ideograms
 
