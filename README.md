@@ -19,7 +19,29 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
-New appendum include
+# Work in progress
+
+Difficulties remain when deciding in ordered array vs named class for spec collections.
+
+A skirmish has errupted in machinespec.json that illustrates the two distinct styles:
+
+```
+	"spec": {
+		"software-architecture": [{
+			"name": "Transformers",
+			"introduced": "Vaswani et al., Google Research",
+			"year": 2017,
+
+...
+
+		}],
+		"video-game":{
+			"Speed Race": {
+				"developer": "Taito",
+
+```
+
+## Addendum appendum
 
 - songs [songs.json](songs.json)
 	- songs of freedom - 3  
