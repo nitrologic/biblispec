@@ -13,6 +13,51 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"shelf":[{
+			"title":"Jonathan Livingston Seagull",
+			"author":"Richard Bach",
+			"year":1970
+		},{
+			"title":"All Creatures Great and Small",
+			"author":"James Herriot",
+			"year":1972
+		},{
+			"title":"Watership Down",
+			"author":"Richard Adams",
+			"year":1972
+		},{
+			"title":"Fear and Loathing in Las Vegas",
+			"author":"Hunter S. Thompson",
+			"year":1972
+		},{
+			"title":"Zen and the Art of Motorcycle Maintenance",
+			"author":"Robert M. Pirsig",
+			"year":1974
+		},{
+			"title":"Roots",
+			"author":"Alex Haley",
+			"year":1976
+		},{
+			"title":"Star Wars: From the Adventures of Luke Skywalker",
+			"author":"George Lucas, with Alan Dean Foster",
+			"year":1976
+		},{
+			"title":"",
+			"author":"",
+			"year":19
+		},{
+			"title":"",
+			"author":"",
+			"year":19
+		},{
+			"title":"",
+			"author":"",
+			"year":19
+		},{
+			"title":"The Hitchhiker’s Guide to the Galaxy",
+			"author":"Douglas Adams",
+			"year":1979
+		}],
 		"stories":[{
 			"origin": "greek",
 			"story": [
@@ -20,13 +65,7 @@
 				"Cursed by Nemesis for his arrogance, he falls in love with his own reflection in a pool."
 			]
 		},{
-			"origin": "aztec",
-			"story": [
-				"Tezcatlipoca, god of sorcery, gazes into his obsidian smoking mirror, captivated by his divine power.",
-				"His pride fuels rivalry with Quetzalcoatl, sparking cosmic conflict and chaos among mortals."
-			]
-		},{
-			"origin": "european",
+			"origin": "germanic",
 			"story": [
 				"The wicked queen, consumed by vanity, consults her magic mirror daily, asking who is the fairest.",
 				"Its truthful answers fuel her jealousy of Snow White, leading to her destructive schemes and ultimate downfall."
