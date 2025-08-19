@@ -33,6 +33,14 @@
 				"url": "https://arxiv.org/abs/1706.03762",
 				"doi": "10.48550/arXiv.1706.03762"
 			}
+		},{
+			"name": "Von Neumann Architecture",
+			"introduced": "First Draft of a Report on the EDVAC",
+			"year": 1945,
+			"summary":"Processing data with blocks of arithmetic, control, memory and Input Output",
+			"source"{
+				"url":"docs/vnedvac.pdf"
+			}
 		}],
 		"video-game":{
 			"Speed Race": {

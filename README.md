@@ -21,6 +21,32 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 # Work in progress
 
+## docs pdf test
+
+Frustrated with broken links and modern models continuing habit of making shit up project
+bibli creates a docs files and adds the first wayback pdf. The year is 1945 and John has
+been up all night...
+
+[First Draft of a Report on the EDVAC](docs/vnedvac.pdf)
+
+```
+by John von Neumann
+
+Michael D. Godfrey
+
+Normally ﬁrst drafts are neither intended nor suitable for publication. This report is an exception.
+It is a ﬁrst draft in the usual sense, but it contains a wealth of information, and it had a pervasive
+inﬂuence when it was ﬁrst written. Most prominently, Alan Turing cites it, in his Proposal for the
+Pilot ACE,* as the deﬁnitive source for understanding the nature and design of a general-purpose
+digital computer.
+
+After having inﬂuenced the ﬁrst generation of digital computer engineers, the von Neumann
+report fell out of sight. There were at least two reasons for this: The report was hard to ﬁnd and
+it was very hard to read.
+```
+
+## Array v Class
+
 Difficulties remain when deciding in ordered array vs named class for spec collections.
 
 A skirmish has errupted in machinespec.json that illustrates the two distinct styles:
