@@ -50,7 +50,7 @@
 			"Lunar Lander": {
 				"developer": "Atari",
 				"year": 1979,
-				"display":"vector",
+				"display": "vector",
 				"audio-ic": "Discrete circuits",
 				"description": "Landing simulation vector based."
 			},
@@ -64,15 +64,15 @@
 			"Asteroids": {
 				"developer": "Atari",
 				"year": 1979,
-				"display":"vector",
+				"display": "vector",
 				"audio-ic": "Discrete circuits, POKEY (later versions)",
 				"description": "Space vector shooter with toroidal momentum."
 			},
 			"Galaxian":{
-				"developer":"Namco",
+				"developer": "Namco",
 				"year":1979,
-				"display":"crt",
-				"description":"Colorful pixel fixed shooter."
+				"display": "crt",
+				"description": "Colorful pixel fixed shooter."
 			},
 			"Carnival": {
 				"developer": "Exidy",

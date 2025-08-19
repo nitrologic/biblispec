@@ -13,19 +13,19 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
-		"songs":[{
-			"name":"come by yah",
-			"source":"Gullah Geechee",
-			"lyric":[
+		"songs": [{
+			"name": "come by yah",
+			"source": "Gullah Geechee",
+			"lyric": [
 				"Some sons are crying me Gawd come by yah",
 				"Some mas are crying me Gawd come by yah",
 				"Some young are dieing me Gawd come by yah",
 				"Me Gawd come by yah"
 			]
 		},{
-			"name":"take this hammer",
-			"source":"Lead Belly",
-			"lyric":[
+			"name": "take this hammer",
+			"source": "Lead Belly",
+			"lyric": [
 				"take this hammer and pass it to the captain",
 				"you tell him im gone"
 			]

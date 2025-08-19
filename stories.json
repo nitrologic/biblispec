@@ -14,7 +14,7 @@
 	},
 	"spec": {
 		"stories":[{
-			"origin":"greek",
+			"origin": "greek",
 			"story": [
 				"Narcissus, a beautiful young man, spurns all suitors, including the nymph Echo.",
 				"Cursed by Nemesis for his arrogance, he falls in love with his own reflection in a pool."
@@ -26,7 +26,7 @@
 				"His pride fuels rivalry with Quetzalcoatl, sparking cosmic conflict and chaos among mortals."
 			]
 		},{
-			"origin":"european",
+			"origin": "european",
 			"story": [
 				"The wicked queen, consumed by vanity, consults her magic mirror daily, asking who is the fairest.",
 				"Its truthful answers fuel her jealousy of Snow White, leading to her destructive schemes and ultimate downfall."
