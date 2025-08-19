@@ -225,15 +225,10 @@ Animals
 # 𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽
 
 ----
-
-# Digging into big blocks of Unicode
-
 All are not left facing - mirrored souls under observation
 
 # 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
 
 [The entire unicode block of interest](hieroglyph.md)
 
-To Be Continued
-
-[some notes](notes.txt).
+Note to self - maintain some [notes.txt](notes.txt) along the way.
