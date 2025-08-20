@@ -1,6 +1,6 @@
 {
 	"name": "songs biblispec addendum appendum",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Sing to the lord.",
 	"status": "A living document of tonal beats.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -91,6 +91,46 @@
 				"Leave us",
 				"Helpless, helpless, helpless"
 			]
+		},{
+			"name": "Whitey on the Moon",
+			"artist": "Gil Scott-Heron",
+			"year": 1970,
+			"album": "Small Talk at 125th and Lenox",
+			"lyric": [
+				"A rat done bit my sister Nell.",
+				"(with Whitey on the moon)",
+				"Her face and arms began to swell.",
+				"(and Whitey's on the moon)",
+				"I can't pay no doctor bill.",
+				"(but Whitey's on the moon)",
+				"Ten years from now I'll be payin' still.",
+				"(while Whitey's on the moon)",
+				"The man jus' upped my rent las' night.",
+				"('cause Whitey's on the moon)",
+				"No hot water, no toilets, no lights.",
+				"(but Whitey's on the moon)",
+				"I wonder why he's uppi' me?",
+				"('cause Whitey's on the moon?)",
+				"I was already payin' 'im fifty a week.",
+				"(with Whitey on the moon)",
+				"Taxes takin' my whole damn check,",
+				"Junkies makin' me a nervous wreck,",
+				"The price of food is goin' up,",
+				"An' as if all that shit wasn't enough",
+				"A rat done bit my sister Nell.",
+				"(with Whitey on the moon)",
+				"Her face an' arm began to swell.",
+				"(but Whitey's on the moon)",
+				"Was all that money I made las' year",
+				"(for Whitey on the moon?)",
+				"How come there ain't no money here?",
+				"(Hm! Whitey's on the moon)",
+				"Y'know I jus' 'bout had my fill",
+				"(of Whitey on the moon)",
+				"I think I'll sen' these doctor bills,",
+				"Airmail special",
+				"(to Whitey on the moon)"
+ 		   ]
 		}]
 	}
 }
