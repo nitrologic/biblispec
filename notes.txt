@@ -379,6 +379,10 @@ all are left facing except for some odd mirrors
 
 𓉘 𓉙 𓉚 𓉛 𓉜 𓉝
 
+𓄲 𓄳 𓄴 𓄵 𓄶 𓄷
+𓄷𓄳𓄵𓄲
+𓄵𓄳𓄷 @ 𓄶.𓄴𓄴
+
 wikipedia:
 
 The Egyptian Hieroglyphs Unicode block has 100 standardized variants defined to specify rotated signs.[3][4] (Rotation is clockwise when the text is rendered from left-to-right but counter-clockwise if the text is mirrored right-to-left.)[3]
