@@ -1,3 +1,10 @@
+you’d use standard citation formats (e.g., APA, MLA, Chicago) 
+that rely on the author’s name, book title, publisher, and publication year. For example:
+
+MLA: Woolf, Virginia. Mrs. Dalloway. Harcourt, 1925.
+APA: Woolf, V. (1925). Mrs. Dalloway. Harcourt.
+These formats don’t require ORCIDs, and most style guides don’t expect them unless the author’s ORCID is explicitly relevant (e.g., in a research database).
+
 "theremin": {
 	"designer": "Léon Theremin",
 	"name": "Theremin",
