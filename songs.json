@@ -1,6 +1,6 @@
 {
 	"name": "songs biblispec addendum appendum",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Sing to the lord.",
 	"status": "A living document of tonal beats.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -23,16 +23,29 @@
 				"Me Gawd come by yah"
 			]
 		},{
-			"name": "take this hammer",
-			"source": "Lead Belly",
+			"name": "Take This Hammer",
+			"artist": "Lead Belly",
+			"year": 1935,
+			"source": "Traditional, arranged by Lead Belly",
+			"label": "Library of Congress / RCA Victor",
 			"lyric": [
-				"take this hammer and pass it to the captain",
+				"take this hammer, and carry it to the captain",
+				"you tell him im gone",
+				"if he ask you, was I running",
+				"you tell him I was flying",
+				"if he ask you, was I laughing",
+				"you tell him I was crying",
+				"i dont want no corn bread and lettuce", 
+				"it hurts my pride",
+				"take this hammer","and carry it to the captain",
 				"you tell him im gone"
 			]
 		},{
 			"name": "One More Cup of Coffee",
 			"artist": "Bob Dylan",
 			"year": 1976,
+			"album": "Desire",
+			"label": "Columbia Records",
 			"lyric": [
 				"Your breath is sweet",
 				"Your eyes are like two jewels in the sky",
@@ -74,8 +87,12 @@
 				"To the valley below"
 			]
 		},{
-			"name": "helpless",
-			"source": "Neil Young",
+			"name": "Helpless",
+			"artist": "Crosby, Stills, Nash & Young",
+			"songwriter": "Neil Young",
+			"year": 1970,
+			"album": "Déjà Vu",
+			"label": "Atlantic Records",
 			"chords": ["A","E","D"],
 			"lyric": [
 				"There is a town in north Ontario",
@@ -96,6 +113,7 @@
 			"artist": "Gil Scott-Heron",
 			"year": 1970,
 			"album": "Small Talk at 125th and Lenox",
+			"label": "Flying Dutchman Records",
 			"lyric": [
 				"A rat done bit my sister Nell.",
 				"(with Whitey on the moon)",
