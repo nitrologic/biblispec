@@ -21,6 +21,64 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 # Work in progress
 
+## Various characters of geometry, down on the codepoint floor
+
+## pointChars
+
+# ◯ ⊙ ⊚ ⦾ ⦿ ◉ ◎ ◍ ❂ ○ ● ◦ 
+
+## starChars
+
+# ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁
+
+## diagonalLines
+
+# ╲ ╱ ╳
+
+## diagonalChars
+
+# ◹↗⇗⤤➶➹
+# ◿↘⇘⤥➴➷
+# ◸↖⇖⤣
+# ◺↙⇙⤦
+
+# ─ ═ ━ ┄ ┅ ┈ ┉ 
+# │ ║ ┃ ┆ ┇ ┊ ┋ 
+
+## arrowChars
+
+# ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
+# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳ 
+# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊ 
+# ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
+
+## arrowArcs
+
+# ↩ ↪
+# ⤶ ⤷
+# ⤾ ⤿
+# ⤺ ⤻
+
+## boxChars
+
+# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼ 
+# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼ 
+# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬ 
+# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋ 
+
+## cornerChars
+
+# ◜◝ ◟◞
+# ◢ ◣ ◤ ◥
+# ◸ ◹ ◺ ◿
+
+## triangles
+
+# ◀ ▶ ▲ ▼ ▷ ◁ △ ▽ ▸ ◂ ▴ ▾ ▹ ◃ ▵ ▿
+
+⛲
+
+
 ## docs pdf test
 
 Frustrated with broken links and modern models continuing habit of making shit up project
