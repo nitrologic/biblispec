@@ -14,6 +14,53 @@
 	},
 	"spec": {
 		"software-architecture": [{
+			"name": "Von Neumann Architecture",
+			"introduced": "First Draft of a Report on the EDVAC",
+			"year": 1945,
+			"summary":"Processing data with blocks of arithmetic, control, memory and Input Output",
+			"source"{
+				"url":"docs/vnedvac.pdf"
+			}
+		},{
+			"name": "Xanadu",
+			"founder":"Ted Nelson",
+			"year":1965,
+			"Source":"A File Structure for the Complex, the Changing and the Indeterminate",
+			"principles":{
+				"servers": [
+					"distributed network for content storage",
+					"unique tumbler-based addressing",
+					"secure content retrieval"
+				],
+				"users": [
+					"unique secure identity",
+					"can search, retrieve, create, store, and link content",
+					"interact with transcluded content",
+					"access document version histories"
+				],
+				"documents": [
+					"composed of transcluded fragments",
+					"bidirectional and visible links",
+					"versioned with historical access",
+					"addressed via tumblers"
+				],
+				"providers": [
+					"host content on servers",
+					"manage content access and micropayments",
+					"ensure content availability"
+				],
+				"transactions": [
+					"secure and auditable by involved parties",
+					"support micropayments for content usage",
+					"transparent royalty tracking"
+				],
+				"protocols": [
+					"openly published standards",
+					"tumbler addressing system",
+					"Enfilade data structure for efficient storage and linking"
+				]
+			}
+		},{
 			"name": "Transformers",
 			"introduced": "Vaswani et al., Google Research",
 			"year": 2017,
@@ -32,14 +79,6 @@
 				"identifier": "arXiv:1706.03762",
 				"url": "https://arxiv.org/abs/1706.03762",
 				"doi": "10.48550/arXiv.1706.03762"
-			}
-		},{
-			"name": "Von Neumann Architecture",
-			"introduced": "First Draft of a Report on the EDVAC",
-			"year": 1945,
-			"summary":"Processing data with blocks of arithmetic, control, memory and Input Output",
-			"source"{
-				"url":"docs/vnedvac.pdf"
 			}
 		}],
 		"video-game":{

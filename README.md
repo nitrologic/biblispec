@@ -23,41 +23,25 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 ## Various characters of geometry, down on the codepoint floor
 
-## pointChars
+### pointChars ◯ ⊙ ⊚ ⦾ ⦿ ◉ ◎ ◍ ❂ ○ ● ◦ 
 
-# ◯ ⊙ ⊚ ⦾ ⦿ ◉ ◎ ◍ ❂ ○ ● ◦ 
+### starChars ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁
 
-## starChars
-
-# ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁
-
-## diagonalLines
+### scanlineChars ‾ ⎺ ⎻ ─ ⎼ ⎽ _
 
 # ╲ ╱ ╳
-
-## diagonalChars
-
-# ◹↗⇗⤤➶➹
-# ◿↘⇘⤥➴➷
-# ◸↖⇖⤣
-# ◺↙⇙⤦
-
 # ─ ═ ━ ┄ ┅ ┈ ┉ 
-# │ ║ ┃ ┆ ┇ ┊ ┋ 
 
-## arrowChars
+### flow state
+
+# ◹↗⇗⤤➶➹ ◿↘⇘⤥➴➷ ◸↖⇖⤣ ◺↙⇙⤦
+
+# ↩ ↪ ⤶ ⤷ ⤾ ⤿
 
 # ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
 # ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳ 
 # ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊ 
 # ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
-
-## arrowArcs
-
-# ↩ ↪
-# ⤶ ⤷
-# ⤾ ⤿
-# ⤺ ⤻
 
 ## boxChars
 
@@ -65,6 +49,10 @@ The data payload for this project is [biblispec.json](biblispec.json)
 # ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼ 
 # ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬ 
 # ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋ 
+
+## posts
+
+# │ ║ ┃ ┆ ┇ ┊ ┋ 
 
 ## cornerChars
 
@@ -342,3 +330,6 @@ All are not left facing - mirrored souls under observation
 [The entire unicode block of interest](hieroglyph.md)
 
 Note to self - maintain some [notes.txt](notes.txt) along the way.
+
+⤺
+⤻
