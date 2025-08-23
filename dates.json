@@ -1,0 +1,23 @@
+{
+	"name": "dates biblispec appendum",
+	"version": "1.0.0",
+	"description": "Details of dates.",
+	"status": "A living document of human endeavour",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"spec": {
+		"calendar":[{
+			"name":"Starship Flight Ten",
+			"time":"2025-08-25 11:30 Monday NZST",
+			"location":"Starbase, Texas",
+			"detail":"The tenth integrated flight test of SpaceX's Starship system, focusing on not blowing up."
+		}]
+	}
+}
