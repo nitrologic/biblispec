@@ -114,11 +114,13 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 
 ```
 
-## Addendum appendum
+## Addendum appendum books
 
-- songs [songs.json](songs.json)
+- phrases [phrases.json](books/phrases.json)
+	- "你好": "nǐ hǎo"  
+- songs [songs.json](books/songs.json)
 	- songs of freedom - 3  
-- stories [stories.json](stories.json)
+- stories [books/stories.json](stories.json)
 	- tales of narcissism - 4
 - machine spec 1.0.3 [machinespec.json](machinespec.json) 
 	- software-architecture - 1 - transformers
