@@ -194,6 +194,10 @@
 			"lime": "🫒",
 			"family": "👨‍👩‍👧‍👦"
 		},
+		"fenced":{
+			"name": "code points coming soon",
+			"codes":"↩↪↗↘↖↙◀▶"
+		},
 		"faces":{
 			"name": "Face on profiles",
 			"profiles":{
