@@ -124,11 +124,11 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 	- songs of freedom - 3  
 - stories [books/stories.json](stories.json)
 	- tales of narcissism - 4
-- machine spec 1.0.3 [machinespec.json](machinespec.json) 
+- machine spec 1.0.3 [books/machinespec.json](books/machinespec.json) 
 	- software-architecture - 1 - transformers
 	- audio-ic - 22 integrated circuit solutions 
 	- ai-voices - 17 providers 308 names
-- audio circuits 1.0.7 [audiocircuit.json](audiocircuit.json)
+- audio circuits 1.0.7 [books/audiocircuit.json](books/audiocircuit.json)
 	- 22 audio circuits from 1906 to 1981
 
 Files are [JSON](https://www.json.org/json-en.html) format. 
