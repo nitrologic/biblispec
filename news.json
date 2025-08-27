@@ -14,12 +14,15 @@
 	},
 	"spec": {
 		"today":[
-			{"date":"Wednesday 27 August, 2025","events":[
-				{"head":"Steve's laptop passes zucchini turing test"},
-				{"head":"flight 10 day 3"}
+			{"date":"Thursday 28 August, 2025","events":[
+				{"head":""}
 			]}
 		],
 		"shelf":[
+			{"date":"Wednesday 27 August, 2025","events":[
+				{"head":"Steve's laptop passes zucchini turing test"},
+				{"head":"flight 10 day 3"}
+			]},
 			{"date":"Tuesday 26 August, 2025","events":[
 				{"head":"flight 10 day 2 failure to fly cites anvil the cloud"},
 				{"head":"lock screen timer app replaces chatgpt as new thing in app store charts"}

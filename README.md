@@ -116,9 +116,11 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 
 ## Addendum appendum books
 
-- phrases [phrases.json](books/phrases.json)
+- news [news.json](news.json)
+	- experimental daily headlines
+- phrases [books/phrases.json](books/phrases.json)
 	- "你好": "nǐ hǎo"  
-- songs [songs.json](books/songs.json)
+- songs [books/songs.json](books/songs.json)
 	- songs of freedom - 3  
 - stories [books/stories.json](stories.json)
 	- tales of narcissism - 4
