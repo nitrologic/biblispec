@@ -1,0 +1,35 @@
+{
+	"name": "phrase book biblispec appendum",
+	"version": "1.0.0",
+	"description": "Communucation Assistant.",
+	"status": "A living document of human notion",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"acknowledgments": "Chinese phrase content assisted by Grok, created by xAI",
+	"spec": {
+		"ch":[
+			{"谢谢": "xièxie", "sheh-sheh": "Thank you"},
+			{"你好": "nǐ hǎo", "nee how": "Hello"},
+			{"再见": "zàijiàn", "zeye-jee-an": "Goodbye"},
+			{"请": "qǐng", "ching": "Please"},
+			{"对不起": "duìbùqǐ", "dway-boo-chee": "Sorry"},
+			{"多少钱": "duōshǎo qián", "dwo-shao chyen": "How much is it?"},
+			{"我在哪儿": "wǒ zài nǎr", "woh zai nar": "Where am I?"},
+			{"帮助": "bāngzhù", "bang-joo": "Help"},
+			{"请问": "qǐngwèn", "ching-wen": "Excuse me (to ask a question)"},
+			{"可以吗": "kěyǐ ma", "kuh-yee ma": "Is it okay?"},
+			{"我想要这个": "wǒ xiǎng yào zhège", "woh shyang yao juh-guh": "I want this"},
+			{"厕所在哪里": "cèsuǒ zài nǎlǐ", "tsuh-swo zai nah-lee": "Where is the bathroom?"},
+			{"我不懂": "wǒ bù dǒng", "woh boo dong": "I don’t understand"},
+			{"慢慢说": "màn màn shuō", "man man shwo": "Speak slowly"},
+			{"我来自新西兰": "wǒ láizì xīnxīlán", "woh lai-zee sheen-shee-lan": "I’m from New Zealand"}
+		]
+	}
+}
