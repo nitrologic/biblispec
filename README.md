@@ -43,7 +43,10 @@ The data payload for this project is [biblispec.json](biblispec.json)
 				"arrowArcs":["↩↪","⤶⤷","⤾⤿","👈👉","⤺⤻"],
 				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
 				"hatch":["╲","╱","╳"],
-				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"]				
+				"colorChars":[
+					"⚫⬛🖤","⚪⬜🤍",
+					"🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚",
+					"🔵🟦💙","🟣🟪💜","🟤🟫🤎"]
 			}
 ```
 
@@ -54,20 +57,20 @@ The data payload for this project is [biblispec.json](biblispec.json)
 # ↩ ↪ ⤶ ⤷ ⤾ ⤿
 
 # ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
-# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳ 
-# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊ 
+# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳
+# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊
 # ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
 
 ## boxChars
 
-# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼ 
-# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼ 
-# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬ 
-# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋ 
+# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼
+# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼
+# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬
+# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋
 
 ## posts
 
-# │ ║ ┃ ┆ ┇ ┊ ┋ 
+# │ ║ ┃ ┆ ┇ ┊ ┋
 
 ## cornerChars
 
@@ -85,7 +88,7 @@ The data payload for this project is [biblispec.json](biblispec.json)
 ## docs pdf test
 
 Frustrated with broken links and modern models continuing habit of making shit up project
-bibli creates a docs folder and adds the first wayback pdf. 
+bibli creates a docs folder and adds the first wayback pdf.
 
 The year is 1945 and John has been up all night...
 
@@ -134,19 +137,19 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 - news [news.json](news.json)
 	- experimental daily headlines
 - phrases [books/phrases.json](books/phrases.json)
-	- "你好": "nǐ hǎo"  
+	- "你好": "nǐ hǎo"
 - songs [books/songs.json](books/songs.json)
-	- songs of freedom - 3  
+	- songs of freedom - 3
 - stories [books/stories.json](stories.json)
 	- tales of narcissism - 4
-- machine spec 1.0.3 [books/machinespec.json](books/machinespec.json) 
+- machine spec 1.0.3 [books/machinespec.json](books/machinespec.json)
 	- software-architecture - 1 - transformers
-	- audio-ic - 22 integrated circuit solutions 
+	- audio-ic - 22 integrated circuit solutions
 	- ai-voices - 17 providers 308 names
 - audio circuits 1.0.7 [books/audiocircuit.json](books/audiocircuit.json)
 	- 22 audio circuits from 1906 to 1981
 
-Files are [JSON](https://www.json.org/json-en.html) format. 
+Files are [JSON](https://www.json.org/json-en.html) format.
 
 JSON where commentary is unwelcome - no comments allowed = careful attention to structure required!
 
@@ -162,7 +165,7 @@ As the raw keyboard manager in Slop Fountain becomes more advanced our thirst fo
 
 # 𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾𐂿𐃀𐃁𐃂𐃃𐃄𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖𐃗𐃘𐃙𐃚𐃛𐃜𐃝𐃞𐃟𐃠𐃡𐃢𐃣𐃤𐃥𐃦𐃧𐃨𐃩𐃪𐃫𐃬𐃭𐃮𐃯𐃰𐃱𐃲𐃳𐃴𐃵𐃶𐃷𐃸𐃹𐃺"
 
-## Faces 
+## Faces
 
 A collection of animal mask monster and fancy emoji wide profile forms.
 
@@ -212,9 +215,9 @@ The Cherokee syllabary represents a remarkable achievement in linguistic innovat
 - Today still used in Cherokee language education and cultural programs
 - Symbol of Cherokee intellectual sovereignty and resistance to cultural erasure
 
-> This represents not just a writing system, but a powerful symbol of indigenous innovation and cultural resilience. 
+> This represents not just a writing system, but a powerful symbol of indigenous innovation and cultural resilience.
 
-> fountain 1.3.5 ⛲  claude-sonnet-4 🌐 
+> fountain 1.3.5 ⛲  claude-sonnet-4 🌐
 
 
 ## Ogham Script
@@ -223,8 +226,8 @@ Ogham, an ancient Irish script, embodies the mystique of Celtic heritage and ear
 
 Attributed to the mythical figure Ogma, the Celtic god of eloquence and learning. Primarily inscribed on stone monuments in Ireland and western Britain (4th–9th centuries CE). Known as the "Celtic tree alphabet" due to letter names tied to trees and nature
 
-# ᚁ ᚂ ᚃ ᚄ ᚅ 
-# ᚆ ᚇ ᚈ ᚉ ᚊ 
+# ᚁ ᚂ ᚃ ᚄ ᚅ
+# ᚆ ᚇ ᚈ ᚉ ᚊ
 # ᚋ ᚌ ᚍ ᚎ ᚏ
 
 # ᚐ ᚑ ᚒ ᚓ ᚔ
