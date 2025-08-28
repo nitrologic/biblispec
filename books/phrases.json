@@ -15,6 +15,7 @@
 	"acknowledgments": "Chinese phrase content assisted by Grok, created by xAI",
 	"spec": {
 		"ch":[
+			{"很好": "hěn hǎo", "hen hao": "Very good"},
 			{"谢谢": "xièxie", "sheh-sheh": "Thank you"},
 			{"你好": "nǐ hǎo", "nee how": "Hello"},
 			{"再见": "zàijiàn", "zeye-jee-an": "Goodbye"},
