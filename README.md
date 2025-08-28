@@ -3,8 +3,6 @@
 
 A living document of linguistic latitude.
 
-> ⚠️reference test - const objects in code citing ✴bibli 2025.08.28
-
 # What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
@@ -21,20 +19,33 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
-# Work in progress
+# Fenced for inspections
 
 ## Various characters of geometry, down on the codepoint floor
 
-### masked markdown boxes ↩↪↗↘↖↙◀▶✳✴
-
-### pointChars ◯ ⊙ ⊚ ⦾ ⦿ ◉ ◎ ◍ ❂ ○ ● ◦ 
-
-### starChars ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁
-
-### scanlineChars ‾ ⎺ ⎻ ─ ⎼ ⎽ _
-
-# ╲ ╱ ╳
-# ─ ═ ━ ┄ ┅ ┈ ┉ 
+```
+		"fenced":{
+			"name":"code points of visual interest",
+			"code":{
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
+				"circles":"◐◒◑◓◔◕",
+				"markdown":"↩↪↗↘↖↙◀▶✳✴",
+				"square":"🔳🔲✅❎",
+				"oclock":"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛",
+				"halfclock":"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧",
+				"outer":"◜◝◟◞",
+				"rect":"▪▫■□▢▣",
+				"hatched":"▤▥▦▧▨▩",
+				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
+				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+				"arrowArcs":["↩↪","⤶⤷","⤾⤿","👈👉","⤺⤻"],
+				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+				"hatch":["╲","╱","╳"],
+				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"]				
+			}
+```
 
 ### flow state
 
