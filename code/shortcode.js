@@ -1,4 +1,4 @@
-// project bibli spec - shortCode - 2025.08.28
+// derived from spec.shortCode ✴bibli 2025.08.28 
 const shortCode={
 	"goose": "🪿","jellyfish": "🪼","lime": "🫒","family": "👨‍👩‍👧‍👦", "cat": "🐱","dog": "🐶","moose": "🫎","donkey": "🫏",
 	"pizza": "🍕","beer": "🍺","coffee": "☕","cake": "🎂", "beans": "🫘","jar": "🫙",

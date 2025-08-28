@@ -3,6 +3,8 @@
 
 A living document of linguistic latitude.
 
+> ⚠️reference test - const objects in code citing ✴bibli 2025.08.28
+
 # What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
