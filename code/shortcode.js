@@ -1,4 +1,4 @@
-// derived from spec.shortCode ✴bibli 2025.08.28 
+// shortCode ✴ biblispec 2025
 const shortCode={
 	"goose": "🪿","jellyfish": "🪼","lime": "🫒","family": "👨‍👩‍👧‍👦", "cat": "🐱","dog": "🐶","moose": "🫎","donkey": "🫏",
 	"pizza": "🍕","beer": "🍺","coffee": "☕","cake": "🎂", "beans": "🫘","jar": "🫙",
@@ -7,7 +7,7 @@ const shortCode={
 	"plunger": "🪠","robot": "🤖","unicorn": "🦄","thumbsup": "👍","fire": "🔥","star": "⭐","eyes": "👀",
 	"trophy": "🏆","skull": "💀","clap": "👏","100": "💯",
 	"heart": "❤️","black_heart": "🖤","white_heart": "🤍","pink_heart": "🩷","light_blue_heart": "🩵","grey_heart": "🩶","sparkling_heart": "💖","broken_heart": "💔",
-	"check": "✅","warning": "⚠️","question": "❓","exclamation": "❗",
+	"warning": "⚠️","question": "❓","exclamation": "❗",
 	"zzz": "💤","clock": "⏰","hourglass": "⏳",
 	"lightning": "⚡","rainbow": "🌈","moon": "🌙","sun": "☀️",
 	"cloud": "☁️","umbrella": "☔","snowman": "⛄",
@@ -24,4 +24,5 @@ const shortCode={
 	"khanda": "🪯","wireless": "🛜","phoenix": "🪶","broken_chain": "⛓️‍💥","ginger_root": "🫚",
 	"hair_pick": "🪮","folding_hand_fan": "🪭","pea_pod": "🫛","hyacinth": "🪻",
 	"shovel": "🫷","troll": "🧌","wing": "🪽","pouring_liquid": "🫗",
+	"fish": "🐟","ballot":"☑","check": "✅","cross":"❎"
 };

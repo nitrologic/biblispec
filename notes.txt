@@ -1,3 +1,35 @@
+"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛"
+"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧"
+"◐◒◑◓◔◕"
+"◜◝◟◞"
+
+U+25D0 (◐) - Circle with left half black (partial vertical split)
+U+25D1 (◑) - Circle with right half black
+U+25D2 (◒) - Lower half circle
+U+25D3 (◓) - Upper half circle
+U+25D4 (◔) - Upper left quadrant circle
+U+25D5 (◕) - Upper right quadrant circle
+
+■□▢▣
+▤▥▦▧▨▩
+▪▫
+
+7. U+25A0 (■) - Black square
+8. U+25A1 (□) - White square
+9. U+25A2 (▢) - White square with rounded corners
+10. U+25A3 (▣) - White square containing black small square
+11. U+25A4 (▤) - Square with horizontal fill
+12. U+25A5 (▥) - Square with vertical fill
+13. U+25A6 (▦) - Square with orthogonal crosshatch fill
+14. U+25A7 (▧) - Square with upper left to lower right fill
+15. U+25A8 (▨) - Square with upper right to lower left fill
+16. U+25A9 (▩) - Square with diagonal crosshatch fill
+17. U+25AA (▪) - Black small square
+18. U+25AB (▫) - White small square
+
+- U+25FB (◻) - White medium square
+- U+2B1C (⬜) - White large square
+
 const diagonalLines=["╲","╱","╳"];
 const diagonalChars=["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"];
 const lineChars=["─═━┄┅┈┉","│║┃┆┇┊┋"];
