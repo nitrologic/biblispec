@@ -23,6 +23,8 @@ The data payload for this project is [biblispec.json](biblispec.json)
 
 ## Various characters of geometry, down on the codepoint floor
 
+### masked markdown boxes ↩↪↗↘↖↙◀▶✳✴
+
 ### pointChars ◯ ⊙ ⊚ ⦾ ⦿ ◉ ◎ ◍ ❂ ○ ● ◦ 
 
 ### starChars ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁
