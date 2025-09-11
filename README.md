@@ -19,6 +19,50 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
+# fundament and orient
+
+```
+"fundament":
+{
+	"stone": "Stability, permanence, foundational; bedrock, monolith.",
+	"star": "Guidance, aspiration, directional; north star, lodestar.",
+	"axis": "Orientation, structure, alignment; pole, axis mundi, unit vector.",
+	"flow": "Movement, process, temporal reference; epoch, equilibrium, par."
+},
+"orient":
+{
+	"azimuth": "Horizontal angle measured clockwise from north; specifies directional bearings in navigation.",
+	"zenith": "Point on celestial sphere directly above observer; defines upward vertical reference.",
+	"nadir": "Point on celestial sphere directly below observer; defines downward vertical reference.",
+	"home": "Baseline reference position or starting point; anchors all relative coordinate measurements.",
+	"datum": "Reference surface or framework in surveying; establishes baseline heights and positions.",
+	"origin": "Point where all coordinate axes intersect; absolute reference for all other points.",
+	"fovea": "Central point of retina providing sharpest vision; primary reference for visual fixation.",
+	"frame": "Baseline reference for measuring motion or orientation; inertial, conceptual, or structural.",
+	"anchor": "Initial information used as reference point for subsequent judgments and estimates.",
+	"tonic": "First note of diatonic scale; home note and primary harmonic reference for a key.",
+	"equilibrium": "State of balance in a system; reference point for dynamic stability.",
+	"par": "Standard score or expected performance; baseline reference for comparisons.",
+	"mean": "Arithmetic average of a dataset; central reference for statistical deviation.",
+	"bedrock": "Foundational layer or principle; ultimate reference for stability or truth.",
+	"pole": "Extreme point defining an axis or boundary; reference for orientation.",
+	"epoch": "Reference point in time for dating events or cycles; standard temporal baseline.",
+	"sovereign": "Supreme authority or ruling power; ultimate reference for legitimacy and control.",
+	"absolute": "Unrestricted and final authority; reference beyond conditions or limits.",
+	"axiom": "Self-evident truth taken as starting point; foundational reference for reasoning.",
+	"principle": "Fundamental rule or law; baseline reference for systems of thought or action.",
+	"archetype": "Original model or pattern; reference form for subsequent instances.",
+	"monolith": "Single massive structure; reference of permanence or authority.",
+	"root node": "Primary or topmost node in hierarchical structure; defines fundamental reference for descendants.",
+	"north star": "Fixed celestial point above North Pole; constant navigational reference for true north.",
+	"prime meridian": "Meridian at 0° longitude; universal reference for measuring east-west position.",
+	"unit vector": "Vector of length 1 indicating direction; fundamental reference for specifying other vectors.",
+	"ground state": "Lowest possible energy level of quantum system; baseline reference for all other states.",
+	"identity element": "Element that leaves operation result unmodified; fundamental operational reference.",
+	"sea level": "Average height of the ocean's surface; standard baseline for measuring land elevations and depths.",
+	"axis mundi": "Singular point connecting realms; central reference for orientation or structure."
+}
+```
 # Fenced for inspections
 
 ## Various characters of geometry, down on the codepoint floor
