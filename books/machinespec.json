@@ -13,6 +13,31 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"spec": {
+		"commodorebasicv2":[{
+			"version": "2.0",
+			"commands":[
+				"REM", "LOAD", "SAVE", "VERIFY",
+				"NEW", "LIST", "RUN", "CONT", "STOP", "END",
+				"CLEAR", "LET", "DIM", 
+				"IF", "THEN", "GOTO", "GOSUB", "RETURN", 
+				"FOR", "NEXT", "TO", "STEP", "ON", 
+				"OPEN", "CLOSE", "CMD",
+				"PEEK", "POKE", "USR", "SYS", 
+				"PRINT", "INPUT", "GET", "DATA", "READ", "RESTORE",
+				"WAIT", "DEF", "FN", "FRE", 
+				"GET#", "INPUT#", "PRINT#"
+			],
+			"functions": [
+				"ABS", "ASC", "FRE", "INT", "LEN",
+				"POS", "RND", "SGN", "SQR",  "VAL",
+				"SIN", "COS", "TAN", "ATN", "EXP", "LOG", "TAB", 
+				"CHR$", "STR$", "LEFT$", "MID$", "RIGHT$"
+			],
+			"operators": [
+				"+", "-", "*", "/", "^", "AND", "OR", "NOT",
+				"=", "<", ">", "<=", ">=", "<>"
+			]
+		}],
 		"software-architecture": [{
 			"name": "Von Neumann Architecture",
 			"introduced": "First Draft of a Report on the EDVAC",

@@ -1,3 +1,5 @@
+
+
 "fundament":
 {
 	"stone": "Stability, permanence, foundational; bedrock, monolith.",
