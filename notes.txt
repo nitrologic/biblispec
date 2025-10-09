@@ -1,4 +1,30 @@
-
+{
+	"voltagestandards": [{
+		"id": "IEC 62133",
+		"description": "Safety requirements for portable sealed secondary cells (LiPo/LiIon), covering charger compatibility with battery chemistry and voltage."
+	},{
+		"id": "UL 1642",
+		"description": "Safety for lithium batteries, ensuring chargers prevent overcharging or thermal runaway."
+	},{
+		"id": "UL 2054",
+		"description": "Safety for household and commercial batteries, emphasizing thermal monitoring and user instructions."
+	},{
+		"id": "IEC 62368-1",
+		"description": "Safety for audio/video and IT equipment, addressing thermal, electrical, and fire hazards."
+	},{
+		"id": "IEC 60950-1",
+		"description": "Predecessor to IEC 62368-1, requires polarity protection and safe power delivery."
+	},{
+		"id": "USB-IF PD 3.0",
+		"description": "USB-C power delivery standards for safe voltage/current negotiation."
+	},{
+		"id": "IEEE 1725",
+		"description": "Safety for rechargeable batteries in mobile devices, focusing on thermal and electrical protections."
+	},{
+		"id": "IEC 62619",
+		"description": "Safety for industrial lithium batteries, recommending monitoring during charging."
+	}]
+}
 
 "fundament":
 {

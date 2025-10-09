@@ -1,0 +1,23 @@
+{
+	"Garmin":{
+		"acquisitions":[
+			{"year": 2003, "company": "UPS Aviation Technologies (UPSAT)", "description": "UPS’s avionics unit", "country": "USA"},
+			{"year": 2006, "company": "Dynastream Innovations", "description": "ANT / fitness sensor technology", "country": "Canada"},
+			{"year": 2007, "company": "Digital Cyclone (DCI)", "description": "mobile weather / location-based services provider", "country": "USA"},
+			{"year": 2007, "company": "Nautamatic Marine Systems", "description": "marine autopilot assets", "country": "USA"},
+			{"year": 2011, "company": "Navigon AG", "description": "German navigation/software company", "country": "Germany"},
+			{"year": 2012, "company": "Nexus Marine AB", "description": "Swedish sailing/yachting instrumentation", "country": "Sweden"},
+			{"year": 2014, "company": "Fusion Electronics", "description": "marine audio", "country": "New Zealand"},
+			{"year": 2015, "company": "iKubu (Backtracker)", "description": "bicycle rear-radar / vision assets", "country": "South Africa"},
+			{"year": 2016, "company": "DeLorme (Earthmate / inReach assets)", "description": "outdoor satellite communications and mapping", "country": "USA"},
+			{"year": 2017, "company": "Navionics S.p.A.", "description": "nautical charts and marine mapping", "country": "Italy"},
+			{"year": 2019, "company": "Tacx", "description": "Dutch indoor-trainer and indoor-training software maker", "country": "Netherlands"},
+			{"year": 2020, "company": "Firstbeat Analytics", "description": "physiological analytics / training-analytics business", "country": "Finland"},
+			{"year": 2021, "company": "AeroData, FltPlan.com, GEOS Worldwide", "description": "aviation performance/flight-planning services and emergency monitoring/response services", "country": "USA"},
+			{"year": 2022, "company": "Vesper Marine Ltd.", "description": "AIS/VHF/vessel-monitoring marine provider", "country": "New Zealand"},
+			{"year": 2023, "company": "JL Audio", "description": "premium audio brand", "country": "USA"},
+			{"year": 2024, "company": "Lumishore", "description": "marine lighting company", "country": "UK"},
+			{"year": 2025, "company": "MYLAPS", "description": "timing and sports-timing solutions", "country": "Netherlands"}
+		]
+	}
+}
