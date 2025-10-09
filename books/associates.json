@@ -51,5 +51,55 @@
 			{"year": 2025, "company": "Precisional LLC", "description": "Acquired Loadrite, Spectra Precision Tools, SECO accessories, and Time and Frequency businesses", "country": "USA", "sector": "Various"},
 			{"year": 2024, "company": "Badger Meter", "description": "Acquired remote water monitoring hardware and software, including Telog brand RTUs and Trimble Unity Remote Monitoring software", "country": "USA", "sector": "Water Tech"}
 		]
-  	}
+  	},
+	"Modern Times Group": {
+		"acquisitions": [
+			{"year": 2005, "country": "Denmark", "company": "Bet24", "description": "Online betting company", "sector": "Online Gaming"},
+			{"year": 2006, "country": "Eastern Europe", "company": "Viasat Sport East", "description": "Sports television channel", "sector": "Broadcasting"},
+			{"year": 2007, "country": "Bulgaria", "company": "Balkan Media Group", "description": "Bulgarian television channels", "sector": "Broadcasting"},
+			{"year": 2008, "country": "Bulgaria", "company": "Nova Television", "description": "Bulgarian television network", "sector": "Broadcasting"},
+			{"year": 2012, "country": "Germany", "company": "Turtle Entertainment (ESL)", "description": "Esports tournament operator", "sector": "Esports"},
+			{"year": 2013, "country": "United Kingdom", "company": "Digital Rights Group", "description": "TV rights distributor", "sector": "Media Distribution"},
+			{"year": 2014, "country": "Netherlands", "company": "Zoomin.TV", "description": "Multi-channel network", "sector": "Digital Media"},
+			{"year": 2015, "country": "Sweden", "company": "DreamHack", "description": "Esports tournament organizer", "sector": "Esports"},
+			{"year": 2016, "country": "Germany", "company": "InnoGames", "description": "Mobile and browser game developer", "sector": "Gaming"},
+			{"year": 2017, "country": "USA", "company": "Kongregate", "description": "Game publisher and developer", "sector": "Gaming"},
+			{"year": 2021, "country": "New Zealand", "company": "Ninja Kiwi", "description": "Developer of Bloons Tower Defense series", "sector": "Gaming"},
+			{"year": 2021, "country": "India", "company": "PlaySimple", "description": "Developer of casual and word games", "sector": "Gaming"},
+			{"year": 2024, "country": "Israel", "company": "Plarium", "description": "Developer of mobile RPG RAID: Shadow Legends", "sector": "Gaming"}
+		]
+	},
+	"Electronic Arts": {
+		"acquisitions": [
+			{"year": 1991, "country": "Canada", "company": "Distinctive Software", "description": "Developer of racing games; became EA Canada", "sector": "Game Development"},
+			{"year": 1992, "country": "USA", "company": "Origin Systems", "description": "Developer of Ultima and Wing Commander series", "sector": "Game Development"},
+			{"year": 1995, "country": "USA", "company": "Bullfrog Productions", "description": "Developer of Dungeon Keeper and Syndicate", "sector": "Game Development"},
+			{"year": 1998, "country": "USA", "company": "Westwood Studios", "description": "Developer of Command & Conquer series", "sector": "Game Development"},
+			{"year": 2000, "country": "USA", "company": "DreamWorks Interactive", "description": "Developer of Medal of Honor series", "sector": "Game Development"},
+			{"year": 2001, "country": "USA", "company": "Maxis", "description": "Developer of The Sims series", "sector": "Game Development"},
+			{"year": 2006, "country": "Sweden", "company": "DICE", "description": "Developer of Battlefield series", "sector": "Game Development"},
+			{"year": 2007, "country": "Canada", "company": "BioWare", "description": "Developer of Mass Effect and Dragon Age series", "sector": "Game Development"},
+			{"year": 2007, "country": "USA", "company": "Pandemic Studios", "description": "Developer of Star Wars Battlefront and Mercenaries series", "sector": "Game Development"},
+			{"year": 2009, "country": "USA", "company": "Playfish", "description": "Developer of social games like Pet Society", "sector": "Game Development"},
+			{"year": 2011, "country": "USA", "company": "PopCap Games", "description": "Developer of Bejeweled and Plants vs. Zombies series", "sector": "Game Development"},
+			{"year": 2013, "country": "USA", "company": "Ghost Games", "description": "Developer of Need for Speed series", "sector": "Game Development"},
+			{"year": 2015, "country": "USA", "company": "Motive Studios", "description": "Developer of Star Wars: Squadrons", "sector": "Game Development"},
+			{"year": 2016, "country": "USA", "company": "Respawn Entertainment", "description": "Developer of Titanfall and Apex Legends", "sector": "Game Development"},
+			{"year": 2021, "country": "UK", "company": "Codemasters", "description": "Developer of F1 and DiRT series", "sector": "Game Development"},
+			{"year": 2021, "country": "UK", "company": "Playdemic", "description": "Developer of Golf Clash", "sector": "Game Development"},
+			{"year": 2021, "country": "USA", "company": "Glu Mobile", "description": "Developer of mobile games like Design Home", "sector": "Game Development"}
+		]
+	},
+	"Tiny Limited": {
+		"investments": [
+			{"year": 2025, "country": "Canada", "company": "Abstract Studio Design Inc.", "description": "Design collaboration tool", "sector": "Design & Collaboration"},
+			{"year": 2025, "country": "USA", "company": "AeroPress Inc.", "description": "Producer of the Aeropress coffee maker and accessories", "sector": "Consumer Goods"},
+			{"year": 2025, "country": "USA", "company": "BeFunky Inc.", "description": "Digital media and AI photo editing software suite", "sector": "Creative Software"},
+			{"year": 2025, "country": "USA", "company": "Dribbble Holdings Ltd.", "description": "Social network for designers and digital creatives", "sector": "Creative Platform"},
+			{"year": 2025, "country": "USA", "company": "Girlboss Holdings Inc.", "description": "Women and career-focused online community and media brand", "sector": "Community & Media"},
+			{"year": 2025, "country": "Canada", "company": "Mateina Inc.", "description": "Canadian organic yerba mate producer", "sector": "Consumer Goods"}
+			{"year": 2024, "country": "USA", "company": "MediaNet Solutions", "description": "Provider of educational software for special education management", "sector": "Educational Software"},
+			{"year": 2025, "country": "New Zealand", "company": "Serato Audio Research Limited", "description": "DJ software developer; majority stake acquired by Tiny Ltd.", "sector": "Music Technology"}
+		]
+  }
 }
