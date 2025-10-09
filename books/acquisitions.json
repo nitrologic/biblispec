@@ -34,17 +34,22 @@
 			{"year": 2003, "company": "Applanix", "description": "Inertial navigation systems for geospatial applications", "country": "Canada", "sector": "Geospatial"},
 			{"year": 2003, "company": "MENSI", "description": "3D laser scanning technology", "country": "Spain", "sector": "Surveying"},
 			{"year": 2006, "company": "Meridian Systems", "description": "Construction project management software", "country": "USA", "sector": "Construction Tech"},
-			{"year": 2012, "company": "SketchUp", "description": "3D modeling software", "country": "USA", "sector": "Design & Architecture"},
+			{"year": 2012, "company": "SketchUp (from @Last Software)", "description": "3D modeling software integrated with Google Earth", "country": "USA", "sector": "Design & Architecture"},
+			{"year": 2012, "company": "SketchUp (from Google)", "description": "Trimble acquisition of SketchUp for architecture, construction, and engineering workflows", "country": "USA", "sector": "Design & Architecture"},
+			{"year": 2012, "company": "Spime", "description": "Acquired for location-based services and mobile applications", "country": "USA", "sector": "Mobile Tech"},
 			{"year": 2012, "company": "TMW Systems", "description": "Fleet management software", "country": "USA", "sector": "Logistics Tech"},
 			{"year": 2014, "company": "WeoGeo", "description": "Geospatial data marketplace", "country": "USA", "sector": "Geospatial"},
 			{"year": 2016, "company": "Sefaira", "description": "Building performance analysis software", "country": "UK", "sector": "Construction Tech"},
 			{"year": 2018, "company": "e-Builder", "description": "Construction program management software", "country": "USA", "sector": "Construction Tech"},
+			{"year": 2018, "company": "Viewpoint", "description": "Construction software solutions for project management and accounting", "country": "USA", "sector": "Construction Tech"},
+			{"year": 2020, "company": "Tilos", "description": "Linear project planning software for infrastructure projects", "country": "Austria", "sector": "Construction Tech"},
 			{"year": 2022, "company": "B2W Software", "description": "Heavy civil construction software", "country": "USA", "sector": "Construction Tech"},
 			{"year": 2022, "company": "Transporeon", "description": "Cloud-based transportation management platform", "country": "Germany", "sector": "Logistics Tech"},
 			{"year": 2022, "company": "Bilberry", "description": "Selective spraying systems for agriculture", "country": "France", "sector": "Agriculture Tech"},
 			{"year": 2023, "company": "AGCO Ag Assets", "description": "Agricultural technology assets", "country": "USA", "sector": "Agriculture Tech"},
 			{"year": 2024, "company": "Platform Science", "description": "Transportation telematics platform", "country": "USA", "sector": "Logistics Tech"},
-			{"year": 2025, "company": "Precisional LLC", "description": "Acquired Loadrite, Spectra Precision Tools, SECO accessories, and Time and Frequency businesses", "country": "USA", "sector": "Various"}
+			{"year": 2025, "company": "Precisional LLC", "description": "Acquired Loadrite, Spectra Precision Tools, SECO accessories, and Time and Frequency businesses", "country": "USA", "sector": "Various"},
+			{"year": 2024, "company": "Badger Meter", "description": "Acquired remote water monitoring hardware and software, including Telog brand RTUs and Trimble Unity Remote Monitoring software", "country": "USA", "sector": "Water Tech"}
 		]
-	}
+  	}
 }
