@@ -1,3 +1,14 @@
+"systemic fails": {
+	"market crash": "a cascade of panic unraveling investor confidence",
+	"stack overflow": "a recursive push decrements pointer to no return",
+	"traction loss": "passing slip ratio leading to the tire's dialogue with the road dissolving into noise",
+	"thermal runaway": "exothermic reaction with rapid escalation",
+	"rolling blackout": "sequential loss of power propagating through a network",
+	"pyroclastic surge": "volcanic pressure causing cascading destruction",
+	"acoustic feedback": "uncontrolled sound amplification from self-reinforcing audio loops"
+}
+
+
 "thermal runaway":" is the more apt term.
 internal failure mechanism 
 an exothermic chain reaction inside cells that raises temperature uncontrollably
@@ -7,6 +18,7 @@ intrinsic failure
 integrity dissed
 
 "intrinsic failure":{
+	"traction loss":"passing slip ratio leading to the tire's dialogue with the road dissolving into noise",
 	"thermal runaway":"exothermic reaction with rapid escalation",
 	"market crash":"systemic devaluation through feedback collapse",
 	"stack overflow":"cascading context shifts",
