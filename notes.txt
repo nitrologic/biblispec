@@ -1,3 +1,24 @@
+"thermal runaway":" is the more apt term.
+internal failure mechanism 
+an exothermic chain reaction inside cells that raises temperature uncontrollably
+
+exponential intensity
+intrinsic failure
+integrity dissed
+
+"intrinsic failure":{
+	"thermal runaway":"exothermic reaction with rapid escalation",
+	"market crash":"systemic devaluation through feedback collapse",
+	"stack overflow":"cascading context shifts",
+	"rolling blackout": "sequential loss of power propagating through a network",
+	"pyroclastic surge": "rapid, ground-hugging flow of volcanic debris and gas causing cascading destruction",
+	"acoustic feedback": "uncontrolled sound amplification from self-reinforcing audio loops"
+}
+
+intrinsic cell failure
+
+ If propagation occurs, it may lead to a thermal cascade across multiple cells.
+
 {
 	"voltagestandards": [{
 		"id": "IEC 62133",
