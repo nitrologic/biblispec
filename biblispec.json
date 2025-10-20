@@ -16,6 +16,16 @@
 	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
+		"systemic fails": {
+			"market crash": "a cascade of panic unravels investor confidence",
+			"stack overflow": "a recursive push decrements pointer to no return",
+			"traction loss": "passing slip ratio replaces tire road dialogue with noise",
+			"thermal runaway": "exothermic reaction featuring a rapid escalation",
+			"rolling blackout": "sequential loss of power propagating across the network",
+			"volcanic eruption": "pyroclastic surge pressures cascading destruction",
+			"alpine avalanche": "fracture propagates, gravity pries snow slab from the granite",
+			"acoustic feedback": "escalating audio oscillation from excess self amplification"
+		},
 		"fundament":
 		{
 			"stone": "Stability, permanence, foundational; bedrock, monolith.",

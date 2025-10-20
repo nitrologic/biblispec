@@ -1,13 +1,15 @@
-"systemic fails": {
-	"market crash": "a cascade of panic unraveling investor confidence",
+"system fail": {
+	"market crash": "a cascade of panic unravels investor confidence",
 	"stack overflow": "a recursive push decrements pointer to no return",
-	"traction loss": "passing slip ratio leading to the tire's dialogue with the road dissolving into noise",
-	"thermal runaway": "exothermic reaction with rapid escalation",
-	"rolling blackout": "sequential loss of power propagating through a network",
-	"pyroclastic surge": "volcanic pressure causing cascading destruction",
-	"acoustic feedback": "uncontrolled sound amplification from self-reinforcing audio loops"
+	"traction loss": "passing slip ratio replaces tire road dialogue with noise",
+	"thermal runaway": "exothermic reaction featuring a rapid escalation",
+	"rolling blackout": "sequential loss of power propagating across the network",
+	"volcanic eruption": "pyroclastic surge pressures cascading destruction",
+	"alpine avalanche": "fracture propagates, gravity pries snow slab from the granite",
+	"acoustic feedback": "escalating audio oscillation from excess self amplification"
 }
 
+"thermal runaway": "exothermic divergence beyond the thermal envelope"
 
 "thermal runaway":" is the more apt term.
 internal failure mechanism 
