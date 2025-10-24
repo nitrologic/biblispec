@@ -122,6 +122,9 @@
 				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
 		},
 		"shortcode":{
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️",
+			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "satellite": "📡",
+			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
 			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
 			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
 			"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","microphone":"🎤","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
@@ -158,6 +161,7 @@
 				"square":"🔳🔲✅❎",
 				"oclock":"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛",
 				"halfclock":"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧",
+				"calendar":"📅📆🗓️",
 				"outer":"◜◝◟◞",
 				"rect":"▪▫■□▢▣",
 				"hatched":"▤▥▦▧▨▩",
