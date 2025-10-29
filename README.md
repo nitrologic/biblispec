@@ -19,6 +19,19 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
+# Elements of Alchemy
+
+```
+				"🜁🜄":{
+					"name": "Elements of Alchemy",
+					"codes":"🜁🜂🜃🜄",
+					"category": "So",
+					"codePoints": ["U+1F701", "U+1F704"],
+					"range": [128769, 128772],
+					"usage":"Air, Fire, Earth, Water",
+				},
+```
+
 # fundament and orient
 
 ```

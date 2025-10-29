@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -704,6 +704,14 @@
 					"codePoints": ["U+2460", "U+2473"],
 					"range": [9312, 9331],
 					"usage": "Circled digits 1-20 for lists and numbering"
+				},
+				"🜁🜄":{
+					"name": "Elements of Alchemy",
+					"codes":"🜁🜂🜃🜄",
+					"category": "So",
+					"codePoints": ["U+1F701", "U+1F704"],
+					"range": [128769, 128772],
+					"usage":"Air, Fire, Earth, Water",
 				},
 				"㊊㊐":{
 					"name": "Moon Five Elements and Sun - Wu Xing cosmology",
