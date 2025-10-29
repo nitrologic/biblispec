@@ -395,7 +395,10 @@ All are not left facing - mirrored souls under observation
 
 [The entire unicode block of interest](hieroglyph.md)
 
-Note to self - maintain some [notes.txt](notes.txt) along the way.
+Note to self - maintain some [notes.txt](notes.txt) along the way. ⤺⤻
 
-⤺
-⤻
+```
+ 👀
+ 👄
+👉👈
+```
