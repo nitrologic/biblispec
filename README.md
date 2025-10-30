@@ -31,6 +31,48 @@ The data payload for this project is [biblispec.json](biblispec.json)
 					"usage":"Air, Fire, Earth, Water",
 				},
 ```
+## Elements of Alchemy
+
+# 🜀🜁🜂🜃🜄
+
+Quintessence, Air, Fire, Earth, Water
+
+## Pantry of Alchemy
+
+# 🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚
+
+Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Halite, Gold
+
+## Metals of Alchemy
+
+# 🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧
+
+Silver, Iron, Mercury, Tin, Lead, Antimony, Bismuth, Zinc, Platinum, Arsenic, Cobalt, Magnesium, Potash
+
+## Compounds of Alchemy
+
+# 🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼
+
+Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol, Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper, Quicklime, Magnesia, Tutty
+
+## Operation of Alchemy
+
+# 🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏🝐🝑🝒🝓🝔
+
+Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate, Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection
+
+## Process of Alchemy
+
+# 🝕🝖🝗🝘🝙🝚🝛🝜🝝🝞🝟🝠🝡🝢🝣
+
+Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize
+
+## Essence of Alchemy
+
+# 🝤🝥🝦🝧🝨🝩🝪🝫🝬🝭🝮🝯🝰🝱🝲🝳
+
+Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood, Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris, Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold
+
 
 # fundament and orient
 
