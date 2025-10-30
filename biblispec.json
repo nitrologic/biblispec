@@ -719,7 +719,7 @@
 					"category": "So",
 					"codePoints": ["U+1F710", "U+1F71A"],
 					"range": [128784, 128794],
-					"usage": "Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Rock Salt, Gold"
+					"usage": "Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Halite, Gold"
 				},
 				"🜛🜧": {
 					"name": "Metals of Alchemy",
@@ -735,7 +735,7 @@
 					"category": "So",
 					"codePoints": ["U+1F728", "U+1F73C"],
 					"range": [128808, 128828],
-					"usage": "Sal Ammoniac, Sal Armeniac, Rock Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol, Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper, Quicklime, Magnesia, Tutty"
+					"usage": "Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol, Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper, Quicklime, Magnesia, Tutty"
 				},
 				"🝀🝔": {
 					"name": "Operation of Alchemy",
