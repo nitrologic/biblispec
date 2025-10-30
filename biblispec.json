@@ -719,18 +719,18 @@
 					"category": "So",
 					"codePoints": ["U+1F710", "U+1F71A"],
 					"range": [128784, 128794],
-					"usage": "Vinegar (3), Sulfur, Salt, Nitre, Vitriol, Rock Salt, Gold"
+					"usage": "Vinegar (3), Sulfur, Salt, Nitre, Vitriol (2), Rock Salt (2), Gold"
 				},
 				"🜛🜧": {
-					"name": "Metal of Alchemy",
+					"name": "Metals of Alchemy",
 					"codes": "🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧",
 					"category": "So",
 					"codePoints": ["U+1F71B", "U+1F727"],
 					"range": [128795, 128807],
-					"usage": "silver, iron, gold, copper, tin, lead, antimony, sal ammoniac, alum, vitriol, niter, rock-salt, cinnabar"
+					"usage": "Silver, Iron, Mercury, Tin, Lead, Antimony, Bismuth, Zinc, Platinum, Arsenic, Cobalt, Magnesium, 🜧"
 				},
 				"🜨🜼": {
-					"name": "Compound of Alchemy",
+					"name": "Compounds of Alchemy",
 					"codes": "🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼",
 					"category": "So",
 					"codePoints": ["U+1F728", "U+1F73C"],
@@ -743,7 +743,7 @@
 					"category": "So",
 					"codePoints": ["U+1F740", "U+1F754"],
 					"range": [128832, 128852],
-					"usage": "🝁 sublime,🝂 precipitate,🝃 calcine,🝄 dissolve,🝅 coagulate,🝆 digest,🝇 ferment,🝈 fix,🝉 separate,🝊 conjoin,🝋 cerate,🝌 reverberate,🝍 albification,🝎 rubification,🝏 fixation,🝐 circulation,🝑 solution,🝒 fusion,🝓 extraction,🝔 projection"
+					"usage": "🝀 crucible,🝁 sublime,🝂 precipitate,🝃 calcine,🝄 dissolve,🝅 coagulate,🝆 digest,🝇 ferment,🝈 fix,🝉 separate,🝊 conjoin,🝋 cerate,🝌 reverberate,🝍 albification,🝎 rubification,🝏 fixation,🝐 circulation,🝑 solution,🝒 fusion,🝓 extraction,🝔 projection"
 				},
 				"🝕🝣": {
 					"name": "Process of Alchemy",
