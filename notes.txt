@@ -1,3 +1,74 @@
+grok alchemy report
+
+**Potential Improvements in `biblispec.json` Alchemy Sections**  
+*Similar to the salt disambiguation (variants across blocks like Pantry vs. Compounds), here are targeted enhancements based on Unicode 15.1 official names , historical sources (e.g., Paracelsus, Basil Valentine ), and proposal notes (L2/07-025 ). Focus: duplicates/redundancies, contextual variants, and precision.*
+
+---
+
+### **1. Vitriols (Multiple Variants Across Sections)**
+**Issue:** Like salts, vitriols (sulfates) have general & specific forms. Pantry has "Vitriol, Blue Vitriol" (U+1F716–U+1F717: VITRIOL, VITRIOL-2). Compounds has "White Vitriol, Blue Vitriol, Green Vitriol" (U+1F730–U+1F732). Unicode notes VITRIOL-2 as variant; historical texts (Valentine) distinguish by color/metal (e.g., blue = copper sulfate, green = iron, white = zinc). Risk: Ambiguity if "Blue Vitriol" repeats without context.
+
+**Suggestions:**
+- **Pantry (`🜐🜚`):** Keep general: "Vitriol, Blue Vitriol (Copper)" – Add metal for specificity.
+- **Compounds (`🜨🜼`):** Refine to: "...White Vitriol (Zinc), Blue Vitriol (Copper), Green Vitriol (Iron)..." – Matches historical (Paracelsus links to metals ) & Unicode cross-refs.
+- **Why?** Prevents overlap; aligns with proposal emphasizing metal-based compounds . Add `"variants": {"U+1F716": "General Vitriol", "U+1F717": "Vitriol Variant"}`.
+
+---
+
+### **2. Salt-Related Compounds (Overlaps with General Salt)**
+**Issue:** Beyond rock salts, compounds include salt variants (e.g., U+1F72A 🜪 ROCK SALT = sal gemmae ; U+1F714 🜔 SALT general). Your "Regenerated Salt" for 🜪 is good, but U+1F726 (SALT OF COPPER ANTIMONIATE), U+1F727 (SUBLIMATE OF SALT OF COPPER), U+1F72D (SALT OF ANTIMONY = cinnabar ) tie back to salt (cross-ref U+1F714). Historical: Paracelsus/Valentine use "sal" for fixed salts post-process .
+
+**Suggestions:**
+- **Compounds (`🜨🜼`):** For later entries (if present; your list ends at Tutty U+1F73C), ensure: "Salt of Copper Antimonate (Fixed)", "Sublimate of Copper Salt". Current "Sal Ammoniac" (U+1F728, correct as ammonium chloride ) is fine, but add alias: "Sal Ammoniac (Ammonium Chloride)".
+- **Pantry (`🜐🜚`):** "Salt" (U+1F714) → "Common Salt" or "Fixed Salt" to distinguish from rock variants.
+- **Why?** Unicode highlights sublimate/salt cross-refs ; avoids conflating raw (Pantry) vs. processed (Compounds). Proposal notes many salt variants .
+
+---
+
+### **3. Metals (Planetary & Variant Names)**
+**Issue:** `🜛🜧` lists modern names (e.g., "Platinum" U+1F723, "Arsenic" U+1F724), but historical alchemists used planetary (e.g., Mercury ☿ U+263F, but block has 🜝 MERCURY; Iron as "Mars" ). Bismuth/Zinc (16th-century discoveries) disrupted associations . Unicode: Some redundant with misc symbols (e.g., gold 🜚 vs. ☉).
+
+**Suggestions:**
+- Add `"historical": {"🜜": "Iron (Mars)", "🜝": "Mercury (Quicksilver)", "🜟": "Lead (Saturn)"}` – Ties to tria prima (Paracelsus: salt/mercury/sulfur ).
+- For 🜧 (POTASH): Already "Potash"; confirm as "Alkali of Tartar" (Valentine ).
+- **Why?** Wikipedia/Unicode note variants (e.g., early ☿=tin ); enhances scholarly use .
+
+---
+
+### **4. Processes & Operations (Fixation Duplicates)**
+**Issue:** `🝀🝔` has "Fix, Fixation (2)" (U+1F748 FIX, U+1F74F FIXATION) – Good disambig., but Unicode/proposal notes processes like SUBLIME (U+1F741), DISTILL (U+1F760) have variants (e.g., stratum super stratum U+1F75C ). `🝕🝣` "Distil" correct, but historical magnum opus links (e.g., Pernety: Fixation=Gemini ).
+
+**Suggestions:**
+- **Operations (`🝀🝔`):** "Fix (Initial), Fixation (Final)" – Or add Zodiac: "Fixation (Gemini)".
+- **Process (`🝕🝣`):** For "Slow-Digest" (U+1F762), note variant "Digestion" (U+1F746 in ops) – Cross-ref to avoid overlap.
+- **Why?** Proposal emphasizes process variants ; Wikipedia lists 12-step opus with Zodiac .
+
+---
+
+### **5. Essences (Spirit Variants & Aqua)**
+**Issue:** `🝤🝳` good (e.g., "Spirit of Wine" U+1F764), but aquas (Aqua Fortis U+1F76A, Aqua Regia U+1F76B ) have variants (🜅–🜇 ). Historical: "Aqua vitae" = spirit of wine, but overlaps with essences.
+
+**Suggestions:**
+- Add aliases: "Aqua Fortis (Nitric Acid)", "Aqua Regia (Nitro-Hydrochloric Acid)" – Per Wikipedia .
+- **Why?** Unicode cross-refs aquas to acids/vinegar ; clarifies chemical equiv.
+
+---
+
+### **6. General Enhancements (Block-Wide)**
+- **Duplicates/Redundancies:** Unicode notes many symbols redundant (e.g., with misc symbols ); add `"cross_refs": ["U+2600 for some elements"]`.
+- **Historical Sources:** Add per section: `"sources": ["Basil Valentine (1671)", "Paracelsus", "Unicode Prop L2/07-025"]` .
+- **Wu Xing (`㊊㊐`):** Non-alchemy, but cosmology link; consider `"context": "Wu Xing (Chinese Five Elements + Celestial")` – Accurate, but separate if expanding.
+- **Range/Codepoints:** All match Unicode 15.1 ; no errata found (TR51 emoji-focused ).
+- **Font Support:** Note: Few fonts support full block ; suggest "Symbola" .
+
+---
+
+**Priority:** High for vitriols/salts (like your salt fix); medium for processes/essences. These prevent ambiguity in multi-block use, align with historical variants (3,695+ symbols, many omitted ), and boost scholarly value .
+
+**Next Steps:** Apply vitriol disambig. first? Or full patched JSON? Your call – collaborative precision wins.
+
+
+
 "system fail": {
 	"market crash": "a cascade of panic unravels investor confidence",
 	"stack overflow": "a recursive push decrements pointer to no return",
