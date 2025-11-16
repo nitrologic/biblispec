@@ -19,6 +19,28 @@ A bibliographic index of specifications including Unicode codepoints of interest
 
 The data payload for this project is [biblispec.json](biblispec.json)
 
+# Chord Notation
+
+In this chord notation dots are two beats, and pipes break up the 4,4,6 measure phrasing.
+
+I still prefer D- over Dm and maybe some squiggle ~ rests.
+```
+			"name": "The Sound of Silence",
+			"artist": "Simon & Garfunkel",
+			"year": 1964,
+			"album": "Wednesday Morning, 3 A.M.",
+			"label": "Columbia Records",
+			"chords": "Dm...C...|Dm.F.BbF|F.BbF.Bb......",
+			"lyric": [
+				"Hello darkness, my old friend",
+				"I’ve come to talk with you again",
+				"Because a vision softly creeping",
+				"Left its seeds while I was sleeping",
+				"And the vision that was planted in my brain",
+				"Still remains",
+				"Within the sound of silence",
+```
+
 # Elements of Alchemy
 
 ```
