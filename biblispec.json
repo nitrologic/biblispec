@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -16,6 +16,85 @@
 	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
+		"internet":{
+			"pipes":{
+				"transpacific":[
+					{"name":"JUPITER","capacity":"60+Tbps","ready":2020,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
+					{"name":"SJC2","capacity":"144Tbps","ready":2021,"landing":["HollywoodUS","ChikuraJP","Singapore","HongKong","Shanghai"]},
+					{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
+					{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]}
+				],
+				"transatlantic":[
+					{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
+					{"name":"Dunant","capacity":"250Tbps","ready":2020,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
+					{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
+					{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]}
+				],
+				"asia-europe-mea":[
+					{"name":"SEA-ME-WE6","capacity":"100+Tbps","ready":2025,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
+					{"name":"2Africa","capacity":"180Tbps","ready":2024,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
+					{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
+					{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]}
+				],
+				"south-america":[
+					{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
+					{"name":"Humboldt","capacity":"unknown","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]}
+				]
+			},
+			"zones":{
+				"aws":[
+					["Auckland@ap-southeast-6",-36.8485,174.7633],
+					["Sydney@ap-southeast-2",-33.8688,151.2093],
+					["SãoPaulo@sa-east-1",-23.5505,-46.6333],
+					["Singapore@ap-southeast-1",1.3521,103.8198],
+					["Mumbai@ap-south-1",19.0760,72.8777],
+					["Osaka@ap-northeast-3",34.6937,135.5023],
+					["Tokyo@ap-northeast-1",35.6762,139.6503],
+					["PaloAlto@us-west-1",37.4419,-122.1430],
+					["Seoul@ap-northeast-2",37.5665,126.9779],
+					["Virginia@us-east-1",39.0469,-77.4903],
+					["Ohio@us-east-2",39.9612,-82.9988],
+					["Montreal@ca-central-1",45.5017,-73.5673],
+					["Oregon@us-west-2",45.5202,-122.6742],
+					["Paris@eu-west-3",48.8566,2.3522],
+					["Frankfurt@eu-central-1",50.1109,8.6821],
+					["London@eu-west-2",51.5074,-0.1278],
+					["Dublin@eu-west-1",53.3498,-6.2603],
+					["Stockholm@eu-north-1",59.3293,18.0686]
+				],
+				"alibaba":[
+					["Jakarta@ap-southeast-5a",-6.2088,106.8456],
+					["Singapore@ap-southeast-1a",1.3521,103.8198],
+					["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
+					["Bangkok@ap-southeast-7a",13.7563,100.5018],
+					["Manila@ap-southeast-6a",14.5995,120.9842],
+					["Mumbai@ap-south-1a",19.0760,72.8777],
+					["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
+					["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
+					["Heyuan@cn-heyuan-a",23.7333,114.6833],
+					["HongKong@ap-east-1a",22.3964,114.1095],
+					["Dubai@me-east-1a",25.2048,55.2708],
+					["Riyadh@me-central-1a",24.7136,46.6753],
+					["Chengdu@cn-chengdu-a",30.5728,104.0668],
+					["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
+					["Wuhan@cn-wuhan-a",30.5928,114.3055],
+					["Shanghai@cn-shanghai-a",31.2304,121.4737],
+					["Tokyo@ap-northeast-1a",35.6762,139.6503],
+					["Qingdao@cn-qingdao-a",36.0667,120.3833],
+					["Seoul@ap-northeast-2a",37.5665,126.9780],
+					["PaloAlto@us-west-1a",37.3875,-122.0575],
+					["Virginia@us-east-1a",39.0469,-77.4903],
+					["Beijing@cn-beijing-a",39.9042,116.4074],
+					["Hohhot@cn-huhehaote-a",40.8414,111.7517],
+					["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
+					["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
+					["Queretaro@na-mexico",20.5888,-100.3899],
+					["Paris@eu-west-1a",48.8566,2.3522],
+					["Frankfurt@eu-central-1a",50.1109,8.6821],
+					["London@eu-west-2a",51.5074,-0.1278]
+				]
+			}
+		},
 		"systemic fails": {
 			"market crash": "a cascade of panic unravels investor confidence",
 			"stack overflow": "a recursive push decrements pointer to no return",
