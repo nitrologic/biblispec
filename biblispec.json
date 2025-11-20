@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.2.9",
+	"version": "1.3.0",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -17,34 +17,33 @@
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
 		"internet":{
-			"pipes":{
-				"transpacific":[
-					{"name":"JUPITER","capacity":"60+Tbps","ready":2020,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
-					{"name":"SJC2","capacity":"144Tbps","ready":2021,"landing":["HollywoodUS","ChikuraJP","Singapore","HongKong","Shanghai"]},
-					{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
-					{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]}
-				],
-				"transatlantic":[
-					{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
-					{"name":"Dunant","capacity":"250Tbps","ready":2020,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
-					{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
-					{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]}
-				],
-				"asia-europe-mea":[
-					{"name":"SEA-ME-WE6","capacity":"100+Tbps","ready":2025,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
-					{"name":"2Africa","capacity":"180Tbps","ready":2024,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
-					{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
-					{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]}
-				],
-				"south-america":[
-					{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
-					{"name":"Humboldt","capacity":"unknown","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]}
-				]
-			},
+			"pipes":[
+				{"name":"JUPITER","capacity":"60Tbps","ready":2021,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
+				{"name":"SJC2","capacity":"126Tbps","ready":2025,"landing":["ChikuraJP","Singapore","HongKong","Shanghai"]},
+				{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
+				{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]},
+				{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
+				{"name":"Dunant","capacity":"250Tbps","ready":2021,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
+				{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
+				{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]},
+				{"name":"SEA-ME-WE6","capacity":"126Tbps","ready":2026,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
+				{"name":"2Africa","capacity":"180Tbps","ready":2025,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
+				{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
+				{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]},
+				{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
+				{"name":"Humboldt","capacity":"144Tbps","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]},
+				{"name":"TPU","capacity":"260Tbps","ready":2025,"landing":["EurekaCAUS","TanguissonPointGU","ClaveriaPH","DawuTW"]},
+				{"name":"Echo","capacity":"260Tbps","ready":2024,"landing":["EurekaCAUS","TanjungPakisID","PitiGU","AgatGU","ChangiNorthSG"]},
+				{"name":"ACC-1","capacity":"256Tbps","ready":2025,"landing":["Singapore","MumbaiIN","JeddahSA","DarwinAU","AlupangGU","HermosaBeachCAUS"]},
+				{"name":"Medusa","capacity":"480Tbps","ready":2025,"landing":["GenoaIT","ChaniaGR","AlexandriaEG","TripoliLY"]},
+				{"name":"Anjana","capacity":"480Tbps","ready":2024,"landing":["MyrtleBeachUS","SantanderES"]}
+			],
 			"zones":{
 				"aws":[
 					["Auckland@ap-southeast-6",-36.8485,174.7633],
 					["Sydney@ap-southeast-2",-33.8688,151.2093],
+					["Santiago@sa-south-2",-33.4489,-70.6693],
+					["Johannesburg@af-south-1",-26.2041,28.0473],					
 					["SãoPaulo@sa-east-1",-23.5505,-46.6333],
 					["Singapore@ap-southeast-1",1.3521,103.8198],
 					["Mumbai@ap-south-1",19.0760,72.8777],
