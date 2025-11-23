@@ -256,13 +256,15 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 
 ## Addendum appendum books
 
+- robots [books/robots.json](books/robots.json)
+	- experimental low latency robot lists
 - news [news.json](news.json)
 	- experimental daily headlines
 - phrases [books/phrases.json](books/phrases.json)
 	- "你好": "nǐ hǎo"
 - songs [books/songs.json](books/songs.json)
 	- songs of freedom - 3
-- stories [books/stories.json](stories.json)
+- stories [books/stories.json](books/stories.json)
 	- tales of narcissism - 4
 - machine spec 1.0.3 [books/machinespec.json](books/machinespec.json)
 	- software-architecture - 1 - transformers
