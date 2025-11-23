@@ -1,6 +1,6 @@
 {
 	"name": "robot models",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"description": "Current robot AI technology.",
 	"status": "A living document of anthropomorphised toys.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -13,6 +13,41 @@
 		"url": "https://github.com/nitrologic/biblispec"
 	},
 	"hardware":[
+		{
+			"model": "G1",
+			"developer": "Unitree",
+			"price": "$16,000",
+			"url": "https://www.unitree.com/g1",
+			"feature": "43 degrees of freedom; 3D LiDAR and depth cameras; magnetic joint covers for modularity; walking speed up to 2 m/s; 2-hour battery runtime."
+		},
+		{
+			"model": "Iron",
+			"developer": "XPeng",
+			"price": "$30,000",
+			"url": "https://www.xpeng.com/iron",
+			"feature": "Integrated self-driving AI for navigation; 40+ degrees of freedom; dual-arm manipulation; 360-degree vision with 12 cameras; 5-hour battery with hot-swap."
+		},
+		{
+			"model": "Agile ONE",
+			"developer": "Agile Robots",
+			"price": "$50,000",
+			"url": "https://www.agile-robots.com/one",
+			"feature": "Tactile sensors on hands and torso; 28 degrees of freedom; force-torque feedback in joints; Ethernet and Wi-Fi connectivity; 4-hour industrial runtime."
+		},
+		{
+			"model": "Atom",
+			"developer": "Dobot",
+			"price": "$27,000",
+			"url": "https://www.dobot-robots.com/atom",
+			"feature": "Modular arm design for tool swapping; RGB-D cameras for depth perception; collaborative safety features; payload capacity 5 kg per arm; 3-hour battery."
+		},
+		{
+			"model": "CyberOne",
+			"developer": "Xiaomi",
+			"price": "$40,000",
+			"url": "https://www.mi.com/cyberone",
+			"feature": "Multimodal AI for voice/gesture recognition; 5G connectivity; flexible spine with 6 DoF; emotional expression via facial actuators; 6-hour home-use battery."
+		},
 		{
 			"model": "Figure 03",
 			"developer": "Figure AI",
@@ -46,7 +81,7 @@
 			"developer": "Tesla",
 			"price": "$25,000",
 			"url": "https://www.tesla.com/optimus",
-			"feature": "Vision-language-action models with <50ms end-to-end latency; frameless motors for precise, low-inertia grasping; battery runtime 4–8 hours."
+			"feature": "Vision-language-action models with <50ms end-to-end latency; frameless motors for precise, low-inertia grasping; battery runtime 4-8 hours."
 		},
 		{
 			"model": "SE01",
@@ -144,7 +179,7 @@
 			"pricing_url": "https://mistral.ai/pricing",
 			"use_cases": "Navigation & planning; low-level control in unpredictable environments.",
 			"key_optimizations_for_low_latency": "Structured sparsity (2:4), KV-cache quantization; Minstrel framework for edge balance.",
-			"notes_sources": "Ideal for real-time RAG in robots; 100x cost reduction vs. GPT-4 for similar perf.",
+			"notes_sources": "Ideal for real-time RAG in robots.",
 			"performance": [
 				{
 					"platform": "NVIDIA RTX 4090, TensorRT-LLM, 24GB VRAM",
@@ -169,7 +204,7 @@
 			"pricing_url": "https://www.alibabacloud.com/help/en/model-studio/models",
 			"use_cases": "Agentic coding for robot behaviors; multimodal (vision+text) for scene understanding.",
 			"key_optimizations_for_low_latency": "MoE (Mixture-of-Experts) for sparse activation; on-device tool-calling.",
-			"notes_sources": "Local/offline for bipeds; excels in long-horizon tasks like tidying (e.g., NEO robot).",
+			"notes_sources": "Excels in long-horizon tasks like tidying.",
 			"performance": [
 				{
 					"platform": "NVIDIA A100, TensorRT-LLM, 40GB VRAM",
@@ -257,7 +292,7 @@
 			"pricing_url": "https://nexa.ai/pricing",
 			"use_cases": "Real-time behavior trees; LLM-BRAIn for fast robot planning.",
 			"key_optimizations_for_low_latency": "95% context reduction; speculative decoding for function calling.",
-			"notes_sources": "Surpasses GPT-4 latency on edge; ideal for agentic systems in bipeds like SE01.",
+			"notes_sources": "Ideal for agentic systems in bipeds like SE01.",
 			"performance": [
 				{
 					"platform": "Android 13, Snapdragon 8 Gen 2, 12GB RAM",
