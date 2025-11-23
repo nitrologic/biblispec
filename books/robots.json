@@ -1,6 +1,6 @@
 {
 	"name": "robot models",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Current robot AI technology.",
 	"status": "A living document of anthropomorphised toys.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -21,24 +21,31 @@
 			"feature": "43 degrees of freedom; 3D LiDAR and depth cameras; magnetic joint covers for modularity; walking speed up to 2 m/s; 2-hour battery runtime."
 		},
 		{
+			"model": "Unitree H1",
+			"developer": "Unitree",
+			"price": "$90,000",
+			"url": "https://www.unitree.com",
+			"feature": "High walking speed with modular upgrades; 3D LiDAR and depth cameras for sharp environmental awareness."
+		},
+		{
 			"model": "Iron",
 			"developer": "XPeng",
 			"price": "$30,000",
-			"url": "https://www.xpeng.com/iron",
+			"url": "https://www.xpeng.com",
 			"feature": "Integrated self-driving AI for navigation; 40+ degrees of freedom; dual-arm manipulation; 360-degree vision with 12 cameras; 5-hour battery with hot-swap."
 		},
 		{
 			"model": "Agile ONE",
 			"developer": "Agile Robots",
 			"price": "$50,000",
-			"url": "https://www.agile-robots.com/one",
+			"url": "https://www.agile-robots.com",
 			"feature": "Tactile sensors on hands and torso; 28 degrees of freedom; force-torque feedback in joints; Ethernet and Wi-Fi connectivity; 4-hour industrial runtime."
 		},
 		{
 			"model": "Atom",
 			"developer": "Dobot",
 			"price": "$27,000",
-			"url": "https://www.dobot-robots.com/atom",
+			"url": "https://www.dobot-robots.com",
 			"feature": "Modular arm design for tool swapping; RGB-D cameras for depth perception; collaborative safety features; payload capacity 5 kg per arm; 3-hour battery."
 		},
 		{
@@ -63,13 +70,6 @@
 			"feature": "Fully electric actuators with modular high-torque motors; embedded 3D vision for <30ms dynamic response; drops hydraulics for quieter, efficient control."
 		},
 		{
-			"model": "Walker S2",
-			"developer": "UBTECH",
-			"price": "$80,000",
-			"url": "https://www.ubtrobot.com/en/humanoid",
-			"feature": "Swarm coordination via 5G-A low-latency networks; AI-driven locomotion/vision software for <40ms sync in multi-robot setups."
-		},
-		{
 			"model": "Apollo",
 			"developer": "Apptronik",
 			"price": "$50,000",
@@ -80,7 +80,8 @@
 			"model": "Optimus Gen 2",
 			"developer": "Tesla",
 			"price": "$25,000",
-			"url": "https://www.tesla.com/optimus",
+			"status" : "vapourware | prototype",
+			"url": "https://www.tesla.com",
 			"feature": "Vision-language-action models with <50ms end-to-end latency; frameless motors for precise, low-inertia grasping; battery runtime 4-8 hours."
 		},
 		{
@@ -103,13 +104,6 @@
 			"price": "$20,000",
 			"url": "https://www.1x.tech",
 			"feature": "Bipedal design with low-latency teleop traces for skill learning; NVIDIA Isaac GR00T N1 for on-board autonomous execution."
-		},
-		{
-			"model": "Unitree H1",
-			"developer": "Unitree",
-			"price": "$90,000",
-			"url": "https://www.unitree.com",
-			"feature": "High walking speed with modular upgrades; 3D LiDAR and depth cameras for sharp environmental awareness."
 		},
 		{
 			"model": "GR-1",
