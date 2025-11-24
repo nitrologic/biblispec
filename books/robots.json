@@ -1,6 +1,6 @@
 {
 	"name": "robot models",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Current robot AI technology.",
 	"status": "A living document of anthropomorphised toys.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -37,42 +37,42 @@
 		{
 			"model": "CyberOne",
 			"developer": "Xiaomi",
-			"price": "$40,000",
+			"price": "~$40,000",
 			"url": "https://www.mi.com/cyberone",
 			"feature": "Multimodal AI for voice/gesture recognition; 5G connectivity; flexible spine with 6 DoF; emotional expression via facial actuators; 6-hour home-use battery."
 		},
 		{
 			"model": "Atlas",
 			"developer": "Boston Dynamics",
-			"price": "$140,000",
+			"price": "~$140,000",
 			"url": "https://bostondynamics.com/atlas",
 			"feature": "Fully electric actuators with modular high-torque motors; embedded 3D vision for <30ms dynamic response; drops hydraulics for quieter, efficient control."
 		},
 		{
 			"model": "Apollo",
 			"developer": "Apptronik",
-			"price": "$50,000",
+			"price": "~$50,000",
 			"url": "https://apptronik.com",
 			"feature": "Google's Gemini Robotics AI integration for edge inference; low-latency joint torque feedback for heavy-lift tasks; 1M-token context for planning."
 		},
 		{
 			"model": "Digit",
 			"developer": "Agility Robotics",
-			"price": "$100,000",
+			"price": "~$100,000",
 			"url": "https://agilityrobotics.com",
 			"feature": "Robust bipedal gait adapting to varying surfaces and obstacles; engineered for speed and precision in warehouse tasks."
 		},
 		{
 			"model": "NEO",
 			"developer": "1X Technologies",
-			"price": "$20,000",
+			"price": "~$20,000",
 			"url": "https://www.1x.tech",
 			"feature": "Bipedal design with low-latency teleop traces for skill learning; NVIDIA Isaac GR00T N1 for on-board autonomous execution."
 		},
 		{
 			"model": "GR-1",
 			"developer": "Fourier Intelligence",
-			"price": "$160,000",
+			"price": "~$160,000",
 			"url": "https://www.fftai.com",
 			"feature": "Targeting mass production with advanced bipedal mobility for healthcare and rehab tasks."
 		}
@@ -86,7 +86,7 @@
 			"pricing_url": "https://www.nvidia.com/en-us/data-center/ai-enterprise/",
 			"current_version": "N1.5 (2025 update)",
 			"parameters": "13B",
-			"use_cases": "On-board execution for manipulation; used in NEO Gamma for tidying.",
+			"use_cases": "On-board execution for manipulation.",
 			"key_optimizations_for_low_latency": "TENNs algorithm for FPGA/low-power; Isaac platform optimizations.",
 			"performance":[
 				{	
