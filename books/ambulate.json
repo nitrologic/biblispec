@@ -1,6 +1,6 @@
 {
 	"name": "animal ambulate specs",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Speed and step rate specs from the animal kingdom.",
 	"status": "A living document of mother nature's engineering.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -12,6 +12,14 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"humans":{
+		"toddler":{"ambulate":{"cruise":{"mps":0.5,"stepRate":2.8},"hurry":{"mps":1.1,"stepRate":4.5}}},
+		"child":{"ambulate":{"cruise":{"mps":1.4,"stepRate":3.0},"hurry":{"mps":3.8,"stepRate":5.0}}},
+		"teen":{"ambulate":{"cruise":{"mps":1.5,"stepRate":2.9},"hurry":{"mps":6.0,"stepRate":4.8}}},
+		"adult":{"ambulate":{"cruise":{"mps":1.45,"stepRate":2.8},"hurry":{"mps":5.5,"stepRate":4.2}}},
+		"fit_adult":{"ambulate":{"cruise":{"mps":1.7,"stepRate":3.0},"hurry":{"mps":7.0,"stepRate":4.7}}},
+		"usain_bolt":{"ambulate":{"cruise":{"mps":5.5,"stepRate":2.8},"hurry":{"mps":12.42,"stepRate":4.65}}}
 	},
 	"animals":[
 		{"name":"ostrich","ambulate":{"cruise":{"mps":8.0,"stepRate":2.8},"hurry":{"mps":18.0,"stepRate":4.2}}},
