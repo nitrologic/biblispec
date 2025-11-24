@@ -1,3 +1,68 @@
+	{
+		"humanoid:"Apollo",
+		"name": "apptronik",
+		"potential": "nasa dna, 30 kg payload, 3pl already testing",
+		"url": "https://apptronik.com"
+	},
+
+
+https://www.figure.ai/
+https://www.perceptyne.com/
+https://apptronik.com/
+https://deeprobotics.cn/
+
+https://apptronik.com/apollo
+https://www.anybotics.com/robotics/anymal/
+
+
+[
+	{
+		"name": "unitree",
+		"potential": "volume king, dev army",
+		"url": "https://unitree.com"
+	},
+	{
+		"name": "boston-dynamics",
+		"potential": "still pr/alg gold but no scale path",
+		"url": "https://bostondynamics.com"
+	},
+	{
+		"humanoid:"Digit",
+		"name": "agility-robotics",
+		"potential": "the warehouse stair niche, pilot revenue this year",
+		"url": "https://agilityrobotics.com"
+	},
+	{
+		"name": "figure-ai",
+		"potential": "biggest warchest, auto oem pilots locked",
+		"url": "https://figure.ai"
+	},
+	{
+		"name": "anybotics",
+		"potential": "oil/gas checks write themselves",
+		"url": "https://anybotics.com"
+	},
+	{
+		"name": "deep-robotics",
+		"potential": "price attack dog",
+		"url": "https://deeprobotics.cn",
+		"notes": "excels at standing still"
+	},
+	{
+		"name": "perceptyne",
+		"potential": "dark horse if tactile data moat sticks",
+		"url": "https://perceptyne.com",
+		"notes" : "too handsome"
+	},
+	{
+		"name": "open-source-quad-stack",
+		"potential": "infinite grad students, zero capex",
+		"url": "https://github.com/mit-biomimetics/Cheetah-Software"
+	}
+]
+
+
+
 	"topologies":{
 		"coordinate_system": "x→forward, y→left, z→up  (ROS REP-103, matches Unitree URDFs)",
 		"units": "meters",
@@ -549,7 +614,7 @@
 
 grok alchemy report
 
-**Potential Improvements in `biblispec.json` Alchemy Sections**  
+**Potential Improvements in `biblispec.json` Alchemy Sections**
 *Similar to the salt disambiguation (variants across blocks like Pantry vs. Compounds), here are targeted enhancements based on Unicode 15.1 official names , historical sources (e.g., Paracelsus, Basil Valentine ), and proposal notes (L2/07-025 ). Focus: duplicates/redundancies, contextual variants, and precision.*
 
 ---
@@ -632,7 +697,7 @@ grok alchemy report
 "thermal runaway": "exothermic divergence beyond the thermal envelope"
 
 "thermal runaway":" is the more apt term.
-internal failure mechanism 
+internal failure mechanism
 an exothermic chain reaction inside cells that raises temperature uncontrollably
 
 exponential intensity
@@ -869,7 +934,7 @@ const starChars="✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽
 const colorChars=["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"];
 
 
-you’d use standard citation formats (e.g., APA, MLA, Chicago) 
+you’d use standard citation formats (e.g., APA, MLA, Chicago)
 that rely on the author’s name, book title, publisher, and publication year. For example:
 
 MLA: Woolf, Virginia. Mrs. Dalloway. Harcourt, 1925.
