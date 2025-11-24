@@ -16,7 +16,7 @@
 		{
 			"model": "Go2",
 			"developer": "Unitree",
-			"price": 1600,
+			"price": "$1600",
 			"url": "https://www.unitree.com/go2",
 			"feature": "12 DoF, 4D LiDAR, edge AI module, 15 kg, 2-4 h runtime.",
 			"height": 0.70,
@@ -29,7 +29,7 @@
 		{
 			"model": "B2",
 			"developer": "Unitree",
-			"price": 35000,
+			"price": "$35,000",
 			"url": "https://www.unitree.com/b2",
 			"feature": "Industrial-grade, 50 kg payload, IP67, 4-6 h runtime.",
 			"height": 0.645,
@@ -42,7 +42,7 @@
 		{
 			"model": "Spot",
 			"developer": "Boston Dynamics",
-			"price": 74500,
+			"price": "$74,500",
 			"url": "https://bostondynamics.com/spot",
 			"feature": "12 DoF quadruped; 360° sensors, 14 kg payload, Orbit 5.0 AI fleet mgmt; 90-min runtime.",
 			"height": 0.61,
