@@ -1,3 +1,212 @@
+{
+	"topology": {
+		"go2_quadruped_12dof": {
+			"description": "Go2 — 12 DoF quadruped",
+			"joints": [
+				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+				"RR_hip_joint", "RR_thigh_joint", "RR_calf_joint",
+				"RL_hip_joint", "RL_thigh_joint", "RL_calf_joint"
+			],
+			"rest": [
+				[ 0.188, -0.046,  0.085], [ 0.188, -0.046, -0.085], [ 0.188, -0.046, -0.283],
+				[-0.188, -0.046,  0.085], [-0.188, -0.046, -0.085], [-0.188, -0.046, -0.283],
+				[ 0.188,  0.046,  0.085], [ 0.188,  0.046, -0.085], [ 0.188,  0.046, -0.283],
+				[-0.188,  0.046,  0.085], [-0.188,  0.046, -0.085], [-0.188,  0.046, -0.283]
+			]
+		},
+
+		"b2_quadruped_12dof": {
+			"description": "B2 — larger industrial quadruped",
+			"joints": [
+				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+				"RR_hip_joint", "RR_thigh_joint", "RR_calf_joint",
+				"RL_hip_joint", "RL_thigh_joint", "RL_calf_joint"
+			],
+			"rest": [
+				[ 0.245, -0.060,  0.110], [ 0.245, -0.060, -0.110], [ 0.245, -0.060, -0.368],
+				[-0.245, -0.060,  0.110], [-0.245, -0.060, -0.110], [-0.245, -0.060, -0.368],
+				[ 0.245,  0.060,  0.110], [ 0.245,  0.060, -0.110], [ 0.245,  0.060, -0.368],
+				[-0.245,  0.060,  0.110], [-0.245,  0.060, -0.110], [-0.245,  0.060, -0.368]
+			]
+		},
+
+		"g1_humanoid_23dof_base": {
+			"description": "G1 — 23 DoF base (no hands), official zero pose",
+			"joints": [
+				"waist_joint",
+				"neck_joint",
+				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw",
+				"left_elbow_pitch", "left_wrist_yaw", "left_wrist_pitch",
+				"right_shoulder_pitch", "right_shoulder_roll", "right_shoulder_yaw",
+				"right_elbow_pitch", "right_wrist_yaw", "right_wrist_pitch",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch",
+				"left_knee_pitch", "left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch",
+				"right_knee_pitch", "right_ankle_pitch", "right_ankle_roll"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000],
+				[0.000, 0.000, 0.400],
+				[-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360],
+				[-0.300, 0.000, 0.200], [-0.320, 0.000, -0.100], [-0.320, 0.000, -0.100],
+				[ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360],
+				[ 0.300, 0.000, 0.200], [ 0.320, 0.000, -0.100], [ 0.320, 0.000, -0.100],
+				[-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000],
+				[-0.090, 0.000, -0.380], [-0.089, 0.000, -0.780], [-0.089, 0.000, -0.780],
+				[ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000],
+				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780]
+			]
+		},
+
+		"g1_humanoid_43dof_with_dex3_1": {
+			"description": "G1 full 43 DoF with dual Dex3-1 hands — all joints",
+			"joints": [
+				"waist_joint", "neck_joint",
+				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw", "left_elbow_pitch", "left_wrist_yaw", "left_wrist_pitch",
+				"right_shoulder_pitch", "right_shoulder_roll", "right_shoulder_yaw", "right_elbow_pitch", "right_wrist_yaw", "right_wrist_pitch",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch", "left_knee_pitch", "left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch", "right_knee_pitch", "right_ankle_pitch", "right_ankle_roll",
+				"left_thumb_roll", "left_thumb_pitch1", "left_thumb_pitch2",
+				"left_index_mcp", "left_index_pip",
+				"left_middle_mcp", "left_middle_pip",
+				"left_finger_abduction",
+				"right_thumb_roll", "right_thumb_pitch1", "right_thumb_pitch2",
+				"right_index_mcp", "right_index_pip",
+				"right_middle_mcp", "right_middle_pip",
+				"right_finger_abduction"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000], [0.000, 0.000, 0.400],
+				[-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360],
+				[-0.300, 0.000, 0.200], [-0.320, 0.000, -0.100], [-0.320, 0.000, -0.100],
+				[ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360],
+				[ 0.300, 0.000, 0.200], [ 0.320, 0.000, -0.100], [ 0.320, 0.000, -0.100],
+				[-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000],
+				[-0.090, 0.000, -0.380], [-0.089, 0.000, -0.780], [-0.089, 0.000, -0.780],
+				[ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000],
+				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780],
+				[-0.320, 0.000, -0.180], [-0.305, 0.015, -0.195], [-0.285, 0.025, -0.215],
+				[-0.305, -0.008, -0.215], [-0.305, -0.008, -0.255],
+				[-0.320, -0.008, -0.215], [-0.320, -0.008, -0.260],
+				[-0.320, 0.000, -0.200],
+				[ 0.320, 0.000, -0.180], [ 0.305, -0.015, -0.195], [ 0.285, -0.025, -0.215],
+				[ 0.305,  0.008, -0.215], [ 0.305,  0.008, -0.255],
+				[ 0.320,  0.008, -0.215], [ 0.320,  0.008, -0.260],
+				[ 0.320, 0.000, -0.200]
+			]
+		}
+	},
+	"coordinate_system": "x→forward, y→left, z→up  (ROS REP-103, matches Unitree URDFs)",
+	"units": "meters",
+	"source": "Official Unitree URDFs + SDK v1.3.x (Nov 2025)"
+}
+
+
+
+
+{
+	"unitree_joint_index": {
+		"quadrupeds_go2_b2": {
+			"description": "Go2 / B2 / G1-Quad — exactly 12 DoF, fixed order in LowCmd/LowState",
+			"total_dof": 12,
+			"joints": [
+				{ "index": 0,  "name": "FR_hip_joint",     "leg": "FR", "axis": "hip_roll" },
+				{ "index": 1,  "name": "FR_thigh_joint",   "leg": "FR", "axis": "hip_pitch" },
+				{ "index": 2,  "name": "FR_calf_joint",    "leg": "FR", "axis": "knee_pitch" },
+
+				{ "index": 3,  "name": "FL_hip_joint",     "leg": "FL", "axis": "hip_roll" },
+				{ "index": 4,  "name": "FL_thigh_joint",   "leg": "FL", "axis": "hip_pitch" },
+				{ "index": 5,  "name": "FL_calf_joint",    "leg": "FL", "axis": "knee_pitch" },
+
+				{ "index": 6,  "name": "RR_hip_joint",     "leg": "RR", "axis": "hip_roll" },
+				{ "index": 7,  "name": "RR_thigh_joint",   "leg": "RR", "axis": "hip_pitch" },
+				{ "index": 8,  "name": "RR_calf_joint",    "leg": "RR", "axis": "knee_pitch" },
+
+				{ "index": 9,  "name": "RL_hip_joint",     "leg": "RL", "axis": "hip_roll" },
+				{ "index": 10, "name": "RL_thigh_joint",   "leg": "RL", "axis": "hip_pitch" },
+				{ "index": 11, "name": "RL_calf_joint",    "leg": "RL", "axis": "knee_pitch" }
+			]
+		},
+
+		"humanoids_g1_h1_base_23dof": {
+			"description": "G1 / H1 base version — 23 DoF (no hands), exact LowCmd order",
+			"total_dof": 23,
+			"joints": [
+				{ "index": 0,  "name": "waist_joint",           "part": "torso",   "axis": "yaw" },
+				{ "index": 1,  "name": "neck_joint",            "part": "head",    "axis": "pitch" },
+
+				{ "index": 2,  "name": "left_shoulder_pitch",   "part": "left_arm" },
+				{ "index": 3,  "name": "left_shoulder_roll",    "part": "left_arm" },
+				{ "index": 4,  "name": "left_shoulder_yaw",     "part": "left_arm" },
+				{ "index": 5,  "name": "left_elbow_pitch",      "part": "left_arm" },
+				{ "index": 6,  "name": "left_wrist_yaw",        "part": "left_arm" },
+				{ "index": 7,  "name": "left_wrist_pitch",      "part": "left_arm" },
+
+				{ "index": 8,  "name": "right_shoulder_pitch",  "part": "right_arm" },
+				{ "index": 9,  "name": "right_shoulder_roll",   "part": "right_arm" },
+				{ "index": 10, "name": "right_shoulder_yaw",    "part": "right_arm" },
+				{ "index": 11, "name": "right_elbow_pitch",     "part": "right_arm" },
+				{ "index": 12, "name": "right_wrist_yaw",       "part": "right_arm" },
+				{ "index": 13, "name": "right_wrist_pitch",     "part": "right_arm" },
+
+				{ "index": 14, "name": "left_hip_yaw",          "part": "left_leg" },
+				{ "index": 15, "name": "left_hip_roll",         "part": "left_leg" },
+				{ "index": 16, "name": "left_hip_pitch",        "part": "left_leg" },
+				{ "index": 17, "name": "left_knee_pitch",       "part": "left_leg" },
+				{ "index": 18, "name": "left_ankle_pitch",      "part": "left_leg" },
+				{ "index": 19, "name": "left_ankle_roll",       "part": "left_leg" },
+
+				{ "index": 20, "name": "right_hip_yaw",         "part": "right_leg" },
+				{ "index": 21, "name": "right_hip_roll",        "part": "right_leg" },
+				{ "index": 22, "name": "right_hip_pitch",       "part": "right_leg" },
+				{ "index": 23, "name": "right_knee_pitch",      "part": "right_leg" },
+				{ "index": 24, "name": "right_ankle_pitch",     "part": "right_leg" },
+				{ "index": 25, "name": "right_ankle_roll",      "part": "right_leg" }
+			],
+			"note": "Indices 0–25 in LowCmd.motor_cmd[] array (26 elements, last unused in 23-DoF config)"
+		},
+
+		"g1_with_dex3_1_hands_43dof": {
+			"description": "G1 full version with dual Dex3-1 hands — 43 DoF total",
+			"total_dof": 43,
+			"hand_start_index": 26,
+			"left_hand": [
+				{ "index": 26, "name": "left_thumb_roll" },
+				{ "index": 27, "name": "left_thumb_pitch_1" },
+				{ "index": 28, "name": "left_thumb_pitch_2" },
+				{ "index": 29, "name": "left_index_finger" },
+				{ "index": 30, "name": "left_index_finger_distal" },
+				{ "index": 31, "name": "left_middle_finger" },
+				{ "index": 32, "name": "left_middle_finger_distal" },
+				{ "index": 33, "name": "left_finger_abduction" },
+				{ "index": 34, "name": "left_finger_adduction" },
+				{ "index": 35, "name": "left_hand_spare" }
+			],
+			"right_hand": [
+				{ "index": 36, "name": "right_thumb_roll" },
+				{ "index": 37, "name": "right_thumb_pitch_1" },
+				{ "index": 38, "name": "right_thumb_pitch_2" },
+				{ "index": 39, "name": "right_index_finger" },
+				{ "index": 40, "name": "right_index_finger_distal" },
+				{ "index": 41, "name": "right_middle_finger" },
+				{ "index": 42, "name": "right_middle_finger_distal" },
+				{ "index": 43, "name": "right_finger_abduction" },
+				{ "index": 44, "name": "right_finger_adduction" },
+				{ "index": 45, "name": "right_hand_spare" }
+			]
+		}
+	},
+
+	"source": "Unitree official SDK v1.3.x (Nov 2025) + G1 Developer Manual + unitree_ros2 URDFs",
+	"date": "2025-11-24"
+}
+
+
+
+
+
 		{
 			"model": "AIDOL",
 			"developer": "AIDOL",
@@ -120,84 +329,84 @@
 
 
 "zones":{
-  "aws":[
-    ["Auckland@ap-southeast-6",-36.8485,174.7633],
-    ["Sydney@ap-southeast-2",-33.8688,151.2093],
-    ["SãoPaulo@sa-east-1",-23.5505,-46.6333],
-    ["Singapore@ap-southeast-1",1.3521,103.8198],
-    ["Mumbai@ap-south-1",19.0760,72.8777],
-    ["Osaka@ap-northeast-3",34.6937,135.5023],
-    ["Tokyo@ap-northeast-1",35.6762,139.6503],
-    ["NorthCalifornia@us-west-1",37.4419,-122.1430],
-    ["Seoul@ap-northeast-2",37.5665,126.9779],
-    ["NorthVirginia@us-east-1",39.0469,-77.4903],
-    ["Ohio@us-east-2",39.9612,-82.9988],
-    ["Montreal@ca-central-1",45.5017,-73.5673],
-    ["Oregon@us-west-2",45.5202,-122.6742],
-    ["Paris@eu-west-3",48.8566,2.3522],
-    ["Frankfurt@eu-central-1",50.1109,8.6821],
-    ["London@eu-west-2",51.5074,-0.1278],
-    ["Dublin@eu-west-1",53.3498,-6.2603],
-    ["Stockholm@eu-north-1",59.3293,18.0686]
-  ],
-  "alibaba":[
-    ["Jakarta@ap-southeast-5a",-6.2088,106.8456],
-    ["Singapore@ap-southeast-1a",1.3521,103.8198],
-    ["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
-    ["Bangkok@ap-southeast-7a",13.7563,100.5018],
-    ["Manila@ap-southeast-6a",14.5995,120.9842],
-    ["Mumbai@ap-south-1a",19.0760,72.8777],
-    ["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
-    ["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
-    ["Heyuan@cn-heyuan-a",23.7333,114.6833],
-    ["HongKong@ap-east-1a",22.3964,114.1095],
-    ["Dubai@me-east-1a",25.2048,55.2708],
-    ["Riyadh@me-central-1a",24.7136,46.6753],
-    ["Chengdu@cn-chengdu-a",30.5728,104.0668],
-    ["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
-    ["Wuhan@cn-wuhan-a",30.5928,114.3055],
-    ["Shanghai@cn-shanghai-a",31.2304,121.4737],
-    ["Tokyo@ap-northeast-1a",35.6762,139.6503],
-    ["Qingdao@cn-qingdao-a",36.0667,120.3833],
-    ["Seoul@ap-northeast-2a",37.5665,126.9780],
-    ["SiliconValley@us-west-1a",37.3875,-122.0575],
-    ["Virginia@us-east-1a",39.0469,-77.4903],
-    ["Beijing@cn-beijing-a",39.9042,116.4074],
-    ["Hohhot@cn-huhehaote-a",40.8414,111.7517],
-    ["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
-    ["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
-    ["Queretaro@na-mexico",20.5888,-100.3899],
-    ["Paris@eu-west-1a",48.8566,2.3522],
-    ["Frankfurt@eu-central-1a",50.1109,8.6821],
-    ["London@eu-west-2a",51.5074,-0.1278]
-  ]
+	"aws":[
+		["Auckland@ap-southeast-6",-36.8485,174.7633],
+		["Sydney@ap-southeast-2",-33.8688,151.2093],
+		["SãoPaulo@sa-east-1",-23.5505,-46.6333],
+		["Singapore@ap-southeast-1",1.3521,103.8198],
+		["Mumbai@ap-south-1",19.0760,72.8777],
+		["Osaka@ap-northeast-3",34.6937,135.5023],
+		["Tokyo@ap-northeast-1",35.6762,139.6503],
+		["NorthCalifornia@us-west-1",37.4419,-122.1430],
+		["Seoul@ap-northeast-2",37.5665,126.9779],
+		["NorthVirginia@us-east-1",39.0469,-77.4903],
+		["Ohio@us-east-2",39.9612,-82.9988],
+		["Montreal@ca-central-1",45.5017,-73.5673],
+		["Oregon@us-west-2",45.5202,-122.6742],
+		["Paris@eu-west-3",48.8566,2.3522],
+		["Frankfurt@eu-central-1",50.1109,8.6821],
+		["London@eu-west-2",51.5074,-0.1278],
+		["Dublin@eu-west-1",53.3498,-6.2603],
+		["Stockholm@eu-north-1",59.3293,18.0686]
+	],
+	"alibaba":[
+		["Jakarta@ap-southeast-5a",-6.2088,106.8456],
+		["Singapore@ap-southeast-1a",1.3521,103.8198],
+		["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
+		["Bangkok@ap-southeast-7a",13.7563,100.5018],
+		["Manila@ap-southeast-6a",14.5995,120.9842],
+		["Mumbai@ap-south-1a",19.0760,72.8777],
+		["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
+		["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
+		["Heyuan@cn-heyuan-a",23.7333,114.6833],
+		["HongKong@ap-east-1a",22.3964,114.1095],
+		["Dubai@me-east-1a",25.2048,55.2708],
+		["Riyadh@me-central-1a",24.7136,46.6753],
+		["Chengdu@cn-chengdu-a",30.5728,104.0668],
+		["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
+		["Wuhan@cn-wuhan-a",30.5928,114.3055],
+		["Shanghai@cn-shanghai-a",31.2304,121.4737],
+		["Tokyo@ap-northeast-1a",35.6762,139.6503],
+		["Qingdao@cn-qingdao-a",36.0667,120.3833],
+		["Seoul@ap-northeast-2a",37.5665,126.9780],
+		["SiliconValley@us-west-1a",37.3875,-122.0575],
+		["Virginia@us-east-1a",39.0469,-77.4903],
+		["Beijing@cn-beijing-a",39.9042,116.4074],
+		["Hohhot@cn-huhehaote-a",40.8414,111.7517],
+		["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
+		["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
+		["Queretaro@na-mexico",20.5888,-100.3899],
+		["Paris@eu-west-1a",48.8566,2.3522],
+		["Frankfurt@eu-central-1a",50.1109,8.6821],
+		["London@eu-west-2a",51.5074,-0.1278]
+	]
 }
 
-    ["Auckland@ap-southeast-6b",-36.8485,174.7633],
-    ["Sydney@ap-southeast-2c",-33.8688,151.2093],
-    ["SãoPaulo@sa-east-1a",-23.5505,-46.6333],
-    ["Bangkok@ap-southeast-7a",13.7563,100.5018],
-    ["Manila@ap-southeast-6ượng",14.5995,120.9842],
-    ["Singapore@ap-southeast-1c",1.3521,103.8198],
-    ["KualaLumpur@ap-southeast-3b",3.1390,101.6869],
-    ["Jakarta@ap-southeast-5c",-6.2088,106.8456],
-    ["Mumbai@ap-south-1b",19.0760,72.8777],
-    ["Dubai@me-east-1a",25.2048,55.2708],
-    ["Riyadh@me-central-1a",24.7136,46.6753],
-    ["HongKong@cn-hongkongc",22.3964,114.1095],
-    ["Shenzhen@cn-shenzhenc",22.5431,114.0579],
-    ["Guangzhou@cn-guangzhoub",23.1291,113.2644],
-    ["Hangzhou@cn-hangzhoub",30.2741,120.1551],
-    ["Shanghai@cn-shanghaic",31.2304,121.4737],
-    ["Tokyo@ap-northeast-1c",35.6762,139.6503],
-    ["Seoul@ap-northeast-2b",37.5665,126.9780],
-    ["SiliconValley@us-west-1b",37.3875,-122.0575],
-    ["Virginia@us-east-1b",38.9072,-77.0369],
-    ["Beijing@cn-beijingj",39.9042,116.4074],
-    ["Zhangjiakou@cn-zhangjiakoub",40.8167,114.8833],
-    ["Frankfurt@eu-central-1b",50.1109,8.6821],
-    ["London@eu-west-1c",51.5074,-0.1278]
-  ]
+		["Auckland@ap-southeast-6b",-36.8485,174.7633],
+		["Sydney@ap-southeast-2c",-33.8688,151.2093],
+		["SãoPaulo@sa-east-1a",-23.5505,-46.6333],
+		["Bangkok@ap-southeast-7a",13.7563,100.5018],
+		["Manila@ap-southeast-6ượng",14.5995,120.9842],
+		["Singapore@ap-southeast-1c",1.3521,103.8198],
+		["KualaLumpur@ap-southeast-3b",3.1390,101.6869],
+		["Jakarta@ap-southeast-5c",-6.2088,106.8456],
+		["Mumbai@ap-south-1b",19.0760,72.8777],
+		["Dubai@me-east-1a",25.2048,55.2708],
+		["Riyadh@me-central-1a",24.7136,46.6753],
+		["HongKong@cn-hongkongc",22.3964,114.1095],
+		["Shenzhen@cn-shenzhenc",22.5431,114.0579],
+		["Guangzhou@cn-guangzhoub",23.1291,113.2644],
+		["Hangzhou@cn-hangzhoub",30.2741,120.1551],
+		["Shanghai@cn-shanghaic",31.2304,121.4737],
+		["Tokyo@ap-northeast-1c",35.6762,139.6503],
+		["Seoul@ap-northeast-2b",37.5665,126.9780],
+		["SiliconValley@us-west-1b",37.3875,-122.0575],
+		["Virginia@us-east-1b",38.9072,-77.0369],
+		["Beijing@cn-beijingj",39.9042,116.4074],
+		["Zhangjiakou@cn-zhangjiakoub",40.8167,114.8833],
+		["Frankfurt@eu-central-1b",50.1109,8.6821],
+		["London@eu-west-1c",51.5074,-0.1278]
+	]
 }
 
 [
@@ -398,9 +607,9 @@ intrinsic cell failure
 }
 
 
-  "straight ahead": "Default forward-facing direction; primary axis for movement and spatial reference."
-  "canonical": "Standard or conventional orientation; provides default alignment for consistent reference.",
-  "locus": "Central point or path defining a system’s behavior; reference for trajectories.",
+	"straight ahead": "Default forward-facing direction; primary axis for movement and spatial reference."
+	"canonical": "Standard or conventional orientation; provides default alignment for consistent reference.",
+	"locus": "Central point or path defining a system’s behavior; reference for trajectories.",
 
 [
 {"Base64 Blob ID": "Variable length, URL-safe encoding of raw bytes, common in REST APIs."},
@@ -626,88 +835,88 @@ These formats don’t require ORCIDs, and most style guides don’t expect them 
 # 𐂞 linear b ideogram b146 (U+1009E)
 
 {
-  "name": "Linear B",
-  "block": "Linear B",
-  "codes": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉𐀊𐀋𐀍𐀎𐀏𐀐𐀑𐀒𐀓𐀔𐀕𐀖𐀗𐀘𐀙𐀚𐀛𐀜𐀝𐀞𐀟𐀠𐀡𐀢𐀣𐀤𐀥𐀦𐀨𐀩𐀪𐀫𐀬𐀭𐀮𐀯𐀰𐀱𐀲𐀳𐀴𐀵𐀶𐀷𐀸𐀹𐀺𐀼𐀽𐀿𐁀𐁁𐁂𐁃𐁄𐁅𐁆𐁇𐁈𐁉𐁊𐁋𐁌𐁍",
-  "range": ["U+10000", "U+1007F"],
-  "description": "Syllabic script for Mycenaean Greek (1450 BCE).",
-  "tags": ["ancient", "greek", "syllabary"],
-  "syllabary": {
-    "a": "𐀀",
-    "e": "𐀁",
-    "i": "𐀂",
-    "o": "𐀃",
-    "u": "𐀄",
-    "da": "𐀅",
-    "de": "𐀆",
-    "di": "𐀇",
-    "do": "𐀈",
-    "du": "𐀉",
-    "ja": "𐀊",
-    "je": "𐀋",
-    "jo": "𐀍",
-    "ju": "𐀎",
-    "ka": "𐀏",
-    "ke": "𐀐",
-    "ki": "𐀑",
-    "ko": "𐀒",
-    "ku": "𐀓",
-    "ma": "𐀔",
-    "me": "𐀕",
-    "mi": "𐀖",
-    "mo": "𐀗",
-    "mu": "𐀘",
-    "na": "𐀙",
-    "ne": "𐀚",
-    "ni": "𐀛",
-    "no": "𐀜",
-    "nu": "𐀝",
-    "pa": "𐀞",
-    "pe": "𐀟",
-    "pi": "𐀠",
-    "po": "𐀡",
-    "pu": "𐀢",
-    "qa": "𐀣",
-    "qe": "𐀤",
-    "qi": "𐀥",
-    "qo": "𐀦",
-    "ra": "𐀨",
-    "re": "𐀩",
-    "ri": "𐀪",
-    "ro": "𐀫",
-    "ru": "𐀬",
-    "sa": "𐀭",
-    "se": "𐀮",
-    "si": "𐀯",
-    "so": "𐀰",
-    "su": "𐀱",
-    "ta": "𐀲",
-    "te": "𐀳",
-    "ti": "𐀴",
-    "to": "𐀵",
-    "tu": "𐀶",
-    "wa": "𐀷",
-    "we": "𐀸",
-    "wi": "𐀹",
-    "wo": "𐀺",
-    "za": "𐀼",
-    "ze": "𐀽",
-    "zo": "𐀿",
-    "a2": "𐁀",
-    "a3": "𐁁",
-    "au": "𐁂",
-    "dwe": "𐁃",
-    "dwo": "𐁄",
-    "nwa": "𐁅",
-    "pu2": "𐁆",
-    "pte": "𐁇",
-    "ra2": "𐁈",
-    "ra3": "𐁉",
-    "ro2": "𐁊",
-    "ta2": "𐁋",
-    "twe": "𐁌",
-    "two": "𐁍"
-  },
+	"name": "Linear B",
+	"block": "Linear B",
+	"codes": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉𐀊𐀋𐀍𐀎𐀏𐀐𐀑𐀒𐀓𐀔𐀕𐀖𐀗𐀘𐀙𐀚𐀛𐀜𐀝𐀞𐀟𐀠𐀡𐀢𐀣𐀤𐀥𐀦𐀨𐀩𐀪𐀫𐀬𐀭𐀮𐀯𐀰𐀱𐀲𐀳𐀴𐀵𐀶𐀷𐀸𐀹𐀺𐀼𐀽𐀿𐁀𐁁𐁂𐁃𐁄𐁅𐁆𐁇𐁈𐁉𐁊𐁋𐁌𐁍",
+	"range": ["U+10000", "U+1007F"],
+	"description": "Syllabic script for Mycenaean Greek (1450 BCE).",
+	"tags": ["ancient", "greek", "syllabary"],
+	"syllabary": {
+		"a": "𐀀",
+		"e": "𐀁",
+		"i": "𐀂",
+		"o": "𐀃",
+		"u": "𐀄",
+		"da": "𐀅",
+		"de": "𐀆",
+		"di": "𐀇",
+		"do": "𐀈",
+		"du": "𐀉",
+		"ja": "𐀊",
+		"je": "𐀋",
+		"jo": "𐀍",
+		"ju": "𐀎",
+		"ka": "𐀏",
+		"ke": "𐀐",
+		"ki": "𐀑",
+		"ko": "𐀒",
+		"ku": "𐀓",
+		"ma": "𐀔",
+		"me": "𐀕",
+		"mi": "𐀖",
+		"mo": "𐀗",
+		"mu": "𐀘",
+		"na": "𐀙",
+		"ne": "𐀚",
+		"ni": "𐀛",
+		"no": "𐀜",
+		"nu": "𐀝",
+		"pa": "𐀞",
+		"pe": "𐀟",
+		"pi": "𐀠",
+		"po": "𐀡",
+		"pu": "𐀢",
+		"qa": "𐀣",
+		"qe": "𐀤",
+		"qi": "𐀥",
+		"qo": "𐀦",
+		"ra": "𐀨",
+		"re": "𐀩",
+		"ri": "𐀪",
+		"ro": "𐀫",
+		"ru": "𐀬",
+		"sa": "𐀭",
+		"se": "𐀮",
+		"si": "𐀯",
+		"so": "𐀰",
+		"su": "𐀱",
+		"ta": "𐀲",
+		"te": "𐀳",
+		"ti": "𐀴",
+		"to": "𐀵",
+		"tu": "𐀶",
+		"wa": "𐀷",
+		"we": "𐀸",
+		"wi": "𐀹",
+		"wo": "𐀺",
+		"za": "𐀼",
+		"ze": "𐀽",
+		"zo": "𐀿",
+		"a2": "𐁀",
+		"a3": "𐁁",
+		"au": "𐁂",
+		"dwe": "𐁃",
+		"dwo": "𐁄",
+		"nwa": "𐁅",
+		"pu2": "𐁆",
+		"pte": "𐁇",
+		"ra2": "𐁈",
+		"ra3": "𐁉",
+		"ro2": "𐁊",
+		"ta2": "𐁋",
+		"twe": "𐁌",
+		"two": "𐁍"
+	},
 
 "𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾𐂿𐃀𐃁𐃂𐃃𐃄𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖𐃗𐃘𐃙𐃚𐃛𐃜𐃝𐃞𐃟𐃠𐃡𐃢𐃣𐃤𐃥𐃦𐃧𐃨𐃩𐃪𐃫𐃬𐃭𐃮𐃯𐃰𐃱𐃲𐃳𐃴𐃵𐃶𐃷𐃸𐃹𐃺"
 
@@ -778,24 +987,24 @@ These formats don’t require ORCIDs, and most style guides don’t expect them 
 }
 
 "glagolitic": {
-  "name": "Glagolitic",
-  "block": "Glagolitic",
-  "range": ["U+2C00", "U+2C5F"],
-  "description": "Oldest Slavic script (9th century)",
-  "creator": "Cyril and Methodius."
-  "alphabet": {
-    "lower": "ⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞ",
-    "upper": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ",
-    "numerals": "ⰵ (5), ⰹ (10), ⰾ (50)"  // Glagolitic numerals reuse letters
-  },
-  "lingua": {
-    "core": "ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ (Blagoslavěnĭ = 'Blessed')",
-    "sample_words": {
+	"name": "Glagolitic",
+	"block": "Glagolitic",
+	"range": ["U+2C00", "U+2C5F"],
+	"description": "Oldest Slavic script (9th century)",
+	"creator": "Cyril and Methodius."
+	"alphabet": {
+		"lower": "ⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞ",
+		"upper": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ",
+		"numerals": "ⰵ (5), ⰹ (10), ⰾ (50)"  // Glagolitic numerals reuse letters
+	},
+	"lingua": {
+		"core": "ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ (Blagoslavěnĭ = 'Blessed')",
+		"sample_words": {
 	"ⰔⰎⰑⰂⰑ": "Slovo (Word)",
 	"ⰜⰋⰔⰕⰠ": "Čistĭ (Pure)"
-    }
-  },
-  "tags": ["slavic", "medieval", "liturgical", "historical"]
+		}
+	},
+	"tags": ["slavic", "medieval", "liturgical", "historical"]
 }
 
 The Vai script (ꕙꔤ) is one of Africa’s few indigenous writing systems developed
@@ -808,9 +1017,9 @@ modern usage.
 - Origin: Created circa 1833 by Momolu Duwalu Bukele, a Vai scholar from
 Liberia.
 - Inspiration: Likely influenced by:
-  - Dream visions (Bukele claimed divine inspiration)
-  - Indigenous symbols (e.g., traditional Vai pictograms)
-  - Limited exposure to Arabic (via Muslim traders) and Latin scripts (via missionaries)
+	- Dream visions (Bukele claimed divine inspiration)
+	- Indigenous symbols (e.g., traditional Vai pictograms)
+	- Limited exposure to Arabic (via Muslim traders) and Latin scripts (via missionaries)
 - Status: One of the few successful indigenous scripts still in use today.
 
 Mythology & Significance
@@ -822,11 +1031,11 @@ Mythology & Significance
 2. Materials & Traditional Usage
 Writing Surfaces
 - Early Forms:
-  - Clay tablets (for practice)
-  - Wooden boards (for formal records)
-  - Leaves & bark (temporary notes)
+	- Clay tablets (for practice)
+	- Wooden boards (for formal records)
+	- Leaves & bark (temporary notes)
 - Modern Forms:
-  - Paper & digital (since the 20th century)
+	- Paper & digital (since the 20th century)
 
 Tools
 - Stylus: Sharpened sticks or metal tools for engraving.
@@ -871,9 +1080,9 @@ Example Words
 5. Preservation Efforts
 - UNESCO: Recognized as part of Liberia’s intangible cultural heritage.
 - Digital Revival:
-  - Fonts: Noto Sans Vai, Ebrima (Windows).
-  - Keyboards: Mobile/desktop input methods available.
-  - Wikipedia: Vai Wikipedia project in development.
+	- Fonts: Noto Sans Vai, Ebrima (Windows).
+	- Keyboards: Mobile/desktop input methods available.
+	- Wikipedia: Vai Wikipedia project in development.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

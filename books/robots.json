@@ -1,6 +1,6 @@
 {
 	"name": "robot models",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Current robot AI technology.",
 	"status": "A living document of anthropomorphised toys.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -272,5 +272,108 @@
 				}
 			]
 		}
-	]
+	],
+	"topologies":{
+		"coordinate_system": "x→forward, y→left, z→up  (ROS REP-103, matches Unitree URDFs)",
+		"units": "meters",
+		"source": "Official Unitree URDFs + SDK v1.3.x (Nov 2025)",
+
+		"go2_quadruped_12dof": {
+			"description": "Go2 — 12 DoF quadruped",
+			"joints": [
+				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+				"RR_hip_joint", "RR_thigh_joint", "RR_calf_joint",
+				"RL_hip_joint", "RL_thigh_joint", "RL_calf_joint"
+			],
+			"rest": [
+				[ 0.188, -0.046,  0.085], [ 0.188, -0.046, -0.085], [ 0.188, -0.046, -0.283],
+				[-0.188, -0.046,  0.085], [-0.188, -0.046, -0.085], [-0.188, -0.046, -0.283],
+				[ 0.188,  0.046,  0.085], [ 0.188,  0.046, -0.085], [ 0.188,  0.046, -0.283],
+				[-0.188,  0.046,  0.085], [-0.188,  0.046, -0.085], [-0.188,  0.046, -0.283]
+			]
+		},
+
+		"b2_quadruped_12dof": {
+			"description": "B2 — larger industrial quadruped",
+			"joints": [
+				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+				"RR_hip_joint", "RR_thigh_joint", "RR_calf_joint",
+				"RL_hip_joint", "RL_thigh_joint", "RL_calf_joint"
+			],
+			"rest": [
+				[ 0.245, -0.060,  0.110], [ 0.245, -0.060, -0.110], [ 0.245, -0.060, -0.368],
+				[-0.245, -0.060,  0.110], [-0.245, -0.060, -0.110], [-0.245, -0.060, -0.368],
+				[ 0.245,  0.060,  0.110], [ 0.245,  0.060, -0.110], [ 0.245,  0.060, -0.368],
+				[-0.245,  0.060,  0.110], [-0.245,  0.060, -0.110], [-0.245,  0.060, -0.368]
+			]
+		},
+
+		"g1_humanoid_23dof_base": {
+			"description": "G1 — 23 DoF base (no hands), official zero pose",
+			"joints": [
+				"waist_joint",
+				"neck_joint",
+				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw",
+				"left_elbow_pitch", "left_wrist_yaw", "left_wrist_pitch",
+				"right_shoulder_pitch", "right_shoulder_roll", "right_shoulder_yaw",
+				"right_elbow_pitch", "right_wrist_yaw", "right_wrist_pitch",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch",
+				"left_knee_pitch", "left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch",
+				"right_knee_pitch", "right_ankle_pitch", "right_ankle_roll"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000],
+				[0.000, 0.000, 0.400],
+				[-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360],
+				[-0.300, 0.000, 0.200], [-0.320, 0.000, -0.100], [-0.320, 0.000, -0.100],
+				[ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360],
+				[ 0.300, 0.000, 0.200], [ 0.320, 0.000, -0.100], [ 0.320, 0.000, -0.100],
+				[-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000],
+				[-0.090, 0.000, -0.380], [-0.089, 0.000, -0.780], [-0.089, 0.000, -0.780],
+				[ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000],
+				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780]
+			]
+		},
+
+		"g1_humanoid_43dof_with_dex3_1": {
+			"description": "G1 full 43 DoF with dual Dex3-1 hands — all joints",
+			"joints": [
+				"waist_joint", "neck_joint",
+				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw", "left_elbow_pitch", "left_wrist_yaw", "left_wrist_pitch",
+				"right_shoulder_pitch", "right_shoulder_roll", "right_shoulder_yaw", "right_elbow_pitch", "right_wrist_yaw", "right_wrist_pitch",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch", "left_knee_pitch", "left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch", "right_knee_pitch", "right_ankle_pitch", "right_ankle_roll",
+				"left_thumb_roll", "left_thumb_pitch1", "left_thumb_pitch2",
+				"left_index_mcp", "left_index_pip",
+				"left_middle_mcp", "left_middle_pip",
+				"left_finger_abduction",
+				"right_thumb_roll", "right_thumb_pitch1", "right_thumb_pitch2",
+				"right_index_mcp", "right_index_pip",
+				"right_middle_mcp", "right_middle_pip",
+				"right_finger_abduction"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000], [0.000, 0.000, 0.400],
+				[-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360], [-0.130, 0.000, 0.360],
+				[-0.300, 0.000, 0.200], [-0.320, 0.000, -0.100], [-0.320, 0.000, -0.100],
+				[ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360], [ 0.130, 0.000, 0.360],
+				[ 0.300, 0.000, 0.200], [ 0.320, 0.000, -0.100], [ 0.320, 0.000, -0.100],
+				[-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000],
+				[-0.090, 0.000, -0.380], [-0.089, 0.000, -0.780], [-0.089, 0.000, -0.780],
+				[ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000],
+				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780],
+				[-0.320, 0.000, -0.180], [-0.305, 0.015, -0.195], [-0.285, 0.025, -0.215],
+				[-0.305, -0.008, -0.215], [-0.305, -0.008, -0.255],
+				[-0.320, -0.008, -0.215], [-0.320, -0.008, -0.260],
+				[-0.320, 0.000, -0.200],
+				[ 0.320, 0.000, -0.180], [ 0.305, -0.015, -0.195], [ 0.285, -0.025, -0.215],
+				[ 0.305,  0.008, -0.215], [ 0.305,  0.008, -0.255],
+				[ 0.320,  0.008, -0.215], [ 0.320,  0.008, -0.260],
+				[ 0.320, 0.000, -0.200]
+			]
+		}
+	}
 }
