@@ -1,6 +1,6 @@
 {
 	"name": "robot models",
-	"version": "1.0.8",
+	"version": "1.1.0",
 	"description": "Current robot AI technology.",
 	"status": "A living document of anthropomorphised toys.",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -12,7 +12,47 @@
 		"type": "git",
 		"url": "https://github.com/nitrologic/biblispec"
 	},
-	"hardware":[
+	"quadrupeds":[
+		{
+			"model": "Go2",
+			"developer": "Unitree",
+			"price": 1600,
+			"url": "https://www.unitree.com/go2",
+			"feature": "12 DoF, 4D LiDAR, edge AI module, 15 kg, 2-4 h runtime.",
+			"height": 0.70,
+			"mass": 15,
+			"dof": 12,
+			"payload": 7,
+			"year": 2023,
+			"topology": "go2_quadruped_12dof"
+		},
+		{
+			"model": "B2",
+			"developer": "Unitree",
+			"price": 35000,
+			"url": "https://www.unitree.com/b2",
+			"feature": "Industrial-grade, 50 kg payload, IP67, 4-6 h runtime.",
+			"height": 0.645,
+			"mass": 60,
+			"dof": 12,
+			"payload": 40,
+			"year": 2024,
+			"topology": "b2_quadruped_12dof"
+		},
+		{
+			"model": "Spot",
+			"developer": "Boston Dynamics",
+			"price": 74500,
+			"url": "https://bostondynamics.com/spot",
+			"feature": "12 DoF quadruped; 360° sensors, 14 kg payload, Orbit 5.0 AI fleet mgmt; 90-min runtime.",
+			"height": 0.61,
+			"mass": 33.8,
+			"dof": 12,
+			"payload": 14,
+			"year": 2019
+		}
+	],
+	"humanoids":[
 		{
 			"model": "G1",
 			"developer": "Unitree",
@@ -28,6 +68,13 @@
 			"feature": "High walking speed with modular upgrades; 3D LiDAR and depth cameras for sharp environmental awareness."
 		},
 		{
+			"model": "Atlas",
+			"developer": "Boston Dynamics",
+			"price": "~$140,000",
+			"url": "https://bostondynamics.com/atlas",
+			"feature": "Fully electric actuators with modular high-torque motors; embedded 3D vision for <30ms dynamic response; drops hydraulics for quieter, efficient control."
+		},
+		{
 			"model": "Agile ONE",
 			"developer": "Agile Robots",
 			"price": "$50,000",
@@ -40,13 +87,6 @@
 			"price": "~$40,000",
 			"url": "https://www.mi.com/cyberone",
 			"feature": "Multimodal AI for voice/gesture recognition; 5G connectivity; flexible spine with 6 DoF; emotional expression via facial actuators; 6-hour home-use battery."
-		},
-		{
-			"model": "Atlas",
-			"developer": "Boston Dynamics",
-			"price": "~$140,000",
-			"url": "https://bostondynamics.com/atlas",
-			"feature": "Fully electric actuators with modular high-torque motors; embedded 3D vision for <30ms dynamic response; drops hydraulics for quieter, efficient control."
 		},
 		{
 			"model": "Apollo",
@@ -89,8 +129,8 @@
 			"use_cases": "On-board execution for manipulation.",
 			"key_optimizations_for_low_latency": "TENNs algorithm for FPGA/low-power; Isaac platform optimizations.",
 			"performance":[
-				{	
-					"platform": "NVIDIA RTX 4090", 
+				{
+					"platform": "NVIDIA RTX 4090",
 					"latency": {"lag":30,"rate":7},
 					"notes": "50ms visuomotor loops in electric Atlas."
 				}
@@ -276,10 +316,51 @@
 	"topologies":{
 		"coordinate_system": "x→forward, y→left, z→up  (ROS REP-103, matches Unitree URDFs)",
 		"units": "meters",
-		"source": "Official Unitree URDFs + SDK v1.3.x (Nov 2025)",
+
+		"gr1_humanoid_40dof_with_hands": {
+			"description": "Fourier Intelligence GR-1 — 40 DoF full humanoid (official zero/rest pose, 2025 release)",
+			"source": "FFTAI Wiki-GRx-Models URDFs + Isaac Gym validation (Nov 2025)",
+			"joints": [
+				"waist_yaw_joint", "waist_pitch_joint", "waist_roll_joint",
+				"neck_yaw_joint", "neck_pitch_joint",
+				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw",
+				"left_elbow_pitch", "left_elbow_roll",
+				"left_wrist_pitch", "left_wrist_yaw", "left_wrist_roll",
+				"right_shoulder_pitch", "right_shoulder_roll", "right_shoulder_yaw",
+				"right_elbow_pitch", "right_elbow_roll",
+				"right_wrist_pitch", "right_wrist_yaw", "right_wrist_roll",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch",
+				"left_knee_pitch",
+				"left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch",
+				"right_knee_pitch",
+				"right_ankle_pitch", "right_ankle_roll",
+				"left_thumb_abduction", "left_thumb_flexion", "left_index_flexion", "left_middle_flexion", "left_ring_flexion", "left_little_flexion",
+				"right_thumb_abduction", "right_thumb_flexion", "right_index_flexion", "right_middle_flexion", "right_ring_flexion", "right_little_flexion"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000], [0.000, 0.000, 0.000], [0.000, 0.000, 0.000],
+				[0.000, 0.000, 0.420], [0.000, 0.000, 0.420],
+				[-0.180, 0.000, 0.380], [-0.180, 0.000, 0.380], [-0.180, 0.000, 0.380],
+				[-0.350, 0.000, 0.250], [-0.350, 0.000, 0.250],
+				[-0.380, 0.000, 0.000], [-0.380, 0.000, 0.000], [-0.380, 0.000, 0.000],
+				[ 0.180, 0.000, 0.380], [ 0.180, 0.000, 0.380], [ 0.180, 0.000, 0.380],
+				[ 0.350, 0.000, 0.250], [ 0.350, 0.000, 0.250],
+				[ 0.380, 0.000, 0.000], [ 0.380, 0.000, 0.000], [ 0.380, 0.000, 0.000],
+				[-0.100, 0.000, 0.000], [-0.100, 0.000, 0.000], [-0.100, 0.000, 0.000],
+				[-0.100, 0.000, -0.400],
+				[-0.095, 0.000, -0.820], [-0.095, 0.000, -0.820],
+				[ 0.100, 0.000, 0.000], [ 0.100, 0.000, 0.000], [ 0.100, 0.000, 0.000],
+				[ 0.100, 0.000, -0.400],
+				[ 0.095, 0.000, -0.820], [ 0.095, 0.000, -0.820],
+				[-0.380, -0.020, -0.050], [-0.380, -0.020, -0.100], [-0.380, -0.020, -0.150], [-0.380, -0.020, -0.150], [-0.380, -0.020, -0.150], [-0.380, -0.020, -0.150],
+				[ 0.380,  0.020, -0.050], [ 0.380,  0.020, -0.100], [ 0.380,  0.020, -0.150], [ 0.380,  0.020, -0.150], [ 0.380,  0.020, -0.150], [ 0.380,  0.020, -0.150]
+			]
+		},
 
 		"go2_quadruped_12dof": {
 			"description": "Go2 — 12 DoF quadruped",
+			"source": "Unitree URDFs + SDK v1.3.x (Nov 2025)",
 			"joints": [
 				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
 				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
@@ -296,6 +377,7 @@
 
 		"b2_quadruped_12dof": {
 			"description": "B2 — larger industrial quadruped",
+			"source": "Unitree URDFs + SDK v1.3.x (Nov 2025)",
 			"joints": [
 				"FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
 				"FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
@@ -312,6 +394,7 @@
 
 		"g1_humanoid_23dof_base": {
 			"description": "G1 — 23 DoF base (no hands), official zero pose",
+			"source": "Unitree URDFs + SDK v1.3.x (Nov 2025)",
 			"joints": [
 				"waist_joint",
 				"neck_joint",
@@ -337,9 +420,9 @@
 				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780]
 			]
 		},
-
 		"g1_humanoid_43dof_with_dex3_1": {
 			"description": "G1 full 43 DoF with dual Dex3-1 hands — all joints",
+			"source": "Unitree URDFs + SDK v1.3.x (Nov 2025)",
 			"joints": [
 				"waist_joint", "neck_joint",
 				"left_shoulder_pitch", "left_shoulder_roll", "left_shoulder_yaw", "left_elbow_pitch", "left_wrist_yaw", "left_wrist_pitch",
