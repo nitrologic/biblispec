@@ -58,6 +58,7 @@
 			"developer": "Unitree",
 			"price": "$16,000",
 			"url": "https://www.unitree.com/g1",
+			"topology": ["g1_humanoid_23dof_base","g1_humanoid_43dof_with_dex3_1"],
 			"feature": "43 degrees of freedom; 3D LiDAR and depth cameras; magnetic joint covers for modularity; walking speed up to 2 m/s; 2-hour battery runtime."
 		},
 		{
@@ -114,7 +115,8 @@
 			"developer": "Fourier Intelligence",
 			"price": "~$160,000",
 			"url": "https://www.fftai.com",
-			"feature": "Targeting mass production with advanced bipedal mobility for healthcare and rehab tasks."
+			"feature": "Targeting mass production with advanced bipedal mobility for healthcare and rehab tasks.",
+			"topology":"gr1_humanoid_40dof_with_hands"
 		}
 	],
 	"models":[
