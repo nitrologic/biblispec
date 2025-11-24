@@ -1,3 +1,58 @@
+		{
+			"model": "AIDOL",
+			"developer": "AIDOL",
+			"price": "$50,000",
+			"url": "https://aidol.ru",
+			"feature": "AI-powered for walking, object manipulation, and communication; flexible silicone skin for 12+ emotions; 6-hour battery with 77% Russian components."
+		}
+
+
+		{
+			"model": "SE01",
+			"developer": "EngineAI",
+			"price": "$12,000",
+			"url": "https://en.engineai.com.cn",
+			"feature": "Novel end-to-end neural network for continuous real-time adaptation and optimization of movements; shockingly realistic walking gait."
+		},
+
+
+		{
+			"model": "Optimus Gen 2",
+			"developer": "Tesla",
+			"price": "$25,000",
+			"status" : "vapourware | prototype",
+			"url": "https://www.tesla.com",
+			"feature": "Vision-language-action models with <50ms end-to-end latency; frameless motors for precise, low-inertia grasping; battery runtime 4-8 hours."
+		},
+
+
+		{
+			"model": "Iron",
+			"developer": "XPeng",
+			"price": "$30,000",
+			"url": "https://www.xpeng.com",
+			"feature": "Integrated self-driving AI for navigation; 40+ degrees of freedom; dual-arm manipulation; 360-degree vision with 12 cameras; 5-hour battery with hot-swap."
+		},
+
+
+		{
+			"model": "Atom",
+			"developer": "Dobot",
+			"price": "$27,000",
+			"url": "https://www.dobot-robots.com",
+			"feature": "Modular arm design for tool swapping; RGB-D cameras for depth perception; collaborative safety features; payload capacity 5 kg per arm; 3-hour battery."
+		},
+
+
+		{
+			"model": "Figure 03",
+			"developer": "Figure AI",
+			"price": "$20,000",
+			"url": "https://www.figure.ai",
+			"feature": "Next-gen vision system: 2x frame rate, 1/4 latency, 60% wider FOV per camera; embedded palm cameras for <20ms grasp feedback; Helix AI for on-board reasoning."
+		},
+
+
 {
 "backbone":{
 	"description":"Intercontinental traffic",
