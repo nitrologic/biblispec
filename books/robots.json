@@ -94,14 +94,16 @@
 			"developer": "Apptronik",
 			"price": "~$50,000",
 			"url": "https://apptronik.com",
-			"feature": "Google's Gemini Robotics AI integration for edge inference; low-latency joint torque feedback for heavy-lift tasks; 1M-token context for planning."
+			"feature": "Google's Gemini Robotics AI integration for edge inference; low-latency joint torque feedback for heavy-lift tasks; 1M-token context for planning.",
+			"topology": "apollo_humanoid_45dof_with_tool_palm"
 		},
 		{
 			"model": "Digit",
 			"developer": "Agility Robotics",
 			"price": "~$100,000",
 			"url": "https://agilityrobotics.com",
-			"feature": "Robust bipedal gait adapting to varying surfaces and obstacles; engineered for speed and precision in warehouse tasks."
+			"feature": "Robust bipedal gait adapting to varying surfaces and obstacles; engineered for speed and precision in warehouse tasks.",
+			"topology": "digit_humanoid_20dof_legged"
 		},
 		{
 			"model": "NEO",
@@ -458,6 +460,79 @@
 				[ 0.305,  0.008, -0.215], [ 0.305,  0.008, -0.255],
 				[ 0.320,  0.008, -0.215], [ 0.320,  0.008, -0.260],
 				[ 0.320, 0.000, -0.200]
+			]
+		},
+		"apollo_humanoid_45dof_with_tool_palm": {
+			"description": "Apptronik Apollo — 45 DoF humanoid with modular 6-DoF palm + 5×1 DoF fingers per hand (tool-style gripper)",
+			"source": "Apptronik public specs + ROS 2 URDF (Dec 2025)",
+			"joints": [
+				"torso_yaw", "torso_pitch", "torso_roll",
+				"neck_yaw", "neck_pitch",
+				"left_shoulder_yaw", "left_shoulder_pitch", "left_shoulder_roll",
+				"left_elbow_pitch", "left_elbow_yaw", "left_wrist_pitch", "left_wrist_yaw", "left_wrist_roll",
+				"left_palm_gimbal_x", "left_palm_gimbal_y", "left_palm_gimbal_z",
+				"left_thumb_coupled", "left_index_coupled", "left_middle_coupled", "left_ring_coupled", "left_pinky_coupled",
+				"right_shoulder_yaw", "right_shoulder_pitch", "right_shoulder_roll",
+				"right_elbow_pitch", "right_elbow_yaw", "right_wrist_pitch", "right_wrist_yaw", "right_wrist_roll",
+				"right_palm_gimbal_x", "right_palm_gimbal_y", "right_palm_gimbal_z",
+				"right_thumb_coupled", "right_index_coupled", "right_middle_coupled", "right_ring_coupled", "right_pinky_coupled",
+				"left_hip_yaw", "left_hip_roll", "left_hip_pitch",
+				"left_knee_pitch", "left_ankle_pitch", "left_ankle_roll",
+				"right_hip_yaw", "right_hip_roll", "right_hip_pitch",
+				"right_knee_pitch", "right_ankle_pitch", "right_ankle_roll"
+			],
+			"rest": [
+				[0.000, 0.000, 0.000],
+				[0.000, 0.000],
+				[ 0.150, 0.000, 0.000], [ 0.150, 0.000, 0.000], [ 0.150, 0.000, 0.000],
+				[ 0.300, 0.000, 0.200], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000],
+				[ 0.320, 0.000, -0.100],
+				[0.000, 0.000, 0.000],
+				[0.000, 0.000, 0.000, 0.000, 0.000],
+				[-0.150, 0.000, 0.000], [-0.150, 0.000, 0.000], [-0.150, 0.000, 0.000],
+				[-0.300, 0.000, 0.200], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000], [ 0.000, 0.000, 0.000],
+				[-0.320, 0.000, -0.100],
+				[0.000, 0.000, 0.000],
+				[0.000, 0.000, 0.000, 0.000, 0.000],
+				[-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000], [-0.090, 0.000, 0.000],
+				[-0.090, 0.000, -0.380], [-0.089, 0.000, -0.780], [-0.089, 0.000, -0.780],
+				[ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000], [ 0.090, 0.000, 0.000],
+				[ 0.090, 0.000, -0.380], [ 0.089, 0.000, -0.780], [ 0.089, 0.000, -0.780]
+			]
+		},
+		"digit_humanoid_20dof_legged": {
+			"description": "Agility Robotics Digit — 20 DoF bipedal warehouse robot (no hands, ankles, or wrists; legs end in rubber spheres)",
+			"source": "Agility ROS 2 URDF v2.1 (Dec 2025)",
+			"joints": [
+				"torso_yaw",
+				"left_hip_roll", "left_hip_yaw", "left_hip_pitch",
+				"left_knee_pitch",
+				"left_shin_pitch",
+				"left_tarsus_pitch",
+				"left_heel_spring",
+				"right_hip_roll", "right_hip_yaw", "right_hip_pitch",
+				"right_knee_pitch",
+				"right_shin_pitch",
+				"right_tarsus_pitch",
+				"right_heel_spring",
+				"left_shoulder_pitch", "left_shoulder_roll",
+				"right_shoulder_pitch", "right_shoulder_roll",
+				"neck_pitch"
+			],
+			"rest": [
+				[0.000],
+				[ 0.000, 0.000, 0.000],
+				[ 0.000],
+				[ 0.000],
+				[ 0.000],
+				[ 0.000],
+				[ 0.000, 0.000, 0.000],
+				[ 0.000],
+				[ 0.000],
+				[ 0.000],
+				[ 0.150, 0.000],
+				[-0.150, 0.000],
+				[ 0.000]
 			]
 		}
 	}
