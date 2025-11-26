@@ -1,25 +1,302 @@
 {
-	"name":"bugs specs",
-	"version":"1.0.0",
-	"description":"Flight specs from the insect world",
-	"status":"A pokedex of mother nature’s engineering",
+	"name":"insectan hover, cruise, burst specs",
+	"version":"1.0.1",
+	"description":"Flight specs of the insect world",
+	"status":"A star studded list of natural aerial engineering",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok (xAI)",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"bugs":{
-		"fortai": {
-			"name": "Biting midge",
-			"latin": "Forcipomyia taiwana (Diptera)",
-			"mg": [0.03, 0.12],
-			"flight": {
-				"hover":  { "hz": [900, 1100], "mps": 0.0 },
-				"cruise": { "hz": [800, 1000], "mps": 1.0 },
-				"burst":  { "hz": [1046, 1330], "mps": 2.2 }
+		"fortai":{
+			"name":"Biting midge",
+			"latin":"Forcipomyia taiwana (Diptera)",
+			"mg":[0.03,0.12],
+			"flight":{
+				"hover":{"hz":[900,1100],"mps":0.0},
+				"cruise":{"hz":[800,1000],"mps":1.0},
+				"burst":{"hz":[1046,1330],"mps":2.2}
 			},
-			"source": "Sotavalta 1947, Tsuji & Bienvenu 2024",
-			"notes": "Highest naturally measured wingbeat frequency"
+			"source":"Sotavalta 1947, Tsuji & Bienvenu 2024",
+			"notes":"Highest naturally measured wingbeat frequency"
+		},
+		"culi":{
+			"name":"No-see-um",
+			"latin":"Culicoides spp. (Diptera)",
+			"mg":[0.15,0.40],
+			"flight":{
+				"hover":{"hz":[800,1000],"mps":0.0},
+				"cruise":{"hz":[700,900],"mps":1.2},
+				"burst":{"hz":[1000,1200],"mps":2.5}
+			},
+			"source":"Sotavalta 1947, Borkent 2019"
+		},
+		"aaeg":{
+			"name":"Mosquito",
+			"latin":"Aedes aegypti (Diptera)",
+			"mg":[1.4,3.8],
+			"flight":{
+				"hover":{"hz":[400,550],"mps":0.0},
+				"cruise":{"hz":[250,320],"mps":2.1},
+				"burst":{"hz":[700,900],"mps":4.8}
+			},
+			"source":"Arthur et al. 2023",
+			"notes":"Males burst higher"
+		},
+		"trich":{
+			"name":"Fairyfly wasp",
+			"latin":"Trichogramma spp. (Hymenoptera)",
+			"mg":[0.02,0.08],
+			"flight":{
+				"hover":{"hz":[180,240],"mps":0.0},
+				"cruise":{"hz":[120,180],"mps":1.8},
+				"burst":{"hz":[220,280],"mps":3.5}
+			},
+			"source":"Pujade-Villar 2021"
+		},
+		"dmel":{
+			"name":"Fruit fly",
+			"latin":"Drosophila melanogaster (Diptera)",
+			"mg":[0.6,1.4],
+			"flight":{
+				"hover":{"hz":[230,280],"mps":0.0},
+				"cruise":{"hz":[200,240],"mps":1.8},
+				"burst":{"hz":[280,350],"mps":3.5}
+			},
+			"source":"Fry et al. 2005, Marden 2021"
+		},
+		"mdom":{
+			"name":"House fly",
+			"latin":"Musca domestica (Diptera)",
+			"mg":[8,20],
+			"flight":{
+				"hover":{"hz":[210,260],"mps":0.0},
+				"cruise":{"hz":[190,240],"mps":2.4},
+				"burst":{"hz":[260,320],"mps":8.2}
+			},
+			"source":"Walker 2020"
+		},
+		"amel":{
+			"name":"Honey bee",
+			"latin":"Apis mellifera (Hymenoptera)",
+			"mg":[65,120],
+			"flight":{
+				"hover":{"hz":[240,270],"mps":0.0},
+				"cruise":{"hz":[210,250],"mps":3.5},
+				"burst":{"hz":[270,310],"mps":7.8}
+			},
+			"source":"Hrncir et al. 2021"
+		},
+		"bote":{
+			"name":"Bumblebee",
+			"latin":"Bombus terrestris (Hymenoptera)",
+			"mg":[120,380],
+			"flight":{
+				"hover":{"hz":[150,210],"mps":0.0},
+				"cruise":{"hz":[140,200],"mps":3.5},
+				"burst":{"hz":[220,250],"mps":7.5}
+			},
+			"source":"Mountcastle & Combes 2017"
+		},
+		"xyvi":{
+			"name":"Carpenter bee",
+			"latin":"Xylocopa virginica (Hymenoptera)",
+			"mg":[140,320],
+			"flight":{
+				"hover":{"hz":[190,250],"mps":0.0},
+				"cruise":{"hz":[170,230],"mps":4.5},
+				"burst":{"hz":[240,280],"mps":9.0}
+			},
+			"source":"Samejima et al. 2019"
+		},
+		"euim":{
+			"name":"Orchid bee",
+			"latin":"Euglossa imperialis (Hymenoptera)",
+			"mg":[100,200],
+			"flight":{
+				"hover":{"hz":[170,230],"mps":0.0},
+				"cruise":{"hz":[160,220],"mps":4.2},
+				"burst":{"hz":[230,270],"mps":8.5}
+			},
+			"source":"Pokorny et al. 2020"
+		},
+		"vman":{
+			"name":"Asian giant hornet",
+			"latin":"Vespa mandarinia (Hymenoptera)",
+			"mg":[280,680],
+			"flight":{
+				"hover":{"hz":[120,160],"mps":0.0},
+				"cruise":{"hz":[110,150],"mps":5.1},
+				"burst":{"hz":[170,210],"mps":11.0}
+			},
+			"source":"Hedrick et al. 2021"
+		},
+		"acra":{
+			"name":"Hawker dragonfly",
+			"latin":"Aeshna cyanea (Odonata)",
+			"mg":[500,820],
+			"flight":{
+				"hover":{"hz":[32,40],"mps":0.0},
+				"cruise":{"hz":[30,42],"mps":8.5},
+				"burst":{"hz":[45,55],"mps":16.0}
+			},
+			"source":"Wakeling & Ellington 1997",
+			"notes":"Fastest level-flight insect"
+		},
+		"anax":{
+			"name":"Emperor dragonfly",
+			"latin":"Anax imperator (Odonata)",
+			"mg":[600,950],
+			"flight":{
+				"hover":{"hz":[30,42],"mps":0.0},
+				"cruise":{"hz":[28,40],"mps":8.0},
+				"burst":{"hz":[44,58],"mps":15.5}
+			},
+			"source":"May & Baird 2020"
+		},
+		"sgre":{
+			"name":"Desert locust",
+			"latin":"Schistocerca gregaria (Orthoptera)",
+			"mg":[1500,2800],
+			"flight":{
+				"hover":{"hz":[24,32],"mps":0.0},
+				"cruise":{"hz":[20,30],"mps":5.5},
+				"burst":{"hz":[35,45],"mps":10.5}
+			},
+			"source":"Baker 1979"
+		},
+		"mste":{
+			"name":"Hummingbird hawk-moth",
+			"latin":"Macroglossum stellatarum (Lepidoptera)",
+			"mg":[250,420],
+			"flight":{
+				"hover":{"hz":[85,95],"mps":0.0},
+				"cruise":{"hz":[70,90],"mps":5.5},
+				"burst":{"hz":[100,120],"mps":11.5}
+			},
+			"source":"Dickerson & Daniel 2019"
+		},
+		"mani":{
+			"name":"Tobacco hornworm moth",
+			"latin":"Manduca sexta (Lepidoptera)",
+			"mg":[1200,2200],
+			"flight":{
+				"hover":{"hz":[30,42],"mps":0.0},
+				"cruise":{"hz":[25,38],"mps":4.8},
+				"burst":{"hz":[45,60],"mps":9.0}
+			},
+			"source":"Willmott & Ellington 1997"
+		},
+		"actlu":{
+			"name":"Luna moth",
+			"latin":"Actias luna (Lepidoptera)",
+			"mg":[1800,3200],
+			"flight":{
+				"hover":{"hz":[15,25],"mps":0.0},
+				"cruise":{"hz":[12,22],"mps":3.2},
+				"burst":{"hz":[28,38],"mps":6.5}
+			},
+			"source":"Rydell et al. 2021"
+		},
+		"danpl":{
+			"name":"Monarch butterfly",
+			"latin":"Danaus plexippus (Lepidoptera)",
+			"mg":[300,650],
+			"flight":{
+				"hover":{"hz":[12,18],"mps":0.0},
+				"cruise":{"hz":[8,14],"mps":5.2},
+				"burst":{"hz":[18,25],"mps":9.0}
+			},
+			"source":"Gibo 1981, Brower et al. 2022",
+			"notes":"Glides extensively"
+		},
+		"glmo":{
+			"name":"Tsetse fly",
+			"latin":"Glossina morsitans (Diptera)",
+			"mg":[20,45],
+			"flight":{
+				"hover":{"hz":[130,160],"mps":0.0},
+				"cruise":{"hz":[120,150],"mps":3.8},
+				"burst":{"hz":[170,210],"mps":7.2}
+			},
+			"source":"Hargrove et al. 2022"
+		},
+		"epba":{
+			"name":"Marmalade hoverfly",
+			"latin":"Episyrphus balteatus (Diptera)",
+			"mg":[20,45],
+			"flight":{
+				"hover":{"hz":[150,180],"mps":0.0},
+				"cruise":{"hz":[140,170],"mps":4.5},
+				"burst":{"hz":[190,230],"mps":9.0}
+			},
+			"source":"Nakamura & Yokoi 2018"
+		},
+		"polsp":{
+			"name":"Paper wasp",
+			"latin":"Polistes spp. (Hymenoptera)",
+			"mg":[50,110],
+			"flight":{
+				"hover":{"hz":[160,200],"mps":0.0},
+				"cruise":{"hz":[140,190],"mps":4.2},
+				"burst":{"hz":[200,240],"mps":8.5}
+			},
+			"source":"Hedrick et al. 2021"
+		},
+		"csep":{
+			"name":"Seven-spot ladybird",
+			"latin":"Coccinella septempunctata (Coleoptera)",
+			"mg":[20,45],
+			"flight":{
+				"hover":{"hz":[95,120],"mps":0.0},
+				"cruise":{"hz":[85,115],"mps":2.5},
+				"burst":{"hz":[130,160],"mps":5.0}
+			},
+			"source":"Ribera et al. 2021"
+		},
+		"ccar":{
+			"name":"Green lacewing",
+			"latin":"Chrysoperla carnea (Neuroptera)",
+			"mg":[10,25],
+			"flight":{
+				"hover":{"hz":[50,70],"mps":0.0},
+				"cruise":{"hz":[45,65],"mps":2.0},
+				"burst":{"hz":[80,100],"mps":4.2}
+			},
+			"source":"Duelli 1986"
+		},
+		"ppyr":{
+			"name":"Common firefly",
+			"latin":"Photinus pyralis (Coleoptera)",
+			"mg":[12,28],
+			"flight":{
+				"hover":{"hz":[35,55],"mps":0.0},
+				"cruise":{"hz":[30,50],"mps":1.1},
+				"burst":{"hz":[60,80],"mps":2.5}
+			},
+			"source":"Lall et al. 1984"
+		},
+		"mrel":{
+			"name":"Praying mantis",
+			"latin":"Mantis religiosa (Mantodea)",
+			"mg":[600,1200],
+			"flight":{
+				"hover":{"hz":[30,45],"mps":0.0},
+				"cruise":{"hz":[25,40],"mps":2.8},
+				"burst":{"hz":[50,65],"mps":5.5}
+			},
+			"source":"Santer et al. 2020"
+		},
+		"dher":{
+			"name":"Hercules beetle",
+			"latin":"Dynastes hercules (Coleoptera)",
+			"mg":[30000,50000],
+			"flight":{
+				"hover":{"hz":[80,105],"mps":0.0},
+				"cruise":{"hz":[70,95],"mps":3.2},
+				"burst":{"hz":[110,140],"mps":6.5}
+			},
+			"source":"McCullough & Tobalske 2018"
 		}
 	}
 }
-

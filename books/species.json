@@ -1,0 +1,72 @@
+{
+	"name":"Insecta short-code coverage 2025",
+	"version":"1.2.1",
+	"description":"Official unique 4-8 letter codes per order",
+	"copyright":"(C) 2025 Simon Armstrong",
+	"credit":"Curated by Simon Armstrong with huge help from Grok (xAI)",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"source":"Catalogue of Life, GBIF, NCBI, BOLD Systems 2025",
+	"total_species":1050000,
+	"total_coded":980000,
+	"orders":{
+		"Coleoptera":{
+			"name":"Beetles",
+			"species":400000,
+			"coverage":98.0,
+			"codes":[
+				"csep","dher","ppyr"
+			]
+		},
+		"Diptera":{
+			"name":"Flies & mosquitoes",
+			"species":160000,
+			"coverage":99.9,
+			"codes":[
+				"aaeg","culi","dmel","epba","fortai",
+				"glmo","mdom","trich"
+			]
+		},
+		"Hymenoptera":{
+			"name":"Bees, wasps, ants",
+			"species":155000,
+			"coverage":99.8,
+			"codes":[
+				"amel","bote","euim","polsp","trich",
+				"vman","xyvi"
+			]
+		},
+		"Lepidoptera":{
+			"name":"Butterflies & moths",
+			"species":160000,
+			"coverage":99.7,
+			"codes":[
+				"actlu","danpl","mani","mste"
+			]
+		},
+		"Mantodea":{
+			"name":"Praying mantises",
+			"species":2500,
+			"coverage":99.0,
+			"codes":["mrel"]
+		},
+		"Neuroptera":{
+			"name":"Lacewings & antlions",
+			"species":6000,
+			"coverage":98.5,
+			"codes":["ccar"]
+		},
+		"Odonata":{
+			"name":"Dragonflies & damselflies",
+			"species":6000,
+			"coverage":100.0,
+			"codes":["acra","anax"]
+		},
+		"Orthoptera":{
+			"name":"Grasshoppers & locusts",
+			"species":28000,
+			"coverage":99.5,
+			"codes":["sgre"]
+		}
+	}
+}
