@@ -1,0 +1,25 @@
+{
+	"name":"bugs specs",
+	"version":"1.0.0",
+	"description":"Flight specs from the insect world",
+	"status":"A pokedex of mother nature’s engineering",
+	"copyright":"(C) 2025 Simon Armstrong",
+	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok (xAI)",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"bugs":{
+		"fortai": {
+			"name": "Biting midge",
+			"latin": "Forcipomyia taiwana (Diptera)",
+			"mg": [0.03, 0.12],
+			"flight": {
+				"hover":  { "hz": [900, 1100], "mps": 0.0 },
+				"cruise": { "hz": [800, 1000], "mps": 1.0 },
+				"burst":  { "hz": [1046, 1330], "mps": 2.2 }
+			},
+			"source": "Sotavalta 1947, Tsuji & Bienvenu 2024",
+			"notes": "Highest naturally measured wingbeat frequency"
+		}
+	}
+}
+

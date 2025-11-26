@@ -1,10 +1,10 @@
 {
 	"name":"animal ambulate specs",
-	"version":"1.2.1",
+	"version":"1.2.3",
 	"description":"Speed and step-rate specs from the animal kingdom",
-	"status":"Living document of mother nature’s engineering",
+	"status":"A pokedex of mother nature’s engineering",
 	"copyright":"(C) 2025 Simon Armstrong",
-	"credit":"Curated by Simon Armstrong with huge help from Grok (xAI) and ChatGPT",
+	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok (xAI) and ChatGPT",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"human":{
@@ -59,22 +59,26 @@
 		"turkey_wild":{"ambulate":{"cruise":{"mps":2.5,"stepRate":3.5},"hurry":{"mps":7.0,"stepRate":8.0}}},
 		"velociraptor":{"ambulate":{"cruise":{"mps":6.0,"stepRate":3.5},"hurry":{"mps":16.0,"stepRate":6.0}}}
 	},
-	"airborne":{
-		"albatross_wandering":{"ambulate":{"cruise":{"mps":12.0,"stepRate":2.8},"hurry":{"mps":25.0,"stepRate":4.5}}},
-		"barn_owl":{"ambulate":{"cruise":{"mps":8.0,"stepRate":3.5},"hurry":{"mps":16.0,"stepRate":6.0}}},
+	"chiropteran":{
 		"bat_common_vampire":{"ambulate":{"cruise":{"mps":2.0,"stepRate":5.0},"hurry":{"mps":4.0,"stepRate":10.0}}},
-		"bat_mexican_free_tailed":{"ambulate":{"cruise":{"mps":10.0,"stepRate":8.0},"hurry":{"mps":27.0,"stepRate":14.0}}},
-		"dragonfly_hawker":{"ambulate":{"cruise":{"mps":8.0,"stepRate":28.0},"hurry":{"mps":15.0,"stepRate":42.0}}},
-		"frigatebird_great":{"ambulate":{"cruise":{"mps":8.0,"stepRate":2.5},"hurry":{"mps":15.0,"stepRate":4.0}}},
-		"golden_eagle":{"ambulate":{"cruise":{"mps":12.0,"stepRate":2.5},"hurry":{"mps":22.0,"stepRate":4.5}}},
-		"goose_barheaded":{"ambulate":{"cruise":{"mps":16.0,"stepRate":4.2},"hurry":{"mps":26.0,"stepRate":6.0}}},
-		"honeybee":{"ambulate":{"cruise":{"mps":3.5,"stepRate":200.0},"hurry":{"mps":7.5,"stepRate":240.0}}},
+		"bat_mexican_free_tailed":{"ambulate":{"cruise":{"mps":10.0,"stepRate":8.0},"hurry":{"mps":27.0,"stepRate":14.0}}}
+	},
+	"insectan":{
 		"housefly":{"ambulate":{"cruise":{"mps":2.0,"stepRate":190.0},"hurry":{"mps":7.0,"stepRate":260.0}}},
+		"honeybee":{"ambulate":{"cruise":{"mps":3.5,"stepRate":200.0},"hurry":{"mps":7.5,"stepRate":240.0}}},
+		"dragonfly_hawker":{"ambulate":{"cruise":{"mps":8.0,"stepRate":28.0},"hurry":{"mps":15.0,"stepRate":42.0}}}
+	},
+	"airborne":{
 		"hummingbird_annas":{"ambulate":{"cruise":{"mps":2.0,"stepRate":12.0},"hurry":{"mps":15.0,"stepRate":80.0}}},
 		"hummingbird_ruby_throated":{"ambulate":{"cruise":{"mps":12.0,"stepRate":50.0},"hurry":{"mps":25.0,"stepRate":80.0}}},
-		"peregrine_falcon":{"ambulate":{"cruise":{"mps":18.0,"stepRate":4.0},"hurry":{"mps":108.0,"stepRate":null}}},
 		"spine_tail_swift":{"ambulate":{"cruise":{"mps":14.0,"stepRate":6.0},"hurry":{"mps":47.0,"stepRate":10.0}}},
-		"swift_common":{"ambulate":{"cruise":{"mps":11.0,"stepRate":5.5},"hurry":{"mps":31.0,"stepRate":9.0}}}
+		"swift_common":{"ambulate":{"cruise":{"mps":11.0,"stepRate":5.5},"hurry":{"mps":31.0,"stepRate":9.0}}},
+		"goose_barheaded":{"ambulate":{"cruise":{"mps":16.0,"stepRate":4.2},"hurry":{"mps":26.0,"stepRate":6.0}}},
+		"barn_owl":{"ambulate":{"cruise":{"mps":8.0,"stepRate":3.5},"hurry":{"mps":16.0,"stepRate":6.0}}},
+		"peregrine_falcon":{"ambulate":{"cruise":{"mps":18.0,"stepRate":4.0},"hurry":{"mps":108.0,"stepRate":5.0}}},
+		"albatross_wandering":{"ambulate":{"cruise":{"mps":12.0,"stepRate":2.8},"hurry":{"mps":25.0,"stepRate":4.5}}},
+		"golden_eagle":{"ambulate":{"cruise":{"mps":12.0,"stepRate":2.5},"hurry":{"mps":22.0,"stepRate":4.5}}},
+		"frigatebird_great":{"ambulate":{"cruise":{"mps":8.0,"stepRate":2.5},"hurry":{"mps":15.0,"stepRate":4.0}}}
 	},
 	"terrestrial_sprinter":{
 		"cheetah":{"ambulate":{"cruise":{"mps":12.0,"stepRate":2.0},"hurry":{"mps":33.0,"stepRate":4.0}}},

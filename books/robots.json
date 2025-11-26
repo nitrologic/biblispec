@@ -12,6 +12,16 @@
 		"type": "git",
 		"url": "https://github.com/nitrologic/biblispec"
 	},
+	"assets":{
+		"go2":{"url":"https://sketchfab.com/3d-models/robot-dog-unitree-go2-7af84eb9ba834f27bbac818a8b96e2da"},
+		"b2":{"url":"https://grabcad.com/library/unitree-b2-model-1"},
+		"spot":{"url":"https://sketchfab.com/3d-models/boston-dynamics-spot-00f0fa85807e447bb996a1e7e9a86f92"},
+		"g1":{"url":"https://sketchfab.com/3d-models/unirandom-g1-unitree-animate-a4500d272b2c4457a27202b452ccef28"},
+		"atlas":{"url":"https://sketchfab.com/3d-models/atlas-robot-1b582669d125496882d96a8ac3e373ea"},
+		"apollo":{"url":"https://github.com/apptronik/apollo_ros"},
+		"digit2":{"url":"https://sketchfab.com/3d-models/agility-robotics-digit2-165a8e4dbf7e4336b84b2b0378bee8fe"},
+		"gr1":{"url":"https://github.com/FFTAI/Wiki-GRx-Models"}
+	},
 	"quadrupeds":[
 		{
 			"model": "Go2",
@@ -237,7 +247,7 @@
 			"pricing_url": "https://www.together.ai/pricing",
 			"use_cases": "Embodied navigation; multi-modal fusion for human-robot interaction.",
 			"key_optimizations_for_low_latency": "W4A16 weight-only quantization; TensorRT-LLM integration for edge.",
-			"notes_sources": "Massive context (10M tokens) for planning; deployed in Figure 03 for warehouse tasks.",
+			"notes_sources": "Massive context (10M tokens) for planning.",
 			"performance": [
 			{
 				"platform": "NVIDIA H100, TensorRT-LLM, 80GB VRAM, quantized",

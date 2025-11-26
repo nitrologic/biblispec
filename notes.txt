@@ -1,18 +1,22 @@
-	{
-		"humanoid:"Apollo",
-		"name": "apptronik",
-		"potential": "nasa dna, 30 kg payload, 3pl already testing",
-		"url": "https://apptronik.com"
-	},
+Zheng1, Hedrick2, Mittal Buttefly wing twists
 
 
-https://www.figure.ai/
-https://www.perceptyne.com/
-https://apptronik.com/
-https://deeprobotics.cn/
 
-https://apptronik.com/apollo
-https://www.anybotics.com/robotics/anymal/
+No robots from these guys thanks:
+
+https://www.figure.ai
+https://www.perceptyne.com
+https://apptronik.com
+https://deeprobotics.cn
+https://www.anybotics.com
+
+
+{
+"humanoid:"Apollo",
+"name": "apptronik",
+"potential": "nasa dna, 30 kg payload, 3pl already testing",
+"url": "https://apptronik.com"
+},
 
 
 [
