@@ -1,6 +1,6 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.3.1",
+	"version":"1.3.2",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from Grok (xAI)",
@@ -110,6 +110,36 @@
 			"species":2500,
 			"coverage":99.5,
 			"codes":["ctfe","ctca","xenp","pule"]
-		}		
+		},
+		"Isoptera":{
+			"name":"Termites",
+			"species":3500,
+			"coverage":99.0,
+			"codes":["zang","reti","cfor","hete","nasu","kala","rypt"]
+		},
+		"Psocoptera":{
+			"name":"Barklice & Booklice",
+			"species":10000,
+			"coverage":98.5,
+			"codes":["blit","ceph","psoc","lipo","trogi","ecps"]
+		},
+		"Ephemeroptera":{
+			"name":"Mayflies",
+			"species":3500,
+			"coverage":99.0,
+			"codes":["clau","ephe","baet","hept","caen","procl"]
+		},
+		"Plecoptera":{
+			"name":"Stoneflies",
+			"species":3500,
+			"coverage":99.0,
+			"codes":["perl","pter","nemu","prost","leuc","isop"]
+		},
+		"Phasmatodea":{
+			"name":"Stick insects",
+			"species":3000,
+			"coverage":99.5,
+			"codes":["cara","exta","mele","schs","timl","phaa"]
+		}
 	}
 }
