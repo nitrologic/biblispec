@@ -1,6 +1,6 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.2.1",
+	"version":"1.2.2",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from Grok (xAI)",
@@ -15,7 +15,11 @@
 			"species":400000,
 			"coverage":98.0,
 			"codes":[
-				"csep","dher","ppyr"
+				"csep","dher","ppyr","cros","htig","mtor","ador","blat","csan","ctra",
+				"mgra","pasi","ocar","nsub","agar","pstr","tcas","cneu","rdom","alan",
+				"batt","gmel","smol","ocar","ctel","cgem","omas","tpen","cpul","lful",
+				"pser","adel","tdec","mela","pobl","otru","smar","cmor","clar","hgig",
+				"ibip","zruf","styp","scyl","timm","pluc","agla","pvar","alug","lfer"
 			]
 		},
 		"Diptera":{
@@ -23,8 +27,12 @@
 			"species":160000,
 			"coverage":99.9,
 			"codes":[
-				"aaeg","culi","dmel","epba","fortai",
-				"glmo","mdom","trich"
+				"aaeg","culi","dmel","epba","fortai","glmo","mdom","trich",
+				"acga","anfun","anste","armu","asob","atga","bege","bemo","bigr",
+				"cepi","cevi","ccal","ccol","chob","chri","ctho","ctri","cxpi",
+				"dimm","dvir","dper","dset","fphi","foca","gmor","haff","heob",
+				"lece","loni","lser","luon","mgut","mflav","mbar","mocc","papa",
+				"psil","sarc","stom","tabr","tbru","znig"
 			]
 		},
 		"Hymenoptera":{
@@ -32,41 +40,43 @@
 			"species":155000,
 			"coverage":99.8,
 			"codes":[
-				"amel","bote","euim","polsp","trich",
-				"vman","xyvi"
+				"amel","bote","euim","polsp","trich","vman","xyvi",
+				"acan","acex","apce","bimp","bter","bomb","cpen","cflor","cint",
+				"cdan","cmus","dqua","ecol","efor","emex","faur","flav","form",
+				"gbar","hven","icru","lful","lhum","mbar","mgib","mrot","myex",
+				"nevo","odic","oalt","pdom","phas","pmar","pmex","ppal","pter",
+				"rmeg","sasi","scul","sful","slan","tcas","tcur","vger","vmac"
 			]
 		},
 		"Lepidoptera":{
 			"name":"Butterflies & moths",
 			"species":160000,
 			"coverage":99.7,
-			"codes":[
-				"actlu","danpl","mani","mste"
-			]
+			"codes":["actlu","danpl","mani","mste","heli","gfra","bmor","papo","vata","dana","smer","hyca","msex","pyrg"]
 		},
 		"Mantodea":{
 			"name":"Praying mantises",
 			"species":2500,
 			"coverage":99.0,
-			"codes":["mrel"]
+			"codes":["mrel","sten","htri","pagr","odor","tcal"]
 		},
 		"Neuroptera":{
 			"name":"Lacewings & antlions",
 			"species":6000,
 			"coverage":98.5,
-			"codes":["ccar"]
+			"codes":["ccar","chry","asca","nmac","myel","pfor"]
 		},
 		"Odonata":{
 			"name":"Dragonflies & damselflies",
 			"species":6000,
 			"coverage":100.0,
-			"codes":["acra","anax"]
+			"codes":["acra","anax","ccor","enia","lcro","pint","icot"]
 		},
 		"Orthoptera":{
 			"name":"Grasshoppers & locusts",
 			"species":28000,
 			"coverage":99.5,
-			"codes":["sgre"]
+			"codes":["sgre","amph","cterm","loxm","mexp","gfum","tvir"]
 		}
 	}
 }
