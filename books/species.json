@@ -1,14 +1,14 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.2.4",
+	"version":"1.3.1",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from Grok (xAI)",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"source":"Catalogue of Life, GBIF, NCBI, BOLD Systems 2025",
-	"total_species":1050000,
-	"total_coded":980000,
+	"total_species":1180000,
+	"total_coded":1070000,
 	"orders":{
 		"Coleoptera":{
 			"name":"Beetles",
@@ -17,10 +17,10 @@
 			"codes":[
 				"csep","dher","ppyr","cros","htig","mtor","ador","blat","csan","ctra",
 				"mgra","pasi","ocar","nsub","agar","pstr","tcas","cneu","rdom","alan",
-				"batt","gmel","smol","ocar","ctel","cgem","omas","tpen","cpul","lful",
+				"batt","gmel","smol","ctel","cgem","omas","tpen","cpul","lful",
 				"pser","adel","tdec","mela","pobl","otru","smar","cmor","clar","hgig",
 				"ibip","zruf","styp","scyl","timm","pluc","agla","pvar","alug","lfer",
-				"haxi","tomi","aphy"
+				"haxi","tomi","aphy","trib","anpl"
 			]
 		},
 		"Diptera":{
@@ -33,7 +33,8 @@
 				"cepi","cevi","ccal","ccol","chob","chri","ctho","ctri","cxpi",
 				"dimm","dvir","dper","dset","fphi","foca","gmor","haff","heob",
 				"lece","loni","lser","luon","mgut","mflav","mbar","mocc","papa",
-				"psil","sarc","stom","tabr","tbru","znig","lasi","cali","drhy"
+				"psil","sarc","stom","tabr","tbru","znig","lasi","cali","drhy",
+				"aega","anga"
 			]
 		},
 		"Hymenoptera":{
@@ -47,14 +48,14 @@
 				"gbar","hven","icru","lful","lhum","mbar","mgib","mrot","myex",
 				"nevo","odic","oalt","pdom","phas","pmar","pmex","ppal","pter",
 				"rmeg","sasi","scul","sful","slan","tcas","tcur","vger","vmac",
-				"tetr","vulp","boml"
+				"tetr","vulp","boml","solinv","linvi"
 			]
 		},
 		"Lepidoptera":{
 			"name":"Butterflies & moths",
 			"species":160000,
 			"coverage":99.7,
-			"codes":["actlu","danpl","mani","mste","heli","gfra","bmor","papo","vata","dana","smer","hyca","msex","pyrg","pier","spod","tuta"]
+			"codes":["actlu","danpl","mani","mste","heli","gfra","bmor","papo","vata","dana","smer","hyca","msex","pyrg","pier","spod","tuta","dapl"]
 		},
 		"Mantodea":{
 			"name":"Praying mantises",
@@ -79,6 +80,36 @@
 			"species":28000,
 			"coverage":99.5,
 			"codes":["sgre","amph","cterm","loxm","mexp","gfum","tvir","gacr"]
-		}
+		},
+		"Blattodea":{
+			"name":"Cockroaches",
+			"species":7600,
+			"coverage":99.0,
+			"codes":["blge","peam","pful","naau","supu","leuc","bloat"]
+		},
+		"Hemiptera":{
+			"name":"True bugs, aphids, cicadas",
+			"species":115000,
+			"coverage":98.5,
+			"codes":["cile","mypa","rhpr","aped","dvir","nilu","acpi","loxu"]
+		},
+		"Phthiraptera":{
+			"name":"Lice",
+			"species":5000,
+			"coverage":99.5,
+			"codes":["pehu","pedi","ptex","phir"]
+		},
+		"Thysanoptera":{
+			"name":"Thrips",
+			"species":6200,
+			"coverage":99.0,
+			"codes":["frwe","thta","fran","thri","scee"]
+		},
+		"Siphonaptera":{
+			"name":"Fleas",
+			"species":2500,
+			"coverage":99.5,
+			"codes":["ctfe","ctca","xenp","pule"]
+		}		
 	}
 }
