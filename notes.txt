@@ -1,3 +1,48 @@
+# bayer research notes and files
+
+xxxNAME  and xxxGROUP files
+Each record provides a description of an organism or group.
+
+field        name             max length       description
+
+1        IDENTIFIER               10             variable length numeric unique line identifier, prefixed with N
+2        DATATYPE                  3             type of data (PFL=plants, GAI=animals, SPT=plant taxonomic group, etc)
+3        CODE                            8             Bayer code
+4        LANGUAGE                 2             language of description, ISO 639-1 code (2 lower case letters) (see appendix for list)
+5        LANG_NO                    2             number of description within language
+6        COUNTRY                    2             country variant of language, ISO 3166-alpha-2 code (2 capital letters) (see appendix for list
+7        FULL NAME               60             full name
+8        AUTHORITY              60             authority (in capitals)
+9        SHORT NAME           30             abbreviated description
+
+xxxLINK files
+Each record in the file associates an organism with a group, or a taxonomic group with a higher taxon.
+
+field     name                max length          description
+
+1        IDENTIFIER               10             variable length numeric unique line identifier, prefixed with L
+2        DATATYPE                  3             type of data (PFL=plants, GAI=animals, SPT=plant taxonomic group, etc)
+3        CODE                            8             code
+4        GRP_DTYPE                3             datatype of associated group (SFS, SIN, SPT, etc)
+5        GRP_CODE                  8             code of associated group
+
+
+The data files are contained in 10 DOS format text files.
+
+GAFNAME.TXT micro-organisms, viruses, abiotic growth factors
+GAFGROUP.TXT groups of micro-organisms according to different classifications (SFN, SFS & SFT)
+GAFLINK.TXT links between micro-organisms and groups, and between SFT groups 
+GAINAME.TXT animals
+GAIGROUP.TXT groups of animals according to different classifications (SIN, SIS & SIT)
+GAILINK.TXT links between animals and groups, and between SIT groups
+PFLNAME.TXT plants
+PFLGROUP.TXT groups of plants according to different classifications (PBE, SPB, SPN & SPT)
+PFLLINK.TXT links between plants and groups, and between SPT groups
+
+Format of the data files:                  Unicode UTF-16LE with field separator, (comma) and delimiter '"' (quotes), trailing spaces trimmed.
+
+
+
 "orders":{
 	"Coleoptera":{"name":"Beetles","species":400000,"coverage":98.0,"codes":[
 		"csep","dher","ppyr"
