@@ -1,3 +1,6 @@
+["leuc","dvir","cigi","pcal","cfor","amar","bcal","dcor","pfor","tcor","cang","cjac","pmin","smed","
+mmar","tdec","tvir","xgra","tmar","tpol","tspi","tpal"]
+
 # bayer research notes and files
 
 xxxNAME  and xxxGROUP files

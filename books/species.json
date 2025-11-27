@@ -1,6 +1,6 @@
 {
-	"name":"Insecta short-code coverage 2025",
-	"version":"1.5.4",
+	"name":"Insecta and friends short-code coverage 2025",
+	"version":"1.5.8",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from gemini-3-pro and grok-4-1",
@@ -207,9 +207,9 @@
 			"coverage": 99.2,
 			"codes": [
 				"lreu","ptep","hura","atre","apar","ncla","sali","tmim","lgeo","lhes",
-				"apar","agre","bboe","cget","dsca","eatr","gcan","hhel","lpol","mseg",
+				"agre","bboe","cget","dsca","eatr","gcan","hhel","lpol","mseg",
 				"ppha","sgru","tatr","uven","zmal","aexi","aaus","abra","acan","agau",
-				"akey","aaur","abru","adio","afer","aing","ajoh","akey","amar","amau",
+				"akey","aaur","abru","adio","afer","aing","ajoh","amar","amau",
 				"amin","aope","aoxi","aran","arav","arga","arho","arad","asco","aura",
 				"balt","cany","cciv","cdar","cfur","clyr","cmit","coci","csal","ctap"
 			]
@@ -224,7 +224,7 @@
 				"psor","sarc","scab","lepid","eriop","tetr","orny","argus","booph",
 				"cheyl","ixho","rdeu","hcon","nric","opan","ppon","tput","uhol",
 				"varj","acsi","agal","anan","bber","cber","dmoo","dret","epul","echi",
-				"gdom","hcon","lmor","nqvi","opan","ppap","rmic","sber","tmer"
+				"gdom","lmor","nqvi","ppap","rmic","sber","tmer"
 			]
 		},
 		"Nematoda": {
@@ -233,10 +233,10 @@
 			"coverage": 99.5,
 			"codes": [
 				"cele","bmal","cbre","crem","pree","aret","astr","bmxy","cang","dimm",
-				"acon","afuj","asuu","bmal","bxy","cbrig","celeg","cbren","creman",
-				"dcor","dmed","dviv","gpal","hcon","hbac","hgly","mhap","minc","mjav",
-				"onch","paci","pru","srat","sven","tcan","tspi","tcol","tcirc","tspi",
-				"tmur","tcan","wban","xind","aava","bcal","cjac","dcon","hcon","minc"
+				"acon","afuj","asuu","bxy","cbrig","celeg","cbren","creman",
+				"dcor","dmed","dviv","gpal","hbac","hgly","mhap","minc","mjav",
+				"onch","paci","pru","srat","sven","tcan","tspi","tcol","tcirc",
+				"tmur","wban","xind","aava","bcal","cjac","dcon"
 			]
 		},
 		"Malacostraca": {
@@ -245,10 +245,10 @@
 			"coverage": 99.0,
 			"codes": [
 				"dpu","hpaz","gros","pmon","phar","cvol","eaff","lsan","aqua","dmag",
-				"ahil","amar","apan","apar","asca","balt","cmae","csap","cmae","dant",
+				"ahil","amar","apan","asca","balt","cmae","csap","dant",
 				"eber","gfas","glac","gloc","gdue","hame","hazi","hcal","hgam","lvan",
 				"lsal","mros","mvol","pber","pcal","pfal","phea","parg","pbor","pbra",
-				"plon","pnew","ppol","pvan","sbal","tcal","tcal","ujap","vfil","vspi"
+				"plon","pnew","ppol","pvan","sbal","ujap","vfil","vspi"
 			]
 		},
 		"Gastropoda": {
@@ -258,7 +258,7 @@
 			"codes": [
 				"lgi","bgl","cigi","apfu","arbu","avul","cnem","hasp","lsta","poma",
 				"aful","acas","acla","agal","alac","amar","aorb","bstr","ccor","ccon",
-				"clit","cmax","cnem","drot","epul","gpar","hiri","lali","lcin","lmag",
+				"clit","cmax","drot","epul","gpar","hiri","lali","lcin","lmag",
 				"lmax","ltrc","mcor","mmar","nobs","ocel","pach","pcon","pfon","pjen",
 				"ppal","ptes","scon","sobl","sput","tcho","tcost","tflu","tgas","thir",
 				"tmont","tper","tpis","trob","tsub","vcon","vdeb","vpel","zviv"
@@ -269,7 +269,7 @@
 			"species": 14000,
 			"coverage": 99.7,
 			"codes": [
-				"tcal","ccal","cfin","cfinn","csin","turb","hnor","lfur","lfle","nspi",
+				"ccal","cfin","cfinn","csin","turb","hnor","lfur","lfle","nspi",
 				"acan","acur","ahud","alob","apau","cama","cdiv","cdub","cfur","cgra",
 				"cham","cliv","cvic","dgal","egla","eaff","enord","epac","hbre","lbra",
 				"lgra","lmac","lmin","mnor","nfig","ocur","pann","pfor","pgrac","pnan",
@@ -283,9 +283,9 @@
 			"codes": [
 				"sman","smed","smans","sjap","fhep","egran","emult","dcor","dend","gtes",
 				"csin","dcan","dlat","dmed","dnih","ehep","epan","fbus","fgig","fkat",
-				"ggra","hmed","hmic","hnan","hcon","mhir","mlig","mmos","ocal","ohos",
-				"pgrac","pmin","pohi","rnan","soli","smed","soli","sman","tact","tasi",
-				"tsol","treg","tsag","tcol","tova","tser","tconf","tform","tpara","tspi"
+				"ggra","hmed","hmic","hnan","mhir","mlig","mmos","ocal","ohos",
+				"pgrac","pmin","pohi","rnan","soli","tact","tasi",
+				"tsol","treg","tsag","tcol","tova","tser","tconf","tform","tpara"
 			]
 		},
 		"Bivalvia": {
@@ -306,10 +306,10 @@
 			"species": 8500,
 			"coverage": 99.6,
 			"codes": [
-				"lumb","ltet","eand","efoe","eisen","atyp","dhor","lvar","pcal","tcal",
-				"afri","aglo","alim","amar","bcal","dapp","dhor","ejap","etom","lter",
+				"lumb","ltet","eand","efoe","eisen","atyp","dhor","lvar","pcal",
+				"afri","aglo","alim","amar","bcal","dapp","ejap","etom","lter",
 				"lrub","lmae","mpos","nsam","ocya","pcas","pelo","pinf","pbar","rcom",
-				"rcal","sher","tign","ttub","tpal","nsp","lhoff","lvar","eug","dvil",
+				"rcal","sher","tign","ttub","tpal","nsp","lhoff","eug","dvil",
 				"brip","csph","dven","hdiv","lapp","lpro","mcam","mgha","psem","ttra"
 			]
 		},
@@ -318,11 +318,11 @@
 			"species": 8500,
 			"coverage": 99.7,
 			"codes": [
-				"scol","s mors","scole","lfor","cram","hvir","tmed","gcar","pang","eher",
+				"scol","smor","scole","lfor","cram","hvir","tmed","gcar","pang","eher",
 				"afer","cimm","cmar","csub","eleg","gfla","goli","hbra","lmut","mvar",
-				"nspi","pcri","pgig","plag","pmar","rfla","sano","scin","scol","sval",
-				"tcor","tmar","tper","tspi","tvir","cbre","cgra","clon","cmor","gpol",
-				"hspi","lcin","pfor","scla","tind","tmel","tpal","tpol","tros","tzur"
+				"nspi","pcri","pgig","plag","pmar","rfla","sano","scin","sval",
+				"tcor","tmar","tper","tvir","cbre","cgra","clon","cmor","gpol",
+				"hspi","lcin","pfor","scla","tind","tmel","tpol","tros","tzur"
 			]
 		},
 		"Diplopoda": {
@@ -331,10 +331,10 @@
 			"coverage": 99.6,
 			"codes": [
 				"jsca","gmar","pave","narc","oorn","tcor","xgra","bsp","hcur","ppro",
-				"afri","bger","cang","cpro","cspi","gpla","hcan","jsca","lnii","mcol",
-				"nana","ocor","ogig","pave","pfla","pglab","plam","plun","pmar","ppro",
-				"rpad","sano","slam","snig","tgra","tmar","tnig","tnod","tpol","trig",
-				"tsab","tspi","ttrig","xgra","xper","zcol","zmed","zobr","zspi","zvir"
+				"afri","bger","cang","cpro","cspi","gpla","hcan","lnii","mcol",
+				"nana","ocor","ogig","pfla","pglab","plam","plun","pmar",
+				"rpad","sano","slam","snig","tmar","tnig","tnod","tpol","trig",
+				"tsab","ttrig","xper","zcol","zmed","zobr","zspi","zvir"
 			]
 		},
 		"Collembola": {
@@ -344,8 +344,8 @@
 			"codes": [
 				"fcand","pcan","pnot","svir","eala","fniv","ffim","pniv","tvir","xgra",
 				"bhor","cden","dmin","eniv","fmir","fpol","genc","hass","imino","kden",
-				"lcy","mcin","mniv","nnig","oenc","pcan","pfim","pmin","psens","sden",
-				"snig","tmin","tmir","tmir","vabs","xmar","xgra","xtub","ygra","zenc"
+				"lcy","mcin","mniv","nnig","oenc","pfim","pmin","psens","sden",
+				"snig","tmin","tmir","vabs","xmar","xtub","ygra","zenc"
 			]
 		},
 		"Cephalopoda": {
@@ -353,9 +353,9 @@
 			"species": 800,
 			"coverage": 100.0,
 			"codes": [
-				"ocvu","svul","oofi","eber","n pomp","spha","dpeal","lfor","tpfau","hmac",
+				"ocvu","svul","oofi","eber","npomp","spha","dpeal","lfor","tpfau","hmac",
 				"aber","ados","agig","amey","bber","dant","egig","epac","gmed","hhet",
-				"lbre","lvul","mmac","nmae","ogig","opac","orub","sbid","sles","tcal"
+				"lbre","lvul","mmac","nmae","ogig","opac","orub","sbid","sles"
 			]
 		},
 		"Tardigrada": {
@@ -363,9 +363,9 @@
 			"species": 1350,
 			"coverage": 100.0,
 			"codes": [
-				"hhduj","mhar","rvar","ecor","tgra","mmar","bnel","dcat","hcon","mcri",
-				"bcas","dchro","eava","ecri","hgib","mhar","mtar","pmin","rrue","tbel",
-				"tchro","tgra","tmer","tmod","tnew","tref","tric","tsca","ttub","tvar"
+				"hhduj","mhar","rvar","ecor","mmar","bnel","dcat","mcri",
+				"bcas","dchro","eava","ecri","hgib","mtar","pmin","rrue","tbel",
+				"tchro","tmer","tmod","tnew","tref","tric","tsca","ttub","tvar"
 			]
 		}		
 	}
