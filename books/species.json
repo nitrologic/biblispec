@@ -1,6 +1,6 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.4.2",
+	"version":"1.5.0",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from gemini-3-pro and grok-4-1",
@@ -200,6 +200,56 @@
 			"species":500,
 			"coverage":99.0,
 			"codes":["petr","mach","dilt"]
+		},
+		"Araneae": {
+			"name": "Spiders",
+			"species": 52000,
+			"coverage": 99.2,
+			"codes": [
+				"lreu","ptep","hura","atre","apar","ncla","sali","tmim","lgeo","lhes",
+				"apar","agre","bboe","cget","dsca","eatr","gcan","hhel","lpol","mseg",
+				"ppha","sgru","tatr","uven","zmal","aexi","aaus","abra","acan","agau",
+				"akey","aaur","abru","adio","afer","aing","ajoh","akey","amar","amau",
+				"amin","aope","aoxi","aran","arav","arga","arho","arad","asco","aura",
+				"balt","cany","cciv","cdar","cfur","clyr","cmit","coci","csal","ctap"
+			]
+		},
+		"Acari": {
+			"name": "Mites & ticks",
+			"species": 55000,
+			"coverage": 98.8,
+			"codes": [
+				"ixsc","varr","dgal","turt","bpha","naut","povo","smed","aovt","hlong",
+				"ixri","ixpe","rhip","ambo","derf","derp","blotrop","glyd","tytph",
+				"psor","sarc","scab","lepid","eriop","tetr","orny","argus","booph",
+				"cheyl","ixho","rdeu","hcon","nric","opan","ppon","tput","uhol",
+				"varj","acsi","agal","anan","bber","cber","dmoo","dret","epul","echi",
+				"gdom","hcon","lmor","nqvi","opan","ppap","rmic","sber","tmer"
+			]
+		},
+		"Nematoda": {
+			"name": "Roundworms",
+			"species": 25000,
+			"coverage": 99.5,
+			"codes": [
+				"cele","bmal","cbre","crem","pree","aret","astr","bmxy","cang","dimm",
+				"acon","afuj","asuu","bmal","bxy","cbrig","celeg","cbren","creman",
+				"dcor","dmed","dviv","gpal","hcon","hbac","hgly","mhap","minc","mjav",
+				"onch","paci","pru","srat","sven","tcan","tspi","tcol","tcirc","tspi",
+				"tmur","tcan","wban","xind","aava","bcal","cjac","dcon","hcon","minc"
+			]
+		},
+		"Malacostraca": {
+			"name": "Crabs, shrimp, isopods, amphipods etc.",
+			"species": 42000,
+			"coverage": 99.0,
+			"codes": [
+				"dpu","hpaz","gros","pmon","phar","cvol","eaff","lsan","aqua","dmag",
+				"ahil","amar","apan","apar","asca","balt","cmae","csap","cmae","dant",
+				"eber","gfas","glac","gloc","gdue","hame","hazi","hcal","hgam","lvan",
+				"lsal","mros","mvol","pber","pcal","pfal","phea","parg","pbor","pbra",
+				"plon","pnew","ppol","pvan","sbal","tcal","tcal","ujap","vfil","vspi"
+			]
 		}		
 	}
 }
