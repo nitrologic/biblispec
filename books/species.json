@@ -1,6 +1,6 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.5.1",
+	"version":"1.5.2",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from gemini-3-pro and grok-4-1",
@@ -286,6 +286,31 @@
 				"ggra","hmed","hmic","hnan","hcon","mhir","mlig","mmos","ocal","ohos",
 				"pgrac","pmin","pohi","rnan","soli","smed","soli","sman","tact","tasi",
 				"tsol","treg","tsag","tcol","tova","tser","tconf","tform","tpara","tspi"
+			]
+		},
+		"Bivalvia": {
+			"name": "Clams, oysters, mussels & scallops",
+			"species": 22000,
+			"coverage": 99.3,
+			"codes": [
+				"cigi","mgall","osel","pimax","cvir","dpol","avul","mmer","swoo","agla",
+				"arno","cari","carr","cgig","corb","dvar","gdem","lmor","merc","mmar",
+				"mytil","nnucl","oedu","peng","pvir","rphi","sbro","tmax","vcor","abru",
+				"agri","aman","amar","anac","aova","bpla","cang","cfor","cjac","cmin",
+				"csub","dvic","harp","lbal","lsta","mcal","mtru","nree","pcal","pcla",
+				"pjan","pmag","pnob","ppur","scom","tchi","tdec","tple","vdec"
+			]
+		},
+		"Oligochaeta": {
+			"name": "Earthworms & aquatic oligochaetes",
+			"species": 8500,
+			"coverage": 99.6,
+			"codes": [
+				"lumb","ltet","eand","efoe","eisen","atyp","dhor","lvar","pcal","tcal",
+				"afri","aglo","alim","amar","bcal","dapp","dhor","ejap","etom","lter",
+				"lrub","lmae","mpos","nsam","ocya","pcas","pelo","pinf","pbar","rcom",
+				"rcal","sher","tign","ttub","tpal","nsp","lhoff","lvar","eug","dvil",
+				"brip","csph","dven","hdiv","lapp","lpro","mcam","mgha","psem","ttra"
 			]
 		}
 	}
