@@ -1,14 +1,14 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.5.2",
+	"version":"1.5.3",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from gemini-3-pro and grok-4-1",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"source":"Catalogue of Life, GBIF, NCBI, BOLD Systems 2025",
-	"total_species":1202500,
-	"total_coded":1082500,
+	"total_species":1586150,
+	"total_coded":1438650,
 	"orders":{
 		"Coleoptera":{
 			"name":"Beetles",
@@ -312,6 +312,61 @@
 				"rcal","sher","tign","ttub","tpal","nsp","lhoff","lvar","eug","dvil",
 				"brip","csph","dven","hdiv","lapp","lpro","mcam","mgha","psem","ttra"
 			]
-		}
+		},
+		"Chilopoda": {
+			"name": "Centipedes",
+			"species": 8500,
+			"coverage": 99.7,
+			"codes": [
+				"scol","s mors","scole","lfor","cram","hvir","tmed","gcar","pang","eher",
+				"afer","cimm","cmar","csub","eleg","gfla","goli","hbra","lmut","mvar",
+				"nspi","pcri","pgig","plag","pmar","rfla","sano","scin","scol","sval",
+				"tcor","tmar","tper","tspi","tvir","cbre","cgra","clon","cmor","gpol",
+				"hspi","lcin","pfor","scla","tind","tmel","tpal","tpol","tros","tzur"
+			]
+		},
+		"Diplopoda": {
+			"name": "Millipedes",
+			"species": 12000,
+			"coverage": 99.6,
+			"codes": [
+				"jsca","gmar","pave","narc","oorn","tcor","xgra","bsp","hcur","ppro",
+				"afri","bger","cang","cpro","cspi","gpla","hcan","jsca","lnii","mcol",
+				"nana","ocor","ogig","pave","pfla","pglab","plam","plun","pmar","ppro",
+				"rpad","sano","slam","snig","tgra","tmar","tnig","tnod","tpol","trig",
+				"tsab","tspi","ttrig","xgra","xper","zcol","zmed","zobr","zspi","zvir"
+			]
+		},
+		"Collembola": {
+			"name": "Springtails",
+			"species": 9000,
+			"coverage": 99.8,
+			"codes": [
+				"fcand","pcan","pnot","svir","eala","fniv","ffim","pniv","tvir","xgra",
+				"bhor","cden","dmin","eniv","fmir","fpol","genc","hass","imino","kden",
+				"lcy","mcin","mniv","nnig","oenc","pcan","pfim","pmin","psens","sden",
+				"snig","tmin","tmir","tmir","vabs","xmar","xgra","xtub","ygra","zenc"
+			]
+		},
+		"Cephalopoda": {
+			"name": "Octopuses, squids & cuttlefish",
+			"species": 800,
+			"coverage": 100.0,
+			"codes": [
+				"ocvu","svul","oofi","eber","n pomp","spha","dpeal","lfor","tpfau","hmac",
+				"aber","ados","agig","amey","bber","dant","egig","epac","gmed","hhet",
+				"lbre","lvul","mmac","nmae","ogig","opac","orub","sbid","sles","tcal"
+			]
+		},
+		"Tardigrada": {
+			"name": "Water bears",
+			"species": 1350,
+			"coverage": 100.0,
+			"codes": [
+				"hhduj","mhar","rvar","ecor","tgra","mmar","bnel","dcat","hcon","mcri",
+				"bcas","dchro","eava","ecri","hgib","mhar","mtar","pmin","rrue","tbel",
+				"tchro","tgra","tmer","tmod","tnew","tref","tric","tsca","ttub","tvar"
+			]
+		}		
 	}
 }
