@@ -1,6 +1,6 @@
 {
 	"name":"Insecta short-code coverage 2025",
-	"version":"1.5.3",
+	"version":"1.5.4",
 	"description":"Official unique 4-8 letter codes per order",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"credit":"Curated by Simon Armstrong with huge help from gemini-3-pro and grok-4-1",
@@ -42,8 +42,8 @@
 			"species":155000,
 			"coverage":99.8,
 			"codes":[
-				"amel","bote","euim","posp","tgra","vman","xyvi",
-				"acan","acex","apce","bimp","bter","bomb","cpen","cflor","cint",
+				"amel","bote","euim","tgra","vman","xyvi",
+				"acan","acex","apce","bimp","bter","cpen","cflor","cint",
 				"cdan","cmus","dqua","ecol","efor","emex","flav","form",
 				"gbar","hven","icru","lful","lhum","mbar","mgib","mrot","myex",
 				"nevo","odic","oalt","pdom","phas","pmar","pmex","ppal","pter",
@@ -139,7 +139,7 @@
 			"name":"Stick insects",
 			"species":3000,
 			"coverage":99.5,
-			"codes":["cara","exta","mele","schs","timl","phaa"]
+			"codes":["camo","exat","mels","schs","timl","phaa"]
 		},
 		"Dermaptera":{
 			"name":"Earwigs",
