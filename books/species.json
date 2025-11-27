@@ -250,6 +250,43 @@
 				"lsal","mros","mvol","pber","pcal","pfal","phea","parg","pbor","pbra",
 				"plon","pnew","ppol","pvan","sbal","tcal","tcal","ujap","vfil","vspi"
 			]
-		}		
+		},
+		"Gastropoda": {
+			"name": "Snails & slugs",
+			"species": 85000,
+			"coverage": 99.1,
+			"codes": [
+				"lgi","bgl","cigi","apfu","arbu","avul","cnem","hasp","lsta","poma",
+				"aful","acas","acla","agal","alac","amar","aorb","bstr","ccor","ccon",
+				"clit","cmax","cnem","drot","epul","gpar","hiri","lali","lcin","lmag",
+				"lmax","ltrc","mcor","mmar","nobs","ocel","pach","pcon","pfon","pjen",
+				"ppal","ptes","scon","sobl","sput","tcho","tcost","tflu","tgas","thir",
+				"tmont","tper","tpis","trob","tsub","vcon","vdeb","vpel","zviv"
+			]
+		},
+		"Copepoda": {
+			"name": "Copepods",
+			"species": 14000,
+			"coverage": 99.7,
+			"codes": [
+				"tcal","ccal","cfin","cfinn","csin","turb","hnor","lfur","lfle","nspi",
+				"acan","acur","ahud","alob","apau","cama","cdiv","cdub","cfur","cgra",
+				"cham","cliv","cvic","dgal","egla","eaff","enord","epac","hbre","lbra",
+				"lgra","lmac","lmin","mnor","nfig","ocur","pann","pfor","pgrac","pnan",
+				"rfle","sdiv","sden","tder","tfur","tjan","tlong","tmay","tpru","tsca"
+			]
+		},
+		"Platyhelminthes": {
+			"name": "Flatworms (parasitic & free-living)",
+			"species": 28000,
+			"coverage": 99.4,
+			"codes": [
+				"sman","smed","smans","sjap","fhep","egran","emult","dcor","dend","gtes",
+				"csin","dcan","dlat","dmed","dnih","ehep","epan","fbus","fgig","fkat",
+				"ggra","hmed","hmic","hnan","hcon","mhir","mlig","mmos","ocal","ohos",
+				"pgrac","pmin","pohi","rnan","soli","smed","soli","sman","tact","tasi",
+				"tsol","treg","tsag","tcol","tova","tser","tconf","tform","tpara","tspi"
+			]
+		}
 	}
 }
