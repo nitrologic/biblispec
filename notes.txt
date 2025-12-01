@@ -1,3 +1,151 @@
+It’s 95% perfect — only two tiny issues that are worth fixing for consistency and accuracy:
+
+Scallion pancake (Cong you bing)
+This one is made from a stiff dough that’s rolled, layered with oil and scallions, and then pan-fried — it is not batter-based.
+Almost every culinary source (and Chinese cooks themselves) firmly places it with laminated flatbreads (closer to paratha or msemen) rather than the pourable-batter crepe/pancake family.
+→ Remove it from this list (or move it back to your flatbread section).
+Msemen (with batter variant)
+Traditional msemen is 100% a folded, oil-laminated dough (again, very close to South-Asian paratha or Moroccan rghaif).
+There is no widespread “batter variant” of msemen — the rare spongy versions people sometimes call “msemen batter” are actually a different item (closer to baghrir or a very loose mkhamer).
+→ Remove or rename this entry to avoid confusion. If you want a Maghrebi spongy pancake, just keep Baghrir (which is correct and iconic).
+
+Everything else is spot-on and beautifully ordered from east to west.
+
+
+flatbread:[
+	{"name":"Injera","region":"Ethiopia/Eritrea","ingredients":"Teff flour + water fermented","classification":"fermented sour flatbread"},
+	{"name":"Himbasha","region":"Eritrea/Ethiopia","ingredients":"Wheat flour + spices","classification":"celebratory bread"},
+	{"name":"Taftan","region":"Iran/Pakistan","ingredients":"Wheat flour + milk + saffron","classification":"lightly enriched flatbread"},
+	{"name":"Sangak","region":"Iran","ingredients":"Whole wheat dough","classification":"pebble-baked flatbread"},
+	{"name":"Barbari","region":"Iran","ingredients":"Wheat flour + yeast","classification":"thick Persian flatbread"},
+	{"name":"Lavash","region":"Armenia/Iran","ingredients":"Wheat flour + water","classification":"thin soft flatbread"},
+	{"name":"Bolani","region":"Afghanistan","ingredients":"Wheat dough + vegetable filling","classification":"stuffed flatbread"},
+	{"name":"Bing","region":"China","ingredients":"Wheat flour dough","classification":"pan-cooked Chinese flatbread"},
+	{"name":"Roti prata","region":"Singapore/Malaysia","ingredients":"Wheat flour + ghee","classification":"stretched layered flatbread"},
+	{"name":"Piaya","region":"Philippines","ingredients":"Wheat dough + muscovado","classification":"sweet filled flatbread"},
+	{"name":"Dosa","region":"South India","ingredients":"Rice + urad dal fermented","classification":"fermented crepe-type flatbread"},
+	{"name":"Naan","region":"South Asia/Central Asia","ingredients":"Wheat flour + yogurt","classification":"tandoor flatbread"},
+	{"name":"Roti/Chapati","region":"India","ingredients":"Whole wheat flour + water","classification":"unleavened flatbread"},
+	{"name":"Paratha","region":"India/Bangladesh/Pakistan","ingredients":"Whole wheat + ghee layered","classification":"layered flaky flatbread"},
+	{"name":"Bhakri","region":"Western India","ingredients":"Millet flour + water","classification":"millet flatbread"},
+	{"name":"Jowar roti","region":"India","ingredients":"Sorghum flour + water","classification":"gluten-free sorghum flatbread"},
+	{"name":"Akki roti","region":"Karnataka","ingredients":"Rice flour + spices","classification":"rice flatbread"},
+	{"name":"Puri","region":"India","ingredients":"Wheat dough + oil","classification":"puffed fried flatbread"},
+	{"name":"Bhatura","region":"North India","ingredients":"Maida flour + yogurt","classification":"fried leavened flatbread"},
+	{"name":"Markouk","region":"Lebanon/Syria","ingredients":"Flour + water very thin","classification":"ultra-thin saj bread"},
+	{"name":"Yufka","region":"Turkey/Levant","ingredients":"Wheat flour + water","classification":"ancestor to phyllo pastry"},
+	{"name":"Pita","region":"Levant","ingredients":"Wheat flour + yeast","classification":"pocket flatbread"},
+	{"name":"Lahmacun","region":"Turkey/Armenia","ingredients":"Thin dough + minced topping","classification":"topped flatbread"},
+	{"name":"Gözleme","region":"Turkey","ingredients":"Wheat dough + fillings","classification":"stuffed folded flatbread"},
+	{"name":"Msemen","region":"Morocco/Algeria","ingredients":"Semolina + flour + oil","classification":"folded flaky flatbread"},
+	{"name":"Balady","region":"Egypt","ingredients":"Whole wheat flour","classification":"staple Egyptian flatbread"},
+	{"name":"Khobz","region":"Maghreb","ingredients":"Wheat flour + semolina","classification":"North African flatbread"},
+	{"name":"Bannock","region":"Scotland/Indigenous North America","ingredients":"Flour + fat + water","classification":"griddle flatbread"},
+	{"name":"Lefse","region":"Norway","ingredients":"Potatoes + flour","classification":"soft potato flatbread"},
+	{"name":"Tunnbröd","region":"Sweden","ingredients":"Barley/rye/wheat mixture","classification":"soft or crisp northern flatbread"},
+	{"name":"Lángos","region":"Hungary","ingredients":"Wheat flour + yeast","classification":"fried flatbread"},
+	{"name":"Farinata","region":"Italy/France","ingredients":"Chickpea flour + water","classification":"chickpea oven-baked flatbread"},
+	{"name":"Focaccia","region":"Italy","ingredients":"Wheat flour + olive oil","classification":"oven flatbread"},
+	{"name":"Piadina","region":"Italy","ingredients":"Wheat flour + lard/oil","classification":"Romagna griddle flatbread"},
+	{"name":"Pane carasau","region":"Sardinia","ingredients":"Semolina + water","classification":"thin crisp sheet bread"},
+	{"name":"Talo","region":"Basque Country","ingredients":"Corn flour + water","classification":"corn flatbread"},
+	{"name":"Tortilla","region":"Mexico","ingredients":"Masa harina + water","classification":"corn flatbread"},
+	{"name":"Gordita","region":"Mexico","ingredients":"Masa harina + water","classification":"thick pocket flatbread"},
+	{"name":"Sopes","region":"Mexico","ingredients":"Masa harina + water","classification":"thick rimmed flatbread"},
+	{"name":"Arepa","region":"Venezuela/Colombia","ingredients":"Precooked corn flour + water","classification":"corn cake/flatbread"},
+	{"name":"Pupusa","region":"El Salvador","ingredients":"Corn dough + fillings","classification":"stuffed corn flatbread"},
+	{"name":"Johnnycake","region":"Caribbean/American South","ingredients":"Cornmeal + water","classification":"griddle flatbread"},
+	{"name":"Frybread","region":"Native American","ingredients":"Flour + fat + leavening","classification":"fried bread"},
+	{"name":"Casabe","region":"Caribbean/South America","ingredients":"Cassava pulp","classification":"cassava flatbread"},
+	{"name":"Matzo","region":"Jewish","ingredients":"Wheat flour + water only","classification":"unleavened ritual flatbread"}
+]
+
+name,region,ingredients,classification
+Injera,Ethiopia/Eritrea,Teff flour + water fermented,fermented sour flatbread
+Himbasha,Eritrea/Ethiopia,Wheat flour + spices,celebratory bread
+Taftan,Iran/Pakistan,Wheat flour + milk + saffron,lightly enriched flatbread
+Sangak,Iran,Whole wheat dough,pebble-baked flatbread
+Barbari,Iran,Wheat flour + yeast,thick Persian flatbread
+Lavash,Armenia/Iran,Wheat flour + water,thin soft flatbread
+Bolani,Afghanistan,Wheat dough + vegetable filling,stuffed flatbread
+Bing,China,Wheat flour dough,pan-cooked Chinese flatbread
+Roti prata,Singapore/Malaysia,Wheat flour + ghee,stretched layered flatbread
+Piaya,Philippines,Wheat dough + muscovado,sweet filled flatbread
+Dosa,South India,Rice + urad dal fermented,fermented crepe-type flatbread
+Naan,South Asia/Central Asia,Wheat flour + yogurt,tandoor flatbread
+Roti/Chapati,India,Whole wheat flour + water,unleavened flatbread
+Paratha,India/Bangladesh/Pakistan,Whole wheat + ghee layered,layered flaky flatbread
+Bhakri,Western India,Millet flour + water,millet flatbread
+Jowar roti,India,Sorghum flour + water,gluten-free sorghum flatbread
+Akki roti,Karnataka,Rice flour + spices,rice flatbread
+Puri,India,Wheat dough + oil,puffed fried flatbread
+Bhatura,North India,Maida flour + yogurt,fried leavened flatbread
+Markouk,Lebanon/Syria,Flour + water very thin,ultra-thin saj bread
+Yufka,Turkey/Levant,Wheat flour + water,ancestor to phyllo pastry
+Pita,Levant,Wheat flour + yeast,pocket flatbread
+Lahmacun,Turkey/Armenia,Thin dough + minced topping,topped flatbread
+Gözleme,Turkey,Wheat dough + fillings,stuffed folded flatbread
+Msemen,Morocco/Algeria,Semolina + flour + oil,folded flaky flatbread
+Balady,Egypt,Whole wheat flour,staple Egyptian flatbread
+Khobz,Maghreb,Wheat flour + semolina,North African flatbread
+Bannock,Scotland/Indigenous North America,Flour + fat + water,griddle flatbread
+Lefse,Norway,Potatoes + flour,soft potato flatbread
+Tunnbröd,Sweden,Barley/rye/wheat mixture,soft or crisp northern flatbread
+Lángos,Hungary,Wheat flour + yeast,fried flatbread
+Farinata,Italy/France,Chickpea flour + water,chickpea oven-baked flatbread
+Focaccia,Italy,Wheat flour + olive oil,oven flatbread
+Piadina,Italy,Wheat flour + lard/oil,Romagna griddle flatbread
+Pane carasau,Sardinia,Semolina + water,thin crisp sheet bread
+Talo,Basque Country,Corn flour + water,corn flatbread
+Tortilla,Mexico,Masa harina + water,corn flatbread
+Gordita,Mexico,Masa harina + water,thick pocket flatbread
+Sopes,Mexico,Masa harina + water,thick rimmed flatbread
+Arepa,Venezuela/Colombia,Precooked corn flour + water,corn cake/flatbread
+Pupusa,El Salvador,Corn dough + fillings,stuffed corn flatbread
+Johnnycake,Caribbean/American South,Cornmeal + water,griddle flatbread
+Frybread,Native American,Flour + fat + leavening,fried bread
+Casabe,Caribbean/South America,Cassava pulp,cassava flatbread
+Matzo,Jewish,Wheat flour + water only,unleavened ritual flatbread
+
+,,
+
+Jianbing,China,Mung bean/wheat batter + egg,street crepe
+Scallion pancake,China,Wheat dough + scallions,layered pan-fried pancake
+Appam,Kerala/Sri Lanka,Fermented rice + coconut,lacy bowl-shaped crepe
+Cachapa,Venezuela,Fresh ground corn batter,sweet corn pancake
+Crepe,France,Wheat flour + eggs,thin crepe
+Pancake,United States/Europe,Flour + milk + egg,fluffy griddle cake
+Blini,Russia/Eastern Europe,Buckwheat/wheat batter,small buckwheat crepe
+Ployes,Acadian (Maine/Canada),Buckwheat + flour + water,buckwheat crepe
+
+"vintage-content":{
+	"zine": {
+		"description": "underground marginalia",
+		"dispersal": "under a brick",
+		"odor": "fresh fertile creativity",
+		"dupe": "xerox"
+	},
+	"basic":{
+		"description": "upper case programming code",
+		"dispersal": "news stand, playground",
+		"odor": "8 bit computing",
+		"dupe": "casette"
+	},
+	"lyric":{
+		"description": "murmur of metered measures",
+		"dispersal": "live performance",
+		"odor": "weed",
+		"dupe": "sing"
+	},
+	"circuit": {
+		"description": "diagram ttl logic",
+		"dispersal": "newstand",
+		"odor": "solder flux",
+		"dupe": "etch"
+	}
+}
+
+
 ["leuc","dvir","cigi","pcal","cfor","amar","bcal","dcor","pfor","tcor","cang","cjac","pmin","smed","
 mmar","tdec","tvir","xgra","tmar","tpol","tspi","tpal"]
 
@@ -34,7 +182,7 @@ The data files are contained in 10 DOS format text files.
 
 GAFNAME.TXT micro-organisms, viruses, abiotic growth factors
 GAFGROUP.TXT groups of micro-organisms according to different classifications (SFN, SFS & SFT)
-GAFLINK.TXT links between micro-organisms and groups, and between SFT groups 
+GAFLINK.TXT links between micro-organisms and groups, and between SFT groups
 GAINAME.TXT animals
 GAIGROUP.TXT groups of animals according to different classifications (SIN, SIS & SIT)
 GAILINK.TXT links between animals and groups, and between SIT groups
