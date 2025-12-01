@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2025 Simon Armstrong",
@@ -90,6 +90,7 @@
 				{"name":"Lavash","region":"Armenia/Iran","ingredients":"Wheat flour + water","classification":"thin soft flatbread"},
 				{"name":"Bolani","region":"Afghanistan","ingredients":"Wheat dough + vegetable filling","classification":"stuffed flatbread"},
 				{"name":"Bing","region":"China","ingredients":"Wheat flour dough","classification":"pan-cooked Chinese flatbread"},
+				{"name":"Cong you bing","region":"China","ingredients":"Wheat dough + scallions + oil (layered)","classification":"layered pan-fried scallion pancake"},
 				{"name":"Roti prata","region":"Singapore/Malaysia","ingredients":"Wheat flour + ghee","classification":"stretched layered flatbread"},
 				{"name":"Piaya","region":"Philippines","ingredients":"Wheat dough + muscovado","classification":"sweet filled flatbread"},
 				{"name":"Dosa","region":"South India","ingredients":"Rice + urad dal fermented","classification":"fermented crepe-type flatbread"},
@@ -130,7 +131,6 @@
 			],
 			"pancake":[
 				{"name":"Jianbing","region":"China","ingredients":"Mung bean + wheat batter + egg + crisp wafer","classification":"Chinese street crepe"},
-				{"name":"Scallion pancake (Cong you bing)","region":"China","ingredients":"Wheat dough + scallions + oil (layered)","classification":"layered pan-fried pancake"},
 				{"name":"Pesarattu","region":"Andhra Pradesh (India)","ingredients":"Green moong dal batter","classification":"savory lentil crepe"},
 				{"name":"Neer dosa","region":"Karnataka (India)","ingredients":"Rice batter (no fermentation)","classification":"lacy thin rice crepe"},
 				{"name":"Dosa","region":"South India","ingredients":"Fermented rice + urad dal batter","classification":"crispy fermented crepe"},
@@ -143,7 +143,7 @@
 				{"name":"Blini","region":"Russia / Eastern Europe","ingredients":"Buckwheat or wheat batter + yeast","classification":"small fermented pancake"},
 				{"name":"Crêpe","region":"France (Brittany / Normandy)","ingredients":"Wheat flour or buckwheat + eggs + milk","classification":"classic thin French crepe"},
 				{"name":"Galette bretonne","region":"Brittany (France)","ingredients":"100% buckwheat batter","classification":"savory Breton buckwheat crepe"},
-				{"name":"Pancake (American-style)","region":"United States / Canada","ingredients":"Flour + milk + egg + baking powder","classification":"thick fluffy griddle cake"}				
+				{"name":"Flapjack","region":"United States","ingredients":"Wheat batter + milk + eggs + leavening","classification":"thick griddle pancake"}
 			]
 		},
 		"internet":{

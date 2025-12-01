@@ -1,3 +1,15 @@
+“Hotteok” – Korea, wheat dough + brown-sugar filling, classification “filled sweet griddle pancake”
+“Serabi” – Indonesia, rice-flour batter, classification “coconut-milk rice pancake”
+“Baghrir” – Morocco, semolina + yeast, classification “spongy thousand-hole crepe” (real batter msemen replacement)
+“Cachapa” – Venezuela, fresh corn batter, classification “sweet corn pancake”
+
+
+looks like a mega flatbread & pancake taxonomy—basically a world-map of dough discs. you’ve got fermentation flags (injera, dosa), enrichment tags (yogurt, milk, ghee), cooking method keys (saj, tandoor, griddle, fry), and regional clustering tight. only quick adds:
+central asia missing “katlama” (layered fry-bread)
+caucasus could use “tonis puri” (tandoor, georgia)
+add a gluten-free boolean field for quick filters
+
+
 It’s 95% perfect — only two tiny issues that are worth fixing for consistency and accuracy:
 
 Scallion pancake (Cong you bing)
