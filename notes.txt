@@ -1,42 +1,44 @@
+
 ## commodore computers
 
-C-610,1970,calculator,Desktop electronic calculator,400
-C-820,1971,calculator,Portable electronic calculator,300
+9R23,1970,calculator,Desktop 4-function LED,269
+797,1971,calculator,Portable 8-digit LED,219
+786D,1972,calculator,10-digit desktop with %/√,189
+GL-986R,1974,calculator,8-digit VFD handheld,99
+LC-925,1975,calculator,Early LCD pocket,79
 PET 2001,1977,computer,All-in-one computer with built-in monitor and cassette drive,795
 VIC-20,1980,computer,8-bit home computer, 5 KB RAM, predecessor to C64,299
-VIC-20 3K RAM Expansion,1980,expansion,Adds 3 KB RAM to VIC-20,49.95
-VIC-1312 Paddle Controllers,Pair of analog paddle controllers,19.95
+VIC-1312 Paddles,1980,controllers,1980,Pair of analog paddle controllers,19.95
 VIC-1530,1981,datasette,Cassette tape drive for VIC-20,99
 VIC-1111,1981,modem,1200 baud modem for VIC-20,150
-VIC-20 8K RAM Expansion,1981,expansion,Adds 8 KB RAM to VIC-20,79.95
-VIC-20 16K RAM Expansion,1982,expansion,Adds 16 KB RAM to VIC-20,149.95
-1541,1982,disk drive,5.25" floppy disk drive for C64, slow but popular,399
 C64,1982,computer,Best-selling 8-bit home computer, 64 KB RAM,595
 CBM-II,1982,computer,Business-oriented 8-bit computer series,2000
 MPS-801,1982,printer,Dot matrix printer for C64/C128,599
+1541,1983,disk drive,5.25" floppy disk drive for C64, slow but popular,399
 MPS-802,1983,printer,Compact dot matrix printer for C64,499
 MPS-803,1983,printer,Improved dot matrix printer with higher speed,699
 SX-64,1984,computer,Portable version of C64 with built-in 5" color screen,995
 1701,1984,monitor,Color monitor for C64/C128,399
-1571,1985,disk drive,Double-sided 5.25" drive, works with C64 & C128,299
 1702,1985,monitor,Improved color monitor with composite input,449
 1084,1985,monitor,Color/monochrome RGB monitor for C64/C128,499
 MPS-1200,1985,printer,High-speed dot matrix printer for C64/C128,1200
 64C,1986,computer,Updated C64 with redesigned case and keyboard,595
+1571,1986,disk drive,Double-sided 5.25" drive, works with C64 & C128,299
 1084S,1986,monitor,Updated version of 1084 with better sync,549
-1581,1987,disk drive,3.5" floppy drive, higher capacity than 1541,249
+1581,1987,disk drive,3.5" floppy drive, higher capacity than 1541,399
 
 ## carts
 
-VIC-20 Diagnostic Cartridge,1980,cartridge,Official diagnostic/test cartridge for VIC-20 hardware,29.95,VIC-1110
-VIC-20 8K RAM Expansion,1981,expansion,Adds 8 KB RAM to VIC-20,79.95,VIC-1112
-VIC-20 Machine Language Monitor,1981,cartridge,Machine code debugging and test cartridge,34.95,VIC-1113
-VIC-20 Programmer’s Toolkit,1981,cartridge,Utilities and memory monitor for VIC-20 development,39.95,VIC-1114
-VIC-20 16K RAM Expansion,1982,expansion,Adds 16 KB RAM to VIC-20,149.95,VIC-1116
-C64 Diagnostic Cartridge,1982,cartridge,Hardware test and diagnostics for C64,29.95,C64-1110
-C64 Programmer’s Toolkit,1983,cartridge,Memory monitor, machine code utilities,39.95,C64-1114
-C64 Machine Language Monitor,1983,cartridge,Machine code debugging and test cartridge,34.95,C64-1113
-C64 BASIC 8K Expansion,1983,cartridge,Expands BASIC with extra commands for C64,24.95,C64-901227
+VIC-20 3K RAM Expansion,1980,Expansion,Adds 3 KB RAM to VIC-20,49.95
+VIC-20 Diagnostic Cartridge,1981,Diagnostic,test cartridge for VIC-20 hardware,29.95,VIC-1110
+VIC-20 8K RAM Expansion,1981,Expansion,Adds 8 KB RAM to VIC-20,79.95,VIC-1112
+VIC-20 16K RAM Expansion,1982,Expansion,Adds 16 KB RAM to VIC-20,149.95,VIC-1116
+VIC-20 Machine Language Monitor,1981,Developer,Machine code debugging and test cartridge,34.95,VIC-1113
+VIC-20 Programmer’s Toolkit,1981,Developer,Utilities and memory monitor for VIC-20 development,39.95,VIC-1114
+C64 Diagnostic Cartridge,1982,Diagnostics,Hardware test and diagnostics for C64,29.95,C64-1110
+C64 BASIC 8K Expansion,1982,Expands BASIC with extra commands for C64,24.95,C64-901227
+C64 Programmer’s Toolkit,1983,Developer,Memory monitor machine code utilities,39.95,C64-1114
+C64 Machine Language Monitor,1983,Developer,Machine code debugging and test cartridge,34.95,C64-1113
 
 ## first party entertainment carts
 
@@ -67,12 +69,10 @@ Sargon II Chess,VIC-20,Commodore,1982,Chess simulation program by Dan & Kathe Sp
 Le Mans,VIC‑20,Commodore,1982,Top-down racing simulation (Atari 2600 port) (VIC-1920)
 Omega Race,VIC-20,Commodore,1982,Arcade-style space racer/shooter (vector graphics port) (VIC-1924)
 Clowns,VIC-20,Commodore,1982,Bally/Midway arcade port - launch clowns to pop balloons (VIC-1931)
-Mastermind,VIC-20,Commodore,1982,Code-breaking logic puzzle game (VIC-19xx series)
 Money Wars,VIC-20,Commodore,1982,Space shooter/defense game (VIC-1925)
 Menagerie,VIC-20,Commodore,1982,Animal-themed puzzle/strategy game (VIC-1926)
 Cosmic Jailbreak,VIC-20,Commodore,1982,Space escape/action game (VIC-1927)
 Garden Wars,VIC-20,Commodore,1982,Garden defender/shooter (VIC-1932)
-Personal Finance,VIC-20,Commodore,1982,Home budgeting/accounting tool (VIC-1929)
 Wizards of Wor,C64,Commodore,1983 (C64-4615)
 International Soccer,C64,Commodore,1983 (C64-4635)
 Solar Fox,C64,Commodore,1983,Wireframe space strategy/shooter (C64-4619)
@@ -99,12 +99,13 @@ Worm War II,C64,1982,Fixed shooter (paddles)
 Pinball Mania,C64,1983,Game Cartridge/flipper support
 Circus Charlie,C64,Konami Atari,1984, Arcade platformer – jump through hoops, balance on balls, ride lions (C64-4623)
 
-## educational carts
+## utility carts
 
 Visible Solar System,VIC-20,Commodore,1982,Astronomy/planet simulation (educational - VIC-1930)
 Speed/Bingo Math,VIC-20,Commodore,1982,Dual math drill games with bingo mechanics (VIC-1933)
 Road User,VIC-20,Commodore,1982,Driving safety/Highway Code educational sim
 Magic Desk I,Plus/4,Commodore,1985,built-in ROM,Educational desktop environment with word processor, drawing, calculator
+Personal Finance,VIC-20,Commodore,1982,Home budgeting/accounting tool (VIC-1929)
 
 # reference
 
