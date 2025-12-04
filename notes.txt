@@ -1,3 +1,52 @@
+Bookshelf
+
+playscale scale:6 figures brands:[Barbie Ken GIJoe]
+dollhouse scale:12 animals brands:[sylvanian]
+playmobil scale:24 figures
+scalextric scale:32 wheels
+minifig scale:42.5 brands[Lego, Dinky, Corgi, Spark]
+matchbox scale:64 wheels brands:[hotwheels matchbox]
+
+RC
+
+1:6   – Giant RC (HPI Baja, Losi 5IVE)
+1:8   – Monster trucks & buggies (Traxxas X-Maxx, Arrma)
+1:10  – Most popular RC cars & crawlers (Traxxas Slash, Axial)
+1:12  – Micro crawlers (Orlandoo, Tamiya Mini)
+1:14  – Tamiya semi-trucks
+1:16  – Tanks & military (Tamiya, Heng Long)
+1:18  – Entry-level shelf queens
+1:24  – Kyosho Mini-Z
+1:28/1:32 – Ultra-micro drift
+1:64  – Turbo Racing micro cars (Hot Wheels size!)
+
+Model Railway
+
+oo scale:76 rail
+ho scale:87 rail
+n scale:160 rail
+
+1:6 PLAYSCALE – VARIETY EDITION
+├─ Fashion: Barbie | Ken | Integrity FR | Poppy Parker | Silkstone
+├─ Seamless bodies: TBLeague/Phicen (male & female suntan/pale)
+├─ Licensed: Hot Toys (Marvel/DC/Star Wars) | Sideshow | ThreeZero
+├─ Military: DID | DAMToys | Soldier Story | VeryCool ladies
+├─ Fantasy/Historical: COO Model knights | Pop Toys samurai
+├─ Anime/Asian: Smart Doll | Iplehouse | Ringdoll
+├─ Budget/custom: ZY Toys | Triad | Worldbox | Cy Girl leftovers
+└─ Heads & outfits: Super Duck | YMToys | Gattling (celebrity heads)
+
+
+1:43  – Traditional European model cars (Dinky, Corgi, Spark)
+1:50  – Corgi trucks, some modern die-cast
+1:220 – Z scale rail
+
+breyer-traditional scale:9 horses
+6-inch-action scale:6 figures brands:[marvel-legends black-series gi-joe-classified]
+warhammer scale:60 miniatures
+schleich scale:20 animals
+o-gauge scale:43–48 rail
+american-girl scale:3 dolls
 
 ## commodore computers
 
