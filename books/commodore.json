@@ -132,9 +132,9 @@
 		{"name": "Head Over Heels", "year": 1987, "info": "Two heads, one epic isometric adventure", "publisher": "Ocean", "license": "Jon Ritman & Bernie Drummond", "price": 34.95, "platform": "C64"}
 	],
 	"japanese_cartridges": [
-		{"name":"Astroblitz","title":"アストロブリッツ","year":1983,"platform":"VIC-20","publisher":"HAL Laboratory","info":"Space shooter","price_jpy":5800},
-		{"name":"Lode Runner","title":"ロードランナー","year":1984,"platform":"VIC-20","publisher":"System Soft","info":"Run Climb","price_jpy":6800},
-		{"name":"Chack'n Pop","title":"ちゃっくんぽっぷ","year":1985,"platform":"C64","publisher":"Taito","info":"Original Bubble Bobble","price_jpy":7800},
-		{"name":"Raiders5","title":"レイダース５","year":1985,"platform":"C64","publisher":"Pony Canyon","info":"Action adventure","price_jpy":7800}
+		{"name":"Astroblitz","title":"アストロブリッツ","year":1983,"platform":"VIC-20","publisher":"HAL Laboratory","info":"Space shooter","yen":5800},
+		{"name":"Lode Runner","title":"ロードランナー","year":1984,"platform":"VIC-20","publisher":"System Soft","info":"Run Climb","yen":6800},
+		{"name":"Chack'n Pop","title":"ちゃっくんぽっぷ","year":1985,"platform":"C64","publisher":"Taito","info":"Original Bubble Bobble","yen":7800},
+		{"name":"Raiders5","title":"レイダース５","year":1985,"platform":"C64","publisher":"Pony Canyon","info":"Action adventure","yen":7800}
 	]	
 }
