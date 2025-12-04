@@ -1,3 +1,122 @@
+## commodore computers
+
+C-610,1970,calculator,Desktop electronic calculator,400
+C-820,1971,calculator,Portable electronic calculator,300
+PET 2001,1977,computer,All-in-one computer with built-in monitor and cassette drive,795
+VIC-20,1980,computer,8-bit home computer, 5 KB RAM, predecessor to C64,299
+VIC-20 3K RAM Expansion,1980,expansion,Adds 3 KB RAM to VIC-20,49.95
+VIC-1312 Paddle Controllers,Pair of analog paddle controllers,19.95
+VIC-1530,1981,datasette,Cassette tape drive for VIC-20,99
+VIC-1111,1981,modem,1200 baud modem for VIC-20,150
+VIC-20 8K RAM Expansion,1981,expansion,Adds 8 KB RAM to VIC-20,79.95
+VIC-20 16K RAM Expansion,1982,expansion,Adds 16 KB RAM to VIC-20,149.95
+1541,1982,disk drive,5.25" floppy disk drive for C64, slow but popular,399
+C64,1982,computer,Best-selling 8-bit home computer, 64 KB RAM,595
+CBM-II,1982,computer,Business-oriented 8-bit computer series,2000
+MPS-801,1982,printer,Dot matrix printer for C64/C128,599
+MPS-802,1983,printer,Compact dot matrix printer for C64,499
+MPS-803,1983,printer,Improved dot matrix printer with higher speed,699
+SX-64,1984,computer,Portable version of C64 with built-in 5" color screen,995
+1701,1984,monitor,Color monitor for C64/C128,399
+1571,1985,disk drive,Double-sided 5.25" drive, works with C64 & C128,299
+1702,1985,monitor,Improved color monitor with composite input,449
+1084,1985,monitor,Color/monochrome RGB monitor for C64/C128,499
+MPS-1200,1985,printer,High-speed dot matrix printer for C64/C128,1200
+64C,1986,computer,Updated C64 with redesigned case and keyboard,595
+1084S,1986,monitor,Updated version of 1084 with better sync,549
+1581,1987,disk drive,3.5" floppy drive, higher capacity than 1541,249
+
+## carts
+
+VIC-20 Diagnostic Cartridge,1980,cartridge,Official diagnostic/test cartridge for VIC-20 hardware,29.95,VIC-1110
+VIC-20 8K RAM Expansion,1981,expansion,Adds 8 KB RAM to VIC-20,79.95,VIC-1112
+VIC-20 Machine Language Monitor,1981,cartridge,Machine code debugging and test cartridge,34.95,VIC-1113
+VIC-20 Programmer’s Toolkit,1981,cartridge,Utilities and memory monitor for VIC-20 development,39.95,VIC-1114
+VIC-20 16K RAM Expansion,1982,expansion,Adds 16 KB RAM to VIC-20,149.95,VIC-1116
+C64 Diagnostic Cartridge,1982,cartridge,Hardware test and diagnostics for C64,29.95,C64-1110
+C64 Programmer’s Toolkit,1983,cartridge,Memory monitor, machine code utilities,39.95,C64-1114
+C64 Machine Language Monitor,1983,cartridge,Machine code debugging and test cartridge,34.95,C64-1113
+C64 BASIC 8K Expansion,1983,cartridge,Expands BASIC with extra commands for C64,24.95,C64-901227
+
+## first party entertainment carts
+
+Invaders (built-in/ROM),VIC‑20,Commodore,1981,Space‑Invaders clone bundled with early VIC‑20s
+Avenger,VIC‑20,Commodore,1981,Space‑Invaders‑style fixed shooter (VIC-1901)
+Adventureland,VIC‑20,Commodore,1981,Text‑adventure (first of Scott Adams series) (VIC-1914)
+Super Smash,VIC‑20,Commodore,1981,Breakout clone (VIC-1921)
+Radar Rat Race,VIC-20,Commodore,1981,Maze chase game: guide mouse to cheese via radar, evade rats/cats (VIC-1910)
+Pirate's Cove,VIC‑20,Commodore,1981,Text‑adventure (Scott Adams Adventure #5) (VIC-1915)
+Star Battle,VIC‑20,Commodore,1981,Galaxian-style fixed shooter (VIC-1902)
+Jelly Monsters,VIC‑20,Commodore,1981,Pac‑Man style maze/arcade game (VIC-1905)
+Jupiter Lander,VIC‑20,Commodore,1981,Lunar landing simulation (Atari arcade port) (VIC-1907)
+Poker,VIC‑20,Commodore,1981,Draw poker card game (VIC-1908)
+Road Race,VIC‑20,Commodore,1981,Top-down racing game (VIC-1909)
+The Sky Is Falling,VIC‑20,Commodore,1981,Chicken Little action game (VIC-1911)
+Mole Attack,VIC‑20,Commodore,1981,Whac-a-mole arcade clone (VIC-1912)
+Raid on Fort Knox,VIC‑20,Commodore,1981,Tank defense strategy (VIC-1913)
+The Count,VIC-20,Commodore,1981,Text-adventure (Scott Adams Adventure #3) (VIC-1917)
+Voodoo Castle,VIC-20,Commodore,1981,Text‑adventure (Scott Adams Adventure #4) (VIC-1918)
+Cosmic Cruncher,VIC‑20,Commodore,1982,Maze/cruncher puzzle-action (VIC-1922)
+Gorf,VIC‑20,Commodore,1982,Multi-stage arcade shooter (VIC-1923)
+Sea Wolf,VIC‑20,Commodore,1982,U-boat submarine shooter (paddles) (VIC-1937)
+Tooth Invaders,VIC‑20,Commodore,1983,Dental hygiene Space Invaders clone (VIC-1938)
+Star Post,VIC‑20,Commodore,1982,Space strategy/shooter (VIC-1939)
+Alien,VIC-20,Commodore,1982,Arcade-style shooter based on the movie, survive alien attacks (VIC-1906)
+Mission Impossible,VIC-20,Commodore,1982,Text adventure (Scott Adams Adventure #6) (VIC-1916)
+Sargon II Chess,VIC-20,Commodore,1982,Chess simulation program by Dan & Kathe Spracklen (VIC-1919)
+Le Mans,VIC‑20,Commodore,1982,Top-down racing simulation (Atari 2600 port) (VIC-1920)
+Omega Race,VIC-20,Commodore,1982,Arcade-style space racer/shooter (vector graphics port) (VIC-1924)
+Clowns,VIC-20,Commodore,1982,Bally/Midway arcade port - launch clowns to pop balloons (VIC-1931)
+Mastermind,VIC-20,Commodore,1982,Code-breaking logic puzzle game (VIC-19xx series)
+Money Wars,VIC-20,Commodore,1982,Space shooter/defense game (VIC-1925)
+Menagerie,VIC-20,Commodore,1982,Animal-themed puzzle/strategy game (VIC-1926)
+Cosmic Jailbreak,VIC-20,Commodore,1982,Space escape/action game (VIC-1927)
+Garden Wars,VIC-20,Commodore,1982,Garden defender/shooter (VIC-1932)
+Personal Finance,VIC-20,Commodore,1982,Home budgeting/accounting tool (VIC-1929)
+Wizards of Wor,C64,Commodore,1983 (C64-4615)
+International Soccer,C64,Commodore,1983 (C64-4635)
+Solar Fox,C64,Commodore,1983,Wireframe space strategy/shooter (C64-4619)
+Gorf,C64,Commodore,1983,Multi-stage arcade shooter (C64-4618)
+
+## third party entertainment carts
+
+Alien Blitz,VIC‑20,Tensor Technology,1981,Space‑Invaders clone (alien‑themed shooter)
+Cosmic Swarm,VIC‑20,Tensor Technology,1981,2-player Breakout clone (paddles)
+Worm War I,VIC-20,1981,Game Cartridge,Fixed shooter with horizontal paddle movement
+Killer Bees,VIC-20,1981,Game Cartridge,Arcade shooter, aiming with paddle
+Super Block,VIC-20,1981,Game Cartridge,Breakout-style paddle game
+Jungle Hunt,VIC-20,Taito Atar,1982,Arcade adventure - swing through jungle and swim past crocodiles
+K-Star Patrol,VIC‑20,CBS Software,1982,Starbase defense strategy (16K)
+Lunar Lander,VIC‑20,Thunder Mountain,1981,Jupiter Lander clone (paddles)
+Crossfire,VIC‑20,Sierra On-Line,1981,Asteroids-style shooter (VIC-1903?)
+Dig Dug,C64,Atarisoft,1983,Digging arcade puzzle/shooter
+Pole Position,C64,Atarisoft,1983,F1 racing simulator
+
+Brickout,VIC-20,1982,Game Cartridge,Breakout clone
+Circus Clowns,VIC-20,1982,Game Cartridge,Circus act controlled via paddle
+Pinball Spectacular,VIC-20,1982,Game Cartridge-controlled pinball game
+Paddle Mania,VIC-20,1982,Game Cartridge,Simple paddle-action game
+Worm War II,C64,1982,Game Cartridge,Fixed shooter with paddle support
+Pinball Mania,C64,1983,Game Cartridge/flipper support
+Circus Charlie,C64,Konami Atari,1984, Arcade platformer – jump through hoops, balance on balls, ride lions (C64-4623)
+
+## educational carts
+
+Visible Solar System,VIC-20,Commodore,1982,Astronomy/planet simulation (educational - VIC-1930)
+Speed/Bingo Math,VIC-20,Commodore,1982,Dual math drill games with bingo mechanics (VIC-1933)
+Road User,VIC-20,Commodore,1982,Driving safety/Highway Code educational sim
+Magic Desk I,Plus/4,Commodore,1985,built-in ROM,Educational desktop environment with word processor, drawing, calculator
+
+# reference
+
+Commodore BASIC 4.0 Manual,1983,manual,Official reference for C64 BASIC 4.0,24.95
+VIC-20 Programmer's Reference,1981,manual,Official VIC-20 programming guide,19.95
+C64 Programmer's Reference Guide,1982,manual,Official guide to C64 programming and memory map,29.95
+Commodore 1541 Disk Drive Manual,1982,manual,Official manual for 1541 disk drive,9.95
+Commodore 1571 Disk Drive Manual,1985,manual,Official manual for 1571 disk drive,9.95
+Commodore 1581 Disk Drive Manual,1987,manual,Official manual for 1581 disk drive,9.95
+
+
 “Hotteok” – Korea, wheat dough + brown-sugar filling, classification “filled sweet griddle pancake”
 “Serabi” – Indonesia, rice-flour batter, classification “coconut-milk rice pancake”
 “Baghrir” – Morocco, semolina + yeast, classification “spongy thousand-hole crepe” (real batter msemen replacement)
