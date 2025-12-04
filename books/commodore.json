@@ -1,6 +1,6 @@
 {
 	"name":"Commodore Business Machines",
-	"version":"1.0.0",
+	"version":"1.1.0",
 	"description":"Nostalic Notes from Retro 8bit Computer Enthusiast",
 	"status":"SID and VIC were here",
 	"copyright":"(C) 2025 Simon Armstrong",
@@ -130,5 +130,11 @@
 		{"name": "Revs", "year": 1985, "info": "Realistic Formula 3 simulator", "publisher": "Micromega", "license": "Geoff Crammond", "price": 34.95, "platform": "C64"},
 		{"name": "Stunt Car Racer", "year": 1989, "info": "Rollercoaster stunt racing", "publisher": "MicroStyle", "license": "Geoff Crammond", "price": 34.95, "platform": "C64"},
 		{"name": "Head Over Heels", "year": 1987, "info": "Two heads, one epic isometric adventure", "publisher": "Ocean", "license": "Jon Ritman & Bernie Drummond", "price": 34.95, "platform": "C64"}
-	]
+	],
+	"japanese_cartridges": [
+		{"name":"Astroblitz","title":"アストロブリッツ","year":1983,"platform":"VIC-20","publisher":"HAL Laboratory","info":"Space shooter","price_jpy":5800},
+		{"name":"Lode Runner","title":"ロードランナー","year":1984,"platform":"VIC-20","publisher":"System Soft","info":"Run Climb","price_jpy":6800},
+		{"name":"Chack'n Pop","title":"ちゃっくんぽっぷ","year":1985,"platform":"C64","publisher":"Taito","info":"Original Bubble Bobble","price_jpy":7800},
+		{"name":"Raiders5","title":"レイダース５","year":1985,"platform":"C64","publisher":"Pony Canyon","info":"Action adventure","price_jpy":7800}
+	]	
 }
