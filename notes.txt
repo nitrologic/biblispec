@@ -43,7 +43,7 @@ C64 BASIC 8K Expansion,1983,cartridge,Expands BASIC with extra commands for C64,
 Invaders (built-in/ROM),VIC‑20,Commodore,1981,Space‑Invaders clone bundled with early VIC‑20s
 Avenger,VIC‑20,Commodore,1981,Space‑Invaders‑style fixed shooter (VIC-1901)
 Adventureland,VIC‑20,Commodore,1981,Text‑adventure (first of Scott Adams series) (VIC-1914)
-Super Smash,VIC‑20,Commodore,1981,Breakout clone (VIC-1921)
+Super Smash,VIC‑20,Commodore,1981,Breakout clone (paddles) (VIC-1921)
 Radar Rat Race,VIC-20,Commodore,1981,Maze chase game: guide mouse to cheese via radar, evade rats/cats (VIC-1910)
 Pirate's Cove,VIC‑20,Commodore,1981,Text‑adventure (Scott Adams Adventure #5) (VIC-1915)
 Star Battle,VIC‑20,Commodore,1981,Galaxian-style fixed shooter (VIC-1902)
@@ -78,25 +78,24 @@ International Soccer,C64,Commodore,1983 (C64-4635)
 Solar Fox,C64,Commodore,1983,Wireframe space strategy/shooter (C64-4619)
 Gorf,C64,Commodore,1983,Multi-stage arcade shooter (C64-4618)
 
-## third party entertainment carts
+## third party licensed entertainment carts
 
 Alien Blitz,VIC‑20,Tensor Technology,1981,Space‑Invaders clone (alien‑themed shooter)
 Cosmic Swarm,VIC‑20,Tensor Technology,1981,2-player Breakout clone (paddles)
-Worm War I,VIC-20,1981,Game Cartridge,Fixed shooter with horizontal paddle movement
-Killer Bees,VIC-20,1981,Game Cartridge,Arcade shooter, aiming with paddle
-Super Block,VIC-20,1981,Game Cartridge,Breakout-style paddle game
+Worm War I,VIC-20,20th Century Fox,1981,Fixed shooter (paddles)
+Killer Bees,VIC-20,1981,Arcade shooter (paddles)
+Super Block,VIC-20,1981,Breakout clone (paddles)
 Jungle Hunt,VIC-20,Taito Atar,1982,Arcade adventure - swing through jungle and swim past crocodiles
 K-Star Patrol,VIC‑20,CBS Software,1982,Starbase defense strategy (16K)
 Lunar Lander,VIC‑20,Thunder Mountain,1981,Jupiter Lander clone (paddles)
 Crossfire,VIC‑20,Sierra On-Line,1981,Asteroids-style shooter (VIC-1903?)
 Dig Dug,C64,Atarisoft,1983,Digging arcade puzzle/shooter
 Pole Position,C64,Atarisoft,1983,F1 racing simulator
-
-Brickout,VIC-20,1982,Game Cartridge,Breakout clone
-Circus Clowns,VIC-20,1982,Game Cartridge,Circus act controlled via paddle
+Brickout,VIC-20,1982,Breakout clone
+Circus Clowns,VIC-20,1982,Circus (paddles)
 Pinball Spectacular,VIC-20,1982,Game Cartridge-controlled pinball game
-Paddle Mania,VIC-20,1982,Game Cartridge,Simple paddle-action game
-Worm War II,C64,1982,Game Cartridge,Fixed shooter with paddle support
+Paddle Mania,VIC-20,1982,Simple paddle-action game
+Worm War II,C64,1982,Fixed shooter (paddles)
 Pinball Mania,C64,1983,Game Cartridge/flipper support
 Circus Charlie,C64,Konami Atari,1984, Arcade platformer – jump through hoops, balance on balls, ride lions (C64-4623)
 
