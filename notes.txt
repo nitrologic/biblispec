@@ -1,3 +1,57 @@
+{
+	"alligata": [
+		{ "title": "Aztec Tomb", "info": "platform adventure", "platform": "C64", "media": "Cassette", "year": 1983, "credit": "Tony Crowther" },
+		{ "title": "Bat Attack", "info": "Space Invaders variant", "platform": "C64", "media": "Cassette", "year": 1983, "credit": "Alligata Software team" },
+		{ "title": "Blagger", "info": "platformer (steal the Blagger's gold, Manic Miner-style)", "platform": "C64 / C16", "media": "Cassette", "year": 1983, "credit": "Tony Crowther" },
+		{ "title": "Bug Blaster", "info": "Galaxian-style shoot 'em up", "platform": "C64 / C16", "media": "Cassette", "year": 1983, "credit": "Steve Evans" },
+		{ "title": "Eagle Empire", "info": "Phoenix-style shoot 'em up (UK charts)", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Steve Evans" },
+		{ "title": "Guardian", "info": "Pprotect humanoids from aliens", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Steve Evans" },
+		{ "title": "Loco", "info": "train shooter (Super Locomotive clone, UK charts)", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Tony Crowther (music: Ben Daglish)" },
+		{ "title": "Son of Blagger", "info": "Blagger sequel platformer", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Tony Crowther" },
+		{ "title": "3D Waterski", "info": "3D waterski racing sim", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Alligata Software team" },
+		{ "title": "Rocket Roger", "info": "multi-directional shoot 'em up (written in just over a week!)", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Steve Evans" },
+		{ "title": "Who Dares Wins", "info": "SAS stealth action (Commando-style, UK charts, Zzap!64 hit; withdrawn after Elite injunction)", "platform": "C64", "media": "Cassette / Disk", "year": 1985, "credit": "Steve Evans" },
+		{ "title": "Jack Charlton's Match Fishing", "info": "fishing sim (board game conversion)", "platform": "C64", "media": "Cassette", "year": 1985, "credit": "Alligata Software team" },
+		{ "title": "Blagger Goes to Hollywood", "info": "Blagger trilogy finale platformer", "platform": "C64", "media": "Cassette", "year": 1985, "credit": "Tony Crowther" },
+		{ "title": "Who Dares Wins II", "info": "SAS stealth sequel (fixed legal issues)", "platform": "C64", "media": "Cassette / Disk", "year": 1986, "credit": "Steve Evans" },
+		{ "title": "Pub Games", "info": "multi-event pub sports sim (darts, pool, skittles, bar billiards)", "platform": "C64", "media": "Cassette / Disk", "year": 1986, "credit": "John Stevenson (code), Ben Daglish (music), JLM (graphics)" },
+		{ "title": "Trap", "info": "v-scrolling shoot 'em up (upgrade ship in Zarkab valley)", "platform": "C64", "media": "Cassette", "year": 1986, "credit": "Alligata Software team (music: Ben Daglish)" },
+		{ "title": "Kettle", "info": "co-op platformer (split-screen, collect items)", "platform": "C64", "media": "Cassette", "year": 1986, "credit": "Tony Crowther" },
+		{ "title": "Addicta Ball", "info": "Breakout clone (Budgie budget label)", "platform": "C64", "media": "Cassette", "year": 1987, "credit": "Alligata Software team" }
+		],
+		"imagine": [
+		{ "title": "Arcadia", "info": "fixed shooter with 23 enemy types (massive UK hit, top of VIC-20 charts 1982/83)", "platform": "VIC-20 / C64", "media": "Cassette", "year": 1982, "credit": "David Lawson (code), Steve Blower (graphics), Mark Butler / Eugene Evans (founders)" },
+		{ "title": "Wacky Waiters", "info": "serve customers in a chaotic restaurant", "platform": "VIC-20", "media": "Cassette", "year": 1983, "credit": "Imagine Software team (Mark Butler, David Lawson, Eugene Evans)" },
+		{ "title": "Frantic", "info": "arcade action shooter", "platform": "VIC-20", "media": "Cassette", "year": 1983, "credit": "Imagine Software team" },
+		{ "title": "Catcha Snatcha", "info": "play as store detective Barney Bootlace catching shoplifters", "platform": "VIC-20", "media": "Cassette", "year": 1983, "credit": "Imagine Software team" },
+		{ "title": "Bewitched", "info": "arcade adventure", "platform": "VIC-20", "media": "Cassette", "year": 1983, "credit": "Imagine Software team" },
+		{ "title": "Ah Diddums", "info": "baby platformer (push prams, avoid hazards)", "platform": "C64", "media": "Cassette", "year": "1983", "credit": "Imagine Software team" },
+		{ "title": "B.C. Bill", "info": "caveman platformer (collect food and wives, UK charts 1984)", "platform": "C64", "media": "Cassette / Disk", "year": 1984, "credit": "Creative Technology Group (outsourced)" },
+		{ "title": "Pedro", "info": "Frogger-style (protect flower garden from animals)", "platform": "C64 / BBC Micro", "media": "Cassette", "year": 1984, "credit": "Imagine Software team" },
+		{ "title": "Cosmic Cruiser", "info": "space rescue shooter (final pre-collapse release)", "platform": "C64 / BBC Micro", "media": "Cassette", "year": 1984, "credit": "Imagine Software team" }
+	],
+	"audiogenic": [
+		{ "title": "Kaktus", "label":"Supersoft", "info" : "defend a giant cactus from waves of wasps and hornets", "platform": "All", "media": "Cassette", "year": 1985, "credit": "Brian Cotton" },
+		{ "title": "Tomb of Tarrabash", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Commodore NZ" },
+		{ "title": "Leapin' Louie", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Commodore NZ" },
+		{ "title": "Chip Factory", "info":"drop chips onto a PCB conveyor belt", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit":"Nigel Fisher & M.G. Roadster" },
+		{ "title": "Power Pack: Volume 1", "info": "compilation containing Kaktus, Tomb of Tarrabash, Leapin' Louie and Chip Factory", "platform": "C16 / Plus-4", "media": "Cassette (Compilation) / Cartridge", "year": 1987, "credit": "Brian Cotton, Mark Sibly, Nigel Fisher & M.G. Roadster" },
+		{ "title": "Boss", "info": "Chess program", "platform": "VIC-20", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
+		{ "title": "Grand Master", "info": "Chess program aka Boss C64", "platform": "C64", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
+		{ "title": "Graham Gooch's Test Cricket", "info": "Cricket", "platform": "C64", "media": "Cassette / Disk", "year": 1985, "credit": "Michael J. McLean (Supersoft)" },
+		{ "title": "Emlyn Hughes International Soccer", "info": "Soccer", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "Graham Blighe (arcade/AI), Michael McLean (strategy), Andrew Calver (graphics), Peter Calver (producer)" }	
+	]
+}
+
+
+
+
+
+Tomb of Tarrabash (Audiogenic, 1985) — Mark Sibly
+
+
+
+
 Bookshelf
 
 playscale scale:6 figures brands:[Barbie Ken GIJoe]
