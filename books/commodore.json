@@ -1,10 +1,10 @@
 {
 	"name":"Commodore Business Machines",
 	"version":"1.1.0",
-	"description":"Nostalic Notes from Retro 8bit Computer Enthusiast",
+	"description":"Nostalgic Notes from Retro 8bit Computer Enthusiast",
 	"status":"SID and VIC were here",
 	"copyright":"(C) 2025 Simon Armstrong",
-	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok, ChatGPT",
+	"credit":"Curated by Simon Armstrong with help from Kimi K2, Grok, ChatGPT",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"products": [

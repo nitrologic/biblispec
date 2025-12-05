@@ -1,11 +1,17 @@
 Bookshelf
 
 playscale scale:6 figures brands:[Barbie Ken GIJoe]
-dollhouse scale:12 animals brands:[sylvanian]
+dollhouse scale:12 animals brands:[Sylvanian]
 playmobil scale:24 figures
 scalextric scale:32 wheels
 minifig scale:42.5 brands[Lego, Dinky, Corgi, Spark]
 matchbox scale:64 wheels brands:[hotwheels matchbox]
+
+Model Railway
+
+oo scale:76 rail
+ho scale:87 rail
+n scale:160 rail
 
 RC
 
@@ -19,12 +25,6 @@ RC
 1:24  – Kyosho Mini-Z
 1:28/1:32 – Ultra-micro drift
 1:64  – Turbo Racing micro cars (Hot Wheels size!)
-
-Model Railway
-
-oo scale:76 rail
-ho scale:87 rail
-n scale:160 rail
 
 1:6 PLAYSCALE – VARIETY EDITION
 ├─ Fashion: Barbie | Ken | Integrity FR | Poppy Parker | Silkstone
