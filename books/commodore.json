@@ -1,6 +1,6 @@
 {
 	"name":"Commodore Business Machines",
-	"version":"1.4.2",
+	"version":"1.5.0",
 	"description":"Pioneer computer technology vendor",
 	"status":"SID and VIC were here",
 	"copyright":"(C) 2025 Simon Armstrong",
@@ -13,11 +13,13 @@
 		{"model": "786D", "year": 1972, "type": "calculator", "info": "10-digit desktop with %/√", "price": "189"},
 		{"model": "GL-986R", "year": 1974, "type": "calculator", "info": "8-digit VFD handheld", "price": "99"},
 		{"model": "LC-925", "year": 1975, "type": "calculator", "info": "Early LCD pocket", "price": "79"},
-		{"model": "PET 2001", "year": 1977, "type": "computer", "info": "All-in-one computer with built-in monitor and cassette drive", "price": "795"},
+		{"model": "PET 2001", "year": 1977, "type": "computer", "info": "Computer, 9 inch monitor and cassette drive", "price": "795"},
+		{"model": "CBM 4016", "year": 1980, "type": "computer", "info": "Computer and 12 inch green phosphor monitor","price":"995"},
 		{"model": "VIC-20", "year": 1980, "type": "computer", "info": "8-bit home computer, 5 KB RAM, predecessor to C64", "price": "299"},
 		{"model": "VIC-1312", "year": 1980, "type": "paddles", "info": "Pair of analog paddle controllers", "price": "19.95"},
 		{"model": "VIC-1530", "year": 1981, "type": "datasette", "info": "Cassette tape drive for VIC-20", "price": "99"},
-		{"model": "VIC-1111", "year": 1981, "type": "modem", "info": "1200 baud modem for VIC-20", "price": "150"},
+		{"model": "VIC-1600", "year": 1981, "type": "interface", "info": "IEEE-488 interface", "price": "175"},
+		{"model": "VIC-1650", "year": 1981, "type": "automodem", "info": "300 baud modem for VIC-20", "price": "150"},
 		{"model": "C64", "year": 1982, "type": "computer", "info": "Best-selling 8-bit home computer, 64 KB RAM", "price": "595"},
 		{"model": "CBM-II", "year": 1982, "type": "computer", "info": "Business-oriented 8-bit computer series", "price": "2000"},
 		{"model": "MPS-801", "year": 1982, "type": "printer", "info": "Dot matrix printer for C64/C128", "price": "599"},
@@ -138,14 +140,51 @@
 		{"name":"Raiders5","title":"レイダース５","year":1985,"platform":"C64","publisher":"Pony Canyon","info":"Action adventure","yen":7800}
 	],
 	"nz titles": [
-		{ "title": "Dinky Kong", "info": "Donkey Kong Dink", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly" },
-		{ "title": "Zeron", "info": "Defender", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly (Acid Software)" },
+		{ "title": "Dinky Kong", "info": "Donkey Kong Dink", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly Kiwi Computer" },
+		{ "title": "Zeron", "info": "Defender", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly Kiwi Computer" },
 		{ "title": "Star Warp", "info": "Stargate", "platform": "VIC-20 / C64?", "media": "Cassette", "year": 1984, "credit": "Mark Sibly" },
-		{ "title": "Tomb of Tarrabash", "info": "adventure/exploration", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly (Audiogenic UK / Commodore NZ)" },
-		{ "title": "Leapin' Louie", "info": "platform jumper", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly (Audiogenic UK / Commodore NZ)" },
-		{ "title": "Triple Jump", "info": "multi-game cartridge bundle (2 titles by Sibly)", "platform": "C16 / Plus-4", "media": "Cartridge (Commodore bundle)", "year": 1985, "credit": "Mark Sibly (Commodore Computer NZ Ltd)" }
+		{ "title": "Sproing", "info": "Crystal castles meets space flowers lost/unreleased", "platform": "C64", "media": "Disk", "year": "1984", "credit": "Mark Sibly Gowing Drive"},
+		{ "title": "Tomb of Tarrabash", "info": "adventure/exploration", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
+		{ "title": "Leapin' Louie", "info": "platform jumper", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
+		{ "title": "Triple Jump", "info": "mythical 85 dooms", "platform": "C16 / Plus-4", "media": "Cartridge (Commodore bundle)", "year": 1985, "credit": "Mark Sibly Commodore NZ" }
 	],	
 	"uk publishers":{
+		"llamasoft":[
+			{ "title": "3D3D", "info": "3D maze", "platform": "ZX81", "year": 1981 },
+			{ "title": "Centipede", "info": "Centipede clone", "platform": "ZX81", "year": 1982 },
+			{ "title": "Abductor", "info": "Defender-style shooter", "platform": "VIC-20", "year": 1982 },
+			{ "title": "Andes Attack", "info": "Defender clone (alt: Defenda)", "platform": "VIC-20", "year": 1982 },
+			{ "title": "City Bomb", "info": "Bomber", "platform": "ZX Spectrum", "year": 1982 },
+			{ "title": "Deflex", "info": "Maze/strategy", "platform": "VIC-20 / PET", "year": 1982 },
+			{ "title": "Deflex V", "info": "Maze/strategy", "platform": "VIC-20", "year": 1982 },
+			{ "title": "Gridrunner", "info": "Centipede-inspired shooter", "platform": "VIC-20 / Atari 8-bit / ZX Spectrum / C64", "year": 1982 },
+			{ "title": "Headbangers Heaven", "info": "Shooter", "platform": "ZX Spectrum", "year": 1983 },
+			{ "title": "Matrix: Gridrunner 2", "info": "Gridrunner sequel (US: Attack of the Mutant Camels)", "platform": "VIC-20 / C64 / Atari 8-bit / C16", "year": 1983 },
+			{ "title": "Ratman", "info": "Maze action", "platform": "VIC-20", "year": 1982 },
+			{ "title": "Rox III", "info": "Puzzle/action", "platform": "VIC-20 / ZX Spectrum", "year": 1982 },
+			{ "title": "Superdeflex", "info": "Deflex sequel", "platform": "ZX Spectrum", "year": 1982 },
+			{ "title": "Turboflex", "info": "Racing/shooter", "platform": "Atari 8-bit", "year": 1982 },
+			{ "title": "Attack of the Mutant Camels", "info": "Grid-based shooter", "platform": "C64 / Atari 8-bit", "year": 1983 },
+			{ "title": "Hellgate", "info": "Shooter", "platform": "VIC-20 / C64", "year": 1984 },
+			{ "title": "Hover Bovver", "info": "Maze chase", "platform": "C64 / Atari 8-bit", "year": 1983 },
+			{ "title": "Laser Zone", "info": "Shooter", "platform": "VIC-20 / C64 / ZX Spectrum / C16", "year": 1983 },
+			{ "title": "Metagalactic Llamas Battle at the Edge of Time", "info": "Multi-directional shooter (alt: Meta-Llamas)", "platform": "VIC-20 / C64", "year": 1983 },
+			{ "title": "Psychedelia", "info": "Light synthesizer", "platform": "VIC-20 / ZX Spectrum / C64 / MSX", "year": 1984 },
+			{ "title": "Sheep in Space", "info": "Defender-style", "platform": "C64", "year": 1984 },
+			{ "title": "Traxx", "info": "Grid painter", "platform": "VIC-20 / ZX Spectrum", "year": 1983 },
+			{ "title": "Ancipital", "info": "Multi-stage shooter", "platform": "C64", "year": 1984 },
+			{ "title": "Batalyx", "info": "Compilation shooter", "platform": "C64", "year": 1985 },
+			{ "title": "Colourspace", "info": "Light synthesizer", "platform": "Atari 8-bit / BBC Micro", "year": 1985 },
+			{ "title": "Iridis Alpha", "info": "Vertical shooter", "platform": "C64", "year": 1986 },
+			{ "title": "Mama Llama", "info": "Defender-style", "platform": "C64", "year": 1985 },
+			{ "title": "Revenge of the Mutant Camels", "info": "Side-scrolling shooter", "platform": "C64 / Atari ST / Amiga", "year": 1984 },
+			{ "title": "Return of the Mutant Camels", "info": "Sequel (alt: Revenge of the Mutant Camels II)", "platform": "C64 / Atari 8-bit", "year": 1987 },
+			{ "title": "Rox 64", "info": "Puzzle/action", "platform": "C64", "year": 1983 },
+			{ "title": "Voidrunner", "info": "Shooter", "platform": "C64 / MSX / C16 / Spectrum", "year": 1987 },
+			{ "title": "Llamatron: 2112", "info": "Robotron clone", "platform": "Atari ST / Amiga / PC", "year": 1991 },
+			{ "title": "Super Gridrunner", "info": "Gridrunner sequel", "platform": "Atari ST / Amiga", "year": 1991 },
+			{ "title": "Tempest 2000", "info": "Tempest remake", "platform": "Atari Jaguar", "year": 1994 }
+		],
 		"alligata": [
 			{ "title": "Aztec Tomb", "info": "platform adventure", "platform": "C64", "media": "Cassette", "year": 1983, "credit": "Tony Crowther" },
 			{ "title": "Bat Attack", "info": "Space Invaders variant", "platform": "C64", "media": "Cassette", "year": 1983, "credit": "Alligata Software team" },
@@ -366,6 +405,12 @@
 		]		
 	},
 	"us publishers": {
+		"HES":[
+			{"name": "Gridrunner", "year": 1982, "info": "Insane Centipede on acid", "license": "Jeff Minter", "platform": "C64"},
+			{"name": "Matrix", "year": 1983, "info": "Gridrunner sequel with space-time portals", "license": "Jeff Minter", "platform": "VIC-20"},
+			{"name": "Attack of the Mutant Camels", "year": 1983, "info": "Giant camels vs London", "license": "Jeff Minter", "platform": "C64"},
+			{"name": "Revenge of the Mutant Camels", "year": 1984, "info": "Even bigger camel chaos", "license": "Jeff Minter", "platform": "C64"}
+		],
 		"broderbund": [
 			{"name":"Choplifter!","year":1982,"developer":"Dan Gorlin","platform":"C64"},
 			{"name":"Drol","year":1983,"developer":"Benny Aik Beng Ngo","platform":"C64"},
