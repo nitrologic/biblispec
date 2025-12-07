@@ -1,0 +1,63 @@
+{
+	"name":"Acorn Archimedes",
+	"version":"0.0.2",
+	"description":"ARM origin computer technology vendor",
+	"status":"zarch",
+	"copyright":"(C) 2025 Simon Armstrong",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"hardware": [
+		{"model": "A305", "year": 1987, "type": "computer", "info": "ARM2 @ 8 MHz, 512 KB","price": "£799"},
+		{"model": "A310", "year": 1987, "type": "computer", "info": "ARM2 @ 8 MHz, 1 MB","price": "£875"},
+		{"model": "A410", "year": 1988, "type": "computer", "info": "ARM2 @ 8 MHz, 1 MB RAM, 20MB HDD option", "price": "£1229"},
+		{"model": "A440", "year": 1988, "type": "computer", "info": "ARM2 @ 8 MHz, 4 MB RAM, 20MB HDD", "price": "£2499"},
+		{"model": "R140", "year": 1988, "type": "computer", "info": "ARM2 UNIX workstation, 4 MB RAM", "price": "£3500"},
+		{"model": "AKF11", "year": 1987, "type": "monitor", "info": "12\" RGB TTL, Archimedes launch monitor", "price": "£199"},
+		{"model": "AKF12", "year": 1987, "type": "monitor", "info": "14\" RGB analog, higher-quality display", "price": "£249"},
+		{"model": "A300 DFS", "year": 1987, "type": "floppy drive", "info": "External 800 KB 3.5\" floppy drive", "price": "£129"},
+		{"model": "AKS01", "year": 1988, "type": "hard drive", "info": "20 MB MFM HDD + controller", "price": "£399"},
+		{"model": "AKS02", "year": 1988, "type": "hard drive", "info": "40 MB MFM HDD + controller", "price": "£599"},
+		{"model": "AKA10", "year": 1987, "type": "expansion", "info": "Backplane for Archimedes expansion slots", "price": "£49"},
+		{"model": "AKA12", "year": 1987, "type": "expansion", "info": "Three-button quadrature optical mouse", "price": "£39"},
+		{"model": "AKA15", "year": 1987, "type": "expansion", "info": "ARM Maths Coprocessor (FPA prototype/early FP expansion)", "price": "£149"},
+		{"model": "AKA16", "year": 1988, "type": "expansion", "info": "SCSI interface card", "price": "£129"},
+		{"model": "AKA32", "year": 1988, "type": "expansion", "info": "Ethernet (AUN / Econet bridge capable)", "price": "£199"},
+		{"model": "A300 RAM Upgrade", "year": 1987, "type": "upgrade", "info": "512 KB → 1 MB board (A305 → A310)", "price": "£79"},
+		{"model": "AKB10", "year": 1987, "type": "keyboard", "info": "Archimedes 102-key keyboard", "price": "£69"},
+		{"model": "AKA11", "year": 1987, "type": "joystick interface", "info": "Analog joystick port + switches", "price": "£35"},
+		{"model": "AKD52", "year": 1988, "type": "digitiser", "info": "Video frame grabber / digitiser", "price": "£299"},
+		{"model": "AKC01", "year": 1988, "type": "scanner", "info": "Handheld mono scanner", "price": "£199"},
+		{"model": "AKA25", "year": 1987, "type": "expansion", "info": "Econet interface for A300/A400 series", "price": "£99"}
+	],
+	"software":[
+		{"title": "Econet Level 4 File Server", "year": 1988, "info": "Acorn’s official Econet file server software", "price": "£295"},
+		{"title": "Econet Management Suite", "year": 1988, "info": "Monitoring & admin tools for Econet networks", "price": "£129"},
+
+		{"title": "RISC OS 2 Upgrade", "year": 1989, "info": "Arthur → RISC OS 2 ROM upgrade", "price": "£79"},
+		{"title": "Draw", "year": 1990, "info": "RISC OS 2 bundled vector art package", "price": "bundled"},
+
+		{"title": "Acorn Desktop Publisher", "year": 1988, "info": "WIMP-based DTP package", "price": "£149"},
+		{"title": "Acorn Draw", "year": 1988, "info": "Vector drawing application", "price": "£49"},
+		{"title": "Acorn Graph", "year": 1988, "info": "Graphing and charting tool", "price": "£39"},
+		{"title": "Acorn PenDown", "year": 1988, "info": "Tablet & handwriting application", "price": "£69"},
+		{"title": "Acorn InterWord", "year": 1988, "info": "Word processor", "price": "£99"},
+		{"title": "Acorn InterSheet", "year": 1988, "info": "Spreadsheet application", "price": "£99"},
+		{"title": "Acorn ISO Pascal", "year": 1988, "info": "Pascal compiler for Archimedes", "price": "£99"},
+		{"title": "Acorn LISP", "year": 1987, "info": "Acorn LISP environment", "price": "£69"},
+		{"title": "Acorn C Compiler", "year": 1988, "info": "ANSI C compiler and tools", "price": "£149"},
+		{"title": "Acorn ANSI C Library", "year": 1989, "info": "Full ISO run-time plus RISC OS extensions", "price": "£49"},
+
+		{"title": "Zarch", "year": 1987, "info": "Acornsoft 3D action game by David Braben", "price": "£24.95"},
+		{"title": "ArcPinball", "year": 1988, "info": "Acornsoft pinball simulator", "price": "£19.95"},
+		{"title": "Chess", "year": 1987, "info": "Acornsoft 3-D chess with ARM2 AI", "price": "£24.95"},
+		{"title": "Spheres of Chaos", "year": 1989, "info": "Shareware asteroid-style shooter (ARM2 smooth)", "price": "£10.00"}
+	],
+	"reference":[
+        {"title": "Archimedes 300/400 Series User Guide", "year": 1987, "part": "0476,075", "price": "£15"},
+        {"title": "Archimedes 300/400 Series Service Manual", "year": 1988, "part": "0476,076", "price": "£25"},
+        {"title": "ARM Data Manual", "year": 1987, "part": "ARM DDI 0002", "price": "£20"},
+        {"title": "RISC OS Programmer's Reference Manual", "year": 1989, "part": "0476,078", "price": "£35"},
+        {"title": "RISC OS Style Guide", "year": 1989, "part": "0476,079", "price": "£15"},
+        {"title": "Archimedes Welcome Disk & Tutorial", "year": 1987, "part": "0476,001", "price": "bundled"}
+	]
+}
