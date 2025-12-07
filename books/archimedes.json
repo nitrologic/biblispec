@@ -1,7 +1,8 @@
 {
 	"name":"Acorn Archimedes",
-	"version":"0.0.2",
-	"description":"ARM origin computer technology vendor",
+	"version":"1.0.0",
+	"origin":"Cambridge, CB4 1AX, United Kingdom",
+	"description":"Original king of RISC",
 	"status":"zarch",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
