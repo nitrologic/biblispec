@@ -1,6 +1,6 @@
 {
 	"name":"Commodore Business Machines",
-	"version":"1.5.0",
+	"version":"1.5.1",
 	"description":"Pioneer computer technology vendor",
 	"status":"SID and VIC were here",
 	"copyright":"(C) 2025 Simon Armstrong",
@@ -145,9 +145,47 @@
 		{ "title": "Star Warp", "info": "Stargate", "platform": "VIC-20 / C64?", "media": "Cassette", "year": 1984, "credit": "Mark Sibly" },
 		{ "title": "Sproing", "info": "Crystal castles meets space flowers lost/unreleased", "platform": "C64", "media": "Disk", "year": "1984", "credit": "Mark Sibly Gowing Drive"},
 		{ "title": "Tomb of Tarrabash", "info": "adventure/exploration", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
-		{ "title": "Leapin' Louie", "info": "platform jumper", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
-		{ "title": "Triple Jump", "info": "mythical 85 dooms", "platform": "C16 / Plus-4", "media": "Cartridge (Commodore bundle)", "year": 1985, "credit": "Mark Sibly Commodore NZ" }
-	],	
+		{ "title": "Leapin' Louie", "info": "Sibly platform jumper", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
+		{ "title": "Triple Jump", "info": "A mythical 85 kiwi cartridge", "platform": "C16 / Plus-4", "media": "Cartridge", "year": 1985, "credit": "Mark Sibly Commodore NZ" }
+	],
+	"australian publishers": {
+		"HES": [
+			{"name": "Gridrunner", "year": 1982, "info": "Insane Centipede on acid",  "license": "Jeff Minter", "platform": "VIC-20, C64"},
+			{"name": "Matrix", "year": 1983, "info": "Gridrunner sequel with scrolling grids and space-time portals",  "license": "Jeff Minter", "platform": "VIC-20, C64"},
+			{"name": "Attack of the Mutant Camels", "year": 1983, "info": "90-foot camels invade London",  "license": "Jeff Minter", "platform": "C64, VIC-20"},
+			{"name": "Hover Bovver", "year": 1983, "info": "Mow your neighbour's lawn with a stolen flymo while dodging the gardener",  "license": "Jeff Minter", "platform": "C64"},
+			{"name": "Revenge of the Mutant Camels", "year": 1984, "info": "Even bigger camel chaos – now with telephones that shoot back",  "license": "Jeff Minter", "platform": "C64"},
+			{"name": "Ancipital", "year": 1984, "info": "Goat-man with 16-way shooting madness",  "license": "Jeff Minter", "platform": "C64"},
+			{"name": "Sheep in Space", "year": 1984, "info": "Sheep. In space. With lasers.",  "license": "Jeff Minter", "platform": "C64"}
+		],
+		"Melbourne House": [
+			{"name": "Penetrator", "year": 1982, "info": "Vertical shooter with procedurally generated caves – early Beam Software hit", "developer": "Beam Software", "credits": "Philip Mitchell", "license": "Melbourne House", "platform": "VIC-20, C64"},
+			{"name": "Cauldron", "year": 1985, "info": "Witch-broom flying adventure with potion-brewing puzzles", "developer": "Beam Software", "credits": "Steve Taylor", "license": "Melbourne House", "platform": "C64"},
+			{"name": "The Way of the Exploding Fist", "year": 1985, "info": "Pioneering one-on-one martial arts fighter that defined the genre", "developer": "Beam Software", "credits": "Gregg Barnett", "license": "Melbourne House", "platform": "C64"},
+			{"name": "Barbarian: The Ultimate Warrior", "year": 1987, "info": "Sword-fighting platformer with decapitations and the famous 'push me pull you' deathmatch", "developer": "Palace Software", "credits": "Steve Brown", "license": "Melbourne House", "platform": "C64"},
+			{"name": "Judge Dredd", "year": 1987, "info": "Side-scrolling shooter based on the 2000 AD comic, with Lawmaster bike action", "developer": "Bubble Bus Software", "credits": "Denton Designs", "license": "Melbourne House", "platform": "C64"}
+		],
+		"Ozisoft": [
+			{"name": "The Rocky Horror Show", "year": 1984, "info": "Interactive adaptation of the cult musical with choose-your-own-adventure elements", "developer": "On-Line Systems", "credits": "Jay Zipnick & Anil Gupta", "license": "Ozisoft", "platform": "C64"},
+			{"name": "Decimal Dungeon", "year": 1985, "info": "Educational math adventure for kids – dungeon crawl with arithmetic puzzles", "developer": "Ozisoft", "credits": "Ozisoft in-house team", "license": "Ozisoft", "platform": "C64"},
+			{"name": "Tau Ceti", "year": 1985, "info": "Sci-fi exploration game with wireframe graphics and rover control", "developer": "CRL Group", "credits": "Ian Bird", "license": "Ozisoft", "platform": "C64"}
+		],
+		"Electronic Computer Programming (ECP)": [
+			{"name": "Kung Fu Wang", "year": 1985, "info": "Beat 'em up fighter with martial arts moves – local Australian adaptation", "developer": "ECP", "credits": "Unknown / ECP team", "license": "ECP", "platform": "C64"},
+			{"name": "Survivor", "year": 1986, "info": "Survival horror shooter in a post-apocalyptic world", "developer": "ECP", "credits": "Unknown / ECP team", "license": "ECP", "platform": "C64"},
+			{"name": "Boulder Dash clones (various)", "year": 1985, "info": "Puzzle-platformers inspired by the classic, with Australian twists like 'Outback Dash'", "developer": "ECP team", "credits": "Unknown / ECP team", "license": "ECP", "platform": "VIC-20, C64"}
+		],
+		"Gameworks/Softgold": [
+			{"name": "The Secret of Bastow Manor", "year": 1984, "info": "Graphical text adventure with charset graphics and eerie mansion exploration", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "The Search for King Solomon's Mines", "year": 1985, "info": "Multi-load adventure quest with waterfalls", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "Skull Island", "year": 1985, "info": "Pirate-themed text adventure with voice samples", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "Alien", "year": 1984, "info": "Sci-fi horror adventure with charset rooms", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "Ninja", "year": 1984, "info": "Stealthy ninja infiltration adventure", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "Murder on the Waterfront", "year": 1985, "info": "Detective mystery adventure", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "The Case of the Mad Mummy", "year": 1985, "info": "Haunted manor tale with cinematic intro and music", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"},
+			{"name": "Mystery Island", "year": 1984, "info": "Treasure hunt collecting emeralds and sapphires", "developer": "Softgold", "credits": "Darryl Reynolds", "license": "Softgold", "platform": "C64"}
+		]
+	},
 	"uk publishers":{
 		"llamasoft":[
 			{ "title": "3D3D", "info": "3D maze", "platform": "ZX81", "year": 1981 },
@@ -227,7 +265,7 @@
 			{ "title": "Boss", "info": "Chess program", "platform": "VIC-20", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
 			{ "title": "Grand Master", "info": "Chess program aka Boss C64", "platform": "C64", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
 			{ "title": "Graham Gooch's Test Cricket", "info": "Cricket", "platform": "C64", "media": "Cassette / Disk", "year": 1985, "credit": "Michael J. McLean (Supersoft)" },
-			{ "title": "Emlyn Hughes International Soccer", "info": "Soccer", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "Graham Blighe (arcade/AI), Michael McLean (strategy), Andrew Calver (graphics), Peter Calver (producer)" }	
+			{ "title": "Emlyn Hughes International Soccer", "info": "Soccer", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "Graham Blighe (arcade/AI), Michael McLean (strategy), Andrew Calver (graphics), Peter Calver (producer)" }
 		],
 		"mastertronic": [
 			{ "title": "Kikstart", "info": "BMX stunt racer (UK charts hit, series starter)", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Mr. Chip Software" },
@@ -358,7 +396,7 @@
 			{ "title": "Chase H.Q.", "info": "chase racer (arcade port)", "platform": "C64", "media": "Cassette / Disk", "year": 1989, "credit": "Ocean port" },
 			{ "title": "Midnight Resistance", "info": "run 'n gun shooter", "platform": "C64", "media": "Cassette / Disk", "year": 1990, "credit": "Special FX" },
 			{ "title": "Terminator 2: Judgment Day", "info": "movie run 'n gun", "platform": "C64", "media": "Cassette / Disk", "year": 1991, "credit": "Probe" },
-			{ "title": "The Addams Family", "info": "finger-clicking good", "platform": "C64", "media": "Cassette / Disk", "year": 1992, "credit": "Pete Baron (code), Martin Batten (gfx), Gerard Gourley (music)" },			
+			{ "title": "The Addams Family", "info": "finger-clicking good", "platform": "C64", "media": "Cassette / Disk", "year": 1992, "credit": "Pete Baron (code), Martin Batten (gfx), Gerard Gourley (music)" },
 			{ "title": "Lethal Weapon", "info": "movie side-scroller", "platform": "C64", "media": "Cassette", "year": 1992, "credit": "Ocean France" },
 			{ "title": "Sleepwalker", "info": "Comic Relief platformer (final Ocean C64)", "platform": "C64", "media": "Cassette", "year": 1993, "credit": "The Sales Curve" },
 			{ "title": "Rainbow Islands", "info": "arcade platformer sequel", "platform": "C64", "media": "Cassette / Disk", "year": 1990, "credit": "Ocean port" }
@@ -402,15 +440,9 @@
 			{ "title": "Blade Runner", "info": "shoot 'em up", "platform": "C64", "media": "Cassette", "year": 1988, "credit": "Ian Foster (street seq)" },
 			{ "title": "Cyborg", "info": "action adventure", "platform": "C64", "media": "Cassette", "year": 1988, "credit": "Ian Foster" },
 			{ "title": "Mandroid", "info": "Cyborg sequel", "platform": "C64", "media": "Cassette", "year": 1988, "credit": "Ian Foster" }
-		]		
+		]
 	},
 	"us publishers": {
-		"HES":[
-			{"name": "Gridrunner", "year": 1982, "info": "Insane Centipede on acid", "license": "Jeff Minter", "platform": "C64"},
-			{"name": "Matrix", "year": 1983, "info": "Gridrunner sequel with space-time portals", "license": "Jeff Minter", "platform": "VIC-20"},
-			{"name": "Attack of the Mutant Camels", "year": 1983, "info": "Giant camels vs London", "license": "Jeff Minter", "platform": "C64"},
-			{"name": "Revenge of the Mutant Camels", "year": 1984, "info": "Even bigger camel chaos", "license": "Jeff Minter", "platform": "C64"}
-		],
 		"broderbund": [
 			{"name":"Choplifter!","year":1982,"developer":"Dan Gorlin","platform":"C64"},
 			{"name":"Drol","year":1983,"developer":"Benny Aik Beng Ngo","platform":"C64"},

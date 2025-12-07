@@ -1,11 +1,21 @@
-CBM 4016", year:1980, All in one Display: Larger 12-inch green phosphor monitor.
+"Computer Novels": [
+	{"name": "Penetrator (re-release)", "year": 1983, "info": "Australian variant of the cave-shooter classic, bundled with utilities", "developer": "Beam Software", "credits": "Philip Mitchell", "license": "Computer Novels", "platform": "VIC-20"},
+	{"name": "Ollie & Fred's Treasure Island", "year": 1984, "info": "Platform adventure based on Stevenson's novel, with local humor", "developer": "Computer Novels", "credits": "Computer Novels team", "license": "Computer Novels", "platform": "C64"},
+	{"name": "Rick Dangerous prototypes", "year": 1986, "info": "Early builds of the Indiana Jones-style platformer, tested in Australia", "developer": "Core Design", "credits": "Simon Phipps", "license": "Computer Novels", "platform": "C64"}
+],
+"Gameworks": [
+	{"name": "Cauldron II: The Potion Master", "year": 1986, "info": "Sequel to the witch-flying game, with enhanced spell-casting", "developer": "Beam Software", "credits": "Steve Taylor", "license": "Gameworks", "platform": "C64"},
+	{"name": "Night Shade", "year": 1985, "info": "Horror platformer with shadow-jumping mechanics", "developer": "Ultimate Play the Game", "credits": "Tim & Chris Stamper", "license": "Softgold", "platform": "C64"},
+	{"name": "Manic Miner", "year": 1987, "info": "Affordable cassette packs of UK imports tailored for Aussie market", "developer": "Bug-Byte / Matthew Smith", "credits": "Matthew Smith", "license": "Softgold/Dotsoft", "platform": "C64"}
+]
 
+
+CBM 4016", year:1980, All in one Display: Larger 12-inch green phosphor monitor.
 
 {"name":"SGI Indy","dimensions":[41,8,36],"year":1993,"price":10495}
 {"name":"SGI Indigo2","dimensions":null,"year":1993,"price":19995}
 {"name":"SGI O2","dimensions":null,"year":1996,"price":7495}
 {"name":"SGI Octane","dimensions":null,"year":1997,"price":17995}
-
 
 
 {
