@@ -1,6 +1,6 @@
 {
 	"name":"MOS man Chuck Peddle and the Commodore Pet",
-	"version":"1.0.0",
+	"version":"1.0.2",
 	"origin":"MOS Technology, Norristown, Pennsylvania, USA",
 	"description":"Under the hood of every Commodore PET computer.",
 	"status":"PRG SYNTAX ERROR",
@@ -8,7 +8,8 @@
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"standards":{
-		"basic":"CBM BASIC 2.0"
+		"basic":"CBM BASIC 2.0",
+		"timing":{"cpu_clock":"1.0227 MHz (NTSC) / 1.0 MHz (PAL)","screen_refresh":"60 Hz NTSC / 50 Hz PAL","crtc_raster":"20 ms frame","vblank":"Scan lines 0–37"}
 	},
 	"memory_map": [
 		{"name":"Zero Page","address":"$0000","start":0,"size":256,"description":"Zero Page"},
@@ -29,6 +30,22 @@
 		{"name":"CIA2","address":"$DD00","start":56576,"size":256,"description":"Timers, joystick 2, serial bus"},
 		{"name":"Unused / Mirrors","address":"$DE00","start":56832,"size":512,"description":"Mirrored I/O area"}
 	],
+	"interrupts":{
+		"vectors":{"NMI":"$FFFA","RESET":"$FFFC","IRQ":"$FFFE"},
+		"addresses":{"NMI":65530,"RESET":65532,"IRQ":65534},
+		"description":"6502 vector table at top of KERNAL ROM"
+	},
+	"system":{
+		"charset":{"address":"$F000","start":61440,"size":2048,"description":"PETSCII character generator ROM (2 kB, 8×8 bitmaps)"},
+		"keyboard_matrix":{"rows":10,"columns":8,"row_port":"$E810","col_port":"$E812","description":"CIA1 ports scan 10×8 matrix; active-low"},
+		"cassette":{"motor":"$E811 bit 5","read":"$E813 bit 7","write":"$E813 bit 6","sense":"$E813 bit 4","description":"Motor relay on=0; data bits active-low"},
+		"expansion":{
+			"ieee488":{"pins":24,"description":"Parallel peripheral bus, PET edge connector"}
+		},
+		"banking":{"control":"$E84x","rom_enable":"bit 0","ram_overlay":"bit 1"},
+		"power_on_reset":{"rom_checksum":"$E62A–$E62B","ram_test":"$FD96","basic_pointers":{"start":"$0400","end":"$0800"}},
+		"basic_vectors":{"cold_start":"$E453","warm_start":"$E387","reset_vector":"$E62A"}
+	},
 	"tokens": [
 		"END","FOR","NEXT","DATA","INPUT#","INPUT","DIM","READ","LET","GOTO","RUN","IF",
 		"RESTORE","GOSUB","RETURN","REM","STOP","ON","WAIT","LOAD","SAVE","VERIFY","DEF",

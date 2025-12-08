@@ -1,3 +1,76 @@
+"interrupts":{
+	"vectors":{"NMI":"$FFFA","RESET":"$FFFC","IRQ":"$FFFE"},
+	"addresses":{"NMI":65530,"RESET":65532,"IRQ":65534},
+	"description":"6502 vector table at top of KERNAL ROM"
+},
+"charset":{"address":"$F000","start":61440,"size":2048,"description":"PETSCII character generator ROM (2 kB, 8×8 bitmaps)"},
+"keyboard_matrix":{"rows":10,"columns":8,"row_port":"$E810","col_port":"$E812","description":"CIA1 ports scan 10×8 matrix; active-low"},
+"cassette":{"motor":"$E811 bit 5","read":"$E813 bit 7","write":"$E813 bit 6","sense":"$E813 bit 4","description":"Motor relay on=0; data bits active-low"},
+"expansion":{"ieee488":{"pins":24,"description":"Parallel peripheral bus, PET edge connector"},
+"banking":{"control":"$E84x","rom_enable":"bit 0","ram_overlay":"bit 1"}
+
+"timing":{"cpu_clock":"1.0227 MHz (NTSC) / 1.0 MHz (PAL)","screen_refresh":"60 Hz NTSC / 50 Hz PAL","crtc_raster":"20 ms frame","vblank":"Scan lines 0–37"},
+"power_on_reset":{"rom_checksum":"$E62A–$E62B","ram_test":"$FD96","basic_pointers":{"start":"$0400","end":"$0800"}},
+"basic_vectors":{"cold_start":"$E453","warm_start":"$E387","reset_vector":"$E62A"},
+
+"error_messages":{
+"tokens":{
+"0":"OK",
+"1":"FAULT",
+"2":"SN ERROR",
+"3":"RETURN WITHOUT GOSUB",
+"4":"OUT OF DATA",
+"5":"ILLEGAL QUANTITY",
+"6":"OVERFLOW",
+"7":"OUT OF MEMORY",
+"8":"UNDEF'D STATEMENT",
+"9":"BAD SUBSCRIPT",
+"10":"REDIM'D ARRAY",
+"11":"DIVISION BY ZERO",
+"12":"ILLEGAL DIRECT",
+"13":"TYPE MISMATCH",
+"14":"STRING TOO LONG",
+"15":"FILE DATA",
+"16":"FORMULA TOO COMPLEX",
+"17":"CAN'T CONTINUE",
+"18":"UNDEF'D FUNCTION",
+"19":"VERIFY",
+"20":"LOAD",
+"21":"BREAK",
+"22":"DEVICE NOT PRESENT",
+"23":"NOT INPUT FILE",
+"24":"NOT OUTPUT FILE",
+"25":"MISSING FILE NAME",
+"26":"ILLEGAL DEVICE NUMBER",
+"27":"NEXT WITHOUT FOR",
+"28":"SYNTAX",
+"29":"RETURN WITHOUT GOSUB",
+"30":"GOSUB WITHOUT RETURN",
+"31":"TOO MANY FILES",
+"32":"FILE ALREADY OPEN",
+"33":"FILE NOT OPEN",
+"34":"FILE NOT FOUND",
+"35":"FILE EXISTS",
+"36":"FILE TYPE MISMATCH",
+"37":"NO CHANNEL",
+"38":"READ ONLY",
+"39":"?SYNTAX ERROR"
+}
+}
+}
+
+- interrupts – vector table (FFFA–FFFF) and IRQ/NMI/BRK dispatch behaviour
+- charset – the 2 kB PETSCII ROM at F000-F7FF (or 8000-87FF on newer boards) and how the CRTC indexes it
+- CRTC – 6545 register map, cursor/blink, screen geometry, address skew
+- keyboard matrix – row/column scan table that CIA1 reads
+- cassette – motor relay line, sense, data in/out, jump-table vectors
+- expansion – 44-pin IEEE-488 pin-out, ROM/RAM banking via $E84x decode
+- timing – 1 MHz phi2, V-blank vs CRTC raster, nominal 60 Hz / 50 Hz frame rates
+- power-on reset – ROM checksum, RAM test pattern, default BASIC pointers
+- BASIC cold/warm start vectors – A000, E453, $E387 and how RESET re-links them
+- error messages – token values 00–39 and the jump table that prints them
+
+
 {
   "memory_map": [
     {"name":"Zero Page","start":{"hex":"$0000","dec":0},"end":{"hex":"$00FF","dec":255},"size":{"hex":"$0100","dec":256},"description":"Zero Page"},
