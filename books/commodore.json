@@ -1,6 +1,6 @@
 {
 	"name":"Commodore Business Machines",
-	"version":"1.5.1",
+	"version":"1.5.2",
 	"description":"Pioneer computer technology vendor",
 	"status":"SID and VIC were here",
 	"copyright":"(C) 2025 Simon Armstrong",
@@ -403,14 +403,14 @@
 		],
 		"system3": [
 			{ "title": "Death Star Interceptor", "info": "space shooter", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Mark Cale" },
-			{ "title": "International Karate", "info": "one-on-one fighter (US Billboard #1)", "platform": "C64", "media": "Cassette", "year": 1986, "credit": "Joel Milgram" },
-			{ "title": "IK+", "info": "Karate sequel (2v2 fights)", "platform": "C64", "media": "Cassette / Disk", "year": 1987, "credit": "System 3 team" },
+			{ "title": "International Karate", "info": "one-on-one fighter", "platform": "C64", "media": "Cassette", "year": 1986, "credit": "Archer Maclean, Rob Hubbard" },
+			{ "title": "IK+", "info": "Karate sequel (2v2 fights)", "platform": "C64", "media": "Cassette / Disk", "year": 1987 },
 			{ "title": "The Last Ninja", "info": "isometric ninja adventure (UK charts #1)", "platform": "C64", "media": "Cassette / Disk", "year": 1987, "credit": "John Twiddy (code), Hugh Riley (gfx), Ben Daglish & Anthony Lees (music)" },
-			{ "title": "The Last Ninja 2", "info": "sequel (expanded worlds)", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "System 3 (Neil Adam?)" },
-			{ "title": "Myth: History in the Making", "info": "isometric platformer (Maniacs of Noise music)", "platform": "C64", "media": "Cassette / Disk", "year": 1989, "credit": "System 3 team" },
-			{ "title": "Tusker", "info": "jungle platform shooter", "platform": "C64", "media": "Cassette / Disk", "year": 1989, "credit": "System 3" },
-			{ "title": "Last Ninja Remix", "info": "remixed compilation (C64GS cart)", "platform": "C64", "media": "Cassette / Cartridge", "year": 1990, "credit": "System 3" },
-			{ "title": "Vendetta", "info": "beat 'em up", "platform": "C64", "media": "Cassette", "year": 1990, "credit": "System 3" }
+			{ "title": "The Last Ninja 2", "info": "sequel (expanded worlds)", "platform": "C64", "media": "Cassette / Disk", "year": 1988 },
+			{ "title": "Myth: History in the Making", "info": "run, jump, fight enemies, pick up weapons and items, and solve puzzles", "platform": "C64", "media": "Cassette / Disk", "year": 1989, "credit": "Mark Cale, Pete Baron, Bob Stevenson, Maniacs of Noise"},
+			{ "title": "Tusker", "info": "jungle platform shooter", "platform": "C64", "media": "Cassette / Disk", "year": 1989 },
+			{ "title": "Last Ninja Remix", "info": "remixed compilation (C64GS cart)", "platform": "C64", "media": "Cassette / Cartridge", "year": 1990 },
+			{ "title": "Vendetta", "info": "beat 'em up", "platform": "C64", "media": "Cassette", "year": 1990 }
 		],
 		"firebird": [
 			{ "title": "Booty", "info": "pirate treasure platformer (Silver Range)", "platform": "C64", "media": "Cassette", "year": 1984, "credit": "Mike Martin" },
