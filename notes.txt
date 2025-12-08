@@ -1,3 +1,71 @@
+{
+  "memory_map": [
+    {"name":"Zero Page","start":{"hex":"$0000","dec":0},"end":{"hex":"$00FF","dec":255},"size":{"hex":"$0100","dec":256},"description":"Zero Page"},
+    {"name":"Stack","start":{"hex":"$0100","dec":256},"end":{"hex":"$01FF","dec":511},"size":{"hex":"$0100","dec":256},"description":"Processor Stack"},
+    {"name":"BASIC variables","start":{"hex":"$0200","dec":512},"end":{"hex":"$03FF","dec":1023},"size":{"hex":"$0200","dec":512},"description":"Default BASIC variable area"},
+    {"name":"Screen RAM","start":{"hex":"$0400","dec":1024},"end":{"hex":"$07FF","dec":2047},"size":{"hex":"$0400","dec":1024},"description":"Text screen memory"},
+    {"name":"RAM","start":{"hex":"$0800","dec":2048},"end":{"hex":"$9FFF","dec":40959},"size":{"hex":"$9800","dec":38912},"description":"General RAM"},
+    {"name":"BASIC ROM","start":{"hex":"$A000","dec":40960},"end":{"hex":"$BFFF","dec":49151},"size":{"hex":"$2000","dec":8192},"description":"BASIC ROM, switchable"},
+    {"name":"RAM / Char ROM","start":{"hex":"$C000","dec":49152},"end":{"hex":"$CFFF","dec":53247},"size":{"hex":"$1000","dec":4096},"description":"RAM under Char ROM, switchable"},
+    {"name":"I/O Registers","start":{"hex":"$D000","dec":53248},"end":{"hex":"$DFFF","dec":57343},"size":{"hex":"$1000","dec":4096},"description":"VIC-II, SID, Color RAM, CIA"},
+    {"name":"KERNAL ROM","start":{"hex":"$E000","dec":57344},"end":{"hex":"$FFFF","dec":65535},"size":{"hex":"$2000","dec":8192},"description":"KERNAL ROM, switchable"}
+  ],
+  "peripherals": [
+    {"name":"VIC-II","start":{"hex":"$D000","dec":53248},"end":{"hex":"$D3FF","dec":54271},"description":"Graphics chip, sprites, raster"},
+    {"name":"SID","start":{"hex":"$D400","dec":54272},"end":{"hex":"$D7FF","dec":55295},"description":"Sound chip, 3 voices, filters"},
+    {"name":"Color RAM","start":{"hex":"$D800","dec":55296},"end":{"hex":"$DBFF","dec":56319},"description":"4-bit color values for screen"},
+    {"name":"CIA1","start":{"hex":"$DC00","dec":56320},"end":{"hex":"$DCFF","dec":56575},"description":"Timers, keyboard, joystick 1, RS-232"},
+    {"name":"CIA2","start":{"hex":"$DD00","dec":56576},"end":{"hex":"$DDFF","dec":56831},"description":"Timers, joystick 2, serial bus"},
+    {"name":"Unused / Mirrors","start":{"hex":"$DE00","dec":56832},"end":{"hex":"$DFFF","dec":57343},"description":"Mirrored I/O area"}
+  ]
+}
+
+CBM BASIC 2.0 on C64
+
+{
+  "tokens": [
+    "END","FOR","NEXT","DATA","INPUT#","INPUT","DIM","READ","LET","GOTO","RUN","IF",
+    "RESTORE","GOSUB","RETURN","REM","STOP","ON","WAIT","LOAD","SAVE","VERIFY","DEF",
+    "POKE","PRINT#","PRINT","CONT","LIST","CLR","CMD","SYS","OPEN","CLOSE","GET",
+    "NEW","TAB(","TO","FN","SPC(","NOT","STEP","AND","OR","+","-","*","/","^",">","=","<",
+    "ABS","ASC","ATN","CHR$","COS","EXP","INT","LEN","LEFT$","MID$","RIGHT$","RND","SGN",
+    "SIN","SQR","TAN","LOG","USR","VAL"
+  ],
+  "extended": [
+    "AUTO","BSAVE","BLOAD"
+  ]
+}
+
++
+Here are the common ways to use PRG files on a Commodore 64 (real hardware or emulator):
+
+- BASIC workflow (for ML or BASIC+ML PRGs)
+  - LOAD"FILENAME",8,1
+  - SYS <start-address>  (start-address is the value in the PRG header; e.g., 0xC000 -> 49152)
+  - If the PRG is a pure BASIC program, you’d use RUN instead of SYS.
+
+- PRG that’s purely binary (ML)
+  - After LOAD"FILENAME",8,1, run it with SYS <start-address> as above.
+
+- Saving a memory region as a PRG
+  - BSAVE"FILENAME",start,end
+  - The PRG will load back to the same address when BLOAD’ed later.
+
+- Loading a raw binary without a header (less common)
+  - BLOAD"FILENAME",<start-address>  (loads binary data to the given address)
+  - Then SYS <start-address> to execute
+
+- Using an emulator (e.g., VICE)
+  - Autostart: File -> Autostart PRG (or drag-and-drop the PRG)
+  - Manual load/run: use the BASIC LOAD and SYS steps above
+  - Some emulators also support a quick “Run PRG” option when you select the file
+
+If you share your exact setup (model, emulator, or whether the PRG is pure ML or BASIC), I can give
+precise, tool-specific commands.
+
+
+
+
 "Computer Novels": [
 	{"name": "Penetrator (re-release)", "year": 1983, "info": "Australian variant of the cave-shooter classic, bundled with utilities", "developer": "Beam Software", "credits": "Philip Mitchell", "license": "Computer Novels", "platform": "VIC-20"},
 	{"name": "Ollie & Fred's Treasure Island", "year": 1984, "info": "Platform adventure based on Stevenson's novel, with local humor", "developer": "Computer Novels", "credits": "Computer Novels team", "license": "Computer Novels", "platform": "C64"},
@@ -59,7 +127,7 @@ CBM 4016", year:1980, All in one Display: Larger 12-inch green phosphor monitor.
 		{ "title": "Boss", "info": "Chess program", "platform": "VIC-20", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
 		{ "title": "Grand Master", "info": "Chess program aka Boss C64", "platform": "C64", "media": "Cassette", "year": 1982, "credit": "Fritz Schäfer (Kingsoft)" },
 		{ "title": "Graham Gooch's Test Cricket", "info": "Cricket", "platform": "C64", "media": "Cassette / Disk", "year": 1985, "credit": "Michael J. McLean (Supersoft)" },
-		{ "title": "Emlyn Hughes International Soccer", "info": "Soccer", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "Graham Blighe (arcade/AI), Michael McLean (strategy), Andrew Calver (graphics), Peter Calver (producer)" }	
+		{ "title": "Emlyn Hughes International Soccer", "info": "Soccer", "platform": "C64", "media": "Cassette / Disk", "year": 1988, "credit": "Graham Blighe (arcade/AI), Michael McLean (strategy), Andrew Calver (graphics), Peter Calver (producer)" }
 	]
 }
 
