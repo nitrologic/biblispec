@@ -1,15 +1,18 @@
 {
-	"name":"MOS man Chuck Peddle and the Commodore Pet",
-	"version":"1.0.2",
+	"name":"Commodore 64 - Breadbin of champions",
+	"version":"1.1.0",
 	"origin":"MOS Technology, Norristown, Pennsylvania, USA",
-	"description":"Under the hood of every Commodore PET computer.",
-	"status":"PRG SYNTAX ERROR",
+	"description":"Classic 8-bit home computer with VIC-II graphics and SID sound.",
+	"status":"38911 BASIC BYTES FREE",
 	"copyright":"(C) 2025 Simon Armstrong",
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"standards":{
 		"basic":"CBM BASIC 2.0",
-		"timing":{"cpu_clock":"1.0227 MHz (NTSC) / 1.0 MHz (PAL)","screen_refresh":"60 Hz NTSC / 50 Hz PAL","crtc_raster":"20 ms frame","vblank":"Scan lines 0–37"}
+		"timing":{
+			"pal":{"crystal":17.734475,"cpu":0.985248,"video":50,"lines":312,"vblank":37},
+			"ntsc":{"crystal":14.31818,"cpu":1.0227,"video":60,"lines":262,"vblank":37}
+		}
 	},
 	"memory_map": [
 		{"name":"Zero Page","address":"$0000","start":0,"size":256,"description":"Zero Page"},
