@@ -14,6 +14,23 @@
 			"ntsc":{"crystal":14.31818,"cpu":1.0227,"video":60,"lines":262,"vblank":37}
 		}
 	},
+	"ports":{
+		"datasette":{"pins":["5V,GND,Motor,Read,Write,Sense"]},
+		"serialbus":{"pins":["RESET","SRQ","DATA","CLK","ATN","GND"]},
+		"video":{"pins":["LUMINANCE","GND","AUDIO OUT","COMPOSITE VIDEO","CHROMINANCE","AUDIO IN","+5V DC","NC"]},
+		"user":{
+			"pins":{
+				"upper":["1:PA2/TOD","2:PA1","3:PA0","4:PB7","5:PB6","6:PB5","7:PB4","8:PB3","9:PB2","10:PB1","11:PB0","12:RESET"],
+				"lower":["A:GND","B:CNT1","C:SP1","D:GND","E:ATN","F:+5V","H:FLAG2","J:SP2","K:CNT2","L:NMI","M:GND","N:NC"]
+			}
+		},
+		"expansion":{
+			"pins":{
+				"upper":["1:GND","2:SW8","3:ROML","4:IRQ","5:R/W","6:NMI","7:SYNC","8:PHI2","9:A15","10:A14","11:A13","12:A12","13:A11","14:A10","15:A9","16:A8","17:A7","18:A6","19:A5","20:A4","21:A3","22:A2"],
+				"lower":["A:GND","B:/EXROM","C:/GAME","D:BA","E:A1","F:A0","H:D7","J:D6","K:D5","L:D4","M:D3","N:D2","P:D1","R:D0","S:PHI1","T:/RESET","U:/ROMH","V:/IO1","W:/IO2","X:/IRQ","Y:/DMA","Z:+5V"]
+			}
+		}
+	},
 	"memory_map": [
 		{"name":"Zero Page","address":"$0000","start":0,"size":256,"description":"Zero Page"},
 		{"name":"Stack","address":"$0100","start":256,"size":256,"description":"Processor Stack"},
