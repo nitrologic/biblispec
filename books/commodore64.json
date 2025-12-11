@@ -14,23 +14,6 @@
 			"ntsc":{"crystal":14.31818,"cpu":1.0227,"video":60,"lines":262,"vblank":37}
 		}
 	},
-	"ports":{
-		"datasette":{"pins":["5V,GND,Motor,Read,Write,Sense"]},
-		"serialbus":{"pins":["RESET","SRQ","DATA","CLK","ATN","GND"]},
-		"video":{"pins":["LUMINANCE","GND","AUDIO OUT","COMPOSITE VIDEO","CHROMINANCE","AUDIO IN","+5V DC","NC"]},
-		"user":{
-			"pins":{
-				"upper":["1:PA2/TOD","2:PA1","3:PA0","4:PB7","5:PB6","6:PB5","7:PB4","8:PB3","9:PB2","10:PB1","11:PB0","12:RESET"],
-				"lower":["A:GND","B:CNT1","C:SP1","D:GND","E:ATN","F:+5V","H:FLAG2","J:SP2","K:CNT2","L:NMI","M:GND","N:NC"]
-			}
-		},
-		"expansion":{
-			"pins":{
-				"upper":["1:GND","2:SW8","3:ROML","4:IRQ","5:R/W","6:NMI","7:SYNC","8:PHI2","9:A15","10:A14","11:A13","12:A12","13:A11","14:A10","15:A9","16:A8","17:A7","18:A6","19:A5","20:A4","21:A3","22:A2"],
-				"lower":["A:GND","B:/EXROM","C:/GAME","D:BA","E:A1","F:A0","H:D7","J:D6","K:D5","L:D4","M:D3","N:D2","P:D1","R:D0","S:PHI1","T:/RESET","U:/ROMH","V:/IO1","W:/IO2","X:/IRQ","Y:/DMA","Z:+5V"]
-			}
-		}
-	},
 	"memory_map": [
 		{"name":"Zero Page","address":"$0000","start":0,"size":256,"description":"Zero Page"},
 		{"name":"Stack","address":"$0100","start":256,"size":256,"description":"Processor Stack"},
@@ -260,5 +243,111 @@
 			{"address":"$DD0D","start":56589,"description":"Interrupt Control Register"},
 			{"address":"$DD0E","start":56590,"description":"Control Register"}
 		]
-	}]
+	}],
+	"ports": {
+		"datasette": {
+			"pins": ["5V", "GND", "Motor", "Read", "Write", "Sense"]
+		},
+
+		"serialbus": {
+			"pins": ["RESET", "SRQ", "DATA", "CLK", "ATN", "GND"]
+		},
+
+		"video": {
+			"pins": [
+				"LUMINANCE",
+				"GND",
+				"AUDIO_OUT",
+				"COMPOSITE_VIDEO",
+				"CHROMINANCE",
+				"AUDIO_IN",
+				"+5V_DC",
+				"NC"
+			]
+		},
+		"user": {
+			"pins": {
+				"upper": [
+					"1:GND",
+					"2:+5V",
+					"3:/RESET",
+					"4:CNT1",
+					"5:SP1",
+					"6:CNT2",
+					"7:SP2",
+					"8:/PC2",
+					"9:ATN",
+					"10:9VAC",
+					"11:9VAC",
+					"12:GND"
+				],
+				"lower": [
+					"A:GND",
+					"B:/FLAG2",
+					"C:PB0",
+					"D:PB1",
+					"E:PB2",
+					"F:PB3",
+					"H:PB4",
+					"J:PB5",
+					"K:PB6",
+					"L:PB7",
+					"M:PA2",
+					"N:GND"
+				]
+			}
+		},
+		"expansion": {
+			"pins": {
+				"upper": [
+					"1:GND",
+					"2:+5V",
+					"3:/IRQ",
+					"4:/R_W",
+					"5:DOT_CLOCK",
+					"6:/IO1",
+					"7:/GAME",
+					"8:/EXROM",
+					"9:/IO2",
+					"10:/ROML",
+					"11:BA",
+					"12:/DMA",
+					"13:D7",
+					"14:D6",
+					"15:D5",
+					"16:D4",
+					"17:D3",
+					"18:D2",
+					"19:D1",
+					"20:D0",
+					"21:GND",
+					"22:GND"
+					],
+				"lower": [
+					"A:/ROMH",
+					"B:/RESET",
+					"C:/NMI",
+					"D:PHI2",
+					"E:A15",
+					"F:A14",
+					"H:A13",
+					"J:A12",
+					"K:A11",
+					"L:A10",
+					"M:A9",
+					"N:A8",
+					"P:A7",
+					"R:A6",
+					"S:A5",
+					"T:A4",
+					"U:A3",
+					"V:A2",
+					"W:A1",
+					"X:A0",
+					"Y:GND",
+					"Z:NC"
+				]
+			}
+		}
+	}
 }
