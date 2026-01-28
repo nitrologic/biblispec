@@ -1,10 +1,10 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
-	"copyright": "(C) 2025 Simon Armstrong",
+	"copyright": "(C) 2026 Simon Armstrong",
 	"license": {
 		"name": "MIT",
 		"url": "https://opensource.org/licenses/MIT"
@@ -16,6 +16,21 @@
 	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
+		"technology":{
+			"lightemittingdiodes":[
+				{"color": "green", "year": 1958, "nm": 565, "material": "GaP", "inventors": ["Egon Loebner", "Rubin Braunstein"]},
+				{"color": "red", "year": 1962, "nm": 650, "material": "GaAsP", "inventors": ["Nick Holonyak Jr."]},
+				{"color": "infrared", "year": 1962, "nm": 850, "material": "GaAs", "inventors": ["Robert Keyes", "Theodore Quist"]},
+				{"color": "far-red", "year": 1970, "nm": 660, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "yellow", "year": 1972, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "violet", "year": 1972, "nm": 405, "material": "GaN", "inventors": ["Herbert Maruska", "Jacques Pankove"]},
+				{"color": "amber", "year": 1976, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "blue", "year": 1993, "nm": 470, "material": "GaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "turquoise", "year": 1996, "nm": 505, "material": "InGaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "white", "year": 1995, "nm": 450, "material": "GaN+phosphor", "inventors": ["Shuji Nakamura"]},
+				{"color": "UV", "year": 1998, "nm": 375, "material": "GaN", "inventors": ["Shuji Nakamura"]}
+			]
+		},
 		"geography":{
 			"nations":[
 				"Palestine","Holy See",
@@ -173,7 +188,7 @@
 					["Auckland@ap-southeast-6",-36.8485,174.7633],
 					["Sydney@ap-southeast-2",-33.8688,151.2093],
 					["Santiago@sa-south-2",-33.4489,-70.6693],
-					["Johannesburg@af-south-1",-26.2041,28.0473],					
+					["Johannesburg@af-south-1",-26.2041,28.0473],
 					["SãoPaulo@sa-east-1",-23.5505,-46.6333],
 					["Singapore@ap-southeast-1",1.3521,103.8198],
 					["Mumbai@ap-south-1",19.0760,72.8777],
@@ -329,8 +344,8 @@
 				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
 		},
 		"shortcode":{
-			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️",
-			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "satellite": "📡",
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
+			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
 			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
 			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
 			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",

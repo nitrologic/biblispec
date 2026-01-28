@@ -1,3 +1,28 @@
+``` json
+corporations:{
+	chinese:[
+		"深圳市立创电子商务有限公司":{
+			"title": "LCSC Electronics",
+			"brands": {
+				"LCSC":"electronic components distribution",
+				"EasyEDA":"EDA software tool",
+				"JLCPCB":"PCB manufacturing and assembly"
+			},
+			"name": "Shenzhen Lichuang E-commerce Co., Ltd.",
+			"code": "91440300583756947A",
+			"headquarters": "Shenzhen, Guangdong, China",
+			"address": "Rm 519-529, Floor 5, Tianjian Building, No.7 Shangbao Road, Futian District, Shenzhen 518034",
+			"legal": "Yang Linjie (杨林杰)",
+			"status": "Active private limited company",
+			"website": "https://www.lcsc.com",
+			"capital": "10 million RMB",
+			"business": "Electronic components wholesale/retail, e-commerce platform operation, technology development for EDA software",
+		}
+	]
+}
+```
+
+
 "interrupts":{
 	"vectors":{"NMI":"$FFFA","RESET":"$FFFC","IRQ":"$FFFE"},
 	"addresses":{"NMI":65530,"RESET":65532,"IRQ":65534},

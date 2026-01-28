@@ -7,6 +7,7 @@ A living document of linguistic latitude.
 
 A bibliographic index of specifications including Unicode codepoints of interest.
 
+* led tech (new)
 * network topology
 * unicode blocks
 * music scales
