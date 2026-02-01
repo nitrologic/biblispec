@@ -1,3 +1,46 @@
+technologies:
+
+Image sensors
+Photodiode → CCD → CMOS → BSI → stacked sensors.
+One breakthrough (CMOS noise) flips the whole industry.
+
+Non-volatile memory
+Core → EEPROM → flash → 3D NAND.
+Scaling walls, then architectural escape hatches.
+
+Display technologies
+CRT → plasma → LCD → OLED → micro-LED.
+Repeated “this will never work” moments.
+
+Photovoltaic solar cells
+Selenium → silicon → thin-film → perovskites.
+Efficiency cliffs driven by materials science.
+
+Magnetic storage
+Ferrite cores → thin-film → GMR → perpendicular → HAMR.
+Physics limits constantly redefined.
+
+Optical fiber communications
+High-loss glass → low-loss silica → EDFAs → DWDM.
+Single materials breakthrough unlocks everything.
+
+Microprocessors
+PMOS → NMOS → CMOS → FinFET → GAAFET.
+Process tech, not ISA, does the heavy lifting.
+
+Audio synthesis methods
+Analog → FM → wavetable → physical modeling → neural.
+Clear “algorithm unlock” moments (FM = LED blue).
+
+Battery technologies
+Lead-acid → NiCd → NiMH → Li-ion → solid-state.
+Energy density as the bottleneck axis.
+
+Wireless communication
+Spark gap → AM → FM → cellular → OFDM → MIMO.
+Each step trades hardware limits for math.
+
+
 ``` json
 corporations:{
 	chinese:[

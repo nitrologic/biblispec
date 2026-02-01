@@ -29,6 +29,18 @@
 				{"color": "turquoise", "year": 1996, "nm": 505, "material": "InGaN", "inventors": ["Shuji Nakamura"]},
 				{"color": "white", "year": 1995, "nm": 450, "material": "GaN+phosphor", "inventors": ["Shuji Nakamura"]},
 				{"color": "UV", "year": 1998, "nm": 375, "material": "GaN", "inventors": ["Shuji Nakamura"]}
+			],
+			"laserdiodes":[
+				{"wavelength":"infrared","year":1962,"nm":840,"material":"GaAs","type":"first-demonstration","inventors":["Robert N. Hall","General Electric team"]},
+				{"wavelength":"infrared","year":1970,"nm":830,"material":"AlGaAs","type":"continuous-room-temp","inventors":["Morton Panish","Izuo Hayashi"]},
+				{"wavelength":"infrared","year":1976,"nm":850,"material":"GaAs","type":"fiber-communications","inventors":["Bell Labs"]},
+				{"wavelength":"infrared","year":1979,"nm":780,"material":"AlGaAs","type":"optical-storage","inventors":["Sony / Philips"]},
+				{"wavelength":"red","year":1985,"nm":650,"material":"AlGaInP","type":"high-efficiency","inventors":["HP Optoelectronics team"]},
+				{"wavelength":"infrared","year":1989,"nm":850,"material":"GaAs","type":"VCSEL","inventors":["Kent Choquette","AT&T Bell Labs"]},
+				{"wavelength":"blue","year":1996,"nm":405,"material":"InGaN","type":"commercial-breakthrough","inventors":["Shuji Nakamura"]},
+				{"wavelength":"violet","year":2002,"nm":405,"material":"InGaN","type":"Blu-ray","inventors":["Nichia / Sony"]},
+				{"wavelength":"deep-UV","year":2006,"nm":280,"material":"AlGaN","type":"sterilisation","inventors":["academic / industrial groups"]},
+				{"wavelength":"mid-infrared","year":1994,"nm":8000,"material":"InGaAs/AlInAs","type":"quantum-cascade","inventors":["Federico Capasso"]}
 			]
 		},
 		"geography":{
