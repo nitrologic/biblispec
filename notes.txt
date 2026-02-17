@@ -609,6 +609,52 @@ Ployes,Acadian (Maine/Canada),Buckwheat + flour + water,buckwheat crepe
 }
 
 
+tier 1 – global cloud titans
+google 2.1t – mountain view
+amazon 2.0t – seattle
+microsoft 2.9t – redmond
+apple 3.4t – cupertino
+
+tier 1 – the gigachads
+nvidia 5.1t – gpu daddy – santa clara
+msft 4.0t – cloud wizard – redmond
+aapl 3.9t – shiny cult – cupertino
+goog 3.3t – data overlord – mountain view
+amzn 2.5t – box lord – seattle
+alibaba 2.0t – hangzhou
+avgo 1.8t – chip glutton – san jose
+meta 1.3t – vr meme – menlo park
+tesla 1.2t – austin
+
+tier 2 – the sidekicks
+bytedance 0.4t – beijing
+tencent 0.5t – shenzhen
+unitree 0.07t – hangzhou
+tsmc 0.9t – silicon forge – hsinchu
+orcl 0.8t – db tyrant – austin
+tsla 0.7t – rocket edgelord – austin
+sammy 0.6t – chaebol – suwon
+adbe 0.3t – pdf warlock – san jose
+nflx 0.3t – binge demon – los gatos
+crm 0.3t – saas bro – sf
+asml 0.3t – light bender – veldhoven
+qcom 0.3t – 5g gremlin – san diego
+pltr 0.3t – gov goth – denver 
+
+private
+
+spaceX – $210b – space-cowboy launch baron – hawthorne
+bytedance – $180b – algorithm puppet-master – beijing
+stripe – $70b – payments rails monk – sf / dublin
+shein – $66b – fast-fashion supply-chain ninja – singapore guangzhou
+databricks – $55b – lakehouse data wizard – sf
+revolut – $45b – london – fintech chaos lord
+nubank – $41b – são paulo – latam neobank juggernaut
+klarna – $31b – stockholm – buy-now-pay-later viking
+canva – $40b – sydney – design-for-the-people wizard
+byju’s – $22b (down-round) – bangalore – ed-tech elephant
+
+
 ["leuc","dvir","cigi","pcal","cfor","amar","bcal","dcor","pfor","tcor","cang","cjac","pmin","smed","
 mmar","tdec","tvir","xgra","tmar","tpol","tspi","tpal"]
 
