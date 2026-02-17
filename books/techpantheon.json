@@ -1,0 +1,44 @@
+{
+	"name": "Tech Pantheon",
+	"version": "1.0.0",
+	"description": "tech flake almanac",
+	"copyright": "(C) 2026 Simon Armstrong",
+	"credit": "Curated by Simon Armstrong with help from Kimi K2, ChatGPT",
+	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
+	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
+	"megachads" : {
+		"public": [
+			{ "name": "GOOGL", "marketCap": "2.1t", "archetype": "data overlord", "location": "mountain view" },
+			{ "name": "AMZN", "marketCap": "2.0t", "archetype": "box lord", "location": "seattle" },
+			{ "name": "MSFT", "marketCap": "2.9t", "archetype": "cloud wizard", "location": "redmond" },
+			{ "name": "AAPL", "marketCap": "3.4t", "archetype": "shiny cult", "location": "cupertino" },
+			{ "name": "NVDA", "marketCap": "3.0t", "archetype": "gpu daddy", "location": "santa clara" },
+			{ "name": "META", "marketCap": "1.3t", "archetype": "vr meme", "location": "menlo park" },
+			{ "name": "TSLA", "marketCap": "1.2t", "archetype": "rocket edgelord", "location": "austin" },
+			{ "name": "AVGO", "marketCap": "0.85t", "archetype": "chip glutton", "location": "san jose" },
+			{ "name": "ORCL", "marketCap": "0.8t", "archetype": "db tyrant", "location": "austin" },
+			{ "name": "TSM", "marketCap": "0.75t", "archetype": "silicon forge", "location": "hsinchu" },
+			{ "name": "SSNLF", "marketCap": "0.6t", "archetype": "chaebol", "location": "suwon" },
+			{ "name": "TCEHY", "marketCap": "0.5t", "archetype": "super-app puppet-master", "location": "shenzhen" },
+			{ "name": "BABA", "marketCap": "0.35t", "archetype": "marketplace emperor", "location": "hangzhou" },
+			{ "name": "ADBE", "marketCap": "0.3t", "archetype": "pdf warlock", "location": "san jose" },
+			{ "name": "NFLX", "marketCap": "0.3t", "archetype": "binge demon", "location": "los gatos" },
+			{ "name": "CRM", "marketCap": "0.3t", "archetype": "saas bro", "location": "sf" },
+			{ "name": "ASML", "marketCap": "0.3t", "archetype": "light bender", "location": "veldhoven" },
+			{ "name": "QCOM", "marketCap": "0.3t", "archetype": "5g gremlin", "location": "san diego" },
+			{ "name": "PLTR", "marketCap": "0.12t", "archetype": "gov goth", "location": "denver" }
+		],
+		"private": [
+			{ "name": "SpaceX", "marketCap": "210b", "archetype": "space-cowboy launch baron", "location": "hawthorne" },
+			{ "name": "ByteDance", "marketCap": "180b", "archetype": "algorithm puppet-master", "location": "beijing" },
+			{ "name": "Stripe", "marketCap": "70b", "archetype": "payments rails monk", "location": "sf / dublin" },
+			{ "name": "Shein", "marketCap": "66b", "archetype": "fast-fashion supply-chain ninja", "location": "singapore guangzhou" },
+			{ "name": "Databricks", "marketCap": "55b", "archetype": "lakehouse data wizard", "location": "sf" },
+			{ "name": "Revolut", "marketCap": "45b", "archetype": "fintech chaos lord", "location": "london" },
+			{ "name": "Nubank", "marketCap": "41b", "archetype": "latam neobank juggernaut", "location": "são paulo" },
+			{ "name": "Klarna", "marketCap": "31b", "archetype": "buy-now-pay-later viking", "location": "stockholm" },
+			{ "name": "Canva", "marketCap": "40b", "archetype": "design-for-the-people wizard", "location": "sydney" },
+			{ "name": "Byju’s", "marketCap": "22b (down-round)", "archetype": "ed-tech elephant", "location": "bangalore" }
+		]
+	}
+}
