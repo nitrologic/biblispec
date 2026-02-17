@@ -41,6 +41,9 @@ The data payload for this project is [biblispec.json](biblispec.json)
 	- ai-voices - 17 providers 308 names
 - audio circuits 1.0.7 [books/audiocircuit.json](books/audiocircuit.json)
 	- 22 audio circuits from 1906 to 1981
+- tech pantheon 1.0.0 [books/techpantheon.json](books/techpantheon.json)
+	- 19 public, 11 private on planet mega chads 
+
 
 Files are [JSON](https://www.json.org/json-en.html) format.
 
