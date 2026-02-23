@@ -1,3 +1,129 @@
+[
+{"entity": "Microsoft", "year": 1975, "sector": "Software"},
+{"entity": "Oracle", "year": 1977, "sector": "Database Software"},
+{"entity": "Sun Microsystems", "year": 1982, "sector": "Workstations / Servers"},
+{"entity": "Adobe", "year": 1982, "sector": "Creative Software"},
+{"entity": "Autodesk", "year": 1982, "sector": "CAD Software"},
+{"entity": "Cisco", "year": 1984, "sector": "Networking"},
+{"entity": "Dell", "year": 1984, "sector": "Hardware / Direct Sales"},
+{"entity": "Amazon", "year": 1994, "sector": "E-commerce"},
+{"entity": "Spotify", "year": 2006, "sector": "Music Streaming"},
+{"entity": "Pandora", "year": 2000, "sector": "Music Streaming"},
+{"entity": "SoundCloud", "year": 2007, "sector": "Music Streaming / Sharing"},
+{"entity": "Tidal", "year": 2014, "sector": "Music Streaming"},
+{"entity": "Deezer", "year": 2007, "sector": "Music Streaming"},
+{"entity": "Napster", "year": 1999, "sector": "Music Sharing / Streaming"},
+{"entity": "Rhapsody", "year": 2001, "sector": "Music Streaming"},
+{"entity": "PayPal", "year": 1998, "sector": "Payments"},
+{"entity": "Google", "year": 1998, "sector": "Search / AI"},
+{"entity": "Netflix", "year": 1997, "sector": "Streaming / DVD Rental"},
+{"entity": "Facebook", "year": 2004, "sector": "Social Media"},
+{"entity": "Twitter", "year": 2006, "sector": "Social Media"},
+{"entity": "Instagram", "year": 2010, "sector": "Social Media"},
+{"entity": "Snapchat", "year": 2011, "sector": "Social Media"},
+{"entity": "TikTok", "year": 2016, "sector": "Social Media / Short Video"},
+{"entity": "Discord", "year": 2015, "sector": "Communication"},
+{"entity": "Reddit", "year": 2005, "sector": "Social News / Forums"},
+{"entity": "LinkedIn", "year": 2003, "sector": "Professional Networking"},
+{"entity": "SpaceX", "year": 2002, "sector": "Aerospace"},
+{"entity": "Airbnb", "year": 2008, "sector": "Marketplace"},
+{"entity": "Stripe", "year": 2010, "sector": "Payments"},
+{"entity": "OpenAI", "year": 2015, "sector": "AI"},
+{"entity": "Cambricon", "year": 2016, "sector": "AI Chips"},
+{"entity": "Anthropic", "year": 2021, "sector": "AI"},
+{"entity": "Perplexity AI", "year": 2022, "sector": "AI Search"},
+{"entity": "xAI", "year": 2023, "sector": "AI"},
+{"entity": "DeepSeek", "year": 2023, "sector": "AI"},
+{"entity": "Moonshot AI", "year": 2023, "sector": "AI"},
+{"entity": "Mistral AI", "year": 2023, "sector": "AI"}
+]
+
+GitHub (code/repos)
+GitLab (code/repos, self-host option)
+Pastebin (quick text/code)
+Gist (GitHub quick shares)
+ImgBB / Imgur (images)
+Catbox.moe (files up to 200MB, no account)
+Transfer.sh (temporary file links)
+Mega.nz (large files, encrypted)
+Dropbox / Google Drive (files/folders)
+WeTransfer (one-off large files)
+AnonFiles (anonymous file hosting)
+
+
+who founded 21vianet?
+sheng chen (josh chen) and jun zhang started 21vianet on 16 oct 1999 
+sheng “josh” chen, tsinghua ee ’91, started dabbling in datacomms while still a sophomore (1990), booted a tiny isp called a-1 netcom in ’91, then proper-founded 21vianet in ’99 with a single carrier-neutral dc in beijing. bootstrapped it for two decades, took it nasdaq ’11, bagged blackstone & gic money, and still runs it today as exec chair + interim ceo. classic “one-company lifer” arc: campus hacker → china’s neutral-dc granddad. 
+
+who owns discord in corporate sense
+still 100% owned by discord inc (delaware c-corp)
+jason citron = biggest individual holder, stan vishnevskiy right behind him; together they keep majority voting power
+outside cap table: tencent, sony, dragoneer, fidelity, accel, index, greenoaks, etc—minority prefs only
+no parent company, no msft, no amazon, no single investor >15%
+board has netflix/block execs but founders call the shots
+ipo filed confidentially jan 2026 so the cap table will unlock soon, but for now it’s founder-controlled :nah_whatever: 
+founder story
+jason citron coded doom wads at 13, sold openfeint for 104m at 26, burned the cash on a tablet moba no one played, then turned the internal voice chat they hacked together for that flop into discord in 2015. stan vishnevskiy built the elixir backend that could shard guilds forever. they seeded it by spamming reddit dms to ff14 raiders, blew up during the 2016 overwatch open beta, and kept majority control by ghosting microsoft’s 12bn offer. citron stepped down as ceo april 2025 but still owns ~12%. classic “side project becomes everything” arc
+
+microsoft’s greatest ghostings:
+yahoo 08 – balmer slapped $44b on the table, jerry yang said “nah we worth more,” stock tanked, sold to verizon for $4.5b nine years later :oh_hell_nah:
+linkedin pre-ipo – execs thought “we can build our own network,” passed on low-9-figure deal, ended up paying $26b in 2016 to buy the same company
+docusign & gotomeeting – both courted early, msft walked away, let them become verbs while office lagged
+snap 2016 – $30b offer evan spiegel ghosted with a meme reply, stock’s been on a rollercoaster ever since
+discord 2021 – $12b all-cash, citron just left them on read and kept the rabbit hat :kimi_with_rabbit_hat:
+
+founder story of snap
+frat boy evan spiegel, stanford product-design bro, pitches “picaboo” in class 2011—disappearing n00ds app. codes it with bobby murphy; third bro reggie brown says “make the pic vanish” and draws the ghost logo. they boot reggie, rebrand to snapchat, spam so-cal high schools, hit 100k users in six months. zuck slides into dms with $3b cash—evan ghosts him, keeps the ghost. reggie sues, gets $158m hush money. evan becomes youngest billionaire at 25, marries miranda kerr, still posting dog ears on toddlers.
+
+streaming world has its own “ghost the giant” lore:
+netflix 2000 – reed hastings begged blockbuster to buy him for $50m, got laughed out of the room; blockbuster filed for bankruptcy 2010 while netflix became a verb
+twitch 2014 – yahoo lowballed the justin.tv spin-off, amazon swooped in for $970m cash; yahoo’s still crying in periscope’s grave
+roku 2016 – apple wanted to fold them into apple tv hardware, ceo anthony wood said “we’ll stay the os for everyone else”; now ships more streaming hours than apple tv+ itself
+pluto 2019 – viacom bought the free-ad channel startup for $340m after warner and hulu passed; warner later had to launch its own free tier playing catch-up
+
+napster 1999 – shawn fanning & sean parker, 50m users, labels sued it to death; if they’d cut a deal instead of shutting it down they could’ve owned the future
+rhapsody 2001 – first legal sub service, realnetworks couldn’t scale, apple walked away from buying it, spotify ate its lunch 10 yrs later
+soundcloud 2007 – labels laughed at the “youtube for audio” pitch; later begged for uplink deals when it became the launchpad for billie eilish & post malone
+tidal 2015 – jay-z bought it for $56m after apple passed on the tiny aspiro; he still can’t flip it, valuation flat while apple music rockets
+spotify 2006 – ek asked us labels for early equity deals, got told “go away kid”; they now pay the same majors ~$9b/yr and still can’t get a buyout offer accepted
+
+whatsapp def belongs in the ghost hall of fame:
+2007 jan koum & acton, ex-yahoo, build “status” app, pivot to chat
+2012 google offers $10b – they leave it on read
+early 2014 facebook dms $19b cash + stock, they finally tap accept
+
+- deepseek: liang wenfeng, 40, born in a zhanjiang village to teacher parents, math freak at zhejiang uni. ran quant hedge-fund high-flyer up to $12b aum, then in 2021 quietly stacked 10k a100s “for fun” before us export ban. when the fund hit a rough patch he spun the gpu stash into deepseek (2023), dropped r1 that matches o1 at 1/30th cost, open-sourced the weights, nuked nvda stock overnight. still codes, sleeps in office, says “china needs to stop copying and start originating.” classic “side-hobby becomes wmd” arc.
+
+- moonshot: yang zhilin, tsinghua & princeton phd, co-founded 月之暗面 2023 with zhang yu xin (ex-xiaomi president). goal: 100b-param bilingual model. raised $1b in 6 mo (alibaba leading), valued $3b before shipping anything. keeps cards close, no public weights, but kimi chatbot hit #1 on cn app store in weeks. motto: “scale first, monetize later.” textbook “raise big, flex bigger.”
+
+qian xuesen 1956 – father of chinese cybernetics, smuggled wiener’s “cybernetics” into beijing, got ai labeled non-pseudoscience after the soviets chilled.
+chen brothers 2016 – “genius youth” lab rats at cas, 30 m² room, 20 nerds, build first dl chip prototype, name it cambricon (cambrian boom reference). huawei becomes customer #1, then ditches them 2019 → 95% rev gone. instead of dying they pivot to datacenter/edge, ride us chip ban wave, ipo on star market 2020, shares +230% day 1. tianshi now worth $22b at 40, nicknamed “nvidia of china.”
+kaifu lee – microsoft vp → google china chief → incubator sinovation, early check into face++, momenta, preaches “ai is the new electricity” while running an ai-only vc fund.
+qi lu – microsoft exec vp, almost got ceo seat, returned to lead baidu’s all-in ai/autonomous push, calls apollo os “android for cars.”
+yin qi & xu bing – megvii (face++) founders, 3 phds from tsinghua, built caffe-based face engine, refused tencent buyout early, survived us entity list, still supply 300m cams.
+
+
+alan turing – cracked enigma, birthed the “can machines think” meme in 1950.
+john mccarthy – literally wrote “artificial intelligence” on a 1955 dartmouth grant app, then invented lisp so ai could talk to itself.
+marvin minsky – cofounded mit ai lab, told everyone perceptrons suck, started the first ai winter.
+herbert simon + allen newell – dropped logic theorist (first ai program) in ’56, said “code can nobel prize” and did.
+arthur samuel – made a checkers bot that trained itself overnight; coined “machine learning” while beating himself at checkers.
+frank rosenblatt – navy-funded perceptron in ’57; media called it an electronic brain, haters froze nn research for 20 yrs.
+joseph weizenbaum – built eliza the therapist bot in ’66, freaked when people caught feelings, became the original ai doomer.
+geoffrey hinton – kept the neural faith through two winters, back-propped in the 80s, imagenet 2012 = deep-learning big-bang.
+yann lecun – gave cnn eyes, facebook’s ai chief, still argues online.
+yoshua bengio – third godfather, stayed in montreal, open-source evangelist.
+
+
+
+
+
+
+
+
+
+
+
 "megachads": {
 	"public": [
 		{ "name": "GOOGL", "marketCap": "2.1t", "archetype": "data overlord", "location": "mountain view" },

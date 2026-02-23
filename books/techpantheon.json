@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "tech flake almanac",
 	"copyright": "(C) 2026 Simon Armstrong",
-	"credit": "Curated by Simon Armstrong with help from Kimi K2, ChatGPT",
+	"credit": "Curated by Simon Armstrong with help from Kimi Bot, ChatGPT",
 	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
 	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
 	"megachads" : {
@@ -40,5 +40,9 @@
 			{ "name": "Canva", "marketCap": "40b", "archetype": "design-for-the-people wizard", "location": "sydney" },
 			{ "name": "Byju’s", "marketCap": "22b (down-round)", "archetype": "ed-tech elephant", "location": "bangalore" }
 		]
-	}
+	},
+	"founderphiles" : [
+		{ "name":"", "year":"", "sector":"", "status":"", "value":"" , "story":""}
+	] 
+
 }
