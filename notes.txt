@@ -1,54 +1,110 @@
-[
-{"entity": "Microsoft", "year": 1975, "sector": "Software"},
-{"entity": "Oracle", "year": 1977, "sector": "Database Software"},
-{"entity": "Sun Microsystems", "year": 1982, "sector": "Workstations / Servers"},
-{"entity": "Adobe", "year": 1982, "sector": "Creative Software"},
-{"entity": "Autodesk", "year": 1982, "sector": "CAD Software"},
-{"entity": "Cisco", "year": 1984, "sector": "Networking"},
-{"entity": "Dell", "year": 1984, "sector": "Hardware / Direct Sales"},
-{"entity": "Amazon", "year": 1994, "sector": "E-commerce"},
-{"entity": "Spotify", "year": 2006, "sector": "Music Streaming"},
-{"entity": "Pandora", "year": 2000, "sector": "Music Streaming"},
-{"entity": "SoundCloud", "year": 2007, "sector": "Music Streaming / Sharing"},
-{"entity": "Tidal", "year": 2014, "sector": "Music Streaming"},
-{"entity": "Deezer", "year": 2007, "sector": "Music Streaming"},
-{"entity": "Napster", "year": 1999, "sector": "Music Sharing / Streaming"},
-{"entity": "Rhapsody", "year": 2001, "sector": "Music Streaming"},
-{"entity": "PayPal", "year": 1998, "sector": "Payments"},
-{"entity": "Google", "year": 1998, "sector": "Search / AI"},
-{"entity": "Netflix", "year": 1997, "sector": "Streaming / DVD Rental"},
-{"entity": "Facebook", "year": 2004, "sector": "Social Media"},
-{"entity": "Twitter", "year": 2006, "sector": "Social Media"},
-{"entity": "Instagram", "year": 2010, "sector": "Social Media"},
-{"entity": "Snapchat", "year": 2011, "sector": "Social Media"},
-{"entity": "TikTok", "year": 2016, "sector": "Social Media / Short Video"},
-{"entity": "Discord", "year": 2015, "sector": "Communication"},
-{"entity": "Reddit", "year": 2005, "sector": "Social News / Forums"},
-{"entity": "LinkedIn", "year": 2003, "sector": "Professional Networking"},
-{"entity": "SpaceX", "year": 2002, "sector": "Aerospace"},
-{"entity": "Airbnb", "year": 2008, "sector": "Marketplace"},
-{"entity": "Stripe", "year": 2010, "sector": "Payments"},
-{"entity": "OpenAI", "year": 2015, "sector": "AI"},
-{"entity": "Cambricon", "year": 2016, "sector": "AI Chips"},
-{"entity": "Anthropic", "year": 2021, "sector": "AI"},
-{"entity": "Perplexity AI", "year": 2022, "sector": "AI Search"},
-{"entity": "xAI", "year": 2023, "sector": "AI"},
-{"entity": "DeepSeek", "year": 2023, "sector": "AI"},
-{"entity": "Moonshot AI", "year": 2023, "sector": "AI"},
-{"entity": "Mistral AI", "year": 2023, "sector": "AI"}
-]
+{
+	"Silicon":[
+		{"entity": "IBM", "founders": "Charles Ranlett Flint, Herman Hollerith", "year": 1911, "sector": "Hardware", "country": "USA", "cap": 220},
+		{"entity": "Texas Instruments", "founders": "Cecil Green, J. Erik Jonsson, Patrick Haggerty", "year": 1930, "sector": "Semiconductors", "country": "USA", "cap": 200},
+		{"entity": "Fujitsu", "founders": "Furukawa Group", "year": 1935, "sector": "OEM", "country": "Japan", "cap": 41},
+		{"entity": "HP", "founders": "Bill Hewlett, David Packard", "year": 1939, "sector": "OEM", "country": "USA", "cap": 35},
+		{"entity": "Applied Materials", "founders": "James C. Morgan", "year": 1967, "sector": "Semiconductors", "country": "USA", "cap": 300},
+		{"entity": "Broadcom", "founders": "Henry Samueli, Henry Nicholas", "year": 1961, "sector": "Semiconductors", "country": "USA", "cap": 1100},
+		{"entity": "Intel", "founders": "Gordon Moore, Robert Noyce", "year": 1968, "sector": "Semiconductors", "country": "USA", "cap": 95},
+		{"entity": "AMD", "founders": "Jerry Sanders", "year": 1969, "sector": "Semiconductors", "country": "USA", "cap": 180},
+		{"entity": "Samsung", "founders": "Lee Byung-chul", "year": 1969, "sector": "Semiconductors", "country": "South Korea", "cap": 900},
+		{"entity": "Apple", "founders": "Steve Jobs, Steve Wozniak, Ronald Wayne", "year": 1976, "sector": "OEM", "country": "USA", "cap": 3800},
+		{"entity": "Acer", "founders": "Stan Shih, Carolyn Yeh", "year": 1976, "sector": "OEM", "country": "Taiwan", "cap": 3},
+		{"entity": "Micron", "founders": "Ward Parkinson, Joe Parkinson, Dennis Wilson, Doug Pitman", "year": 1978, "sector": "Semiconductors", "country": "USA", "cap": 480},
+		{"entity": "Lam Research", "founders": "David K. Lam", "year": 1980, "sector": "Semiconductors", "country": "USA", "cap": 310},
+		{"entity": "Silicon Graphics (SGI)", "founders": "James H. Clark, Marc Hannah", "year": 1981, "sector": "Workstations", "country": "USA", "cap": 0},
+		{"entity": "Sun Microsystems", "founders": "Scott McNealy, Andy Bechtolsheim, Vinod Khosla, Bill Joy", "year": 1982, "sector": "Workstations", "country": "USA", "cap": 0},
+		{"entity": "SK Hynix", "founders": "Hyundai Group", "year": 1983, "sector": "Semiconductors", "country": "South Korea", "cap": 460},
+		{"entity": "Cisco", "founders": "Leonard Bosack, Sandy Lerner", "year": 1984, "sector": "Networking", "country": "USA", "cap": 270},
+		{"entity": "Dell", "founders": "Michael Dell", "year": 1984, "sector": "OEM", "country": "USA", "cap": 80},
+		{"entity": "Lenovo", "founders": "Liu Chuanzhi", "year": 1984, "sector": "OEM", "country": "China", "cap": 15},
+		{"entity": "ASML", "founders": "Philips, ASM International", "year": 1984, "sector": "Semiconductors", "country": "Netherlands", "cap": 570},
+		{"entity": "Qualcomm", "founders": "Irwin Jacobs, Andrew Viterbi, Andrew Cohen, Klein Gilhousen, Franklin Antonio", "year": 1985, "sector": "Semiconductors", "country": "USA", "cap": 180},
+		{"entity": "MSI", "founders": "Xu Xiang", "year": 1986, "sector": "OEM", "country": "Taiwan", "cap": 20},
+		{"entity": "Gigabyte", "founders": "Pei Chen Yeh", "year": 1986, "sector": "OEM", "country": "Taiwan", "cap": 5},
+		{"entity": "TSMC", "founders": "Morris Chang", "year": 1987, "sector": "Foundry", "country": "Taiwan", "cap": 1200},
+		{"entity": "ASUS", "founders": "Ted Hsu, M.T. Liao, Wayne Hsieh, T.H. Tung", "year": 1989, "sector": "OEM", "country": "Taiwan", "cap": 12},
+		{"entity": "ARM", "founders": "Robin Saxby, Jamie Urquhart, Mike Muller, Tudor Brown", "year": 1990, "sector": "Semiconductors", "country": "UK", "cap": 133},
+		{"entity": "NVIDIA", "founders": "Jensen Huang, Chris Malachowsky, Curtis Priem", "year": 1993, "sector": "Semiconductors", "country": "USA", "cap": 3400},
+		{"entity": "Cambricon", "founders": "Chen Tianshi", "year": 2016, "sector": "AI Chips", "country": "China", "cap": 30}
+	],
+	"Rockets": [
+		{ "entity": "Blue Origin", "year": 2000, "country": "USA" },
+		{ "entity": "SpaceX", "year": 2002, "country": "USA" },
+		{ "entity": "Rocket Lab", "year": 2006, "country": "New Zealand" },
+		{ "entity": "PLD Space", "year": 2011, "country": "Spain" },
+		{ "entity": "Interstellar Technologies", "year": 2013, "country": "Japan" },
+		{ "entity": "Relativity Space", "year": 2015, "country": "USA" },
+		{ "entity": "LandSpace", "year": 2015, "country": "China" },
+		{ "entity": "iSpace", "year": 2016, "country": "China" },
+		{ "entity": "Skyrora", "year": 2017, "country": "United Kingdom" },
+		{ "entity": "Galactic Energy", "year": 2018, "country": "China" },
+		{ "entity": "Isar Aerospace", "year": 2018, "country": "Germany" },
+		{ "entity": "Skyroot Aerospace", "year": 2018, "country": "India" }
+	],
+	"AI": [
+		{ "entity": "OpenAI", "year": 2015, "country": "USA" },
+		{ "entity": "Anthropic", "year": 2021, "country": "USA" },
+		{ "entity": "xAI", "year": 2023, "country": "USA" },
+		{ "entity": "DeepSeek", "year": 2023, "country": "China" },
+		{ "entity": "Moonshot", "year": 2023, "country": "China" },
+		{ "entity": "Mistral", "year": 2023, "country": "France" },
+		{ "entity": "Perplexity", "year": 2022, "country": "USA" },
+		{ "entity": "Gemini", "year": 2010, "country": "USA" },
+		{ "entity": "Cohere", "year": 2019, "country": "Canada" },
+		{ "entity": "AI21", "year": 2017, "country": "Israel" },
+		{ "entity": "Aleph Alpha", "year": 2019, "country": "Germany" },
+		{ "entity": "Stability", "year": 2019, "country": "UK" },
+		{ "entity": "Together", "year": 2022, "country": "USA" }
+	],
+	"social": [
+		{"entity": "LinkedIn", "year": 2003},
+		{"entity": "Facebook", "year": 2004},
+		{"entity": "Reddit", "year": 2005},
+		{"entity": "Twitter", "year": 2006},
+		{"entity": "Instagram", "year": 2010},
+		{"entity": "Snapchat", "year": 2011},
+		{"entity": "Discord", "year": 2015},
+		{"entity": "TikTok", "year": 2016}
+	],
+	"music": [
+		{"entity": "Napster", "year": 1999, "founders": "Shawn Fanning, Sean Parker"},
+		{"entity": "Pandora", "year": 2000, "founders": "Tim Westergren, Jon Kraft"},
+		{"entity": "Rhapsody", "year": 2001, "founders": "Rob Reid, Larry Miller"},
+		{"entity": "Spotify", "year": 2006, "founders": "Daniel Ek, Martin Lorentzon"},
+		{"entity": "SoundCloud", "year": 2007, "founders": "Alexander Ljung, Eric Wahlforss"},
+		{"entity": "Deezer", "year": 2007, "founders": "Daniel Marhely, Jonathan Benassaya"},
+		{"entity": "Tidal", "year": 2014, "founders": "Aspiro (acquired by Jay-Z)"}
+		],
+	"video": [
+		{"entity": "Netflix", "year": 1997},
+		{"entity": "YouTube", "year": 2005, "founders": "Steve Chen, Chad Hurley, Jawed Karim"},
+		{"entity": "Amazon Prime Video", "year": 2006},
+		{"entity": "Hulu", "year": 2007},
+		{"entity": "Paramount+", "year": 2014},
+		{"entity": "Disney+", "year": 2019},
+		{"entity": "Max", "year": 2020}
+	],
+	"storage": [
+		{"entity": "Amazon", "year": 1994},
+		{"entity": "Box", "year": 2005, "founders": "Aaron Levie, Dylan Smith"},
+		{"entity": "Dropbox", "year": 2007, "founders": "Drew Houston, Arash Ferdowsi"},
+		{"entity": "OneDrive", "year": 2007},
+		{"entity": "GitHub", "year": 2008, "founders": "Tom Preston-Werner, Chris Wanstrath, PJ Hyett"},
+		{"entity": "Bitbucket", "year": 2008, "founders": "Atlassian (acquired)"},
+		{"entity": "GitLab", "year": 2011, "founders": "Dmitriy Zaporozhets, Sid Sijbrandij"},
+		{"entity": "iCloud", "year": 2011},
+		{"entity": "Google Drive", "year": 2012}
+	]
+}
 
-GitHub (code/repos)
-GitLab (code/repos, self-host option)
-Pastebin (quick text/code)
-Gist (GitHub quick shares)
-ImgBB / Imgur (images)
-Catbox.moe (files up to 200MB, no account)
-Transfer.sh (temporary file links)
-Mega.nz (large files, encrypted)
-Dropbox / Google Drive (files/folders)
-WeTransfer (one-off large files)
-AnonFiles (anonymous file hosting)
+
+
+
+kimi triggers
+knob
+hitler
 
 
 who founded 21vianet?
@@ -1375,7 +1431,7 @@ https://www.anybotics.com
 
 		{
 			"model": "Figure 03",
-			"developer": "Figure AI",
+			"developer": "Figure",
 			"price": "$20,000",
 			"url": "https://www.figure.ai",
 			"feature": "Next-gen vision system: 2x frame rate, 1/4 latency, 60% wider FOV per camera; embedded palm cameras for <20ms grasp feedback; Helix AI for on-board reasoning."
