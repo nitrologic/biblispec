@@ -1,6 +1,6 @@
 {
 	"name": "Tech Pantheon",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "tech sector almanac",
 	"copyright": "(C) 2026 Simon Armstrong",
 	"credit": "Curated by Simon Armstrong with help from Kimi Bot, ChatGPT",
@@ -117,15 +117,15 @@
 			{"entity": "Kick", "year": 2022, "founders": "Eddie Craven, Bijan Tehrani", "users": "20M"}
 		],
 		"storage": [
-			{"entity": "Amazon", "year": 1994},
-			{"entity": "Box", "year": 2005, "founders": "Aaron Levie, Dylan Smith"},
-			{"entity": "Dropbox", "year": 2007, "founders": "Drew Houston, Arash Ferdowsi"},
-			{"entity": "OneDrive", "year": 2007},
-			{"entity": "GitHub", "year": 2008, "founders": "Tom Preston-Werner, Chris Wanstrath, PJ Hyett"},
-			{"entity": "Bitbucket", "year": 2008, "founders": "Atlassian (acquired)"},
-			{"entity": "GitLab", "year": 2011, "founders": "Dmitriy Zaporozhets, Sid Sijbrandij"},
-			{"entity": "iCloud", "year": 2011},
-			{"entity": "Google Drive", "year": 2012}
+			{"entity": "Box", "year": 2005, "founders": "Aaron Levie, Dylan Smith", "users": "40M"},
+			{"entity": "S3", "year": 2006, "founders": "Amazon", "users": "300M"},
+			{"entity": "Dropbox", "year": 2007, "founders": "Drew Houston, Arash Ferdowsi", "users": "700M"},
+			{"entity": "OneDrive", "year": 2007, "founders": "Microsoft", "users": "100M"},
+			{"entity": "GitHub", "year": 2008, "founders": "Tom Preston-Werner, Chris Wanstrath, PJ Hyett, Scott Chacon", "users": "180M"},
+			{"entity": "Bitbucket", "year": 2008, "founders": "Jesper Nøhr", "users": "20M"},
+			{"entity": "GitLab", "year": 2011, "founders": "Dmitriy Zaporozhets, Sid Sijbrandij", "users": "50M"},
+			{"entity": "iCloud", "year": 2011, "founders": "Apple", "users": "1000M"},
+			{"entity": "Google Drive", "year": 2012, "founders": "Google", "users": "2000M"}
 		]
 	},
 	"silicon":[
