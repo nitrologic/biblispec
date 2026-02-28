@@ -1,3 +1,11 @@
+{"entity": "Arianespace", "founders": "CNES (French Space Agency)", "year": 1980, "country": "France"},
+{"entity": "Avio", "founders": "Italian government/Finmeccanica", "year": 1989, "country": "Italy"},
+{"entity": "Gilmour Space", "founders": "Adam Gilmour, James Gilmour", "year": 2012, "country": "Australia"},
+{"entity": "SpaceIL", "founders": "Yariv Bash, Kfir Damari, Yonatan Winetraub", "year": 2011, "country": "Israel"},
+{"entity": "Innospace", "founders": "Kim Soo-jong", "year": 2017, "country": "South Korea"},
+{"entity": "Orbex", "founders": "Chris Larmour, Kristian von Bengtson", "year": 2015, "country": "United Kingdom"},
+{"entity": "Firefly Aerospace", "founders": "Tom Markusic, PJ King, Michael Blum", "year": 2014, "country": "USA"}
+
 kimi triggers
 knob
 hitler

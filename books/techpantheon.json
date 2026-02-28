@@ -1,9 +1,9 @@
 {
 	"name": "Tech Pantheon",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"description": "tech sector almanac",
 	"copyright": "(C) 2026 Simon Armstrong",
-	"credit": "Curated by Simon Armstrong with help from Kimi Bot, ChatGPT",
+	"credit": "Curated by Simon Armstrong with help from Kimi, ChatGPT",
 	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
 	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
 	"megachads" : {
@@ -38,7 +38,7 @@
 			{ "name": "Nubank", "marketCap": "41b", "archetype": "latam neobank juggernaut", "location": "são paulo" },
 			{ "name": "Klarna", "marketCap": "31b", "archetype": "buy-now-pay-later viking", "location": "stockholm" },
 			{ "name": "Canva", "marketCap": "40b", "archetype": "design-for-the-people wizard", "location": "sydney" },
-			{ "name": "Byju's", "marketCap": "22b (down-round)", "archetype": "ed-tech elephant", "location": "bangalore" }
+			{ "name": "Byju's", "marketCap": "22b", "archetype": "ed-tech elephant", "location": "bangalore" }
 		]
 	},
 	"cloud":{
@@ -165,15 +165,22 @@
 		{"entity": "Cambricon", "founders": "Chen Tianshi", "year": 2016, "sector": "AI Chips", "country": "China", "cap": 30}
 	],
 	"rockets":[
+		{"entity": "Arianespace", "founders": "CNES (French Space Agency)", "year": 1980, "country": "France"},
+		{"entity": "Avio", "founders": "Italian government/Finmeccanica", "year": 1989, "country": "Italy"},
 		{"entity": "Blue Origin", "founders": "Jeff Bezos", "year": 2000, "country": "USA"},
 		{"entity": "SpaceX", "founders": "Elon Musk", "year": 2002, "country": "USA"},
 		{"entity": "Rocket Lab", "founders": "Peter Beck", "year": 2006, "country": "New Zealand"},
 		{"entity": "PLD Space", "founders": "Raúl Torres, Raúl Verdú, José Enrique Martínez", "year": 2011, "country": "Spain"},
+		{"entity": "SpaceIL", "founders": "Yariv Bash, Kfir Damari, Yonatan Winetraub", "year": 2011, "country": "Israel"},
+		{"entity": "Gilmour Space", "founders": "Adam Gilmour, James Gilmour", "year": 2012, "country": "Australia"},
 		{"entity": "Interstellar Technologies", "founders": "Takafumi Horie, Takahiro Inagawa", "year": 2013, "country": "Japan"},
+		{"entity": "Firefly Aerospace", "founders": "Tom Markusic, PJ King, Michael Blum", "year": 2014, "country": "USA"},
 		{"entity": "Relativity Space", "founders": "Tim Ellis, Jordan Noone", "year": 2015, "country": "USA"},
 		{"entity": "LandSpace", "founders": "Zhang Changwu", "year": 2015, "country": "China"},
-		{"entity": "iSpace", "founders": "Chinese team (limited public info)", "year": 2016, "country": "China"},
+		{"entity": "Orbex", "founders": "Jonas Bjarnø, Chris Larmour", "year": 2015, "country": "United Kingdom"},
+		{"entity": "iSpace", "founders": "Wang Xing (王兴)", "year": 2016, "country": "China"},
 		{"entity": "Skyrora", "founders": "Volodymyr Levykin, Scott Hammond", "year": 2017, "country": "United Kingdom"},
+		{"entity": "Innospace", "founders": "Kim Soo-jong", "year": 2017, "country": "South Korea"},
 		{"entity": "Galactic Energy", "founders": "Wang Haoyu", "year": 2018, "country": "China"},
 		{"entity": "Isar Aerospace", "founders": "Daniel Metzler, Markus Brandl, Josef Peter Fleischmann", "year": 2018, "country": "Germany"},
 		{"entity": "Skyroot Aerospace", "founders": "Pawan Kumar Chandana, Naga Bharath Daka", "year": 2018, "country": "India"}
