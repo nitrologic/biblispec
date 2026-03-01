@@ -27,8 +27,6 @@ The data payload for this project is [biblispec.json](biblispec.json)
 	- animal kingdom locomotion stats
 - robots [books/robots.json](books/robots.json)
 	- experimental low latency robot lists
-- news [news.json](news.json)
-	- experimental daily headlines
 - phrases [books/phrases.json](books/phrases.json)
 	- "你好": "nǐ hǎo"
 - songs [books/songs.json](books/songs.json)
