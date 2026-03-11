@@ -1,3 +1,5 @@
+on schematic diagrams why is letter U used for integrated circuits
+
 {"entity": "Arianespace", "founders": "CNES (French Space Agency)", "year": 1980, "country": "France"},
 {"entity": "Avio", "founders": "Italian government/Finmeccanica", "year": 1989, "country": "Italy"},
 {"entity": "Gilmour Space", "founders": "Adam Gilmour, James Gilmour", "year": 2012, "country": "Australia"},

@@ -264,30 +264,61 @@
 			"9007":{"bits":{"LIGHT_PEN_Y":"FF"},"address":36871,"value":0},
 			"9008":{"bits":{"PADDLE_1":"FF"},"address":36872,"value":255},
 			"9009":{"bits":{"PADDLE_2":"FF"},"address":36873,"value":255},
-			"900a":{"bits":{"BASS":"FF"},"address":36844,"value":0},
-			"900b":{"bits":{"ALTO":"FF"},"address":36875,"value":0},
-			"900c":{"bits":{"SOPRANO":"FF"},"address":36876,"value":0},
-			"900d":{"bits":{"NOISE":"FF"},"address":36877,"value":0},
-			"900e":{"bits":{"AUX_COLOR":"F0","VOLUME":"0F"},"address":36878,"value":0},
-			"900f":{"bits":{"SREEN_COLOR":"F0","REVERSE":"08","BORDER":"07"},"address":36879,"value":27}
+			"900A":{"bits":{"BASS":"FF"},"address":36844,"value":0},
+			"900B":{"bits":{"ALTO":"FF"},"address":36875,"value":0},
+			"900C":{"bits":{"SOPRANO":"FF"},"address":36876,"value":0},
+			"900D":{"bits":{"NOISE":"FF"},"address":36877,"value":0},
+			"900E":{"bits":{"AUX_COLOR":"F0","VOLUME":"0F"},"address":36878,"value":0},
+			"900F":{"bits":{"SREEN_COLOR":"F0","REVERSE":"08","BORDER":"07"},"address":36879,"value":27}
 		},
 		"VIA1":{
 			"9110":{"label":"PORT_B","address":37136},
 			"9111":{"label":"PORT_A_LATCH","address":37137},
 			"9112":{"label":"DDR_B","address":37138},
 			"9113":{"label":"DDR_A","address":37139},
-			"9114":{"label":"PORT_B","address":37140},
-			"9115":{"label":"PORT_B","address":37141},
-			"9116":{"label":"TIMER1_LO","address":37142},
-			"9117":{"label":"TIMER1_HI","address":37143},
-			"9118":{"label":"TIMER1_LOAD_LO","address":37144},
-			"9119":{"label":"TIMER2_LOAD_HI","address":37145},
+			"9114":{"label":"TIMER1_LO","address":37140},
+			"9115":{"label":"TIMER1_HI","address":37141},
+			"9116":{"label":"TIMER1_LOAD_LO","address":37142},
+			"9117":{"label":"TIMER1_LOAD_HI","address":37143},
+			"9118":{"label":"TIMER2_LO","address":37144},
+			"9119":{"label":"TIMER2_HI","address":37145},
 			"911A":{"label":"SHIFT_REGISTER","address":37146},
 			"911B":{"label":"AUXILIARY_CTL","address":37147,"value":64},
 			"911C":{"label":"PERIPHERAL_CTL","address":37148,"value":254},
 			"911D":{"label":"INTERRUPT_FLAGS","address":37149,"value":0},
 			"911E":{"label":"INTERRUPT_ENABLE","address":37150,"value":130},
 			"911F":{"label":"PORT_A","address":37151}
+		},
+		"VIA2":{
+			"9120":{"label":"PORT_B","address":37152},
+			"9121":{"label":"PORT_A_LATCH","address":37153},
+			"9122":{"label":"DDR_B","address":37154},
+			"9123":{"label":"DDR_A","address":37155},
+			"9124":{"label":"TIMER1_LO","address":37156},
+			"9125":{"label":"TIMER1_HI","address":37157},
+			"9126":{"label":"TIMER1_LOAD_LO","address":37158},
+			"9127":{"label":"TIMER1_LOAD_HI","address":37159},
+			"9128":{"label":"TIMER2_LO","address":37160},
+			"9129":{"label":"TIMER2_HI","address":37161},
+			"912A":{"label":"SHIFT_REGISTER","address":37162},
+			"912B":{"label":"AUXILIARY_CTL","address":37163,"value":64},
+			"912C":{"label":"PERIPHERAL_CTL","address":37164,"value":254},
+			"912D":{"label":"INTERRUPT_FLAGS","address":37165,"value":0},
+			"912E":{"label":"INTERRUPT_ENABLE","address":37166,"value":130},
+			"912F":{"label":"PORT_A","address":37167}
 		}
+	},
+	"basic":{
+		"bot":{"plain":"1001","expanded":"1201"},
+		"top":{"plain":"c000","expanded":"c000"},
+		"tokens": [
+			"END","FOR","NEXT","DATA","INPUT#","INPUT","DIM","READ","LET","GOTO","RUN","IF",
+			"RESTORE","GOSUB","RETURN","REM","STOP","ON","WAIT","LOAD","SAVE","VERIFY","DEF",
+			"POKE","PRINT#","PRINT","CONT","LIST","CLR","CMD","SYS","OPEN","CLOSE","GET",
+			"NEW","TAB(","TO","FN","SPC(","NOT","STEP","AND","OR","+","-","*","/","^",">","=","<",
+			"ABS","ASC","ATN","CHR$","COS","EXP","INT","LEN","LEFT$","MID$","RIGHT$","RND","SGN",
+			"SIN","SQR","TAN","LOG","USR","VAL"
+		],
+		"format":["link.w","line.w","tokens.b[]","NULL"]
 	}
 }
