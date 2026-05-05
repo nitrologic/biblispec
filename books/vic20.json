@@ -16,14 +16,31 @@
 		"basic":"CBM BASIC V2",
 		"display":{"colums":22,"rows":23,"colors":16},
 		"colors":[
-			"BLACK","WHITE","RED","CYAN","PURPLE","GREEN","BLUE","YELLOW",			
+			"BLACK","WHITE","RED","CYAN","PURPLE","GREEN","BLUE","YELLOW",
 			"ORANGE","ORANGE2","PINK","CYAN2","PURPLE2","GREEN2","BLUE2","YELLOW2"
 		],
 		"timing":{
 			"pal":{"crystal":17.734475,"cpu":0.985248,"video":50,"lines":312,"vblank":30},
 			"ntsc":{"crystal":14.31818,"cpu":1.022727,"video":60,"lines":262,"vblank":20}
+		},
+		"credits":{
+			"engineers":[
+				{"name":"Bill Mensch","role":"6502 CPU Logic Design"},
+				{"name":"Rod Orgill","role":"6502 CPU Circuit Design"},
+				{"name":"Harry Bawcom","role":"6502 CPU Verification"},
+				{"name":"Charles Winterble", "role": "MOS Chip Engineering"},
+				{"name":"PET Team","role":"VIA Input/Output"},
+				{"name":"Robert Yannes","role":"MicroPET Prototype"},
+				{"name":"Robert Russell", "role": "Vixen System integration"},				
+				{"name":"Albert Charpentier","role":"VIC video interface chip"},
+				{"name":"Michael Tomczyk","role":"VIC20 Czar"},
+				{"name":"Jack Tramiel","role":"Commodore Boss"}
+			]
 		}
 	},
+	"links":[
+		{"url":"https://www.youtube.com/watch?v=rs6J_PP7O7k"}
+	],
 	"schematic":{
 		"UDE4":{"name":"CPU","part":"MPS 6502A","use":"microprocessor"},
 		"UAB7":{"name":"VIC","part":"MPS 6560","use":"video audio paddles"},
@@ -50,7 +67,7 @@
 			{"hex":"8000","address":32768,"bytes":4096,"label":"CHARACTER ROM"},
 			{"hex":"A000","address":40960,"bytes":8192,"label":"EXPANSION ROM"},
 			{"hex":"C000","address":49152,"bytes":8192,"label":"BASIC ROM"},
-			{"hex":"E000","address":57344,"bytes":8192,"label":"KERNAL ROM"}	
+			{"hex":"E000","address":57344,"bytes":8192,"label":"KERNAL ROM"}
 		],
 		"reserved":[
 			{"hex":"0000","address":0,"bytes":1,"label":"Jump for USR"},
@@ -319,6 +336,11 @@
 			"ABS","ASC","ATN","CHR$","COS","EXP","INT","LEN","LEFT$","MID$","RIGHT$","RND","SGN",
 			"SIN","SQR","TAN","LOG","USR","VAL"
 		],
-		"format":["link.w","line.w","tokens.b[]","NULL"]
+		"format":["link.w","line.w","tokens.b[]","NULL"],
+		"vars":{
+			"TI$":{"label":"HHMMSS"},
+			"TI":{"label":"Jiffies"},
+			"ST":{"label":"Status"}
+		}
 	}
 }

@@ -1,3 +1,30 @@
+local tech pantheon
+
+gaming
+2006 — ninja kiwi — harris brothers — $100m+ — 18 years
+2014 — rocketwerkz — dean hall — tencent backed — 11 years
+2007 — pikpok — mario wynands, tyrone mcauley, stuart middleton — $20m — 18 years
+2016 — grindstone — ? — $100m+ — 9 years
+2019 — sumo digital — ? — $500m+ — 8 years
+2018 — path of exile — chris wilson, jonathan rogers, mark rogers — $100m+ stake — 12 years
+
+space
+2006 — rocket lab — peter beck — $6b — 19 years
+2014 — dawn aerospace — stefan powell, james powell — $50m raised — 11 years
+
+embedded electronics
+2005 — fusion — peter maire — $100m+ — 12 years
+2004 — navman — peter maire — $200m+ — 11 years
+2016 — navico — peter maire — $600m — 12 years
+
+accounting software
+2006 — xero — rod drury — $11b — 18 years
+
+dj software
+1999 — serato — steve west, aj bertenshaw — $66m — 26 years
+
+
+
 on schematic diagrams why is letter U used for integrated circuits
 
 {"entity": "Arianespace", "founders": "CNES (French Space Agency)", "year": 1980, "country": "France"},

@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -1092,6 +1092,58 @@
 					"TCDO": "End Timecode",
 					"TCOD": "Start Timecode"
 				}
+			}
+		},
+		"relay": {
+			"akkadian": {
+				"name": "Akkadian",
+				"signs": {
+					"syllabic": ["𒀀","𒁀","𒂊","𒄀"], 
+					"logograms": ["𒀭","𒆳","𒈗"], 
+					"determinatives": ["𒀭","𒇽"]
+				},
+				"block": "Cuneiform",
+				"system": "logosyllabic",
+				"range": ["U+12000", "U+123FF"],
+				"tags": ["ancient", "mesopotamian", "cuneiform"],
+				"context": "Required for disambiguation, signs have multiple readings; heavy Sumerian influence.",
+				"description": "Logophonetic cuneiform script used for Akkadian (c. 2500–100 BCE).",
+				"composition": [
+					"determinative + word",
+					"logogram + phonetic complement",
+					"syllabic sequence"
+				],
+				"paths": [
+					{ "type": "logogram", "value": "ilu", "meaning": "god" },
+					{ "type": "syllabic", "value": "an" },
+					{ "type": "determinative", "semantic": "divine", "phonetic": false }
+				]
+			}
+		}
+	},
+	"schema": {
+		"relay": {
+			"type": "map",
+			"keyType": "string",
+			"valueType": {
+				"isA": "LanguageRelay",
+				"required": ["name", "signs", "block", "system", "description"],
+				"paths": {
+					"type": "array",
+					"items": { "isA": "PathItem" }
+				}
+			}
+		}
+	},
+	"types": {
+		"PathItem": {
+			"required": ["type"],
+			"properties": {
+				"type": { "type": "string" },
+				"value": { "type": "string" },
+				"meaning": { "type": "string" },
+				"semantic": { "type": "string" },
+				"phonetic": { "type": "boolean" }
 			}
 		}
 	}
