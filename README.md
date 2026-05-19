@@ -3,6 +3,29 @@
 
 A living document of linguistic latitude.
 
+# 1.4.6 spec.fenced.code.geom "◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮"
+
+```
+		"fenced":{
+			"name":"code points of visual interest",
+			"code":{
+				"geom":"◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮",
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
+				"circles":"◐◒◑◓◔◕",
+				"markdown":"↩↪↗↘↖↙◀▶✳✴",
+				"outer":"◜◝◟◞",
+				"rect":"▪▫■□▢▣",
+				"hatched":"▤▥▦▧▨▩",
+				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
+				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+				"hatch":["╲","╱","╳"],
+				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
+```
+
+
 # What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
