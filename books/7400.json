@@ -1,0 +1,43 @@
+{
+	"name": "7400 Series TTL",
+	"version": "1.0.0",
+	"description": "Industry standard TTL Parts Family",
+	"copyright": "(C) 2026 Simon Armstrong",
+	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
+	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
+	"parts":{
+		"74165":{
+			"name":"8 bit shift register",
+			"function": ["PISO"],
+			"pins":[
+				"_LOAD",
+				"CLK",
+				"E",
+				"F",
+				"G",
+				"H",
+				"_QH",
+				"GND",
+
+				"QH",
+				"SER",
+				"A",
+				"B",
+				"C",
+				"D",
+				"INH",
+				"VCC"
+			],
+			"art":[
+				"◎ 1  _LOAD    VCC 16 ◎",
+				"◎ 2  CLK      INH 15 ◎",
+				"◎ 3  E          D 14 ◎",
+				"◎ 4  F          C 13 ◎",
+				"◎ 5  G          B 12 ◎",
+				"◎ 6  H          A 11 ◎",
+				"◎ 7  _QH      SER 10 ◎",
+				"◎ 8  GND        QH 9 ◎"			
+			]
+		}
+	}
+}
