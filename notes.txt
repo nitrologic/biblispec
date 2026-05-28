@@ -1769,7 +1769,7 @@ const arrowArcs=["↩↪","⤶⤷","⤾⤿","👈👉","⤺⤻"];
 const boxChars=["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"];
 const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦";
 const starChars="✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁";
-const colorChars=["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"];
+const colorChars=["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"];
 
 
 you’d use standard citation formats (e.g., APA, MLA, Chicago)

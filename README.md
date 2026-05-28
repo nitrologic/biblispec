@@ -219,7 +219,7 @@ Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Ta
 				"hatch":["╲","╱","╳"],
 				"colorChars":[
 					"⚫⬛🖤","⚪⬜🤍",
-					"🟡🟨💛","🔴🟥❤️","🟠🟨🧡","🟢🟩💚",
+					"🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚",
 					"🔵🟦💙","🟣🟪💜","🟤🟫🤎"]
 			}
 ```
