@@ -39,6 +39,12 @@ dj software
 
 
 
+BASS 36844 $900A
+
+BASS 36844 $900A
+
+BASS 36844 $900A
+
 on schematic diagrams why is letter U used for integrated circuits
 
 {"entity": "Arianespace", "founders": "CNES (French Space Agency)", "year": 1980, "country": "France"},

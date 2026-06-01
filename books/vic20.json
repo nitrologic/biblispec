@@ -342,5 +342,20 @@
 			"TI":{"label":"Jiffies"},
 			"ST":{"label":"Status"}
 		}
+	},
+	"interrupts":{
+		"NMI":{"pin":6,"address":"FFFA","ROM":"FEA9","VECTOR":"318","HANDLER":"FEAD"},
+		"RESET":{"pin":40,"address":"FFFC","ROM":"FD22","VECTOR":"316","HANDLER":"FED2"},
+		"IRQ":{"pin":4,"address":"FFFE","ROM":"FF72","VECTOR":"314","HANDLER":"EABF"}
+	},
+	"interrupts":{
+		"NMI":{"pin":6,"address":"FFFA","ROM":"FEA9","VECTOR":"318","HANDLER":"FEAD"},
+		"RESET":{"pin":40,"address":"FFFC","ROM":"FD22","VECTOR":"316","HANDLER":"FED2"},
+		"IRQ":{"pin":4,"address":"FFFE","ROM":"FF72","VECTOR":"314","HANDLER":"EABF"}
+	},
+	"interrupts":{
+		"NMI":{"pin":6,"address":"FFFA","ROM":"FEA9","VECTOR":"318","HANDLER":"FEAD"},
+		"RESET":{"pin":40,"address":"FFFC","ROM":"FD22","VECTOR":"316","HANDLER":"FED2"},
+		"IRQ":{"pin":4,"address":"FFFE","ROM":"FF72","VECTOR":"314","HANDLER":"EABF"}
 	}
 }
