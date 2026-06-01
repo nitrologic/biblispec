@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.4.6",
+	"version": "1.4.7",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -972,7 +972,11 @@
 					"category": "So",
 					"codePoints": ["U+1F728", "U+1F73C"],
 					"range": [128808, 128828],
-					"usage": "Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol, Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper, Quicklime, Magnesia, Tutty"
+					"usage": [
+						"Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol",
+						"Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper",
+						"Quicklime, Magnesia, Tutty"
+					]
 				},
 				"🝀🝔": {
 					"name": "Operation of Alchemy",
@@ -980,7 +984,10 @@
 					"category": "So",
 					"codePoints": ["U+1F740", "U+1F754"],
 					"range": [128832, 128852],
-					"usage": "Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate, Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection"
+					"usage": [
+						"Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate",
+						"Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection"
+					]
 				},
 				"🝕🝣": {
 					"name": "Process of Alchemy",
@@ -988,7 +995,10 @@
 					"category": "So",
 					"codePoints": ["U+1F755", "U+1F763"],
 					"range": [128853, 128867],
-					"usage": "Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize"
+					"usage": [
+						"Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, ",
+						"Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize"
+					]
 				},
 				"🝤🝳": {
 					"name": "Essence of Alchemy",
@@ -996,7 +1006,11 @@
 					"category": "So",
 					"codePoints": ["U+1F764", "U+1F773"],
 					"range": [128868, 128883],
-					"usage": "Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood, Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris, Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold"
+					"usage": [
+						"Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood",
+						"Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris",
+						"Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold"
+					]
 				},
 				"㊊㊐":{
 					"name": "Moon Five Elements and Sun - Wu Xing cosmology",
@@ -1029,7 +1043,17 @@
 				"ꔀꘟ":{
 					"name": "Vai Syllabary",
 					"creator": "Momolu Duwalu Bukele",
-					"codes": "ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
+					"codes": [
+						"ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙ",
+						"ꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶ",
+						"ꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑ",
+						"ꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸ",
+						"ꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡ",
+						"ꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀ",
+						"ꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣ",
+						"ꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ",
+						"꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
+					]
 				}
 			}
 		},
