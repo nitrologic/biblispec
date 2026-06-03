@@ -3,29 +3,6 @@
 
 A living document of linguistic latitude.
 
-# 1.4.6 spec.fenced.code.geom "◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮"
-
-```
-		"fenced":{
-			"name":"code points of visual interest",
-			"code":{
-				"geom":"◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮",
-				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
-				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
-				"circles":"◐◒◑◓◔◕",
-				"markdown":"↩↪↗↘↖↙◀▶✳✴",
-				"outer":"◜◝◟◞",
-				"rect":"▪▫■□▢▣",
-				"hatched":"▤▥▦▧▨▩",
-				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
-				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
-				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
-				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
-				"hatch":["╲","╱","╳"],
-				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
-```
-
-
 # What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
@@ -502,6 +479,52 @@ All are not left facing - mirrored souls under observation
 
 # 𓎸 𓊘 𓏞 𓍹 𓊆 𓊈 𓉘 𓉙 𓉚 𓉕 𓉖 𓉛 𓉜 𓉝  𓏟 𓍺 𓊇 𓊉 𓊙 𓎹
 
+
+# number notes
+
+# ①②③④⑤⑥⑦⑧⑨⑩
+# ⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳
+
+# ⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚
+# ㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵
+# ㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿
+
+# ⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾
+
+```
+①②③④⑤⑥⑦⑧⑨⑩
+⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳
+
+⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚
+㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵
+㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿
+```
+
+
+# 1.4.6 spec.fenced.code.geom "◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮"
+
+```
+		"fenced":{
+			"name":"code points of visual interest",
+			"code":{
+				"geom":"◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮",
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
+				"circles":"◐◒◑◓◔◕",
+				"markdown":"↩↪↗↘↖↙◀▶✳✴",
+				"outer":"◜◝◟◞",
+				"rect":"▪▫■□▢▣",
+				"hatched":"▤▥▦▧▨▩",
+				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
+				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+				"hatch":["╲","╱","╳"],
+				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
+```
+
+
+
 [The entire unicode block of interest](hieroglyph.md)
 
 Note to self - maintain some [notes.txt](notes.txt) along the way. ⤺⤻
@@ -511,3 +534,4 @@ Note to self - maintain some [notes.txt](notes.txt) along the way. ⤺⤻
  👄
 👉👈
 ```
+
