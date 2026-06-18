@@ -1,0 +1,182 @@
+FSC40 = 177.34375mHz
+
+pal color clock signal details
+
+[https://chatgpt.com/c/6a21d830-5c70-83ec-a861-f30daa52ad15]
+
+For PAL, the colour information is carried by a subcarrier at:
+
+**4.43361875 MHz**
+
+This is the PAL colour clock (often called **Fsc**).
+
+Key details:
+
+* Period: **225.0 ns**
+* Wavelength within one PAL line:
+
+* 64 µs line period ÷ 225 ns ≈ **283.75 cycles per line**
+* The fractional 0.75 cycle causes the phase relationship to shift line-to-line, which is part of how PAL works.
+
+If you're generating PAL from a microcontroller or FPGA, common derived clocks are:
+
+| Multiple | Frequency      |
+| -------- | -------------- |
+| 1× Fsc   | 4.43361875 MHz |
+| 2× Fsc   | 8.8672375 MHz  |
+| 4× Fsc   | 17.734475 MHz  |
+| 8× Fsc   | 35.46895 MHz   |
+| 16× Fsc  | 70.9379 MHz    |
+
+Your 165 MHz clock gives:
+
+165 MHz ÷ 4.43361875 MHz ≈ **37.2168**
+
+which is not an integer ratio, so a simple divider won't generate an accurate colour carrier. You would typically use:
+
+* DDS/NCO synthesis
+* a PLL
+* an external crystal at a PAL-related frequency
+
+For DDS at 165 MHz:
+
+```
+phase_increment =
+    4.43361875e6 / 165e6 * 2^32
+    ≈ 115,295,902
+```
+
+Then use the phase accumulator to generate sine/cosine (or a square wave for experimentation).
+
+For composite PAL, you also need:
+
+* Burst: ~10 cycles of 4.43361875 MHz after horizontal sync.
+* U and V chroma modulation.
+* V component phase reversed on alternate lines (the "Phase Alternating Line" part of PAL).
+
+If you're building on top of an existing monochrome PAL generator, DDS is usually the easiest path to adding colour.
+
+
+is there a gap between color burst and color video data
+
+No. In standard PAL composite video, the colour burst and the active chroma information are essentially adjacent within the line structure.
+
+A typical PAL line looks like:
+
+```text
+Sync ── Back Porch ── Active Video ── Front Porch
+        ^^^^^
+        Burst
+```
+
+More specifically:
+
+```text
+|<--4.7µs-->|<-----~5.7µs------>|<------~52µs------>|
+   Sync         Back Porch         Active Video
+                Burst here
+```
+
+The burst is placed on the back porch immediately after the horizontal sync pulse. After the burst ends, there is a short remainder of the back porch before active video begins.
+
+So:
+
+* There **is a small gap** between the end of the burst and the start of active video.
+* There is **not a large blank interval** dedicated to separating burst from chroma data.
+* The receiver uses the burst to lock its colour oscillator and then immediately demodulates chroma during active video.
+
+Typical PAL values:
+
+* Sync pulse: ~4.7 µs
+* Burst: ~10 cycles of 4.43361875 MHz ≈ 2.25 µs
+* Back porch total: ~5.7 µs
+* Remaining porch after burst: roughly 1–2 µs
+
+So if you're generating PAL, the burst usually starts a few hundred nanoseconds after sync ends, lasts about 2.25 µs, then active video begins shortly after.
+
+
+
+> timing of wdc clock
+
+For **PAL-WST (World System Teletext)** the clock run-in frequency is:
+
+```text
+6.9375 MHz
+```
+
+Exactly:
+
+```text
+444 × line frequency
+444 × 15,625 Hz
+= 6,937,500 Hz
+```
+
+Each bit period is:
+
+```text
+1 / 6.9375 MHz
+= 144.144 ns
+```
+
+The teletext packet begins with:
+
+```text
+10101010 10101010
+```
+
+which is the **clock run-in**. Since that's an alternating pattern, the waveform itself is a 6.9375 MHz square wave for 16 bit times. ([PDC Live][1])
+
+A PAL teletext line typically looks like:
+
+```text
+Sync
+Burst
+Clock run-in (16 bits)
+Framing code (11100100)
+Address/data
+```
+
+The clock run-in starts approximately **12 µs after the leading edge of sync**. ([PDC Live][1])
+
+If you're generating it from a 165 MHz clock:
+
+```text
+165 MHz / 6.9375 MHz
+= 23.783783...
+```
+
+so again you'd want a DDS/NCO rather than an integer divider.
+
+One useful relationship:
+
+```text
+6.9375 MHz
+= 1.564102564 × Fsc
+```
+
+where:
+
+```text
+Fsc = 4.43361875 MHz
+```
+
+So the teletext clock is not harmonically related to the PAL colour subcarrier. The standards were chosen independently and receivers recover the teletext clock from the run-in pattern rather than deriving it from burst. ([PDC Live][1])
+
+[1]: https://pdc.ro.nu/teletext.html?utm_source=chatgpt.com "PDC Live - Teletext Transmission Details"
+
+
+
+
+
+4. DMA between FIFOs (best throughput)
+
+On RP2040/RP2350-style systems:
+
+DMA reads PIO0 RX FIFO
+DMA writes PIO1 TX FIFO
+
+This is the closest thing to “PIO FIFO chaining”
+
+This is the actual high-performance solution for video pipelines.
+
