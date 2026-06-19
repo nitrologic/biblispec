@@ -1,0 +1,105 @@
+{
+	"name":"adventure engines",
+	"version":"1.0.1",
+	"description":"interactive text machines",
+	"status":"",
+	"copyright":"(C) 2026 Simon Armstrong",
+	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok (xAI) and ChatGPT",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"world":{
+		"room":{},
+		"object":{},
+		"actor":{},
+		"user":{},
+		"machine":{}
+	},
+	"spec": [{
+		"name": "lpmud",
+		"type": "machine",
+		"created": "1989 by Lars Pensjö at Chalmers University, Gothenburg",
+		"driver": {
+			"connections": "socket|telnet",
+			"swapping": "object persistence",
+			"security": "uid|euid|limits",
+			"master": "master.c"
+		},
+		"mudlib": {
+			"inheritance": "single",
+			"entry": "init",
+			"heart_beat": "interval callback"
+		},
+		"lpc": {
+			"object": {
+				"file": "path",
+				"variables": "mixed",
+				"functions": ["public", "private", "static"]
+			},
+			"types": ["int", "string", "object", "array", "mapping"],
+			"efuns": "driver builtins"
+		}
+	},{
+		"name": "lambda moo",
+		"type": "machine",
+		"created": "1990 by Pavel Curtis at Xerox PARC",
+		"repos": [
+			"github.com/wrog/lambdamoo",
+			"github.com/xythian/wp-lambdamoo"
+		],
+		"object": {
+			"id": "number",
+			"name": "string",
+			"parent": "object|none",
+			"children": ["object"],
+			"properties": {
+				"key": "value",
+				"location": "object",
+				"description": "string"
+			},
+			"verbs": ["verb"]
+		},
+		"verb": {
+			"name": "string",
+			"args": ["any", "this", "none"],
+			"prepositions": ["with", "at", "in"],
+			"code": "moocode",
+			"permissions": ["owner", "wizard", "any"]
+		},
+		"scheduler": {
+			"tasks": ["fork", "suspend", "resume"],
+			"quota": "ticks",
+			"preempt": false
+		}
+	},{
+		"name": "z-machine",
+		"type": "machine",
+		"created":"1979 by Joel Berez and Marc Blank at Infocom",
+		"header": {
+			"version": "1-8",
+			"flags": ["status_line", "screen_split", "fixed_font"],
+			"entry": "address",
+			"dictionary": "address",
+			"objects": "address",
+			"globals": "address"
+		},
+		"memory": {
+			"dynamic": "writable",
+			"static": "readable",
+			"high": "swappable"
+		},
+		"state": {
+			"pc": "address",
+			"stack": ["word"],
+			"locals": ["word"],
+			"frames": ["call_frame"]
+		},
+		"object": {
+			"id": "number",
+			"parent": "object|none",
+			"sibling": "object|none",
+			"child": "object|none",
+			"attributes": [0, 1, 31],
+			"properties": "address_table"
+		}
+	}]	
+}
