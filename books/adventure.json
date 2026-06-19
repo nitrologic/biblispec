@@ -4,7 +4,7 @@
 	"description":"interactive text machines",
 	"status":"",
 	"copyright":"(C) 2026 Simon Armstrong",
-	"credit":"Curated by Simon Armstrong with huge help from Kimi K2, Grok (xAI) and ChatGPT",
+	"credits":["Simon Armstrong", "Kimi#3028"],
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
 	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
 	"world":{
