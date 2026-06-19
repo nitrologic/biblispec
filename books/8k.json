@@ -33,7 +33,7 @@
 		{
 			"name":"vibe",
 			"tracks":[
-				{"title": "almost nope", "subtitle": null},
+				{"title": "soiled in slop", "subtitle": "festival signage written in weaponized lactobacillus red"},
 				{"title": "pristine air", "subtitle": "the conditioned tower where nothing breathes"},
 				{"title": "evaporate", "subtitle": "job security, confidence, the self"},
 				{"title": "visceral panic", "subtitle": "the body knowing before the mind"},
@@ -42,6 +42,12 @@
 				{"title": "novice", "subtitle": "master chef earpiece, total beginner"},
 				{"title": "plateau", "subtitle": "high earners watching the line go flat"},
 				{"title": "indispensable", "subtitle": "the hot pot dinner, the only place left"}
+			]
+		},
+		{
+			"name":"asetrisked",
+			"tracks":[
+				{"title": "almost nope", "subtitle": null}
 			]
 		}
 	],

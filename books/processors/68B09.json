@@ -1,0 +1,139 @@
+{
+	"cpu": "68B09",
+	"design team": "Terry Ritter and Joel Boney",
+	"copyright": "Motorola 1978",
+	"registers": {
+		"8bit": ["A", "B", "DP"],
+		"16bit": ["D", "X", "Y", "U", "S", "PC"],
+		"cc": ["E", "F", "H", "I", "N", "Z", "V", "C"]
+	},
+	"addressing_modes": {
+		"inherent": "no operands",
+		"immediate": "#value",
+		"direct": "<addr",
+		"extended": ">addr",
+		"indexed": ",X ,Y ,U ,S with offsets",
+		"relative": "8bit or 16bit offset"
+	},
+	"instructions": {
+		"load_store": {
+			"LDA": "load A from memory",
+			"LDB": "load B from memory",
+			"LDD": "load D from memory",
+			"LDX": "load X from memory",
+			"LDY": "load Y from memory",
+			"LDU": "load U from memory",
+			"LDS": "load S from memory",
+			"STA": "store A to memory",
+			"STB": "store B to memory",
+			"STD": "store D to memory",
+			"STX": "store X to memory",
+			"STY": "store Y to memory",
+			"STU": "store U to memory",
+			"STS": "store S to memory"
+		},
+		"transfer_exchange": {
+			"TFR": "transfer register to register",
+			"EXG": "exchange registers",
+			"LEAX": "load effective address to X",
+			"LEAY": "load effective address to Y",
+			"LEAU": "load effective address to U",
+			"LEAS": "load effective address to S"
+		},
+		"arithmetic": {
+			"ADDA": "add memory to A",
+			"ADDB": "add memory to B",
+			"ADDD": "add memory to D",
+			"ADCA": "add with carry to A",
+			"ADCB": "add with carry to B",
+			"SUBA": "subtract memory from A",
+			"SUBB": "subtract memory from B",
+			"SUBD": "subtract memory from D",
+			"SBCA": "subtract with carry from A",
+			"SBCB": "subtract with carry from B",
+			"MUL": "unsigned multiply A*B->D",
+			"NEGA": "negate A",
+			"NEGB": "negate B",
+			"NEG": "negate memory",
+			"INCA": "increment A",
+			"INCB": "increment B",
+			"INC": "increment memory", 
+			"DECA": "decrement A",
+			"DECB": "decrement B",
+			"DEC": "decrement memory"
+		},
+		"logic": {
+			"ANDA": "AND memory with A",
+			"ANDB": "AND memory with B",
+			"ORA": "OR memory with A",
+			"ORB": "OR memory with B",
+			"EORA": "XOR memory with A",
+			"EORB": "XOR memory with B",
+			"COMA": "complement A",
+			"COMB": "complement B",
+			"COM": "complement memory",
+			"BITA": "bit test A",
+			"BITB": "bit test B"
+		},
+		"shift_rotate": {
+			"LSRA": "logical shift right A",
+			"LSRB": "logical shift right B",
+			"LSR": "logical shift right memory",
+			"LSLA": "logical shift left A",
+			"LSLB": "logical shift left B",
+			"LSL": "logical shift left memory",
+			"ASRA": "arithmetic shift right A",
+			"ASRB": "arithmetic shift right B",
+			"ASR": "arithmetic shift right memory",
+			"ROLA": "rotate left through carry A",
+			"ROLB": "rotate left through carry B",
+			"ROL": "rotate left through carry memory",
+			"RORA": "rotate right through carry A",
+			"RORB": "rotate right through carry B",
+			"ROR": "rotate right through carry memory"
+		},
+		"branch": {
+			"BRA": "branch always",
+			"BRN": "branch never",
+			"BCC": "branch if carry clear",
+			"BCS": "branch if carry set",
+			"BEQ": "branch if equal",
+			"BNE": "branch if not equal",
+			"BPL": "branch if plus",
+			"BMI": "branch if minus",
+			"BVC": "branch if overflow clear",
+			"BVS": "branch if overflow set",
+			"BGE": "branch if greater or equal",
+			"BGT": "branch if greater than",
+			"BLE": "branch if less or equal",
+			"BLT": "branch if less than",
+			"LBRA": "long branch always",
+			"LBSR": "long branch to subroutine"
+		},
+		"jump_subroutine": {
+			"JMP": "jump",
+			"JSR": "jump to subroutine",
+			"BSR": "branch to subroutine",
+			"RTS": "return from subroutine",
+			"RTI": "return from interrupt"
+		},
+		"stack": {
+			"PSHS": "push registers to S",
+			"PULS": "pull registers from S",
+			"PSHU": "push registers to U",
+			"PULU": "pull registers from U"
+		},
+		"interrupt": {
+			"SWI": "software interrupt",
+			"SWI2": "software interrupt 2",
+			"SWI3": "software interrupt 3",
+			"CWAI": "clear and wait for interrupt",
+			"SYNC": "synchronize"
+		},
+		"condition": {
+			"ANDCC": "AND with condition codes",
+			"ORCC": "OR with condition codes",
+			"SEX": "sign extend B to D"
+		}
+	}
+}
