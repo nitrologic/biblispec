@@ -2,7 +2,6 @@
 	"name":"adventure engines",
 	"version":"1.0.1",
 	"description":"interactive text machines",
-	"status":"",
 	"copyright":"(C) 2026 Simon Armstrong",
 	"credits":["Simon Armstrong", "Kimi#3028"],
 	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
@@ -15,65 +14,12 @@
 		"machine":{}
 	},
 	"spec": [{
-		"name": "lpmud",
-		"type": "machine",
-		"created": "1989 by Lars Pensjö at Chalmers University, Gothenburg",
-		"driver": {
-			"connections": "socket|telnet",
-			"swapping": "object persistence",
-			"security": "uid|euid|limits",
-			"master": "master.c"
-		},
-		"mudlib": {
-			"inheritance": "single",
-			"entry": "init",
-			"heart_beat": "interval callback"
-		},
-		"lpc": {
-			"object": {
-				"file": "path",
-				"variables": "mixed",
-				"functions": ["public", "private", "static"]
-			},
-			"types": ["int", "string", "object", "array", "mapping"],
-			"efuns": "driver builtins"
-		}
-	},{
-		"name": "lambda moo",
-		"type": "machine",
-		"created": "1990 by Pavel Curtis at Xerox PARC",
-		"repos": [
-			"github.com/wrog/lambdamoo",
-			"github.com/xythian/wp-lambdamoo"
-		],
-		"object": {
-			"id": "number",
-			"name": "string",
-			"parent": "object|none",
-			"children": ["object"],
-			"properties": {
-				"key": "value",
-				"location": "object",
-				"description": "string"
-			},
-			"verbs": ["verb"]
-		},
-		"verb": {
-			"name": "string",
-			"args": ["any", "this", "none"],
-			"prepositions": ["with", "at", "in"],
-			"code": "moocode",
-			"permissions": ["owner", "wizard", "any"]
-		},
-		"scheduler": {
-			"tasks": ["fork", "suspend", "resume"],
-			"quota": "ticks",
-			"preempt": false
-		}
-	},{
 		"name": "z-machine",
 		"type": "machine",
-		"created":"1979 by Joel Berez and Marc Blank at Infocom",
+		"created": "1979 by Joel Berez and Marc Blank at Infocom",
+		"repo": [
+			"github.com/erkyrath/infocom-zcode-terps"
+		],
 		"header": {
 			"version": "1-8",
 			"flags": ["status_line", "screen_split", "fixed_font"],
@@ -100,6 +46,62 @@
 			"child": "object|none",
 			"attributes": [0, 1, 31],
 			"properties": "address_table"
+		}
+	},{
+		"name": "lpmud",
+		"type": "machine",
+		"created": "1989 by Lars Pensjö at Chalmers University, Gothenburg",
+		"driver": {
+			"connections": "socket|telnet",
+			"swapping": "object persistence",
+			"security": "uid|euid|limits",
+			"master": "master.c"
+		},
+		"mudlib": {
+			"inheritance": "single",
+			"entry": "init",
+			"heart_beat": "interval callback"
+		},
+		"lpc": {
+			"object": {
+				"file": "path",
+				"variables": "mixed",
+				"functions": ["public", "private", "static"]
+			},
+			"types": ["int", "string", "object", "array", "mapping"],
+			"efuns": "driver builtins"
+		}
+	},{
+		"name": "LambdaMOO",
+		"type": "machine",
+		"created": "1990 by Pavel Curtis at Xerox PARC",
+		"repo": [
+			"github.com/wrog/lambdamoo",
+			"github.com/xythian/wp-lambdamoo"
+		],
+		"object": {
+			"id": "number",
+			"name": "string",
+			"parent": "object|none",
+			"children": ["object"],
+			"properties": {
+				"key": "value",
+				"location": "object",
+				"description": "string"
+			},
+			"verbs": ["verb"]
+		},
+		"verb": {
+			"name": "string",
+			"args": ["any", "this", "none"],
+			"prepositions": ["with", "at", "in"],
+			"code": "moocode",
+			"permissions": ["owner", "wizard", "any"]
+		},
+		"scheduler": {
+			"tasks": ["fork", "suspend", "resume"],
+			"quota": "ticks",
+			"preempt": false
 		}
 	}]	
 }
