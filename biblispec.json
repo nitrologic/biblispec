@@ -1,11 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-<<<<<<< HEAD
-	"version": "1.5.0",
-=======
 	"version": "1.5.1",
->>>>>>> 7ca6f207e11a0a9cc8a7ecd0b279c866d18a3ff2
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
