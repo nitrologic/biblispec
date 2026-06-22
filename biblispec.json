@@ -1,7 +1,11 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
+<<<<<<< HEAD
 	"version": "1.5.0",
+=======
+	"version": "1.5.1",
+>>>>>>> 7ca6f207e11a0a9cc8a7ecd0b279c866d18a3ff2
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -16,9 +20,24 @@
 	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
 	"separator": "𓆛𓆜𓆝𓆞𓆟",
 	"spec": {
+		"numbers":{
+			"wide":"０１２３４５６７８９",
+			"mathematical":"𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+			"sans-bold":"𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+			"double-struck":"𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+			"monospace":"𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+			"spots":"➀➁➂➃➄➅➆➇➈➉",
+			"dots":"🄌➊➋➌➍➎➏➐➑➒➓",
+			"enclosed1":"⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+			"enclosed2":"㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿",
+			"tens":"㉈㉉㉊㉋㉌㉍㉎㉏",
+			"holes":"⓿❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴",
+			"subscript":"₀₁₂₃₄₅₆₇₈₉",
+			"superscript":"⁰¹²³⁴⁵⁶⁷⁸⁹"
+		},
 		"digits":[
 			{ "name": "ASCII", "value": "0123456789" },
-			{ "name": "CJK", "value": "〇一二三四五六七八九" },
+			{ "name": "CJK", "value": "〇一二三四五六七八九十" },
 			{ "name": "Devanagari", "value": "०१२३४५६७८९" },
 			{ "name": "Bengali", "value": "০১২৩৪৫৬৭৮৯" },
 			{ "name": "Gurmukhi", "value": "੦੧੨੩੪੫੬੭੮੯" },
@@ -28,7 +47,6 @@
 			{ "name": "Telugu", "value": "౦౧౨౩౪౫౬౭౮౯" },
 			{ "name": "Kannada", "value": "೦೧೨೩೪೫೬೭೮೯" },
 			{ "name": "Malayalam", "value": "൦൧൨൩൪൫൬൭൮൯" },
-			{ "name": "Sinhala", "value": "෦෧෨෩෪෫෬෭෮෯" },
 			{ "name": "Thai", "value": "๐๑๒๓๔๕๖๗๘๙" },
 			{ "name": "Lao", "value": "໐໑໒໓໔໕໖໗໘໙" },
 			{ "name": "Tibetan", "value": "༠༡༢༣༤༥༦༧༨༩" },
@@ -51,7 +69,8 @@
 			{ "name": "Javanese", "value": "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙" },
 			{ "name": "Myanmar (Tai Laing)", "value": "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹" },
 			{ "name": "Warang Citi", "value": "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙" },
-			{ "name": "Arabic (Iran)", "value": "٠١٢٣٤٥٦٧٨٩" }
+			{ "name": "Persian", "value": "٠١٢٣٤٥٦٧٨٩" },
+			{ "name": "Roman", "value": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ"}
 		],
 		"ASCII":{
 			"names":[
