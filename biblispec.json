@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -33,7 +33,7 @@
 		},
 		"digits":[
 			{ "name": "ASCII", "value": "0123456789" },
-			{ "name": "CJK", "value": "〇一二三四五六七八九" },
+			{ "name": "CJK", "value": "〇一二三四五六七八九十" },
 			{ "name": "Devanagari", "value": "०१२३४५६७८९" },
 			{ "name": "Bengali", "value": "০১২৩৪৫৬৭৮৯" },
 			{ "name": "Gurmukhi", "value": "੦੧੨੩੪੫੬੭੮੯" },
@@ -65,7 +65,8 @@
 			{ "name": "Javanese", "value": "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙" },
 			{ "name": "Myanmar (Tai Laing)", "value": "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹" },
 			{ "name": "Warang Citi", "value": "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙" },
-			{ "name": "Arabic (Iran)", "value": "٠١٢٣٤٥٦٧٨٩" }
+			{ "name": "Persian", "value": "٠١٢٣٤٥٦٧٨٩" },
+			{ "name": "Roman", "value": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ"}
 		],
 		"ASCII":{
 			"names":[
