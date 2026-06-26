@@ -3,6 +3,10 @@
 
 A living document of linguistic latitude.
 
+# ⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉
+
+Math Symbols
+
 # What is bibli spec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.

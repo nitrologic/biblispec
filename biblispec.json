@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -407,6 +407,23 @@
 					"category": "Ll",
 					"codePoints": ["U+0061", "U+007A"],
 					"range": [97, 122]
+				},
+				"∧⊽":{
+					"codes": "∧∨¬⊻↑↓⊼⊽",
+					"name": "Boolean",
+					"category": "Sm",
+					"codePoints": ["U+2227", "U+2228", "U+00AC", "U+22BB", "U+2191", "U+2193", "U+22BC", "U+22BD"],
+					"usage": "∧ AND Gate, ∨ OR Gate, ¬ NOT Inverter, ⊻ XOR Gate, ↑ NAND Stroke, ↓ NOR Arrow, ⊼ NAND Gate, ⊽ NOR Gate"
+				},
+				"⧀⧉":{
+					"codes": "⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉",
+					"name": "Mathematical Various",
+					"category": "So",
+					"description": "UI Gauges and Component Blocks",
+					"block": "Mathematical Miscellaneous B Symbols",
+					"codePoints": ["U+29C0", "U+29C9"],
+					"range": [10688, 10697],
+					"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
 				},
 				"mathalpha": {
 					"name": "Mathematical Alphanumeric Symbols",

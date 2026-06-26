@@ -1,3 +1,39 @@
+"⧀⧉":{
+	"name": "Mathematical Symbols - UI Gauges and Component Blocks",
+	"codes": "⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉",
+	"category": "So",
+	"codePoints": ["U+29C0", "U+29C9"],
+	"range": [10688, 10697],
+	"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
+},
+
+
+
+"⧀⧁":{
+	"name": "Nested Less-Than and Greater-Than - Analog meter pointers",
+	"codes": "⧀⧁",
+	"category": "So",
+	"codePoints": ["U+29C0", "U+29C1"],
+	"range":,
+	"usage": "Left pointer meter, Right pointer meter"
+},
+
+
+"⧀⧅":{
+	"name": "Mathematical Nested Symbols",
+	"codes": "⧀⧁⧂⧃⧄⧅",
+	"category": "So",
+	"codePoints": ["U+29C0", "U+29C5"],
+	"range": [10688, 10693],
+	"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit"
+},
+
+⧀⧁
+29c0,29c1
+10688,10689
+
+
+
 			{ "name": "Sinhala", "value": "෦෧෨෩෪෫෬෭෮෯" },
 
 
