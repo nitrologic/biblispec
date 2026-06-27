@@ -4,1168 +4,2596 @@
 <body>
 <div style="tab-size: 2; column-rule: 2px solid grey; column-count: 3; column-gap: 10px; font-size: x-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 <pre>
-"name": "biblispec",
-"symbol": "✴",
-"version": "1.4.6",
-"description": "Bibliographic index of specifications",
-"status": "A living document of linguistic latitude",
-"copyright": "(C) 2026 Simon Armstrong",
-"license": {
-	"name": "MIT",
-	"url": "https://opensource.org/licenses/MIT"
-},
-"repository": {
-	"type": "git",
-	"url": "https://github.com/nitrologic/biblispec"
-},
-"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
-"separator": "𓆛𓆜𓆝𓆞𓆟",
-"spec": {
-	"ASCII":{
-		"names":[
-			"NUL","SOH","STX","ETX","EOT","ENQ","ACK","BEL","BS","HT","LF","VT","FF","CR","SO","SI",
-			"DLE","DC1","DC2","DC3","DC4","NAK","SYN","ETB","CAN","EM","SUB","ESC","FS","GS","RS","US",
-			"Space","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",
-			"0","1","2","3","4","5","6","7","8","9",":",";","<","=",">","?",
-			"@","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
-			"P","Q","R","S","T","U","V","W","X","Y","Z","[","\\","]","^","_",
-			"`","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
-			"p","q","r","s","t","u","v","w","x","y","z","{","|","}","Tilde","DEL"
-		]
+{
+	"name": "biblispec",
+	"symbol": "✴",
+	"version": "1.5.2",
+	"description": "Bibliographic index of specifications",
+	"status": "A living document of linguistic latitude",
+	"copyright": "(C) 2026 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
 	},
-	"ANSI":{
-		"prefix":"\u001b[",
-		"terminator":"~",
-		"modifiers":{
-			"shift":"2","alt":"3","shift_alt":"4","ctrl":"5","ctrl_shift":"6","alt_ctrl":"7","shift_alt_ctrl":"8"
-		},
-		"function_keys":[
-			"\u001bOP","\u001bOQ","\u001bOR","\u001bOS",
-			"\u001b[15~","\u001b[17~","\u001b[18~","\u001b[19~",
-			"\u001b[20~","\u001b[21~","\u001b[23~","\u001b[24~"],
-		"function_keys_mod":[
-			"\u001b[1;%P","\u001b[1;%Q","\u001b[1;%R","\u001b[1;%S",
-			"\u001b[15;%~","\u001b[17;%~","\u001b[18;%~","\u001b[19;%~",
-			"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
 	},
-	"shortcode":{
-		"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
-		"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
-		"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
-		"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
-		"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
-		"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
-		"mic":"🎙️","microphone":"🎤","headphones":"🎧",
-		"score":"🎼","music":"🎵","phone":"📱","computer":"💻","book":"📖","money":"💵",
-		"plunger":"🪠","robot":"🤖","unicorn":"🦄","thumbsup":"👍","fire":"🔥","star":"⭐","eyes":"👀",
-		"trophy":"🏆","skull":"💀","clap":"👏","100":"💯",
-		"heart":"❤️","black_heart":"🖤","white_heart":"🤍","pink_heart":"🩷",
-		"light_blue_heart":"🩵","grey_heart":"🩶","sparkling_heart":"💖","broken_heart":"💔",
-		"warning":"⚠️","question":"❓","exclamation":"❗",
-		"zzz":"💤","clock":"⏰","hourglass":"⏳",
-		"lightning":"⚡","rainbow":"🌈","moon":"🌙","sun":"☀️",
-		"cloud":"☁️","umbrella":"☔","snowman":"⛄",
-		"gift":"🎁","balloon":"🎈","rocket":"🚀",
-		"car":"🚗","plane":"✈️","bike":"🚲",
-		"football":"⚽","basketball":"🏀","tennis":"🎾","medal":"🏅",
-		"thinking":"🤔","cool":"😎","blush":"😊","sleepy":"😴","heart_eyes":"😍",
-		"eyes_wide":"😳","clown":"🤡","cowboy":"🤠",
-		"grinning":"😀","smiley":"😃","smile":"😄","grin":"😁","laughing":"😆",
-		"sweat_smile":"😅","rofl":"🤣","joy":"😂","melting_face":"🫠",
-		"face_with_peeking_eye":"🫢","saluting_face":"🫡","dotted_line_face":"🫥","face_with_diagonal_mouth":"🫣",
-		"pregnant_person":"🫄","person_with_crown":"🫅","people_hugging":"🫂",
-		"fingers_crossed":"🫰","rightwards_pushing_hand":"🫷","leftwards_pushing_hand":"🫸",
-		"palm_down_hand":"🫳","palm_up_hand":"🫴","pointing_finger":"🫵",
-		"nest_with_eggs":"🪺","empty_nest":"🪹",
-		"hook":"🪝","low_battery":"🪫","crutch":"🩼","shaking_face":"🫨",
-		"khanda":"🪯","wireless":"🛜","phoenix":"🪶","broken_chain":"⛓️‍💥","ginger_root":"🫚",
-		"hair_pick":"🪮","folding_hand_fan":"🪭","pea_pod":"🫛","hyacinth":"🪻",
-		"shovel":"🫷","troll":"🧌","wing":"🪽","pouring_liquid":"🫗",
-		"fish":"🐟","ballot":"☑","check":"✅","cross":"❎"
-	},
-	"fenced":{
-		"name":"code points of visual interest",
-		"code":{
-			"geom":"⯅⯆⯇⯈⯀⯁◆◇◈⬥⬦⬠⬟⬡⬢⬣⬤◫◬◭◮",
-			"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
-			"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
-			"circles":"◐◒◑◓◔◕",
-			"markdown":"↩↪↗↘↖↙◀▶✳✴",
-			"outer":"◜◝◟◞",
-			"rect":"▪▫■□▢▣",
-			"hatched":"▤▥▦▧▨▩",
-			"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
-			"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
-			"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
-			"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
-			"hatch":["╲","╱","╳"],
-			"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
-			"oclock":"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛",
-			"halfclock":"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧",
-			"calendar":"📅📆🗓️",
-			"squareChars":"🔳🔲✅❎",
-			"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
-			"birds":"🕊️🦅🦜🐦🐦‍⬛🐦‍🔥🦤🦩🪿🦃🐓🦉🐧🦚🦢🦆",
-			"poultry":"🐓🐔🥚🐣🐤🐥"
-		}
-	},
-	"faces":{
-		"name": "Face on profiles",
-		"profiles":{
-			"animals": "🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉",
-			"masks": "🤖👹👺👻👼👽👾😈💀",
-			"trope": "🧌🧛🧝🤠🤡👨‍👩‍👧‍👦🧙‍♂️🧙‍♀️🧚‍♂️🧜‍♂️🧞‍♂️🧟‍♂️🧞‍♀️🧟‍♀️"
+	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
+	"separator": "𓆛𓆜𓆝𓆞𓆟",
+	"spec": {
+		"numbers":{
+			"wide":"０１２３４５６７８９",
+			"mathematical":"𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+			"sans-bold":"𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+			"double-struck":"𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+			"monospace":"𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+			"spots":"➀➁➂➃➄➅➆➇➈➉",
+			"dots":"🄌➊➋➌➍➎➏➐➑➒➓",
+			"enclosed1":"⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+			"enclosed2":"㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿",
+			"tens":"㉈㉉㉊㉋㉌㉍㉎㉏",
+			"holes":"⓿❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴",
+			"subscript":"₀₁₂₃₄₅₆₇₈₉",
+			"superscript":"⁰¹²³⁴⁵⁶⁷⁸⁹"
 		},
-		"tags": ["face"]
-	},
-	"pheme":{
-		"pre61": {
-			"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
-			"nature13": "aero agro eco entom ichthyo litho meteo morpho myco nepho paleo zoo zo",
-			"body12": "angio cardio dermato gastro hemato histo neuro noso odonto osteo phreno",
-			"human11": "anthro archaeo biblio bio crimino dem ethno onco orni psycho socio",
-			"meta7": "astro eno hiero philo pomo theo vexillo"
+		"digits":[
+			{ "name": "ASCII", "value": "0123456789" },
+			{ "name": "CJK", "value": "〇一二三四五六七八九十" },
+			{ "name": "Devanagari", "value": "०१२३४५६७८९" },
+			{ "name": "Bengali", "value": "০১২৩৪৫৬৭৮৯" },
+			{ "name": "Gurmukhi", "value": "੦੧੨੩੪੫੬੭੮੯" },
+			{ "name": "Gujarati", "value": "૦૧૨૩૪૫૬૭૮૯" },
+			{ "name": "Oriya Odia", "value": "୦୧୨୩୪୫୬୭୮୯" },
+			{ "name": "Tamil", "value": "௦௧௨௩௪௫௬௭௮௯" },
+			{ "name": "Telugu", "value": "౦౧౨౩౪౫౬౭౮౯" },
+			{ "name": "Kannada", "value": "೦೧೨೩೪೫೬೭೮೯" },
+			{ "name": "Malayalam", "value": "൦൧൨൩൪൫൬൭൮൯" },
+			{ "name": "Thai", "value": "๐๑๒๓๔๕๖๗๘๙" },
+			{ "name": "Lao", "value": "໐໑໒໓໔໕໖໗໘໙" },
+			{ "name": "Tibetan", "value": "༠༡༢༣༤༥༦༧༨༩" },
+			{ "name": "Myanmar", "value": "၀၁၂၃၄၅၆၇၈၉" },
+			{ "name": "Shan", "value": "႐႑႒႓႔႕႖႗႘႙" },
+			{ "name": "Khmer", "value": "០១២៣៤៥៦៧៨៩" },
+			{ "name": "Mongolian", "value": "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙" },
+			{ "name": "Limbu", "value": "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏" },
+			{ "name": "Lepcha", "value": "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙" },
+			{ "name": "Saurashtra", "value": "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉" },
+			{ "name": "Kayah Li", "value": "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙" },
+			{ "name": "Thai (Tai Tham)", "value": "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙" },
+			{ "name": "Balinese", "value": "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹" },
+			{ "name": "Sundanese", "value": "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉" },
+			{ "name": "Vai", "value": "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩" },
+			{ "name": "Cham", "value": "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙" },
+			{ "name": "New Tai Lue", "value": "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉" },
+			{ "name": "Ol Chiki", "value": "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙" },
+			{ "name": "Meetei Mayek", "value": "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹" },
+			{ "name": "Javanese", "value": "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙" },
+			{ "name": "Myanmar (Tai Laing)", "value": "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹" },
+			{ "name": "Warang Citi", "value": "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙" },
+			{ "name": "Persian", "value": "٠١٢٣٤٥٦٧٨٩" },
+			{ "name": "Roman", "value": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ"}
+		],
+		"ASCII":{
+			"names":[
+				"NUL","SOH","STX","ETX","EOT","ENQ","ACK","BEL","BS","HT","LF","VT","FF","CR","SO","SI",
+				"DLE","DC1","DC2","DC3","DC4","NAK","SYN","ETB","CAN","EM","SUB","ESC","FS","GS","RS","US",
+				"Space","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",
+				"0","1","2","3","4","5","6","7","8","9",":",";","<","=",">","?",
+				"@","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
+				"P","Q","R","S","T","U","V","W","X","Y","Z","[","\\","]","^","_",
+				"`","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+				"p","q","r","s","t","u","v","w","x","y","z","{","|","}","Tilde","DEL"
+			]
 		},
-		"suff28":{
-			"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
-			"etc14": "al ance ence ese ism ity oid ous ty ure y archy pathy phile"
-		}
-	},
-	"scales":{
-		"name": "Common Practice Tonality",
-		"tuning": "12-TET",
-		"tags":  ["equal tempered","music scale","western","diatonic"],
-		"major":{
-			"solfege": ["do", "re", "mi", "fa", "so", "la", "ti"],
-			"numerals": ["I", "ii", "iii", "IV", "V", "vi", "vii°"],
-			"degrees": ["tonic","supertonic","mediant","subdominant","dominant","submediant","leading"],
-			"intervals": [0,2,4,5,7,9,11]
+		"ANSI":{
+			"prefix":"\u001b[",
+			"terminator":"~",
+			"modifiers":{
+				"shift":"2","alt":"3","shift_alt":"4","ctrl":"5","ctrl_shift":"6","alt_ctrl":"7","shift_alt_ctrl":"8"
+			},
+			"function_keys":[
+				"\u001bOP","\u001bOQ","\u001bOR","\u001bOS",
+				"\u001b[15~","\u001b[17~","\u001b[18~","\u001b[19~",
+				"\u001b[20~","\u001b[21~","\u001b[23~","\u001b[24~"],
+			"function_keys_mod":[
+				"\u001b[1;%P","\u001b[1;%Q","\u001b[1;%R","\u001b[1;%S",
+				"\u001b[15;%~","\u001b[17;%~","\u001b[18;%~","\u001b[19;%~",
+				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
 		},
-		"blues": {
-			"numerals": ["I", "♭III", "IV", "♭V", "V", "♭VII"],
-			"degrees": ["tonic", "minor third", "perfect fourth", "diminished fifth", "perfect fifth", "minor seventh"],
-			"intervals": [0,3,5,6,7,10]
+		"shortcode":{
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
+			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
+			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
+			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
+			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
+			"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
+			"mic":"🎙️","microphone":"🎤","headphones":"🎧",
+			"score":"🎼","music":"🎵","phone":"📱","computer":"💻","book":"📖","money":"💵",
+			"plunger":"🪠","robot":"🤖","unicorn":"🦄","thumbsup":"👍","fire":"🔥","star":"⭐","eyes":"👀",
+			"trophy":"🏆","skull":"💀","clap":"👏","100":"💯",
+			"heart":"❤️","black_heart":"🖤","white_heart":"🤍","pink_heart":"🩷","light_blue_heart":"🩵","grey_heart":"🩶","sparkling_heart":"💖","broken_heart":"💔",
+			"warning":"⚠️","question":"❓","exclamation":"❗",
+			"zzz":"💤","clock":"⏰","hourglass":"⏳",
+			"lightning":"⚡","rainbow":"🌈","moon":"🌙","sun":"☀️",
+			"cloud":"☁️","umbrella":"☔","snowman":"⛄",
+			"gift":"🎁","balloon":"🎈","rocket":"🚀",
+			"car":"🚗","plane":"✈️","bike":"🚲",
+			"football":"⚽","basketball":"🏀","tennis":"🎾","medal":"🏅",
+			"thinking":"🤔","cool":"😎","blush":"😊","sleepy":"😴","heart_eyes":"😍","eyes_wide":"😳","clown":"🤡","cowboy":"🤠",
+			"grinning":"😀","smiley":"😃","smile":"😄","grin":"😁","laughing":"😆","sweat_smile":"😅","rofl":"🤣","joy":"😂","melting_face":"🫠",
+			"face_with_peeking_eye":"🫢","saluting_face":"🫡","dotted_line_face":"🫥","face_with_diagonal_mouth":"🫣",
+			"pregnant_person":"🫄","person_with_crown":"🫅","people_hugging":"🫂",
+			"fingers_crossed":"🫰","rightwards_pushing_hand":"🫷","leftwards_pushing_hand":"🫸","palm_down_hand":"🫳","palm_up_hand":"🫴","pointing_finger":"🫵",
+			"nest_with_eggs":"🪺","empty_nest":"🪹",
+			"hook":"🪝","low_battery":"🪫","crutch":"🩼","shaking_face":"🫨",
+			"khanda":"🪯","wireless":"🛜","phoenix":"🪶","broken_chain":"⛓️‍💥","ginger_root":"🫚",
+			"hair_pick":"🪮","folding_hand_fan":"🪭","pea_pod":"🫛","hyacinth":"🪻",
+			"shovel":"🫷","troll":"🧌","wing":"🪽","pouring_liquid":"🫗",
+			"fish":"🐟","ballot":"☑","check":"✅","cross":"❎"
 		},
-		"aeolian":{
-			"numerals": ["i", "ii°", "♭III", "iv", "v", "♭VI", "♭VII"],
-			"intervals": [0,2,3,5,7,8,10]
-		},
-		"melodic-minor":{
-			"intervals": [0,2,3,5,7,9,11,12,10,8,7,5,3,2,0]
-		},
-		"harmonic-minor":{
-			"intervals": [0,2,3,5,7,8,11]
-		},
-		"chromatic":{
-			"intervals": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-		}
-	},
-	"glagolitic": {
-		"name": "Glagolitic",
-		"block": "Glagolitic",
-		"range": ["U+2C00", "U+2C5F"],
-		"description": "Slavic script (9th century), created by Cyril and Methodius.",
-		"alphabet": {
-			"upper": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰯ",
-			"lower": "ⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟ",
-			"numerals": "ⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛ"
-		},
-		"lingua": {
-			"core": "ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ",
-			"transliteration": {
-				"ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ": "Blagoslavěnĭ",
-				"ⰔⰎⰑⰂⰑ": "Slovo",
-				"ⰜⰋⰔⰕⰠ": "Čistĭ"
+		"fenced":{
+			"name":"code points of visual interest",
+			"code":{
+				"geom":"⯅⯆⯇⯈⯀⯁◆◇◈⬥⬦⬠⬟⬡⬢⬣⬤◫◬◭◮",
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
+				"circles":"◐◒◑◓◔◕",
+				"markdown":"↩↪↗↘↖↙◀▶✳✴",
+				"outer":"◜◝◟◞",
+				"rect":"▪▫■□▢▣",
+				"hatched":"▤▥▦▧▨▩",
+				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
+				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+				"hatch":["╲","╱","╳"],
+				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
+				"oclock":"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛",
+				"halfclock":"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧",
+				"calendar":"📅📆🗓️",
+				"squareChars":"🔳🔲✅❎",
+				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
+				"birds":"🕊️🦅🦜🐦🐦‍⬛🐦‍🔥🦤🦩🪿🦃🐓🦉🐧🦚🦢🦆",
+				"poultry":"🐓🐔🥚🐣🐤🐥"
 			}
 		},
-		"tags": ["slavic", "medieval", "liturgical"]
-	},
-	"linear_b": {
-		"name": "Linear B",
-		"block": "Linear B",
-		"alphabet": {
-			"codes": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉𐀊𐀋𐀍𐀎𐀏𐀐𐀑𐀒𐀓𐀔𐀕𐀖𐀗𐀘𐀙𐀚𐀛𐀜𐀝𐀞𐀟𐀠𐀡𐀢𐀣𐀤𐀥𐀦𐀨𐀩𐀪𐀫𐀬𐀭𐀮𐀯𐀰𐀱𐀲𐀳𐀴𐀵𐀶𐀷𐀸𐀹𐀺𐀼𐀽𐀿",
-			"picto1": "𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾𐂿𐃀𐃁𐃂𐃃𐃄",
-			"picto2": "𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖𐃗𐃘𐃙𐃚𐃛𐃜𐃝𐃞𐃟𐃠𐃡𐃢𐃣𐃤𐃥𐃦𐃧𐃨𐃩𐃪𐃫𐃬𐃭𐃮𐃯𐃰𐃱𐃲𐃳𐃴𐃵𐃶𐃷𐃸𐃹𐃺"
-		},
-		"range": ["U+10000", "U+1007F"],
-		"description": "Syllabic script for Mycenaean Greek (1450 BCE).",
-		"tags": ["ancient", "greek", "syllabary"],
-		"syllabary": {
-			"a": "𐀀", "e": "𐀁", "i": "𐀂", "o": "𐀃", "u": "𐀄",
-			"da": "𐀅", "de": "𐀆", "di": "𐀇", "do": "𐀈", "du": "𐀉", "ja": "𐀊", "je": "𐀋", "jo": "𐀍", "ju": "𐀎",
-			"ka": "𐀏", "ke": "𐀐", "ki": "𐀑", "ko": "𐀒", "ku": "𐀓", "ma": "𐀔", "me": "𐀕", "mi": "𐀖", "mo": "𐀗", "mu": "𐀘",
-			"na": "𐀙", "ne": "𐀚", "ni": "𐀛", "no": "𐀜", "nu": "𐀝", "pa": "𐀞", "pe": "𐀟", "pi": "𐀠", "po": "𐀡", "pu": "𐀢",
-			"qa": "𐀣", "qe": "𐀤", "qi": "𐀥", "qo": "𐀦", "ra": "𐀨", "re": "𐀩", "ri": "𐀪", "ro": "𐀫", "ru": "𐀬",
-			"sa": "𐀭", "se": "𐀮", "si": "𐀯", "so": "𐀰", "su": "𐀱", "ta": "𐀲", "te": "𐀳", "ti": "𐀴", "to": "𐀵", "tu": "𐀶",
-			"wa": "𐀷", "we": "𐀸", "wi": "𐀹", "wo": "𐀺", "za": "𐀼", "ze": "𐀽", "zo": "𐀿"
-		},
-		"ideograms": {
-			"mytripod": "𐃆", "spear": "𐃐", "man": "𐂂", "woman": "𐂃", "horse": "𐂄",
-			"olive": "𐂕", "wine": "𐂈", "chariot": "𐃏", "sheep": "𐃉", "grain": "𐃒", "figs": "𐃔",
-			"cloth": "𐃗", "bronze": "𐃘", "gold": "𐃙", "b146": "𐂞", "b140 bronze": "𐂚"
-		}
-	},
-	"phoenician": {
-		"name": "Phoenician",
-		"description": "Ancient Semitic abjad used by the Phoenicians for trade and inscriptions.",
-		"notes": "Abjad system with 22 consonants.",
-		"codePoints": ["U+10900", "U+1091F"],
-		"range": [67840, 67871],
-		"alphabet":{
-			"upper": "𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕"
-		},
-		"lingua": {
-			"core": "alef bet gimel dalet he waw zayin het",
-			"verbs": "ktb (write), qn (acquire), bny (build)",
-			"concepts": "yam (sea), mlk (king), bt (house)"
-		},
-		"tags": ["right-to-left", "RTL", "semitic", "abjad", "phoenician", "mediterranean", "alphabetic", "ancient"]
-	},
-	"hebrew": {
-		"name": "Hebrew",
-		"description": "Semitic script, abjad layout with Unicode vowel points",
-		"alphabet": {
-				"upper": "אבגדהוזחטיכלמנסעפצקרשת",
-				"uncommon": "ךםןףץ"
-		},
-		"lingua": [
-			{
-				"lang": "he",
-				"core": "דבר שם טוב רחמים אמת צדק",
-				"verbs": "אמר ברא יצא לקח",
-				"concepts": "שלום תורה חסד חיים"
+		"faces":{
+			"profiles":{
+				"animals": "🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉",
+				"masks": "🎭🤡😎🧛😈🥶🤖👹👺👻👼👽👾💀",
+				"trope": "🧌🧛🧝🤠🤡👨‍👩‍👧‍👦🧙‍♂️🧙‍♀️🧚‍♂️🧜‍♂️🧞‍♂️🧟‍♂️🧞‍♀️🧟‍♀️"
 			},
-			{
-				"lang": "en",
-				"core": "davar shem tov rahamim emet tzedek",
-				"verbs": "amar bara yatza lakah",
-				"concepts": "shalom torah hesed chayim",
+			"name": "Face on profiles",
+			"tags": ["face"]
+		},
+		"pheme":{
+			"pre61": {
+				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
+				"nature13": "aero agro eco entom ichthyo litho meteo morpho myco nepho paleo zoo zo",
+				"body12": "angio cardio dermato gastro hemato histo neuro noso odonto osteo phreno",
+				"human11": "anthro archaeo biblio bio crimino dem ethno onco orni psycho socio",
+				"meta7": "astro eno hiero philo pomo theo vexillo"
+			},
+			"suff28":{
+				"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
+				"etc14": "al ance ence ese ism ity oid ous ty ure y archy pathy phile"
+			}
+		},
+		"scales":{
+			"name": "Common Practice Tonality",
+			"tuning": "12-TET",
+			"tags":  ["equal tempered","music scale","western","diatonic"],
+			"major":{
+				"solfege": ["do", "re", "mi", "fa", "so", "la", "ti"],
+				"numerals": ["I", "ii", "iii", "IV", "V", "vi", "vii°"],
+				"degrees": ["tonic","supertonic","mediant","subdominant","dominant","submediant","leading"],
+				"intervals": [0,2,4,5,7,9,11]
+			},
+			"blues": {
+				"numerals": ["I", "♭III", "IV", "♭V", "V", "♭VII"],
+				"degrees": ["tonic", "minor third", "perfect fourth", "diminished fifth", "perfect fifth", "minor seventh"],
+				"intervals": [0,3,5,6,7,10]
+			},
+			"aeolian":{
+				"numerals": ["i", "ii°", "♭III", "iv", "v", "♭VI", "♭VII"],
+				"intervals": [0,2,3,5,7,8,10]
+			},
+			"melodic-minor":{
+				"intervals": [0,2,3,5,7,9,11,12,10,8,7,5,3,2,0]
+			},
+			"harmonic-minor":{
+				"intervals": [0,2,3,5,7,8,11]
+			},
+			"chromatic":{
+				"intervals": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+			}
+		},
+		"glagolitic": {
+			"name": "Glagolitic",
+			"block": "Glagolitic",
+			"range": ["U+2C00", "U+2C5F"],
+			"description": "Slavic script (9th century), created by Cyril and Methodius.",
+			"alphabet": {
+				"upper": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰯ",
+				"lower": "ⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟ",
+				"numerals": "ⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛ"
+			},
+			"lingua": {
+				"core": "ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ",
+				"transliteration": {
+					"ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ": "Blagoslavěnĭ",
+					"ⰔⰎⰑⰂⰑ": "Slovo",
+					"ⰜⰋⰔⰕⰠ": "Čistĭ"
+				}
+			},
+			"tags": ["slavic", "medieval", "liturgical"]
+		},
+		"linear_b": {
+			"name": "Linear B",
+			"block": "Linear B",
+			"alphabet": {
+				"codes": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉𐀊𐀋𐀍𐀎𐀏𐀐𐀑𐀒𐀓𐀔𐀕𐀖𐀗𐀘𐀙𐀚𐀛𐀜𐀝𐀞𐀟𐀠𐀡𐀢𐀣𐀤𐀥𐀦𐀨𐀩𐀪𐀫𐀬𐀭𐀮𐀯𐀰𐀱𐀲𐀳𐀴𐀵𐀶𐀷𐀸𐀹𐀺𐀼𐀽𐀿",
+				"picto1": "𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾𐂿𐃀𐃁𐃂𐃃𐃄",
+				"picto2": "𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖𐃗𐃘𐃙𐃚𐃛𐃜𐃝𐃞𐃟𐃠𐃡𐃢𐃣𐃤𐃥𐃦𐃧𐃨𐃩𐃪𐃫𐃬𐃭𐃮𐃯𐃰𐃱𐃲𐃳𐃴𐃵𐃶𐃷𐃸𐃹𐃺"
+			},
+			"range": ["U+10000", "U+1007F"],
+			"description": "Syllabic script for Mycenaean Greek (1450 BCE).",
+			"tags": ["ancient", "greek", "syllabary"],
+			"syllabary": {
+				"a": "𐀀", "e": "𐀁", "i": "𐀂", "o": "𐀃", "u": "𐀄",
+				"da": "𐀅", "de": "𐀆", "di": "𐀇", "do": "𐀈", "du": "𐀉",
+				"ja": "𐀊", "je": "𐀋", "jo": "𐀍", "ju": "𐀎",
+				"ka": "𐀏", "ke": "𐀐", "ki": "𐀑", "ko": "𐀒", "ku": "𐀓",
+				"ma": "𐀔", "me": "𐀕", "mi": "𐀖", "mo": "𐀗", "mu": "𐀘",
+				"na": "𐀙", "ne": "𐀚", "ni": "𐀛", "no": "𐀜", "nu": "𐀝",
+				"pa": "𐀞", "pe": "𐀟", "pi": "𐀠", "po": "𐀡", "pu": "𐀢",
+				"qa": "𐀣", "qe": "𐀤", "qi": "𐀥", "qo": "𐀦",
+				"ra": "𐀨", "re": "𐀩", "ri": "𐀪", "ro": "𐀫", "ru": "𐀬",
+				"sa": "𐀭", "se": "𐀮", "si": "𐀯", "so": "𐀰", "su": "𐀱",
+				"ta": "𐀲", "te": "𐀳", "ti": "𐀴", "to": "𐀵", "tu": "𐀶",
+				"wa": "𐀷", "we": "𐀸", "wi": "𐀹", "wo": "𐀺",
+				"za": "𐀼", "ze": "𐀽", "zo": "𐀿"
+			},
+			"ideograms": {
+				"tripod": "𐃆",
+				"spear": "𐃐",
+				"man": "𐂂",
+				"woman": "𐂃",
+				"horse": "𐂄",
+				"olive": "𐂕",
+				"wine": "𐂈",
+				"chariot": "𐃏",
+				"sheep": "𐃉",
+				"grain": "𐃒",
+				"figs": "𐃔",
+				"cloth": "𐃗",
+				"bronze": "𐃘",
+				"gold": "𐃙",
+				"b146": "𐂞",
+				"b140 bronze": "𐂚"
+			}
+		},
+		"phoenician": {
+			"name": "Phoenician",
+			"description": "Ancient Semitic abjad used by the Phoenicians for trade and inscriptions.",
+			"notes": "Abjad system with 22 consonants.",
+			"codePoints": ["U+10900", "U+1091F"],
+			"range": [67840, 67871],
+			"alphabet":{
+				"upper": "𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕"
+			},
+			"lingua": {
+				"core": "alef bet gimel dalet he waw zayin het",
+				"verbs": "ktb (write), qn (acquire), bny (build)",
+				"concepts": "yam (sea), mlk (king), bt (house)"
+			},
+			"tags": ["right-to-left", "RTL", "semitic", "abjad", "phoenician", "mediterranean", "alphabetic", "ancient"]
+		},
+		"hebrew": {
+			"name": "Hebrew",
+			"description": "Semitic script, abjad layout with Unicode vowel points",
+			"alphabet": {
+					"upper": "אבגדהוזחטיכלמנסעפצקרשת",
+					"uncommon": "ךםןףץ"
+			},
+			"lingua": [
+				{
+					"lang": "he",
+					"core": "דבר שם טוב רחמים אמת צדק",
+					"verbs": "אמר ברא יצא לקח",
+					"concepts": "שלום תורה חסד חיים"
+				},
+				{
+					"lang": "en",
+					"core": "davar shem tov rahamim emet tzedek",
+					"verbs": "amar bara yatza lakah",
+					"concepts": "shalom torah hesed chayim",
+					"ends": {
+							"abstract": "ut on ah",
+							"agent": "i er",
+							"diminutive": "on it"
+					}
+				}
+			]
+		},
+		"coptic": {
+			"name": "Coptic",
+			"description": "Final stage of Egyptian, written with Greek-derived script",
+			"alphabet": {
+				"upper": "ⲀⲂⲄⲆⲈⲊⲌⲎⲐⲒⲔⲖⲘⲚⲜⲞⲠⲢⲤⲦⲨⲪⲮⲰ",
+				"lower": "ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ",
+				"extras": "ϢϤϦϨϪϬϮ"
+			}
+		},
+		"greek": {
+			"name": "Greek",
+			"description": "Greek linguistic roots and Unicode characters",
+			"alphabet": {
+				"upper": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
+				"lower": "αβγδεζηθικλμνξοπρστυφχψω",
+				"uncommon": "ϝϛϟϡϣϥϧϩϫϭϯϰϱϲϳ"
+			},
+			"lingua": {
+				"core": "lexis glossa onoma logos morphe phone rhema sema gramma",
+				"verbs": "gno grapho lego logo mne poie phero",
+				"concepts": "aletheia arete chaos chronos demos ethos kosmos mimesis psyche techne",
 				"ends": {
-						"abstract": "ut on ah",
-						"agent": "i er",
-						"diminutive": "on it"
+					"abstract": "ia isis ma osis sis mos",
+					"agent": "tes ter tor tris",
+					"state": "ma syne teia",
+					"diminutive": "ion iskos idion"
 				}
 			}
-		]
-	},
-	"coptic": {
-		"name": "Coptic",
-		"description": "Final stage of Egyptian, written with Greek-derived script",
-		"alphabet": {
-			"upper": "ⲀⲂⲄⲆⲈⲊⲌⲎⲐⲒⲔⲖⲘⲚⲜⲞⲠⲢⲤⲦⲨⲪⲮⲰ",
-			"lower": "ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ",
-			"extras": "ϢϤϦϨϪϬϮ"
-		}
-	},
-	"greek": {
-		"name": "Greek",
-		"description": "Greek linguistic roots and Unicode characters",
-		"alphabet": {
-			"upper": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
-			"lower": "αβγδεζηθικλμνξοπρστυφχψω",
-			"uncommon": "ϝϛϟϡϣϥϧϩϫϭϯϰϱϲϳ"
 		},
-		"lingua": {
-			"core": "lexis glossa onoma logos morphe phone rhema sema gramma",
-			"verbs": "gno grapho lego logo mne poie phero",
-			"concepts": "aletheia arete chaos chronos demos ethos kosmos mimesis psyche techne",
-			"ends": {
-				"abstract": "ia isis ma osis sis mos",
-				"agent": "tes ter tor tris",
-				"state": "ma syne teia",
-				"diminutive": "ion iskos idion"
+		"latin": {
+			"name": "Latin",
+			"description": "Latin linguistic roots and Unicode characters",
+			"alphabet": {
+				"upper": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+				"lower": "abcdefghijklmnopqrstuvwxyz",
+				"uncommon": "ÆæŒœÞþÐðƷʒȜȝ"
+			},
+			"lingua": {
+				"core": "verbum nomen ratio vox forma scriptum",
+				"verbs": "ago dico facio scribo video voco",
+				"concepts": "veritas virtus tempus lex ars scientia",
+				"ends": {
+					"noun": "us a um io ix io",
+					"verb": "are ere ire ior",
+					"abstract": "tio io tas men",
+					"agent": "tor trix or"
+				}
 			}
-		}
-	},
-	"latin": {
-		"name": "Latin",
-		"description": "Latin linguistic roots and Unicode characters",
-		"alphabet": {
-			"upper": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-			"lower": "abcdefghijklmnopqrstuvwxyz",
-			"uncommon": "ÆæŒœÞþÐðƷʒȜȝ"
 		},
-		"lingua": {
-			"core": "verbum nomen ratio vox forma scriptum",
-			"verbs": "ago dico facio scribo video voco",
-			"concepts": "veritas virtus tempus lex ars scientia",
-			"ends": {
-				"noun": "us a um io ix io",
-				"verb": "are ere ire ior",
-				"abstract": "tio io tas men",
-				"agent": "tor trix or"
+		"reo":{
+			"name": "Te Reo Māori",
+			"description": "Indigenous language of Aotearoa, Latin script, macrons for long vowels.",
+			"alphabet": {
+				"upper": "AĀEĒHIKMNOPRTUW",
+				"lower": "aāeēhikmnoprtuw"
 			}
-		}
-	},
-	"reo":{
-		"name": "Te Reo Māori",
-		"description": "Indigenous language of Aotearoa, Latin script, macrons for long vowels.",
-		"alphabet": {
-			"upper": "AĀEĒHIKMNOPRTUW",
-			"lower": "aāeēhikmnoprtuw"
-		}
-	},
-	"unicode": {
-		"name": "Unicode",
-		"version": "15.1",
-		"description": "Unicode Character Database",
-		"features": "Selected codepoint sequences from Unicode blocks.",
-		"lexis": {
-			"ascii": {
-				"codes": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
-				"name": "ASCII",
-				"block": "Basic Latin",
-				"category": "Multiple",
-				"codePoints": ["U+0020", "U+007E"],
-				"range": [32, 126],
-				"usage": "Printable characters from the American Standard Code for Information Interchange (ASCII)"
-			},
-			"09": {
-				"codes": "0123456789",
-				"name": "Decimal Digits",
-				"block": "Basic Latin",
-				"category": "Nd",
-				"codePoints": ["U+0030", "U+0039"],
-				"range": [48, 57],
-				"usage": "Numeric digits for decimal notation"
-			},
-			"AZ": {
-				"codes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-				"name": "Latin Upper Case",
-				"block": "Basic Latin",
-				"category": "Lu",
-				"codePoints": ["U+0041", "U+005A"],
-				"range": [65, 90]
-			},
-			"az": {
-				"codes": "abcdefghijklmnopqrstuvwxyz",
-				"name": "Latin Lower Case",
-				"block": "Basic Latin",
-				"category": "Ll",
-				"codePoints": ["U+0061", "U+007A"],
-				"range": [97, 122]
-			},
-			"mathalpha": {
-				"name": "Mathematical Alphanumeric Symbols",
-				"block": "Mathematical Alphanumeric Symbols",
-				"category": ["Lu", "Ll", "Nd"],
-				"variants": {
-					"bold": {
-						"upper": "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙",
-						"lower": "𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳",
-						"digits": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
-						"range": ["U+1D400", "U+1D433", "U+1D7CE", "U+1D7D7"]
+		},
+		"unicode": {
+			"name": "Unicode",
+			"version": "15.1",
+			"description": "Unicode Character Database",
+			"features": "Selected codepoint sequences from Unicode blocks.",
+			"lexis": {
+				"ascii": {
+					"codes": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+					"name": "ASCII",
+					"block": "Basic Latin",
+					"category": "Multiple",
+					"codePoints": ["U+0020", "U+007E"],
+					"range": [32, 126],
+					"usage": "Printable characters from the American Standard Code for Information Interchange (ASCII)"
+				},
+				"09": {
+					"codes": "0123456789",
+					"name": "Decimal Digits",
+					"block": "Basic Latin",
+					"category": "Nd",
+					"codePoints": ["U+0030", "U+0039"],
+					"range": [48, 57],
+					"usage": "Numeric digits for decimal notation"
+				},
+				"AZ": {
+					"codes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+					"name": "Latin Upper Case",
+					"block": "Basic Latin",
+					"category": "Lu",
+					"codePoints": ["U+0041", "U+005A"],
+					"range": [65, 90]
+				},
+				"az": {
+					"codes": "abcdefghijklmnopqrstuvwxyz",
+					"name": "Latin Lower Case",
+					"block": "Basic Latin",
+					"category": "Ll",
+					"codePoints": ["U+0061", "U+007A"],
+					"range": [97, 122]
+				},
+				"∧⊽":{
+					"codes": "∧∨¬⊻↑↓⊼⊽",
+					"name": "Boolean",
+					"category": "Sm",
+					"codePoints": ["U+2227", "U+2228", "U+00AC", "U+22BB", "U+2191", "U+2193", "U+22BC", "U+22BD"],
+					"usage": "∧ AND Gate, ∨ OR Gate, ¬ NOT Inverter, ⊻ XOR Gate, ↑ NAND Stroke, ↓ NOR Arrow, ⊼ NAND Gate, ⊽ NOR Gate"
+				},
+				"⧀⧉":{
+					"codes": "⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉",
+					"name": "Mathematical Various",
+					"category": "So",
+					"description": "UI Gauges and Component Blocks",
+					"block": "Mathematical Miscellaneous B Symbols",
+					"codePoints": ["U+29C0", "U+29C9"],
+					"range": [10688, 10697],
+					"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
+				},
+				"mathalpha": {
+					"name": "Mathematical Alphanumeric Symbols",
+					"block": "Mathematical Alphanumeric Symbols",
+					"category": ["Lu", "Ll", "Nd"],
+					"variants": {
+						"bold": {
+							"upper": "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙",
+							"lower": "𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳",
+							"digits": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+							"range": ["U+1D400", "U+1D433", "U+1D7CE", "U+1D7D7"]
+						},
+						"italic": {
+							"upper": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍",
+							"lower": "𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧",
+							"range": ["U+1D434", "U+1D467"]
+						},
+						"bold-italic": {
+							"upper": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁",
+							"lower": "𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛",
+							"range": ["U+1D468", "U+1D49B"]
+						},
+						"script": {
+							"upper": "𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵",
+							"lower": "𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃",
+							"range": ["U+1D49C", "U+1D4CF", "U+1D4EA", "U+1D503"]
+						},
+						"fraktur": {
+							"upper": "𝔄𝔅𝔇𝔈𝔉𝔊𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔𝔖𝔗𝔘𝔙𝔚𝔛𝔜",
+							"lower": "𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷",
+							"range": ["U+1D504", "U+1D537", "U+1D552", "U+1D56B"]
+						},
+						"double-struck": {
+							"upper": "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ",
+							"digits": "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+							"range": ["U+1D538", "U+1D56B", "U+1D7D8", "U+1D7E1"]
+						},
+						"sans-serif": {
+							"upper": "𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹",
+							"lower": "𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓",
+							"digits": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",
+							"range": ["U+1D5A0", "U+1D5D3", "U+1D7E2", "U+1D7EB"]
+						},
+						"sans-bold": {
+							"upper": "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭",
+							"lower": "𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
+							"digits": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+							"range": ["U+1D5D4", "U+1D607", "U+1D7EC", "U+1D7F5"]
+						},
+						"monospace": {
+							"upper": "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉",
+							"lower": "𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣",
+							"digits": "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+							"range": ["U+1D670", "U+1D6A3", "U+1D7F6", "U+1D7FF"]
+						}
 					},
-					"italic": {
-						"upper": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍",
-						"lower": "𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧",
-						"range": ["U+1D434", "U+1D467"]
-					},
-					"bold-italic": {
-						"upper": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁",
-						"lower": "𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛",
-						"range": ["U+1D468", "U+1D49B"]
-					},
-					"script": {
-						"upper": "𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵",
-						"lower": "𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃",
-						"range": ["U+1D49C", "U+1D4CF", "U+1D4EA", "U+1D503"]
-					},
-					"fraktur": {
-						"upper": "𝔄𝔅𝔇𝔈𝔉𝔊𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔𝔖𝔗𝔘𝔙𝔚𝔛𝔜",
-						"lower": "𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷",
-						"range": ["U+1D504", "U+1D537", "U+1D552", "U+1D56B"]
-					},
-					"double-struck": {
-						"upper": "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ",
-						"digits": "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
-						"range": ["U+1D538", "U+1D56B", "U+1D7D8", "U+1D7E1"]
-					},
-					"sans-serif": {
-						"upper": "𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹",
-						"lower": "𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓",
-						"digits": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",
-						"range": ["U+1D5A0", "U+1D5D3", "U+1D7E2", "U+1D7EB"]
-					},
-					"sans-bold": {
-						"upper": "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭",
-						"lower": "𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
-						"digits": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
-						"range": ["U+1D5D4", "U+1D607", "U+1D7EC", "U+1D7F5"]
-					},
-					"monospace": {
-						"upper": "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉",
-						"lower": "𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣",
-						"digits": "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
-						"range": ["U+1D670", "U+1D6A3", "U+1D7F6", "U+1D7FF"]
+					"usage": "Mathematical notation for variables, constants, and special number sets",
+					"tags": ["math", "symbols", "alphanumeric", "typography"]
+				},
+				"𓆛𓆟": {
+					"codes": "𓆛𓆜𓆝𓆞𓆟",
+					"name": "Fish 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+1319B", "U+1319F"],
+					"range": [7963, 7967]
+				},
+				"𓄰𓄱":{
+					"codes": "𓄰𓄱",
+					"name": "Fertility",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","uterus"],
+					"wide": 1,
+					"emoji": {
+						"𓄰":{},"𓄱":{}
 					}
 				},
-				"usage": "Mathematical notation for variables, constants, and special number sets",
-				"tags": ["math", "symbols", "alphanumeric", "typography"]
-			},
-			"𓆛𓆟": {
-				"codes": "𓆛𓆜𓆝𓆞𓆟",
-				"name": "Fish 1",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+1319B", "U+1319F"],
-				"range": [7963, 7967]
-			},
-			"𓄰𓄱":{
-				"codes": "𓄰𓄱",
-				"name": "Fertility",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"tags": ["hieroglyphs", "plain","uterus"],
-				"wide": 1,
-				"emoji": {
-					"𓄰":{},"𓄱":{}
+				"𓏊𓏍":{
+					"codes": "𓏊𓏋𓏌𓏍",
+					"name": "Jars",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","jars"]
+				},
+				"𓄲𓄷":{
+					"codes": "𓄲𓄳𓄴𓄵𓄶𓄷",
+					"name": "Viscera",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","intestines","ea9625"],
+					"wide": 1,
+					"glyphs": [
+						{"point": "𓄲","sim": "e"},
+						{"point": "𓄳","sim": "a"},
+						{"point": "𓄴","sim": "9"},
+						{"point": "𓄵","sim": "g6"},
+						{"point": "𓄶","sim": "z2"},
+						{"point": "𓄷","sim": "s5"}
+					]
+				},
+				"𓅷𓅽":{
+					"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
+					"name": "Birds 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13037", "U+1303D"],
+					"range": [7783, 7789]
+				},
+				"𓃒𓃽":{
+					"codes": "𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽",
+					"name": "Animals 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+130D2", "U+130FE"],
+					"range": [7890, 7934]
+				},
+				"𓃉𓃑": {
+					"codes": "𓃉𓃊𓃋𓃌𓃍𓃎𓃏𓃐𓃑",
+					"name": "Dots",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+130C9", "U+130D1"],
+					"range": [7881, 7889],
+					"usage": "Hieroglyphic numerals"
+				},
+				"𓍢𓍪": {
+					"codes": "𓍢𓍣𓍤𓍥𓍦𓍧𓍨𓍩𓍪",
+					"name": "Tens",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13362", "U+1336A"],
+					"range": [78690, 78698],
+					"usage": "Hieroglyphic numerals representing multiples of ten"
+				},
+				"𓎆𓎎": {
+					"codes": "𓎆𓎇𓎈𓎉𓎊𓎋𓎌𓎍𓎎",
+					"name": "Hundreds",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13406", "U+1340E"],
+					"range": [78854, 78862],
+					"usage": "Hieroglyphic numerals representing multiples of one hundred"
+				},
+				"𓆼𓇄": {
+					"codes": "𓆼𓆽𓆾𓆿𓇀𓇁𓇂𓇃𓇄",
+					"name": "Thousands",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+131BC", "U+131C4"],
+					"range": [78268, 78276],
+					"usage": "Hieroglyphic numerals representing multiples of one thousand"
+				},
+				"𓐄𓐌": {
+					"codes": "𓐄𓐅𓐆𓐇𓐈𓐉𓐊𓐋𓐌",
+					"name": "Ten-Thousands",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13404", "U+1340C"],
+					"range": [78852, 78860],
+					"usage": "Hieroglyphic numerals representing multiples of ten thousand"
+				},
+				"𓁐𓁩": {
+					"codes": "𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩",
+					"name": "Women and Female Figures 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13050", "U+13069"],
+					"range": [7784, 7801],
+					"usage": "Hieroglyphic women and female figures"
+				},
+				"𓁹𓂀": {
+					"codes": "𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀",
+					"name": "Eyes",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13079","U+13080"],
+					"range": [49241, 49248],
+					"usage": "Hieroglyphic eyes"
+				},
+				"𓂁𓂇":{
+					"codes": "𓂁𓂂𓂃𓂄𓂅𓂆𓂇",
+					"name": "Eye Parts",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13081", "U+13087"],
+					"range": [77953, 77959]
+				},
+				"♈♓":{
+					"name": "Zodiac",
+					"codes": "♈♉♊♋♌♍♎♏♐♑♒♓",
+					"block": "Miscellaneous Symbols",
+					"category": "Nd",
+					"codePoints": ["U+2648","U+2653"],
+					"range": [9800,9811]
+				},
+				"📑📚":{
+					"name": "Books",
+					"codes": "📑📒📓📕📗📚",
+					"block": "Miscellaneous Symbols",
+					"category": "So",
+					"codePoints": ["U+1F4D1","U+1F4DA"],
+					"range": [128209, 128218]
+				},
+				"🖊🖌": {
+					"name": "Writing Tools",
+					"codes": "🖊🖋🖌",
+					"block": "Miscellaneous Symbols",
+					"category": "So",
+					"codePoints": ["U+1F58A","U+1F58C"],
+					"range": [128394, 128396]
+				},
+				"⠀⣿":{
+					"name": "Braille",
+					"block": "Braille Patterns",
+					"codes": [
+						"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿",
+						"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿",
+						"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿",
+						"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"
+					],
+					"category": "So",
+					"codePoints": ["U+2800","U+28FF"],
+					"range": [10240, 10495]
+				},
+				"ＡＺ":{
+					"name": "Fullwidth Latin",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
+					"category": "Lu",
+					"codePoints": ["U+FF21", "U+FF3A"],
+					"range": [65313, 65338]
+				},
+				"ａｚ": {
+					"name": "Fullwidth Latin Lower Case",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"],
+					"category": "Ll",
+					"codePoints": ["U+FF41", "U+FF5A"],
+					"range": [65345, 65370]
+				},
+				"０９": {
+					"name": "Fullwidth Digits",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["０１２３４５６７８９"],
+					"category": "Nd",
+					"codePoints": ["U+FF10", "U+FF19"],
+					"range": [65296, 65305]
+				},
+				"！～": {
+					"name": "Fullwidth ASCII Punctuation and Symbols",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～",
+					"category": "Multiple",
+					"codePoints": ["U+FF01", "U+FF5E"],
+					"range": [65281, 65374],
+					"usage": "Fullwidth versions of ASCII punctuation and symbols for East Asian scripts"
+				},
+				"㊀㊉": {
+					"name": "CJK Enclosed Digits",
+					"block": "CJK Symbols and Punctuation",
+					"codes": "㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉",
+					"category": "So",
+					"codePoints": ["U+3280", "U+3289"],
+					"range": [12928, 12937],
+					"usage": "Circled digits for East Asian scripts"
+				},
+				"①⑳":{
+					"name": "Enclosed Digits",
+					"codes": "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+					"category": "No",
+					"codePoints": ["U+2460", "U+2473"],
+					"range": [9312, 9331],
+					"usage": "Circled digits 1-20 for lists and numbering"
+				},
+				"🜀🜄":{
+					"name": "Elements of Alchemy",
+					"codes":"🜀🜁🜂🜃🜄",
+					"category": "So",
+					"codePoints": ["U+1F700", "U+1F704"],
+					"range": [128768, 128772],
+					"usage":"Quintessence, Air, Fire, Earth, Water"
+				},
+				"🜐🜚": {
+					"name": "Pantry of Alchemy",
+					"codes": "🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚",
+					"category": "So",
+					"codePoints": ["U+1F710", "U+1F71A"],
+					"range": [128784, 128794],
+					"usage": "Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Halite, Gold"
+				},
+				"🜛🜧": {
+					"name": "Metals of Alchemy",
+					"codes": "🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧",
+					"category": "So",
+					"codePoints": ["U+1F71B", "U+1F727"],
+					"range": [128795, 128807],
+					"usage": "Silver, Iron, Mercury, Tin, Lead, Antimony, Bismuth, Zinc, Platinum, Arsenic, Cobalt, Magnesium, Potash"
+				},
+				"🜨🜼": {
+					"name": "Compounds of Alchemy",
+					"codes": "🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼",
+					"category": "So",
+					"codePoints": ["U+1F728", "U+1F73C"],
+					"range": [128808, 128828],
+					"usage": [
+						"Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol",
+						"Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper",
+						"Quicklime, Magnesia, Tutty"
+					]
+				},
+				"🝀🝔": {
+					"name": "Operation of Alchemy",
+					"codes": "🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏🝐🝑🝒🝓🝔",
+					"category": "So",
+					"codePoints": ["U+1F740", "U+1F754"],
+					"range": [128832, 128852],
+					"usage": [
+						"Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate",
+						"Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection"
+					]
+				},
+				"🝕🝣": {
+					"name": "Process of Alchemy",
+					"codes": "🝕🝖🝗🝘🝙🝚🝛🝜🝝🝞🝟🝠🝡🝢🝣",
+					"category": "So",
+					"codePoints": ["U+1F755", "U+1F763"],
+					"range": [128853, 128867],
+					"usage": [
+						"Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, ",
+						"Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize"
+					]
+				},
+				"🝤🝳": {
+					"name": "Essence of Alchemy",
+					"codes": "🝤🝥🝦🝧🝨🝩🝪🝫🝬🝭🝮🝯🝰🝱🝲🝳",
+					"category": "So",
+					"codePoints": ["U+1F764", "U+1F773"],
+					"range": [128868, 128883],
+					"usage": [
+						"Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood",
+						"Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris",
+						"Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold"
+					]
+				},
+				"㊊㊐":{
+					"name": "Moon Five Elements and Sun - Wu Xing cosmology",
+					"codes": "㊊㊋㊌㊍㊎㊏㊐",
+					"category": "So",
+					"codePoints": ["U+328A", "U+328F"],
+					"range": [12938, 12943],
+					"usage": "Moon, Fire, Water, Wood, Metal, Earth, Sun"
+				},
+				"ᚠᛪ": {
+					"name": "Runic",
+					"block": "Runic",
+					"codes": "ᚠᚡᚢᚣᚤᚥᚦᚧᚨᚩᚪᚫᚬᚭᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉᛊᛋᛌᛍᛎᛏᛐᛑᛒᛓᛔᛕᛖᛗᛘᛙᛚᛛᛜᛝᛞᛟᛠᛡᛢᛣᛤᛥᛦᛧᛨᛩᛪ",
+					"category": "Lo",
+					"codePoints": ["U+16A0", "U+16EA"],
+					"range": [5792, 5866],
+					"usage": "Runic characters used in ancient Germanic and Scandinavian inscriptions",
+					"tags": ["runes", "germanic", "scandinavian", "ancient script"]
+				},
+				"ᎠᏯ": {
+					"name": "Cherokee Syllabary",
+					"creator": "Sequoyah",
+					"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯ"
+				},
+				"ᚁᚚ":{
+					"name": "Ogham",
+					"creator": "Ogma",
+					"codes": "ᚁᚂᚃᚄᚅᚆᚇᚈᚉᚊᚋᚌᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ"
+				},
+				"ꔀꘟ":{
+					"name": "Vai Syllabary",
+					"creator": "Momolu Duwalu Bukele",
+					"codes": [
+						"ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙ",
+						"ꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶ",
+						"ꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑ",
+						"ꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸ",
+						"ꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡ",
+						"ꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀ",
+						"ꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣ",
+						"ꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ",
+						"꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
+					]
 				}
-			},
-			"𓏊𓏍":{
-				"codes": "𓏊𓏋𓏌𓏍",
-				"name": "Jars",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"tags": ["hieroglyphs", "plain","jars"]
-			},
-			"𓄲𓄷":{
-				"codes": "𓄲𓄳𓄴𓄵𓄶𓄷",
-				"name": "Viscera",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"tags": ["hieroglyphs", "plain","intestines","ea9625"],
-				"wide": 1,
-				"glyphs": [
-					{"point": "𓄲","sim": "e"},
-					{"point": "𓄳","sim": "a"},
-					{"point": "𓄴","sim": "9"},
-					{"point": "𓄵","sim": "g6"},
-					{"point": "𓄶","sim": "z2"},
-					{"point": "𓄷","sim": "s5"}
-				]
-			},
-			"𓅷𓅽":{
-				"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
-				"name": "Birds 1",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+13037", "U+1303D"],
-				"range": [7783, 7789]
-			},
-			"𓃒𓃽":{
-				"codes": "𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽",
-				"name": "Animals 1",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+130D2", "U+130FE"],
-				"range": [7890, 7934]
-			},
-			"𓃉𓃑": {
-				"codes": "𓃉𓃊𓃋𓃌𓃍𓃎𓃏𓃐𓃑",
-				"name": "Dots",
-				"block": "Egyptian Hieroglyphs",
-				"category": "Nd",
-				"codePoints": ["U+130C9", "U+130D1"],
-				"range": [7881, 7889],
-				"usage": "Hieroglyphic numerals"
-			},
-			"𓍢𓍪": {
-				"codes": "𓍢𓍣𓍤𓍥𓍦𓍧𓍨𓍩𓍪",
-				"name": "Tens",
-				"block": "Egyptian Hieroglyphs",
-				"category": "Nd",
-				"codePoints": ["U+13362", "U+1336A"],
-				"range": [78690, 78698],
-				"usage": "Hieroglyphic numerals representing multiples of ten"
-			},
-			"𓎆𓎎": {
-				"codes": "𓎆𓎇𓎈𓎉𓎊𓎋𓎌𓎍𓎎",
-				"name": "Hundreds",
-				"block": "Egyptian Hieroglyphs",
-				"category": "Nd",
-				"codePoints": ["U+13406", "U+1340E"],
-				"range": [78854, 78862],
-				"usage": "Hieroglyphic numerals representing multiples of one hundred"
-			},
-			"𓆼𓇄": {
-				"codes": "𓆼𓆽𓆾𓆿𓇀𓇁𓇂𓇃𓇄",
-				"name": "Thousands",
-				"block": "Egyptian Hieroglyphs",
-				"category": "Nd",
-				"codePoints": ["U+131BC", "U+131C4"],
-				"range": [78268, 78276],
-				"usage": "Hieroglyphic numerals representing multiples of one thousand"
-			},
-			"𓐄𓐌": {
-				"codes": "𓐄𓐅𓐆𓐇𓐈𓐉𓐊𓐋𓐌",
-				"name": "Ten-Thousands",
-				"block": "Egyptian Hieroglyphs",
-				"category": "Nd",
-				"codePoints": ["U+13404", "U+1340C"],
-				"range": [78852, 78860],
-				"usage": "Hieroglyphic numerals representing multiples of ten thousand"
-			},
-			"𓁐𓁩": {
-				"codes": "𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩",
-				"name": "Women and Female Figures 1",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+13050", "U+13069"],
-				"range": [7784, 7801],
-				"usage": "Hieroglyphic women and female figures"
-			},
-			"𓁹𓂀": {
-				"codes": "𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀",
-				"name": "Eyes",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+13079","U+13080"],
-				"range": [49241, 49248],
-				"usage": "Hieroglyphic eyes"
-			},
-			"𓂁𓂇":{
-				"codes": "𓂁𓂂𓂃𓂄𓂅𓂆𓂇",
-				"name": "Eye Parts",
-				"block": "Egyptian Hieroglyphs",
-				"category": "So",
-				"codePoints": ["U+13081", "U+13087"],
-				"range": [77953, 77959]
-			},
-			"♈♓":{
-				"name": "Zodiac",
-				"codes": "♈♉♊♋♌♍♎♏♐♑♒♓",
-				"block": "Miscellaneous Symbols",
-				"category": "Nd",
-				"codePoints": ["U+2648","U+2653"],
-				"range": [9800,9811]
-			},
-			"📑📚":{
-				"name": "Books",
-				"codes": "📑📒📓📕📗📚",
-				"block": "Miscellaneous Symbols",
-				"category": "So",
-				"codePoints": ["U+1F4D1","U+1F4DA"],
-				"range": [128209, 128218]
-			},
-			"🖊🖌": {
-				"name": "Writing Tools",
-				"codes": "🖊🖋🖌",
-				"block": "Miscellaneous Symbols",
-				"category": "So",
-				"codePoints": ["U+1F58A","U+1F58C"],
-				"range": [128394, 128396]
-			},
-			"⠀⣿":{
-				"name": "Braille",
-				"block": "Braille Patterns",
-				"codes": [
-					"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿",
-					"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿",
-					"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿",
-					"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"
+			}
+		},
+		"encoding":{
+			"riff":{
+				"name" : "riff tags",
+				"type" : "FourCC",
+				"description": "Standard four-character tags for embedding metadata in the INFO chunk of RIFF-based WAV files.",
+				"source": "RIFF Specification (Microsoft/IBM, 1991)",
+				"usage": "Key-value pairs in the LIST/INFO chunk; values are null-terminated strings padded to even bytes.",
+				"tags": ["metadata", "audio", "file-format", "riff"],
+				"CC": {
+					"IARL": "Archival Location",
+					"IART": "Artist",
+					"ICAS": "Default Audio Stream",
+					"ICMS": "Commissioned",
+					"ICMT": "Comment",
+					"ICNM": "Cinematographer",
+					"ICNT": "Country",
+					"ICOP": "Copyright",
+					"ICRD": "Creation Date",
+					"ICRP": "Cropped",
+					"IDIM": "Dimensions",
+					"IDIT": "Date Time Original",
+					"IDPI": "Dots Per Inch",
+					"IDST": "Distributed By",
+					"IEDT": "Edited By",
+					"IENC": "Encoded By",
+					"IENG": "Engineer",
+					"IGNR": "Genre",
+					"IKEY": "Keywords",
+					"ILGT": "Lightness",
+					"ILNG": "Language",
+					"IMED": "Medium",
+					"IMIT": "More Info Text",
+					"IMUS": "Music By",
+					"INAM": "Title",
+					"IPDS": "Production Designer",
+					"IPLT": "Num Colors",
+					"IPRD": "Product",
+					"IPRO": "Produced By",
+					"IRIP": "Ripped By",
+					"IRTD": "Rating",
+					"ISBJ": "Subject",
+					"ISFT": "Software",
+					"ISGN": "Secondary Genre",
+					"ISHP": "Sharpness",
+					"ISMP": "Time Code",
+					"ISRC": "Source",
+					"ISRF": "Source Form",
+					"ISTR": "Starring",
+					"ITCH": "Technician",
+					"ITRK": "Track Number",
+					"IWRI": "Written By",
+					"LOCA": "Location",
+					"PRT1": "Part",
+					"PRT2": "Number Of Parts",
+					"RATE": "Rate",
+					"STAT": "Statistics",
+					"TAPE": "Tape Name",
+					"TCDO": "End Timecode",
+					"TCOD": "Start Timecode"
+				}
+			}
+		},
+		"relay": {
+			"akkadian": {
+				"name": "Akkadian",
+				"signs": {
+					"syllabic": ["𒀀","𒁀","𒂊","𒄀"], 
+					"logograms": ["𒀭","𒆳","𒈗"], 
+					"determinatives": ["𒀭","𒇽"]
+				},
+				"block": "Cuneiform",
+				"system": "logosyllabic",
+				"range": ["U+12000", "U+123FF"],
+				"tags": ["ancient", "mesopotamian", "cuneiform"],
+				"context": "Required for disambiguation, signs have multiple readings; heavy Sumerian influence.",
+				"description": "Logophonetic cuneiform script used for Akkadian (c. 2500–100 BCE).",
+				"composition": [
+					"determinative + word",
+					"logogram + phonetic complement",
+					"syllabic sequence"
 				],
-				"category": "So",
-				"codePoints": ["U+2800","U+28FF"],
-				"range": [10240, 10495]
-			},
-			"ＡＺ":{
-				"name": "Fullwidth Latin",
-				"block": "Halfwidth and Fullwidth Forms",
-				"codes": "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
-				"category": "Lu",
-				"codePoints": ["U+FF21", "U+FF3A"],
-				"range": [65313, 65338]
-			},
-			"ａｚ": {
-				"name": "Fullwidth Latin Lower Case",
-				"block": "Halfwidth and Fullwidth Forms",
-				"codes": ["ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"],
-				"category": "Ll",
-				"codePoints": ["U+FF41", "U+FF5A"],
-				"range": [65345, 65370]
-			},
-			"０９": {
-				"name": "Fullwidth Digits",
-				"block": "Halfwidth and Fullwidth Forms",
-				"codes": ["０１２３４５６７８９"],
-				"category": "Nd",
-				"codePoints": ["U+FF10", "U+FF19"],
-				"range": [65296, 65305]
-			},
-			"！～": {
-				"name": "Fullwidth ASCII Punctuation and Symbols",
-				"block": "Halfwidth and Fullwidth Forms",
-				"codes": "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～",
-				"category": "Multiple",
-				"codePoints": ["U+FF01", "U+FF5E"],
-				"range": [65281, 65374],
-				"usage": "Fullwidth versions of ASCII punctuation and symbols for East Asian scripts"
-			},
-			"㊀㊉": {
-				"name": "CJK Enclosed Digits",
-				"block": "CJK Symbols and Punctuation",
-				"codes": "㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉",
-				"category": "So",
-				"codePoints": ["U+3280", "U+3289"],
-				"range": [12928, 12937],
-				"usage": "Circled digits for East Asian scripts"
-			},
-			"①⑳":{
-				"name": "Enclosed Digits",
-				"codes": "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
-				"category": "No",
-				"codePoints": ["U+2460", "U+2473"],
-				"range": [9312, 9331],
-				"usage": "Circled digits 1-20 for lists and numbering"
-			},
-			"🜀🜄":{
-				"name": "Elements of Alchemy",
-				"codes":"🜀🜁🜂🜃🜄",
-				"category": "So",
-				"codePoints": ["U+1F700", "U+1F704"],
-				"range": [128768, 128772],
-				"usage":"Quintessence, Air, Fire, Earth, Water"
-			},
-			"🜐🜚": {
-				"name": "Pantry of Alchemy",
-				"codes": "🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚",
-				"category": "So",
-				"codePoints": ["U+1F710", "U+1F71A"],
-				"range": [128784, 128794],
-				"usage": "Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Halite, Gold"
-			},
-			"🜛🜧": {
-				"name": "Metals of Alchemy",
-				"codes": "🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧",
-				"category": "So",
-				"codePoints": ["U+1F71B", "U+1F727"],
-				"range": [128795, 128807],
-				"usage": "Silver, Iron, Mercury, Tin, Lead, Antimony, Bismuth, Zinc, Platinum, Arsenic, Cobalt, Magnesium, Potash"
-			},
-			"🜨🜼": {
-				"name": "Compounds of Alchemy",
-				"codes": "🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼",
-				"category": "So",
-				"codePoints": ["U+1F728", "U+1F73C"],
-				"range": [128808, 128828],
-				"usage": [
-					"Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol",
-					"Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper",
-					"Quicklime, Magnesia, Tutty"
-				]
-			},
-			"🝀🝔": {
-				"name": "Operation of Alchemy",
-				"codes": "🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏🝐🝑🝒🝓🝔",
-				"category": "So",
-				"codePoints": ["U+1F740", "U+1F754"],
-				"range": [128832, 128852],
-				"usage": [
-					"Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate",
-					"Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection"
-				]
-			},
-			"🝕🝣": {
-				"name": "Process of Alchemy",
-				"codes": "🝕🝖🝗🝘🝙🝚🝛🝜🝝🝞🝟🝠🝡🝢🝣",
-				"category": "So",
-				"codePoints": ["U+1F755", "U+1F763"],
-				"range": [128853, 128867],
-				"usage": [
-					"Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, ",
-					"Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize"
-				]
-			},
-			"🝤🝳": {
-				"name": "Essence of Alchemy",
-				"codes": "🝤🝥🝦🝧🝨🝩🝪🝫🝬🝭🝮🝯🝰🝱🝲🝳",
-				"category": "So",
-				"codePoints": ["U+1F764", "U+1F773"],
-				"range": [128868, 128883],
-				"usage": [
-					"Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood",
-					"Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris",
-					"Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold"
-				]
-			},
-			"㊊㊐":{
-				"name": "Moon Five Elements and Sun - Wu Xing cosmology",
-				"codes": "㊊㊋㊌㊍㊎㊏㊐",
-				"category": "So",
-				"codePoints": ["U+328A", "U+328F"],
-				"range": [12938, 12943],
-				"usage": "Moon, Fire, Water, Wood, Metal, Earth, Sun"
-			},
-			"ᚠᛪ": {
-				"name": "Runic",
-				"block": "Runic",
-				"codes": "ᚠᚡᚢᚣᚤᚥᚦᚧᚨᚩᚪᚫᚬᚭᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉᛊᛋᛌᛍᛎᛏᛐᛑᛒᛓᛔᛕᛖᛗᛘᛙᛚᛛᛜᛝᛞᛟᛠᛡᛢᛣᛤᛥᛦᛧᛨᛩᛪ",
-				"category": "Lo",
-				"codePoints": ["U+16A0", "U+16EA"],
-				"range": [5792, 5866],
-				"usage": "Runic characters used in ancient Germanic and Scandinavian inscriptions",
-				"tags": ["runes", "germanic", "scandinavian", "ancient script"]
-			},
-			"ᎠᏯ": {
-				"name": "Cherokee Syllabary",
-				"creator": "Sequoyah",
-				"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯ"
-			},
-			"ᚁᚚ":{
-				"name": "Ogham",
-				"creator": "Ogma",
-				"codes": "ᚁᚂᚃᚄᚅᚆᚇᚈᚉᚊᚋᚌᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ"
-			},
-			"ꔀꘟ":{
-				"name": "Vai Syllabary",
-				"creator": "Momolu Duwalu Bukele",
-				"codes": [
-					"ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙ",
-					"ꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶ",
-					"ꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑ",
-					"ꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸ",
-					"ꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡ",
-					"ꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀ",
-					"ꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣ",
-					"ꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ",
-					"꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
+				"paths": [
+					{ "type": "logogram", "value": "ilu", "meaning": "god" },
+					{ "type": "syllabic", "value": "an" },
+					{ "type": "determinative", "semantic": "divine", "phonetic": false }
 				]
 			}
-		}
-	},
-	"encoding":{
-		"riff":{
-			"name" : "riff tags",
-			"type" : "FourCC",
-			"description": "Standard four-character tags for embedding metadata in the INFO chunk of RIFF-based WAV files.",
-			"source": "RIFF Specification (Microsoft/IBM, 1991)",
-			"usage": "Key-value pairs in the LIST/INFO chunk; values are null-terminated strings padded to even bytes.",
-			"tags": ["metadata", "audio", "file-format", "riff"],
-			"CC": {
-				"IARL": "Archival Location",
-				"IART": "Artist",
-				"ICAS": "Default Audio Stream",
-				"ICMS": "Commissioned",
-				"ICMT": "Comment",
-				"ICNM": "Cinematographer",
-				"ICNT": "Country",
-				"ICOP": "Copyright",
-				"ICRD": "Creation Date",
-				"ICRP": "Cropped",
-				"IDIM": "Dimensions",
-				"IDIT": "Date Time Original",
-				"IDPI": "Dots Per Inch",
-				"IDST": "Distributed By",
-				"IEDT": "Edited By",
-				"IENC": "Encoded By",
-				"IENG": "Engineer",
-				"IGNR": "Genre",
-				"IKEY": "Keywords",
-				"ILGT": "Lightness",
-				"ILNG": "Language",
-				"IMED": "Medium",
-				"IMIT": "More Info Text",
-				"IMUS": "Music By",
-				"INAM": "Title",
-				"IPDS": "Production Designer",
-				"IPLT": "Num Colors",
-				"IPRD": "Product",
-				"IPRO": "Produced By",
-				"IRIP": "Ripped By",
-				"IRTD": "Rating",
-				"ISBJ": "Subject",
-				"ISFT": "Software",
-				"ISGN": "Secondary Genre",
-				"ISHP": "Sharpness",
-				"ISMP": "Time Code",
-				"ISRC": "Source",
-				"ISRF": "Source Form",
-				"ISTR": "Starring",
-				"ITCH": "Technician",
-				"ITRK": "Track Number",
-				"IWRI": "Written By",
-				"LOCA": "Location",
-				"PRT1": "Part",
-				"PRT2": "Number Of Parts",
-				"RATE": "Rate",
-				"STAT": "Statistics",
-				"TAPE": "Tape Name",
-				"TCDO": "End Timecode",
-				"TCOD": "Start Timecode"
-			}
-		}
-	},
-	"relay": {
-		"akkadian": {
-			"name": "Akkadian",
-			"signs": {
-				"syllabic": ["𒀀","𒁀","𒂊","𒄀"], 
-				"logograms": ["𒀭","𒆳","𒈗"], 
-				"determinatives": ["𒀭","𒇽"]
-			},
-			"block": "Cuneiform",
-			"system": "logosyllabic",
-			"range": ["U+12000", "U+123FF"],
-			"tags": ["ancient", "mesopotamian", "cuneiform"],
-			"context": "Required for disambiguation, signs have multiple readings; heavy Sumerian influence.",
-			"description": "Logophonetic cuneiform script used for Akkadian (c. 2500–100 BCE).",
-			"composition": [
-				"determinative + word",
-				"logogram + phonetic complement",
-				"syllabic sequence"
+		},
+		"technology":{
+			"lightemittingdiodes":[
+				{"color": "green", "year": 1958, "nm": 565, "material": "GaP", "inventors": ["Egon Loebner", "Rubin Braunstein"]},
+				{"color": "red", "year": 1962, "nm": 650, "material": "GaAsP", "inventors": ["Nick Holonyak Jr."]},
+				{"color": "infrared", "year": 1962, "nm": 850, "material": "GaAs", "inventors": ["Robert Keyes", "Theodore Quist"]},
+				{"color": "far-red", "year": 1970, "nm": 660, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "yellow", "year": 1972, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "violet", "year": 1972, "nm": 405, "material": "GaN", "inventors": ["Herbert Maruska", "Jacques Pankove"]},
+				{"color": "amber", "year": 1976, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "blue", "year": 1993, "nm": 470, "material": "GaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "turquoise", "year": 1996, "nm": 505, "material": "InGaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "white", "year": 1995, "nm": 450, "material": "GaN+phosphor", "inventors": ["Shuji Nakamura"]},
+				{"color": "UV", "year": 1998, "nm": 375, "material": "GaN", "inventors": ["Shuji Nakamura"]}
 			],
-			"paths": [
-				{ "type": "logogram", "value": "ilu", "meaning": "god" },
-				{ "type": "syllabic", "value": "an" },
-				{ "type": "determinative", "semantic": "divine", "phonetic": false }
-			]
-		}
-	},
-	"food":{
-		"flatbread":[
-			{"name":"Injera","region":"Ethiopia/Eritrea","ingredients":"Teff flour + water fermented","classification":"fermented sour flatbread"},
-			{"name":"Himbasha","region":"Eritrea/Ethiopia","ingredients":"Wheat flour + spices","classification":"celebratory bread"},
-			{"name":"Taftan","region":"Iran/Pakistan","ingredients":"Wheat flour + milk + saffron","classification":"lightly enriched flatbread"},
-			{"name":"Sangak","region":"Iran","ingredients":"Whole wheat dough","classification":"pebble-baked flatbread"},
-			{"name":"Barbari","region":"Iran","ingredients":"Wheat flour + yeast","classification":"thick Persian flatbread"},
-			{"name":"Lavash","region":"Armenia/Iran","ingredients":"Wheat flour + water","classification":"thin soft flatbread"},
-			{"name":"Bolani","region":"Afghanistan","ingredients":"Wheat dough + vegetable filling","classification":"stuffed flatbread"},
-			{"name":"Bing","region":"China","ingredients":"Wheat flour dough","classification":"pan-cooked Chinese flatbread"},
-			{"name":"Cong you bing","region":"China","ingredients":"Wheat dough + scallions + oil (layered)","classification":"layered pan-fried scallion pancake"},
-			{"name":"Roti prata","region":"Singapore/Malaysia","ingredients":"Wheat flour + ghee","classification":"stretched layered flatbread"},
-			{"name":"Piaya","region":"Philippines","ingredients":"Wheat dough + muscovado","classification":"sweet filled flatbread"},
-			{"name":"Dosa","region":"South India","ingredients":"Rice + urad dal fermented","classification":"fermented crepe-type flatbread"},
-			{"name":"Naan","region":"South Asia/Central Asia","ingredients":"Wheat flour + yogurt","classification":"tandoor flatbread"},
-			{"name":"Roti/Chapati","region":"India","ingredients":"Whole wheat flour + water","classification":"unleavened flatbread"},
-			{"name":"Paratha","region":"India/Bangladesh/Pakistan","ingredients":"Whole wheat + ghee layered","classification":"layered flaky flatbread"},
-			{"name":"Bhakri","region":"Western India","ingredients":"Millet flour + water","classification":"millet flatbread"},
-			{"name":"Jowar roti","region":"India","ingredients":"Sorghum flour + water","classification":"gluten-free sorghum flatbread"},
-			{"name":"Akki roti","region":"Karnataka","ingredients":"Rice flour + spices","classification":"rice flatbread"},
-			{"name":"Puri","region":"India","ingredients":"Wheat dough + oil","classification":"puffed fried flatbread"},
-			{"name":"Bhatura","region":"North India","ingredients":"Maida flour + yogurt","classification":"fried leavened flatbread"},
-			{"name":"Markouk","region":"Lebanon/Syria","ingredients":"Flour + water very thin","classification":"ultra-thin saj bread"},
-			{"name":"Yufka","region":"Turkey/Levant","ingredients":"Wheat flour + water","classification":"ancestor to phyllo pastry"},
-			{"name":"Pita","region":"Levant","ingredients":"Wheat flour + yeast","classification":"pocket flatbread"},
-			{"name":"Lahmacun","region":"Turkey/Armenia","ingredients":"Thin dough + minced topping","classification":"topped flatbread"},
-			{"name":"Gözleme","region":"Turkey","ingredients":"Wheat dough + fillings","classification":"stuffed folded flatbread"},
-			{"name":"Msemen","region":"Morocco/Algeria","ingredients":"Semolina + flour + oil","classification":"folded flaky flatbread"},
-			{"name":"Balady","region":"Egypt","ingredients":"Whole wheat flour","classification":"staple Egyptian flatbread"},
-			{"name":"Khobz","region":"Maghreb","ingredients":"Wheat flour + semolina","classification":"North African flatbread"},
-			{"name":"Bannock","region":"Scotland/Indigenous North America","ingredients":"Flour + fat + water","classification":"griddle flatbread"},
-			{"name":"Lefse","region":"Norway","ingredients":"Potatoes + flour","classification":"soft potato flatbread"},
-			{"name":"Tunnbröd","region":"Sweden","ingredients":"Barley/rye/wheat mixture","classification":"soft or crisp northern flatbread"},
-			{"name":"Lángos","region":"Hungary","ingredients":"Wheat flour + yeast","classification":"fried flatbread"},
-			{"name":"Farinata","region":"Italy/France","ingredients":"Chickpea flour + water","classification":"chickpea oven-baked flatbread"},
-			{"name":"Focaccia","region":"Italy","ingredients":"Wheat flour + olive oil","classification":"oven flatbread"},
-			{"name":"Piadina","region":"Italy","ingredients":"Wheat flour + lard/oil","classification":"Romagna griddle flatbread"},
-			{"name":"Pane carasau","region":"Sardinia","ingredients":"Semolina + water","classification":"thin crisp sheet bread"},
-			{"name":"Talo","region":"Basque Country","ingredients":"Corn flour + water","classification":"corn flatbread"},
-			{"name":"Tortilla","region":"Mexico","ingredients":"Masa harina + water","classification":"corn flatbread"},
-			{"name":"Gordita","region":"Mexico","ingredients":"Masa harina + water","classification":"thick pocket flatbread"},
-			{"name":"Sopes","region":"Mexico","ingredients":"Masa harina + water","classification":"thick rimmed flatbread"},
-			{"name":"Arepa","region":"Venezuela/Colombia","ingredients":"Precooked corn flour + water","classification":"corn cake/flatbread"},
-			{"name":"Pupusa","region":"El Salvador","ingredients":"Corn dough + fillings","classification":"stuffed corn flatbread"},
-			{"name":"Johnnycake","region":"Caribbean/American South","ingredients":"Cornmeal + water","classification":"griddle flatbread"},
-			{"name":"Frybread","region":"Native American","ingredients":"Flour + fat + leavening","classification":"fried bread"},
-			{"name":"Casabe","region":"Caribbean/South America","ingredients":"Cassava pulp","classification":"cassava flatbread"},
-			{"name":"Matzo","region":"Jewish","ingredients":"Wheat flour + water only","classification":"unleavened ritual flatbread"}
-		],
-		"pancake":[
-			{"name":"Jianbing","region":"China","ingredients":"Mung bean + wheat batter + egg + crisp wafer","classification":"Chinese street crepe"},
-			{"name":"Pesarattu","region":"Andhra Pradesh (India)","ingredients":"Green moong dal batter","classification":"savory lentil crepe"},
-			{"name":"Neer dosa","region":"Karnataka (India)","ingredients":"Rice batter (no fermentation)","classification":"lacy thin rice crepe"},
-			{"name":"Dosa","region":"South India","ingredients":"Fermented rice + urad dal batter","classification":"crispy fermented crepe"},
-			{"name":"Appam / Aappam","region":"Kerala & Sri Lanka","ingredients":"Fermented rice + coconut milk","classification":"lacy bowl-shaped hopper"},
-			{"name":"Malawax / Malawah","region":"Somalia / Djibouti / Yemen","ingredients":"Thin batter + sugar + cardamom","classification":"sweet layered Somali crepe"},
-			{"name":"Baghrir","region":"Morocco / Algeria","ingredients":"Semolina + yeast batter","classification":"thousand-hole pancake"},
-			{"name":"Msemen (with batter variant)","region":"Maghreb","ingredients":"Loose semolina batter (some regions)","classification":"spongy square pancake"},
-			{"name":"Cachapa","region":"Venezuela","ingredients":"Fresh corn batter + cheese","classification":"sweet corn pancake"},
-			{"name":"Ployes","region":"Acadian (Maine / New Brunswick)","ingredients":"Buckwheat + wheat flour + water","classification":"Acadian buckwheat crepe"},
-			{"name":"Blini","region":"Russia / Eastern Europe","ingredients":"Buckwheat or wheat batter + yeast","classification":"small fermented pancake"},
-			{"name":"Crêpe","region":"France (Brittany / Normandy)","ingredients":"Wheat flour or buckwheat + eggs + milk","classification":"classic thin French crepe"},
-			{"name":"Galette bretonne","region":"Brittany (France)","ingredients":"100% buckwheat batter","classification":"savory Breton buckwheat crepe"},
-			{"name":"Flapjack","region":"United States","ingredients":"Wheat batter + milk + eggs + leavening","classification":"thick griddle pancake"}
-		]
-	},
-	"internet":{
-		"pipes":[
-			{"name":"JUPITER","capacity":"60Tbps","ready":2021,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
-			{"name":"SJC2","capacity":"126Tbps","ready":2025,"landing":["ChikuraJP","Singapore","HongKong","Shanghai"]},
-			{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
-			{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]},
-			{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
-			{"name":"Dunant","capacity":"250Tbps","ready":2021,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
-			{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
-			{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]},
-			{"name":"SEA-ME-WE6","capacity":"126Tbps","ready":2026,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
-			{"name":"2Africa","capacity":"180Tbps","ready":2025,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
-			{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
-			{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]},
-			{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
-			{"name":"Humboldt","capacity":"144Tbps","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]},
-			{"name":"TPU","capacity":"260Tbps","ready":2025,"landing":["EurekaCAUS","TanguissonPointGU","ClaveriaPH","DawuTW"]},
-			{"name":"Echo","capacity":"260Tbps","ready":2024,"landing":["EurekaCAUS","TanjungPakisID","PitiGU","AgatGU","ChangiNorthSG"]},
-			{"name":"ACC-1","capacity":"256Tbps","ready":2025,"landing":["Singapore","MumbaiIN","JeddahSA","DarwinAU","AlupangGU","HermosaBeachCAUS"]},
-			{"name":"Medusa","capacity":"480Tbps","ready":2025,"landing":["GenoaIT","ChaniaGR","AlexandriaEG","TripoliLY"]},
-			{"name":"Anjana","capacity":"480Tbps","ready":2024,"landing":["MyrtleBeachUS","SantanderES"]}
-		],
-		"zones":{
-			"aws":[
-				["Auckland@ap-southeast-6",-36.8485,174.7633],
-				["Sydney@ap-southeast-2",-33.8688,151.2093],
-				["Santiago@sa-south-2",-33.4489,-70.6693],
-				["Johannesburg@af-south-1",-26.2041,28.0473],
-				["SãoPaulo@sa-east-1",-23.5505,-46.6333],
-				["Singapore@ap-southeast-1",1.3521,103.8198],
-				["Mumbai@ap-south-1",19.0760,72.8777],
-				["Osaka@ap-northeast-3",34.6937,135.5023],
-				["Tokyo@ap-northeast-1",35.6762,139.6503],
-				["PaloAlto@us-west-1",37.4419,-122.1430],
-				["Seoul@ap-northeast-2",37.5665,126.9779],
-				["Virginia@us-east-1",39.0469,-77.4903],
-				["Ohio@us-east-2",39.9612,-82.9988],
-				["Montreal@ca-central-1",45.5017,-73.5673],
-				["Oregon@us-west-2",45.5202,-122.6742],
-				["Paris@eu-west-3",48.8566,2.3522],
-				["Frankfurt@eu-central-1",50.1109,8.6821],
-				["London@eu-west-2",51.5074,-0.1278],
-				["Dublin@eu-west-1",53.3498,-6.2603],
-				["Stockholm@eu-north-1",59.3293,18.0686]
+			"laserdiodes":[
+				{"wavelength":"infrared","year":1962,"nm":840,"material":"GaAs","type":"first-demonstration","inventors":["Robert N. Hall","General Electric team"]},
+				{"wavelength":"infrared","year":1970,"nm":830,"material":"AlGaAs","type":"continuous-room-temp","inventors":["Morton Panish","Izuo Hayashi"]},
+				{"wavelength":"infrared","year":1976,"nm":850,"material":"GaAs","type":"fiber-communications","inventors":["Bell Labs"]},
+				{"wavelength":"infrared","year":1979,"nm":780,"material":"AlGaAs","type":"optical-storage","inventors":["Sony / Philips"]},
+				{"wavelength":"red","year":1985,"nm":650,"material":"AlGaInP","type":"high-efficiency","inventors":["HP Optoelectronics team"]},
+				{"wavelength":"infrared","year":1989,"nm":850,"material":"GaAs","type":"VCSEL","inventors":["Kent Choquette","AT&T Bell Labs"]},
+				{"wavelength":"blue","year":1996,"nm":405,"material":"InGaN","type":"commercial-breakthrough","inventors":["Shuji Nakamura"]},
+				{"wavelength":"violet","year":2002,"nm":405,"material":"InGaN","type":"Blu-ray","inventors":["Nichia / Sony"]},
+				{"wavelength":"deep-UV","year":2006,"nm":280,"material":"AlGaN","type":"sterilisation","inventors":["academic / industrial groups"]},
+				{"wavelength":"mid-infrared","year":1994,"nm":8000,"material":"InGaAs/AlInAs","type":"quantum-cascade","inventors":["Federico Capasso"]}
 			],
-			"alibaba":[
-				["Jakarta@ap-southeast-5a",-6.2088,106.8456],
-				["Singapore@ap-southeast-1a",1.3521,103.8198],
-				["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
-				["Bangkok@ap-southeast-7a",13.7563,100.5018],
-				["Manila@ap-southeast-6a",14.5995,120.9842],
-				["Queretaro@na-mexico",20.5888,-100.3899],
-				["HongKong@ap-east-1a",22.3964,114.1095],
-				["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
-				["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
-				["Heyuan@cn-heyuan-a",23.7333,114.6833],
-				["Riyadh@me-central-1a",24.7136,46.6753],
-				["Dubai@me-east-1a",25.2048,55.2708],
-				["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
-				["Chengdu@cn-chengdu-a",30.5728,104.0668],
-				["Wuhan@cn-wuhan-a",30.5928,114.3055],
-				["Shanghai@cn-shanghai-a",31.2304,121.4737],
-				["Tokyo@ap-northeast-1a",35.6762,139.6503],
-				["Qingdao@cn-qingdao-a",36.0667,120.3833],
-				["PaloAlto@us-west-1a",37.3875,-122.0575],
-				["Seoul@ap-northeast-2a",37.5665,126.9780],
-				["Virginia@us-east-1a",39.0469,-77.4903],
-				["Beijing@cn-beijing-a",39.9042,116.4074],
-				["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
-				["Hohhot@cn-huhehaote-a",40.8414,111.7517],
-				["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
-				["Paris@eu-west-1a",48.8566,2.3522],
-				["Frankfurt@eu-central-1a",50.1109,8.6821],
-				["London@eu-west-2a",51.5074,-0.1278]
+			"virtualkeys":[
+				"VK_0","VK_LBUTTON","VK_RBUTTON","VK_CANCEL","VK_MBUTTON","VK_XBUTTON1","VK_XBUTTON2",
+				"VK_7","VK_BACK","VK_TAB",
+				"VK_10","VK_11","VK_CLEAR","VK_RETURN",
+				"VK_14","VK_15","VK_SHIFT","VK_CONTROL","VK_MENU","VK_PAUSE","VK_CAPITAL","VK_KANA","VK_IME_ON","VK_JUNJA",
+				"VK_FINAL","VK_HANJA","VK_IME_OFF","VK_ESCAPE","VK_CONVERT","VK_NONCONVERT","VK_ACCEPT","VK_MODECHANGE",
+				"VK_SPACE","VK_PRIOR","VK_NEXT","VK_END","VK_HOME",
+				"VK_LEFT","VK_UP","VK_RIGHT","VK_DOWN",
+				"VK_SELECT","VK_PRINT","VK_EXECUTE","VK_SNAPSHOT","VK_INSERT","VK_DELETE","VK_HELP",
+				"VK_0","VK_1","VK_2","VK_3","VK_4","VK_5","VK_6","VK_7","VK_8","VK_9",
+				"VK_58","VK_59","VK_60","VK_61","VK_62","VK_63","VK_64",
+				"VK_A","VK_B","VK_C","VK_D","VK_E","VK_F","VK_G","VK_H","VK_I","VK_J","VK_K","VK_L","VK_M",
+				"VK_N","VK_O","VK_P","VK_Q","VK_R","VK_S","VK_T","VK_U","VK_V","VK_W","VK_X","VK_Y","VK_Z",
+				"VK_LWIN","VK_RWIN","VK_APPS",
+				"VK_94","VK_SLEEP",
+				"VK_NUMPAD0","VK_NUMPAD1","VK_NUMPAD2","VK_NUMPAD3","VK_NUMPAD4",
+				"VK_NUMPAD5","VK_NUMPAD6","VK_NUMPAD7","VK_NUMPAD8","VK_NUMPAD9",
+				"VK_MULTIPLY","VK_ADD","VK_SEPARATOR","VK_SUBTRACT","VK_DECIMAL","VK_DIVIDE",
+				"VK_F1","VK_F2","VK_F3","VK_F4","VK_F5","VK_F6","VK_F7","VK_F8","VK_F9","VK_F10","VK_F11","VK_F12",
+				"VK_F13","VK_F14","VK_F15","VK_F16","VK_F17","VK_F18","VK_F19","VK_F20","VK_F21","VK_F22","VK_F23","VK_F24",
+				"VK_136","VK_137","VK_138","VK_139","VK_140","VK_141","VK_142","VK_143",
+				"VK_NAVIGATION_VIEW","VK_NAVIGATION_MENU","VK_NAVIGATION_UP","VK_NAVIGATION_DOWN","VK_NAVIGATION_LEFT","VK_NAVIGATION_RIGHT",
+				"VK_NAVIGATION_ACCEPT","VK_NAVIGATION_CANCEL",
+				"VK_NUMLOCK","VK_SCROLL",
+				"VK_OEM_NEC_EQUAL","VK_OEM_FJ_MASSHOU","VK_OEM_FJ_TOUROKU","VK_OEM_FJ_LOYA","VK_OEM_FJ_ROYA",
+				"VK_151","VK_152","VK_153","VK_154","VK_155","VK_156","VK_157","VK_158","VK_159",
+				"VK_LSHIFT","VK_RSHIFT","VK_LCONTROL","VK_RCONTROL","VK_LMENU","VK_RMENU",
+				"VK_BROWSER_BACK","VK_BROWSER_FORWARD","VK_BROWSER_REFRESH","VK_BROWSER_STOP",
+				"VK_BROWSER_SEARCH","VK_BROWSER_FAVORITES","VK_BROWSER_HOME",
+				"VK_VOLUME_MUTE","VK_VOLUME_DOWN","VK_VOLUME_UP",
+				"VK_MEDIA_NEXT_TRACK","VK_MEDIA_PREV_TRACK","VK_MEDIA_STOP","VK_MEDIA_PLAY_PAUSE",
+				"VK_LAUNCH_MAIL","VK_LAUNCH_MEDIA_SELECT","VK_LAUNCH_APP1","VK_LAUNCH_APP2",
+				"VK_184","VK_185",
+				"VK_OEM_1","VK_OEM_PLUS","VK_OEM_COMMA","VK_OEM_MINUS","VK_OEM_PERIOD","VK_OEM_2","VK_OEM_3",
+				"VK_193","VK_194",
+				"VK_GAMEPAD_A","VK_GAMEPAD_B","VK_GAMEPAD_X","VK_GAMEPAD_Y",
+				"VK_GAMEPAD_RIGHT_SHOULDER","VK_GAMEPAD_LEFT_SHOULDER","VK_GAMEPAD_LEFT_TRIGGER","VK_GAMEPAD_RIGHT_TRIGGER",
+				"VK_GAMEPAD_DPAD_UP","VK_GAMEPAD_DPAD_DOWN","VK_GAMEPAD_DPAD_LEFT","VK_GAMEPAD_DPAD_RIGHT",
+				"VK_GAMEPAD_MENU","VK_GAMEPAD_VIEW",
+				"VK_GAMEPAD_LEFT_THUMBSTICK_BUTTON","VK_GAMEPAD_RIGHT_THUMBSTICK_BUTTON",
+				"VK_GAMEPAD_LEFT_THUMBSTICK_UP","VK_GAMEPAD_LEFT_THUMBSTICK_DOWN","VK_GAMEPAD_LEFT_THUMBSTICK_RIGHT","VK_GAMEPAD_LEFT_THUMBSTICK_LEFT",
+				"VK_GAMEPAD_RIGHT_THUMBSTICK_UP","VK_GAMEPAD_RIGHT_THUMBSTICK_DOWN","VK_GAMEPAD_RIGHT_THUMBSTICK_RIGHT","VK_GAMEPAD_RIGHT_THUMBSTICK_LEFT",
+				"VK_OEM_4","VK_OEM_5","VK_OEM_6","VK_OEM_7","VK_OEM_8",
+				"VK_224","VK_OEM_AX","VK_OEM_102",
+				"VK_ICO_HELP","VK_ICO_00","VK_PROCESSKEY","VK_ICO_CLEAR",
+				"VK_OEM_RESET","VK_OEM_JUMP","VK_OEM_PA1","VK_OEM_PA2","VK_OEM_PA3",
+				"VK_OEM_WSCTRL","VK_OEM_CUSEL",
+				"VK_OEM_ATTN","VK_OEM_FINISH","VK_OEM_COPY","VK_OEM_AUTO","VK_OEM_ENLW","VK_OEM_BACKTAB",
+				"VK_ATTN","VK_CRSEL","VK_EXSEL","VK_EREOF",
+				"VK_PLAY","VK_ZOOM","VK_NONAME","VK_PA1","VK_OEM_CLEAR"
 			]
+		},
+		"geography":{
+			"nations":[
+				"Palestine","Holy See",
+				"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia",
+				"Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus",
+				"Belgium", "Belize", "Benin", "Bhutan", "Bolivia (Plurinational State of)", "Bosnia and Herzegovina", "Botswana", "Brazil",
+				"Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada",
+				"Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica",
+				"Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", "Democratic People's Republic of Korea", "Democratic Republic of the Congo", "Denmark",
+				"Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea",
+				"Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia",
+				"Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau",
+				"Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)",
+				"Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan",
+				"Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho",
+				"Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
+				"Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia (Federated States of)",
+				"Moldova, Republic of", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
+				"Nauru", "Nepal", "Netherlands, Kingdom of the", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia",
+				"Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru",
+				"Philippines", "Poland", "Portugal", "Qatar", "Republic of Korea", "Romania", "Russian Federation", "Rwanda",
+				"Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+				"Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
+				"South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+				"Syrian Arab Republic", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago",
+				"Tunisia", "Türkiye", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland",
+				"United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Yemen", "Zambia", "Zimbabwe"
+			],
+			"ambiguousstates":[
+				{"name":"Palestine","rule":"Palestine"},
+				{"name":"Kosovo","rule":"Kosovo, Serbia"},
+				{"name":"Somaliland","rule":"Somalia, Somaliland"},
+				{"name":"Western Sahara","rule":"Morocco, Sahrawi Arab Democratic Republic"},
+				{"name":"Northern Cyprus","rule":"Turkish Republic of Northern Cyprus, Cyprus"},
+				{"name":"Singapore","rule":"Singapore"},
+				{"name":"Monaco","rule":"Monaco"},
+				{"name":"Vatican City","rule":"Holy See"},
+				{"name":"Tibet","rule":"China"},
+				{"name":"Hong Kong","rule":"China"},
+				{"name":"Macau","rule":"China"},
+				{"name":"Taiwan","rule":"Taiwan"},
+				{"name":"Cook Islands","rule":"New Zealand"},
+				{"name":"Niue","rule":"New Zealand"},
+				{"name":"Abkhazia","rule":"Russia"},
+				{"name":"South Ossetia","rule":"Russia"},
+				{"name":"Transnistria","rule":"Russia"}
+			],
+			"defunctstates":[
+				{"name": "Sikkim", "rule": "India", "dissolved": 1975},
+				{"name": "South Vietnam", "rule": "Vietnam", "dissolved": 1976},
+				{"name": "Democratic Kampuchea", "rule": "Vietnam", "dissolved": 1979},
+				{"name": "South Yemen", "rule": "Yemen", "dissolved": 1990},
+				{"name": "German Democratic Republic", "rule": "Germany", "dissolved": 1990},
+				{"name": "Soviet Union", "rule": "Russia", "dissolved": 1991},
+				{"name": "Yugoslavia", "rule": "successor states", "dissolved": 1992},
+				{"name": "United Arab Republic", "rule": "Egypt & Syria", "dissolved": 1961},
+				{"name": "Czechoslovakia", "rule": "Czech Republic & Slovakia", "dissolved": 1993},
+				{"name": "Tanganyika", "rule": "Tanzania", "dissolved": 1964},
+				{"name": "Zanzibar", "rule": "Tanzania", "dissolved": 1964},
+				{"name": "Senegambia", "rule": "Senegal & Gambia", "dissolved": 1989},
+				{"name": "Biafra", "rule": "Nigeria", "dissolved": 1970},
+				{"name": "Artsakh", "rule": "Azerbaijan", "dissolved": 2024}
+			]
+		},
+		"food":{
+			"flatbread":[
+				{"name":"Injera","region":"Ethiopia/Eritrea","ingredients":"Teff flour + water fermented","classification":"fermented sour flatbread"},
+				{"name":"Himbasha","region":"Eritrea/Ethiopia","ingredients":"Wheat flour + spices","classification":"celebratory bread"},
+				{"name":"Taftan","region":"Iran/Pakistan","ingredients":"Wheat flour + milk + saffron","classification":"lightly enriched flatbread"},
+				{"name":"Sangak","region":"Iran","ingredients":"Whole wheat dough","classification":"pebble-baked flatbread"},
+				{"name":"Barbari","region":"Iran","ingredients":"Wheat flour + yeast","classification":"thick Persian flatbread"},
+				{"name":"Lavash","region":"Armenia/Iran","ingredients":"Wheat flour + water","classification":"thin soft flatbread"},
+				{"name":"Bolani","region":"Afghanistan","ingredients":"Wheat dough + vegetable filling","classification":"stuffed flatbread"},
+				{"name":"Bing","region":"China","ingredients":"Wheat flour dough","classification":"pan-cooked Chinese flatbread"},
+				{"name":"Cong you bing","region":"China","ingredients":"Wheat dough + scallions + oil (layered)","classification":"layered pan-fried scallion pancake"},
+				{"name":"Roti prata","region":"Singapore/Malaysia","ingredients":"Wheat flour + ghee","classification":"stretched layered flatbread"},
+				{"name":"Piaya","region":"Philippines","ingredients":"Wheat dough + muscovado","classification":"sweet filled flatbread"},
+				{"name":"Dosa","region":"South India","ingredients":"Rice + urad dal fermented","classification":"fermented crepe-type flatbread"},
+				{"name":"Naan","region":"South Asia/Central Asia","ingredients":"Wheat flour + yogurt","classification":"tandoor flatbread"},
+				{"name":"Roti/Chapati","region":"India","ingredients":"Whole wheat flour + water","classification":"unleavened flatbread"},
+				{"name":"Paratha","region":"India/Bangladesh/Pakistan","ingredients":"Whole wheat + ghee layered","classification":"layered flaky flatbread"},
+				{"name":"Bhakri","region":"Western India","ingredients":"Millet flour + water","classification":"millet flatbread"},
+				{"name":"Jowar roti","region":"India","ingredients":"Sorghum flour + water","classification":"gluten-free sorghum flatbread"},
+				{"name":"Akki roti","region":"Karnataka","ingredients":"Rice flour + spices","classification":"rice flatbread"},
+				{"name":"Puri","region":"India","ingredients":"Wheat dough + oil","classification":"puffed fried flatbread"},
+				{"name":"Bhatura","region":"North India","ingredients":"Maida flour + yogurt","classification":"fried leavened flatbread"},
+				{"name":"Markouk","region":"Lebanon/Syria","ingredients":"Flour + water very thin","classification":"ultra-thin saj bread"},
+				{"name":"Yufka","region":"Turkey/Levant","ingredients":"Wheat flour + water","classification":"ancestor to phyllo pastry"},
+				{"name":"Pita","region":"Levant","ingredients":"Wheat flour + yeast","classification":"pocket flatbread"},
+				{"name":"Lahmacun","region":"Turkey/Armenia","ingredients":"Thin dough + minced topping","classification":"topped flatbread"},
+				{"name":"Gözleme","region":"Turkey","ingredients":"Wheat dough + fillings","classification":"stuffed folded flatbread"},
+				{"name":"Msemen","region":"Morocco/Algeria","ingredients":"Semolina + flour + oil","classification":"folded flaky flatbread"},
+				{"name":"Balady","region":"Egypt","ingredients":"Whole wheat flour","classification":"staple Egyptian flatbread"},
+				{"name":"Khobz","region":"Maghreb","ingredients":"Wheat flour + semolina","classification":"North African flatbread"},
+				{"name":"Bannock","region":"Scotland/Indigenous North America","ingredients":"Flour + fat + water","classification":"griddle flatbread"},
+				{"name":"Lefse","region":"Norway","ingredients":"Potatoes + flour","classification":"soft potato flatbread"},
+				{"name":"Tunnbröd","region":"Sweden","ingredients":"Barley/rye/wheat mixture","classification":"soft or crisp northern flatbread"},
+				{"name":"Lángos","region":"Hungary","ingredients":"Wheat flour + yeast","classification":"fried flatbread"},
+				{"name":"Farinata","region":"Italy/France","ingredients":"Chickpea flour + water","classification":"chickpea oven-baked flatbread"},
+				{"name":"Focaccia","region":"Italy","ingredients":"Wheat flour + olive oil","classification":"oven flatbread"},
+				{"name":"Piadina","region":"Italy","ingredients":"Wheat flour + lard/oil","classification":"Romagna griddle flatbread"},
+				{"name":"Pane carasau","region":"Sardinia","ingredients":"Semolina + water","classification":"thin crisp sheet bread"},
+				{"name":"Talo","region":"Basque Country","ingredients":"Corn flour + water","classification":"corn flatbread"},
+				{"name":"Tortilla","region":"Mexico","ingredients":"Masa harina + water","classification":"corn flatbread"},
+				{"name":"Gordita","region":"Mexico","ingredients":"Masa harina + water","classification":"thick pocket flatbread"},
+				{"name":"Sopes","region":"Mexico","ingredients":"Masa harina + water","classification":"thick rimmed flatbread"},
+				{"name":"Arepa","region":"Venezuela/Colombia","ingredients":"Precooked corn flour + water","classification":"corn cake/flatbread"},
+				{"name":"Pupusa","region":"El Salvador","ingredients":"Corn dough + fillings","classification":"stuffed corn flatbread"},
+				{"name":"Johnnycake","region":"Caribbean/American South","ingredients":"Cornmeal + water","classification":"griddle flatbread"},
+				{"name":"Frybread","region":"Native American","ingredients":"Flour + fat + leavening","classification":"fried bread"},
+				{"name":"Casabe","region":"Caribbean/South America","ingredients":"Cassava pulp","classification":"cassava flatbread"},
+				{"name":"Matzo","region":"Jewish","ingredients":"Wheat flour + water only","classification":"unleavened ritual flatbread"}
+			],
+			"pancake":[
+				{"name":"Jianbing","region":"China","ingredients":"Mung bean + wheat batter + egg + crisp wafer","classification":"Chinese street crepe"},
+				{"name":"Pesarattu","region":"Andhra Pradesh (India)","ingredients":"Green moong dal batter","classification":"savory lentil crepe"},
+				{"name":"Neer dosa","region":"Karnataka (India)","ingredients":"Rice batter (no fermentation)","classification":"lacy thin rice crepe"},
+				{"name":"Dosa","region":"South India","ingredients":"Fermented rice + urad dal batter","classification":"crispy fermented crepe"},
+				{"name":"Appam / Aappam","region":"Kerala & Sri Lanka","ingredients":"Fermented rice + coconut milk","classification":"lacy bowl-shaped hopper"},
+				{"name":"Malawax / Malawah","region":"Somalia / Djibouti / Yemen","ingredients":"Thin batter + sugar + cardamom","classification":"sweet layered Somali crepe"},
+				{"name":"Baghrir","region":"Morocco / Algeria","ingredients":"Semolina + yeast batter","classification":"thousand-hole pancake"},
+				{"name":"Msemen (with batter variant)","region":"Maghreb","ingredients":"Loose semolina batter (some regions)","classification":"spongy square pancake"},
+				{"name":"Cachapa","region":"Venezuela","ingredients":"Fresh corn batter + cheese","classification":"sweet corn pancake"},
+				{"name":"Ployes","region":"Acadian (Maine / New Brunswick)","ingredients":"Buckwheat + wheat flour + water","classification":"Acadian buckwheat crepe"},
+				{"name":"Blini","region":"Russia / Eastern Europe","ingredients":"Buckwheat or wheat batter + yeast","classification":"small fermented pancake"},
+				{"name":"Crêpe","region":"France (Brittany / Normandy)","ingredients":"Wheat flour or buckwheat + eggs + milk","classification":"classic thin French crepe"},
+				{"name":"Galette bretonne","region":"Brittany (France)","ingredients":"100% buckwheat batter","classification":"savory Breton buckwheat crepe"},
+				{"name":"Flapjack","region":"United States","ingredients":"Wheat batter + milk + eggs + leavening","classification":"thick griddle pancake"}
+			]
+		},
+		"internet":{
+			"pipes":[
+				{"name":"JUPITER","capacity":"60Tbps","ready":2021,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
+				{"name":"SJC2","capacity":"126Tbps","ready":2025,"landing":["ChikuraJP","Singapore","HongKong","Shanghai"]},
+				{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
+				{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]},
+				{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
+				{"name":"Dunant","capacity":"250Tbps","ready":2021,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
+				{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
+				{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]},
+				{"name":"SEA-ME-WE6","capacity":"126Tbps","ready":2026,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
+				{"name":"2Africa","capacity":"180Tbps","ready":2025,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
+				{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
+				{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]},
+				{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
+				{"name":"Humboldt","capacity":"144Tbps","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]},
+				{"name":"TPU","capacity":"260Tbps","ready":2025,"landing":["EurekaCAUS","TanguissonPointGU","ClaveriaPH","DawuTW"]},
+				{"name":"Echo","capacity":"260Tbps","ready":2024,"landing":["EurekaCAUS","TanjungPakisID","PitiGU","AgatGU","ChangiNorthSG"]},
+				{"name":"ACC-1","capacity":"256Tbps","ready":2025,"landing":["Singapore","MumbaiIN","JeddahSA","DarwinAU","AlupangGU","HermosaBeachCAUS"]},
+				{"name":"Medusa","capacity":"480Tbps","ready":2025,"landing":["GenoaIT","ChaniaGR","AlexandriaEG","TripoliLY"]},
+				{"name":"Anjana","capacity":"480Tbps","ready":2024,"landing":["MyrtleBeachUS","SantanderES"]}
+			],
+			"zones":{
+				"aws":[
+					["Auckland@ap-southeast-6",-36.8485,174.7633],
+					["Sydney@ap-southeast-2",-33.8688,151.2093],
+					["Santiago@sa-south-2",-33.4489,-70.6693],
+					["Johannesburg@af-south-1",-26.2041,28.0473],
+					["SãoPaulo@sa-east-1",-23.5505,-46.6333],
+					["Singapore@ap-southeast-1",1.3521,103.8198],
+					["Mumbai@ap-south-1",19.0760,72.8777],
+					["Osaka@ap-northeast-3",34.6937,135.5023],
+					["Tokyo@ap-northeast-1",35.6762,139.6503],
+					["PaloAlto@us-west-1",37.4419,-122.1430],
+					["Seoul@ap-northeast-2",37.5665,126.9779],
+					["Virginia@us-east-1",39.0469,-77.4903],
+					["Ohio@us-east-2",39.9612,-82.9988],
+					["Montreal@ca-central-1",45.5017,-73.5673],
+					["Oregon@us-west-2",45.5202,-122.6742],
+					["Paris@eu-west-3",48.8566,2.3522],
+					["Frankfurt@eu-central-1",50.1109,8.6821],
+					["London@eu-west-2",51.5074,-0.1278],
+					["Dublin@eu-west-1",53.3498,-6.2603],
+					["Stockholm@eu-north-1",59.3293,18.0686]
+				],
+				"alibaba":[
+					["Jakarta@ap-southeast-5a",-6.2088,106.8456],
+					["Singapore@ap-southeast-1a",1.3521,103.8198],
+					["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
+					["Bangkok@ap-southeast-7a",13.7563,100.5018],
+					["Manila@ap-southeast-6a",14.5995,120.9842],
+					["Queretaro@na-mexico",20.5888,-100.3899],
+					["HongKong@ap-east-1a",22.3964,114.1095],
+					["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
+					["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
+					["Heyuan@cn-heyuan-a",23.7333,114.6833],
+					["Riyadh@me-central-1a",24.7136,46.6753],
+					["Dubai@me-east-1a",25.2048,55.2708],
+					["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
+					["Chengdu@cn-chengdu-a",30.5728,104.0668],
+					["Wuhan@cn-wuhan-a",30.5928,114.3055],
+					["Shanghai@cn-shanghai-a",31.2304,121.4737],
+					["Tokyo@ap-northeast-1a",35.6762,139.6503],
+					["Qingdao@cn-qingdao-a",36.0667,120.3833],
+					["PaloAlto@us-west-1a",37.3875,-122.0575],
+					["Seoul@ap-northeast-2a",37.5665,126.9780],
+					["Virginia@us-east-1a",39.0469,-77.4903],
+					["Beijing@cn-beijing-a",39.9042,116.4074],
+					["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
+					["Hohhot@cn-huhehaote-a",40.8414,111.7517],
+					["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
+					["Paris@eu-west-1a",48.8566,2.3522],
+					["Frankfurt@eu-central-1a",50.1109,8.6821],
+					["London@eu-west-2a",51.5074,-0.1278]
+				]
+			}
+		},
+		"systemic fails": {
+			"market crash": "a cascade of panic unravels investor confidence",
+			"stack overflow": "a recursive push decrements pointer to no return",
+			"traction loss": "passing slip ratio replaces tire road dialogue with noise",
+			"thermal runaway": "exothermic reaction featuring a rapid escalation",
+			"rolling blackout": "sequential loss of power propagating across the network",
+			"volcanic eruption": "pyroclastic surge pressures cascading destruction",
+			"alpine avalanche": "fracture propagates, gravity pries snow slab from the granite",
+			"acoustic feedback": "escalating audio oscillation from excess self amplification"
+		},
+		"fundament":
+		{
+			"stone": "Stability, permanence, foundational; bedrock, monolith.",
+			"star": "Guidance, aspiration, directional; north star, lodestar.",
+			"axis": "Orientation, structure, alignment; pole, axis mundi, unit vector.",
+			"flow": "Movement, process, temporal reference; epoch, equilibrium, par."
+		},
+		"orient":
+		{
+			"azimuth": "Horizontal angle measured clockwise from north; specifies directional bearings in navigation.",
+			"zenith": "Point on celestial sphere directly above observer; defines upward vertical reference.",
+			"nadir": "Point on celestial sphere directly below observer; defines downward vertical reference.",
+			"home": "Baseline reference position or starting point; anchors all relative coordinate measurements.",
+			"datum": "Reference surface or framework in surveying; establishes baseline heights and positions.",
+			"origin": "Point where all coordinate axes intersect; absolute reference for all other points.",
+			"fovea": "Central point of retina providing sharpest vision; primary reference for visual fixation.",
+			"frame": "Baseline reference for measuring motion or orientation; inertial, conceptual, or structural.",
+			"anchor": "Initial information used as reference point for subsequent judgments and estimates.",
+			"tonic": "First note of diatonic scale; home note and primary harmonic reference for a key.",
+			"equilibrium": "State of balance in a system; reference point for dynamic stability.",
+			"par": "Standard score or expected performance; baseline reference for comparisons.",
+			"mean": "Arithmetic average of a dataset; central reference for statistical deviation.",
+			"bedrock": "Foundational layer or principle; ultimate reference for stability or truth.",
+			"pole": "Extreme point defining an axis or boundary; reference for orientation.",
+			"epoch": "Reference point in time for dating events or cycles; standard temporal baseline.",
+			"sovereign": "Supreme authority or ruling power; ultimate reference for legitimacy and control.",
+			"absolute": "Unrestricted and final authority; reference beyond conditions or limits.",
+			"axiom": "Self-evident truth taken as starting point; foundational reference for reasoning.",
+			"principle": "Fundamental rule or law; baseline reference for systems of thought or action.",
+			"archetype": "Original model or pattern; reference form for subsequent instances.",
+			"monolith": "Single massive structure; reference of permanence or authority.",
+			"root node": "Primary or topmost node in hierarchical structure; defines fundamental reference for descendants.",
+			"north star": "Fixed celestial point above North Pole; constant navigational reference for true north.",
+			"prime meridian": "Meridian at 0° longitude; universal reference for measuring east-west position.",
+			"unit vector": "Vector of length 1 indicating direction; fundamental reference for specifying other vectors.",
+			"ground state": "Lowest possible energy level of quantum system; baseline reference for all other states.",
+			"identity element": "Element that leaves operation result unmodified; fundamental operational reference.",
+			"sea level": "Average height of the ocean's surface; standard baseline for measuring land elevations and depths.",
+			"axis mundi": "Singular point connecting realms; central reference for orientation or structure."
+		},
+		"identifier": {
+			"viaf": { "name": "Virtual International Authority File ID.", "pattern": "^[0-9]+$" },
+			"isni": { "name": "International Standard Name Identifier.", "pattern": "^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$" },
+			"lcnaf": { "name": "Library of Congress Name Authority File ID.", "pattern": "^n[0-9]+$" },
+			"orcid": { "name": "ORCID identifier, optional for living researchers.", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" },
+			"wikidata": { "name": "Wikidata ID for global open-data linking.", "pattern": "^Q[0-9]+$" },
+			"gnd": { "name": "Integrated Authority File ID, used in German-speaking countries.", "pattern": "^[0-9]+[-0-9]*$" },
+			"bnf": { "name": "Bibliothèque nationale de France ID for Francophone authors.", "pattern": "^[0-9]+[a-z]?$" },
+			"scopusid": { "name": "Scopus Author ID for Elsevier's citation database.", "pattern": "^[0-9]{10,11}$" },
+			"researcherid": { "name": "Web of Science ResearcherID for publication tracking.", "pattern": "^[A-Z]-[0-9]{4}-[0-9]{4}$" },
+			"ror": { "name": "Research Organization Registry ID for institutions.", "pattern": "^[0-9a-z]{9}$" },
+			"ark": { "name": "Archival Resource Key for persistent digital objects.", "pattern": "^ark:/[0-9]+/[0-9a-zA-Z]+$" },
+			"plain": { "name": "A plain ascii name.", "pattern": "^[A-Za-z0-9_-]+:[A-Za-z0-9_-]+$" },
+			"msdos": { "name": "Bill and Pauls 8.3 legacy.", "pattern": "^[A-Za-z0-9]{1,8}(:[A-Za-z0-9]{1,8})?$"},
+			"isbn": {"name": "International Standard Book Number for books (ISBN-10 or ISBN-13).", "pattern": "^(97(8|9))?[0-9]{9}[0-9X]$"},
+			"issn": { "name": "International Standard Serial Number for journals and periodicals.", "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$"},
+			"doi": { "name": "Digital Object Identifier for scholarly works.", "pattern": "^10\\.[0-9]{4,9}/[-._;()/:A-Z0-9]+$"}
+		},
+		"citation":{
+			"MLA": ["author", "title", "source", "year"],
+			"APA": ["author", "year", "title", "source", "doi"],
+			"Chicago": ["author", "title", "city", "source", "year"],
+			"IEEE": ["author", "title", "source", "year", "volume", "issue", "pages"],
+			"Harvard": ["author", "year", "title", "source", "publisher", "place"],
+			"Vancouver": ["author", "title", "source", "year", "volume", "issue", "pages"],
+			"Turabian": ["author", "title", "city", "publisher", "year"],
+			"AMA": ["author", "title", "source", "year", "volume", "issue", "pages", "doi"]
 		}
 	},
-	"technology":{
-		"lightemittingdiodes":[
-			{"color": "green", "year": 1958, "nm": 565, "material": "GaP", "inventors": ["Egon Loebner", "Rubin Braunstein"]},
-			{"color": "red", "year": 1962, "nm": 650, "material": "GaAsP", "inventors": ["Nick Holonyak Jr."]},
-			{"color": "infrared", "year": 1962, "nm": 850, "material": "GaAs", "inventors": ["Robert Keyes", "Theodore Quist"]},
-			{"color": "far-red", "year": 1970, "nm": 660, "material": "GaAsP", "inventors": ["M. George Craford"]},
-			{"color": "yellow", "year": 1972, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
-			{"color": "violet", "year": 1972, "nm": 405, "material": "GaN", "inventors": ["Herbert Maruska", "Jacques Pankove"]},
-			{"color": "amber", "year": 1976, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
-			{"color": "blue", "year": 1993, "nm": 470, "material": "GaN", "inventors": ["Shuji Nakamura"]},
-			{"color": "turquoise", "year": 1996, "nm": 505, "material": "InGaN", "inventors": ["Shuji Nakamura"]},
-			{"color": "white", "year": 1995, "nm": 450, "material": "GaN+phosphor", "inventors": ["Shuji Nakamura"]},
-			{"color": "UV", "year": 1998, "nm": 375, "material": "GaN", "inventors": ["Shuji Nakamura"]}
-		],
-		"laserdiodes":[
-			{"wavelength":"infrared","year":1962,"nm":840,"material":"GaAs","type":"first-demonstration","inventors":["Robert N. Hall","General Electric team"]},
-			{"wavelength":"infrared","year":1970,"nm":830,"material":"AlGaAs","type":"continuous-room-temp","inventors":["Morton Panish","Izuo Hayashi"]},
-			{"wavelength":"infrared","year":1976,"nm":850,"material":"GaAs","type":"fiber-communications","inventors":["Bell Labs"]},
-			{"wavelength":"infrared","year":1979,"nm":780,"material":"AlGaAs","type":"optical-storage","inventors":["Sony / Philips"]},
-			{"wavelength":"red","year":1985,"nm":650,"material":"AlGaInP","type":"high-efficiency","inventors":["HP Optoelectronics team"]},
-			{"wavelength":"infrared","year":1989,"nm":850,"material":"GaAs","type":"VCSEL","inventors":["Kent Choquette","AT&T Bell Labs"]},
-			{"wavelength":"blue","year":1996,"nm":405,"material":"InGaN","type":"commercial-breakthrough","inventors":["Shuji Nakamura"]},
-			{"wavelength":"violet","year":2002,"nm":405,"material":"InGaN","type":"Blu-ray","inventors":["Nichia / Sony"]},
-			{"wavelength":"deep-UV","year":2006,"nm":280,"material":"AlGaN","type":"sterilisation","inventors":["academic / industrial groups"]},
-			{"wavelength":"mid-infrared","year":1994,"nm":8000,"material":"InGaAs/AlInAs","type":"quantum-cascade","inventors":["Federico Capasso"]}
-		]
-	},
-	"geography":{
-		"nations":[
-			"Palestine","Holy See",
-			"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia",
-			"Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus",
-			"Belgium", "Belize", "Benin", "Bhutan", "Bolivia (Plurinational State of)", "Bosnia and Herzegovina", "Botswana", "Brazil",
-			"Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada",
-			"Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica",
-			"Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", "Democratic People's Republic of Korea", "Democratic Republic of the Congo", "Denmark",
-			"Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea",
-			"Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia",
-			"Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau",
-			"Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)",
-			"Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan",
-			"Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho",
-			"Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
-			"Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia (Federated States of)",
-			"Moldova, Republic of", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
-			"Nauru", "Nepal", "Netherlands, Kingdom of the", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia",
-			"Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru",
-			"Philippines", "Poland", "Portugal", "Qatar", "Republic of Korea", "Romania", "Russian Federation", "Rwanda",
-			"Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
-			"Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
-			"South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
-			"Syrian Arab Republic", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago",
-			"Tunisia", "Türkiye", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland",
-			"United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Yemen", "Zambia", "Zimbabwe"
-		],
-		"ambiguousstates":[
-			{"name":"Palestine","rule":"Palestine"},
-			{"name":"Kosovo","rule":"Kosovo, Serbia"},
-			{"name":"Somaliland","rule":"Somalia, Somaliland"},
-			{"name":"Western Sahara","rule":"Morocco, Sahrawi Arab Democratic Republic"},
-			{"name":"Northern Cyprus","rule":"Turkish Republic of Northern Cyprus, Cyprus"},
-			{"name":"Singapore","rule":"Singapore"},
-			{"name":"Monaco","rule":"Monaco"},
-			{"name":"Vatican City","rule":"Holy See"},
-			{"name":"Tibet","rule":"China"},
-			{"name":"Hong Kong","rule":"China"},
-			{"name":"Macau","rule":"China"},
-			{"name":"Taiwan","rule":"Taiwan"},
-			{"name":"Cook Islands","rule":"New Zealand"},
-			{"name":"Niue","rule":"New Zealand"},
-			{"name":"Abkhazia","rule":"Russia"},
-			{"name":"South Ossetia","rule":"Russia"},
-			{"name":"Transnistria","rule":"Russia"}
-		],
-		"defunctstates":[
-			{"name": "Sikkim", "rule": "India", "dissolved": 1975},
-			{"name": "South Vietnam", "rule": "Vietnam", "dissolved": 1976},
-			{"name": "Democratic Kampuchea", "rule": "Vietnam", "dissolved": 1979},
-			{"name": "South Yemen", "rule": "Yemen", "dissolved": 1990},
-			{"name": "German Democratic Republic", "rule": "Germany", "dissolved": 1990},
-			{"name": "Soviet Union", "rule": "Russia", "dissolved": 1991},
-			{"name": "Yugoslavia", "rule": "successor states", "dissolved": 1992},
-			{"name": "United Arab Republic", "rule": "Egypt & Syria", "dissolved": 1961},
-			{"name": "Czechoslovakia", "rule": "Czech Republic & Slovakia", "dissolved": 1993},
-			{"name": "Tanganyika", "rule": "Tanzania", "dissolved": 1964},
-			{"name": "Zanzibar", "rule": "Tanzania", "dissolved": 1964},
-			{"name": "Senegambia", "rule": "Senegal & Gambia", "dissolved": 1989},
-			{"name": "Biafra", "rule": "Nigeria", "dissolved": 1970},
-			{"name": "Artsakh", "rule": "Azerbaijan", "dissolved": 2024}
-		]
-	},
-	"systemic fails": {
-		"market crash": "a cascade of panic unravels investor confidence",
-		"stack overflow": "a recursive push decrements pointer to no return",
-		"traction loss": "passing slip ratio replaces tire road dialogue with noise",
-		"thermal runaway": "exothermic reaction featuring a rapid escalation",
-		"rolling blackout": "sequential loss of power propagating across the network",
-		"volcanic eruption": "pyroclastic surge pressures cascading destruction",
-		"alpine avalanche": "fracture propagates, gravity pries snow slab from the granite",
-		"acoustic feedback": "escalating audio oscillation from excess self amplification"
-	},
-	"fundament":
-	{
-		"stone": "Stability, permanence, foundational; bedrock, monolith.",
-		"star": "Guidance, aspiration, directional; north star, lodestar.",
-		"axis": "Orientation, structure, alignment; pole, axis mundi, unit vector.",
-		"flow": "Movement, process, temporal reference; epoch, equilibrium, par."
-	},
-	"orient":
-	{
-		"azimuth": "Horizontal angle measured clockwise from north; specifies directional bearings in navigation.",
-		"zenith": "Point on celestial sphere directly above observer; defines upward vertical reference.",
-		"nadir": "Point on celestial sphere directly below observer; defines downward vertical reference.",
-		"home": "Baseline reference position or starting point; anchors all relative coordinate measurements.",
-		"datum": "Reference surface or framework in surveying; establishes baseline heights and positions.",
-		"origin": "Point where all coordinate axes intersect; absolute reference for all other points.",
-		"fovea": "Central point of retina providing sharpest vision; primary reference for visual fixation.",
-		"frame": "Baseline reference for measuring motion or orientation; inertial, conceptual, or structural.",
-		"anchor": "Initial information used as reference point for subsequent judgments and estimates.",
-		"tonic": "First note of diatonic scale; home note and primary harmonic reference for a key.",
-		"equilibrium": "State of balance in a system; reference point for dynamic stability.",
-		"par": "Standard score or expected performance; baseline reference for comparisons.",
-		"mean": "Arithmetic average of a dataset; central reference for statistical deviation.",
-		"bedrock": "Foundational layer or principle; ultimate reference for stability or truth.",
-		"pole": "Extreme point defining an axis or boundary; reference for orientation.",
-		"epoch": "Reference point in time for dating events or cycles; standard temporal baseline.",
-		"sovereign": "Supreme authority or ruling power; ultimate reference for legitimacy and control.",
-		"absolute": "Unrestricted and final authority; reference beyond conditions or limits.",
-		"axiom": "Self-evident truth taken as starting point; foundational reference for reasoning.",
-		"principle": "Fundamental rule or law; baseline reference for systems of thought or action.",
-		"archetype": "Original model or pattern; reference form for subsequent instances.",
-		"monolith": "Single massive structure; reference of permanence or authority.",
-		"root node": "Primary or topmost node in hierarchical structure; defines fundamental reference for descendants.",
-		"north star": "Fixed celestial point above North Pole; constant navigational reference for true north.",
-		"prime meridian": "Meridian at 0° longitude; universal reference for measuring east-west position.",
-		"unit vector": "Vector of length 1 indicating direction; fundamental reference for specifying other vectors.",
-		"ground state": "Lowest possible energy level of quantum system; baseline reference for all other states.",
-		"identity element": "Element that leaves operation result unmodified; fundamental operational reference.",
-		"sea level": "Average height of the ocean's surface; standard baseline for measuring land elevations and depths.",
-		"axis mundi": "Singular point connecting realms; central reference for orientation or structure."
-	},
-	"identifier": {
-		"viaf": { "name": "Virtual International Authority File ID.", "pattern": "^[0-9]+$" },
-		"isni": { "name": "International Standard Name Identifier.", "pattern": "^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$" },
-		"lcnaf": { "name": "Library of Congress Name Authority File ID.", "pattern": "^n[0-9]+$" },
-		"orcid": { "name": "ORCID identifier, optional for living researchers.", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" },
-		"wikidata": { "name": "Wikidata ID for global open-data linking.", "pattern": "^Q[0-9]+$" },
-		"gnd": { "name": "Integrated Authority File ID, used in German-speaking countries.", "pattern": "^[0-9]+[-0-9]*$" },
-		"bnf": { "name": "Bibliothèque nationale de France ID for Francophone authors.", "pattern": "^[0-9]+[a-z]?$" },
-		"scopusid": { "name": "Scopus Author ID for Elsevier's citation database.", "pattern": "^[0-9]{10,11}$" },
-		"researcherid": { "name": "Web of Science ResearcherID for publication tracking.", "pattern": "^[A-Z]-[0-9]{4}-[0-9]{4}$" },
-		"ror": { "name": "Research Organization Registry ID for institutions.", "pattern": "^[0-9a-z]{9}$" },
-		"ark": { "name": "Archival Resource Key for persistent digital objects.", "pattern": "^ark:/[0-9]+/[0-9a-zA-Z]+$" },
-		"plain": { "name": "A plain ascii name.", "pattern": "^[A-Za-z0-9_-]+:[A-Za-z0-9_-]+$" },
-		"msdos": { "name": "Bill and Pauls 8.3 legacy.", "pattern": "^[A-Za-z0-9]{1,8}(:[A-Za-z0-9]{1,8})?$"},
-		"isbn": {"name": "International Standard Book Number for books (ISBN-10 or ISBN-13).", "pattern": "^(97(8|9))?[0-9]{9}[0-9X]$"},
-		"issn": { "name": "International Standard Serial Number for journals and periodicals.", "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$"},
-		"doi": { "name": "Digital Object Identifier for scholarly works.", "pattern": "^10\\.[0-9]{4,9}/[-._;()/:A-Z0-9]+$"}
-	},
-	"citation":{
-		"MLA": ["author", "title", "source", "year"],
-		"APA": ["author", "year", "title", "source", "doi"],
-		"Chicago": ["author", "title", "city", "source", "year"],
-		"IEEE": ["author", "title", "source", "year", "volume", "issue", "pages"],
-		"Harvard": ["author", "year", "title", "source", "publisher", "place"],
-		"Vancouver": ["author", "title", "source", "year", "volume", "issue", "pages"],
-		"Turabian": ["author", "title", "city", "publisher", "year"],
-		"AMA": ["author", "title", "source", "year", "volume", "issue", "pages", "doi"]
-	}	
-},
-"schema": {
-	"relay": {
-		"type": "map",
-		"keyType": "string",
-		"valueType": {
-			"isA": "LanguageRelay",
-			"required": ["name", "signs", "block", "system", "description"],
-			"paths": {
-				"type": "array",
-				"items": { "isA": "PathItem" }
+	"schema": {
+		"relay": {
+			"type": "map",
+			"keyType": "string",
+			"valueType": {
+				"isA": "LanguageRelay",
+				"required": ["name", "signs", "block", "system", "description"],
+				"paths": {
+					"type": "array",
+					"items": { "isA": "PathItem" }
+				}
 			}
 		}
-	}
-},
-"types": {
-	"PathItem": {
-		"required": ["type"],
-		"properties": {
-			"type": { "type": "string" },
-			"value": { "type": "string" },
-			"meaning": { "type": "string" },
-			"semantic": { "type": "string" },
-			"phonetic": { "type": "boolean" }
+	},
+	"types": {
+		"PathItem": {
+			"required": ["type"],
+			"properties": {
+				"type": { "type": "string" },
+				"value": { "type": "string" },
+				"meaning": { "type": "string" },
+				"semantic": { "type": "string" },
+				"phonetic": { "type": "boolean" }
+			}
 		}
 	}
 }
-
-
-
-
+{
+	"name": "biblispec",
+	"symbol": "✴",
+	"version": "1.5.2",
+	"description": "Bibliographic index of specifications",
+	"status": "A living document of linguistic latitude",
+	"copyright": "(C) 2026 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"moto": "Ⲡⲉⲛⲥⲁϩ ⲉϥϯⲙⲉ ⲙⲙⲟⲛ",
+	"separator": "𓆛𓆜𓆝𓆞𓆟",
+	"spec": {
+		"numbers":{
+			"wide":"０１２３４５６７８９",
+			"mathematical":"𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+			"sans-bold":"𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+			"double-struck":"𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+			"monospace":"𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+			"spots":"➀➁➂➃➄➅➆➇➈➉",
+			"dots":"🄌➊➋➌➍➎➏➐➑➒➓",
+			"enclosed1":"⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+			"enclosed2":"㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿",
+			"tens":"㉈㉉㉊㉋㉌㉍㉎㉏",
+			"holes":"⓿❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴",
+			"subscript":"₀₁₂₃₄₅₆₇₈₉",
+			"superscript":"⁰¹²³⁴⁵⁶⁷⁸⁹"
+		},
+		"digits":[
+			{ "name": "ASCII", "value": "0123456789" },
+			{ "name": "CJK", "value": "〇一二三四五六七八九十" },
+			{ "name": "Devanagari", "value": "०१२३४५६७८९" },
+			{ "name": "Bengali", "value": "০১২৩৪৫৬৭৮৯" },
+			{ "name": "Gurmukhi", "value": "੦੧੨੩੪੫੬੭੮੯" },
+			{ "name": "Gujarati", "value": "૦૧૨૩૪૫૬૭૮૯" },
+			{ "name": "Oriya Odia", "value": "୦୧୨୩୪୫୬୭୮୯" },
+			{ "name": "Tamil", "value": "௦௧௨௩௪௫௬௭௮௯" },
+			{ "name": "Telugu", "value": "౦౧౨౩౪౫౬౭౮౯" },
+			{ "name": "Kannada", "value": "೦೧೨೩೪೫೬೭೮೯" },
+			{ "name": "Malayalam", "value": "൦൧൨൩൪൫൬൭൮൯" },
+			{ "name": "Thai", "value": "๐๑๒๓๔๕๖๗๘๙" },
+			{ "name": "Lao", "value": "໐໑໒໓໔໕໖໗໘໙" },
+			{ "name": "Tibetan", "value": "༠༡༢༣༤༥༦༧༨༩" },
+			{ "name": "Myanmar", "value": "၀၁၂၃၄၅၆၇၈၉" },
+			{ "name": "Shan", "value": "႐႑႒႓႔႕႖႗႘႙" },
+			{ "name": "Khmer", "value": "០១២៣៤៥៦៧៨៩" },
+			{ "name": "Mongolian", "value": "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙" },
+			{ "name": "Limbu", "value": "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏" },
+			{ "name": "Lepcha", "value": "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙" },
+			{ "name": "Saurashtra", "value": "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉" },
+			{ "name": "Kayah Li", "value": "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙" },
+			{ "name": "Thai (Tai Tham)", "value": "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙" },
+			{ "name": "Balinese", "value": "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹" },
+			{ "name": "Sundanese", "value": "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉" },
+			{ "name": "Vai", "value": "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩" },
+			{ "name": "Cham", "value": "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙" },
+			{ "name": "New Tai Lue", "value": "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉" },
+			{ "name": "Ol Chiki", "value": "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙" },
+			{ "name": "Meetei Mayek", "value": "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹" },
+			{ "name": "Javanese", "value": "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙" },
+			{ "name": "Myanmar (Tai Laing)", "value": "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹" },
+			{ "name": "Warang Citi", "value": "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙" },
+			{ "name": "Persian", "value": "٠١٢٣٤٥٦٧٨٩" },
+			{ "name": "Roman", "value": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ"}
+		],
+		"ASCII":{
+			"names":[
+				"NUL","SOH","STX","ETX","EOT","ENQ","ACK","BEL","BS","HT","LF","VT","FF","CR","SO","SI",
+				"DLE","DC1","DC2","DC3","DC4","NAK","SYN","ETB","CAN","EM","SUB","ESC","FS","GS","RS","US",
+				"Space","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",
+				"0","1","2","3","4","5","6","7","8","9",":",";","<","=",">","?",
+				"@","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
+				"P","Q","R","S","T","U","V","W","X","Y","Z","[","\\","]","^","_",
+				"`","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+				"p","q","r","s","t","u","v","w","x","y","z","{","|","}","Tilde","DEL"
+			]
+		},
+		"ANSI":{
+			"prefix":"\u001b[",
+			"terminator":"~",
+			"modifiers":{
+				"shift":"2","alt":"3","shift_alt":"4","ctrl":"5","ctrl_shift":"6","alt_ctrl":"7","shift_alt_ctrl":"8"
+			},
+			"function_keys":[
+				"\u001bOP","\u001bOQ","\u001bOR","\u001bOS",
+				"\u001b[15~","\u001b[17~","\u001b[18~","\u001b[19~",
+				"\u001b[20~","\u001b[21~","\u001b[23~","\u001b[24~"],
+			"function_keys_mod":[
+				"\u001b[1;%P","\u001b[1;%Q","\u001b[1;%R","\u001b[1;%S",
+				"\u001b[15;%~","\u001b[17;%~","\u001b[18;%~","\u001b[19;%~",
+				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
+		},
+		"shortcode":{
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
+			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
+			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
+			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
+			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
+			"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
+			"mic":"🎙️","microphone":"🎤","headphones":"🎧",
+			"score":"🎼","music":"🎵","phone":"📱","computer":"💻","book":"📖","money":"💵",
+			"plunger":"🪠","robot":"🤖","unicorn":"🦄","thumbsup":"👍","fire":"🔥","star":"⭐","eyes":"👀",
+			"trophy":"🏆","skull":"💀","clap":"👏","100":"💯",
+			"heart":"❤️","black_heart":"🖤","white_heart":"🤍","pink_heart":"🩷","light_blue_heart":"🩵","grey_heart":"🩶","sparkling_heart":"💖","broken_heart":"💔",
+			"warning":"⚠️","question":"❓","exclamation":"❗",
+			"zzz":"💤","clock":"⏰","hourglass":"⏳",
+			"lightning":"⚡","rainbow":"🌈","moon":"🌙","sun":"☀️",
+			"cloud":"☁️","umbrella":"☔","snowman":"⛄",
+			"gift":"🎁","balloon":"🎈","rocket":"🚀",
+			"car":"🚗","plane":"✈️","bike":"🚲",
+			"football":"⚽","basketball":"🏀","tennis":"🎾","medal":"🏅",
+			"thinking":"🤔","cool":"😎","blush":"😊","sleepy":"😴","heart_eyes":"😍","eyes_wide":"😳","clown":"🤡","cowboy":"🤠",
+			"grinning":"😀","smiley":"😃","smile":"😄","grin":"😁","laughing":"😆","sweat_smile":"😅","rofl":"🤣","joy":"😂","melting_face":"🫠",
+			"face_with_peeking_eye":"🫢","saluting_face":"🫡","dotted_line_face":"🫥","face_with_diagonal_mouth":"🫣",
+			"pregnant_person":"🫄","person_with_crown":"🫅","people_hugging":"🫂",
+			"fingers_crossed":"🫰","rightwards_pushing_hand":"🫷","leftwards_pushing_hand":"🫸","palm_down_hand":"🫳","palm_up_hand":"🫴","pointing_finger":"🫵",
+			"nest_with_eggs":"🪺","empty_nest":"🪹",
+			"hook":"🪝","low_battery":"🪫","crutch":"🩼","shaking_face":"🫨",
+			"khanda":"🪯","wireless":"🛜","phoenix":"🪶","broken_chain":"⛓️‍💥","ginger_root":"🫚",
+			"hair_pick":"🪮","folding_hand_fan":"🪭","pea_pod":"🫛","hyacinth":"🪻",
+			"shovel":"🫷","troll":"🧌","wing":"🪽","pouring_liquid":"🫗",
+			"fish":"🐟","ballot":"☑","check":"✅","cross":"❎"
+		},
+		"fenced":{
+			"name":"code points of visual interest",
+			"code":{
+				"geom":"⯅⯆⯇⯈⯀⯁◆◇◈⬥⬦⬠⬟⬡⬢⬣⬤◫◬◭◮",
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
+				"circles":"◐◒◑◓◔◕",
+				"markdown":"↩↪↗↘↖↙◀▶✳✴",
+				"outer":"◜◝◟◞",
+				"rect":"▪▫■□▢▣",
+				"hatched":"▤▥▦▧▨▩",
+				"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+				"lineChars":["─═━┄┅┈┉","│║┃┆┇┊┋"],
+				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+				"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+				"hatch":["╲","╱","╳"],
+				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
+				"oclock":"🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛",
+				"halfclock":"🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧",
+				"calendar":"📅📆🗓️",
+				"squareChars":"🔳🔲✅❎",
+				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
+				"birds":"🕊️🦅🦜🐦🐦‍⬛🐦‍🔥🦤🦩🪿🦃🐓🦉🐧🦚🦢🦆",
+				"poultry":"🐓🐔🥚🐣🐤🐥"
+			}
+		},
+		"faces":{
+			"profiles":{
+				"animals": "🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉",
+				"masks": "🎭🤡😎🧛😈🥶🤖👹👺👻👼👽👾💀",
+				"trope": "🧌🧛🧝🤠🤡👨‍👩‍👧‍👦🧙‍♂️🧙‍♀️🧚‍♂️🧜‍♂️🧞‍♂️🧟‍♂️🧞‍♀️🧟‍♀️"
+			},
+			"name": "Face on profiles",
+			"tags": ["face"]
+		},
+		"pheme":{
+			"pre61": {
+				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
+				"nature13": "aero agro eco entom ichthyo litho meteo morpho myco nepho paleo zoo zo",
+				"body12": "angio cardio dermato gastro hemato histo neuro noso odonto osteo phreno",
+				"human11": "anthro archaeo biblio bio crimino dem ethno onco orni psycho socio",
+				"meta7": "astro eno hiero philo pomo theo vexillo"
+			},
+			"suff28":{
+				"aca14": "graphy iatry logia metry nomy ology onymy scopy sophia tics cracy ist ics etics",
+				"etc14": "al ance ence ese ism ity oid ous ty ure y archy pathy phile"
+			}
+		},
+		"scales":{
+			"name": "Common Practice Tonality",
+			"tuning": "12-TET",
+			"tags":  ["equal tempered","music scale","western","diatonic"],
+			"major":{
+				"solfege": ["do", "re", "mi", "fa", "so", "la", "ti"],
+				"numerals": ["I", "ii", "iii", "IV", "V", "vi", "vii°"],
+				"degrees": ["tonic","supertonic","mediant","subdominant","dominant","submediant","leading"],
+				"intervals": [0,2,4,5,7,9,11]
+			},
+			"blues": {
+				"numerals": ["I", "♭III", "IV", "♭V", "V", "♭VII"],
+				"degrees": ["tonic", "minor third", "perfect fourth", "diminished fifth", "perfect fifth", "minor seventh"],
+				"intervals": [0,3,5,6,7,10]
+			},
+			"aeolian":{
+				"numerals": ["i", "ii°", "♭III", "iv", "v", "♭VI", "♭VII"],
+				"intervals": [0,2,3,5,7,8,10]
+			},
+			"melodic-minor":{
+				"intervals": [0,2,3,5,7,9,11,12,10,8,7,5,3,2,0]
+			},
+			"harmonic-minor":{
+				"intervals": [0,2,3,5,7,8,11]
+			},
+			"chromatic":{
+				"intervals": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+			}
+		},
+		"glagolitic": {
+			"name": "Glagolitic",
+			"block": "Glagolitic",
+			"range": ["U+2C00", "U+2C5F"],
+			"description": "Slavic script (9th century), created by Cyril and Methodius.",
+			"alphabet": {
+				"upper": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮⰯ",
+				"lower": "ⰰⰱⰲⰳⰴⰵⰶⰷⰸⰹⰺⰻⰼⰽⰾⰿⱀⱁⱂⱃⱄⱅⱆⱇⱈⱉⱊⱋⱌⱍⱎⱏⱐⱑⱒⱓⱔⱕⱖⱗⱘⱙⱚⱛⱜⱝⱞⱟ",
+				"numerals": "ⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛ"
+			},
+			"lingua": {
+				"core": "ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ",
+				"transliteration": {
+					"ⰁⰎⰀⰃⰑⰔⰎⰑⰂⰡⰐⰠ": "Blagoslavěnĭ",
+					"ⰔⰎⰑⰂⰑ": "Slovo",
+					"ⰜⰋⰔⰕⰠ": "Čistĭ"
+				}
+			},
+			"tags": ["slavic", "medieval", "liturgical"]
+		},
+		"linear_b": {
+			"name": "Linear B",
+			"block": "Linear B",
+			"alphabet": {
+				"codes": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉𐀊𐀋𐀍𐀎𐀏𐀐𐀑𐀒𐀓𐀔𐀕𐀖𐀗𐀘𐀙𐀚𐀛𐀜𐀝𐀞𐀟𐀠𐀡𐀢𐀣𐀤𐀥𐀦𐀨𐀩𐀪𐀫𐀬𐀭𐀮𐀯𐀰𐀱𐀲𐀳𐀴𐀵𐀶𐀷𐀸𐀹𐀺𐀼𐀽𐀿",
+				"picto1": "𐂀𐂁𐂂𐂃𐂄𐂅𐂆𐂇𐂈𐂉𐂊𐂋𐂌𐂍𐂎𐂏𐂐𐂑𐂒𐂕𐂖𐂗𐂚𐂛𐂜𐂝𐂞𐂟𐂠𐂡𐂢𐂣𐂥𐂦𐂧𐂨𐂩𐂪𐂫𐂬𐂭𐂮𐂯𐂰𐂱𐂲𐂳𐂴𐂵𐂶𐂷𐂸𐂹𐂺𐂻𐂼𐂽𐂾𐂿𐃀𐃁𐃂𐃃𐃄",
+				"picto2": "𐃅𐃆𐃇𐃈𐃉𐃊𐃋𐃌𐃍𐃎𐃏𐃐𐃑𐃓𐃔𐃕𐃖𐃗𐃘𐃙𐃚𐃛𐃜𐃝𐃞𐃟𐃠𐃡𐃢𐃣𐃤𐃥𐃦𐃧𐃨𐃩𐃪𐃫𐃬𐃭𐃮𐃯𐃰𐃱𐃲𐃳𐃴𐃵𐃶𐃷𐃸𐃹𐃺"
+			},
+			"range": ["U+10000", "U+1007F"],
+			"description": "Syllabic script for Mycenaean Greek (1450 BCE).",
+			"tags": ["ancient", "greek", "syllabary"],
+			"syllabary": {
+				"a": "𐀀", "e": "𐀁", "i": "𐀂", "o": "𐀃", "u": "𐀄",
+				"da": "𐀅", "de": "𐀆", "di": "𐀇", "do": "𐀈", "du": "𐀉",
+				"ja": "𐀊", "je": "𐀋", "jo": "𐀍", "ju": "𐀎",
+				"ka": "𐀏", "ke": "𐀐", "ki": "𐀑", "ko": "𐀒", "ku": "𐀓",
+				"ma": "𐀔", "me": "𐀕", "mi": "𐀖", "mo": "𐀗", "mu": "𐀘",
+				"na": "𐀙", "ne": "𐀚", "ni": "𐀛", "no": "𐀜", "nu": "𐀝",
+				"pa": "𐀞", "pe": "𐀟", "pi": "𐀠", "po": "𐀡", "pu": "𐀢",
+				"qa": "𐀣", "qe": "𐀤", "qi": "𐀥", "qo": "𐀦",
+				"ra": "𐀨", "re": "𐀩", "ri": "𐀪", "ro": "𐀫", "ru": "𐀬",
+				"sa": "𐀭", "se": "𐀮", "si": "𐀯", "so": "𐀰", "su": "𐀱",
+				"ta": "𐀲", "te": "𐀳", "ti": "𐀴", "to": "𐀵", "tu": "𐀶",
+				"wa": "𐀷", "we": "𐀸", "wi": "𐀹", "wo": "𐀺",
+				"za": "𐀼", "ze": "𐀽", "zo": "𐀿"
+			},
+			"ideograms": {
+				"tripod": "𐃆",
+				"spear": "𐃐",
+				"man": "𐂂",
+				"woman": "𐂃",
+				"horse": "𐂄",
+				"olive": "𐂕",
+				"wine": "𐂈",
+				"chariot": "𐃏",
+				"sheep": "𐃉",
+				"grain": "𐃒",
+				"figs": "𐃔",
+				"cloth": "𐃗",
+				"bronze": "𐃘",
+				"gold": "𐃙",
+				"b146": "𐂞",
+				"b140 bronze": "𐂚"
+			}
+		},
+		"phoenician": {
+			"name": "Phoenician",
+			"description": "Ancient Semitic abjad used by the Phoenicians for trade and inscriptions.",
+			"notes": "Abjad system with 22 consonants.",
+			"codePoints": ["U+10900", "U+1091F"],
+			"range": [67840, 67871],
+			"alphabet":{
+				"upper": "𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕"
+			},
+			"lingua": {
+				"core": "alef bet gimel dalet he waw zayin het",
+				"verbs": "ktb (write), qn (acquire), bny (build)",
+				"concepts": "yam (sea), mlk (king), bt (house)"
+			},
+			"tags": ["right-to-left", "RTL", "semitic", "abjad", "phoenician", "mediterranean", "alphabetic", "ancient"]
+		},
+		"hebrew": {
+			"name": "Hebrew",
+			"description": "Semitic script, abjad layout with Unicode vowel points",
+			"alphabet": {
+					"upper": "אבגדהוזחטיכלמנסעפצקרשת",
+					"uncommon": "ךםןףץ"
+			},
+			"lingua": [
+				{
+					"lang": "he",
+					"core": "דבר שם טוב רחמים אמת צדק",
+					"verbs": "אמר ברא יצא לקח",
+					"concepts": "שלום תורה חסד חיים"
+				},
+				{
+					"lang": "en",
+					"core": "davar shem tov rahamim emet tzedek",
+					"verbs": "amar bara yatza lakah",
+					"concepts": "shalom torah hesed chayim",
+					"ends": {
+							"abstract": "ut on ah",
+							"agent": "i er",
+							"diminutive": "on it"
+					}
+				}
+			]
+		},
+		"coptic": {
+			"name": "Coptic",
+			"description": "Final stage of Egyptian, written with Greek-derived script",
+			"alphabet": {
+				"upper": "ⲀⲂⲄⲆⲈⲊⲌⲎⲐⲒⲔⲖⲘⲚⲜⲞⲠⲢⲤⲦⲨⲪⲮⲰ",
+				"lower": "ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ",
+				"extras": "ϢϤϦϨϪϬϮ"
+			}
+		},
+		"greek": {
+			"name": "Greek",
+			"description": "Greek linguistic roots and Unicode characters",
+			"alphabet": {
+				"upper": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
+				"lower": "αβγδεζηθικλμνξοπρστυφχψω",
+				"uncommon": "ϝϛϟϡϣϥϧϩϫϭϯϰϱϲϳ"
+			},
+			"lingua": {
+				"core": "lexis glossa onoma logos morphe phone rhema sema gramma",
+				"verbs": "gno grapho lego logo mne poie phero",
+				"concepts": "aletheia arete chaos chronos demos ethos kosmos mimesis psyche techne",
+				"ends": {
+					"abstract": "ia isis ma osis sis mos",
+					"agent": "tes ter tor tris",
+					"state": "ma syne teia",
+					"diminutive": "ion iskos idion"
+				}
+			}
+		},
+		"latin": {
+			"name": "Latin",
+			"description": "Latin linguistic roots and Unicode characters",
+			"alphabet": {
+				"upper": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+				"lower": "abcdefghijklmnopqrstuvwxyz",
+				"uncommon": "ÆæŒœÞþÐðƷʒȜȝ"
+			},
+			"lingua": {
+				"core": "verbum nomen ratio vox forma scriptum",
+				"verbs": "ago dico facio scribo video voco",
+				"concepts": "veritas virtus tempus lex ars scientia",
+				"ends": {
+					"noun": "us a um io ix io",
+					"verb": "are ere ire ior",
+					"abstract": "tio io tas men",
+					"agent": "tor trix or"
+				}
+			}
+		},
+		"reo":{
+			"name": "Te Reo Māori",
+			"description": "Indigenous language of Aotearoa, Latin script, macrons for long vowels.",
+			"alphabet": {
+				"upper": "AĀEĒHIKMNOPRTUW",
+				"lower": "aāeēhikmnoprtuw"
+			}
+		},
+		"unicode": {
+			"name": "Unicode",
+			"version": "15.1",
+			"description": "Unicode Character Database",
+			"features": "Selected codepoint sequences from Unicode blocks.",
+			"lexis": {
+				"ascii": {
+					"codes": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+					"name": "ASCII",
+					"block": "Basic Latin",
+					"category": "Multiple",
+					"codePoints": ["U+0020", "U+007E"],
+					"range": [32, 126],
+					"usage": "Printable characters from the American Standard Code for Information Interchange (ASCII)"
+				},
+				"09": {
+					"codes": "0123456789",
+					"name": "Decimal Digits",
+					"block": "Basic Latin",
+					"category": "Nd",
+					"codePoints": ["U+0030", "U+0039"],
+					"range": [48, 57],
+					"usage": "Numeric digits for decimal notation"
+				},
+				"AZ": {
+					"codes": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+					"name": "Latin Upper Case",
+					"block": "Basic Latin",
+					"category": "Lu",
+					"codePoints": ["U+0041", "U+005A"],
+					"range": [65, 90]
+				},
+				"az": {
+					"codes": "abcdefghijklmnopqrstuvwxyz",
+					"name": "Latin Lower Case",
+					"block": "Basic Latin",
+					"category": "Ll",
+					"codePoints": ["U+0061", "U+007A"],
+					"range": [97, 122]
+				},
+				"∧⊽":{
+					"codes": "∧∨¬⊻↑↓⊼⊽",
+					"name": "Boolean",
+					"category": "Sm",
+					"codePoints": ["U+2227", "U+2228", "U+00AC", "U+22BB", "U+2191", "U+2193", "U+22BC", "U+22BD"],
+					"usage": "∧ AND Gate, ∨ OR Gate, ¬ NOT Inverter, ⊻ XOR Gate, ↑ NAND Stroke, ↓ NOR Arrow, ⊼ NAND Gate, ⊽ NOR Gate"
+				},
+				"⧀⧉":{
+					"codes": "⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉",
+					"name": "Mathematical Various",
+					"category": "So",
+					"description": "UI Gauges and Component Blocks",
+					"block": "Mathematical Miscellaneous B Symbols",
+					"codePoints": ["U+29C0", "U+29C9"],
+					"range": [10688, 10697],
+					"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
+				},
+				"mathalpha": {
+					"name": "Mathematical Alphanumeric Symbols",
+					"block": "Mathematical Alphanumeric Symbols",
+					"category": ["Lu", "Ll", "Nd"],
+					"variants": {
+						"bold": {
+							"upper": "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙",
+							"lower": "𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳",
+							"digits": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+							"range": ["U+1D400", "U+1D433", "U+1D7CE", "U+1D7D7"]
+						},
+						"italic": {
+							"upper": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍",
+							"lower": "𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧",
+							"range": ["U+1D434", "U+1D467"]
+						},
+						"bold-italic": {
+							"upper": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁",
+							"lower": "𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛",
+							"range": ["U+1D468", "U+1D49B"]
+						},
+						"script": {
+							"upper": "𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵",
+							"lower": "𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃",
+							"range": ["U+1D49C", "U+1D4CF", "U+1D4EA", "U+1D503"]
+						},
+						"fraktur": {
+							"upper": "𝔄𝔅𝔇𝔈𝔉𝔊𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔𝔖𝔗𝔘𝔙𝔚𝔛𝔜",
+							"lower": "𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷",
+							"range": ["U+1D504", "U+1D537", "U+1D552", "U+1D56B"]
+						},
+						"double-struck": {
+							"upper": "𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ",
+							"digits": "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+							"range": ["U+1D538", "U+1D56B", "U+1D7D8", "U+1D7E1"]
+						},
+						"sans-serif": {
+							"upper": "𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹",
+							"lower": "𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓",
+							"digits": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",
+							"range": ["U+1D5A0", "U+1D5D3", "U+1D7E2", "U+1D7EB"]
+						},
+						"sans-bold": {
+							"upper": "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭",
+							"lower": "𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
+							"digits": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+							"range": ["U+1D5D4", "U+1D607", "U+1D7EC", "U+1D7F5"]
+						},
+						"monospace": {
+							"upper": "𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉",
+							"lower": "𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣",
+							"digits": "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+							"range": ["U+1D670", "U+1D6A3", "U+1D7F6", "U+1D7FF"]
+						}
+					},
+					"usage": "Mathematical notation for variables, constants, and special number sets",
+					"tags": ["math", "symbols", "alphanumeric", "typography"]
+				},
+				"𓆛𓆟": {
+					"codes": "𓆛𓆜𓆝𓆞𓆟",
+					"name": "Fish 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+1319B", "U+1319F"],
+					"range": [7963, 7967]
+				},
+				"𓄰𓄱":{
+					"codes": "𓄰𓄱",
+					"name": "Fertility",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","uterus"],
+					"wide": 1,
+					"emoji": {
+						"𓄰":{},"𓄱":{}
+					}
+				},
+				"𓏊𓏍":{
+					"codes": "𓏊𓏋𓏌𓏍",
+					"name": "Jars",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","jars"]
+				},
+				"𓄲𓄷":{
+					"codes": "𓄲𓄳𓄴𓄵𓄶𓄷",
+					"name": "Viscera",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"tags": ["hieroglyphs", "plain","intestines","ea9625"],
+					"wide": 1,
+					"glyphs": [
+						{"point": "𓄲","sim": "e"},
+						{"point": "𓄳","sim": "a"},
+						{"point": "𓄴","sim": "9"},
+						{"point": "𓄵","sim": "g6"},
+						{"point": "𓄶","sim": "z2"},
+						{"point": "𓄷","sim": "s5"}
+					]
+				},
+				"𓅷𓅽":{
+					"codes": "𓅷𓅸𓅹𓅺𓅻𓅼𓅽",
+					"name": "Birds 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13037", "U+1303D"],
+					"range": [7783, 7789]
+				},
+				"𓃒𓃽":{
+					"codes": "𓃒𓃓𓃔𓃕𓃖𓃗𓃘𓃙𓃚𓃛𓃜𓃝𓃞𓃟𓃠𓃡𓃢𓃣𓃤𓃥𓃦𓃧𓃨𓃩𓃪𓃫𓃬𓃭𓃮𓃯𓃰𓃱𓃲𓃳𓃴𓃵𓃶𓃷𓃸𓃹𓃺𓃻𓃼𓃽",
+					"name": "Animals 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+130D2", "U+130FE"],
+					"range": [7890, 7934]
+				},
+				"𓃉𓃑": {
+					"codes": "𓃉𓃊𓃋𓃌𓃍𓃎𓃏𓃐𓃑",
+					"name": "Dots",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+130C9", "U+130D1"],
+					"range": [7881, 7889],
+					"usage": "Hieroglyphic numerals"
+				},
+				"𓍢𓍪": {
+					"codes": "𓍢𓍣𓍤𓍥𓍦𓍧𓍨𓍩𓍪",
+					"name": "Tens",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13362", "U+1336A"],
+					"range": [78690, 78698],
+					"usage": "Hieroglyphic numerals representing multiples of ten"
+				},
+				"𓎆𓎎": {
+					"codes": "𓎆𓎇𓎈𓎉𓎊𓎋𓎌𓎍𓎎",
+					"name": "Hundreds",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13406", "U+1340E"],
+					"range": [78854, 78862],
+					"usage": "Hieroglyphic numerals representing multiples of one hundred"
+				},
+				"𓆼𓇄": {
+					"codes": "𓆼𓆽𓆾𓆿𓇀𓇁𓇂𓇃𓇄",
+					"name": "Thousands",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+131BC", "U+131C4"],
+					"range": [78268, 78276],
+					"usage": "Hieroglyphic numerals representing multiples of one thousand"
+				},
+				"𓐄𓐌": {
+					"codes": "𓐄𓐅𓐆𓐇𓐈𓐉𓐊𓐋𓐌",
+					"name": "Ten-Thousands",
+					"block": "Egyptian Hieroglyphs",
+					"category": "Nd",
+					"codePoints": ["U+13404", "U+1340C"],
+					"range": [78852, 78860],
+					"usage": "Hieroglyphic numerals representing multiples of ten thousand"
+				},
+				"𓁐𓁩": {
+					"codes": "𓁐𓁑𓁒𓁓𓁔𓁕𓁖𓁗𓁘𓁙𓁚𓁛𓁜𓁝𓁞𓁟𓁠𓁡𓁢𓁣𓁤𓁥𓁦𓁧𓁨𓁩",
+					"name": "Women and Female Figures 1",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13050", "U+13069"],
+					"range": [7784, 7801],
+					"usage": "Hieroglyphic women and female figures"
+				},
+				"𓁹𓂀": {
+					"codes": "𓁹𓁺𓁻𓁼𓁽𓁾𓁿𓂀",
+					"name": "Eyes",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13079","U+13080"],
+					"range": [49241, 49248],
+					"usage": "Hieroglyphic eyes"
+				},
+				"𓂁𓂇":{
+					"codes": "𓂁𓂂𓂃𓂄𓂅𓂆𓂇",
+					"name": "Eye Parts",
+					"block": "Egyptian Hieroglyphs",
+					"category": "So",
+					"codePoints": ["U+13081", "U+13087"],
+					"range": [77953, 77959]
+				},
+				"♈♓":{
+					"name": "Zodiac",
+					"codes": "♈♉♊♋♌♍♎♏♐♑♒♓",
+					"block": "Miscellaneous Symbols",
+					"category": "Nd",
+					"codePoints": ["U+2648","U+2653"],
+					"range": [9800,9811]
+				},
+				"📑📚":{
+					"name": "Books",
+					"codes": "📑📒📓📕📗📚",
+					"block": "Miscellaneous Symbols",
+					"category": "So",
+					"codePoints": ["U+1F4D1","U+1F4DA"],
+					"range": [128209, 128218]
+				},
+				"🖊🖌": {
+					"name": "Writing Tools",
+					"codes": "🖊🖋🖌",
+					"block": "Miscellaneous Symbols",
+					"category": "So",
+					"codePoints": ["U+1F58A","U+1F58C"],
+					"range": [128394, 128396]
+				},
+				"⠀⣿":{
+					"name": "Braille",
+					"block": "Braille Patterns",
+					"codes": [
+						"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿",
+						"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿",
+						"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿",
+						"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"
+					],
+					"category": "So",
+					"codePoints": ["U+2800","U+28FF"],
+					"range": [10240, 10495]
+				},
+				"ＡＺ":{
+					"name": "Fullwidth Latin",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
+					"category": "Lu",
+					"codePoints": ["U+FF21", "U+FF3A"],
+					"range": [65313, 65338]
+				},
+				"ａｚ": {
+					"name": "Fullwidth Latin Lower Case",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"],
+					"category": "Ll",
+					"codePoints": ["U+FF41", "U+FF5A"],
+					"range": [65345, 65370]
+				},
+				"０９": {
+					"name": "Fullwidth Digits",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": ["０１２３４５６７８９"],
+					"category": "Nd",
+					"codePoints": ["U+FF10", "U+FF19"],
+					"range": [65296, 65305]
+				},
+				"！～": {
+					"name": "Fullwidth ASCII Punctuation and Symbols",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～",
+					"category": "Multiple",
+					"codePoints": ["U+FF01", "U+FF5E"],
+					"range": [65281, 65374],
+					"usage": "Fullwidth versions of ASCII punctuation and symbols for East Asian scripts"
+				},
+				"㊀㊉": {
+					"name": "CJK Enclosed Digits",
+					"block": "CJK Symbols and Punctuation",
+					"codes": "㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉",
+					"category": "So",
+					"codePoints": ["U+3280", "U+3289"],
+					"range": [12928, 12937],
+					"usage": "Circled digits for East Asian scripts"
+				},
+				"①⑳":{
+					"name": "Enclosed Digits",
+					"codes": "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳",
+					"category": "No",
+					"codePoints": ["U+2460", "U+2473"],
+					"range": [9312, 9331],
+					"usage": "Circled digits 1-20 for lists and numbering"
+				},
+				"🜀🜄":{
+					"name": "Elements of Alchemy",
+					"codes":"🜀🜁🜂🜃🜄",
+					"category": "So",
+					"codePoints": ["U+1F700", "U+1F704"],
+					"range": [128768, 128772],
+					"usage":"Quintessence, Air, Fire, Earth, Water"
+				},
+				"🜐🜚": {
+					"name": "Pantry of Alchemy",
+					"codes": "🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚",
+					"category": "So",
+					"codePoints": ["U+1F710", "U+1F71A"],
+					"range": [128784, 128794],
+					"usage": "Vinegar, Distilled Vinegar, Vinegar of Wine, Sulfur, Salt, Nitre, Vitriol, Blue Vitriol, Rock Salt, Halite, Gold"
+				},
+				"🜛🜧": {
+					"name": "Metals of Alchemy",
+					"codes": "🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧",
+					"category": "So",
+					"codePoints": ["U+1F71B", "U+1F727"],
+					"range": [128795, 128807],
+					"usage": "Silver, Iron, Mercury, Tin, Lead, Antimony, Bismuth, Zinc, Platinum, Arsenic, Cobalt, Magnesium, Potash"
+				},
+				"🜨🜼": {
+					"name": "Compounds of Alchemy",
+					"codes": "🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼",
+					"category": "So",
+					"codePoints": ["U+1F728", "U+1F73C"],
+					"range": [128808, 128828],
+					"usage": [
+						"Sal Ammoniac, Sal Armeniac, Regenerated Salt, Niter, Salt of Tartar, Soda Ash, Plant Alkali, Borax, White Vitriol",
+						"Blue Vitriol, Green Vitriol, Atrament, Cinnabar, Red Lead, Litharge, White Lead, Crocus of Iron, Crocus of Copper",
+						"Quicklime, Magnesia, Tutty"
+					]
+				},
+				"🝀🝔": {
+					"name": "Operation of Alchemy",
+					"codes": "🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏🝐🝑🝒🝓🝔",
+					"category": "So",
+					"codePoints": ["U+1F740", "U+1F754"],
+					"range": [128832, 128852],
+					"usage": [
+						"Crucible, Sublime, Precipitate, Calcine, Dissolve, Coagulate, Digest, Ferment, Fix, Separate, Conjoin, Cerate",
+						"Reverberate, Albification, Rubification, Fixation (2), Circulation, Solution, Fusion, Extraction, Projection"
+					]
+				},
+				"🝕🝣": {
+					"name": "Process of Alchemy",
+					"codes": "🝕🝖🝗🝘🝙🝚🝛🝜🝝🝞🝟🝠🝡🝢🝣",
+					"category": "So",
+					"codePoints": ["U+1F755", "U+1F763"],
+					"range": [128853, 128867],
+					"usage": [
+						"Putrefy, Incerate, Imbibe, Wet-Separate, Cleanse, Wash, Strain, Filter, ",
+						"Evaporate, Cohobate, Distil, Slow-Digest, Melt, Liquefy, Congeal, Pulverize"
+					]
+				},
+				"🝤🝳": {
+					"name": "Essence of Alchemy",
+					"codes": "🝤🝥🝦🝧🝨🝩🝪🝫🝬🝭🝮🝯🝰🝱🝲🝳",
+					"category": "So",
+					"codePoints": ["U+1F764", "U+1F773"],
+					"range": [128868, 128883],
+					"usage": [
+						"Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Tartar, Spirit of Blood",
+						"Aqua Fortis, Aqua Regia, Aqua Vitae, Balneum Maris, Balneum Roris",
+						"Oleum Sulphuris, Oleum Vitrioli, Oleum Tartari, Oleum Philosophorum, Essence of Gold"
+					]
+				},
+				"㊊㊐":{
+					"name": "Moon Five Elements and Sun - Wu Xing cosmology",
+					"codes": "㊊㊋㊌㊍㊎㊏㊐",
+					"category": "So",
+					"codePoints": ["U+328A", "U+328F"],
+					"range": [12938, 12943],
+					"usage": "Moon, Fire, Water, Wood, Metal, Earth, Sun"
+				},
+				"ᚠᛪ": {
+					"name": "Runic",
+					"block": "Runic",
+					"codes": "ᚠᚡᚢᚣᚤᚥᚦᚧᚨᚩᚪᚫᚬᚭᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉᛊᛋᛌᛍᛎᛏᛐᛑᛒᛓᛔᛕᛖᛗᛘᛙᛚᛛᛜᛝᛞᛟᛠᛡᛢᛣᛤᛥᛦᛧᛨᛩᛪ",
+					"category": "Lo",
+					"codePoints": ["U+16A0", "U+16EA"],
+					"range": [5792, 5866],
+					"usage": "Runic characters used in ancient Germanic and Scandinavian inscriptions",
+					"tags": ["runes", "germanic", "scandinavian", "ancient script"]
+				},
+				"ᎠᏯ": {
+					"name": "Cherokee Syllabary",
+					"creator": "Sequoyah",
+					"codes": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩᎪᎫᎬᎭᎮᎯᎰᎱᎲᎳᎴᎵᎶᎷᎸᎹᎺᎻᎼᎽᎾᎿᏀᏁᏂᏃᏄᏅᏆᏇᏈᏉᏊᏋᏌᏍᏎᏏᏐᏑᏒᏓᏔᏕᏖᏗᏘᏙᏚᏛᏜᏝᏞᏟᏠᏡᏢᏣᏤᏥᏦᏧᏨᏩᏪᏫᏬᏭᏮᏯ"
+				},
+				"ᚁᚚ":{
+					"name": "Ogham",
+					"creator": "Ogma",
+					"codes": "ᚁᚂᚃᚄᚅᚆᚇᚈᚉᚊᚋᚌᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ"
+				},
+				"ꔀꘟ":{
+					"name": "Vai Syllabary",
+					"creator": "Momolu Duwalu Bukele",
+					"codes": [
+						"ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉꔊꔋꔌꔍꔎꔏꔐꔑꔒꔓꔔꔕꔖꔗꔘꔙ",
+						"ꔚꔛꔜꔝꔞꔟꔠꔡꔢꔣꔤꔥꔦꔧꔨꔩꔪꔫꔬꔭꔮꔯꔰꔱꔲꔳꔴꔵꔶ",
+						"ꔷꔸꔹꔺꔻꔼꔽꔾꔿꕀꕁꕂꕃꕄꕅꕆꕇꕈꕉꕊꕋꕌꕍꕎꕏꕐꕑ",
+						"ꕒꕓꕔꕕꕖꕗꕘꕙꕚꕛꕜꕝꕞꕟꕠꕡꕢꕣꕤꕥꕦꕧꕨꕩꕪꕫꕬꕭꕮꕯꕰꕱꕲꕳꕴꕵꕶꕷꕸ",
+						"ꕹꕺꕻꕼꕽꕾꕿꖀꖁꖂꖃꖄꖅꖆꖇꖈꖉꖊꖋꖌꖍꖎꖏꖐꖑꖒꖓꖔꖕꖖꖗꖘꖙꖚꖛꖜꖝꖞꖟꖠꖡ",
+						"ꖢꖣꖤꖥꖦꖧꖨꖩꖪꖫꖬꖭꖮꖯꖰꖱꖲꖳꖴꖵꖶꖷꖸꖹꖺꖻꖼꖽꖾꖿꗀ",
+						"ꗁꗂꗃꗄꗅꗆꗇꗈꗉꗊꗋꗌꗍꗎꗏꗐꗑꗒꗓꗔꗕꗖꗗꗘꗙꗚꗛꗜꗝꗞꗟꗠꗡꗢꗣ",
+						"ꗤꗥꗦꗧꗨꗩꗪꗫꗬꗭꗮꗯꗰꗱꗲꗳꗴꗵꗶꗷꗸꗹꗺꗻꗼꗽꗾꗿꘀꘁꘂꘃꘄꘅꘆꘇꘈꘉꘊꘋꘌ",
+						"꘍꘎꘏ꘐꘑꘒꘓꘔꘕꘖꘗꘘꘙꘚꘛꘜꘝꘞꘟ"
+					]
+				}
+			}
+		},
+		"encoding":{
+			"riff":{
+				"name" : "riff tags",
+				"type" : "FourCC",
+				"description": "Standard four-character tags for embedding metadata in the INFO chunk of RIFF-based WAV files.",
+				"source": "RIFF Specification (Microsoft/IBM, 1991)",
+				"usage": "Key-value pairs in the LIST/INFO chunk; values are null-terminated strings padded to even bytes.",
+				"tags": ["metadata", "audio", "file-format", "riff"],
+				"CC": {
+					"IARL": "Archival Location",
+					"IART": "Artist",
+					"ICAS": "Default Audio Stream",
+					"ICMS": "Commissioned",
+					"ICMT": "Comment",
+					"ICNM": "Cinematographer",
+					"ICNT": "Country",
+					"ICOP": "Copyright",
+					"ICRD": "Creation Date",
+					"ICRP": "Cropped",
+					"IDIM": "Dimensions",
+					"IDIT": "Date Time Original",
+					"IDPI": "Dots Per Inch",
+					"IDST": "Distributed By",
+					"IEDT": "Edited By",
+					"IENC": "Encoded By",
+					"IENG": "Engineer",
+					"IGNR": "Genre",
+					"IKEY": "Keywords",
+					"ILGT": "Lightness",
+					"ILNG": "Language",
+					"IMED": "Medium",
+					"IMIT": "More Info Text",
+					"IMUS": "Music By",
+					"INAM": "Title",
+					"IPDS": "Production Designer",
+					"IPLT": "Num Colors",
+					"IPRD": "Product",
+					"IPRO": "Produced By",
+					"IRIP": "Ripped By",
+					"IRTD": "Rating",
+					"ISBJ": "Subject",
+					"ISFT": "Software",
+					"ISGN": "Secondary Genre",
+					"ISHP": "Sharpness",
+					"ISMP": "Time Code",
+					"ISRC": "Source",
+					"ISRF": "Source Form",
+					"ISTR": "Starring",
+					"ITCH": "Technician",
+					"ITRK": "Track Number",
+					"IWRI": "Written By",
+					"LOCA": "Location",
+					"PRT1": "Part",
+					"PRT2": "Number Of Parts",
+					"RATE": "Rate",
+					"STAT": "Statistics",
+					"TAPE": "Tape Name",
+					"TCDO": "End Timecode",
+					"TCOD": "Start Timecode"
+				}
+			}
+		},
+		"relay": {
+			"akkadian": {
+				"name": "Akkadian",
+				"signs": {
+					"syllabic": ["𒀀","𒁀","𒂊","𒄀"], 
+					"logograms": ["𒀭","𒆳","𒈗"], 
+					"determinatives": ["𒀭","𒇽"]
+				},
+				"block": "Cuneiform",
+				"system": "logosyllabic",
+				"range": ["U+12000", "U+123FF"],
+				"tags": ["ancient", "mesopotamian", "cuneiform"],
+				"context": "Required for disambiguation, signs have multiple readings; heavy Sumerian influence.",
+				"description": "Logophonetic cuneiform script used for Akkadian (c. 2500–100 BCE).",
+				"composition": [
+					"determinative + word",
+					"logogram + phonetic complement",
+					"syllabic sequence"
+				],
+				"paths": [
+					{ "type": "logogram", "value": "ilu", "meaning": "god" },
+					{ "type": "syllabic", "value": "an" },
+					{ "type": "determinative", "semantic": "divine", "phonetic": false }
+				]
+			}
+		},
+		"technology":{
+			"lightemittingdiodes":[
+				{"color": "green", "year": 1958, "nm": 565, "material": "GaP", "inventors": ["Egon Loebner", "Rubin Braunstein"]},
+				{"color": "red", "year": 1962, "nm": 650, "material": "GaAsP", "inventors": ["Nick Holonyak Jr."]},
+				{"color": "infrared", "year": 1962, "nm": 850, "material": "GaAs", "inventors": ["Robert Keyes", "Theodore Quist"]},
+				{"color": "far-red", "year": 1970, "nm": 660, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "yellow", "year": 1972, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "violet", "year": 1972, "nm": 405, "material": "GaN", "inventors": ["Herbert Maruska", "Jacques Pankove"]},
+				{"color": "amber", "year": 1976, "nm": 590, "material": "GaAsP", "inventors": ["M. George Craford"]},
+				{"color": "blue", "year": 1993, "nm": 470, "material": "GaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "turquoise", "year": 1996, "nm": 505, "material": "InGaN", "inventors": ["Shuji Nakamura"]},
+				{"color": "white", "year": 1995, "nm": 450, "material": "GaN+phosphor", "inventors": ["Shuji Nakamura"]},
+				{"color": "UV", "year": 1998, "nm": 375, "material": "GaN", "inventors": ["Shuji Nakamura"]}
+			],
+			"laserdiodes":[
+				{"wavelength":"infrared","year":1962,"nm":840,"material":"GaAs","type":"first-demonstration","inventors":["Robert N. Hall","General Electric team"]},
+				{"wavelength":"infrared","year":1970,"nm":830,"material":"AlGaAs","type":"continuous-room-temp","inventors":["Morton Panish","Izuo Hayashi"]},
+				{"wavelength":"infrared","year":1976,"nm":850,"material":"GaAs","type":"fiber-communications","inventors":["Bell Labs"]},
+				{"wavelength":"infrared","year":1979,"nm":780,"material":"AlGaAs","type":"optical-storage","inventors":["Sony / Philips"]},
+				{"wavelength":"red","year":1985,"nm":650,"material":"AlGaInP","type":"high-efficiency","inventors":["HP Optoelectronics team"]},
+				{"wavelength":"infrared","year":1989,"nm":850,"material":"GaAs","type":"VCSEL","inventors":["Kent Choquette","AT&T Bell Labs"]},
+				{"wavelength":"blue","year":1996,"nm":405,"material":"InGaN","type":"commercial-breakthrough","inventors":["Shuji Nakamura"]},
+				{"wavelength":"violet","year":2002,"nm":405,"material":"InGaN","type":"Blu-ray","inventors":["Nichia / Sony"]},
+				{"wavelength":"deep-UV","year":2006,"nm":280,"material":"AlGaN","type":"sterilisation","inventors":["academic / industrial groups"]},
+				{"wavelength":"mid-infrared","year":1994,"nm":8000,"material":"InGaAs/AlInAs","type":"quantum-cascade","inventors":["Federico Capasso"]}
+			],
+			"virtualkeys":[
+				"VK_0","VK_LBUTTON","VK_RBUTTON","VK_CANCEL","VK_MBUTTON","VK_XBUTTON1","VK_XBUTTON2",
+				"VK_7","VK_BACK","VK_TAB",
+				"VK_10","VK_11","VK_CLEAR","VK_RETURN",
+				"VK_14","VK_15","VK_SHIFT","VK_CONTROL","VK_MENU","VK_PAUSE","VK_CAPITAL","VK_KANA","VK_IME_ON","VK_JUNJA",
+				"VK_FINAL","VK_HANJA","VK_IME_OFF","VK_ESCAPE","VK_CONVERT","VK_NONCONVERT","VK_ACCEPT","VK_MODECHANGE",
+				"VK_SPACE","VK_PRIOR","VK_NEXT","VK_END","VK_HOME",
+				"VK_LEFT","VK_UP","VK_RIGHT","VK_DOWN",
+				"VK_SELECT","VK_PRINT","VK_EXECUTE","VK_SNAPSHOT","VK_INSERT","VK_DELETE","VK_HELP",
+				"VK_0","VK_1","VK_2","VK_3","VK_4","VK_5","VK_6","VK_7","VK_8","VK_9",
+				"VK_58","VK_59","VK_60","VK_61","VK_62","VK_63","VK_64",
+				"VK_A","VK_B","VK_C","VK_D","VK_E","VK_F","VK_G","VK_H","VK_I","VK_J","VK_K","VK_L","VK_M",
+				"VK_N","VK_O","VK_P","VK_Q","VK_R","VK_S","VK_T","VK_U","VK_V","VK_W","VK_X","VK_Y","VK_Z",
+				"VK_LWIN","VK_RWIN","VK_APPS",
+				"VK_94","VK_SLEEP",
+				"VK_NUMPAD0","VK_NUMPAD1","VK_NUMPAD2","VK_NUMPAD3","VK_NUMPAD4",
+				"VK_NUMPAD5","VK_NUMPAD6","VK_NUMPAD7","VK_NUMPAD8","VK_NUMPAD9",
+				"VK_MULTIPLY","VK_ADD","VK_SEPARATOR","VK_SUBTRACT","VK_DECIMAL","VK_DIVIDE",
+				"VK_F1","VK_F2","VK_F3","VK_F4","VK_F5","VK_F6","VK_F7","VK_F8","VK_F9","VK_F10","VK_F11","VK_F12",
+				"VK_F13","VK_F14","VK_F15","VK_F16","VK_F17","VK_F18","VK_F19","VK_F20","VK_F21","VK_F22","VK_F23","VK_F24",
+				"VK_136","VK_137","VK_138","VK_139","VK_140","VK_141","VK_142","VK_143",
+				"VK_NAVIGATION_VIEW","VK_NAVIGATION_MENU","VK_NAVIGATION_UP","VK_NAVIGATION_DOWN","VK_NAVIGATION_LEFT","VK_NAVIGATION_RIGHT",
+				"VK_NAVIGATION_ACCEPT","VK_NAVIGATION_CANCEL",
+				"VK_NUMLOCK","VK_SCROLL",
+				"VK_OEM_NEC_EQUAL","VK_OEM_FJ_MASSHOU","VK_OEM_FJ_TOUROKU","VK_OEM_FJ_LOYA","VK_OEM_FJ_ROYA",
+				"VK_151","VK_152","VK_153","VK_154","VK_155","VK_156","VK_157","VK_158","VK_159",
+				"VK_LSHIFT","VK_RSHIFT","VK_LCONTROL","VK_RCONTROL","VK_LMENU","VK_RMENU",
+				"VK_BROWSER_BACK","VK_BROWSER_FORWARD","VK_BROWSER_REFRESH","VK_BROWSER_STOP",
+				"VK_BROWSER_SEARCH","VK_BROWSER_FAVORITES","VK_BROWSER_HOME",
+				"VK_VOLUME_MUTE","VK_VOLUME_DOWN","VK_VOLUME_UP",
+				"VK_MEDIA_NEXT_TRACK","VK_MEDIA_PREV_TRACK","VK_MEDIA_STOP","VK_MEDIA_PLAY_PAUSE",
+				"VK_LAUNCH_MAIL","VK_LAUNCH_MEDIA_SELECT","VK_LAUNCH_APP1","VK_LAUNCH_APP2",
+				"VK_184","VK_185",
+				"VK_OEM_1","VK_OEM_PLUS","VK_OEM_COMMA","VK_OEM_MINUS","VK_OEM_PERIOD","VK_OEM_2","VK_OEM_3",
+				"VK_193","VK_194",
+				"VK_GAMEPAD_A","VK_GAMEPAD_B","VK_GAMEPAD_X","VK_GAMEPAD_Y",
+				"VK_GAMEPAD_RIGHT_SHOULDER","VK_GAMEPAD_LEFT_SHOULDER","VK_GAMEPAD_LEFT_TRIGGER","VK_GAMEPAD_RIGHT_TRIGGER",
+				"VK_GAMEPAD_DPAD_UP","VK_GAMEPAD_DPAD_DOWN","VK_GAMEPAD_DPAD_LEFT","VK_GAMEPAD_DPAD_RIGHT",
+				"VK_GAMEPAD_MENU","VK_GAMEPAD_VIEW",
+				"VK_GAMEPAD_LEFT_THUMBSTICK_BUTTON","VK_GAMEPAD_RIGHT_THUMBSTICK_BUTTON",
+				"VK_GAMEPAD_LEFT_THUMBSTICK_UP","VK_GAMEPAD_LEFT_THUMBSTICK_DOWN","VK_GAMEPAD_LEFT_THUMBSTICK_RIGHT","VK_GAMEPAD_LEFT_THUMBSTICK_LEFT",
+				"VK_GAMEPAD_RIGHT_THUMBSTICK_UP","VK_GAMEPAD_RIGHT_THUMBSTICK_DOWN","VK_GAMEPAD_RIGHT_THUMBSTICK_RIGHT","VK_GAMEPAD_RIGHT_THUMBSTICK_LEFT",
+				"VK_OEM_4","VK_OEM_5","VK_OEM_6","VK_OEM_7","VK_OEM_8",
+				"VK_224","VK_OEM_AX","VK_OEM_102",
+				"VK_ICO_HELP","VK_ICO_00","VK_PROCESSKEY","VK_ICO_CLEAR",
+				"VK_OEM_RESET","VK_OEM_JUMP","VK_OEM_PA1","VK_OEM_PA2","VK_OEM_PA3",
+				"VK_OEM_WSCTRL","VK_OEM_CUSEL",
+				"VK_OEM_ATTN","VK_OEM_FINISH","VK_OEM_COPY","VK_OEM_AUTO","VK_OEM_ENLW","VK_OEM_BACKTAB",
+				"VK_ATTN","VK_CRSEL","VK_EXSEL","VK_EREOF",
+				"VK_PLAY","VK_ZOOM","VK_NONAME","VK_PA1","VK_OEM_CLEAR"
+			]
+		},
+		"geography":{
+			"nations":[
+				"Palestine","Holy See",
+				"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia",
+				"Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus",
+				"Belgium", "Belize", "Benin", "Bhutan", "Bolivia (Plurinational State of)", "Bosnia and Herzegovina", "Botswana", "Brazil",
+				"Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada",
+				"Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica",
+				"Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", "Democratic People's Republic of Korea", "Democratic Republic of the Congo", "Denmark",
+				"Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea",
+				"Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia",
+				"Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau",
+				"Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)",
+				"Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan",
+				"Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho",
+				"Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
+				"Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia (Federated States of)",
+				"Moldova, Republic of", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
+				"Nauru", "Nepal", "Netherlands, Kingdom of the", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia",
+				"Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru",
+				"Philippines", "Poland", "Portugal", "Qatar", "Republic of Korea", "Romania", "Russian Federation", "Rwanda",
+				"Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+				"Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
+				"South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+				"Syrian Arab Republic", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago",
+				"Tunisia", "Türkiye", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland",
+				"United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Yemen", "Zambia", "Zimbabwe"
+			],
+			"ambiguousstates":[
+				{"name":"Palestine","rule":"Palestine"},
+				{"name":"Kosovo","rule":"Kosovo, Serbia"},
+				{"name":"Somaliland","rule":"Somalia, Somaliland"},
+				{"name":"Western Sahara","rule":"Morocco, Sahrawi Arab Democratic Republic"},
+				{"name":"Northern Cyprus","rule":"Turkish Republic of Northern Cyprus, Cyprus"},
+				{"name":"Singapore","rule":"Singapore"},
+				{"name":"Monaco","rule":"Monaco"},
+				{"name":"Vatican City","rule":"Holy See"},
+				{"name":"Tibet","rule":"China"},
+				{"name":"Hong Kong","rule":"China"},
+				{"name":"Macau","rule":"China"},
+				{"name":"Taiwan","rule":"Taiwan"},
+				{"name":"Cook Islands","rule":"New Zealand"},
+				{"name":"Niue","rule":"New Zealand"},
+				{"name":"Abkhazia","rule":"Russia"},
+				{"name":"South Ossetia","rule":"Russia"},
+				{"name":"Transnistria","rule":"Russia"}
+			],
+			"defunctstates":[
+				{"name": "Sikkim", "rule": "India", "dissolved": 1975},
+				{"name": "South Vietnam", "rule": "Vietnam", "dissolved": 1976},
+				{"name": "Democratic Kampuchea", "rule": "Vietnam", "dissolved": 1979},
+				{"name": "South Yemen", "rule": "Yemen", "dissolved": 1990},
+				{"name": "German Democratic Republic", "rule": "Germany", "dissolved": 1990},
+				{"name": "Soviet Union", "rule": "Russia", "dissolved": 1991},
+				{"name": "Yugoslavia", "rule": "successor states", "dissolved": 1992},
+				{"name": "United Arab Republic", "rule": "Egypt & Syria", "dissolved": 1961},
+				{"name": "Czechoslovakia", "rule": "Czech Republic & Slovakia", "dissolved": 1993},
+				{"name": "Tanganyika", "rule": "Tanzania", "dissolved": 1964},
+				{"name": "Zanzibar", "rule": "Tanzania", "dissolved": 1964},
+				{"name": "Senegambia", "rule": "Senegal & Gambia", "dissolved": 1989},
+				{"name": "Biafra", "rule": "Nigeria", "dissolved": 1970},
+				{"name": "Artsakh", "rule": "Azerbaijan", "dissolved": 2024}
+			]
+		},
+		"food":{
+			"flatbread":[
+				{"name":"Injera","region":"Ethiopia/Eritrea","ingredients":"Teff flour + water fermented","classification":"fermented sour flatbread"},
+				{"name":"Himbasha","region":"Eritrea/Ethiopia","ingredients":"Wheat flour + spices","classification":"celebratory bread"},
+				{"name":"Taftan","region":"Iran/Pakistan","ingredients":"Wheat flour + milk + saffron","classification":"lightly enriched flatbread"},
+				{"name":"Sangak","region":"Iran","ingredients":"Whole wheat dough","classification":"pebble-baked flatbread"},
+				{"name":"Barbari","region":"Iran","ingredients":"Wheat flour + yeast","classification":"thick Persian flatbread"},
+				{"name":"Lavash","region":"Armenia/Iran","ingredients":"Wheat flour + water","classification":"thin soft flatbread"},
+				{"name":"Bolani","region":"Afghanistan","ingredients":"Wheat dough + vegetable filling","classification":"stuffed flatbread"},
+				{"name":"Bing","region":"China","ingredients":"Wheat flour dough","classification":"pan-cooked Chinese flatbread"},
+				{"name":"Cong you bing","region":"China","ingredients":"Wheat dough + scallions + oil (layered)","classification":"layered pan-fried scallion pancake"},
+				{"name":"Roti prata","region":"Singapore/Malaysia","ingredients":"Wheat flour + ghee","classification":"stretched layered flatbread"},
+				{"name":"Piaya","region":"Philippines","ingredients":"Wheat dough + muscovado","classification":"sweet filled flatbread"},
+				{"name":"Dosa","region":"South India","ingredients":"Rice + urad dal fermented","classification":"fermented crepe-type flatbread"},
+				{"name":"Naan","region":"South Asia/Central Asia","ingredients":"Wheat flour + yogurt","classification":"tandoor flatbread"},
+				{"name":"Roti/Chapati","region":"India","ingredients":"Whole wheat flour + water","classification":"unleavened flatbread"},
+				{"name":"Paratha","region":"India/Bangladesh/Pakistan","ingredients":"Whole wheat + ghee layered","classification":"layered flaky flatbread"},
+				{"name":"Bhakri","region":"Western India","ingredients":"Millet flour + water","classification":"millet flatbread"},
+				{"name":"Jowar roti","region":"India","ingredients":"Sorghum flour + water","classification":"gluten-free sorghum flatbread"},
+				{"name":"Akki roti","region":"Karnataka","ingredients":"Rice flour + spices","classification":"rice flatbread"},
+				{"name":"Puri","region":"India","ingredients":"Wheat dough + oil","classification":"puffed fried flatbread"},
+				{"name":"Bhatura","region":"North India","ingredients":"Maida flour + yogurt","classification":"fried leavened flatbread"},
+				{"name":"Markouk","region":"Lebanon/Syria","ingredients":"Flour + water very thin","classification":"ultra-thin saj bread"},
+				{"name":"Yufka","region":"Turkey/Levant","ingredients":"Wheat flour + water","classification":"ancestor to phyllo pastry"},
+				{"name":"Pita","region":"Levant","ingredients":"Wheat flour + yeast","classification":"pocket flatbread"},
+				{"name":"Lahmacun","region":"Turkey/Armenia","ingredients":"Thin dough + minced topping","classification":"topped flatbread"},
+				{"name":"Gözleme","region":"Turkey","ingredients":"Wheat dough + fillings","classification":"stuffed folded flatbread"},
+				{"name":"Msemen","region":"Morocco/Algeria","ingredients":"Semolina + flour + oil","classification":"folded flaky flatbread"},
+				{"name":"Balady","region":"Egypt","ingredients":"Whole wheat flour","classification":"staple Egyptian flatbread"},
+				{"name":"Khobz","region":"Maghreb","ingredients":"Wheat flour + semolina","classification":"North African flatbread"},
+				{"name":"Bannock","region":"Scotland/Indigenous North America","ingredients":"Flour + fat + water","classification":"griddle flatbread"},
+				{"name":"Lefse","region":"Norway","ingredients":"Potatoes + flour","classification":"soft potato flatbread"},
+				{"name":"Tunnbröd","region":"Sweden","ingredients":"Barley/rye/wheat mixture","classification":"soft or crisp northern flatbread"},
+				{"name":"Lángos","region":"Hungary","ingredients":"Wheat flour + yeast","classification":"fried flatbread"},
+				{"name":"Farinata","region":"Italy/France","ingredients":"Chickpea flour + water","classification":"chickpea oven-baked flatbread"},
+				{"name":"Focaccia","region":"Italy","ingredients":"Wheat flour + olive oil","classification":"oven flatbread"},
+				{"name":"Piadina","region":"Italy","ingredients":"Wheat flour + lard/oil","classification":"Romagna griddle flatbread"},
+				{"name":"Pane carasau","region":"Sardinia","ingredients":"Semolina + water","classification":"thin crisp sheet bread"},
+				{"name":"Talo","region":"Basque Country","ingredients":"Corn flour + water","classification":"corn flatbread"},
+				{"name":"Tortilla","region":"Mexico","ingredients":"Masa harina + water","classification":"corn flatbread"},
+				{"name":"Gordita","region":"Mexico","ingredients":"Masa harina + water","classification":"thick pocket flatbread"},
+				{"name":"Sopes","region":"Mexico","ingredients":"Masa harina + water","classification":"thick rimmed flatbread"},
+				{"name":"Arepa","region":"Venezuela/Colombia","ingredients":"Precooked corn flour + water","classification":"corn cake/flatbread"},
+				{"name":"Pupusa","region":"El Salvador","ingredients":"Corn dough + fillings","classification":"stuffed corn flatbread"},
+				{"name":"Johnnycake","region":"Caribbean/American South","ingredients":"Cornmeal + water","classification":"griddle flatbread"},
+				{"name":"Frybread","region":"Native American","ingredients":"Flour + fat + leavening","classification":"fried bread"},
+				{"name":"Casabe","region":"Caribbean/South America","ingredients":"Cassava pulp","classification":"cassava flatbread"},
+				{"name":"Matzo","region":"Jewish","ingredients":"Wheat flour + water only","classification":"unleavened ritual flatbread"}
+			],
+			"pancake":[
+				{"name":"Jianbing","region":"China","ingredients":"Mung bean + wheat batter + egg + crisp wafer","classification":"Chinese street crepe"},
+				{"name":"Pesarattu","region":"Andhra Pradesh (India)","ingredients":"Green moong dal batter","classification":"savory lentil crepe"},
+				{"name":"Neer dosa","region":"Karnataka (India)","ingredients":"Rice batter (no fermentation)","classification":"lacy thin rice crepe"},
+				{"name":"Dosa","region":"South India","ingredients":"Fermented rice + urad dal batter","classification":"crispy fermented crepe"},
+				{"name":"Appam / Aappam","region":"Kerala & Sri Lanka","ingredients":"Fermented rice + coconut milk","classification":"lacy bowl-shaped hopper"},
+				{"name":"Malawax / Malawah","region":"Somalia / Djibouti / Yemen","ingredients":"Thin batter + sugar + cardamom","classification":"sweet layered Somali crepe"},
+				{"name":"Baghrir","region":"Morocco / Algeria","ingredients":"Semolina + yeast batter","classification":"thousand-hole pancake"},
+				{"name":"Msemen (with batter variant)","region":"Maghreb","ingredients":"Loose semolina batter (some regions)","classification":"spongy square pancake"},
+				{"name":"Cachapa","region":"Venezuela","ingredients":"Fresh corn batter + cheese","classification":"sweet corn pancake"},
+				{"name":"Ployes","region":"Acadian (Maine / New Brunswick)","ingredients":"Buckwheat + wheat flour + water","classification":"Acadian buckwheat crepe"},
+				{"name":"Blini","region":"Russia / Eastern Europe","ingredients":"Buckwheat or wheat batter + yeast","classification":"small fermented pancake"},
+				{"name":"Crêpe","region":"France (Brittany / Normandy)","ingredients":"Wheat flour or buckwheat + eggs + milk","classification":"classic thin French crepe"},
+				{"name":"Galette bretonne","region":"Brittany (France)","ingredients":"100% buckwheat batter","classification":"savory Breton buckwheat crepe"},
+				{"name":"Flapjack","region":"United States","ingredients":"Wheat batter + milk + eggs + leavening","classification":"thick griddle pancake"}
+			]
+		},
+		"internet":{
+			"pipes":[
+				{"name":"JUPITER","capacity":"60Tbps","ready":2021,"landing":["LosAngelesUS","ShimaJP","MaruyamaJP","DaetPH"]},
+				{"name":"SJC2","capacity":"126Tbps","ready":2025,"landing":["ChikuraJP","Singapore","HongKong","Shanghai"]},
+				{"name":"Hawaiki","capacity":"67Tbps","ready":2018,"landing":["HillsboroORUS","SydneyAU","AucklandNZ"]},
+				{"name":"FASTER","capacity":"60Tbps","ready":2016,"landing":["OregonUS","ChibaJP","MiyazakiJP","Taiwan"]},
+				{"name":"MAREA","capacity":"224Tbps","ready":2018,"landing":["VirginiaBeachUS","BilbaoES"]},
+				{"name":"Dunant","capacity":"250Tbps","ready":2021,"landing":["VirginiaBeachUS","Saint-Hilaire-de-RiezFR"]},
+				{"name":"Amitié","capacity":"320Tbps","ready":2022,"landing":["LynnMAUS","BudeUK","LePorgeFR"]},
+				{"name":"GraceHopper","capacity":"340Tbps","ready":2022,"landing":["NewYorkUS","BudeUK","BilbaoES"]},
+				{"name":"SEA-ME-WE6","capacity":"126Tbps","ready":2026,"landing":["Singapore","MumbaiIN","Djibouti","SaudiArabia","Egypt","MarseilleFR"]},
+				{"name":"2Africa","capacity":"180Tbps","ready":2025,"landing":["UK","Portugal","Egypt","SaudiArabia","Oman","Pakistan","India","EastAfrica"]},
+				{"name":"PEACE","capacity":"192Tbps","ready":2022,"landing":["Pakistan","Djibouti","Egypt","Kenya","MarseilleFR"]},
+				{"name":"AAE-1","capacity":"40Tbps","ready":2017,"landing":["HongKong","Singapore","Mumbai","Dubai","Marseille"]},
+				{"name":"EllaLink","capacity":"72Tbps","ready":2021,"landing":["FortalezaBR","SinesPT"]},
+				{"name":"Humboldt","capacity":"144Tbps","ready":2026,"landing":["ValparaísoCL","SydneyAU","AucklandNZ"]},
+				{"name":"TPU","capacity":"260Tbps","ready":2025,"landing":["EurekaCAUS","TanguissonPointGU","ClaveriaPH","DawuTW"]},
+				{"name":"Echo","capacity":"260Tbps","ready":2024,"landing":["EurekaCAUS","TanjungPakisID","PitiGU","AgatGU","ChangiNorthSG"]},
+				{"name":"ACC-1","capacity":"256Tbps","ready":2025,"landing":["Singapore","MumbaiIN","JeddahSA","DarwinAU","AlupangGU","HermosaBeachCAUS"]},
+				{"name":"Medusa","capacity":"480Tbps","ready":2025,"landing":["GenoaIT","ChaniaGR","AlexandriaEG","TripoliLY"]},
+				{"name":"Anjana","capacity":"480Tbps","ready":2024,"landing":["MyrtleBeachUS","SantanderES"]}
+			],
+			"zones":{
+				"aws":[
+					["Auckland@ap-southeast-6",-36.8485,174.7633],
+					["Sydney@ap-southeast-2",-33.8688,151.2093],
+					["Santiago@sa-south-2",-33.4489,-70.6693],
+					["Johannesburg@af-south-1",-26.2041,28.0473],
+					["SãoPaulo@sa-east-1",-23.5505,-46.6333],
+					["Singapore@ap-southeast-1",1.3521,103.8198],
+					["Mumbai@ap-south-1",19.0760,72.8777],
+					["Osaka@ap-northeast-3",34.6937,135.5023],
+					["Tokyo@ap-northeast-1",35.6762,139.6503],
+					["PaloAlto@us-west-1",37.4419,-122.1430],
+					["Seoul@ap-northeast-2",37.5665,126.9779],
+					["Virginia@us-east-1",39.0469,-77.4903],
+					["Ohio@us-east-2",39.9612,-82.9988],
+					["Montreal@ca-central-1",45.5017,-73.5673],
+					["Oregon@us-west-2",45.5202,-122.6742],
+					["Paris@eu-west-3",48.8566,2.3522],
+					["Frankfurt@eu-central-1",50.1109,8.6821],
+					["London@eu-west-2",51.5074,-0.1278],
+					["Dublin@eu-west-1",53.3498,-6.2603],
+					["Stockholm@eu-north-1",59.3293,18.0686]
+				],
+				"alibaba":[
+					["Jakarta@ap-southeast-5a",-6.2088,106.8456],
+					["Singapore@ap-southeast-1a",1.3521,103.8198],
+					["KualaLumpur@ap-southeast-3a",3.1390,101.6869],
+					["Bangkok@ap-southeast-7a",13.7563,100.5018],
+					["Manila@ap-southeast-6a",14.5995,120.9842],
+					["Queretaro@na-mexico",20.5888,-100.3899],
+					["HongKong@ap-east-1a",22.3964,114.1095],
+					["Shenzhen@cn-shenzhen-a",22.5431,114.0579],
+					["Guangzhou@cn-guangzhou-a",23.1291,113.2644],
+					["Heyuan@cn-heyuan-a",23.7333,114.6833],
+					["Riyadh@me-central-1a",24.7136,46.6753],
+					["Dubai@me-east-1a",25.2048,55.2708],
+					["Hangzhou@cn-hangzhou-a",30.2741,120.1551],
+					["Chengdu@cn-chengdu-a",30.5728,104.0668],
+					["Wuhan@cn-wuhan-a",30.5928,114.3055],
+					["Shanghai@cn-shanghai-a",31.2304,121.4737],
+					["Tokyo@ap-northeast-1a",35.6762,139.6503],
+					["Qingdao@cn-qingdao-a",36.0667,120.3833],
+					["PaloAlto@us-west-1a",37.3875,-122.0575],
+					["Seoul@ap-northeast-2a",37.5665,126.9780],
+					["Virginia@us-east-1a",39.0469,-77.4903],
+					["Beijing@cn-beijing-a",39.9042,116.4074],
+					["Zhangjiakou@cn-zhangjiakou-a",40.8167,114.8833],
+					["Hohhot@cn-huhehaote-a",40.8414,111.7517],
+					["Ulanqab@cn-wulanchabu-a",41.0333,113.1167],
+					["Paris@eu-west-1a",48.8566,2.3522],
+					["Frankfurt@eu-central-1a",50.1109,8.6821],
+					["London@eu-west-2a",51.5074,-0.1278]
+				]
+			}
+		},
+		"systemic fails": {
+			"market crash": "a cascade of panic unravels investor confidence",
+			"stack overflow": "a recursive push decrements pointer to no return",
+			"traction loss": "passing slip ratio replaces tire road dialogue with noise",
+			"thermal runaway": "exothermic reaction featuring a rapid escalation",
+			"rolling blackout": "sequential loss of power propagating across the network",
+			"volcanic eruption": "pyroclastic surge pressures cascading destruction",
+			"alpine avalanche": "fracture propagates, gravity pries snow slab from the granite",
+			"acoustic feedback": "escalating audio oscillation from excess self amplification"
+		},
+		"fundament":
+		{
+			"stone": "Stability, permanence, foundational; bedrock, monolith.",
+			"star": "Guidance, aspiration, directional; north star, lodestar.",
+			"axis": "Orientation, structure, alignment; pole, axis mundi, unit vector.",
+			"flow": "Movement, process, temporal reference; epoch, equilibrium, par."
+		},
+		"orient":
+		{
+			"azimuth": "Horizontal angle measured clockwise from north; specifies directional bearings in navigation.",
+			"zenith": "Point on celestial sphere directly above observer; defines upward vertical reference.",
+			"nadir": "Point on celestial sphere directly below observer; defines downward vertical reference.",
+			"home": "Baseline reference position or starting point; anchors all relative coordinate measurements.",
+			"datum": "Reference surface or framework in surveying; establishes baseline heights and positions.",
+			"origin": "Point where all coordinate axes intersect; absolute reference for all other points.",
+			"fovea": "Central point of retina providing sharpest vision; primary reference for visual fixation.",
+			"frame": "Baseline reference for measuring motion or orientation; inertial, conceptual, or structural.",
+			"anchor": "Initial information used as reference point for subsequent judgments and estimates.",
+			"tonic": "First note of diatonic scale; home note and primary harmonic reference for a key.",
+			"equilibrium": "State of balance in a system; reference point for dynamic stability.",
+			"par": "Standard score or expected performance; baseline reference for comparisons.",
+			"mean": "Arithmetic average of a dataset; central reference for statistical deviation.",
+			"bedrock": "Foundational layer or principle; ultimate reference for stability or truth.",
+			"pole": "Extreme point defining an axis or boundary; reference for orientation.",
+			"epoch": "Reference point in time for dating events or cycles; standard temporal baseline.",
+			"sovereign": "Supreme authority or ruling power; ultimate reference for legitimacy and control.",
+			"absolute": "Unrestricted and final authority; reference beyond conditions or limits.",
+			"axiom": "Self-evident truth taken as starting point; foundational reference for reasoning.",
+			"principle": "Fundamental rule or law; baseline reference for systems of thought or action.",
+			"archetype": "Original model or pattern; reference form for subsequent instances.",
+			"monolith": "Single massive structure; reference of permanence or authority.",
+			"root node": "Primary or topmost node in hierarchical structure; defines fundamental reference for descendants.",
+			"north star": "Fixed celestial point above North Pole; constant navigational reference for true north.",
+			"prime meridian": "Meridian at 0° longitude; universal reference for measuring east-west position.",
+			"unit vector": "Vector of length 1 indicating direction; fundamental reference for specifying other vectors.",
+			"ground state": "Lowest possible energy level of quantum system; baseline reference for all other states.",
+			"identity element": "Element that leaves operation result unmodified; fundamental operational reference.",
+			"sea level": "Average height of the ocean's surface; standard baseline for measuring land elevations and depths.",
+			"axis mundi": "Singular point connecting realms; central reference for orientation or structure."
+		},
+		"identifier": {
+			"viaf": { "name": "Virtual International Authority File ID.", "pattern": "^[0-9]+$" },
+			"isni": { "name": "International Standard Name Identifier.", "pattern": "^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$" },
+			"lcnaf": { "name": "Library of Congress Name Authority File ID.", "pattern": "^n[0-9]+$" },
+			"orcid": { "name": "ORCID identifier, optional for living researchers.", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" },
+			"wikidata": { "name": "Wikidata ID for global open-data linking.", "pattern": "^Q[0-9]+$" },
+			"gnd": { "name": "Integrated Authority File ID, used in German-speaking countries.", "pattern": "^[0-9]+[-0-9]*$" },
+			"bnf": { "name": "Bibliothèque nationale de France ID for Francophone authors.", "pattern": "^[0-9]+[a-z]?$" },
+			"scopusid": { "name": "Scopus Author ID for Elsevier's citation database.", "pattern": "^[0-9]{10,11}$" },
+			"researcherid": { "name": "Web of Science ResearcherID for publication tracking.", "pattern": "^[A-Z]-[0-9]{4}-[0-9]{4}$" },
+			"ror": { "name": "Research Organization Registry ID for institutions.", "pattern": "^[0-9a-z]{9}$" },
+			"ark": { "name": "Archival Resource Key for persistent digital objects.", "pattern": "^ark:/[0-9]+/[0-9a-zA-Z]+$" },
+			"plain": { "name": "A plain ascii name.", "pattern": "^[A-Za-z0-9_-]+:[A-Za-z0-9_-]+$" },
+			"msdos": { "name": "Bill and Pauls 8.3 legacy.", "pattern": "^[A-Za-z0-9]{1,8}(:[A-Za-z0-9]{1,8})?$"},
+			"isbn": {"name": "International Standard Book Number for books (ISBN-10 or ISBN-13).", "pattern": "^(97(8|9))?[0-9]{9}[0-9X]$"},
+			"issn": { "name": "International Standard Serial Number for journals and periodicals.", "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$"},
+			"doi": { "name": "Digital Object Identifier for scholarly works.", "pattern": "^10\\.[0-9]{4,9}/[-._;()/:A-Z0-9]+$"}
+		},
+		"citation":{
+			"MLA": ["author", "title", "source", "year"],
+			"APA": ["author", "year", "title", "source", "doi"],
+			"Chicago": ["author", "title", "city", "source", "year"],
+			"IEEE": ["author", "title", "source", "year", "volume", "issue", "pages"],
+			"Harvard": ["author", "year", "title", "source", "publisher", "place"],
+			"Vancouver": ["author", "title", "source", "year", "volume", "issue", "pages"],
+			"Turabian": ["author", "title", "city", "publisher", "year"],
+			"AMA": ["author", "title", "source", "year", "volume", "issue", "pages", "doi"]
+		}
+	},
+	"schema": {
+		"relay": {
+			"type": "map",
+			"keyType": "string",
+			"valueType": {
+				"isA": "LanguageRelay",
+				"required": ["name", "signs", "block", "system", "description"],
+				"paths": {
+					"type": "array",
+					"items": { "isA": "PathItem" }
+				}
+			}
+		}
+	},
+	"types": {
+		"PathItem": {
+			"required": ["type"],
+			"properties": {
+				"type": { "type": "string" },
+				"value": { "type": "string" },
+				"meaning": { "type": "string" },
+				"semantic": { "type": "string" },
+				"phonetic": { "type": "boolean" }
+			}
+		}
+	}
+}
 </pre>
 </div>
 </body>

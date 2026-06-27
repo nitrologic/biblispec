@@ -153,12 +153,12 @@
 			}
 		},
 		"faces":{
-			"name": "Face on profiles",
 			"profiles":{
 				"animals": "🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉",
-				"masks": "🤖👹👺👻👼👽👾😈💀",
+				"masks": "🎭🤡😎🧛😈🥶🤖👹👺👻👼👽👾💀",
 				"trope": "🧌🧛🧝🤠🤡👨‍👩‍👧‍👦🧙‍♂️🧙‍♀️🧚‍♂️🧜‍♂️🧞‍♂️🧟‍♂️🧞‍♀️🧟‍♀️"
 			},
+			"name": "Face on profiles",
 			"tags": ["face"]
 		},
 		"pheme":{
