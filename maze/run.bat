@@ -1,0 +1,1 @@
+deno run maze.ts
