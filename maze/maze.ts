@@ -1,15 +1,17 @@
-console.log("maze 0.7");
+console.log("maze 0.8");
 
 const starChar="✩";
-const hashChar="▇";//"▟";	//"╳";
+const hashChar="◦";
+const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
+const flowerChars="✻✼✽✾✿❀❁";
 
 const plain=[
-	"##########################",
-	"#                        #",
-	"# ######    ########     #",
-	"# #    #        #        #",
-	"#  #            #        #",
-	"##########################",
+	"#######################",
+	"#             # #     #",
+	"# ###### ######## #   #",
+	"# #    #     #   ##   #",
+	"#  #         #        #",
+	"#######################",
 ]
 
 function draw(line){
@@ -27,12 +29,11 @@ const steps=" ▂▃▄▅▆▇█";
 
 const block="▢▣"
 
-const wideRounded= "｢｣┕┙┃━";
 const boxRounded="╭╮╰╯│─┬┴│┤├┼";
 const boxDouble="╔╗╚╝║═╦╩║╣╠╬";
 const boxSingle="┏┓┗┛┃━┳┻┃┫┣╋";
 
-let boxMode=wideRounded;//boxDouble;//boxRounded;
+let boxMode=boxRounded;
 
 enum Edge2 { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineHoriz, TeeDown, TeeUp, LineVert, TeeLeft, TeeRight, Cross }
 enum Edge { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineVert, LineHoriz }
@@ -221,8 +222,8 @@ function wrapSample33(lines:string[],x:number,y:number):number[]{
 function blockHashGrid(lines:string[]){
 	let w=lines[0].length;
 	let h=lines.length;
-	let height=lines.length*2+1;
-	let width=lines[0].length*2+1;
+	let height=lines.length*2+2;
+	let width=lines[0].length*2+2;
 	let frame=[];
 	for(let y=0;y<height;y++){
 		let line="";
@@ -252,16 +253,11 @@ let wide=wideLines(plain);
 let double=doubleLines(plain);
 let triple=tripleLines(plain);
 let src=wide;
-
-
-for(let line of plain){
+for(let line of src){
 	console.log(line);
 }
-
 let grid=blockHashGrid(src)
-
 let grid2=outlineGrid(grid,boxMode);
-
 for(let line of grid2){
 	draw(line);
 }

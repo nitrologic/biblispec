@@ -7,13 +7,15 @@ console.log("traffic 0.4 - q to quit")
 enum axis {UP, DOWN, RIGHT, LEFT};
 const pump:number[]=[0,0,0,0];
 
-function fadePumps(){
+function fadePumps():number[]{
+	const previous = [...pump];
 	for(let index=0;index<pump.length;index++){
 		let integral:number=pump[index]|0;
-		let fade=(integral>>2);
+		let fade=(integral>>3);
 		integral=(fade)?integral-fade:0;
 		pump[index]=integral;
 	}
+	return previous;
 }
 
 function updateLane(lane:string,map:any){
@@ -37,10 +39,10 @@ export function scanKeyboard(){
 			let down=(keys.length>2) && ((keys[1]==91)&&(keys[2]==66));
 			let right=(keys.length>2) && ((keys[1]==91)&&(keys[2]==67));
 			let left=(keys.length>2) && ((keys[1]==91)&&(keys[2]==68));
-			if(up) pump[axis.UP]+=100;
-			if(down) pump[axis.DOWN]+=100;
-			if(right) pump[axis.RIGHT]+=100;
-			if(left) pump[axis.LEFT]+=100;
+			if(up) pump[axis.UP]+=200;
+			if(down) pump[axis.DOWN]+=200;
+			if(right) pump[axis.RIGHT]+=200;
+			if(left) pump[axis.LEFT]+=200;
 		}
 	}
 }

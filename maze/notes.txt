@@ -1,5 +1,6 @@
 
-
+const halfs=" ▀▄█";
+const steps=" ▂▃▄▅▆▇█";
 
 
 historical notes below
