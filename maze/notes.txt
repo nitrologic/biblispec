@@ -1,3 +1,16 @@
+
+
+
+
+historical notes below
+
+// cars ▣▣▣ moves right one cell if clear
+
+// ▢▣▣▣▢  →  ▢▢▣▣▣
+
+// ▤▥▦▧▨▩
+
+
 function readKeyboard(){
 	const bytesRead = Deno.stdin.readSync(keyboardBuffer); 
 	if (!bytesRead) return [];
