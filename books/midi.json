@@ -1,74 +1,91 @@
 {
-	"manufacturer":{
-		"002236": {
-			"name":"nitrologic",
-			"brands":["vidbit"]
-		},
-		"0021A5": {
-			"name":"oliver huggins",
-			"brands":["Lujin","Midifex","AvonSynth"]
-		},
-		"00217B": {
-			"name":"Synthstrom Audible",
-			"brands":["Deluge"]
-		},
-		"002076": {
-			"name":"Teenage Engineering",
-			"brands":["OP-1","OP-Z","OP-XY","TX-6"]
-		},
-		"002068": {
-			"name": "Elektron",
-			"brands": ["Digitakt","Digitone","Syntakt","Octatrack","Analog Four","Analog Rytm"]
-		}		
+	"name": "midi book biblispec appendum",
+	"version": "1.0.0",
+	"description": "Music Device Communication",
+	"status": "Digital sequencing the divine",
+	"copyright": "(C) 2025 Simon Armstrong",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
 	},
-	"sysexid":{
-		"002124": "Fairlight ESP",
-		"00211A": "IK Multimedia",
-		"00207F": "Serato",
-		"00206B": "Arturia",
-		"00205F": "Sequentix",
-		"002052": "Analogue Systems",
-		"00204D": "Vermona",
-		"00203A": "Propellerhead (Reason Studios)",
-		"002033": "Access Music",
-		"002032": "Behringer",
-		"002029": "Focusrite / Novation",
-		"002020": "Doepfer Musikelektronik",
-		"00201F": "Avid / TC Electronic",
-		"00201A": "Fatar / Studiologic",
-		"002013": "Kenton",
-		"002000": "Dream SAS",
-		"00023D": "Expressive E",
-		"000171": "Mutable Instruments",
-		"00010E": "Elektron",
-		"000050": "Arturia 0",
-		"000021": "Nord (Clavia)",
-		"000001": "Time/Space Engineera",
-		"7F": "Universal Realtime Message",
-		"7E": "Universal Non-Realtime Message",
-		"7D": "FOSS Educational Research Non-Commercial",
-		"4E": "JVC",
-		"47": "Akai",
-		"44": "Casio",
-		"43": "Yamaha",
-		"42": "Korg",
-		"41": "Roland",
-		"40": "Kawai",
-		"3E": "Digital Music Corp",
-		"24": "Waldorf Electronics",
-		"1C": "ART",
-		"18": "E-mu Systems",
-		"15": "JLCooper",
-		"13": "Digidesign",
-		"10": "Oberheim",
-		"0F": "Ensoniq",
-		"07": "Kurzweil",
-		"06": "Lexicon",
-		"04": "Moog Music",
-		"02": "Big Briar",
-		"01": "Sequential Circuits"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
 	},
-	"old":{
+	"acknowledgments": "assisted by Grok, created by xAI",
+
+	"sysex":{
+		"identity":{
+			"002236": {
+				"name":"nitrologic",
+				"brands":["vidbit"]
+			},
+			"0021A5": {
+				"name":"oliver huggins",
+				"brands":["Lujin","Midifex","AvonSynth"]
+			},
+			"00217B": {
+				"name":"Synthstrom Audible",
+				"brands":["Deluge"]
+			},
+			"002076": {
+				"name":"Teenage Engineering",
+				"brands":["OP-1","OP-Z","OP-XY","TX-6"]
+			},
+			"002068": {
+				"name": "Elektron",
+				"brands": ["Digitakt","Digitone","Syntakt","Octatrack","Analog Four","Analog Rytm"]
+			}		
+		},
+		"sysexid":{
+			"002124": "Fairlight ESP",
+			"00211A": "IK Multimedia",
+			"00207F": "Serato",
+			"00206B": "Arturia",
+			"00205F": "Sequentix",
+			"002052": "Analogue Systems",
+			"00204D": "Vermona",
+			"00203A": "Propellerhead (Reason Studios)",
+			"002033": "Access Music",
+			"002032": "Behringer",
+			"002029": "Focusrite / Novation",
+			"002020": "Doepfer Musikelektronik",
+			"00201F": "Avid / TC Electronic",
+			"00201A": "Fatar / Studiologic",
+			"002013": "Kenton",
+			"002000": "Dream SAS",
+			"00023D": "Expressive E",
+			"000171": "Mutable Instruments",
+			"00010E": "Elektron",
+			"000050": "Arturia 0",
+			"000021": "Nord (Clavia)",
+			"000001": "Time/Space Engineera",
+			"7F": "Universal Realtime Message",
+			"7E": "Universal Non-Realtime Message",
+			"7D": "FOSS Educational Research Non-Commercial",
+			"4E": "JVC",
+			"47": "Akai",
+			"44": "Casio",
+			"43": "Yamaha",
+			"42": "Korg",
+			"41": "Roland",
+			"40": "Kawai",
+			"3E": "Digital Music Corp",
+			"24": "Waldorf Electronics",
+			"1C": "ART",
+			"18": "E-mu Systems",
+			"15": "JLCooper",
+			"13": "Digidesign",
+			"10": "Oberheim",
+			"0F": "Ensoniq",
+			"07": "Kurzweil",
+			"06": "Lexicon",
+			"04": "Moog Music",
+			"02": "Big Briar",
+			"01": "Sequential Circuits"
+		}
+	},
+	"sysex0":{
 		"00202F": "Behringer 0",
 		"00014D": "Teenage Engineering 0",
 		"00001C": "Novation 0"
