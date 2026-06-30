@@ -1,22 +1,59 @@
-console.log("maze 0.8");
+// maze.ts 
+
+// biblispec books maze example script by nitrologic
+
+console.log("maze 0.9");
 
 const starChar="✩";
-const hashChar="◦";
+const hashChar="⬦";//"◦";
+const grass7="◆◇◈⬥⬦⬡⬢";
 const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
+const miscChars="⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉";
 const flowerChars="✻✼✽✾✿❀❁";
+const grassWide7="✻✾✿✼✽❀❁";
 
 const plain=[
 	"#######################",
 	"#             # #     #",
 	"# ###### ######## #   #",
-	"# #    #     #   ##   #",
-	"#  #         #        #",
+	"# #    # #       ##   #",
+	"#  # #       #        #",
 	"#######################",
 ]
 
-function draw(line){
+function swizzle(text:string):string{
+	let chars=[...text];
+	let n=text.length;
+	let p0=0;
+	for(let i=0;i<n*2;i++){
+		let p1=p0;
+		p0=(Math.random()*n)|0;
+		let temp=chars[p0];chars[p0]=chars[p1];chars[p1]=temp;
+	}
+	return chars.join('');
+}
+function draw(line,range7){
 	let ascii=line.replaceAll("▣",hashChar).replaceAll("▢"," ");
-	console.log(ascii);
+//	console.log(ascii);
+
+	let bed16=hashChar.repeat(16);
+	let bed16b=hashChar+swizzle(range7+range7)+hashChar;
+	let shrubs=ascii.replaceAll(bed16,bed16b);
+
+	let bed9=hashChar.repeat(9);
+	let bed9b=hashChar+swizzle(range7)+hashChar;
+	let herbs=shrubs.replaceAll(bed9,bed9b);
+
+	let bed4=hashChar.repeat(4);
+	let bed4b=hashChar+swizzle(range7.substring(0,2))+hashChar
+	herbs=herbs.replaceAll(bed4,bed4b);
+
+	let bed3=hashChar.repeat(3);
+	let bed3b=hashChar+range7.substring(0,1)+hashChar
+	herbs=herbs.replaceAll(bed3,bed3b);
+
+
+	console.log(herbs);
 }
 
 function tile(b9){
@@ -259,5 +296,5 @@ for(let line of src){
 let grid=blockHashGrid(src)
 let grid2=outlineGrid(grid,boxMode);
 for(let line of grid2){
-	draw(line);
+	draw(line,grass7);
 }

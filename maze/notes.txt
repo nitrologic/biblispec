@@ -1,4 +1,14 @@
 
+
+for(let i=0;i<vicCount;i++){
+	let y=(i/22)|0;
+	vicGrid[i]=y;
+}
+let vicCount=22*23;
+let vicGrid=new Uint8Array(vicCount);
+let defaultGrid=vicGrid;
+let grid=defaultGrid;
+	
 const halfs=" ▀▄█";
 const steps=" ▂▃▄▅▆▇█";
 

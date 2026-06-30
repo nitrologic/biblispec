@@ -515,7 +515,7 @@ All are not left facing - mirrored souls under observation
 				"geom":"◆◇◈⬥⬦⬡⬢⬣⬤◫◬◭◮",
 				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
 				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
-				"circles":"◐◒◑◓◔◕",
+				"circles":"⦾◐◒◑◓◔◕",
 				"markdown":"↩↪↗↘↖↙◀▶✳✴",
 				"outer":"◜◝◟◞",
 				"rect":"▪▫■□▢▣",
