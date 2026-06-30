@@ -12,12 +12,19 @@
 			"name":"Synthstrom Audible",
 			"brands":["Deluge"]
 		},
+		"002076": {
+			"name":"Teenage Engineering",
+			"brands":["OP-1","OP-Z","OP-XY","TX-6"]
+		},
+		"002068": {
+			"name": "Elektron",
+			"brands": ["Digitakt","Digitone","Syntakt","Octatrack","Analog Four","Analog Rytm"]
+		}		
+	},
+	"sysexid":{
 		"002124": "Fairlight ESP",
 		"00211A": "IK Multimedia",
 		"00207F": "Serato",
-		"002076": "Teenage Engineering"
-	},
-	"sysexid":{
 		"00206B": "Arturia",
 		"00205F": "Sequentix",
 		"002052": "Analogue Systems",
