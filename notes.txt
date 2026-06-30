@@ -1,3 +1,18 @@
+Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1] 
+## The Shift to Three-Byte IDs
+When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2] 
+To solve this, they introduced an extension protocol: if the first byte of a SysEx ID was 00H, it signaled to the hardware that the manufacturer ID was an extended, three-byte code comprised of the next two bytes. [1] 
+## The First Extended ID (00 00 01)
+Because American companies were allocated the first block of numbers, a small boutique tech development firm called Time/Space Engineering was assigned the foundational 00 00 01 slot in this new expanded registry.
+Unlike massive corporate mainstays like Roland (41) or Yamaha (43), Time/Space Engineering operated primarily behind the scenes in the late 1980s and early 1990s as a specialized hardware and R&D consultancy group rather than a commercial consumer synthesizer brand. They specialized in early MIDI synchronization, clock translation, and specialized processing utilities—the foundational "space and time" elements required to keep early computer sequencers tightly locked to tape machines and external hardware.
+While the company eventually faded from the consumer music production spotlight, their name remains permanently fixed at the top of the modern extended MIDI registry, directly preceding prominent boutique manufacturers like Novation (00 00 1C) and Nord (00 00 21).
+Would you like me to look up the history or context of any of the other early three-byte boutique developers in your JSON map, or are you ready to start map-handling these multi-byte headers in your MicroPython code?
+
+[1] [https://midi.org](https://midi.org/sysexidtable)
+[2] [https://midi.org](https://midi.org/the-history-of-midi)
+
+
+
 ┌ (U+250C) – Rendered as Fullwidth Space
 ┐ (U+2510) – Rendered as Fullwidth Space
 └ (U+2514) – Rendered as Fullwidth Space
