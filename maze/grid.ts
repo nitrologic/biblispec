@@ -1,10 +1,11 @@
 // grid.ts
 
 import { replaceText, sleep, isRunning, stopRunning, keyboardTask, pollKeyboard } from "./terminal.ts";
-const vidWidth=20;
-const vidHeight=20;
 
-console.log("grid 0.1 - q to quit")
+const vidWidth=72;
+const vidHeight=16;
+	
+const gridTitle="grid 0.2 - q to quit";
 
 const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
@@ -26,20 +27,49 @@ class Bitmap {
 		}    
 	}
 	public grid(){
-		for(let x=0;x<22*8;x+=10){
-			this.rect(x,2,1,23*8-2);
+		let w=this.width;
+		let h=this.height;
+		for(let x=0;x<w;x+=10){
+			this.rect(x,2,1,h-2);
 		}
-		for(let y=0;y<23*8;y+=4){
-			this.rect(0,y,22*8,1);
+		this.rect(w-3,3,2,h-4);
+		for(let y=0;y<h;y+=4){
+			this.rect(0,y,w,1);
 		}
+		this.rect(3,h-3,w-4,2);
 	}
 };
 
 const gridBitmap = new Bitmap(22*8,23*8);
 //bitmap.rect(0,0,22*8,1);
 
-function resetGrid(){
-	
+function updateCursor(){
+	cursorVX+=(pump[axis.RIGHT]-pump[axis.LEFT])/400;
+	cursorVY+=(pump[axis.DOWN]-pump[axis.UP])/400;
+	cursorX+=cursorVX;
+	if(cursorX<0){
+		cursorX=0;cursorVX=0;
+	}
+	let w=gridBitmap.span*4-vidWidth;
+	let h=gridBitmap.height*4-vidHeight*8;
+	if(cursorX>=w){
+		cursorX=w;
+		cursorVX=0;
+	}
+	cursorY+=cursorVY;
+	if(cursorY<0){
+		cursorY=0;
+		cursorVY=0;
+	}
+	if(cursorY>h){
+		cursorY=h;
+		cursorVY=0;
+	}
+	cursorVX *= 0.9;
+	cursorVY *= 0.9;
+}
+
+function resetGrid(){	
 }
 
 function gridWindow(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
@@ -103,56 +133,28 @@ let cursorVY=0;
 
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
-let cursorHome="\x1b[H";
+let cursorHome2="\x1b[H";
+let cursorHome="\x1b[2J\x1b[1;1H"
 
 const encoder=new TextEncoder();
 
 keyboardTask()
 
 while(isRunning()){
-
 //	let blocks=grid(Windo)w(grid,22,0,0,20,20);
 	let pany=cursorY>>2;
-	let blocks=gridWindow(gridBitmap.data,22,cursorX,pany,vidWidth*2,vidHeight);
-
+	let span=gridBitmap.span;
+	let blocks=gridWindow(gridBitmap.data,span,cursorX,pany,vidWidth*2,vidHeight*2);
+	console.log(cursorHome);
+	console.log(gridTitle);
 	console.log(blocks.join("\n"));//,cursorErase);
 //	console.log(cursorUp.repeat(vidHeight));
-	console.log(cursorHome);
-
 //    Deno.stdout.write(encoder.encode(cursorUp));
-
 	await sleep(10);
 //    grid=updateGrid(grid,rules);
-
 	fadePumps();
 	scanKeyboard();
-
-	cursorVX+=(pump[axis.RIGHT]-pump[axis.LEFT])/400;
-	cursorVY+=(pump[axis.DOWN]-pump[axis.UP])/400;
-
-	cursorX+=cursorVX;
-	if(cursorX<0){
-		cursorX=0;cursorVX=0;
-	}
-	let w=gridBitmap.span*2-vidWidth;
-	if(cursorX>=w){
-		cursorX=w;
-		cursorVX=0;
-	}
-
-	cursorY+=cursorVY;
-	if(cursorY<0){
-		cursorY=0;
-		cursorVY=0;
-	}
-	let h=gridBitmap.height-20*2;
-	if(cursorY>h){
-		cursorY=h;
-		cursorVY=0;
-	}
-
-	cursorVX *= 0.9;
-	cursorVY *= 0.9;
+	updateCursor();
 
 }
 
