@@ -6,9 +6,6 @@
 ▤▢▢▢▢▢▣▢▢▢ ▣▣▣▢▢▣▢▢▢▣ ▣▣▢▢▣▢▢▣▢▢ ▢▣▣▣▢▢▢▢▣▢
 ▥▢▢▢▢▢▣▢▢▣ ▢▢▢▣▣▣▢▢▣▢ ▢▣▢▢▢▣▣▣▢▢ ▢▢▣▢▢▢▢▣▢▢
 
-Movement - cars ▣▣▣ moves right one cell if clear
-
-▢▣▣▣▢  →  ▢▢▣▣▣
 
 Generator - two state generator instances cars
 
@@ -16,6 +13,9 @@ Generator - two state generator instances cars
 
 ▥ - ▥▢▢▢▢▢ -> ▤▢▢▢▢▢
 
+Movement - cars ▣▣▣ moves right one cell if clear
+
+▢▣▣▣▢  →  ▢▢▣▣▣
 
 
 

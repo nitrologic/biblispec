@@ -1,37 +1,68 @@
-console.log("maze 0.5");
+console.log("maze 0.7");
+
+const starChar="✩";
+const hashChar="▇";//"▟";	//"╳";
 
 const plain=[
-	"#################################",
-	"#                               #",
-	"# ######                        #",
-	"#                    #          #",
-	"#                    #          #",
-	"#################################",
+	"##########################",
+	"#                        #",
+	"# ######    ########     #",
+	"# #    #        #        #",
+	"#  #            #        #",
+	"##########################",
 ]
 
+function draw(line){
+	let ascii=line.replaceAll("▣",hashChar).replaceAll("▢"," ");
+	console.log(ascii);
+}
+
+function tile(b9){
+	return b9.substring(0,3)+"\n"+b9.substring(3,6)+"\n"+b9.substring(6,9)+"\n\n";	// +" "+b9+
+}
+
+const halfs=" ▀▄█";
+const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+const steps=" ▂▃▄▅▆▇█";
+
 const block="▢▣"
-const boxRounded="╭╮╰╯─┬┴│┤├┼";
-const boxDouble="╔╗╚╝═╦╩║╣╠╬";
-const boxSingle="┏┓┗┛━┳┻┃┫┣╋";
 
-enum Edge { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineHoriz, TeeDown, TeeUp, LineVert, TeeLeft, TeeRight, Cross }
+const wideRounded= "｢｣┕┙┃━";
+const boxRounded="╭╮╰╯│─┬┴│┤├┼";
+const boxDouble="╔╗╚╝║═╦╩║╣╠╬";
+const boxSingle="┏┓┗┛┃━┳┻┃┫┣╋";
 
-// if 3x3 has single solid corner then use Corner 
+let boxMode=wideRounded;//boxDouble;//boxRounded;
 
-function boxIndex(b9:[]):number{
+enum Edge2 { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineHoriz, TeeDown, TeeUp, LineVert, TeeLeft, TeeRight, Cross }
+enum Edge { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineVert, LineHoriz }
+
+// if 3x3 has single solid corner then use an edge corner 
+
+function boxIndex(b9:string):number{
 	if(b9=="▢▢▢▢▢▢▢▢▣") return Edge.CornerTopLeft;
 	if(b9=="▣▢▢▢▢▢▢▢▢") return Edge.CornerBotRight;
 	if(b9=="▢▢▣▢▢▢▢▢▢") return Edge.CornerBotLeft;
 	if(b9=="▢▢▢▢▢▢▣▢▢") return Edge.CornerTopRight;
 	if(b9=="▣▣▣▢▢▢▢▢▢") return Edge.LineHoriz;
 	if(b9=="▢▢▢▢▢▢▣▣▣") return Edge.LineHoriz;
+	if(b9=="▣▣▢▢▢▢▢▢▢") return Edge.LineHoriz;
+	if(b9=="▢▢▢▢▢▢▣▣▢") return Edge.LineHoriz;
+	if(b9=="▢▣▣▢▢▢▢▢▢") return Edge.LineHoriz;
+	if(b9=="▢▢▢▢▢▢▢▣▣") return Edge.LineHoriz;
 	if(b9=="▣▢▢▣▢▢▣▢▢") return Edge.LineVert;
 	if(b9=="▢▢▣▢▢▣▢▢▣") return Edge.LineVert;
-	console.log(b9);
+	if(b9=="▢▢▢▢▢▣▢▢▣" || b9=="▢▢▢▣▢▢▣▢▢") return Edge.LineVert;
+	if(b9=="▣▣▣▣▢▢▣▢▢") return Edge.CornerTopLeft;
+	if(b9=="▣▣▣▢▢▣▢▢▣") return Edge.CornerTopRight;
+	if(b9=="▣▢▢▣▢▢▢▢▢" || b9=="▢▢▣▢▢▣▢▢▢") return Edge.LineVert;
+	if(b9=="▣▢▢▣▢▢▣▣▣") return Edge.CornerBotLeft;
+	if(b9=="▢▢▣▢▢▣▣▣▣") return Edge.CornerBotRight;
+	if(b9=="▣▢▢▣▢▢▢▣▣") return Edge.CornerBotLeft;
+	if(b9=="▣▣▢▢▢▣▢▢▣") return Edge.CornerTopRight;
+	console.log(tile(b9));
 	return -1;
 }
-
-
 
 function getOutline(u: boolean, d: boolean, l: boolean, r: boolean): Edge {
 	if (u && d && l && r) return Edge.Cross;
@@ -87,7 +118,10 @@ function outlineGrid(lines:string[],boxChars:string){
 //				let index=udlr(a9);
 				let b9=String.fromCodePoint(...a9);
 				let index=boxIndex(b9);
-				if(index>=0) char=boxChars.charAt(index);else char="*";
+				if(index<0){
+					console.log("\""+b9+"\"");					
+				}
+				if(index>=0) char=boxChars.charAt(index);else char=starChar;
 			}
 			line+=char;
 		}
@@ -96,6 +130,20 @@ function outlineGrid(lines:string[],boxChars:string){
 	return result;
 }
 
+
+function wideLines(lines:string[],x:number,y:number){
+	let w=lines[0].length;
+	let h=lines.length;
+	let result=[];
+	for(let line of lines){
+		let text="";
+		for(let char of line){
+			text+=char+char;
+		}
+		result.push(text);
+	}
+	return result;
+}
 
 function doubleLines(lines:string[],x:number,y:number){
 	let w=lines[0].length;
@@ -200,21 +248,20 @@ function blockHashGrid(lines:string[]){
 	return frame;
 }
 
+let wide=wideLines(plain);
 let double=doubleLines(plain);
 let triple=tripleLines(plain);
+let src=wide;
 
 
-let src=double;
-
-
-for(let line of src){
+for(let line of plain){
 	console.log(line);
 }
 
 let grid=blockHashGrid(src)
 
-let grid2=outlineGrid(grid,boxRounded);
+let grid2=outlineGrid(grid,boxMode);
 
 for(let line of grid2){
-	console.log(line);
+	draw(line);
 }

@@ -1,3 +1,15 @@
+┌ (U+250C) – Rendered as Fullwidth Space
+┐ (U+2510) – Rendered as Fullwidth Space
+└ (U+2514) – Rendered as Fullwidth Space
+┘ (U+2518) – Rendered as Fullwidth Space(Not
+
+┌┐└┘
+
+ "｢｣┕┙┃━"
+ 
+"boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
+
+
 "⧀⧉":{
 	"name": "Mathematical Symbols - UI Gauges and Component Blocks",
 	"codes": "⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉",
