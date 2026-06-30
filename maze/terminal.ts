@@ -1,6 +1,10 @@
 // terminal.ts
 
-// traffic.ts imports replaceText sleep, isRunning, stopRunning, keyboardTask, pollKeyboard from here
+const encoder=new TextEncoder();
+
+const mouseOn="\x1b[?1006h";
+
+// traffic.ts imports replaceText sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard from here
 
 export function replaceText(text: string, search: string, replace: string, leftToRight:boolean=true) : string {
 	if (leftToRight) return text.replaceAll(search, replace);
@@ -33,8 +37,9 @@ export function pollKeyboard(){
     return queue;
 }
 
-export async function keyboardTask() {
+export async function keyboardMouseTask() {
     Deno.stdin.setRaw(true);
+	console.log(mouseOn);
 	while (running) {
 		const bytesRead = await Deno.stdin.read(keyboardBuffer); 
 		if (bytesRead && keyboardBuffer[0] === 113) { // 113 = 'q'

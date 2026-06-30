@@ -1,4 +1,11 @@
+// old code below
 
+//	console.log(cursorUp.repeat(vidHeight));
+//    Deno.stdout.write(encoder.encode(cursorUp));
+//	let blocks=grid(Windo)w(grid,22,0,0,20,20);
+
+ --allow-net --allow-env --allow-read
+ --allow-write --allow-sys 
 
 for(let i=0;i<vicCount;i++){
 	let y=(i/22)|0;

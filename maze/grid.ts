@@ -1,11 +1,11 @@
 // grid.ts
 
-import { replaceText, sleep, isRunning, stopRunning, keyboardTask, pollKeyboard } from "./terminal.ts";
+import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
 
-const vidWidth=72;
+let vidWidth=72;
 const vidHeight=16;
 	
-const gridTitle="grid 0.2 - q to quit";
+const gridTitle="☰ grid 0.4 - q to quit, backspace - menu";
 
 const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
@@ -105,10 +105,28 @@ function fadePumps():number[]{
 	return previous;
 }
 
+let mainMenu=true;
+
+function menuWall(blocks:string[]){
+	let result=[];
+	for(let row of blocks){
+		result.push("*****"+row);
+	}
+	return result.join("\n")
+}
+
+function backSpace(){
+	mainMenu=!mainMenu;
+}
+
 export function scanKeyboard(){
 	let queue:Uint8Array[]=pollKeyboard();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];
+		status.push(JSON.stringify(keys));
+		if(keys[0]==127) {// BACKSPACE
+			backSpace();
+		}
 		if(keys[0]==32) {
 //         grid=updateGrid(grid,emit);
 		}
@@ -122,6 +140,8 @@ export function scanKeyboard(){
 			if(down) pump[axis.DOWN]+=200;
 			if(right) pump[axis.RIGHT]+=200;
 			if(left) pump[axis.LEFT]+=200;
+		}else{
+			status.push(JSON.stringify(keys));
 		}
 	}
 }
@@ -134,28 +154,34 @@ let cursorVY=0;
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
 let cursorHome2="\x1b[H";
-let cursorHome="\x1b[2J\x1b[1;1H"
+let cursorHome="\x1b[2J\x1b[1;1H";
 
 const encoder=new TextEncoder();
 
-keyboardTask()
+let status=["simon was here"];
+
+keyboardMouseTask()
 
 while(isRunning()){
-//	let blocks=grid(Windo)w(grid,22,0,0,20,20);
+	const { columns, rows } = Deno.consoleSize();
+	vidWidth=columns-20;
 	let pany=cursorY>>2;
 	let span=gridBitmap.span;
-	let blocks=gridWindow(gridBitmap.data,span,cursorX,pany,vidWidth*2,vidHeight*2);
+	let menuWide=mainMenu?5:0;
+	let wide2=(vidWidth-menuWide)*2;
+	let blocks=gridWindow(gridBitmap.data,span,cursorX,pany,wide2,vidHeight*2);
+
 	console.log(cursorHome);
-	console.log(gridTitle);
-	console.log(blocks.join("\n"));//,cursorErase);
-//	console.log(cursorUp.repeat(vidHeight));
-//    Deno.stdout.write(encoder.encode(cursorUp));
+	console.log(gridTitle+" "+columns+"x"+rows);
+	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
+	console.log(wall);
+	let latest=status.slice(-3);
+	console.log(latest.join("\n"));
 	await sleep(10);
 //    grid=updateGrid(grid,rules);
 	fadePumps();
 	scanKeyboard();
 	updateCursor();
-
 }
 
 stopRunning();

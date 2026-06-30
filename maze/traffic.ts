@@ -1,6 +1,6 @@
 // traffic.ts
 
-import { replaceText, sleep, isRunning, stopRunning, keyboardTask, pollKeyboard } from "./terminal.ts";
+import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
 
 console.log("traffic 0.4 - q to quit")
 
@@ -64,7 +64,7 @@ let up="\x1b[A";
 let erase="\x1b[K";
 let lane:string=defaultLane;
 
-keyboardTask()
+keyboardMouseTask()
 
 while(isRunning()){
 

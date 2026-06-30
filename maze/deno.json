@@ -1,0 +1,5 @@
+{
+	"tasks":{
+		"menu": "deno run --allow-run menu.ts"
+    }
+}

@@ -1,9 +1,23 @@
 {
 	"manufacturer":{
-		"002236": "nitrologic",
+		"002236": {
+			"name":"nitrologic",
+			"brands":["vidbit"]
+		},
+		"0021A5": {
+			"name":"oliver huggins",
+			"brands":["Lujin","Midifex","AvonSynth"]
+		},
+		"00217B": {
+			"name":"Synthstrom Audible",
+			"brands":["Deluge"]
+		},
+		"002124": "Fairlight ESP",
 		"00211A": "IK Multimedia",
 		"00207F": "Serato",
-		"002076": "Teenage Engineering",
+		"002076": "Teenage Engineering"
+	},
+	"sysexid":{
 		"00206B": "Arturia",
 		"00205F": "Sequentix",
 		"002052": "Analogue Systems",
