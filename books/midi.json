@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"description": "Music Device Communication",
 	"status": "Digital sequencing the divine",
-	"copyright": "(C) 2025 Simon Armstrong",
+	"copyright": "(C) 2026 nitrologic",
+	"acknowledgments": "assisted by Gemini 3.1",
 	"license": {
 		"name": "MIT",
 		"url": "https://opensource.org/licenses/MIT"
@@ -12,8 +13,6 @@
 		"type": "git",
 		"url": "https://github.com/nitrologic/biblispec"
 	},
-	"acknowledgments": "assisted by Grok, created by xAI",
-
 	"sysex":{
 		"identity":{
 			"002236": {
