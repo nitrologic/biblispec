@@ -1,51 +1,20 @@
 // grid.ts
 
-import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
+import { writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
 
 let vidWidth=72;
 const vidHeight=16;
-	
-const gridTitle="☰ grid 0.4 - q to quit, backspace - menu";
 
-const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+let gridWidth=22*8*2;
+let gridHeight=23*8*2;
 
-class Bitmap {
-	public span=0;
-	public data:Uint8Array;
-	constructor(public width: number,public height: number) {
-		this.span=(width+7)>>3;
-		this.data=new Uint8Array(this.span*height);
-		this.grid();
-	}
-	public rect(x:number,y:number,width:number,height:number){
-		for (let row = y; row < y + height; row++) {
-			for (let col = x; col < x + width; col++) {
-				const byteIndex = row * this.span + (col >> 3);
-				const bitIndex = col & 7;
-				this.data[byteIndex] |= (1 << bitIndex);
-			}
-		}    
-	}
-	public grid(){
-		let w=this.width;
-		let h=this.height;
-		for(let x=0;x<w;x+=10){
-			this.rect(x,2,1,h-2);
-		}
-		this.rect(w-3,3,2,h-4);
-		for(let y=0;y<h;y+=4){
-			this.rect(0,y,w,1);
-		}
-		this.rect(3,h-3,w-4,2);
-	}
-};
+const gridTitle="☰ grid 0.5 - q to quit, backspace - edit mode";
 
-const gridBitmap = new Bitmap(22*8,23*8);
-//bitmap.rect(0,0,22*8,1);
+const gridBitmap = new BitGrid(gridWidth,gridHeight);
 
 function updateCursor(){
-	cursorVX+=(pump[axis.RIGHT]-pump[axis.LEFT])/400;
-	cursorVY+=(pump[axis.DOWN]-pump[axis.UP])/400;
+	cursorVX+=(pump[axis.LEFTRIGHT])/400;
+	cursorVY+=(pump[axis.UPDOWN])/400;
 	cursorX+=cursorVX;
 	if(cursorX<0){
 		cursorX=0;cursorVX=0;
@@ -72,7 +41,9 @@ function updateCursor(){
 function resetGrid(){	
 }
 
-function gridWindow(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
+const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+
+function gridQuadWindow(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
 	let result=[];
 	let h=(wh/2)|0;
 	let w=(ww/2)|0;
@@ -91,8 +62,8 @@ function gridWindow(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:
 	return result;
 }
 
-enum axis {UP, DOWN, RIGHT, LEFT};
-const pump:number[]=[0,0,0,0];
+enum axis {UPDOWN, LEFTRIGHT};
+const pump:number[]=[0,0];
 
 function fadePumps():number[]{
 	const previous = [...pump];
@@ -105,7 +76,7 @@ function fadePumps():number[]{
 	return previous;
 }
 
-let mainMenu=true;
+let mainMenu=false;//true;
 
 function menuWall(blocks:string[]){
 	let result=[];
@@ -119,11 +90,17 @@ function backSpace(){
 	mainMenu=!mainMenu;
 }
 
+function pushStatus(key:string,value:any){
+	let text="[STATUS] key:"+key+", value:"+JSON.stringify(value);
+	status.push(text);
+}
+
 export function scanKeyboard(){
 	let queue:Uint8Array[]=pollKeyboard();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];
-		status.push(JSON.stringify(keys));
+		pushStatus("keyboard.keys",keys);
+//		status.push(JSON.stringify(keys));
 		if(keys[0]==127) {// BACKSPACE
 			backSpace();
 		}
@@ -136,10 +113,10 @@ export function scanKeyboard(){
 			let down=(keys.length>2) && ((keys[1]==91)&&(keys[2]==66));
 			let right=(keys.length>2) && ((keys[1]==91)&&(keys[2]==67));
 			let left=(keys.length>2) && ((keys[1]==91)&&(keys[2]==68));
-			if(up) pump[axis.UP]+=200;
-			if(down) pump[axis.DOWN]+=200;
-			if(right) pump[axis.RIGHT]+=200;
-			if(left) pump[axis.LEFT]+=200;
+			if(up) pump[axis.UPDOWN]-=200;
+			if(down) pump[axis.UPDOWN]+=200;
+			if(right) pump[axis.LEFTRIGHT]+=200;
+			if(left) pump[axis.LEFTRIGHT]-=200;
 		}else{
 			status.push(JSON.stringify(keys));
 		}
@@ -169,7 +146,7 @@ while(isRunning()){
 	let span=gridBitmap.span;
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
-	let blocks=gridWindow(gridBitmap.data,span,cursorX,pany,wide2,vidHeight*2);
+	let blocks=gridQuadWindow(gridBitmap.data,span,cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
 	console.log(gridTitle+" "+columns+"x"+rows);
@@ -177,7 +154,11 @@ while(isRunning()){
 	console.log(wall);
 	let latest=status.slice(-3);
 	console.log(latest.join("\n"));
-	await sleep(10);
+
+	let code=setCursor(5,7);
+	writeConsole(code);
+
+	await sleep(50);
 //    grid=updateGrid(grid,rules);
 	fadePumps();
 	scanKeyboard();

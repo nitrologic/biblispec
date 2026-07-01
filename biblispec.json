@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -648,6 +648,23 @@
 					"category": "So",
 					"codePoints": ["U+2800","U+28FF"],
 					"range": [10240, 10495]
+				},
+				"▘█":{
+					"name": "quads",
+					"block": "Block Elements",
+					"codes": " ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█",
+					"category": "So",
+					"codePoints": ["U+2580", "U+259F"],
+					"range": [9600, 9631]
+				},
+				"🬀🬻":{
+					"name": "sextants",
+					"block": "Symbols for Legacy Computing",
+					"codes": "🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎🬏🬐🬑🬒🬓🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻",
+					"category": "So",
+					"codePoints": ["U+1FB00", "U+1FB3B"],
+					"range": [129792, 129851],
+					"rangeHex": ["0x1FB00", "0x1FB3B"]
 				},
 				"ＡＺ":{
 					"name": "Fullwidth Latin",

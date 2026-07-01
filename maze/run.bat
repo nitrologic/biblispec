@@ -1,1 +1,2 @@
-deno run maze.ts
+rem deno run maze.ts
+deno run grid.ts
