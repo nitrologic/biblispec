@@ -8,7 +8,7 @@ const vidHeight=16;
 let gridWidth=22*8*2;
 let gridHeight=23*8*2;
 
-const gridTitle="☰ grid 0.5 - q to quit, backspace - edit mode";
+const gridTitle="☰ grid 0.5 - arrows, space, q to quit, backspace to menu";
 
 const gridBitmap = new BitGrid(gridWidth,gridHeight);
 
@@ -99,13 +99,14 @@ export function scanKeyboard(){
 	let queue:Uint8Array[]=pollKeyboard();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];
-		pushStatus("keyboard.keys",keys);
 //		status.push(JSON.stringify(keys));
 		if(keys[0]==127) {// BACKSPACE
 			backSpace();
+			continue
 		}
 		if(keys[0]==32) {
 //         grid=updateGrid(grid,emit);
+			continue
 		}
 		if(keys[0]==27) {
 			if(keys.length==1) resetGrid();
@@ -118,7 +119,7 @@ export function scanKeyboard(){
 			if(right) pump[axis.LEFTRIGHT]+=200;
 			if(left) pump[axis.LEFTRIGHT]-=200;
 		}else{
-			status.push(JSON.stringify(keys));
+			pushStatus("keyboard.keys",keys);
 		}
 	}
 }
@@ -149,7 +150,7 @@ while(isRunning()){
 	let blocks=gridQuadWindow(gridBitmap.data,span,cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
-	console.log(gridTitle+" "+columns+"x"+rows);
+	console.log(gridTitle+" ["+columns+","+rows+"]");
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-3);

@@ -2,15 +2,15 @@
 
 // biblispec books maze example script by nitrologic
 
-console.log("maze 0.9");
+console.log("maze 0.1.0");
 
 const starChar="✩";
 const hashChar="⬦";//"◦";
-const grass7="◆◇◈⬥⬦⬡⬢";
+const diamond7="◆◇◈⬥⬦⬡⬢";
 const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
 const miscChars="⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉";
 const flowerChars="✻✼✽✾✿❀❁";
-const grassWide7="✻✾✿✼✽❀❁";
+const grass7="✻✾✿✼✽❀❁";
 
 const plain=[
 	"#######################",
@@ -18,6 +18,9 @@ const plain=[
 	"# ###### ######## #   #",
 	"# #    # #       ##   #",
 	"#  # #       #        #",
+	"# #    ###       ##   #",
+	"##### #  ###     ## ###",
+	"#     #      #    #   #",
 	"#######################",
 ]
 
@@ -98,6 +101,9 @@ function boxIndex(b9:string):number{
 	if(b9=="▢▢▣▢▢▣▣▣▣") return Edge.CornerBotRight;
 	if(b9=="▣▢▢▣▢▢▢▣▣") return Edge.CornerBotLeft;
 	if(b9=="▣▣▢▢▢▣▢▢▣") return Edge.CornerTopRight;
+
+	if(b9=="▢▢▣▢▢▣▣▣▢") return Edge.CornerBotRight;
+	if(b9=="▢▣▣▣▢▢▣▢▢") return Edge.CornerTopLeft;
 	console.log(tile(b9));
 	return -1;
 }
