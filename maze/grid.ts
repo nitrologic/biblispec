@@ -11,7 +11,7 @@ const vidHeight=16;
 let gridWidth=22*8*8;
 let gridHeight=23*8;
 
-const bitgrid = new BitGrid(gridWidth,gridHeight,2);
+const bitgrid = new BitGrid(gridWidth,gridHeight,4);
 bitgrid.rect(4,2,2,20);
 bitgrid.rect(gridWidth/4-10,4,8,20);
 

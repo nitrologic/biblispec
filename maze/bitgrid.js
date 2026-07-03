@@ -5,6 +5,22 @@
 //  = width height span layers
 //  - 32 bit data words contained in single Uint32Array
 
+pulsar=[
+	"..OOO...OOO..",
+	".............",
+	"O....O.O....O",
+	"O....O.O....O",
+	"O....O.O....O",
+	"..OOO...OOO..",
+	".............",
+	"..OOO...OOO..",
+	"O....O.O....O",
+	"O....O.O....O",
+	"O....O.O....O",
+	".............",
+	"..OOO...OOO.."
+]
+
 export class BitGrid {
 
 	constructor(width,height, layers) {
