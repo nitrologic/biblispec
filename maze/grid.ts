@@ -1,6 +1,6 @@
 // grid.ts - a biblispec scroller
 
-import { writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
+import { stepLife, writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 
 let vidWidth=72;
 const vidHeight=16;
@@ -180,6 +180,8 @@ let status=["simon was here"];
 
 keyboardMouseTask()
 
+let page=0;
+
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-12;
@@ -188,6 +190,9 @@ while(isRunning()){
 	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
+
+//	page=1-page;
+//	stepLife(bitgrid,page,1-page);
 
 	let blocks=gridQuadWindow(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
 

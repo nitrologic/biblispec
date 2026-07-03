@@ -19,22 +19,22 @@ const keyboardBuffer = new Uint8Array(10);
 export const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 export function isRunning(){
-    return running;
+	return running;
 }
 
 export function stopRunning(){
-    Deno.stdin.setRaw(false);
-    running=false;
+	Deno.stdin.setRaw(false);
+	running=false;
 }
 
 export function pollInput(){
-    let queue=keyboardQueue;
-    keyboardQueue=[];
-    return queue;
+	let queue=keyboardQueue;
+	keyboardQueue=[];
+	return queue;
 }
 
 export async function keyboardMouseTask(enableMouse:boolean=false) {
-    Deno.stdin.setRaw(true);
+	Deno.stdin.setRaw(true);
 	if(enableMouse){
 		Deno.stdout.writeSync(encoder.encode("\x1b[?1003h\x1b[?1006h\x1b[?25l"));	
 		console.log("mouseOn");
@@ -57,11 +57,46 @@ export async function keyboardMouseTask(enableMouse:boolean=false) {
 export class BitGrid {
 	public span=0;
 	public data:Uint32Array;
+
 	constructor(public width: number,public height: number, public pages: number) {
 		this.span=(width+31)>>5;
 		this.data=new Uint32Array(this.span*height*pages);
 		this.grid(20,10,0);
 	}
+
+	getPixel(x:number,y:number,page:number):boolean{
+		const offset=page*this.height*this.span;
+		const wordIndex = y*this.span+(x>>5);
+		const bitIndex = x&31;
+		const word=this.data[offset+wordIndex];
+		return (word&(1 << bitIndex))!=0;
+	}
+
+	setPixel(x:number,y:number,page:number,state:boolean){
+		const offset=page*this.height*this.span+y*this.span+(x>>5);
+		const mask=1<<(x&31);
+		let word=this.data[offset];
+		if(state){
+			word|=mask;
+		}else{
+			word&=~mask;
+		}
+		this.data[offset]=word
+	}
+
+	countNeighbors(x: number, y: number, page: number): number {
+		let count = 0;
+		for (let dy = -1; dy <= 1; dy++) {
+			for (let dx = -1; dx <= 1; dx++) {
+				if (dx === 0 && dy === 0) continue;
+				const nx = (x + dx + this.width) % this.width; // wrap
+				const ny = (y + dy + this.height) % this.height;
+				if (this.getPixel(nx, ny, page)) count++;
+			}
+		}
+		return count;
+	}
+
 	public rect(x:number,y:number,width:number,height:number,page:number=0){
 		const offset=page*this.height*this.span;
 		for (let row = y; row < y + height; row++) {
@@ -72,6 +107,7 @@ export class BitGrid {
 			}
 		}    
 	}
+
 	public grid(skipx:number=20,skipy:number=10,page:number=0){
 		let w=this.width;
 		let h=this.height;
@@ -85,6 +121,19 @@ export class BitGrid {
 		this.rect(3,h-3,w-4,2,page);
 	}
 };
+
+export function stepLife(grid:BitGrid, currentPage: number, nextPage: number): void {
+	const w = grid.width;
+	const h = grid.height;
+	for (let y = 0; y < h; y++) {
+		for (let x = 0; x < w; x++) {
+			const alive = grid.getPixel(x, y, currentPage);
+			const neighbors = grid.countNeighbors(x, y, currentPage);
+			const next = (alive && (neighbors === 2 || neighbors === 3)) || (!alive && neighbors === 3);
+			grid.setPixel(x, y, nextPage, next);
+		}
+	}
+}
 
 const enableCursor="\x1b[?25h";
 const disableCursor="\x1b[?25l";
