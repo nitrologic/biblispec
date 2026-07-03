@@ -10,10 +10,10 @@ const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
-let vidWidth=72;
-const vidHeight=16;
+let vidWidth=72*2;
+const vidHeight=26;
 
-let gridWidth=22*8*8;
+let gridWidth=22*8*8*4;
 let gridHeight=23*8;
 
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
@@ -203,12 +203,14 @@ export function scanGridKeyboard(){
 
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
-let cursorHome2="\x1b[H";
-let cursorHome="\x1b[2J\x1b[1;1H";
+let cursorHome="\x1b[H";
+let cursorClear="\x1b[2J\x1b[1;1H";
 
 const encoder=new TextEncoder();
 
-let status=["glider:"+JSON.stringify(glider)];
+let status=["no glider no fly"]//+JSON.stringify(glider)];
+
+console.log(cursorClear);
 
 keyboardMouseTask()
 
@@ -229,8 +231,8 @@ while(isRunning()){
 		bitgrid.stepConwayLife(2+layer,3-layer);
 	}
 		
-//	let blocks=gridQuadWindow(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
-	let blocks=gridQuadWindow(bitgrid,[0,2+layer],cursorX,pany,wide2,vidHeight*2);
+	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
+//	let blocks=gridQuadWindow(bitgrid,[0,2+layer],cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
 	console.log(gridTitle+" ["+columns+","+rows+"]");

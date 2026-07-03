@@ -1,6 +1,8 @@
 // terminal.ts
 
-// traffic.ts and grid.ts import replaceText sleep, isRunning, stopRunning, keyboardMouseTask, pollInput from here
+// traffic.ts and grid.ts import from here
+
+// replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput
 
 export function replaceText(text: string, search: string, replace: string, leftToRight:boolean=true) : string {
 	if (leftToRight) return text.replaceAll(search, replace);
