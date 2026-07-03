@@ -1,15 +1,83 @@
+"shapes":{
+	"still": {
+		"block": ["OO","OO"],
+		"beehive": [".OO.","O..O",".OO."],
+		"loaf": [".OO.","O..O",".O.O","..O."],
+		"boat": ["OO.","O.O",".O."]
+	},
+	"oscillators": {
+		"blinker": [
+"...",
+"OOO",
+"..."
+],
+"toad": [
+".OOO",
+"OOO."
+],
+"beacon": [
+"OO..",
+"OO..",
+"..OO",
+"..OO"
+],
+"pulsar": [
+"..OOO...OOO..",
+".............",
+"O....O.O....O",
+"O....O.O....O",
+"O....O.O....O",
+"..OOO...OOO..",
+".............",
+"..OOO...OOO..",
+"O....O.O....O",
+"O....O.O....O",
+"O....O.O....O",
+".............",
+"..OOO...OOO.."
+]
+},
+"spaceships": {
+"glider": [
+".O.",
+"..O",
+"OOO"
+],
+"lightweightSpaceship": [
+"O..O.",
+"....O",
+"O...O",
+".OOO."
+]
+},
+"methuselahs": {
+"rPentomino": [
+".OO",
+"OO.",
+".O."
+],
+"diehard": [
+"......O.",
+"OO......",
+".O...OOO"
+]
+}
+}
+}
+
+
 let cursorUp="\x1b[A";
 
 
 pulsar=[
-	"..OOO...OOO..",
-	".............",
-	"O....O.O....O",
-	"O....O.O....O",
-	"O....O.O....O",
-	"..OOO...OOO..",
-	".............",
-	"..OOO...OOO..",
+"..OOO...OOO..",
+".............",
+"O....O.O....O",
+"O....O.O....O",
+"O....O.O....O",
+"..OOO...OOO..",
+".............",
+"..OOO...OOO..",
 	"O....O.O....O",
 	"O....O.O....O",
 	"O....O.O....O",

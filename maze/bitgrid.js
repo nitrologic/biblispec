@@ -12,14 +12,14 @@ export class BitGrid {
 		this.layers = layers;
 		this.span=(width+31)>>5;
 		this.data=new Uint32Array(this.span*height*layers);
-		this.drawGrid(20,10,0);
+//		this.drawGrid(20,10,0);
 	}
 
 	drawShape(strings,x,y,layer){
 		for(const text of strings){
 			for(let i=0;i<text.length;i++){
 				const char=text[i];
-				const state=char=="O";
+				const state=(char=="O");
 				this.setPixel(x+i,y,layer,state);
 			}
 			y++;
@@ -84,8 +84,8 @@ export class BitGrid {
 			}else{
 				word&=~mask;
 			}
-			// please note an increment to x buried in here
-			if(i<pixels.length-1 && ((++x&31)==0)){
+			x++;
+			if(i<pixels.length-1 && ((x&31)==0)){
 				this.data[offset++]=word;
 				word=this.data[offset];
 			}
@@ -103,6 +103,7 @@ export class BitGrid {
 				const neighbors = this.countNeighbors(x, y, readLayer);
 				const next = (alive && (neighbors === 2 || neighbors === 3)) || (!alive && neighbors === 3);
 				pixels[x]=next;
+//				if(neighbors) console.log("n:",neighbors);
 			}
 			this.writePixels(pixels, 0, y, writeLayer);
 		}

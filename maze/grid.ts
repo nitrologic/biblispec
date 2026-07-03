@@ -9,22 +9,83 @@ const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 // grid display uses 2x2 quad block character graphics to display bitgrid window
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+const gridMillis=25;
 
 // grid block display is 1:1 char per pixel resolution
 
 const gridBlocks=" ▣▥▤▦▢";
 
 let vidWidth=72*2;
-const vidHeight=22;
+let vidHeight=22;
 
-let gridWidth=22*8*8*4;
+let gridWidth=22*8*16;
 let gridHeight=23*8;
 
+function mirror(shape:string[]):string[]{
+	let result=[];
+	for(let line of shape){
+		result.push(line.split("").reverse().join(""));
+	}
+	return result;
+}
+
+// four directions of shape using x y symmetry flips
+function axis(glider:string[]){
+	return [
+		glider,
+		glider.toReversed(),
+		mirror(glider),
+		mirror(glider).toReversed()
+	];
+}
+
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
-bitgrid.rect(4,2,2,20);
-bitgrid.rect(gridWidth/4-10,4,8,20);
-let glider=conway.shapes.spaceships.glider;
-bitgrid.drawShape(glider,2,2,2);
+//bitgrid.rect(4,2,2,20);
+//bitgrid.rect(gridWidth/4-10,4,8,20);
+
+let blinker=conway.shapes.oscillators.blinker;
+let beacon=conway.shapes.oscillators.beacon;
+let pent=conway.shapes.methuselahs.rPentomino;
+
+let keys=Object.keys(conway.shapes.still);
+let x=10;
+for(let index of keys){
+	const still=conway.shapes.still[index];
+	bitgrid.drawShape(still,x,50,2);
+	x+=20;
+}
+
+let keys1=Object.keys(conway.shapes.oscillators);
+let x1=10;
+for(let index of keys1){
+	const shape=conway.shapes.oscillators[index];
+	bitgrid.drawShape(shape,x1,5,2);
+	x1+=20;
+}
+
+let pulsar=conway.shapes.oscillators.pulsar;
+
+bitgrid.drawShape(beacon,10,10,2);
+
+//const glider=axis(conway.shapes.spaceships.glider);
+
+/*
+bitgrid.drawShape(glider[0],20,30,2);
+bitgrid.drawShape(glider[1],20,20,2);
+bitgrid.drawShape(glider[2],10,30,2);
+bitgrid.drawShape(glider[3],10,20,2);
+bitgrid.drawShape(pent,100,14,2);
+*/
+
+for(let i=0;i<20;i++){
+for(let j=0;j<5;j++){
+	bitgrid.drawShape(pulsar,102+i*25,14+j*17,2);
+}
+}
+
+bitgrid.stepConwayLife(2,3);
+//bitgrid.stepConwayLife(3,2);
+//bitgrid.stepConwayLife(2,3);
 
 let cursorX=0;
 let cursorVX=0;
@@ -231,7 +292,7 @@ let cursorClear="\x1b[2J\x1b[1;1H";
 
 const encoder=new TextEncoder();
 
-let status=["no glider no fly"]//+JSON.stringify(glider)];
+let status=["have glider will fly"];
 
 console.log(cursorClear);
 
@@ -243,24 +304,24 @@ let count=0;
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-12;
-	
+	vidHeight=rows-4;
+
 	let pany=cursorY>>2;
 	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
 
-	if((++count)&31==0){
+	if(true){//((count++)&7)==5){
 		layer=1-layer;
 		bitgrid.stepConwayLife(2+layer,3-layer);
 	}
 
-	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
-
+//	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
-//	let blocks=gridQuadWindow(bitgrid,[0,2+layer],cursorX,pany,wide2,vidHeight*2);
+	let blocks=gridQuadWindow(bitgrid,[0,2,3],cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
-	console.log(gridTitle+" ["+columns+","+rows+"]");
+	console.log(gridTitle+" ["+columns+","+rows+"] count:"+count);
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
@@ -269,7 +330,7 @@ while(isRunning()){
 	let code=setCursor(5,7);
 	writeConsole(code);
 
-	await sleep(50);
+	await sleep(gridMillis);
 //    grid=updateGrid(grid,rules);
 	fadePumps();
 	scanGridKeyboard();
