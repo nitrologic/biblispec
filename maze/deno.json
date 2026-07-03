@@ -1,5 +1,6 @@
 {
 	"tasks":{
-		"menu": "deno run --allow-run menu.ts"
+		"menu": "deno run --allow-run menu.ts",
+		"grid": "deno run --allow-ffi grid.ts"
     }
 }

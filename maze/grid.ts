@@ -10,8 +10,12 @@ const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
+// grid block display is 1:1 char per pixel resolution
+
+const gridBlocks=" ▣▥▤▦▢";
+
 let vidWidth=72*2;
-const vidHeight=26;
+const vidHeight=22;
 
 let gridWidth=22*8*8*4;
 let gridHeight=23*8;
@@ -55,6 +59,25 @@ function updateCursor(){
 
 function resetGrid(){	
 }
+
+function gridBlockWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:number,wh:number){
+	let src:Uint32Array=grid.data;
+	let span=grid.span;	
+	let layerOffset=layer*(span*grid.height);
+	let result=[];
+	for(let y=0;y<wh;y++){
+		let line=""
+		for(let x=0;x<ww;x++){  
+			let offset=layerOffset+(wy+y)*span+((wx+x)>>5);
+			let shift=(wx + x) & 31;
+			let bit=(src[offset]>>shift)&1;
+			line+=gridBlocks[bit];
+		}
+		result.push(line);
+	}
+	return result;
+}
+
 
 function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:number,wh:number){
 	let src:Uint32Array=grid.data;
@@ -230,8 +253,10 @@ while(isRunning()){
 		layer=1-layer;
 		bitgrid.stepConwayLife(2+layer,3-layer);
 	}
-		
-	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
+
+	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
+
+//	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
 //	let blocks=gridQuadWindow(bitgrid,[0,2+layer],cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);

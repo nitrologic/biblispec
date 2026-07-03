@@ -1,3 +1,6 @@
+let cursorUp="\x1b[A";
+
+
 pulsar=[
 	"..OOO...OOO..",
 	".............",

@@ -2,7 +2,37 @@
 
 import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 
-console.log("traffic 0.4 - q to quit")
+console.log("traffic 0.6 - space to instance, q to quit")
+
+let trafficSleep=20;//10;//60;
+let trafficWidth=72;
+
+let rules={
+	"▤▢▢▢▢▢":"▥▢▣▣▣▢",
+	"▣▣▣▦▢":"▢▢▢▦▣",
+	"▣▣▣▦▣":"▢▢▢▦▣",
+	"▢▣▣▣▢":"▢▢▣▣▣"
+}
+
+let emit={
+	"▥▢▢▢▢▢":"▤▢▢▢▢▢"
+}
+
+const encoder=new TextEncoder();
+let defaultLane="▤"+"▢".repeat(trafficWidth)+"▦▢";
+
+const cursorUp="\x1b[A";
+const cursorErase="\x1b[K";
+
+let lane:string=defaultLane;
+
+function updateLane(lane:string,map:any){
+	for(let key in map){
+		let value=map[key];
+		lane=replaceText(lane,key,value,false);
+	}
+	return lane;
+}
 
 enum axis {UP, DOWN, RIGHT, LEFT};
 const pump:number[]=[0,0,0,0];
@@ -16,14 +46,6 @@ function fadePumps():number[]{
 		pump[index]=integral;
 	}
 	return previous;
-}
-
-function updateLane(lane:string,map:any){
-	for(let key in map){
-		let value=map[key];
-		lane=replaceText(lane,key,value,false);
-	}
-	return lane;
 }
 
 export function scanTrafficKeyboard(){
@@ -47,32 +69,15 @@ export function scanTrafficKeyboard(){
 	}
 }
 
-let rules={
-	"▤▢▢▢▢▢":"▥▢▣▣▣▢",
-	"▣▣▣▦▢":"▢▢▢▦▣",
-	"▣▣▣▦▣":"▢▢▢▦▣",
-	"▢▣▣▣▢":"▢▢▣▣▣"
-}
-
-let emit={
-	"▥▢▢▢▢▢":"▤▢▢▢▢▢"
-}
-
-const encoder=new TextEncoder();
-let defaultLane="▤"+"▢".repeat(40)+"▦▢";
-let up="\x1b[A";
-let erase="\x1b[K";
-let lane:string=defaultLane;
-
 keyboardMouseTask()
 
 while(isRunning()){
 
-	console.log(lane,pump,erase);
+	console.log(lane,pump,cursorErase);
 
-	Deno.stdout.write(encoder.encode(up));
+	Deno.stdout.write(encoder.encode(cursorUp));
 
-	await sleep(10);
+	await sleep(trafficSleep);
 	lane=updateLane(lane,rules);
 
 	fadePumps();
