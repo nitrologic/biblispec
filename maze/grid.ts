@@ -1,14 +1,15 @@
 // grid.ts - a biblispec scroller
 
-import { stepLife, writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
+import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
+import { BitGrid } from "./bitgrid.ts";
+
+const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 
 let vidWidth=72;
 const vidHeight=16;
 
 let gridWidth=22*8*8;
 let gridHeight=23*8;
-
-const gridTitle="☰ grid 0.6 - arrows, space, q to quit, backspace to menu";
 
 const bitgrid = new BitGrid(gridWidth,gridHeight,2);
 bitgrid.rect(4,2,2,20);
@@ -213,4 +214,6 @@ while(isRunning()){
 	updateCursor();
 }
 
+const code1=setCursor(1,vidHeight+2);
+writeConsole(code1);
 stopRunning();
