@@ -1,3 +1,20 @@
+pulsar=[
+	"..OOO...OOO..",
+	".............",
+	"O....O.O....O",
+	"O....O.O....O",
+	"O....O.O....O",
+	"..OOO...OOO..",
+	".............",
+	"..OOO...OOO..",
+	"O....O.O....O",
+	"O....O.O....O",
+	"O....O.O....O",
+	".............",
+	"..OOO...OOO.."
+]
+
+
 function gridQuadWindow8(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
 	let result=[];
 	let h=(wh/2)|0;
@@ -92,6 +109,7 @@ let grid=defaultGrid;
 	
 const halfs=" ▀▄█";
 const steps=" ▂▃▄▅▆▇█";
+
 
 
 historical notes below

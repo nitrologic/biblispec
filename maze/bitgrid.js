@@ -1,29 +1,11 @@
 // bitgrid.js
-
-// BitGrid 
-//	- layers of boolean pixel arrays with get set and stepLife 
-//  = width height span layers
+//  - width height layers of single bit pixels
 //  - 32 bit data words contained in single Uint32Array
-
-pulsar=[
-	"..OOO...OOO..",
-	".............",
-	"O....O.O....O",
-	"O....O.O....O",
-	"O....O.O....O",
-	"..OOO...OOO..",
-	".............",
-	"..OOO...OOO..",
-	"O....O.O....O",
-	"O....O.O....O",
-	"O....O.O....O",
-	".............",
-	"..OOO...OOO.."
-]
+//	- drawShape stepConwayLife cellular automata functions incoming
 
 export class BitGrid {
 
-	constructor(width,height, layers) {
+	constructor(width,height,layers) {
 		this.span=0;
 		this.width = width;
 		this.height = height;
@@ -31,6 +13,17 @@ export class BitGrid {
 		this.span=(width+31)>>5;
 		this.data=new Uint32Array(this.span*height*layers);
 		this.drawGrid(20,10,0);
+	}
+
+	drawShape(strings,x,y,layer){
+		for(const text of strings){
+			for(let i=0;i<text.length;i++){
+				const char=text[i];
+				const state=char=="O";
+				this.setPixel(x+i,y,layer,state);
+			}
+			y++;
+		}
 	}
 
 	getPixel(x,y,layer){
@@ -91,6 +84,7 @@ export class BitGrid {
 			}else{
 				word&=~mask;
 			}
+			// please note an increment to x buried in here
 			if(i<pixels.length-1 && ((++x&31)==0)){
 				this.data[offset++]=word;
 				word=this.data[offset];
@@ -99,7 +93,7 @@ export class BitGrid {
 		this.data[offset]=word
 	}
 
-	stepLife(readLayer, writeLayer) {
+	stepConwayLife(readLayer, writeLayer) {
 		const w = this.width;
 		const h = this.height;
 		const pixels = new Array(w).fill(false);

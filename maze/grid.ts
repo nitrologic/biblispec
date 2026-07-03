@@ -2,8 +2,13 @@
 
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
+import conway from "../books/conway.json" with { type: "json" };
 
 const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
+
+// grid display uses 2x2 quad block character graphics to display bitgrid window
+
+const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
 let vidWidth=72;
 const vidHeight=16;
@@ -14,6 +19,8 @@ let gridHeight=23*8;
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
 bitgrid.rect(4,2,2,20);
 bitgrid.rect(gridWidth/4-10,4,8,20);
+let glider=conway.shapes.spaceships.glider;
+bitgrid.drawShape(glider,2,2,2);
 
 let cursorX=0;
 let cursorVX=0;
@@ -49,24 +56,48 @@ function updateCursor(){
 function resetGrid(){	
 }
 
-const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-
-function gridQuadWindow(grid:BitGrid,page:number,wx:number,wy:number,ww:number,wh:number){
+function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:number,wh:number){
 	let src:Uint32Array=grid.data;
 	let span=grid.span;	
-	let pageOffset=page*(span*grid.height);
+	let layerOffset=layer*(span*grid.height);
 	let result=[];
 	let h=(wh/2)|0;
 	let w=(ww/2)|0;
 	for(let y=0;y<h;y++){
 		let line=""
 		for(let x=0;x<w;x++){  
-			let offset=pageOffset+(wy+y*2)*span+((wx+x)>>4);
+			let offset=layerOffset+(wy+y*2)*span+((wx+x)>>4);
 			let shift=((wx + x) & 15)<<1;
 			let bit01=(src[offset]>>shift)&3;
 			let bit23=(src[offset+span]>>shift)&3;
 			let index=(bit23<<2)|bit01;
-			line+=quads[index];
+			line+=gridQuads[index];
+		}
+		result.push(line);
+	}
+	return result;
+}
+
+function gridQuadWindow(grid:BitGrid,layers:number[],wx:number,wy:number,ww:number,wh:number){
+	const src:Uint32Array=grid.data;
+	const span=grid.span;	
+	const result=[];
+	const h=(wh/2)|0;
+	const w=(ww/2)|0;
+	for(let y=0;y<h;y++){
+		let line=""
+		for(let x=0;x<w;x++){  
+			const shift=((wx + x) & 15)<<1;
+			const offset=(wy+y*2)*span+((wx+x)>>4);
+			let bit01=0;
+			let bit23=0;
+			for(const layer of layers){
+				const layerOffset=layer*(span*grid.height);
+				bit01|=(src[layerOffset+offset]>>shift)&3;
+				bit23|=(src[layerOffset+offset+span]>>shift)&3;
+			}
+			const index=(bit23<<2)|bit01;
+			line+=gridQuads[index];
 		}
 		result.push(line);
 	}
@@ -177,11 +208,12 @@ let cursorHome="\x1b[2J\x1b[1;1H";
 
 const encoder=new TextEncoder();
 
-let status=["simon was here"];
+let status=["glider:"+JSON.stringify(glider)];
 
 keyboardMouseTask()
 
-let page=0;
+let layer=0;
+let count=0;
 
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
@@ -192,10 +224,13 @@ while(isRunning()){
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
 
-//	page=1-page;
-//	stepLife(bitgrid,page,1-page);
-
-	let blocks=gridQuadWindow(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
+	if((++count)&31==0){
+		layer=1-layer;
+		bitgrid.stepConwayLife(2+layer,3-layer);
+	}
+		
+//	let blocks=gridQuadWindow(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
+	let blocks=gridQuadWindow(bitgrid,[0,2+layer],cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
 	console.log(gridTitle+" ["+columns+","+rows+"]");
