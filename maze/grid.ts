@@ -1,7 +1,7 @@
 // grid.ts - a biblispec scroller
 
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
-import { BitGrid } from "./bitgrid.ts";
+import { BitGrid } from "./bitgrid.js";
 
 const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 

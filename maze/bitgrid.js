@@ -1,4 +1,4 @@
-// bitgrid.ts
+// bitgrid.js
 
 // BitGrid 
 //	- layers of boolean pixel arrays with get set and stepLife 
@@ -6,16 +6,18 @@
 //  - 32 bit data words contained in single Uint32Array
 
 export class BitGrid {
-	public span=0;
-	public data:Uint32Array;
 
-	constructor(public width: number,public height: number, public layers: number) {
+	constructor(width,height, layers) {
+		this.span=0;
+		this.width = width;
+		this.height = height;
+		this.layers = layers;
 		this.span=(width+31)>>5;
 		this.data=new Uint32Array(this.span*height*layers);
 		this.drawGrid(20,10,0);
 	}
 
-	public getPixel(x:number,y:number,layer:number):boolean{
+	getPixel(x,y,layer){
 		// x,y toroidal wrap around getter
 		x = (x + this.width) % this.width;
 		y = (y + this.height) % this.height;
@@ -26,7 +28,7 @@ export class BitGrid {
 		return (word&(1 << bitIndex))!=0;
 	}
 
-	public setPixel(x:number,y:number,layer:number,state:boolean){
+	setPixel(x,y,layer,state){
 		const offset=layer*this.height*this.span+y*this.span+(x>>5);
 		const mask=1<<(x&31);
 		let word=this.data[offset];
@@ -38,7 +40,7 @@ export class BitGrid {
 		this.data[offset]=word
 	}
 
-	public rect(x:number,y:number,width:number,height:number,layer:number=0){
+	rect(x,y,width,height,layer=0){
 		const offset=layer*this.height*this.span;
 		for (let row = y; row < y + height; row++) {
 			for (let col = x; col < x + width; col++) {
@@ -49,7 +51,7 @@ export class BitGrid {
 		}    
 	}
 
-	public drawGrid(skipx:number=20,skipy:number=10,layer:number=0){
+	drawGrid(skipx=20,skipy=10,layer=0){
 		let w=this.width;
 		let h=this.height;
 		for(let x=0;x<w;x+=skipx){
@@ -62,7 +64,7 @@ export class BitGrid {
 		this.rect(3,h-3,w-4,2,layer);
 	}
 
-	public writePixels(pixels:boolean[],x:number,y:number,layer:number){
+	writePixels(pixels,x,y,layer){
 		let offset=layer*this.height*this.span+y*this.span+(x>>5);
 		let word=this.data[offset];
 		for(let i=0;i<pixels.length;i++){
@@ -81,10 +83,10 @@ export class BitGrid {
 		this.data[offset]=word
 	}
 
-	public stepLife(readLayer: number, writeLayer: number): void {
+	stepLife(readLayer, writeLayer) {
 		const w = this.width;
 		const h = this.height;
-		const pixels = new Array<boolean>(w);
+		const pixels = new Array(w).fill(false);
 		for (let y = 0; y < h; y++) {
 			for (let x = 0; x < w; x++) {
 				const alive = this.getPixel(x, y, readLayer);
@@ -96,14 +98,14 @@ export class BitGrid {
 		}
 	}
 
-	public copyLayer(readLayer: number, writeLayer: number): void {
+	copyLayer(readLayer, writeLayer) {
 		const wordsPerLayer = this.height * this.span;
 		const readOffset = readLayer * wordsPerLayer;
 		const writeOffset = writeLayer * wordsPerLayer;
 		this.data.copyWithin(writeOffset, readOffset, readOffset + wordsPerLayer);
 	}
 
-	public countNeighbors(x: number, y: number, layer: number): number {
+	countNeighbors(x, y, layer) {
 		let count=0;
 		if (this.getPixel(x-1, y-1, layer)) count++;
 		if (this.getPixel(x, y-1, layer)) count++;
