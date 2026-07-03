@@ -1,6 +1,6 @@
 // traffic.ts
 
-import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
+import { replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 
 console.log("traffic 0.4 - q to quit")
 
@@ -26,8 +26,8 @@ function updateLane(lane:string,map:any){
 	return lane;
 }
 
-export function scanKeyboard(){
-	let queue:Uint8Array[]=pollKeyboard();
+export function scanTrafficKeyboard(){
+	let queue:Uint8Array[]=pollInput();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];
 		if(keys[0]==32) {
@@ -76,7 +76,7 @@ while(isRunning()){
 	lane=updateLane(lane,rules);
 
 	fadePumps();
-	scanKeyboard();
+	scanTrafficKeyboard();
 
 }
 

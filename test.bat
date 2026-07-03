@@ -1,3 +1,4 @@
+echo off
 pushd maze
 deno run maze.ts
 rem deno run traffic.ts

@@ -1,28 +1,51 @@
-// maze.ts 
+// maze.ts - a biblispec books maze example script by nitrologic
 
-// biblispec books maze example script by nitrologic
+console.log("maze 0.1.2");
 
-console.log("maze 0.1.0");
+const grassframe7="─┬┴│┤├┼";//"⯅⯆⯇⯈⯀⯁◆";
+const grass7arrows="→←↑↓↗↘↙↖";
 
 const starChar="✩";
 const hashChar="⬦";//"◦";
-const diamond7="◆◇◈⬥⬦⬡⬢";
-const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
-const miscChars="⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉";
-const flowerChars="✻✼✽✾✿❀❁";
-const grass7="✻✾✿✼✽❀❁";
+
+const block="▢▣"
+
+const halfs=" ▀▄█";
+const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+// todo add steps to biblispec quads section
+const steps=[" ▂▃▄▅▆▇█"," ▏▎▍▌▋▊▉█"];
+
+const grass=steps[0]+steps[1];
+
+enum Edge { CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBotLeft, Bottom, CornerBotRight }
+const boxDirs=[
+	"↗→↘↑┼↓↖←↙",
+	"↙←↖↓┼↑↘→↗",
+	"╭─╮│┼│╰─╯",
+	"┏━┓┃╋┃┗━┛",
+	"╔═╗║╬║╚═╝",
+];
+
+let boxMode=boxDirs[0];
 
 const plain=[
-	"#######################",
+	"#**####################",
 	"#             # #     #",
 	"# ###### ######## #   #",
 	"# #    # #       ##   #",
 	"#  # #       #        #",
-	"# #    ###       ##   #",
+	"# #    ###   #   ##   #",
 	"##### #  ###     ## ###",
 	"#     #      #    #   #",
+	"#     #           #   #",
 	"#######################",
 ]
+
+function single(text:string):string{
+	let n=text.length;
+	let p=(Math.random()*n)|0;
+	return text.substring(p,p+1);
+}
 
 function swizzle(text:string):string{
 	let chars=[...text];
@@ -35,78 +58,55 @@ function swizzle(text:string):string{
 	}
 	return chars.join('');
 }
-function draw(line,range7){
+function draw(line,singles){
 	let ascii=line.replaceAll("▣",hashChar).replaceAll("▢"," ");
-//	console.log(ascii);
-
-	let bed16=hashChar.repeat(16);
-	let bed16b=hashChar+swizzle(range7+range7)+hashChar;
-	let shrubs=ascii.replaceAll(bed16,bed16b);
-
-	let bed9=hashChar.repeat(9);
-	let bed9b=hashChar+swizzle(range7)+hashChar;
-	let herbs=shrubs.replaceAll(bed9,bed9b);
-
-	let bed4=hashChar.repeat(4);
-	let bed4b=hashChar+swizzle(range7.substring(0,2))+hashChar
-	herbs=herbs.replaceAll(bed4,bed4b);
-
-	let bed3=hashChar.repeat(3);
-	let bed3b=hashChar+range7.substring(0,1)+hashChar
-	herbs=herbs.replaceAll(bed3,bed3b);
-
-
-	console.log(herbs);
+	while(true){
+		let index=ascii.indexOf(hashChar);
+		if(index<0) break;
+		let r=single(singles);
+		ascii=ascii.replace(hashChar,r);
+	}
+	console.log(ascii);
+	return;
 }
 
 function tile(b9){
 	return b9.substring(0,3)+"\n"+b9.substring(3,6)+"\n"+b9.substring(6,9)+"\n\n";	// +" "+b9+
 }
 
-const halfs=" ▀▄█";
-const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-const steps=" ▂▃▄▅▆▇█";
-
-const block="▢▣"
-
-const boxRounded="╭╮╰╯│─┬┴│┤├┼";
-const boxDouble="╔╗╚╝║═╦╩║╣╠╬";
-const boxSingle="┏┓┗┛┃━┳┻┃┫┣╋";
-
-let boxMode=boxRounded;
-
-enum Edge2 { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineHoriz, TeeDown, TeeUp, LineVert, TeeLeft, TeeRight, Cross }
-enum Edge { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineVert, LineHoriz }
-
 // if 3x3 has single solid corner then use an edge corner 
+
+// "↗→↘↑┼↓↖←↙" CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBotLeft, Bottom, CornerBotRight
 
 function boxIndex(b9:string):number{
 	if(b9=="▢▢▢▢▢▢▢▢▣") return Edge.CornerTopLeft;
 	if(b9=="▣▢▢▢▢▢▢▢▢") return Edge.CornerBotRight;
 	if(b9=="▢▢▣▢▢▢▢▢▢") return Edge.CornerBotLeft;
 	if(b9=="▢▢▢▢▢▢▣▢▢") return Edge.CornerTopRight;
-	if(b9=="▣▣▣▢▢▢▢▢▢") return Edge.LineHoriz;
-	if(b9=="▢▢▢▢▢▢▣▣▣") return Edge.LineHoriz;
-	if(b9=="▣▣▢▢▢▢▢▢▢") return Edge.LineHoriz;
-	if(b9=="▢▢▢▢▢▢▣▣▢") return Edge.LineHoriz;
-	if(b9=="▢▣▣▢▢▢▢▢▢") return Edge.LineHoriz;
-	if(b9=="▢▢▢▢▢▢▢▣▣") return Edge.LineHoriz;
-	if(b9=="▣▢▢▣▢▢▣▢▢") return Edge.LineVert;
-	if(b9=="▢▢▣▢▢▣▢▢▣") return Edge.LineVert;
-	if(b9=="▢▢▢▢▢▣▢▢▣" || b9=="▢▢▢▣▢▢▣▢▢") return Edge.LineVert;
-	if(b9=="▣▣▣▣▢▢▣▢▢") return Edge.CornerTopLeft;
-	if(b9=="▣▣▣▢▢▣▢▢▣") return Edge.CornerTopRight;
-	if(b9=="▣▢▢▣▢▢▢▢▢" || b9=="▢▢▣▢▢▣▢▢▢") return Edge.LineVert;
-	if(b9=="▣▢▢▣▢▢▣▣▣") return Edge.CornerBotLeft;
-	if(b9=="▢▢▣▢▢▣▣▣▣") return Edge.CornerBotRight;
-	if(b9=="▣▢▢▣▢▢▢▣▣") return Edge.CornerBotLeft;
-	if(b9=="▣▣▢▢▢▣▢▢▣") return Edge.CornerTopRight;
-
-	if(b9=="▢▢▣▢▢▣▣▣▢") return Edge.CornerBotRight;
-	if(b9=="▢▣▣▣▢▢▣▢▢") return Edge.CornerTopLeft;
+	if(b9=="▣▣▣▢▢▢▢▢▢") return Edge.Bottom;
+	if(b9=="▢▢▢▢▢▢▣▣▣") return Edge.Top;
+	if(b9=="▣▣▢▢▢▢▢▢▢") return Edge.Bottom;
+	if(b9=="▢▢▢▢▢▢▣▣▢") return Edge.Top;
+	if(b9=="▢▣▣▢▢▢▢▢▢") return Edge.Bottom;
+	if(b9=="▢▢▢▢▢▢▢▣▣") return Edge.Top;
+	if(b9=="▣▢▢▣▢▢▣▢▢") return Edge.Right;
+	if(b9=="▢▢▣▢▢▣▢▢▣") return Edge.Left;
+	if(b9=="▢▢▢▢▢▣▢▢▣") return Edge.Left;
+	if(b9=="▢▢▢▣▢▢▣▢▢") return Edge.Right;
+	if(b9=="▣▣▣▣▢▢▣▢▢") return Edge.CornerBotRight;
+	if(b9=="▣▣▣▢▢▣▢▢▣") return Edge.CornerBotLeft;
+	if(b9=="▣▢▢▣▢▢▢▢▢") return Edge.Right; 
+	if(b9=="▢▢▣▢▢▣▢▢▢") return Edge.Left;
+	if(b9=="▣▢▢▣▢▢▣▣▣") return Edge.CornerTopRight;
+	if(b9=="▢▢▣▢▢▣▣▣▣") return Edge.CornerTopLeft;
+	if(b9=="▣▢▢▣▢▢▢▣▣") return Edge.CornerTopRight;
+	if(b9=="▣▣▢▢▢▣▢▢▣") return Edge.CornerBotLeft;
+	if(b9=="▢▢▣▢▢▣▣▣▢") return Edge.CornerTopLeft;
+	if(b9=="▢▣▣▣▢▢▣▢▢") return Edge.CornerBotRight;
 	console.log(tile(b9));
 	return -1;
 }
+//CornerBotLeft
 
 function getOutline(u: boolean, d: boolean, l: boolean, r: boolean): Edge {
 	if (u && d && l && r) return Edge.Cross;
@@ -173,7 +173,6 @@ function outlineGrid(lines:string[],boxChars:string){
 	}
 	return result;
 }
-
 
 function wideLines(lines:string[],x:number,y:number){
 	let w=lines[0].length;
@@ -296,11 +295,11 @@ let wide=wideLines(plain);
 let double=doubleLines(plain);
 let triple=tripleLines(plain);
 let src=wide;
-for(let line of src){
+for(let line of plain){
 	console.log(line);
 }
 let grid=blockHashGrid(src)
 let grid2=outlineGrid(grid,boxMode);
 for(let line of grid2){
-	draw(line,grass7);
+	draw(line,grass);
 }

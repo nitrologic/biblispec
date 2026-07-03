@@ -1,16 +1,23 @@
-// grid.ts
+// grid.ts - a biblispec scroller
 
-import { writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollKeyboard } from "./terminal.ts";
+import { writeConsole, BitGrid, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 
 let vidWidth=72;
 const vidHeight=16;
 
-let gridWidth=22*8*2;
-let gridHeight=23*8*2;
+let gridWidth=22*8*8;
+let gridHeight=23*8;
 
-const gridTitle="☰ grid 0.5 - arrows, space, q to quit, backspace to menu";
+const gridTitle="☰ grid 0.6 - arrows, space, q to quit, backspace to menu";
 
-const gridBitmap = new BitGrid(gridWidth,gridHeight);
+const bitgrid = new BitGrid(gridWidth,gridHeight,2);
+bitgrid.rect(4,2,2,20);
+bitgrid.rect(gridWidth/4-10,4,8,20);
+
+let cursorX=0;
+let cursorVX=0;
+let cursorY=0;
+let cursorVY=0;
 
 function updateCursor(){
 	cursorVX+=(pump[axis.LEFTRIGHT])/400;
@@ -19,8 +26,8 @@ function updateCursor(){
 	if(cursorX<0){
 		cursorX=0;cursorVX=0;
 	}
-	let w=gridBitmap.span*4-vidWidth;
-	let h=gridBitmap.height*4-vidHeight*8;
+	let w=bitgrid.span*4-vidWidth;
+	let h=bitgrid.height*4-vidHeight*8;
 	if(cursorX>=w){
 		cursorX=w;
 		cursorVX=0;
@@ -43,15 +50,18 @@ function resetGrid(){
 
 const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
-function gridQuadWindow(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
+function gridQuadWindow(grid:BitGrid,page:number,wx:number,wy:number,ww:number,wh:number){
+	let src:Uint32Array=grid.data;
+	let span=grid.span;	
+	let pageOffset=page*(span*grid.height);
 	let result=[];
 	let h=(wh/2)|0;
 	let w=(ww/2)|0;
 	for(let y=0;y<h;y++){
 		let line=""
 		for(let x=0;x<w;x++){  
-			let offset=(wy+y*2)*span+((wx+x)>>2);
-			let shift=((wx + x) & 3)<<1;
+			let offset=pageOffset+(wy+y*2)*span+((wx+x)>>4);
+			let shift=((wx + x) & 15)<<1;
 			let bit01=(src[offset]>>shift)&3;
 			let bit23=(src[offset+span]>>shift)&3;
 			let index=(bit23<<2)|bit01;
@@ -95,39 +105,69 @@ function pushStatus(key:string,value:any){
 	status.push(text);
 }
 
-export function scanKeyboard(){
-	let queue:Uint8Array[]=pollKeyboard();
-	for(let index=0;index<queue.length;index++){
-		let keys=queue[index];
-//		status.push(JSON.stringify(keys));
-		if(keys[0]==127) {// BACKSPACE
+
+export function flattenChunks(chunks: Uint8Array[]): Uint8Array {
+	const count = chunks.reduce((acc, chunk) => acc + chunk.length, 0);
+	const result = new Uint8Array(count);
+	let offset = 0;
+	for (const chunk of chunks) {
+		result.set(chunk, offset);
+		offset += chunk.length;
+	}
+	return result;
+}
+
+let inputBuffer = new Uint8Array(0);
+const decoder = new TextDecoder();
+
+export function scanGridKeyboard(){
+	const queue:Uint8Array=flattenChunks(pollInput());
+	const n = inputBuffer.length + queue.length;
+	const input = new Uint8Array(n);
+	input.set(inputBuffer);
+	input.set(queue, inputBuffer.length);
+	let index=0;
+	for(index=0;index<n;index++){
+		let key=input[index];
+		if(key==127) {// BACKSPACE
 			backSpace();
 			continue
 		}
-		if(keys[0]==32) {
+		if(key==32) {
 //         grid=updateGrid(grid,emit);
 			continue
 		}
-		if(keys[0]==27) {
-			if(keys.length==1) resetGrid();
-			let up=(keys.length>2) && ((keys[1]==91)&&(keys[2]==65));
-			let down=(keys.length>2) && ((keys[1]==91)&&(keys[2]==66));
-			let right=(keys.length>2) && ((keys[1]==91)&&(keys[2]==67));
-			let left=(keys.length>2) && ((keys[1]==91)&&(keys[2]==68));
-			if(up) pump[axis.UPDOWN]-=200;
-			if(down) pump[axis.UPDOWN]+=200;
-			if(right) pump[axis.LEFTRIGHT]+=200;
-			if(left) pump[axis.LEFTRIGHT]-=200;
+/*
+		pushStatus("keyboard.keys",input);
+		index=n;
+		break;
+*/		
+		if(key==27) {
+			if(index==n-1){
+				resetGrid();
+				continue;
+			}
+			if(index+2<n && input[index+1]==91){
+				const keycode=input[index+2];
+				const up=keycode==65;
+				const down=keycode==66;
+				const right=keycode==67;
+				const left=keycode==68;
+				if(up) pump[axis.UPDOWN]-=200;
+				if(down) pump[axis.UPDOWN]+=200;
+				if(right) pump[axis.LEFTRIGHT]+=200;
+				if(left) pump[axis.LEFTRIGHT]-=200;
+				index+=2;
+			}else{
+				pushStatus("keyboard.escape",input);
+			}
 		}else{
-			pushStatus("keyboard.keys",keys);
-		}
+			// 49 77
+			pushStatus("keyboard.keys",input);
+		}			
 	}
+	inputBuffer = input.slice(index);
 }
-
-let cursorX=0;
-let cursorVX=0;
-let cursorY=0;
-let cursorVY=0;
 
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
@@ -142,18 +182,20 @@ keyboardMouseTask()
 
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
-	vidWidth=columns-20;
+	vidWidth=columns-12;
+	
 	let pany=cursorY>>2;
-	let span=gridBitmap.span;
+	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
-	let blocks=gridQuadWindow(gridBitmap.data,span,cursorX,pany,wide2,vidHeight*2);
+
+	let blocks=gridQuadWindow(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
 
 	console.log(cursorHome);
 	console.log(gridTitle+" ["+columns+","+rows+"]");
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
-	let latest=status.slice(-3);
+	let latest=status.slice(-13);
 	console.log(latest.join("\n"));
 
 	let code=setCursor(5,7);
@@ -162,7 +204,7 @@ while(isRunning()){
 	await sleep(50);
 //    grid=updateGrid(grid,rules);
 	fadePumps();
-	scanKeyboard();
+	scanGridKeyboard();
 	updateCursor();
 }
 

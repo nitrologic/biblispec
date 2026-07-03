@@ -1,4 +1,78 @@
+function gridQuadWindow8(src:Uint8Array,span:number,wx:number,wy:number,ww:number,wh:number){
+	let result=[];
+	let h=(wh/2)|0;
+	let w=(ww/2)|0;
+	for(let y=0;y<h;y++){
+		let line=""
+		for(let x=0;x<w;x++){  
+			let offset=(wy+y*2)*span+((wx+x)>>2);
+			let shift=((wx + x) & 3)<<1;
+			let bit01=(src[offset]>>shift)&3;
+			let bit23=(src[offset+span]>>shift)&3;
+			let index=(bit23<<2)|bit01;
+			line+=quads[index];
+		}
+		result.push(line);
+	}
+	return result;
+}
+
+
+const diamond7="◆◇◈⬥⬦⬡⬢";
+const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
+const miscChars="⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉";
+const flowerChars="✻✼✽✾✿❀❁";
+const flower7="✻✾✿✼✽❀❁";
+const hash7="▤▥▦▧▨▩⯀";
+const grassThin="ᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅᛆᛇ";
+const brialle7="⣔⢓⢆⠋⡴⢮⠂";//".-`..'.";
+//"↙↑╭╮╰╯│─╭╮╰╯│─";
+//const grass7="→←↑↓↗↘↙↖";
+enum Edge2 { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineHoriz, TeeDown, TeeUp, LineVert, TeeLeft, TeeRight, Cross }
+enum Edge1 { CornerTopLeft, CornerTopRight, CornerBotLeft, CornerBotRight, LineVert, LineHoriz }
+
+
+
+//	console.log(ascii);
+
+	let bed16=hashChar.repeat(16);
+	let bed16b=hashChar+swizzle(range7+range7)+hashChar;
+	let shrubs=ascii.replaceAll(bed16,bed16b);
+
+	let bed9=hashChar.repeat(9);
+	let bed9b=hashChar+swizzle(range7)+hashChar;
+	let herbs=shrubs.replaceAll(bed9,bed9b);
+
+	let bed4=hashChar.repeat(4);
+	let bed4b=hashChar+swizzle(range7.substring(0,2))+hashChar
+	herbs=herbs.replaceAll(bed4,bed4b);
+
+	let bed3=hashChar.repeat(3);
+	let bed3b=hashChar+single(range7)+hashChar
+	herbs=herbs.replaceAll(bed3,bed3b);
+
+	console.log(herbs);
+
+
+
+const braille=[
+	"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿",
+	"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿",
+	"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿",
+	"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"
+];
+
+
 // old code below
+
+const boxArrows="↗↘↖↙↑→┬┴│┤├┼";		//"╭╮╰╯│─┬┴│┤├┼";
+
+
+//↗↖↘↙⇗⇖⇘⇙
+// "◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+
+//				"arrowChars":["▸→↠↦↝⥽⇒⤇⟿➸➳➵➧➨","◂←↞↤↜⥼⇐⤆⬳","▴↑↟↥⥾⇑⤊","▾↓↡↧⥿⇓⤋"],
+
 
 //	console.log(cursorUp.repeat(vidHeight));
 //    Deno.stdout.write(encoder.encode(cursorUp));
