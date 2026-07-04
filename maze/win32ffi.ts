@@ -1,18 +1,21 @@
-// ffi.ts
+// win32ffi.ts
 
-// Load the Windows user32 library using Deno FFI
+// link windows user32.dll GetAsyncKeyState GetCursorPos
 
 const user32 = Deno.dlopen("user32.dll", {
     GetAsyncKeyState: {parameters: ["i32"],result: "i16"},
     GetCursorPos: {parameters: ["buffer"],result: "i32"},
 });
 
+const VK_LBUTTON=1;
+const VK_RBUTTON=2;
+const VK_MBUTTON=4;
 const VK_LEFT = 0x25;
 const VK_UP = 0x26;
 const VK_RIGHT = 0x27;
 const VK_DOWN = 0x28;
 
-export function pollKeys():number{
+export function pollKeyboard():number{
     const up = user32.symbols.GetAsyncKeyState(VK_UP)&0x8000;
     const down = user32.symbols.GetAsyncKeyState(VK_DOWN)&0x8000;
     const left = user32.symbols.GetAsyncKeyState(VK_LEFT)&0x8000;
@@ -33,6 +36,6 @@ export function pollMouse(): MouseStatus {
     const left=user32.symbols.GetAsyncKeyState(VK_LBUTTON) & 0x8000;
     const right=user32.symbols.GetAsyncKeyState(VK_RBUTTON) & 0x8000;
     const middle=user32.symbols.GetAsyncKeyState(VK_MBUTTON) & 0x8000;
-    const buttons=(leftClick?1:0)|(rightClick?2:0)|(middleClick?4:0);
+    const buttons=(left?1:0)|(right?2:0)|(middle?4:0);
     return {x:mouseBuffer[0],y:mouseBuffer[1],buttons};
 }

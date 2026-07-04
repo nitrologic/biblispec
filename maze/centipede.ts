@@ -1,6 +1,6 @@
 // centipede.ts
 
-import { pollKeys, pollMouse } from "./ffi.ts";
+import { pollKeyboard, pollMouse } from "./win32ffi.ts";
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { CharGrid } from "./chargrid.js";
 
@@ -98,7 +98,7 @@ while(isRunning()){
 	let code=setCursor(5,7);
 	writeConsole(code);
 
-	let keys=pollKeys();
+	let keys=pollKeyboard();
 	joyx=0;
 	if(keys&8) joyx=1;
 	if(keys&4) joyx=-1;

@@ -1,15 +1,25 @@
 // grid.ts - a biblispec scroller
 
+import { pollKeyboard, pollMouse } from "./win32ffi.ts";
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
 import conway from "../books/conway.json" with { type: "json" };
 
-const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
+const gridTitle="☰ nitrologic grid 0.7.1 - arrows, space, q to quit";
 
-// grid display uses 2x2 quad block character graphics to display bitgrid window
+// bitgrid display modes
+
+//   1x1 fixed width characters
+//   1x1 wide unicode codepoints
+//   2x2 quad block character
+// * 1x2 true color block
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 const gridMillis=50;
+
+// unused ref
+
+const gridHalfs=" ▀▄█"; // fg bg ▀ - "\x1b[38;2;R;G;Bm\x1b[48;2;R;G;Bm▀"
 
 // grid block display is 1:1 char per pixel resolution
 
@@ -40,6 +50,7 @@ function axis(glider:string[]){
 }
 
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
+
 //bitgrid.rect(4,2,2,20);
 //bitgrid.rect(gridWidth/4-10,4,8,20);
 
@@ -52,12 +63,16 @@ let pulsar=conway.shapes.oscillators.pulsar;
 const glider=axis(conway.shapes.spaceships.glider);
 
 
+function draw(shape:string[],x:number,y:number,layer:number){
+	bitgrid.drawMask(shape,"O",x,y,layer);
+}
+
 /*
 let keys=Object.keys(conway.shapes.still);
 let x=10;
 for(let index of keys){
 	const still=conway.shapes.still[index];
-	bitgrid.drawShape(still,x,80,2);
+	draw(still,x,80,2);
 	x+=12;
 }
 */
@@ -66,23 +81,21 @@ let keys1=Object.keys(conway.shapes.oscillators);
 let x1=10;
 for(let index of keys1){
 	const shape=conway.shapes.oscillators[index];
-	bitgrid.drawShape(shape,x1,100,2);
+	draw(shape,x1,100,2);
 	x1+=12;
 }
 
-//bitgrid.drawShape(beacon,10,10,2);
-//bitgrid.drawShape(pent,100,14,2);
+//draw(beacon,10,10,2);
+//draw(pent,100,14,2);
 
-
-
-bitgrid.drawShape(glider[0],20,35,2);
-bitgrid.drawShape(glider[1],20,30,2);
-bitgrid.drawShape(glider[2],10,30,2);
-bitgrid.drawShape(glider[3],10,20,2);
+draw(glider[0],20,35,2);
+draw(glider[1],20,30,2);
+draw(glider[2],10,30,2);
+draw(glider[3],10,20,2);
 
 for(let i=0;i<12;i++){
 	for(let j=0;j<5;j++){
-		bitgrid.drawShape(pulsar,62+i*25,14+j*17,2);
+		draw(pulsar,62+i*25,14+j*17,2);
 	}
 }
 
@@ -100,7 +113,8 @@ function updateCursor(){
 	if(cursorX<0){
 		cursorX=0;cursorVX=0;
 	}
-	let w=bitgrid.span*4-vidWidth;
+//	let w=bitgrid.span*4-vidWidth;
+	let w=bitgrid.width*2-vidWidth;
 	let h=bitgrid.height*4-vidHeight*8;
 	if(cursorX>=w){
 		cursorX=w;
@@ -120,6 +134,65 @@ function updateCursor(){
 }
 
 function resetGrid(){	
+}
+
+function gridHeatmap12():string[]{
+	const result=[];
+	for(let i=0;i<4096;i++){
+		const r=((i>>8)&15)*12;
+		const g=((i>>4)&15)*12;
+		const b=((i>>0)&15)*12;
+		const line=""+r+";"+g+";"+b;
+		result[i]=line;
+	}
+	return result;
+}
+
+function gridHeatmap():string[]{
+	const result=[];
+	for(let i=0;i<512;i++){
+		const r=((i>>6)&7)*18;
+		const g=((i>>3)&7)*18;
+		const b=((i>>0)&7)*18;
+		const line=""+r+";"+g+";"+b;
+		result[i]=line;
+	}
+	return result;
+}
+
+const heatRGBColors=gridHeatmap();
+function heatRGB(heat:number):string{
+	const n=heatRGBColors.length-1;
+	let h=heat|0;
+	if(h<0) h=0;
+	if(h>n) h=n;
+	return heatRGBColors[h];
+}
+
+function gridHalfWindowLayer(grid:BitGrid,wx:number,wy:number,ww:number,wh:number){
+	const w=grid.width;
+	const heat:Uint16Array=grid.heatmap;
+	const n=heatRGB.length-1;
+	const result=[];
+	const h=(wh/2)|0;
+	for(let y=0;y<h;y++){
+		let offset=(wy+y*2)*w+wx;
+		let line=""
+		for(let x=0;x<ww;x++){  
+			const h0=heat[offset];
+			const h1=heat[offset+w];
+			const fg=heatRGB(h0);
+			const bg=heatRGB(h1);
+			const charBun="\x1b[38;2;"+fg+"m\x1b[48;2;"+bg+"m▀";
+			line+=charBun;
+			offset++;
+		}
+		if(y==h-1){
+			line+="\x1b[38;2;"+heatRGB(4095)+"m\x1b[48;2;"+heatRGB(0)+"m";
+		}
+		result.push(line);
+	}
+	return result;
 }
 
 function gridBlockWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:number,wh:number){
@@ -203,6 +276,14 @@ function fadePumps():number[]{
 	return previous;
 }
 
+function updatePumps(keys:number){
+	if(keys&1) pump[axis.UPDOWN]-=200;
+	if(keys&2) pump[axis.UPDOWN]+=200;
+	if(keys&4) pump[axis.LEFTRIGHT]-=20;
+	if(keys&8) pump[axis.LEFTRIGHT]+=20;
+	fadePumps();
+}
+
 let mainMenu=false;//true;
 
 function menuWall(blocks:string[]){
@@ -215,7 +296,7 @@ function menuWall(blocks:string[]){
 
 function backSpace(){
 //	mainMenu=!mainMenu;
-	bitgrid.drawShape(glider[0],20,35,2);
+	draw(glider[0],20,35,2);
 }
 
 function pushStatus(key:string,value:any){
@@ -238,55 +319,6 @@ function flattenChunks(chunks: Uint8Array[]): Uint8Array {
 let inputBuffer = new Uint8Array(0);
 const decoder = new TextDecoder();
 
-function scanGridKeyboard(){
-	const queue:Uint8Array=flattenChunks(pollInput());
-	const n = inputBuffer.length + queue.length;
-	const input = new Uint8Array(n);
-	input.set(inputBuffer);
-	input.set(queue, inputBuffer.length);
-	let index=0;
-	for(index=0;index<n;index++){
-		let key=input[index];
-		if(key==127) {// BACKSPACE
-			backSpace();
-			continue
-		}
-		if(key==32) {
-//         grid=updateGrid(grid,emit);
-			continue
-		}
-/*
-		pushStatus("keyboard.keys",input);
-		index=n;
-		break;
-*/		
-		if(key==27) {
-			if(index==n-1){
-				resetGrid();
-				continue;
-			}
-			if(index+2<n && input[index+1]==91){
-				const keycode=input[index+2];
-				const up=keycode==65;
-				const down=keycode==66;
-				const right=keycode==67;
-				const left=keycode==68;
-				if(up) pump[axis.UPDOWN]-=200;
-				if(down) pump[axis.UPDOWN]+=200;
-				if(right) pump[axis.LEFTRIGHT]+=200;
-				if(left) pump[axis.LEFTRIGHT]-=200;
-				index+=2;
-			}else{
-				pushStatus("keyboard.escape",input);
-			}
-		}else{
-			// 49 77
-			pushStatus("keyboard.keys",input);
-		}			
-	}
-	inputBuffer = input.slice(index);
-}
-
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
 let cursorHome="\x1b[H";
@@ -306,39 +338,35 @@ let count=0;
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-12;
-	vidHeight=rows-4;
-
+	vidHeight=rows-12;
 	let pany=cursorY>>2;
-	let span=bitgrid.span;
+//	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
-
 	count++;
 	if(true){//((count++)&7)==5){
 		layer=1-layer;
 		bitgrid.stepConwayLife(2+layer,3-layer);
+		bitgrid.heat(3-layer,25);
 	}
-
+	bitgrid.cool(0.95);
+	let blocks=gridHalfWindowLayer(bitgrid,cursorX,pany,wide2/2,vidHeight*2)
 //	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
-
-
-	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
-
+//	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
 	console.log(cursorHome);
-	console.log(gridTitle+" ["+columns+","+rows+"] count:"+count);
+	console.log(gridTitle+" ["+columns+","+rows+"] pumps:"+JSON.stringify(pump));
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
 	console.log(latest.join("\n"));
-
 	let code=setCursor(5,7);
 	writeConsole(code);
-
+	console.log("\x1b[0m");
 	await sleep(gridMillis);
-//    grid=updateGrid(grid,rules);
-	fadePumps();
-	scanGridKeyboard();
+	let keys=pollKeyboard();
+	if(keys&32) stopRunning();
+	updatePumps(keys);
 	updateCursor();
 }
 

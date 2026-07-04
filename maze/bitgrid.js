@@ -1,4 +1,5 @@
 // bitgrid.js
+
 //  - width height layers of single bit pixels
 //  - 32 bit data words contained in single Uint32Array
 //	- drawShape stepConwayLife cellular automata functions incoming
@@ -6,25 +7,15 @@
 export class BitGrid {
 
 	constructor(width,height,layers) {
-		this.span=0;
 		this.width = width;
 		this.height = height;
 		this.layers = layers;
 		this.span=(width+31)>>5;
 		this.data=new Uint32Array(this.span*height*layers);
-//		this.drawGrid(20,10,0);
+		this.heatmap=new Uint16Array(width*height);
 	}
 
-	drawShape(strings,x,y,layer){
-		for(const text of strings){
-			for(let i=0;i<text.length;i++){
-				const char=text[i];
-				const state=(char=="O");
-				this.setPixel(x+i,y,layer,state);
-			}
-			y++;
-		}
-	}
+	// bit pixel
 
 	getPixel(x,y,layer){
 		// x,y toroidal wrap around getter
@@ -47,6 +38,44 @@ export class BitGrid {
 			word&=~mask;
 		}
 		this.data[offset]=word
+	}
+
+	// heatmap methods
+
+	cool(falloff){
+		let index=0;
+		for(let y=0;y<this.height;y++){
+			for(let x=0;x<this.width;x++){
+				this.heatmap[index++]*=falloff;
+			}
+		}
+	}
+
+	heat(layer,value){
+		let offset=layer*this.height*this.span;
+		let index=0;
+		let word=0;
+		for(let y=0;y<this.height;y++){
+			for(let x=0;x<this.width;x++){
+				if((x&31)==0){
+					word=this.data[offset++];
+				}
+				const mask=1<<(x&31);
+				if(word&mask) this.heatmap[index]+=value;
+				index++;
+			}
+		}
+	}
+
+	drawMask(strings,maskChar,x,y,layer){
+		for(const text of strings){
+			for(let i=0;i<text.length;i++){
+				const char=text[i];
+				const state=char==maskChar;(char=="O");
+				this.setPixel(x+i,y,layer,state);
+			}
+			y++;
+		}
 	}
 
 	rect(x,y,width,height,layer=0){
@@ -103,7 +132,6 @@ export class BitGrid {
 				const neighbors = this.countNeighbors(x, y, readLayer);
 				const next = (alive && (neighbors === 2 || neighbors === 3)) || (!alive && neighbors === 3);
 				pixels[x]=next;
-//				if(neighbors) console.log("n:",neighbors);
 			}
 			this.writePixels(pixels, 0, y, writeLayer);
 		}

@@ -1,3 +1,53 @@
+function scanGridKeyboard(){
+	const queue:Uint8Array=flattenChunks(pollInput());
+	const n = inputBuffer.length + queue.length;
+	const input = new Uint8Array(n);
+	input.set(inputBuffer);
+	input.set(queue, inputBuffer.length);
+	let index=0;
+	for(index=0;index<n;index++){
+		let key=input[index];
+		if(key==127) {// BACKSPACE
+			backSpace();
+			continue
+		}
+		if(key==32) {
+//         grid=updateGrid(grid,emit);
+			continue
+		}
+/*
+		pushStatus("keyboard.keys",input);
+		index=n;
+		break;
+*/		
+		if(key==27) {
+			if(index==n-1){
+				resetGrid();
+				continue;
+			}
+			if(index+2<n && input[index+1]==91){
+				const keycode=input[index+2];
+				const up=keycode==65;
+				const down=keycode==66;
+				const right=keycode==67;
+				const left=keycode==68;
+				if(up) pump[axis.UPDOWN]-=200;
+				if(down) pump[axis.UPDOWN]+=200;
+				if(right) pump[axis.LEFTRIGHT]+=200;
+				if(left) pump[axis.LEFTRIGHT]-=200;
+				index+=2;
+			}else{
+				pushStatus("keyboard.escape",input);
+			}
+		}else{
+			// 49 77
+			pushStatus("keyboard.keys",input);
+		}			
+	}
+	inputBuffer = input.slice(index);
+}
+
+
 "shapes":{
 	"still": {
 		"block": ["OO","OO"],

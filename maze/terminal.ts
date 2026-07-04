@@ -26,6 +26,7 @@ export function isRunning(){
 
 export function stopRunning(){
 	Deno.stdin.setRaw(false);
+	console.log(resetConsole);
 	running=false;
 }
 
@@ -56,6 +57,7 @@ export async function keyboardMouseTask(enableMouse:boolean=false) {
 	}
 }
 
+const resetConsole="\x1b[0m";
 const enableCursor="\x1b[?25h";
 const disableCursor="\x1b[?25l";
 let blinkFrame=0;
