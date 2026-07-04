@@ -1,7 +1,8 @@
 echo off
 pushd maze
 rem deno run maze.ts
-rem deno run traffic.ts
-deno run grid
+deno run centipede
+rem deno run traffic
+rem deno run grid
 rem deno run menu
 popd
