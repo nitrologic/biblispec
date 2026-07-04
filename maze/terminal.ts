@@ -29,7 +29,7 @@ export function stopRunning(){
 	running=false;
 }
 
-export function pollInput(){
+export function pollInput():Uint8Array[]{
 	let queue=keyboardQueue;
 	keyboardQueue=[];
 	return queue;

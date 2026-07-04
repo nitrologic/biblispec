@@ -1,4 +1,4 @@
 pushd maze
-deno run grid
+deno run centipede
 popd
 

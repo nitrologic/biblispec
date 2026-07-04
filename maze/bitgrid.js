@@ -34,7 +34,7 @@ export class BitGrid {
 		const wordIndex = y*this.span+(x>>5);
 		const bitIndex = x&31;
 		const word=this.data[offset+wordIndex];
-		return (word&(1 << bitIndex))!=0;
+		return (word&(1<<bitIndex))!=0;
 	}
 
 	setPixel(x,y,layer,state){

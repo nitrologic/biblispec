@@ -9,7 +9,7 @@ const gridTitle="☰ grid 0.7 - arrows, space, q to quit, backspace to edit";
 // grid display uses 2x2 quad block character graphics to display bitgrid window
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-const gridMillis=25;
+const gridMillis=50;
 
 // grid block display is 1:1 char per pixel resolution
 
@@ -51,37 +51,38 @@ let pulsar=conway.shapes.oscillators.pulsar;
 
 const glider=axis(conway.shapes.spaceships.glider);
 
-/*
 
+/*
 let keys=Object.keys(conway.shapes.still);
 let x=10;
 for(let index of keys){
 	const still=conway.shapes.still[index];
-	bitgrid.drawShape(still,x,50,2);
-	x+=20;
+	bitgrid.drawShape(still,x,80,2);
+	x+=12;
 }
+*/
 
 let keys1=Object.keys(conway.shapes.oscillators);
 let x1=10;
 for(let index of keys1){
 	const shape=conway.shapes.oscillators[index];
-	bitgrid.drawShape(shape,x1,5,2);
-	x1+=20;
+	bitgrid.drawShape(shape,x1,100,2);
+	x1+=12;
 }
 
-bitgrid.drawShape(beacon,10,10,2);
-bitgrid.drawShape(pent,100,14,2);
-*/
+//bitgrid.drawShape(beacon,10,10,2);
+//bitgrid.drawShape(pent,100,14,2);
+
 
 
 bitgrid.drawShape(glider[0],20,35,2);
 bitgrid.drawShape(glider[1],20,30,2);
-//bitgrid.drawShape(glider[2],10,30,2);
-//bitgrid.drawShape(glider[3],10,20,2);
+bitgrid.drawShape(glider[2],10,30,2);
+bitgrid.drawShape(glider[3],10,20,2);
 
-for(let i=0;i<20;i++){
+for(let i=0;i<12;i++){
 	for(let j=0;j<5;j++){
-		bitgrid.drawShape(pulsar,32+i*25,14+j*17,2);
+		bitgrid.drawShape(pulsar,62+i*25,14+j*17,2);
 	}
 }
 
@@ -213,7 +214,8 @@ function menuWall(blocks:string[]){
 }
 
 function backSpace(){
-	mainMenu=!mainMenu;
+//	mainMenu=!mainMenu;
+	bitgrid.drawShape(glider[0],20,35,2);
 }
 
 function pushStatus(key:string,value:any){
@@ -311,6 +313,7 @@ while(isRunning()){
 	let menuWide=mainMenu?5:0;
 	let wide2=(vidWidth-menuWide)*2;
 
+	count++;
 	if(true){//((count++)&7)==5){
 		layer=1-layer;
 		bitgrid.stepConwayLife(2+layer,3-layer);
@@ -318,7 +321,9 @@ while(isRunning()){
 
 //	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
-	let blocks=gridQuadWindow(bitgrid,[0,2,3],cursorX,pany,wide2,vidHeight*2);
+
+
+	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
 
 	console.log(cursorHome);
 	console.log(gridTitle+" ["+columns+","+rows+"] count:"+count);
