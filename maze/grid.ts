@@ -47,6 +47,12 @@ let blinker=conway.shapes.oscillators.blinker;
 let beacon=conway.shapes.oscillators.beacon;
 let pent=conway.shapes.methuselahs.rPentomino;
 
+let pulsar=conway.shapes.oscillators.pulsar;
+
+const glider=axis(conway.shapes.spaceships.glider);
+
+/*
+
 let keys=Object.keys(conway.shapes.still);
 let x=10;
 for(let index of keys){
@@ -63,29 +69,23 @@ for(let index of keys1){
 	x1+=20;
 }
 
-let pulsar=conway.shapes.oscillators.pulsar;
-
 bitgrid.drawShape(beacon,10,10,2);
-
-//const glider=axis(conway.shapes.spaceships.glider);
-
-/*
-bitgrid.drawShape(glider[0],20,30,2);
-bitgrid.drawShape(glider[1],20,20,2);
-bitgrid.drawShape(glider[2],10,30,2);
-bitgrid.drawShape(glider[3],10,20,2);
 bitgrid.drawShape(pent,100,14,2);
 */
 
+
+bitgrid.drawShape(glider[0],20,35,2);
+bitgrid.drawShape(glider[1],20,30,2);
+//bitgrid.drawShape(glider[2],10,30,2);
+//bitgrid.drawShape(glider[3],10,20,2);
+
 for(let i=0;i<20;i++){
-for(let j=0;j<5;j++){
-	bitgrid.drawShape(pulsar,102+i*25,14+j*17,2);
-}
+	for(let j=0;j<5;j++){
+		bitgrid.drawShape(pulsar,32+i*25,14+j*17,2);
+	}
 }
 
 bitgrid.stepConwayLife(2,3);
-//bitgrid.stepConwayLife(3,2);
-//bitgrid.stepConwayLife(2,3);
 
 let cursorX=0;
 let cursorVX=0;
@@ -222,7 +222,7 @@ function pushStatus(key:string,value:any){
 }
 
 
-export function flattenChunks(chunks: Uint8Array[]): Uint8Array {
+function flattenChunks(chunks: Uint8Array[]): Uint8Array {
 	const count = chunks.reduce((acc, chunk) => acc + chunk.length, 0);
 	const result = new Uint8Array(count);
 	let offset = 0;
@@ -236,7 +236,7 @@ export function flattenChunks(chunks: Uint8Array[]): Uint8Array {
 let inputBuffer = new Uint8Array(0);
 const decoder = new TextDecoder();
 
-export function scanGridKeyboard(){
+function scanGridKeyboard(){
 	const queue:Uint8Array=flattenChunks(pollInput());
 	const n = inputBuffer.length + queue.length;
 	const input = new Uint8Array(n);
