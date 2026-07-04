@@ -1,3 +1,15 @@
+let squareBlocks=["⬛","⬜","🟨","🟩","🟥","🟧","🟦","🟪","🟫"];
+let dotBlocks1=["⚫","⚪","🟡","🔴","🟠","🟢","🔵","🟣","🟤"];
+
+//				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
+let heartBlocks=["🖤","🤍","💛","💚","❤️","🧡","💙","💜","🤎"];
+
+
+//	let menuWide=0;
+//	let w = Math.max(0, bitgrid.width - (vidWidth - menuWide));
+//	let w=bitgrid.width*2-vidWidth;
+
+
 // Define the native callback signature matching the Win32 driver standard
 const midiCallback2 = new Deno.UnsafeCallback(
 	{

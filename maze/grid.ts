@@ -12,21 +12,24 @@ function onMidi(status:number, data1:number, data2:number){
 	midiCount++;	
 }
 
-const gridTitle="☰ nitrologic grid 0.7.2 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
+const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
 
 // bitgrid display modes
 
 //   1x1 fixed width characters
-//   1x1 wide unicode codepoints
+// * 1x1 wide unicode codepoints
 //   2x2 quad block character
-// * 1x2 true color block
+//   1x2 true color block
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-const gridMillis=10;
+const gridMillis=50;
 
 // unused ref
 
 const gridHalfs=" ▀▄█"; // fg bg ▀ - "\x1b[38;2;R;G;Bm\x1b[48;2;R;G;Bm▀"
+
+let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫"];	//"⚪""⬜","⬛",
+
 
 // grid block display is 1:1 char per pixel resolution
 
@@ -123,15 +126,12 @@ function updateCursor(){
 	}
 	let w=bitgrid.width-vidWidth;
 	if(w<10) w=10;
-//	let menuWide=0;
-//	let w = Math.max(0, bitgrid.width - (vidWidth - menuWide));
-//	let w=bitgrid.width*2-vidWidth;
 	if(cursorX>=w){
 		cursorX=w;
 		cursorVX=0;
 	}
 
-	let h=bitgrid.height*4-vidHeight*8;
+	let h=bitgrid.height*4-vidHeight*4;
 	cursorY+=cursorVY;
 	if(cursorY<0){
 		cursorY=0;
@@ -202,6 +202,24 @@ function gridHalfWindowLayer(grid:BitGrid,wx:number,wy:number,ww:number,wh:numbe
 		}
 		if(y==h-1){
 			line+="\x1b[38;2;"+heatRGB(4095)+"m\x1b[48;2;"+heatRGB(0)+"m";
+		}
+		result.push(line);
+	}
+	return result;
+}
+
+function gridDotWindowLayer(grid:BitGrid,dots:string[],wx:number,wy:number,ww:number,wh:number){
+	const w=grid.width;
+	const heat:Uint16Array=grid.heatmap;
+	const n=dots.length;
+	const result=[];
+	for(let y=0;y<wh;y++){
+		let offset=(wy+y)*w+wx;
+		let line=""
+		for(let x=0;x<ww;x++){  
+			const h=heat[offset];
+			line+=dots[h%n];
+			offset++;
 		}
 		result.push(line);
 	}
@@ -290,10 +308,10 @@ function fadePumps():number[]{
 }
 
 function updatePumps(keys:number){
-	if(keys&1) pump[axis.UPDOWN]-=200;
-	if(keys&2) pump[axis.UPDOWN]+=200;
-	if(keys&4) pump[axis.LEFTRIGHT]-=20;
-	if(keys&8) pump[axis.LEFTRIGHT]+=20;
+	if(keys&1) pump[axis.UPDOWN]-=100;
+	if(keys&2) pump[axis.UPDOWN]+=100;
+	if(keys&4) pump[axis.LEFTRIGHT]-=72;
+	if(keys&8) pump[axis.LEFTRIGHT]+=72;
 	fadePumps();
 }
 
@@ -350,8 +368,8 @@ let count=0;
 
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
-	vidWidth=columns-12;
-	vidHeight=rows-12;
+	vidWidth=columns-6;
+	vidHeight=rows-6;
 	let panx=cursorX>>1;
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
@@ -364,7 +382,10 @@ while(isRunning()){
 		bitgrid.heat(3-layer,25);
 	}
 	bitgrid.cool(0.95);
-	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide2/2,vidHeight*2)
+
+	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,wide2/4,vidHeight);
+
+//	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide2/2,vidHeight*2)
 //	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
 //	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
