@@ -1,11 +1,18 @@
 // grid.ts - a biblispec scroller
 
-import { pollKeyboard, pollMouse } from "./win32ffi.ts";
+import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./win32ffi.ts";
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
 import conway from "../books/conway.json" with { type: "json" };
 
-const gridTitle="☰ nitrologic grid 0.7.1 - arrows, space, q to quit";
+let midiCount=0;
+const hasMidi=initMidi();
+
+function onMidi(status:number, data1:number, data2:number){
+	midiCount++;	
+}
+
+const gridTitle="☰ nitrologic grid 0.7.2 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
 
 // bitgrid display modes
 
@@ -15,7 +22,7 @@ const gridTitle="☰ nitrologic grid 0.7.1 - arrows, space, q to quit";
 // * 1x2 true color block
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-const gridMillis=50;
+const gridMillis=10;
 
 // unused ref
 
@@ -28,7 +35,7 @@ const gridBlocks=" ▣▥▤▦▢";
 let vidWidth=72*2;
 let vidHeight=22;
 
-let gridWidth=22*8*16;
+let gridWidth=22*8*4;
 let gridHeight=23*8;
 
 function mirror(shape:string[]):string[]{
@@ -109,17 +116,22 @@ let cursorVY=0;
 function updateCursor(){
 	cursorVX+=(pump[axis.LEFTRIGHT])/400;
 	cursorVY+=(pump[axis.UPDOWN])/400;
+
 	cursorX+=cursorVX;
 	if(cursorX<0){
 		cursorX=0;cursorVX=0;
 	}
-//	let w=bitgrid.span*4-vidWidth;
-	let w=bitgrid.width*2-vidWidth;
-	let h=bitgrid.height*4-vidHeight*8;
+	let w=bitgrid.width-vidWidth;
+	if(w<10) w=10;
+//	let menuWide=0;
+//	let w = Math.max(0, bitgrid.width - (vidWidth - menuWide));
+//	let w=bitgrid.width*2-vidWidth;
 	if(cursorX>=w){
 		cursorX=w;
 		cursorVX=0;
 	}
+
+	let h=bitgrid.height*4-vidHeight*8;
 	cursorY+=cursorVY;
 	if(cursorY<0){
 		cursorY=0;
@@ -129,6 +141,7 @@ function updateCursor(){
 		cursorY=h;
 		cursorVY=0;
 	}
+
 	cursorVX *= 0.9;
 	cursorVY *= 0.9;
 }
@@ -339,6 +352,7 @@ while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-12;
 	vidHeight=rows-12;
+	let panx=cursorX>>1;
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
@@ -350,12 +364,14 @@ while(isRunning()){
 		bitgrid.heat(3-layer,25);
 	}
 	bitgrid.cool(0.95);
-	let blocks=gridHalfWindowLayer(bitgrid,cursorX,pany,wide2/2,vidHeight*2)
+	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide2/2,vidHeight*2)
 //	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
 //	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
 	console.log(cursorHome);
-	console.log(gridTitle+" ["+columns+","+rows+"] pumps:"+JSON.stringify(pump));
+
+	const title=gridTitle+" ["+columns+","+rows+","+midiCount+"]";
+	console.log(title,"pumps:"+JSON.stringify(pump),"     ");
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
@@ -364,7 +380,14 @@ while(isRunning()){
 	writeConsole(code);
 	console.log("\x1b[0m");
 	await sleep(gridMillis);
-	let keys=pollKeyboard();
+
+	// {status: number;data1: number;data2: number;}
+	const midiEvents = pollMidi();
+	for (const event of midiEvents) {
+		onMidi(event.status, event.data1, event.data2);
+	}
+
+	const keys=pollKeyboard();
 	if(keys&32) stopRunning();
 	updatePumps(keys);
 	updateCursor();
@@ -372,4 +395,5 @@ while(isRunning()){
 
 const code1=setCursor(1,vidHeight+2);
 writeConsole(code1);
+closeMidi();
 stopRunning();

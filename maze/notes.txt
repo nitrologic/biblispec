@@ -1,3 +1,290 @@
+// Define the native callback signature matching the Win32 driver standard
+const midiCallback2 = new Deno.UnsafeCallback(
+	{
+		parameters: ["pointer", "u32", "pointer", "pointer", "pointer"],
+		result: "void",
+	},
+	(_hMidiIn, msg, _dwInstance, dwParam1, _dwParam2) => {
+		// We only care about standard short messages (MIM_DATA)
+		if (msg === MIM_DATA) {
+			// dwParam1 contains the entire 3-byte short message packed into a 32-bit unsigned int
+			const packedMessage = Number(dwParam1); 
+			
+			const status = packedMessage & 0xFF;
+			const data1 = (packedMessage >> 8) & 0xFF;
+			const data2 = (packedMessage >> 16) & 0xFF;
+
+			messageQueue.push({ status, data1, data2 });
+		}
+	}
+);
+
+
+// midi time
+
+export interface MidiMessage {status: number;data1: number;data2: number;}
+
+const CALLBACK_NULL = 0x00000000;
+const MHDR_DONE = 0x00000001;
+
+
+// link windows winmm midiIn commands
+
+const winmm = Deno.dlopen("winmm.dll", {
+	midiInGetNumDevs: { parameters: [], result: "u32" },
+	midiInOpen: { parameters: ["buffer", "u32", "pointer", "pointer", "u32"], result: "u32" },
+	midiInStart: { parameters: ["pointer"], result: "u32" },
+	midiInStop: { parameters: ["pointer"], result: "u32" },
+	midiInClose: { parameters: ["pointer"], result: "u32" },
+	midiInPrepareHeader: { parameters: ["pointer", "buffer", "u32"], result: "u32" },
+	midiInUnprepareHeader: { parameters: ["pointer", "buffer", "u32"], result: "u32" },
+	midiInAddBuffer: { parameters: ["pointer", "buffer", "u32"], result: "u32" }
+});
+
+
+let midiIn: Deno.PointerValue = null;
+
+const MIDI_BUFFER_SIZE = 256;
+const midiBuffer = new Uint8Array(MIDI_BUFFER_SIZE);
+const midiHeaderBuffer = new ArrayBuffer(64); // midihdr structure
+const midiHeaderView = new DataView(midiHeaderBuffer);
+const header = new Uint8Array(64);
+const midiData = new Uint8Array(4);
+const headerView32 = new DataView(header.buffer);
+
+export function initMidi(deviceId: number=0): boolean {
+	if (winmm.symbols.midiInGetNumDevs() === 0) return false;
+	const out = new BigUint64Array(1);
+	const outHandleBuffer = new BigUint64Array(1);
+	const result = winmm.symbols.midiInOpen(outHandleBuffer,deviceId|0,null,null,0);
+	if (result !== 0) return false;
+
+	midiIn = Deno.UnsafePointer.create(outHandleBuffer[0]);
+
+const bufferPtr = Deno.UnsafePointer.of(midiBuffer);
+// Setup MIDIHDR structure (see win32 docs)
+midiHeaderView.setBigUint64(0, BigInt(Deno.UnsafePointer.value(bufferPtr)), true); // lpData
+midiHeaderView.setUint32(8, MIDI_BUFFER_SIZE, true); // dwBufferLength
+midiHeaderView.setUint32(12, 0, true); // dwBytesRecorded
+midiHeaderView.setUint32(16, 0, true); // dwUser
+midiHeaderView.setUint32(20, 0, true); // dwFlags
+// ... other fields are zero
+
+// Prepare and add buffer
+winmm.symbols.midiInPrepareHeader(midiIn, midiHeaderBuffer, 64);
+winmm.symbols.midiInAddBuffer(midiIn, midiHeaderBuffer, 64);
+
+	const dataPtr = Deno.UnsafePointer.of(midiData);
+	headerView32.setBigUint64(0, BigInt(Deno.UnsafePointer.value(dataPtr)), true);
+	headerView32.setUint32(8, 4, true);
+//	winmm.symbols.midiInPrepareHeader(hMidiIn, header, header.byteLength);
+//	winmm.symbols.midiInAddBuffer(hMidiIn, header, header.byteLength);
+	const started=winmm.symbols.midiInStart(midiIn) === 0;
+	return started;
+}
+
+export function closeMidi(){
+    if (!midiIn) return;
+    winmm.symbols.midiInStop(midiIn);
+	winmm.symbols.midiInUnprepareHeader(midiIn, midiHeaderBuffer, 64);
+    winmm.symbols.midiInClose(midiIn);
+    midiIn = null;
+}
+
+
+export function pollMidi(): MidiMessage[] {
+	if (!midiIn) return [];
+	const messages: MidiMessage[] = [];
+	const recorded = midiHeaderView.getUint32(12, true); // dwBytesRecorded
+	if (recorded === 0) return messages;
+	// Each short message is 4 bytes (3 used)
+	for (let offset = 0; offset + 3 < recorded; offset += 4) {
+		const status = midiBuffer[offset];
+		const data1 = midiBuffer[offset + 1];
+		const data2 = midiBuffer[offset + 2];
+		messages.push({ status, data1, data2 });
+	}
+	// clear MHDR_DONE
+	midiHeaderView.setUint32(20, 0, true);
+	// Reset buffer and re‑add it
+	midiHeaderView.setUint32(12, 0, true);
+	winmm.symbols.midiInAddBuffer(midiIn, Deno.UnsafePointer.of(midiHeaderBuffer), 64);
+	return messages;
+}
+
+
+
+export function pollMidi2(): MidiMessage[] {
+	if (!midiIn) return [];
+	const messages: MidiMessage[] = [];
+	const recorded = midiHeaderView.getUint32(12, true);
+	if (recorded === 0) return messages;
+	// Process recorded bytes (each short message is 4 bytes, but only 3 are used)
+	// Typically you'd iterate, but for simplicity read one message at a time
+	const status = midiBuffer[0];
+	const data1 = midiBuffer[1];
+	const data2 = midiBuffer[2];
+	messages.push({ status, data1, data2 });
+	// Reset and re-add buffer for next messages
+	midiHeaderView.setUint32(12, 0, true); // clear bytes recorded
+	winmm.symbols.midiInAddBuffer(midiIn, Deno.UnsafePointer.of(midiHeaderBuffer), 64);
+	return messages;
+}
+
+// MIDIHDR structural allocation (Windows expects 32 or 44 bytes depending on architecture)
+// We allocate a generic 64-byte array container to be safe on 64-bit platforms.
+// databuffer 4-byte buffer to catch raw short messages
+
+/*
+	// Extract pointer reliably using Deno's updated UnsafePointer mapping
+	hMidiIn = Deno.UnsafePointer.create(outHandleBuffer[0]);
+
+	// Set up MIDIHDR layout pointer destinations manually 
+	// Offset 0: Pointer to our raw data buffer
+	const dataPtr = Deno.UnsafePointer.of(midiDataBuffer);
+	headerView32.setBigUint64(0, BigInt(Deno.UnsafePointer.value(dataPtr)), true);
+	// Offset 8: Buffer capacity length (4 bytes)
+	headerView32.setUint32(8, 4, true);
+
+	// Prepare and inject the tracking buffer state into Windows mm system
+	winmm.symbols.midiInPrepareHeader(hMidiIn, midiHeaderBuffer, midiHeaderBuffer.byteLength);
+	winmm.symbols.midiInAddBuffer(hMidiIn, midiHeaderBuffer, midiHeaderBuffer.byteLength);
+
+	return winmm.symbols.midiInStart(hMidiIn) === 0;
+}
+*/
+
+
+// Uint32 views allowing us to query status flags within the struct mapping
+	// Open with CALLBACK_NULL so no background callback thread is generated
+
+//   midiInOpen: { parameters: ["buffer", "u32", "pointer", "pointer", "u32"], result: "u32" },
+//	const openResult = winmm.symbols.midiInOpen(out,deviceId,null,null,0);
+
+
+const CALLBACK_NULL = 0x00000000;
+const MHDR_DONE = 0x00000001;
+
+export interface MidiMessage {
+  status: number;
+  data1: number;
+  data2: number;
+}
+
+let hMidiIn: Deno.PointerValue = null;
+
+// MIDIHDR structural allocation (Windows expects 32 or 44 bytes depending on architecture)
+// We allocate a generic 64-byte array container to be safe on 64-bit platforms.
+
+const midiHeaderBuffer = new Uint8Array(64);
+const midiDataBuffer = new Uint8Array(4); // 4-byte buffer to catch raw short messages
+
+// Uint32 views allowing us to query status flags within the struct mapping
+
+const headerView32 = new DataView(midiHeaderBuffer.buffer);
+
+export function initMidiPoll(deviceId: number): boolean {
+  if (winmm.symbols.midiInGetNumDevs() === 0) return false;
+
+  const outHandleBuffer = new BigUint64Array(1);
+  
+  // Open with CALLBACK_NULL so no background callback thread is generated
+  const openResult = winmm.symbols.midiInOpen(
+    outHandleBuffer,
+    deviceId,
+    null,
+    null,
+    CALLBACK_NULL
+  );
+  if (openResult !== 0) return false;
+
+  // Extract pointer reliably using Deno's updated UnsafePointer mapping
+  hMidiIn = Deno.UnsafePointer.create(outHandleBuffer[0]);
+
+  // Set up MIDIHDR layout pointer destinations manually 
+  // Offset 0: Pointer to our raw data buffer
+  const dataPtr = Deno.UnsafePointer.of(midiDataBuffer);
+  headerView32.setBigUint64(0, BigInt(Deno.UnsafePointer.value(dataPtr)), true);
+  // Offset 8: Buffer capacity length (4 bytes)
+  headerView32.setUint32(8, 4, true);
+
+  // Prepare and inject the tracking buffer state into Windows mm system
+  winmm.symbols.midiInPrepareHeader(hMidiIn, midiHeaderBuffer, midiHeaderBuffer.byteLength);
+  winmm.symbols.midiInAddBuffer(hMidiIn, midiHeaderBuffer, midiHeaderBuffer.byteLength);
+  
+  return winmm.symbols.midiInStart(hMidiIn) === 0;
+}
+
+/**
+ * Non-blocking check for pending MIDI updates.
+ * Call this inside your main animation or processing loop.
+ */
+export function pollMidi(): MidiMessage | null {
+  if (!hMidiIn) return null;
+
+  // Read the 32-bit flags register located at offset 16 inside MIDIHDR struct
+  const flags = headerView32.getUint32(16, true);
+
+  // Check if Windows marked the buffer block as complete (MHDR_DONE)
+  if ((flags & MHDR_DONE) === MHDR_DONE) {
+    // Extract standard MIDI values directly from the assigned byte array
+    const status = midiDataBuffer[0];
+    const data1 = midiDataBuffer[1];
+    const data2 = midiDataBuffer[2];
+
+    // Reset the internal Windows state flags inside our structure mapping
+    headerView32.setUint32(16, flags & ~MHDR_DONE, true);
+
+    // Re-queue the tracking block back into the buffer stream loop
+    winmm.symbols.midiInAddBuffer(hMidiIn, midiHeaderBuffer, midiHeaderBuffer.byteLength);
+
+    return { status, data1, data2 };
+  }
+
+  return null; // Return null if no new MIDI action occurred during this tick
+}
+
+export function closeMidiPoll(): void {
+  if (hMidiIn) {
+    winmm.symbols.midiInStop(hMidiIn);
+    winmm.symbols.midiInClose(hMidiIn);
+    hMidiIn = null;
+  }
+}
+Use code with caution.Simplified Main Loop ExecutionBecause you are polling data purely on a synchronized loop clock, you do not need the --unstable-event-loop flag anymore. You can treat it exactly like you handle mouse and keyboard checks:typescript// main.ts
+import { pollKeyboard, pollMouse, initMidiPoll, pollMidi, closeMidiPoll } from "./win32ffi.ts";
+
+if (!initMidiPoll(0)) {
+  console.log("Failed to initialize MIDI polling.");
+  Deno.exit(1);
+}
+
+console.log("Polling Active. Press Escape key to exit.");
+
+// Clean Unified Processing Loop
+while (true) {
+  const keys = pollKeyboard();
+  const mouse = pollMouse();
+  const midi = pollMidi();
+
+  // If Escape key pressed (bit 32 from your keyboard logic mapping)
+  if (keys & 32) {
+    break;
+  }
+
+  if (midi) {
+    console.log(`MIDI Action Detected -> Status: ${midi.status}, Control/Note: ${midi.data1}, Val: ${midi.data2}`);
+  }
+
+  // Throttle slightly to keep CPU usage low (e.g., ~60fps target interval)
+  await new Promise((resolve) => setTimeout(resolve, 16));
+}
+
+closeMidiPoll();
+console.log("Clean exit executed.");
+
+
+
 function scanGridKeyboard(){
 	const queue:Uint8Array=flattenChunks(pollInput());
 	const n = inputBuffer.length + queue.length;

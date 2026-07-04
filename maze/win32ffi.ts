@@ -3,9 +3,11 @@
 // link windows user32.dll GetAsyncKeyState GetCursorPos
 
 const user32 = Deno.dlopen("user32.dll", {
-    GetAsyncKeyState: {parameters: ["i32"],result: "i16"},
-    GetCursorPos: {parameters: ["buffer"],result: "i32"},
+	GetAsyncKeyState: {parameters: ["i32"],result: "i16"},
+	GetCursorPos: {parameters: ["buffer"],result: "i32"},
 });
+
+// keyboard keys
 
 const VK_LBUTTON=1;
 const VK_RBUTTON=2;
@@ -16,26 +18,79 @@ const VK_RIGHT = 0x27;
 const VK_DOWN = 0x28;
 
 export function pollKeyboard():number{
-    const up = user32.symbols.GetAsyncKeyState(VK_UP)&0x8000;
-    const down = user32.symbols.GetAsyncKeyState(VK_DOWN)&0x8000;
-    const left = user32.symbols.GetAsyncKeyState(VK_LEFT)&0x8000;
-    const right = user32.symbols.GetAsyncKeyState(VK_RIGHT)&0x8000;
-    const space = user32.symbols.GetAsyncKeyState(32)&0x8000;
-    const escape = user32.symbols.GetAsyncKeyState(27)&0x8000;
-    return (up?1:0)|(down?2:0)|(left?4:0)|(right?8:0)|(space?16:0)|(escape?32:0);
+	const up = user32.symbols.GetAsyncKeyState(VK_UP)&0x8000;
+	const down = user32.symbols.GetAsyncKeyState(VK_DOWN)&0x8000;
+	const left = user32.symbols.GetAsyncKeyState(VK_LEFT)&0x8000;
+	const right = user32.symbols.GetAsyncKeyState(VK_RIGHT)&0x8000;
+	const space = user32.symbols.GetAsyncKeyState(32)&0x8000;
+	const escape = user32.symbols.GetAsyncKeyState(27)&0x8000;
+	return (up?1:0)|(down?2:0)|(left?4:0)|(right?8:0)|(space?16:0)|(escape?32:0);
 }
 
-// buttons: 1 = Left, 2 = Right, 4 = Middle
+// mouse buttons: 1 = Left, 2 = Right, 4 = Middle
 
 export interface MouseStatus {x: number;y: number; buttons: number;}
 
 const mouseBuffer = new Int32Array(2);
 
 export function pollMouse(): MouseStatus {
-    user32.symbols.GetCursorPos(mouseBuffer);
-    const left=user32.symbols.GetAsyncKeyState(VK_LBUTTON) & 0x8000;
-    const right=user32.symbols.GetAsyncKeyState(VK_RBUTTON) & 0x8000;
-    const middle=user32.symbols.GetAsyncKeyState(VK_MBUTTON) & 0x8000;
-    const buttons=(left?1:0)|(right?2:0)|(middle?4:0);
-    return {x:mouseBuffer[0],y:mouseBuffer[1],buttons};
+	user32.symbols.GetCursorPos(mouseBuffer);
+	const left=user32.symbols.GetAsyncKeyState(VK_LBUTTON) & 0x8000;
+	const right=user32.symbols.GetAsyncKeyState(VK_RBUTTON) & 0x8000;
+	const middle=user32.symbols.GetAsyncKeyState(VK_MBUTTON) & 0x8000;
+	const buttons=(left?1:0)|(right?2:0)|(middle?4:0);
+	return {x:mouseBuffer[0],y:mouseBuffer[1],buttons};
+}
+
+export interface MidiMessage { status: number; data1: number; data2: number; }
+
+const winmm = Deno.dlopen("winmm.dll", {
+	midiInGetNumDevs: { parameters: [], result: "u32" },
+	midiInOpen: { parameters: ["buffer", "u32", "pointer", "pointer", "u32"], result: "u32", callback: true },
+	midiInStart: { parameters: ["pointer"], result: "u32" },
+	midiInStop: { parameters: ["pointer"], result: "u32" },
+	midiInClose: { parameters: ["pointer"], result: "u32" }
+});
+
+const midiCallback = Deno.UnsafeCallback.threadSafe(
+    {
+        parameters: ["pointer", "u32", "pointer", "u32", "u32"],
+        result: "void",
+    },
+    (_hMidiIn, msg, _dwInstance, _dwParam1, _dwParam2) => {
+        if (msg === MIM_DATA) {
+			const i32=_dwParam1|0;
+            messageQueue.push({ status:i32&0xff,data1:(i32>>8)&0xff,data2:(i32>>16)&0xff });
+        }
+    }
+);
+
+const CALLBACK_FUNCTION = 0x00030000; // Flag telling Windows we are passing a function pointer
+const MIM_DATA = 0x3C3;              // Window message for received short MIDI data
+
+let midiIn: Deno.PointerValue = null;
+let messageQueue: MidiMessage[] = [];
+
+export function initMidi(deviceId: number = 0): boolean {
+	if (winmm.symbols.midiInGetNumDevs() === 0) return false;
+	const outHandleBuffer = new BigUint64Array(1);
+	const result = winmm.symbols.midiInOpen(outHandleBuffer,deviceId | 0,midiCallback.pointer,null,CALLBACK_FUNCTION);
+	if (result !== 0) return false;
+	midiIn = Deno.UnsafePointer.create(outHandleBuffer[0]);
+	return winmm.symbols.midiInStart(midiIn) === 0;
+}
+
+export function closeMidi() {
+	if (!midiIn) return;
+	winmm.symbols.midiInStop(midiIn);
+	winmm.symbols.midiInClose(midiIn);
+	midiIn = null;
+	midiCallback.close();
+}
+
+export function pollMidi(): MidiMessage[] {
+	if (messageQueue.length === 0) return [];
+	const messages = [...messageQueue];
+	messageQueue = [];
+	return messages;
 }
