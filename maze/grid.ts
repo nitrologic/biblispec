@@ -1,6 +1,6 @@
 // grid.ts - a biblispec scroller
 
-import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./win32ffi.ts";
+import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./macosffi.ts";
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
 import conway from "../books/conway.json" with { type: "json" };
