@@ -16,15 +16,19 @@ const VK_LEFT = 0x25;
 const VK_UP = 0x26;
 const VK_RIGHT = 0x27;
 const VK_DOWN = 0x28;
+const VK_SPACE=32;
+const VK_BACK=8;
+const VK_ESCAPE=27;
 
 export function pollKeyboard():number{
 	const up = user32.symbols.GetAsyncKeyState(VK_UP)&0x8000;
 	const down = user32.symbols.GetAsyncKeyState(VK_DOWN)&0x8000;
 	const left = user32.symbols.GetAsyncKeyState(VK_LEFT)&0x8000;
 	const right = user32.symbols.GetAsyncKeyState(VK_RIGHT)&0x8000;
-	const space = user32.symbols.GetAsyncKeyState(32)&0x8000;
-	const escape = user32.symbols.GetAsyncKeyState(27)&0x8000;
-	return (up?1:0)|(down?2:0)|(left?4:0)|(right?8:0)|(space?16:0)|(escape?32:0);
+	const space = user32.symbols.GetAsyncKeyState(VK_SPACE)&0x8000;
+	const backspace = user32.symbols.GetAsyncKeyState(VK_BACK)&0x8000;
+	const escape = user32.symbols.GetAsyncKeyState(VK_ESCAPE)&0x8000;
+	return (up?1:0)|(down?2:0)|(left?4:0)|(right?8:0)|(space?16:0)|(backspace?32:0)|(escape?64:0);
 }
 
 // mouse buttons: 1 = Left, 2 = Right, 4 = Middle
@@ -49,7 +53,11 @@ const winmm = Deno.dlopen("winmm.dll", {
 	midiInOpen: { parameters: ["buffer", "u32", "pointer", "pointer", "u32"], result: "u32", callback: true },
 	midiInStart: { parameters: ["pointer"], result: "u32" },
 	midiInStop: { parameters: ["pointer"], result: "u32" },
-	midiInClose: { parameters: ["pointer"], result: "u32" }
+	midiInClose: { parameters: ["pointer"], result: "u32" },
+	midiOutGetNumDevs: { parameters: [], result: "u32" },
+	midiOutOpen: { parameters: ["buffer", "u32", "u32", "u32", "u32"], result: "u32" },
+	midiOutShortMsg: { parameters: ["pointer", "u32"], result: "u32" },	
+	midiOutClose: { parameters: ["pointer"], result: "u32" }
 });
 
 const midiCallback = Deno.UnsafeCallback.threadSafe(
@@ -68,19 +76,30 @@ const midiCallback = Deno.UnsafeCallback.threadSafe(
 const CALLBACK_FUNCTION = 0x00030000; // Flag telling Windows we are passing a function pointer
 const MIM_DATA = 0x3C3;              // Window message for received short MIDI data
 
+let midiOut: Deno.PointerValue = null;
 let midiIn: Deno.PointerValue = null;
 let messageQueue: MidiMessage[] = [];
 
-export function initMidi(deviceId: number = 0): boolean {
+export function initMidi(inputId:number=0,outputId:number=0): boolean {
 	if (winmm.symbols.midiInGetNumDevs() === 0) return false;
-	const outHandleBuffer = new BigUint64Array(1);
-	const result = winmm.symbols.midiInOpen(outHandleBuffer,deviceId | 0,midiCallback.pointer,null,CALLBACK_FUNCTION);
-	if (result !== 0) return false;
-	midiIn = Deno.UnsafePointer.create(outHandleBuffer[0]);
+	const handleBuffer = new BigUint64Array(1);
+
+	const result1 = winmm.symbols.midiInOpen(handleBuffer,inputId|0,midiCallback.pointer,null,CALLBACK_FUNCTION);
+	if (result1 !== 0) return false;
+	midiIn = Deno.UnsafePointer.create(handleBuffer[0]);
+
+	const result2 = winmm.symbols.midiOutOpen(handleBuffer,outputId|0,0,0,0);
+	if (result2 !== 0) return false;
+	midiOut = Deno.UnsafePointer.create(handleBuffer[0]);
+
 	return winmm.symbols.midiInStart(midiIn) === 0;
 }
 
 export function closeMidi() {
+	if(midiOut){
+		winmm.symbols.midiOutClose(midiOut);
+		midiOut = null;
+	}
 	if (!midiIn) return;
 	winmm.symbols.midiInStop(midiIn);
 	winmm.symbols.midiInClose(midiIn);
@@ -93,4 +112,11 @@ export function pollMidi(): MidiMessage[] {
 	const messages = [...messageQueue];
 	messageQueue = [];
 	return messages;
+}
+
+export function writeMidi(data0:number,data1:number,data2:number):void{
+	if(midiOut){
+		const packed = data0 | (data1 << 8) | (data2 << 16);
+   		winmm.symbols.midiOutShortMsg(midiOut, packed);	
+	}
 }

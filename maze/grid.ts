@@ -7,10 +7,11 @@ import { BitGrid } from "./bitgrid.js";
 const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
 const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } =await import(ffiPath);
 
-
 const hasMidi=initMidi();
 
 const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
+
+const menuChars="******************* ";
 
 let midiCount=0;
 let midiMessage=null;
@@ -344,13 +345,16 @@ let mainMenu=false;//true;
 function menuWall(blocks:string[]){
 	let result=[];
 	for(let row of blocks){
-		result.push("*****"+row);
+		result.push(menuChars+row);
 	}
 	return result.join("\n")
 }
 
-function backSpace(){
-//	mainMenu=!mainMenu;
+function hitBackspace(){
+	mainMenu=!mainMenu;
+}
+
+function hitSpace(){
 	draw(glider[0],20,35,2);
 }
 
@@ -390,6 +394,8 @@ let count=0;
 let entropy=0;
 let appWidth=0;
 let appHeight=0;
+let oldKeys=0;
+
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-6;
@@ -399,10 +405,11 @@ while(isRunning()){
 		appHeight=vidHeight;
 		console.log(cursorClear);
 	}
-	let panx=cursorX>>1;
+	let menuWide=mainMenu?menuChars.length:0;
+
+	let panx=(menuWide+cursorX)>>1;
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
-	let menuWide=mainMenu?5:0;
 	let wide=(vidWidth-menuWide);
 	count++;
 	if(true){//((count++)&7)==5){
@@ -439,7 +446,10 @@ while(isRunning()){
 	}
 
 	const keys=pollKeyboard();
-	if(keys&32) stopRunning();
+	if((keys&16)&&!(oldKeys&16)) hitSpace();
+	if((keys&32)&&!(oldKeys&32)) hitBackspace();
+	if((keys&64)&&!(oldKeys&64)) stopRunning();
+	oldKeys=keys;
 	updatePumps(keys);
 	updateCursor();
 }
