@@ -1,16 +1,20 @@
 // grid.ts - a biblispec scroller
 
-//import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./macosffi.ts";
-import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./win32ffi.ts";
+import conway from "../books/conway.json" with { type: "json" };
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
-import conway from "../books/conway.json" with { type: "json" };
+
+const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
+const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } =await import(ffiPath);
+
+
+const hasMidi=initMidi();
+
+const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
 
 let midiCount=0;
 let midiMessage=null;
 let gridMillis=50;
-
-const hasMidi=initMidi();
 
 function onMidi(status:number, data1:number, data2:number){
 	midiMessage={status,data1,data2};
@@ -22,8 +26,12 @@ function onMidi(status:number, data1:number, data2:number){
 	}
 	midiCount++;	
 }
-
-const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
+function range(startChar = 'A',endChar = 'Z'){
+	const startCode = startChar.charCodeAt(0);
+	const endCode = endChar.charCodeAt(0);
+	const codes = Array.from({ length: endCode - startCode + 1 }, (_, i) =>   String.fromCharCode(startCode + i));
+	return codes.join('');
+}
 
 // bitgrid display modes
 
@@ -375,18 +383,22 @@ const encoder=new TextEncoder();
 
 let status=["have glider will fly"];
 
-console.log(cursorClear);
-
 keyboardMouseTask()
 
 let layer=0;
 let count=0;
 let entropy=0;
-
+let appWidth=0;
+let appHeight=0;
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
 	vidWidth=columns-6;
 	vidHeight=rows-6;
+	if(vidWidth!=appWidth||vidHeight!=appHeight){
+		appWidth=vidWidth;
+		appHeight=vidHeight;
+		console.log(cursorClear);
+	}
 	let panx=cursorX>>1;
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
@@ -415,8 +427,8 @@ while(isRunning()){
 	console.log(wall);
 	let latest=status.slice(-13);
 	console.log(latest.join("\n"));
-	let code=setCursor(5,7);
-	writeConsole(code);
+//	let code=setCursor(5,7);
+//	writeConsole(code);
 	console.log("\x1b[0m");
 	await sleep(gridMillis);
 
@@ -432,8 +444,9 @@ while(isRunning()){
 	updateCursor();
 }
 
-const code1=setCursor(1,vidHeight+2);
-writeConsole(code1);
+//const code1=setCursor(1,vidHeight+2);
+//writeConsole(code1);
+
 closeMidi();
 stopRunning();
 console.log("bye!");

@@ -2,6 +2,7 @@
 //		"🖤",
 //		"⬛"
 	];
+//import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from ffiPath;
 
 
 let squareBlocks=["⬛","⬜","🟨","🟩","🟥","🟧","🟦","🟪","🟫"];
