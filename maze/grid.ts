@@ -28,16 +28,7 @@ const gridMillis=50;
 
 const gridHalfs=" ▀▄█"; // fg bg ▀ - "\x1b[38;2;R;G;Bm\x1b[48;2;R;G;Bm▀"
 
-let dotBlocks=[
-		"⚫",
-		"🟠","🟡","🟢","🔴","🔵","🟣","🟤",
-		"🟧","🟨","🟩","🟥","🟦","🟪","🟫",
-		"🧡","💛","💚","❤️","💙","💜","🤎",
-		"⚪","⬜","🤍",
-		"🖤",
-		"⬛"
-	];
-
+let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","❤️","💙","💜","🤎"];
 
 // grid block display is 1:1 char per pixel resolution
 
@@ -225,7 +216,7 @@ function gridDotWindowLayer(grid:BitGrid,dots:string[],wx:number,wy:number,ww:nu
 		let offset=(wy+y)*w+wx;
 		let line=""
 		for(let x=0;x<ww;x++){  
-			const h=heat[offset];
+			const h=(heat[offset])|0;
 			line+=dots[h%n];
 			offset++;
 		}

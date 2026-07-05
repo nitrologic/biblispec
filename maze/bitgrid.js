@@ -125,7 +125,7 @@ export class BitGrid {
 	stepConwayLife(readLayer, writeLayer) {
 		const w = this.width;
 		const h = this.height;
-		const pixels = new Array(w).fill(false);
+		const pixels = new Array(w);//.fill(false);
 		for (let y = 0; y < h; y++) {
 			for (let x = 0; x < w; x++) {
 				const alive = this.getPixel(x, y, readLayer);
