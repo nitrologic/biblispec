@@ -1,14 +1,25 @@
 // grid.ts - a biblispec scroller
 
-import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./macosffi.ts";
+//import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./macosffi.ts";
+import { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } from "./win32ffi.ts";
 import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
 import conway from "../books/conway.json" with { type: "json" };
 
 let midiCount=0;
+let midiMessage=null;
+let gridMillis=50;
+
 const hasMidi=initMidi();
 
 function onMidi(status:number, data1:number, data2:number){
+	midiMessage={status,data1,data2};
+	if(status==176){
+		if(data1==14){
+			gridMillis=260-data2*2;
+
+		}
+	}
 	midiCount++;	
 }
 
@@ -22,7 +33,6 @@ const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi
 //   1x2 true color block
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-const gridMillis=50;
 
 // unused ref
 
@@ -185,7 +195,7 @@ function heatRGB(heat:number):string{
 function gridHalfWindowLayer(grid:BitGrid,wx:number,wy:number,ww:number,wh:number){
 	const w=grid.width;
 	const heat:Uint16Array=grid.heatmap;
-	const n=heatRGB.length-1;
+	const n=heatRGBColors.length-1;
 	const result=[];
 	const h=(wh/2)|0;
 	for(let y=0;y<h;y++){
@@ -209,9 +219,9 @@ function gridHalfWindowLayer(grid:BitGrid,wx:number,wy:number,ww:number,wh:numbe
 }
 
 function gridDotWindowLayer(grid:BitGrid,dots:string[],wx:number,wy:number,ww:number,wh:number){
+	const n=dots.length;
 	const w=grid.width;
 	const heat:Uint16Array=grid.heatmap;
-	const n=dots.length;
 	const result=[];
 	for(let y=0;y<wh;y++){
 		let offset=(wy+y)*w+wx;
@@ -366,6 +376,7 @@ keyboardMouseTask()
 
 let layer=0;
 let count=0;
+let entropy=0;
 
 while(isRunning()){
 	const { columns, rows } = Deno.consoleSize();
@@ -379,7 +390,7 @@ while(isRunning()){
 	count++;
 	if(true){//((count++)&7)==5){
 		layer=1-layer;
-		bitgrid.stepConwayLife(2+layer,3-layer);
+		entropy=bitgrid.stepConwayLife(2+layer,3-layer);
 		bitgrid.heat(3-layer,25);
 	}
 	bitgrid.cool(0.95);
@@ -391,8 +402,10 @@ while(isRunning()){
 //	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide*2,vidHeight*2);	//2,3
 	console.log(cursorHome);
 
-	const title=gridTitle+" ["+columns+","+rows+","+midiCount+"]";
-	console.log(title,"pumps:"+JSON.stringify(pump),"     ");
+	const message=JSON.stringify(midiMessage);
+	const title=gridTitle+" ["+columns+","+rows+","+count+","+entropy+","+midiCount+"] message:"+message;
+	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
+
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
@@ -418,3 +431,4 @@ const code1=setCursor(1,vidHeight+2);
 writeConsole(code1);
 closeMidi();
 stopRunning();
+console.log("bye!");

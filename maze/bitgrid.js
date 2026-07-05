@@ -123,6 +123,7 @@ export class BitGrid {
 	}
 
 	stepConwayLife(readLayer, writeLayer) {
+		let entropy=0;
 		const w = this.width;
 		const h = this.height;
 		const pixels = new Array(w);//.fill(false);
@@ -131,10 +132,13 @@ export class BitGrid {
 				const alive = this.getPixel(x, y, readLayer);
 				const neighbors = this.countNeighbors(x, y, readLayer);
 				const next = (alive && (neighbors === 2 || neighbors === 3)) || (!alive && neighbors === 3);
+				if(next!=alive) entropy++;
 				pixels[x]=next;
+
 			}
 			this.writePixels(pixels, 0, y, writeLayer);
 		}
+		return entropy;
 	}
 
 	copyLayer(readLayer, writeLayer) {
