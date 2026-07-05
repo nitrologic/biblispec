@@ -29,6 +29,8 @@ const gridMillis=50;
 const gridHalfs=" ▀▄█"; // fg bg ▀ - "\x1b[38;2;R;G;Bm\x1b[48;2;R;G;Bm▀"
 
 let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","❤️","💙","💜","🤎"];
+let dotBlocksABC=[" ","A","B","C"];
+let dotBlockWide=2;
 
 // grid block display is 1:1 char per pixel resolution
 
@@ -70,7 +72,6 @@ let pent=conway.shapes.methuselahs.rPentomino;
 let pulsar=conway.shapes.oscillators.pulsar;
 
 const glider=axis(conway.shapes.spaceships.glider);
-
 
 function draw(shape:string[],x:number,y:number,layer:number){
 	bitgrid.drawMask(shape,"O",x,y,layer);
@@ -217,7 +218,8 @@ function gridDotWindowLayer(grid:BitGrid,dots:string[],wx:number,wy:number,ww:nu
 		let line=""
 		for(let x=0;x<ww;x++){  
 			const h=(heat[offset])|0;
-			line+=dots[h%n];
+			const index=h?(1+(h%(n-1))):0;
+			line+=dots[index];
 			offset++;
 		}
 		result.push(line);
@@ -373,7 +375,7 @@ while(isRunning()){
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
 	let menuWide=mainMenu?5:0;
-	let wide2=(vidWidth-menuWide)*2;
+	let wide=(vidWidth-menuWide);
 	count++;
 	if(true){//((count++)&7)==5){
 		layer=1-layer;
@@ -382,12 +384,11 @@ while(isRunning()){
 	}
 	bitgrid.cool(0.95);
 
-	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,wide2/4,vidHeight);
-
-//	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide2/2,vidHeight*2)
-//	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide2/2,vidHeight);
-//	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide2,vidHeight*2);
-//	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide2,vidHeight*2);	//2,3
+	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,wide/dotBlockWide,vidHeight);
+//	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide,vidHeight*2)
+//	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide,vidHeight);
+//	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide*2,vidHeight*2);
+//	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide*2,vidHeight*2);	//2,3
 	console.log(cursorHome);
 
 	const title=gridTitle+" ["+columns+","+rows+","+midiCount+"]";
