@@ -7,36 +7,74 @@ const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi, writeMidi } =awa
 
 const hasMidi=initMidi();
 
+const ProgramChange = 0xC0;
 const NoteOn=0x90;
 const NoteOff=0x80;
 const C4=60;
 
+const Patch = {
+	AcousticGrandPiano: 0,
+	BrightAcousticPiano: 1,
+	ElectricPiano1: 4,
+	Harpsichord: 6,
+	AcousticGuitar: 24,
+	Violin: 40,
+	Trumpet: 56,
+	AltoSax: 65,
+	Flute: 73,
+	LeadSquare: 80,
+	SynthBrass1 :62
+};
+
+
 console.log("traffic 0.6 - Space to instance, Esc to quit")
 
-const notes={};
+const noteOns={};
 
-function playNote(note:number=C4,volume:number=100,millis:number=200):void{
+function programChange(patch: number) {
 	if(hasMidi){
-		if(note in notes){
-			writeMidi(NoteOff,note,0);
-		}
-		notes[note]={millis};
-		writeMidi(NoteOn,note,100);
+		writeMidi(ProgramChange,patch,0);
 	}
 }
+
+function playNote(note:number=C4,volume:number=60,channel:number=0,millis:number=200):void{
+	note&=127;
+	volume&=127;
+	channel&=15;
+	if(hasMidi){
+		const noteChannel=(channel<<7)|(note&127);
+		if(noteChannel in noteOns){
+			writeMidi(NoteOff+channel,note,0);
+		}
+		noteOns[noteChannel]={millis,channel,note};
+		writeMidi(NoteOn+channel,note,volume);
+	}
+}
+
 function updateNotes(millis:number):void{
 	if(hasMidi){
-		for(let key in notes){
-			const note=notes[key];
+		for(let key in noteOns){
+			const note=noteOns[key];
 			note.millis-=millis;
 			if((note.millis|0)<=0){
-				writeMidi(NoteOff,key,0);
-				delete notes[key];
+				writeMidi(NoteOff+note.channel,note.note,0);
+				delete noteOns[key];
 			}
 		}
 	}
 }
 
+//programChange(Patch.SynthBrass1);
+console.log("auditioning percussion");
+for (let i=1;i<128;i++){
+	playNote(i,50,9);
+	await sleep(32);
+}
+console.log("auditioning piano");
+for (let i=1;i<128;i++){
+	playNote(128-i,40+i/20);
+	await sleep(24);
+}
 playNote(C4);
 
 let trafficSleep=20;//10;//60;
