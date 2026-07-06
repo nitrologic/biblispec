@@ -5,6 +5,8 @@ import { sleep } from "./terminal.ts";
 const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
 const { pollKeyboard, pollMouse, pollMidi, initMidi, closeMidi, writeMidi } =await import(ffiPath);
 
+console.log("piano 0.1 - Space Backspace scratch, Esc to exit")
+
 const logging=true;
 const audition=false;
 
@@ -116,8 +118,6 @@ function onBack(){
 
 let running=true;
 let keyMask=-1;
-
-console.log("piano 0.1 - Space to instance, Esc to exit")
 
 while(running){
 	const midiEvents = pollMidi();

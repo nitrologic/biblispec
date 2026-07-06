@@ -1,5 +1,6 @@
 {
 	"tasks":{
+		"machine": "deno run --allow-read machine.ts",
 		"buildrom": "deno run --allow-read buildrom.ts",
 		"menu": "deno run --allow-run menu.ts",
 		"piano": "deno run --allow-ffi --allow-read piano.ts",
