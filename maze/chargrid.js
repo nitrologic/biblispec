@@ -9,12 +9,14 @@ export class CharGrid {
 		this.height = height;
 		this.layers = layers;
 		this.span=(width);
-		this.data=new Uint32Array(this.span*height*layers);
+		const count=this.span*height*layers;
+		this.data=new Uint32Array(count).fill(32);
 	}
 
 	toStrings(){
 		const result=[];
 		const w=this.span;
+//		let text=String.fromCodePoint(...this.data);
 		let text=String.fromCodePoint(...this.data);
 		for(let y=0;y<this.height;y++){
 			result.push(text.substring(y*w,(y+1)*w));
@@ -32,7 +34,10 @@ export class CharGrid {
 		}    
 	}
 
-	drawShape(strings,x,y,layer){
+	drawShape(strings,x,y,layer=0){
+		x|=0;
+		y|=0;
+		layer|=0;
 		for(const text of strings){
 			let offset=(layer*this.height+y)*this.span+x;
 			for(let i=0;i<text.length;i++){

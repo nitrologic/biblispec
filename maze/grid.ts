@@ -1,15 +1,21 @@
 // grid.ts - a biblispec scroller
 
+// - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
+
 import conway from "../books/conway.json" with { type: "json" };
-import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput } from "./terminal.ts";
+import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning } from "./terminal.ts";
 import { BitGrid } from "./bitgrid.js";
 
+// deno Foreign Function Interface
 const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
-const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } =await import(ffiPath);
+const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } = await import(ffiPath);
 
 const hasMidi=initMidi();
 
-const gridTitle="☰ nitrologic grid 0.7.4 - arrows, space, q to quit "+(hasMidi?"midi":"nomidi");
+const gridTitle="☰ nitrologic grid 0.7.5 - Arrows, Space, Esc to Quit "+(hasMidi?"midi":"nomidi");
+
+const dotBlockWide=2;
+const dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟧","🟨","🟩","🟥","🟦"];
 
 const menuChars="******************* ";
 
@@ -43,19 +49,6 @@ function range(startChar = 'A',endChar = 'Z'){
 
 const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
-// unused ref
-
-const gridHalfs=" ▀▄█"; // fg bg ▀ - "\x1b[38;2;R;G;Bm\x1b[48;2;R;G;Bm▀"
-
-// "❤️",
-
-let dotBlocksSpots=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","💙","💜","🤎"];
-let glagoliticBlocks=[" ","Ⰱ","Ⰾ","Ⰰ","Ⰳ","Ⱁ","Ⱄ","Ⰾ","Ⱁ","Ⰲ","Ⱑ","Ⱀ","Ⱐ"];
-let dotBlocksABC=[" ","A","B","C"];
-let dotBlockWide=2;
-
-let dotBlocks=dotBlocksSpots;
-
 // grid block display is 1:1 char per pixel resolution
 
 const gridBlocks=" ▣▥▤▦▢";
@@ -63,7 +56,7 @@ const gridBlocks=" ▣▥▤▦▢";
 let vidWidth=72*2;
 let vidHeight=22;
 
-let gridWidth=22*8*4;
+let gridWidth=22*8*2;
 let gridHeight=23*8;
 
 function mirror(shape:string[]):string[]{
@@ -127,7 +120,7 @@ draw(glider[1],20,30,2);
 draw(glider[2],10,30,2);
 draw(glider[3],10,20,2);
 
-for(let i=0;i<12;i++){
+for(let i=0;i<10;i++){
 	for(let j=0;j<5;j++){
 		draw(pulsar,62+i*25,14+j*17,2);
 	}
@@ -148,7 +141,7 @@ function updateCursor(){
 	if(cursorX<0){
 		cursorX=0;cursorVX=0;
 	}
-	let w=bitgrid.width-vidWidth;
+	let w=bitgrid.width*2-vidWidth;
 	if(w<10) w=10;
 	if(cursorX>=w){
 		cursorX=w;
@@ -387,8 +380,6 @@ const encoder=new TextEncoder();
 
 let status=["have glider will fly"];
 
-keyboardMouseTask()
-
 let layer=0;
 let count=0;
 let entropy=0;
@@ -457,6 +448,7 @@ while(isRunning()){
 //const code1=setCursor(1,vidHeight+2);
 //writeConsole(code1);
 
-closeMidi();
 stopRunning();
 console.log("bye!");
+
+closeMidi();
