@@ -1,3 +1,20 @@
+C:\nitrologic\biblispec\maze>deno run table.ts
+table 0.1
+╭───────────────────────╮
+│#**####################│
+│#             # #     #│
+│# ###### ######## #   #│
+│# #    # #       ##   #│
+│#  # #       #        #│
+│# #    ###   #   ##   #│
+│##### #  ###     ## ###│
+│#     #      #    #   #│
+│#     #           #   #│
+│#######################│
+╰───────────────────────╯
+
+// older previous notes below
+
 <script src="dspjs/dspmidi.js"></script>
 <script src="dspjs/dspmidifile.js"></script>
 
