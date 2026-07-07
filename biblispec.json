@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.3",
+	"version": "1.5.4",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -134,7 +134,7 @@
 			"name":"code points of visual interest",
 			"code":{
 				"geom":"⯅⯆⯇⯈⯀⯁◆◇◈⬥⬦⬠⬟⬡⬢⬣⬤◫◬◭◮",
-				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌",
+				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌·",
 				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
 				"circles":"◐◒◑◓◔◕",
 				"markdown":"↩↪↗↘↖↙◀▶✳✴",
