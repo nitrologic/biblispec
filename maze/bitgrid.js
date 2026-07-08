@@ -4,7 +4,7 @@
 //  - 32 bit data words contained in single Uint32Array
 //	- drawShape stepConwayLife cellular automata functions incoming
 
-export class BitGrid {
+class BitGrid {
 
 	constructor(width,height,layers) {
 		this.width = width;
@@ -71,7 +71,7 @@ export class BitGrid {
 		for(const text of strings){
 			for(let i=0;i<text.length;i++){
 				const char=text[i];
-				const state=char==maskChar;(char=="O");
+				const state=(char==maskChar);//(char=="O");
 				this.setPixel(x+i,y,layer,state);
 			}
 			y++;

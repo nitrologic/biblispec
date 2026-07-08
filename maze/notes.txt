@@ -6,6 +6,14 @@ const middleDot="·";
 const gridBlocks=" ▣▥▤▦▢";
 
 
+    line-height: 1.3;
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+
+
 C:\nitrologic\biblispec\maze>deno run table.ts
 table 0.1
 ╭───────────────────────╮
