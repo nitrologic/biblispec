@@ -1,18 +1,15 @@
 // table.ts
 
-console.log("nitrologic biblispec table 0.1.4");
+console.log("nitrologic biblispec table 0.1.5");
+
+const undefinedCase="▯";
+const emptyCase="·";
+const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
+const borderChars=borderStyle[0]+"├┤┬┴─│"+"👺"
 
 // surround truth with 8 bit edgeCase 
 
-enum Edge { 
-	CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBottomLeft, Bottom, CornerBottomRight,
-	T1,T2,T3,T4,H,V,Z
-}
-
-const undefinedCase="▯";//"\u001b[";//"👺";//"·";//"▢";
-const emptyCase="▫";//🟦"
-
-// 8bitsurround:number,borderCharIndex:number,
+enum Edge {TopLeft, Top, TopRight, Left, Center, Right, BottomLeft, Bottom, BottomRight, T1, T2, T3, T4, H, V, Z}
 
 const edgeCase={
 	0b00100001:Edge.T1,
@@ -21,14 +18,14 @@ const edgeCase={
 	0b00011000:Edge.V,
 	0b00000101:Edge.T3,
 	0b10100000:Edge.T4,
-	0b10100001:Edge.CornerBottomLeft,
+	0b10100001:Edge.Center,
 	0b10000101:Edge.Center,
 	0b00100101:Edge.Center,
 	0b10100100:Edge.Center,
-	0b00000001:Edge.CornerTopLeft,
-	0b10000000:Edge.CornerBottomRight,
-	0b00100000:Edge.CornerBottomLeft,
-	0b00000100:Edge.CornerTopRight,
+	0b00000001:Edge.TopLeft,
+	0b10000000:Edge.BottomRight,
+	0b00100000:Edge.BottomLeft,
+	0b00000100:Edge.TopRight,
 	0b11100000:Edge.Bottom,
 	0b00000111:Edge.Top,
 	0b11000000:Edge.Bottom,
@@ -39,16 +36,16 @@ const edgeCase={
 	0b00101001:Edge.Left,
 	0b00001001:Edge.Left,
 	0b00010100:Edge.Right,
-	0b11110100:Edge.CornerBottomRight,
-	0b11101001:Edge.CornerBottomLeft,
+	0b11110100:Edge.BottomRight,
+	0b11101001:Edge.BottomLeft,
 	0b10010000:Edge.Right, 
 	0b00101000:Edge.Left,
-	0b10010111:Edge.CornerTopRight,
-	0b00101111:Edge.CornerTopLeft,
-	0b10010011:Edge.CornerTopRight,
-	0b11001001:Edge.CornerBottomLeft,
-	0b00101110:Edge.CornerTopLeft,
-	0b01110100:Edge.CornerBottomRight,
+	0b10010111:Edge.TopRight,
+	0b00101111:Edge.TopLeft,
+	0b10010011:Edge.TopRight,
+	0b11001001:Edge.BottomLeft,
+	0b00101110:Edge.TopLeft,
+	0b01110100:Edge.BottomRight,
 	0b00000010:Edge.Top,
 	0b00001000:Edge.Left,
 	0b00010000:Edge.Right,
@@ -66,8 +63,14 @@ const edgeCase={
 }
 
 export class BitGrid {
+	width:number;
+	height:number;
+	layers:number;
+	span:number;
+	data:Uint32Array;
+	heatmap:Uint16Array;
 
-	constructor(width,height,layers) {
+	constructor(width:number,height:number,layers:number) {
 		this.width = width;
 		this.height = height;
 		this.layers = layers;
@@ -93,7 +96,7 @@ export class BitGrid {
 
 	// bit pixel
 
-	getPixel(x,y,layer){
+	getPixel(x:number,y:number,layer:number){
 		// x,y toroidal wrap around getter
 		x = (x + this.width) % this.width;
 		y = (y + this.height) % this.height;
@@ -134,7 +137,7 @@ export class BitGrid {
 
 const badBits:Array<number>=[];
 
-function makeTable(grid:BiitGrid,borderStyle:string){
+function makeTable(grid:BitGrid,borderStyle:string){
 	const style=[...borderStyle];
 	const result=[];
 	for(let y=1;y<grid.height-1;y++){
@@ -173,10 +176,12 @@ const lines=[
 	"#     #           #   #",
 	"#######################",
 ]
-const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
+
 const grid=BitGrid.fromLines(lines,"#");
-const table=makeTable(grid,borderStyle[3]+"├┤┬┴─│"+"👺")
+const table=makeTable(grid,borderChars);
+
 console.log(lines.join("\n"));
+
 console.log(table.join("\n"));
 
 function bin(bits:number){return "0b"+bits.toString(2).padStart(8,"0");}
