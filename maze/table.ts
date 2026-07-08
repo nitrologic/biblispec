@@ -1,29 +1,18 @@
 // table.ts
 
-// renders path borders, not wall edges
+console.log("nitrologic biblispec table 0.1.3");
 
-console.log("nitrologic biblispec table 0.1.2");
-
-const middleDot="·";
-const gridBlocks=" ▣▥▤▦▢";
-
-const borderStyle=[
-	"╭─╮│┼│╰─╯",
-	"┏━┓┃╋┃┗━┛",
-	"╔═╗║╬║╚═╝",
-	"↗→↘↑┼↓↖←↙├┤┬┴─│",
-	"↙←↖↓┼↑↘→↗",
-];
+// surround truth with 8 bit edgeCase 
 
 enum Edge { 
-	CornerTopLeft, Top, CornerTopRight, 
-	Left, Center, Right,
-	CornerBottomLeft, Bottom, CornerBottomRight,
-	T1,T2,T3,T4,
-	H,V
+	CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBottomLeft, Bottom, CornerBottomRight,
+	T1,T2,T3,T4,H,V
 }
 
-// 8surroungingbits:number,borderCharIndex:number,
+const undefinedCase="▯";//"\u001b[";//"👺";//"·";//"▢";
+const emptyCase="▫";//🟦"
+
+// 8bitsurround:number,borderCharIndex:number,
 
 const edgeCase={
 	0b00100001:Edge.T1,
@@ -36,8 +25,6 @@ const edgeCase={
 	0b10000101:Edge.Center,
 	0b00100101:Edge.Center,
 	0b10100100:Edge.Center,
-	0b10100001:Edge.Center,
-
 	0b00000001:Edge.CornerTopLeft,
 	0b10000000:Edge.CornerBottomRight,
 	0b00100000:Edge.CornerBottomLeft,
@@ -66,17 +53,14 @@ const edgeCase={
 	0b00001000:Edge.Left,
 	0b00010000:Edge.Right,
 	0b01000000:Edge.Bottom,
-	0b11100000:Edge.Left,
-	0b00010010:Edge.Up, // (top and bottom walls) → │
+	0b00010010:Edge.V, // (top and bottom walls) → │
 	0b01000100:Edge.Right, //  (left and right walls) → ─
 	0b00010110:Edge.T1, //  (top, bottom, right walls) → ├
 	0b01010010:Edge.T2, //  (top, bottom, left walls) → ┤
 	0b00011100:Edge.T3, //  (top, left, right walls) → ┬
 	0b01001100:Edge.T4, //  (bottom, left, right walls) → ┴
 	0b01011100:Edge.Center, //  (all four cardinal walls) → ┼
-
 }
-
 
 export class BitGrid {
 
@@ -152,7 +136,7 @@ function makeTable(grid:BiitGrid,borderStyle:string){
 		for(let x=1;x<grid.width-1;x++){
 			if(!grid.getPixel(x,y,0)){
 				let bits=grid.getNeighbors(x,y,0);
-				let border="·";//"▢";
+				let border=bits==0?emptyCase:undefinedCase;//"·";//"▢";
 				if(bits in edgeCase){
 					const edge=edgeCase[bits];
 					border=borderStyle.charAt(edge);
@@ -178,8 +162,8 @@ const lines=[
 	"#     #           #   #",
 	"#######################",
 ]
-
+const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
 const grid=BitGrid.fromLines(lines,"#");
-const table=makeTable(grid,borderStyle[3])
-
+const table=makeTable(grid,borderStyle[3]+"├┤┬┴─│")
+console.log(lines.join("\n"));
 console.log(table.join("\n"));
