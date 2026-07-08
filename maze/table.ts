@@ -2,7 +2,8 @@
 
 // renders path borders, not wall edges
 
-console.log("nitrologic table 0.2");
+console.log("nitrologic biblispec table 0.1.2");
+
 const middleDot="·";
 const gridBlocks=" ▣▥▤▦▢";
 
@@ -10,19 +11,33 @@ const borderStyle=[
 	"╭─╮│┼│╰─╯",
 	"┏━┓┃╋┃┗━┛",
 	"╔═╗║╬║╚═╝",
-	"↗→↘↑┼↓↖←↙",
+	"↗→↘↑┼↓↖←↙├┤┬┴─│",
 	"↙←↖↓┼↑↘→↗",
 ];
 
 enum Edge { 
 	CornerTopLeft, Top, CornerTopRight, 
 	Left, Center, Right,
-	CornerBottomLeft, Bottom, CornerBottomRight 
+	CornerBottomLeft, Bottom, CornerBottomRight,
+	T1,T2,T3,T4,
+	H,V
 }
 
 // 8surroungingbits:number,borderCharIndex:number,
 
 const edgeCase={
+	0b00100001:Edge.T1,
+	0b10000100:Edge.T2,
+	0b01000010:Edge.H,
+	0b00011000:Edge.V,
+	0b00000101:Edge.T3,
+	0b10100000:Edge.T4,
+	0b10100001:Edge.CornerBottomLeft,
+	0b10000101:Edge.Center,
+	0b00100101:Edge.Center,
+	0b10100100:Edge.Center,
+	0b10100001:Edge.Center,
+
 	0b00000001:Edge.CornerTopLeft,
 	0b10000000:Edge.CornerBottomRight,
 	0b00100000:Edge.CornerBottomLeft,
@@ -77,12 +92,12 @@ export class BitGrid {
 	static fromLines(lines: string[], truth: string): BitGrid {
 		const height = lines.length;
 		const width = lines[0].length;
-		const grid = new BitGrid(width*2+4, height*2+4, 1);
+		const grid = new BitGrid(width*2+5, height*2+5, 1);
 		for(let y=0;y<height;y++){
 			const line=lines[y];
 			for(let x=0;x<width;x++){
 				if(line.charAt(x)==truth) {
-					grid.setPixel(2+x*2,2+y*2,0,true);
+					grid.setPixel(3+x*2,3+y*2,0,true);
 				}
 			}
 		}
@@ -137,14 +152,14 @@ function makeTable(grid:BiitGrid,borderStyle:string){
 		for(let x=1;x<grid.width-1;x++){
 			if(!grid.getPixel(x,y,0)){
 				let bits=grid.getNeighbors(x,y,0);
-				let border="▢";
+				let border="·";//"▢";
 				if(bits in edgeCase){
 					const edge=edgeCase[bits];
 					border=borderStyle.charAt(edge);
 				}
 				line+=border;
 			}else{
-				line+="▣";
+				line+=" ";
 			}
 		}
 		result.push(line);
