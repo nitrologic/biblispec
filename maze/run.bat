@@ -1,1 +1,1 @@
-deno run grid
+deno run table

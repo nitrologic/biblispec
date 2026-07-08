@@ -1,6 +1,6 @@
 // maze.ts - a biblispec books maze example script by nitrologic
 
-console.log("maze 0.1.2");
+console.log("nitrologic biblispec maze 0.2.0");
 
 const grassframe7="─┬┴│┤├┼";//"⯅⯆⯇⯈⯀⯁◆";
 const grass7arrows="→←↑↓↗↘↙↖";
@@ -8,14 +8,17 @@ const grass7arrows="→←↑↓↗↘↙↖";
 const starChar="✩";
 const hashChar="⬦";//"◦";
 
-const block="▢▣"
+const block="▢▣";
 
 const halfs=" ▀▄█";
 const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 // todo add steps to biblispec quads section
 const steps=[" ▂▃▄▅▆▇█"," ▏▎▍▌▋▊▉█"];
 
-const grass=steps[0]+steps[1];
+const grass2=steps[0]+steps[1];
+
+const grass=block;
+
 
 enum Edge { CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBotLeft, Bottom, CornerBotRight }
 const boxDirs=[
@@ -35,6 +38,7 @@ const plain=[
 	"# #    # #       ##   #",
 	"#  # #       #        #",
 	"# #    ###   #   ##   #",
+	"#                     #",
 	"##### #  ###     ## ###",
 	"#     #      #    #   #",
 	"#     #           #   #",

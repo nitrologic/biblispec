@@ -7,6 +7,7 @@ const { pollKeyboard, pollMouse, pollMidi, initMidi, closeMidi, writeMidi } =awa
 
 console.log("piano 0.1 - Space Backspace scratch, Esc to exit")
 
+const debugging=false;
 const logging=true;
 const audition=false;
 
@@ -45,7 +46,7 @@ function updateNotes(millis:number):void{
 		if((note.duration|0)<=0){
 			noteOns.delete(key);
 			if(hasMidi) writeMidi(NoteOff+note.channel,note.note,0);
-			if(logging) console.log("noteOff:",key)
+			if(debugging) console.log("noteOff:",key)
 		}
 	}
 }
@@ -79,7 +80,7 @@ if(audition){
 	console.log("auditioning percussion");
 	for (let i=26;i<128;i++){
 		playNote(i,50,9);
-		await sleep(32);
+		await sleep(12);
 	}
 	console.log("auditioning piano");
 	for (let i=1;i<128;i++){
