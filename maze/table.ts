@@ -1,13 +1,24 @@
 // table.ts
 
-console.log("nitrologic biblispec table 0.1.5");
-
-const undefinedCase="▯";
-const emptyCase="·";
-const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
-const borderChars=borderStyle[0]+"├┤┬┴─│"+"👺"
+const lines=[
+	"#**####################",
+	"#             # #     #",
+	"# ###### ######## #   #",
+	"# #    # #       ##   #",
+	"#  # #       #        #",
+	"# #    ###   #   ##   #",
+	"##### #  ###     ## ###",
+	"#     #           #   #",
+	"#######################",
+]
 
 // surround truth with 8 bit edgeCase 
+
+console.log("nitrologic biblispec table 0.1.6");
+
+const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
+const undefinedCase="▯";
+const emptyCase="·";
 
 enum Edge {TopLeft, Top, TopRight, Left, Center, Right, BottomLeft, Bottom, BottomRight, T1, T2, T3, T4, H, V, Z}
 
@@ -107,7 +118,7 @@ export class BitGrid {
 		return (word&(1<<bitIndex))!=0;
 	}
 
-	getNeighbors(x,y,z){
+	getNeighbors(x:number,y:number,z:number){
 		let bits=0;
 		if(this.getPixel(x-1,y-1,z)) bits|=128;
 		if(this.getPixel(x,y-1,z)) bits|=64;
@@ -120,7 +131,7 @@ export class BitGrid {
 		return bits;
 	}
 
-	setPixel(x,y,layer,state){
+	setPixel(x:number,y:number,layer:number,state:boolean){
 		const offset=layer*this.height*this.span+y*this.span+(x>>5);
 		const mask=1<<(x&31);
 		let word=this.data[offset];
@@ -165,24 +176,16 @@ function makeTable(grid:BitGrid,borderStyle:string){
 	return result;
 }
 
-const lines=[
-	"#**####################",
-	"#             # #     #",
-	"# ###### ######## #   #",
-	"# #    # #       ##   #",
-	"#  # #       #        #",
-	"# #    ###   #   ##   #",
-	"##### #  ###     ## ###",
-	"#     #           #   #",
-	"#######################",
-]
+// table example displaying with each borderStyle
 
 const grid=BitGrid.fromLines(lines,"#");
-const table=makeTable(grid,borderChars);
-
 console.log(lines.join("\n"));
 
-console.log(table.join("\n"));
+for(const key in borderStyle){
+	const borderChars=borderStyle[key]+"├┤┬┴─│"+"👺"
+	const table=makeTable(grid,borderChars);
+	console.log(table.join("\n"));
+}
 
 function bin(bits:number){return "0b"+bits.toString(2).padStart(8,"0");}
 for(const bits of badBits){
