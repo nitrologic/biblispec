@@ -1,12 +1,12 @@
 // table.ts
 
-console.log("nitrologic biblispec table 0.1.3");
+console.log("nitrologic biblispec table 0.1.4");
 
 // surround truth with 8 bit edgeCase 
 
 enum Edge { 
 	CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBottomLeft, Bottom, CornerBottomRight,
-	T1,T2,T3,T4,H,V
+	T1,T2,T3,T4,H,V,Z
 }
 
 const undefinedCase="▯";//"\u001b[";//"👺";//"·";//"▢";
@@ -60,6 +60,9 @@ const edgeCase={
 	0b00011100:Edge.T3, //  (top, left, right walls) → ┬
 	0b01001100:Edge.T4, //  (bottom, left, right walls) → ┴
 	0b01011100:Edge.Center, //  (all four cardinal walls) → ┼
+	0b10100101:Edge.Center,
+	0b10000001:Edge.Center,
+	0b00100100:Edge.Center
 }
 
 export class BitGrid {
@@ -129,17 +132,25 @@ export class BitGrid {
 
 // return bordered version of lines with char per cell spacing
 
+const badBits:Array<number>=[];
+
 function makeTable(grid:BiitGrid,borderStyle:string){
+	const style=[...borderStyle];
 	const result=[];
 	for(let y=1;y<grid.height-1;y++){
 		let line=""
 		for(let x=1;x<grid.width-1;x++){
 			if(!grid.getPixel(x,y,0)){
 				let bits=grid.getNeighbors(x,y,0);
-				let border=bits==0?emptyCase:undefinedCase;//"·";//"▢";
-				if(bits in edgeCase){
-					const edge=edgeCase[bits];
-					border=borderStyle.charAt(edge);
+				let border=emptyCase;
+				if(bits){
+					if(bits in edgeCase){
+						const edge=edgeCase[bits];
+						border=style[edge];//borderStyle.charAt(edge);
+					}else{
+						border=undefinedCase;//"·";//"▢";						
+						badBits.push(bits);
+					}
 				}
 				line+=border;
 			}else{
@@ -164,6 +175,11 @@ const lines=[
 ]
 const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
 const grid=BitGrid.fromLines(lines,"#");
-const table=makeTable(grid,borderStyle[3]+"├┤┬┴─│")
+const table=makeTable(grid,borderStyle[3]+"├┤┬┴─│"+"👺")
 console.log(lines.join("\n"));
 console.log(table.join("\n"));
+
+function bin(bits:number){return "0b"+bits.toString(2).padStart(8,"0");}
+for(const bits of badBits){
+	console.log("undefined",bin(bits,6),bits);
+}
