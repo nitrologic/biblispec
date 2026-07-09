@@ -2,25 +2,36 @@
 
 // traffic.ts and grid.ts import from here
 
-// replaceText, sleep, isRunning, stopRunning, keyboardMouseTask, pollInput
+// export const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+// export function writeConsole(text:string)
+// export function isRunning()
+// export function stopRunning()
+// export function pollInput():Uint8Array[]{
+// export async function keyboardMouseTask(enableMouse:boolean=false) {
+// export function setCursor(col: number,row: number): string
+// export function replaceText(text: string, search: string, replace: string, leftToRight:boolean=true) : string
 
-export function replaceText(text: string, search: string, replace: string, leftToRight:boolean=true) : string {
-	if (leftToRight) return text.replaceAll(search, replace);
-	const reversed = Array.from(text).reverse().join("");
-	const revSearch = Array.from(search).reverse().join("");
-	const revReplace = Array.from(replace).reverse().join("");
-	const res = reversed.replaceAll(revSearch, revReplace);
-	return Array.from(res).reverse().join("");
-}
-
-let running=true;
+// sleep - await sleep(20);
 
 export const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+
+// writeConsole
+
+const encoder=new TextEncoder();
+
+export function writeConsole(text:string){
+	Deno.stdout.write(encoder.encode(text));
+}
+
+// isRunning
+
+let running=true;
 
 export function isRunning(){
 	return running;
 }
 
+// stopRunning
 // todo - opt in closeMidi
 
 export function stopRunning(){
@@ -31,11 +42,13 @@ export function stopRunning(){
 
 let keyboardQueue:Uint8Array[]=[];
 const keyboardBuffer = new Uint8Array(10);
+
 export function pollInput():Uint8Array[]{
 	let queue=keyboardQueue;
 	keyboardQueue=[];
 	return queue;
 }
+
 export async function keyboardMouseTask(enableMouse:boolean=false) {
 	Deno.stdin.setRaw(true);
 	if(enableMouse){
@@ -57,6 +70,8 @@ export async function keyboardMouseTask(enableMouse:boolean=false) {
 	}
 }
 
+// setCursor x,y
+
 const resetConsole="\x1b[0m";
 const enableCursor="\x1b[?25h";
 const disableCursor="\x1b[?25l";
@@ -69,8 +84,13 @@ export function setCursor(col: number,row: number): string {
 	return code;
 }
 
-const encoder=new TextEncoder();
+// replaceText text, search, replace, clockwise
 
-export function writeConsole(text:string){
-	Deno.stdout.write(encoder.encode(text));
+export function replaceText(text: string, search: string, replace: string, leftToRight:boolean=true) : string {
+	if (leftToRight) return text.replaceAll(search, replace);
+	const reversed = Array.from(text).reverse().join("");
+	const revSearch = Array.from(search).reverse().join("");
+	const revReplace = Array.from(replace).reverse().join("");
+	const res = reversed.replaceAll(revSearch, revReplace);
+	return Array.from(res).reverse().join("");
 }

@@ -1,3 +1,5 @@
+ writeConsole, setCursor, replaceText,
+
 //	0b11100000:Edge.Left,
 //	0b10100001:Edge.Center,
 

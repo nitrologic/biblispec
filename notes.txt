@@ -1,3 +1,13 @@
+const fishEmoji="𓆛𓆜𓆝𓆞𓆟";
+const fish=[...fishEmoji];
+
+
+elf emoji
+"𓆛𓆜𓆝𓆞𓆟"
+🧝
+"🧝🧝‍♀️🧝‍♂️"
+
+
 Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1] 
 ## The Shift to Three-Byte IDs
 When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2] 

@@ -3,8 +3,8 @@
 // - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
 
 import conway from "../books/conway.json" with { type: "json" };
-import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning } from "./terminal.ts";
-import { BitGrid } from "./bitgrid.js";
+import { BitGrid } from "./table.ts";
+import { sleep, isRunning, stopRunning } from "./terminal.ts";
 
 // deno Foreign Function Interface
 const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
