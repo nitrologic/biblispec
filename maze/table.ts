@@ -6,7 +6,10 @@ console.log("nitrologic biblispec table 0.1.8");
 
 const borderStyle=["╭─╮│┼│╰─╯","┏━┓┃╋┃┗━┛","╔═╗║╬║╚═╝","↗→↘↑┼↓↖←↙","↙←↖↓┼↑↘→↗"];
 const undefinedCase="▯";
-const dot="·";
+const blankCase="·";;
+const dot="●";
+const hollow="○";
+const fishEmoji="▪▫◦·";//"𓆛𓆜𓆝𓆞𓆟";
 
 const lines=[
 	"#**####################",
@@ -280,15 +283,17 @@ function layout(left:string[],right:string[]){
 	return result.join("\n");
 }
 
-function makeTable(grid:BitGrid,z:number,borderStyle:string,emptyChar:string){
+function makeTable(grid:BitGrid,z:number,borderStyle:string,filler:string){
 	const style=[...borderStyle];
+	const fill=[...filler];
 	const result=[];
 	for(let y=1;y<grid.height-1;y++){
 		let line=""
 		for(let x=1;x<grid.width-1;x++){
 			if(!grid.getPixel(x,y,z)){
 				let bits=grid.getNeighbors(x,y,z);
-				let border=emptyChar;
+//				let border=emptyChar;
+				let border=fill[0];
 				if(bits){
 					if(bits in edgeCase){
 						const edge=edgeCase[bits];
@@ -300,7 +305,7 @@ function makeTable(grid:BitGrid,z:number,borderStyle:string,emptyChar:string){
 				}
 				line+=border;
 			}else{
-				line+=" ";
+				line+=blankCase;
 			}
 		}
 		result.push(line);
@@ -313,10 +318,13 @@ function makeTable(grid:BitGrid,z:number,borderStyle:string,emptyChar:string){
 const dumpAll=false;
 const dumpLines=false;
 
-const grid=BitGrid.fromLines(lines,"#");
 if(dumpLines){
 	console.log(lines.join("\n"));
 }
+
+const grid=BitGrid.fromLines(lines,"#");
+
+grid.copyLayer(0,1);
 
 if(dumpAll){
 	for(const key in borderStyle){
@@ -327,8 +335,8 @@ if(dumpAll){
 }
 
 const borderBits=borderStyle[0]+"├┤┬┴─│"+"👺"
-const table0=makeTable(grid,0,borderBits,dot);
-console.log(table0.join("\n"));
+const table0=makeTable(grid,0,borderBits,hollow);
+//console.log(table0.join("\n"));
 const table1=makeTable(grid,1,borderBits,dot);
 console.log(layout(table0,table1));
 
