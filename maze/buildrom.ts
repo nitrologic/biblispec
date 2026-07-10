@@ -16,7 +16,13 @@
 
 */
 
-const src="../research/centipede.asm";
+//const src="../research/centipede.asm";
+//const orgStart=0x2000;
+//const orgEnd=0x4000;
+
+const src="../research/asteroids.txt";
+const orgStart=0x6800;
+const orgEnd=0x7000;
 
 const text=await Deno.readTextFile(src);
 let bulkCount=0;
@@ -74,7 +80,8 @@ for(let i=0;i<n;i++){
 	}
 }
 console.log({bulkCount,offset,dropCount,blankCount});
-for(let a=0x2000;a<0x3fff;a+=32){
+//for(let a=0x2000;a<0x3fff;a+=32){
+for(let a=orgStart;a<orgEnd;a+=32){
 	let code=[];
 	for(let i=0;i<32;i++){
 		code.push(ram[a+i].toString(16).padStart(2,"0"));

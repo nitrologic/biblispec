@@ -2,10 +2,34 @@
 // (C) 2026 nitrologic
 // All Rights Reserved
 
-// import { CharGrid } from "./chargrid.js";
-import { writeConsole, setCursor, replaceText, sleep, isRunning, stopRunning } from "./terminal.ts";
+import "./bitgrid.js";
 
-const paintTitle="☰ paint 0.1 - Arrows Space Esc to quit";
+import { sleep, pollInput, isRunning, stopRunning, writeConsole, setCursor, replaceText  } from "./terminal.ts";
+
+import { BitGrid } from "./table.ts";
+
+const paintTitle="☰ paint 0.1 - Arrows Space Q to quit";
+const paintMillis=20;
+
+// input
+
+function pollKeyboard(){
+    let queue:Uint8Array[]=pollInput();
+    for(let index=0;index<queue.length;index++){
+        let keys=queue[index];
+        const rawKey=keys[0];
+        switch(rawKey){
+            case 32:
+                // onSpace
+                break;
+            case 27:
+                // onEscape
+                stopRunning();
+                break;
+        }
+    }    
+}
+
 
 // console size
 
@@ -15,6 +39,8 @@ const cursorClear="\x1b[2J\x1b[1;1H";
 let appWidth=0;
 let appHeight=0;
 
+let grid=new BitGrid(256,256,4);
+
 function pollSize(){
 	const { columns, rows } = Deno.consoleSize();
 	const vidWidth=columns-6;
@@ -22,7 +48,7 @@ function pollSize(){
 	if(vidWidth!=appWidth||vidHeight!=appHeight){
 		appWidth=vidWidth;
 		appHeight=vidHeight;
-		console.log(cursorClear);
+		console.log(cursorClear+paintTitle,[appWidth,appHeight]);
 	}
 }
 
@@ -36,15 +62,20 @@ let brushY=20;
 let mainMenu=false;
 
 function resetPaint(){
+}
 
 // shot  - canvas sprite resets background when moved
+
 interface shot {cycles:number;x:number;y:number;}
+
 let shots:Array<shot>=[];
 let shotTotal=0;
+
 function pew(){
     shotTotal++;
     shots.push({cycles:24,x:brushX,y:brushY});
 }
+
 function updateShots(){
     const result:Array<shot>=[];
     for(const shot of shots){
@@ -90,7 +121,8 @@ function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:nu
 while(isRunning()){
     pollSize();
     updateShots();
-    await sleep(delayMillis);
+    pollKeyboard();
+    await sleep(paintMillis);
 }
 
 stopRunning();

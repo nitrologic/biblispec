@@ -1,11 +1,8 @@
-// vanillabitgrid.js
+// bitgrid.js
 
 //  - width height layers of single bit pixels
 //  - 32 bit data words contained in single Uint32Array
 //	- drawShape stepConwayLife cellular automata functions incoming
-
-// latest js web ready version of BitGrid please visit here:
-// https://github.com/nitrologic/bitgrid 
 
 class BitGrid {
 

@@ -43,11 +43,16 @@ export function stopRunning(){
 let keyboardQueue:Uint8Array[]=[];
 const keyboardBuffer = new Uint8Array(10);
 
+let inputTask=null;
+
 export function pollInput():Uint8Array[]{
-	let queue=keyboardQueue;
+	if(!inputTask) inputTask=keyboardMouseTask(true);
+	const queue=keyboardQueue;
 	keyboardQueue=[];
 	return queue;
 }
+
+// note: keyboardMouseTask export scheduled to be made private
 
 export async function keyboardMouseTask(enableMouse:boolean=false) {
 	Deno.stdin.setRaw(true);

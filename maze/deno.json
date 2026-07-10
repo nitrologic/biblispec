@@ -1,5 +1,7 @@
 {
 	"tasks":{
+		"paint": "deno run paint.ts",
+		"buildrom": "deno run --allow-read buildrom.ts",
 		"table": "deno run --allow-run table.ts",
 		"maze": "deno run --allow-run maze.ts",
 		"piano": "deno run --allow-ffi --allow-read piano.ts",
