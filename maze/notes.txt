@@ -1,3 +1,11 @@
+let vidWidth=0;
+let vidHeight=0;
+
+
+//const code1=setCursor(1,vidHeight+2);
+//writeConsole(code1);
+
+
  writeConsole, setCursor, replaceText,
 
 //	0b11100000:Edge.Left,

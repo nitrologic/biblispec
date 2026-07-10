@@ -47,14 +47,27 @@ function range(startChar = 'A',endChar = 'Z'){
 //   2x2 quad block character
 //   1x2 true color block
 
-const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
 // grid block display is 1:1 char per pixel resolution
 
 const gridBlocks=" ▣▥▤▦▢";
 
-let vidWidth=72*2;
-let vidHeight=22;
+const cursorHome="\x1b[H";
+const cursorClear="\x1b[2J\x1b[1;1H";
+
+let appWidth=0;
+let appHeight=0;
+
+function pollSize(){
+	const { columns, rows } = Deno.consoleSize();
+	const vidWidth=columns-6;
+	const vidHeight=rows-6;
+	if(vidWidth!=appWidth||vidHeight!=appHeight){
+		appWidth=vidWidth;
+		appHeight=vidHeight;
+		console.log(cursorClear);
+	}
+}
 
 let gridWidth=22*8*2;
 let gridHeight=23*8;
@@ -262,6 +275,7 @@ function gridBlockWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:n
 	return result;
 }
 
+const gridQuads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
 
 function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:number,wh:number){
 	let src:Uint32Array=grid.data;
@@ -373,8 +387,6 @@ const decoder = new TextDecoder();
 
 let cursorUp="\x1b[A";
 let cursorErase="\x1b[K";
-let cursorHome="\x1b[H";
-let cursorClear="\x1b[2J\x1b[1;1H";
 
 const encoder=new TextEncoder();
 
@@ -383,19 +395,10 @@ let status=["have glider will fly"];
 let layer=0;
 let count=0;
 let entropy=0;
-let appWidth=0;
-let appHeight=0;
 let oldKeys=0;
 
 while(isRunning()){
-	const { columns, rows } = Deno.consoleSize();
-	vidWidth=columns-6;
-	vidHeight=rows-6;
-	if(vidWidth!=appWidth||vidHeight!=appHeight){
-		appWidth=vidWidth;
-		appHeight=vidHeight;
-		console.log(cursorClear);
-	}
+	pollSize();
 	let menuWide=mainMenu?menuChars.length:0;
 
 	let panx=(menuWide+cursorX)>>1;

@@ -7,7 +7,7 @@
 // latest js web ready version of BitGrid please visit here:
 // https://github.com/nitrologic/bitgrid 
 
-export class BitGrid {
+class BitGrid {
 
 	constructor(width,height,layers) {
 		this.width = width;

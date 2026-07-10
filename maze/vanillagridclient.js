@@ -1,5 +1,19 @@
 "use strict"
 
+let vidWidth=72*2;
+let vidHeight=22;
+
+function resizeTerminal(){
+	const w=terminal.clientWidth;
+	const h=terminal.clientHeight;
+	vidWidth=(w/16)|0;
+	vidHeight=(h/32)|0
+}
+
+
+let gridWidth=22*8*4;
+let gridHeight=23*8;
+
 const UPDOWN=0;
 const LEFTRIGHT=1;
 
@@ -78,21 +92,6 @@ function tick(timestamp) {
 	updatePumps(keys);
 	updateCursor();
 }
-
-
-let vidWidth=72*2;
-let vidHeight=22;
-
-function resizeTerminal(){
-	const w=terminal.clientWidth;
-	const h=terminal.clientHeight;
-	vidWidth=(w/16)|0;
-	vidHeight=(h/32)|0
-}
-
-
-let gridWidth=22*8*4;
-let gridHeight=23*8;
 
 function mirror(shape){
 	let result=[];
