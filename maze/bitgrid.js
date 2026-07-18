@@ -4,6 +4,7 @@
 //  - 32 bit data words contained in single Uint32Array
 //	- drawShape stepConwayLife cellular automata functions incoming
 
+//export 
 class BitGrid {
 
 	constructor(width,height,layers) {

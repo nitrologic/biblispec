@@ -6,30 +6,12 @@ const grassframe7="─┬┴│┤├┼";//"⯅⯆⯇⯈⯀⯁◆";
 const grass7arrows="→←↑↓↗↘↙↖";
 
 const starChar="✩";
-const hashChar="⬦";//"◦";
-
-const block="▢▣";
-
-const halfs=" ▀▄█";
-const quads=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
-// todo add steps to biblispec quads section
-const steps=[" ▂▃▄▅▆▇█"," ▏▎▍▌▋▊▉█"];
-
-const grass2=steps[0]+steps[1];
-
-const grass=block;
-
-
-enum Edge { CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBotLeft, Bottom, CornerBotRight }
-const boxDirs=[
-	"↗→↘↑┼↓↖←↙",
-	"↙←↖↓┼↑↘→↗",
-	"╭─╮│┼│╰─╯",
-	"┏━┓┃╋┃┗━┛",
-	"╔═╗║╬║╚═╝",
-];
-
-let boxMode=boxDirs[0];
+const hashChar="◦";
+const grass7="◆◇◈⬥⬦⬢⬡";
+const pointChars="◯⊙⊚⦾⦿◉◎◍❂○●◦◌";
+const miscChars="⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉";
+const flowerChars="✻✼✽✾✿❀❁";
+const grassWide7="✻✾✿✼✽❀❁";
 
 const plain=[
 	"#**####################",

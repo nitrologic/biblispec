@@ -35,19 +35,20 @@ export function isRunning(){
 // todo - opt in closeMidi
 
 export function stopRunning(){
+	console.log("stopping");
 	Deno.stdin.setRaw(false);
 	console.log(resetConsole);
 	running=false;
 }
 
 let keyboardQueue:Uint8Array[]=[];
-const keyboardBuffer = new Uint8Array(10);
+const keyboardBuffer = new Uint8Array(32);
 
 let inputTask=null;
 
-export function pollInput():Uint8Array[]{
+export function pollInput():Uint8Array{
 	if(!inputTask) inputTask=keyboardMouseTask(true);
-	const queue=keyboardQueue;
+	const queue=[...keyboardQueue];
 	keyboardQueue=[];
 	return queue;
 }
@@ -62,12 +63,14 @@ export async function keyboardMouseTask(enableMouse:boolean=false) {
 	}
 	while (running) {
 		const bytesRead = await Deno.stdin.read(keyboardBuffer); 
-		if (bytesRead && keyboardBuffer[0] === 113) { // 113 = 'q'
-			running = false;
-			break;
+		if (bytesRead){
+			if (keyboardBuffer[0] === 113) { // 113 = 'q'
+				running = false;
+				break;
+			}
+			const bytes=keyboardBuffer.subarray(0,bytesRead);
+			keyboardQueue.push(bytes);
 		}
-		const bytes=keyboardBuffer.subarray(0,bytesRead);
-		keyboardQueue.push(bytes);
 	}
 	if(enableMouse){
 		Deno.stdout.writeSync(encoder.encode("\x1b[?1003l\x1b[?1006l\x1b[?25h"));	

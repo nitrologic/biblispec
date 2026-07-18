@@ -82,9 +82,15 @@ function pollSize(){
 	}
 }
 
+function updateInput(){
+	const queue:Uint8Array=pollInput();
+	const n=queue?.length;
+	if(n) console.log("[INPUT]",n,queue)
+
+}
+
+
 // console mouse
-
-
 // paint brush
 
 let brushX=15;
@@ -151,10 +157,10 @@ function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:nu
 await runTerminal(true);
 
 while(isRunning()){
-//    pollSize();
-//    updateShots();
-	let pad=pollKeypad();
-	await sleep(paintMillis);
+    pollSize();
+    updateShots();
+    let pad=pollKeyboard();
+    await sleep(paintMillis);
 }
 
 stopTerminal();
