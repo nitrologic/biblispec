@@ -4,6 +4,8 @@ const UpBit=1;
 const DownBit=2;
 const LeftBit=4;
 const RightBit=8;
+const SpaceBit=16;
+const BackspaceBit=32;
 
 const MouseLeftBit=1;
 const MouseRightBit=2;
@@ -143,8 +145,11 @@ export function pollKeypad():number{
 		let keys=queue[index];
 		const rawKey=keys[0];
 		switch(rawKey){
+			case 127:
+				keyPad|=BackspaceBit;
+				break;
 			case 32:
-				// onSpace
+				keyPad|=SpaceBit;
 				break;
 			case 27:
 				if(keys.length>1){
