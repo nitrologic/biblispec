@@ -108,7 +108,9 @@ while(isRunning()){
     let code=setCursor(5,7);
 //	writeConsole(code);
     await sleep(delayMillis);
-    const keys=pollKeypad();
+    const keypad=pollKeypad();
+
+    const keys=keypad.hitBits;
     joyx=0;
     if(keys&8) joyx=1;
     if(keys&4) joyx=-1;
