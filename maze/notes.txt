@@ -1,3 +1,7 @@
+migrating maze and paint to new terminalarcade
+
+
+
 let vidWidth=0;
 let vidHeight=0;
 

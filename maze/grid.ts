@@ -2,16 +2,16 @@
 
 // - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
 
+import { pollKeypad, sleep, pollTerminal, isRunning, stopTerminal, writeConsole, setCursor, replaceText, runTerminal  } from "./terminalarcade.ts";
 import conway from "../books/conway.json" with { type: "json" };
 import { BitGrid } from "./table.ts";
-import { sleep, isRunning, stopRunning } from "./terminal.ts";
 
 let hasMidi=false;
 let hasKeys=false;
 
 let vidWidth=40;
 let vidHeight=25;
-
+/*
 if(Deno.build.os === "windows"){
 // deno Foreign Function Interface
 	const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
@@ -19,6 +19,7 @@ if(Deno.build.os === "windows"){
 	hasMidi=initMidi();
 	hasKeys=true;
 }
+*/
 
 const gridTitle="☰ nitrologic grid 0.7.5 - Arrows, Space, Esc to Quit "+(hasMidi?"midi":"nomidi");
 
@@ -28,7 +29,7 @@ const dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟧","🟨","🟩","
 const menuChars="******************* ";
 
 let midiCount=0;
-let midiMessage=null;
+let midiMessage={};
 let gridMillis=50;
 
 function onMidi(status:number, data1:number, data2:number){
@@ -41,6 +42,7 @@ function onMidi(status:number, data1:number, data2:number){
 	}
 	midiCount++;	
 }
+
 function range(startChar = 'A',endChar = 'Z'){
 	const startCode = startChar.charCodeAt(0);
 	const endCode = endChar.charCodeAt(0);
@@ -406,6 +408,8 @@ let count=0;
 let entropy=0;
 let oldKeys=0;
 
+await runTerminal(true);
+
 while(isRunning()){
 	pollSize();
 	let menuWide=mainMenu?menuChars.length:0;
@@ -433,7 +437,7 @@ while(isRunning()){
 
 	const title=gridTitle+" ["+vidWidth+","+vidHeight+","+count+","+entropy+","+midiCount+"] message:"+message;
 	
-console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
+	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
 
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
@@ -450,7 +454,7 @@ console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
 		onMidi(event.status, event.data1, event.data2);
 	}
 
-	const keys=hasKeys?pollKeyboard():[];
+	const keys=pollKeypad();
 	if((keys&16)&&!(oldKeys&16)) hitSpace();
 	if((keys&32)&&!(oldKeys&32)) hitBackspace();
 	if((keys&64)&&!(oldKeys&64)) stopRunning();
@@ -461,8 +465,6 @@ console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
 
 //const code1=setCursor(1,vidHeight+2);
 //writeConsole(code1);
-
-stopRunning();
+//closeMidi();
+stopTerminal();
 console.log("bye!");
-
-closeMidi();
