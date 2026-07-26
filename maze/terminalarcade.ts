@@ -20,6 +20,31 @@ const MouseMotionBit=4;
 // pollKeypad
 // runTerminal pollTerminal stopTerminal 
 
+// pumps
+
+enum axis {UPDOWN, LEFTRIGHT};
+const pump:number[]=[0,0];
+
+function fadePumps():number[]{
+	const previous = [...pump];
+	for(let index=0;index<pump.length;index++){
+		let integral:number=pump[index]|0;
+		let fade=(integral>>3);
+		integral=(fade)?integral-fade:0;
+		pump[index]=integral;
+	}
+	return previous;
+}
+
+function updatePumps(keys:number){
+	if(keys&1) pump[axis.UPDOWN]-=100;
+	if(keys&2) pump[axis.UPDOWN]+=100;
+	if(keys&4) pump[axis.LEFTRIGHT]-=72;
+	if(keys&8) pump[axis.LEFTRIGHT]+=72;
+	fadePumps();
+}
+
+
 // writeConsole text
 
 const encoder=new TextEncoder();
@@ -135,11 +160,18 @@ export function pollTerminalKeys(): number {
 	return 0;
 }
 
+export interface KeypadState {
+  hitBits: number;
+  x: number,
+  y: number
+}
+
+
 const decoder = new TextDecoder();
 let keyPad=0;
 let mouseButtons=0;
 
-export function pollKeypad():number{
+export function pollKeypad():KeypadSate{
 	let queue:Uint8Array[]=pollTerminal();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];
@@ -185,24 +217,9 @@ export function pollKeypad():number{
 				break;
 		}
 	}    
-	const bits=(mouseButtons<<0)|(keyPad);
+	const hitBits=(mouseButtons<<10)|(keyPad);
 	mouseButtons=0;
 	keyPad=0;
-	return bits;
+	updatePumps(hitBits);
+	return {hitBits,x:pump[axis.UPDOWN],y:pump[axis.LEFTRIGHT]};
 }
-
-/*
-
-function updatePumps(keys:number){
-	if(keys&1) pump[axis.UPDOWN]-=100;
-	if(keys&2) pump[axis.UPDOWN]+=100;
-	if(keys&4) pump[axis.LEFTRIGHT]-=72;
-	if(keys&8) pump[axis.LEFTRIGHT]+=72;
-	fadePumps();
-
-    const keys=hasKeys?pollKeyboard():[];
-    if((keys&16)&&!(oldKeys&16)) hitSpace();
-    if((keys&32)&&!(oldKeys&32)) hitBackspace();
-    if((keys&64)&&!(oldKeys&64)) stopRunning();
-
-*/

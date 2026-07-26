@@ -157,9 +157,9 @@ let cursorVX=0;
 let cursorY=0;
 let cursorVY=0;
 
-function updateCursor(){
-	cursorVX+=(pump[axis.LEFTRIGHT])/400;
-	cursorVY+=(pump[axis.UPDOWN])/400;
+function updateCursor(x,y){
+	cursorVX+=(x)/400;
+	cursorVY+=(y)/400;
 
 	cursorX+=cursorVX;
 	if(cursorX<0){
@@ -336,28 +336,6 @@ function gridQuadWindow(grid:BitGrid,layers:number[],wx:number,wy:number,ww:numb
 	return result;
 }
 
-enum axis {UPDOWN, LEFTRIGHT};
-const pump:number[]=[0,0];
-
-function fadePumps():number[]{
-	const previous = [...pump];
-	for(let index=0;index<pump.length;index++){
-		let integral:number=pump[index]|0;
-		let fade=(integral>>3);
-		integral=(fade)?integral-fade:0;
-		pump[index]=integral;
-	}
-	return previous;
-}
-
-function updatePumps(keys:number){
-	if(keys&1) pump[axis.UPDOWN]-=100;
-	if(keys&2) pump[axis.UPDOWN]+=100;
-	if(keys&4) pump[axis.LEFTRIGHT]-=72;
-	if(keys&8) pump[axis.LEFTRIGHT]+=72;
-	fadePumps();
-}
-
 let mainMenu=false;//true;
 
 function menuWall(blocks:string[]){
@@ -454,13 +432,13 @@ while(isRunning()){
 		onMidi(event.status, event.data1, event.data2);
 	}
 
-	const keys=pollKeypad();
+	const keypad=pollKeypad();
+	const keys=keypad.hitBits;
 	if((keys&16)&&!(oldKeys&16)) hitSpace();
 	if((keys&32)&&!(oldKeys&32)) hitBackspace();
 	if((keys&64)&&!(oldKeys&64)) stopRunning();
 	oldKeys=keys;
-	updatePumps(keys);
-	updateCursor();
+	updateCursor(keypad.x,keypad.y);
 }
 
 //const code1=setCursor(1,vidHeight+2);
