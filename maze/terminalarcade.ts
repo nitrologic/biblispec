@@ -171,7 +171,7 @@ const decoder = new TextDecoder();
 let keyPad=0;
 let mouseButtons=0;
 
-export function pollKeypad():KeypadSate{
+export function pollKeypad():KeypadState{
 	let queue:Uint8Array[]=pollTerminal();
 	for(let index=0;index<queue.length;index++){
 		let keys=queue[index];

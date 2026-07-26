@@ -2,10 +2,7 @@
 // (C) 2026 nitrologic
 // All Rights Reserved
 
-import "./bitgrid.js";
-
 import { pollKeypad, sleep, pollTerminal, isRunning, stopTerminal, writeConsole, setCursor, replaceText, runTerminal  } from "./terminalarcade.ts";
-
 import { BitGrid } from "./table.ts";
 
 const encoder=new TextEncoder();
@@ -156,7 +153,7 @@ await runTerminal(true);
 while(isRunning()){
 //    pollSize();
 //    updateShots();
-	pollKeypad();
+	let pad=pollKeypad();
 	await sleep(paintMillis);
 }
 

@@ -88,6 +88,7 @@ while(isRunning()){
     grid.drawShape(["  "],shipx,shipy);
     grid.drawShape(["   "],shipx,shipy+1);
     shipx+=0.5*joyx;
+
     if (shipx>grid.width-2) shipx=grid.width-2;
     if (shipx<0) shipx=0;
     grid.drawShape(ship,shipx,shipy);
@@ -107,16 +108,24 @@ while(isRunning()){
     console.log(latest.join("\n"));
     let code=setCursor(5,7);
 //	writeConsole(code);
-    await sleep(delayMillis);
-    const keypad=pollKeypad();
 
+
+    await sleep(delayMillis);
+
+    const keypad=pollKeypad();
     const keys=keypad.hitBits;
-    joyx=0;
-    if(keys&8) joyx=1;
-    if(keys&4) joyx=-1;
+    joyx*=0.88;
+    if(keys&8) joyx+=1;
+    if(keys&4) joyx-=1;
+
+//    joyx=keypad.x*50;
+
 //    let mouse=pollMouse();
     if (keys&keyMask&16) pew();
-    if (keys&64) stopRunning();
+    if (keys&64) {
+        console.log("stopping run")
+        stopRunning();
+    }
     keyMask=~keys;
 }
 
