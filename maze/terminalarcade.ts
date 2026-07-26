@@ -6,6 +6,7 @@ const LeftBit=4;
 const RightBit=8;
 const SpaceBit=16;
 const BackspaceBit=32;
+const QuitBit=64;
 
 const MouseLeftBit=1;
 const MouseRightBit=2;
@@ -211,6 +212,7 @@ export function pollKeypad():KeypadSate{
 //					console.log("[ESC]",{keyPad,sequence});
 				}else{
 					console.log("Escape!");
+					keyPad|=QuitBit;
 					stopTerminal();
 				}
 				// onEscape

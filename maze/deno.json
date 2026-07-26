@@ -8,6 +8,7 @@
 		"grid": "deno run --allow-ffi --allow-read grid.ts",
 		"traffic": "deno run --allow-ffi --allow-read traffic.ts",
 		"centipede": "deno run --allow-ffi --allow-read centipede.ts",
-		"matrix": "deno run --allow-read matrix.ts"
+		"matrix": "deno run --allow-read matrix.ts",
+		"monobit": "deno run --allow-read monobit.ts"
     }
 }
