@@ -6,11 +6,19 @@ import conway from "../books/conway.json" with { type: "json" };
 import { BitGrid } from "./table.ts";
 import { sleep, isRunning, stopRunning } from "./terminal.ts";
 
-// deno Foreign Function Interface
-const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
-const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } = await import(ffiPath);
+let hasMidi=false;
+let hasKeys=false;
 
-const hasMidi=initMidi();
+let vidWidth=40;
+let vidHeight=25;
+
+if(Deno.build.os === "windows"){
+// deno Foreign Function Interface
+	const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
+	const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } = await import(ffiPath);
+	hasMidi=initMidi();
+	hasKeys=true;
+}
 
 const gridTitle="☰ nitrologic grid 0.7.5 - Arrows, Space, Esc to Quit "+(hasMidi?"midi":"nomidi");
 
@@ -60,8 +68,9 @@ let appHeight=0;
 
 function pollSize(){
 	const { columns, rows } = Deno.consoleSize();
-	const vidWidth=columns-6;
-	const vidHeight=rows-6;
+	// todo clamp to minimum 40 25
+	vidWidth=columns-6;
+	vidHeight=rows-6;
 	if(vidWidth!=appWidth||vidHeight!=appHeight){
 		appWidth=vidWidth;
 		appHeight=vidHeight;
@@ -421,8 +430,10 @@ while(isRunning()){
 	console.log(cursorHome);
 
 	const message=JSON.stringify(midiMessage);
-	const title=gridTitle+" ["+columns+","+rows+","+count+","+entropy+","+midiCount+"] message:"+message;
-	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
+
+	const title=gridTitle+" ["+vidWidth+","+vidHeight+","+count+","+entropy+","+midiCount+"] message:"+message;
+	
+console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
 
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
@@ -434,12 +445,12 @@ while(isRunning()){
 	await sleep(gridMillis);
 
 	// {status: number;data1: number;data2: number;}
-	const midiEvents = pollMidi();
+	const midiEvents = hasMidi?pollMidi():[];
 	for (const event of midiEvents) {
 		onMidi(event.status, event.data1, event.data2);
 	}
 
-	const keys=pollKeyboard();
+	const keys=hasKeys?pollKeyboard():[];
 	if((keys&16)&&!(oldKeys&16)) hitSpace();
 	if((keys&32)&&!(oldKeys&32)) hitBackspace();
 	if((keys&64)&&!(oldKeys&64)) stopRunning();
