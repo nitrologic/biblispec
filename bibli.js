@@ -1,17 +1,31 @@
-import spec from './biblispec.json' with { type: 'json' };
+// import spec from './biblispec.json' with { type: 'json' };
 
 let terminalDiv;
+let spec;
 
+async function fetchBibli(){
+	try {
+		const response = await fetch('./biblispec.json');
+		if (!response.ok) {
+			throw new Error(response);
+		}
+		spec = await response.json();
+		return spec;
+
+	} catch (error) {
+		console.error("[bibli] fetch error", error);
+	}
+}
 function append(text){
 	terminalDiv.textContent+=text;
 }
-function onLoad(){
+async function onLoad(){
 	terminalDiv=document.getElementById("terminal");
-	append("hello world");
-
-	console.log("[bibli]",spec); 
-	console.log("[bibli]",spec.name);
-
+	append("reading bibli");
+	spec=await fetchBibli();
+	console.log("[bibli] spec",spec); 
+	console.log("[bibli] spec.name",spec.name);
+	append("done");
 }
 
 window.onload=onLoad;
