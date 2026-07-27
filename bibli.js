@@ -15,7 +15,9 @@ function append(text){
 
 function pollSize(pre) {
 	const style = window.getComputedStyle(pre);
-	console.log("[bibli] style",style.cssText);
+
+	const styles=Object.values(style);
+	console.log("[bibli] style",styles);
 
 	const width=50;
 	const height=parseFloat(style.fontSize); 
