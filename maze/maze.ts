@@ -2,6 +2,20 @@
 
 console.log("nitrologic biblispec maze 0.2.0");
 
+enum Edge { CornerTopLeft, Top, CornerTopRight, Left, Center, Right, CornerBotLeft, Bottom, CornerBotRight }
+
+const boxDirs=[
+	"↗→↘↑┼↓↖←↙",
+	"↙←↖↓┼↑↘→↗",
+	"╭─╮│┼│╰─╯",
+	"┏━┓┃╋┃┗━┛",
+	"╔═╗║╬║╚═╝",
+];
+
+let boxMode=boxDirs[0];
+
+const grass="▢▣";
+
 const grassframe7="─┬┴│┤├┼";//"⯅⯆⯇⯈⯀⯁◆";
 const grass7arrows="→←↑↓↗↘↙↖";
 

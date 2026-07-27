@@ -2,7 +2,19 @@
 
 // - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
 
-import { pollKeypad, sleep, pollTerminal, isRunning, stopTerminal, writeConsole, setCursor, replaceText, runTerminal  } from "./terminalarcade.ts";
+import { 
+	pollKeypad, 
+	sleep, 
+	pollTerminal, 
+	isRunning, 
+	stopRunning,
+	stopTerminal, 
+	writeConsole, 
+	setCursor, 
+	replaceText, 
+	runTerminal  
+} from "./terminalarcade.ts";
+
 import conway from "../books/conway.json" with { type: "json" };
 import { BitGrid } from "./table.ts";
 
@@ -42,6 +54,7 @@ function onMidi(status:number, data1:number, data2:number){
 	}
 	midiCount++;	
 }
+
 
 function range(startChar = 'A',endChar = 'Z'){
 	const startCode = startChar.charCodeAt(0);
@@ -417,6 +430,9 @@ while(isRunning()){
 	
 	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
 
+	//	const title=gridTitle+" ["+columns+","+rows+","+count+","+entropy+","+midiCount+"] message:"+message;
+//	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
+
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
@@ -434,6 +450,7 @@ while(isRunning()){
 
 	const keypad=pollKeypad();
 	const keys=keypad.hitBits;
+
 	if((keys&16)&&!(oldKeys&16)) hitSpace();
 	if((keys&32)&&!(oldKeys&32)) hitBackspace();
 	if((keys&64)&&!(oldKeys&64)) stopRunning();

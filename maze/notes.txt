@@ -1,3 +1,22 @@
+let midiCount=0;
+let midiMessage=null;
+function onMidi(status:number, data1:number, data2:number){
+	midiMessage={status,data1,data2};
+	if(status==176){
+		if(data1==14){
+			gridMillis=260-data2*2;
+
+		}
+	}
+	midiCount++;	
+}
+	// {status: number;data1: number;data2: number;}
+	const midiEvents = pollMidi();
+	for (const event of midiEvents) {
+		onMidi(event.status, event.data1, event.data2);
+	}
+
+
 // input
 
 function pollKeyboard(){

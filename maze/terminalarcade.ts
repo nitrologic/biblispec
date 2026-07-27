@@ -1,4 +1,15 @@
 // terminalarcade.ts
+// (c) 2026 nitrologic
+
+// export function list
+
+// writeConsole 
+// replaceText 
+// setCursor
+// sleep 
+// pollKeypad
+// runTerminal pollTerminal stopTerminal 
+
 
 const UpBit=1;
 const DownBit=2;
@@ -12,14 +23,6 @@ const MouseLeftBit=1;
 const MouseRightBit=2;
 const MouseMotionBit=4;
 
-// export function list
-
-// writeConsole 
-// replaceText 
-// setCursor
-// sleep 
-// pollKeypad
-// runTerminal pollTerminal stopTerminal 
 
 // pumps
 
@@ -94,6 +97,10 @@ let stopped=false;
 
 export function isRunning(){
 	return running;
+}
+
+export function stopRunning(){
+	running=false;
 }
 
 let inputTask=null;
