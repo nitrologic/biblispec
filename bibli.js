@@ -1,5 +1,3 @@
-// import spec from './biblispec.json' with { type: 'json' };
-
 let terminalDiv;
 let spec;
 
@@ -31,3 +29,4 @@ async function onLoad(){
 window.onload=onLoad;
 
 // https://nitrologic.github.io/biblispec
+// import spec from './biblispec.json' with { type: 'json' };
