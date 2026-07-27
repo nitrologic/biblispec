@@ -15,9 +15,11 @@ function append(text){
 
 function pollSize(pre) {
 	const style = window.getComputedStyle(pre);
-
 	const styles=Object.values(style);
-	console.log("[bibli] style",styles);
+	for(const alpha of ["a","b","c"]){
+		alphaStyles=styles.filter(word=>word.startsWith(alpha));
+		console.log("[bibli] style",alpha,alphaStyles);
+	}
 
 	const width=50;
 	const height=parseFloat(style.fontSize); 
