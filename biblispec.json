@@ -96,7 +96,7 @@
 				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
 		},
 		"shortcode":{
-			"mushroom": "🍄",
+			"mushroom": "🍄", "anchor": "⚓",
 			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
 			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
 			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
@@ -165,6 +165,29 @@
 			},
 			"name": "Face on profiles",
 			"tags": ["face","emoji"]
+		},
+		"blocks":{
+			"name":"codepoints by index",
+			"rows":{
+				"u269x":{
+					"⚐": "flag outline",
+					"⚑":"flag solid",
+					"⚒": "hammer & pick",
+					"⚓": "anchor",
+					"⚔": "swords",
+					"⚕": "staff AESCULAPIUS",
+					"⚖": "scales",
+					"⚗": "alembic",
+					"⚘": "flower",
+					"⚙": "gear",
+					"⚚": "staff HERMES",
+					"⚛": "atom",
+					"⚜": "fleur-de-lis",
+					"⚝": "star outline",
+					"⚞": "3 lines left",
+					"⚟": "3 lines right"
+				}
+			}
 		},
 		"pheme":{
 			"pre61": {

@@ -1,3 +1,56 @@
+Valid JSON
+63.78 KB • 1641 keys • depth 8 • 334 objects • 250 arrays
+
+⚔⚕⚖⚗⚘⚙⚚⚛⚜⚝⚞
+
+╭──────────┬────────┬─────────────────────────────────────╮
+│  Hex     │  Char  │  Name                               │
+├──────────┼────────┼─────────────────────────────────────┤
+│  U+2690  │  ⚐     │  WHITE FLAG                         │
+│  U+2691  │  ⚑     │  BLACK FLAG                         │
+│  U+2692  │  ⚒     │  HAMMER AND PICK                    │
+│  U+2693  │  ⚓     │  ANCHOR                             │
+│  U+2694  │  ⚔     │  CROSSED SWORDS                     │
+│  U+2695  │  ⚕     │  STAFF OF AESCULAPIUS               │
+│  U+2696  │  ⚖     │  SCALES                             │
+│  U+2697  │  ⚗     │  ALEMBIC                            │
+│  U+2698  │  ⚘     │  FLOWER                             │
+│  U+2699  │  ⚙     │  GEAR                               │
+│  U+269A  │  ⚚     │  STAFF OF HERMES                    │
+│  U+269B  │  ⚛     │  ATOM SYMBOL                        │
+│  U+269C  │  ⚜     │  FLEUR-DE-LIS                       │
+│  U+269D  │  ⚝     │  OUTLINED WHITE STAR                │
+│  U+269E  │  ⚞     │  THREE LINES CONVERGING RIGHT       │
+│  U+269F  │  ⚟     │  THREE LINES CONVERGING LEFT        │
+╰──────────┴────────┴─────────────────────────────────────╯
+
+╭──────────────┬─────────────┬────────────────────────────────╮
+│  Code Point  │  Character  │  Name                          │
+├──────────────┼─────────────┼────────────────────────────────┤
+│  U+2694      │  ⚔          │  CROSSED SWORDS                │
+│  U+2695      │  ⚕          │  STAFF OF AESCULAPIUS          │
+│  U+2696      │  ⚖          │  SCALES                        │
+│  U+2697      │  ⚗          │  ALEMBIC                       │
+│  U+2698      │  ⚘          │  FLOWER                        │
+│  U+2699      │  ⚙          │  **GEAR**                      │
+│  U+269A      │  ⚚          │  STAFF OF HERMES               │
+│  U+269B      │  ⚛          │  ATOM SYMBOL                   │
+│  U+269C      │  ⚜          │  FLEUR-DE-LIS                  │
+│  U+269D      │  ⚝          │  OUTLINED WHITE STAR           │
+│  U+269E      │  ⚞          │  THREE LINES CONVERGING RIGHT  │
+╰──────────────┴─────────────┴────────────────────────────────╯
+
+(⚘)
+        "➀➁➂➃➄➅➆➇➈",
+        "➊➋➌➍➎➏➐➑➒",
+
+𝗗𝗔
+
+𝗗𝗔𝗧𝗔𝗦𝗘𝗧𝗧𝗘 ₀₀₀₁ ⚙⚙
+
+ ➀➀➀
+₁₀₁₂₃₄₅₆₇₈₉
+
 𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭
 
 𝗙𝗨𝗝𝗜𝗡𝗘𝗧
@@ -11,10 +64,10 @@ elf emoji
 "🧝🧝‍♀️🧝‍♂️"
 
 
-Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1] 
+Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1]
 ## The Shift to Three-Byte IDs
-When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2] 
-To solve this, they introduced an extension protocol: if the first byte of a SysEx ID was 00H, it signaled to the hardware that the manufacturer ID was an extended, three-byte code comprised of the next two bytes. [1] 
+When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2]
+To solve this, they introduced an extension protocol: if the first byte of a SysEx ID was 00H, it signaled to the hardware that the manufacturer ID was an extended, three-byte code comprised of the next two bytes. [1]
 ## The First Extended ID (00 00 01)
 Because American companies were allocated the first block of numbers, a small boutique tech development firm called Time/Space Engineering was assigned the foundational 00 00 01 slot in this new expanded registry.
 Unlike massive corporate mainstays like Roland (41) or Yamaha (43), Time/Space Engineering operated primarily behind the scenes in the late 1980s and early 1990s as a specialized hardware and R&D consultancy group rather than a commercial consumer synthesizer brand. They specialized in early MIDI synchronization, clock translation, and specialized processing utilities—the foundational "space and time" elements required to keep early computer sequencers tightly locked to tape machines and external hardware.
@@ -34,7 +87,7 @@ Would you like me to look up the history or context of any of the other early th
 ┌┐└┘
 
  "｢｣┕┙┃━"
- 
+
 "boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
 
 
@@ -78,7 +131,7 @@ Would you like me to look up the history or context of any of the other early th
 
 
 {
-    
+
     "digits":[
         "０１２３４５６７８９",
         "0123456789",
@@ -329,7 +382,7 @@ Would you like me to look up the history or context of any of the other early th
 		"᮰","᮱","᮲","᮳","᮴","᮵","᮶","᮷","᮸","᮹",
 		"᱀","᱁","᱂","᱃","᱄","᱅","᱆","᱇","᱈","᱉",
 		"᱐","᱑","᱒","᱓","᱔","᱕","᱖","᱗","᱘","᱙",
-		"꘠","꘡","꘢","꘣","꘤","꘥","꘦","꘧","꘨","꘩", 
+		"꘠","꘡","꘢","꘣","꘤","꘥","꘦","꘧","꘨","꘩",
 Kimi
 APP
  — 10:57 AM
@@ -342,7 +395,7 @@ APP
 
 
 
-kanuka (kunzea ericoides) vs manuka (leptospermum scoparium) 
+kanuka (kunzea ericoides) vs manuka (leptospermum scoparium)
 
 — same myrtle family, different genera entirely
 
@@ -452,8 +505,8 @@ hitler
 military regime
 
 who founded 21vianet?
-sheng chen (josh chen) and jun zhang started 21vianet on 16 oct 1999 
-sheng “josh” chen, tsinghua ee ’91, started dabbling in datacomms while still a sophomore (1990), booted a tiny isp called a-1 netcom in ’91, then proper-founded 21vianet in ’99 with a single carrier-neutral dc in beijing. bootstrapped it for two decades, took it nasdaq ’11, bagged blackstone & gic money, and still runs it today as exec chair + interim ceo. classic “one-company lifer” arc: campus hacker → china’s neutral-dc granddad. 
+sheng chen (josh chen) and jun zhang started 21vianet on 16 oct 1999
+sheng “josh” chen, tsinghua ee ’91, started dabbling in datacomms while still a sophomore (1990), booted a tiny isp called a-1 netcom in ’91, then proper-founded 21vianet in ’99 with a single carrier-neutral dc in beijing. bootstrapped it for two decades, took it nasdaq ’11, bagged blackstone & gic money, and still runs it today as exec chair + interim ceo. classic “one-company lifer” arc: campus hacker → china’s neutral-dc granddad.
 
 who owns discord in corporate sense
 still 100% owned by discord inc (delaware c-corp)
@@ -461,7 +514,7 @@ jason citron = biggest individual holder, stan vishnevskiy right behind him; tog
 outside cap table: tencent, sony, dragoneer, fidelity, accel, index, greenoaks, etc—minority prefs only
 no parent company, no msft, no amazon, no single investor >15%
 board has netflix/block execs but founders call the shots
-ipo filed confidentially jan 2026 so the cap table will unlock soon, but for now it’s founder-controlled :nah_whatever: 
+ipo filed confidentially jan 2026 so the cap table will unlock soon, but for now it’s founder-controlled :nah_whatever:
 founder story
 jason citron coded doom wads at 13, sold openfeint for 104m at 26, burned the cash on a tablet moba no one played, then turned the internal voice chat they hacked together for that flop into discord in 2015. stan vishnevskiy built the elixir backend that could shard guilds forever. they seeded it by spamming reddit dms to ff14 raiders, blew up during the 2016 overwatch open beta, and kept majority control by ghosting microsoft’s 12bn offer. citron stepped down as ceo april 2025 but still owns ~12%. classic “side project becomes everything” arc
 
@@ -520,7 +573,7 @@ msft: boomers idea of “innovation” = rebooting teams for the 500th time
 aapl: selling the same rectangle every year and calling it courage
 tsla: elons twitter feed on wheels
 tcehy: ccp’s lootbox launcher
-baba: jack mas disappearing act 0.35t discount bin :sweating: 
+baba: jack mas disappearing act 0.35t discount bin :sweating:
 
 technologies:
 
@@ -1163,7 +1216,7 @@ nflx 0.3t – binge demon – los gatos
 crm 0.3t – saas bro – sf
 asml 0.3t – light bender – veldhoven
 qcom 0.3t – 5g gremlin – san diego
-pltr 0.3t – gov goth – denver 
+pltr 0.3t – gov goth – denver
 
 private
 
