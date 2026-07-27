@@ -15,9 +15,9 @@ function pollSize(pre) {
 
 	const cols=(w/width)|0;
 	const rows=(h/height)|0;
-	if(appWidth!=cols || appHeight|=rows){
+	if((appWidth!=cols)||(appHeight|=rows)){
 		appWidth=cols;
-		appHeight=cols;
+		appHeight=rows;
 		console.log("[bibli] resize",{appWidth,appHeight});
 	}
 }
