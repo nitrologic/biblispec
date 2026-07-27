@@ -1,6 +1,4 @@
 import spec from './biblispec.json' with { type: 'json' };
-//console.log("[bibli]",data); 
-//console.log("[bibli]",data.name);
 
 let terminalDiv;
 
@@ -10,6 +8,10 @@ function append(text){
 function onLoad(){
 	terminalDiv=document.getElementById("terminal");
 	append("hello world");
+
+	console.log("[bibli]",spec); 
+	console.log("[bibli]",spec.name);
+
 }
 
 window.onload=onLoad;
