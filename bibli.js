@@ -69,7 +69,7 @@ async function onLoad(){
 	console.log("[bibli] spec.name",spec.name);
 	bibliSpec=spec;
 
-	const json=JSON.stringify(spec);
+	const json=JSON.stringify(spec, null, 2);
 	emit(json);
 }
 
