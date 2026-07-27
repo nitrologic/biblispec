@@ -1,5 +1,10 @@
+// bibli.js
+// (c)2026 nitrologic
+// biblispec MIT License 
+// https://opensource.org/licenses/MIT
+
 let terminalPre;
-let spec;
+let bibliSpec;
 
 let appWidth=40;
 let appHeight=25;
@@ -22,14 +27,14 @@ function pollSize(pre) {
 	}
 }
 
-async function fetchBibli(){
+async function fetchBibli(path){
 	try {
-		const response = await fetch('./biblispec.json');
+		const response = await fetch(path);
 		if (!response.ok) {
 			throw new Error(response);
 		}
-		spec = await response.json();
-		return spec;
+		const content = await response.json();
+		return content;
 
 	} catch (error) {
 		console.error("[bibli] fetch error", error);
@@ -42,12 +47,16 @@ async function onLoad(){
 	const pre=document.getElementById("terminal");
 	console.log("[bibli] pre",pre); 
 	terminalPre=pre;
+	
 	append("dimensioning pre");
 	pollSize(pre);
+
 	append("reading bibli");
-	spec=await fetchBibli();
+	const spec=await fetchBibli("./biblispec.json");
 	console.log("[bibli] spec",spec); 
 	console.log("[bibli] spec.name",spec.name);
+	bibliSpec=spec;
+
 	append("done");
 }
 
