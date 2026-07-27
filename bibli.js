@@ -19,8 +19,8 @@ function pollSize(pre) {
 
 	const width=50;
 	const height=parseFloat(style.fontSize); 
-	const w=el.clientWidth;   // Usable internal width
-	const h=el.clientHeight; // Usable internal height
+	const w=pre.clientWidth;   // Usable internal width
+	const h=pre.clientHeight; // Usable internal height
 
 	const cols=(w/width)|0;
 	const rows=(h/height)|0;
