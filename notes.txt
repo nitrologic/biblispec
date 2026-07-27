@@ -1,3 +1,10 @@
+	overflow: hidden;
+
+<div style="tab-size: 2; column-rule: 2px solid grey; column-count: 3; column-gap: 10px; font-size: x-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<pre id="terminal">
+i
+
+
 CSSStyleDeclaration {
 	0: 'accent-color', 1: 'align-content', 2: 'align-items', 3: 'align-self', 4: 'alignment-baseline', 
 	5: 'anchor-name', 6: 'anchor-scope', 7: 'animation-composition', 8: 'animation-delay', 9: 'animation-direction', 
