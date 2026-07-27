@@ -1,6 +1,27 @@
 let terminalDiv;
 let spec;
 
+let appWidth=40;
+let appHeight=25;
+
+function pollSize(pre) {
+	const style = window.getComputedStyle(pre);
+	console.log("[bibli] style",style);
+
+	const width=50;
+	const height=parseFloat(style.fontSize); 
+	const w=el.clientWidth;   // Usable internal width
+	const h=el.clientHeight; // Usable internal height
+
+	const cols=(w/width)|0;
+	const rows=(h/height)|0;
+	if(appWidth!=cols || appHeight|=rows){
+		appWidth=cols;
+		appHeight=cols;
+		console.log("[bibli] resize",{appWidth,appHeight});
+	}
+}
+
 async function fetchBibli(){
 	try {
 		const response = await fetch('./biblispec.json');
@@ -19,6 +40,9 @@ function append(text){
 }
 async function onLoad(){
 	terminalDiv=document.getElementById("terminal");
+	console.log("[bibli] pre",pre); 
+	append("dimensioning pre");
+	pollSize(pre);
 	append("reading bibli");
 	spec=await fetchBibli();
 	console.log("[bibli] spec",spec); 
