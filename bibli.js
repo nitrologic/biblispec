@@ -15,8 +15,8 @@ function append(text){
 	terminalPre.textContent+=text;
 }
 
-function emit(text){
-	terminalPre.textContent=emit;
+function emit(content){
+	terminalPre.textContent=content;
 }
 
 function pollSize(pre) {
