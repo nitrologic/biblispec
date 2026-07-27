@@ -9,14 +9,20 @@ let bibliSpec;
 let appWidth=40;
 let appHeight=25;
 
+const alphabet="abcdefghijklmnopqrstuvwxyz";
+
 function append(text){
 	terminalPre.textContent+=text;
+}
+
+function emit(text){
+	terminalPre.textContent=emit;
 }
 
 function pollSize(pre) {
 	const style = window.getComputedStyle(pre);
 	const styles=Object.values(style);
-	for(const alpha of ["a","b","c"]){
+	for(const alpha of alphabet){
 		alphaStyles=styles.filter(word=>word.startsWith(alpha));
 		console.log("[bibli] style",alpha,alphaStyles);
 	}
@@ -63,7 +69,8 @@ async function onLoad(){
 	console.log("[bibli] spec.name",spec.name);
 	bibliSpec=spec;
 
-	append("done");
+	const json=JSON.stringify(spec);
+	emit(json);
 }
 
 window.onload=onLoad;
