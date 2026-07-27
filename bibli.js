@@ -79,3 +79,4 @@ async function onLoad(){
 }
 
 window.onload=onLoad;
+window.addEventListener("resize",pollSize);
