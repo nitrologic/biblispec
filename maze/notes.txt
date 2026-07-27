@@ -1,3 +1,25 @@
+/*
+if(Deno.build.os === "windows"){
+// deno Foreign Function Interface
+	const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
+	const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } = await import(ffiPath);
+	hasMidi=initMidi();
+	hasKeys=true;
+}
+*/
+
+
+## Non‑exported utility functions
+
+(For completeness, though not exported)
+
+- `makeTable(grid, z, borderStyle, filler) → string[]`
+- `layout(left, right) → string`
+- `bin(bits) → string`
+
+These are used for rendering and debugging, and are not part of the public API.
+
+
 let midiCount=0;
 let midiMessage=null;
 function onMidi(status:number, data1:number, data2:number){

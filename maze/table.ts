@@ -1,4 +1,6 @@
-// table.ts
+// maze.ts - a biblispec grid operator
+
+// export class BitGrid 
 
 // surround truth with 8 bit edgeCase 
 
@@ -92,48 +94,9 @@ export class BitGrid {
 		this.data=new Uint32Array(this.span*height*layers);
 		this.heatmap=new Uint16Array(width*height);
 	}
-
-	static fromLines(lines: string[], truth: string): BitGrid {
-		const height = lines.length;
-		const width = lines[0].length;
-		const grid = new BitGrid(width*2+5, height*2+5, 2);
-		for(let y=0;y<height;y++){
-			const line=lines[y];
-			for(let x=0;x<width;x++){
-				if(line.charAt(x)==truth) {
-					grid.setPixel(3+x*2,3+y*2,0,true);
-				}
-			}
-		}
-		return grid;
-	}
-
-	// bit pixel
-
-	getPixel(x:number,y:number,layer:number){
-		// x,y toroidal wrap around getter
-		x = (x + this.width) % this.width;
-		y = (y + this.height) % this.height;
-		const offset = layer*this.height*this.span;
-		const wordIndex = y*this.span+(x>>5);
-		const bitIndex = x&31;
-		const word=this.data[offset+wordIndex];
-		return (word&(1<<bitIndex))!=0;
-	}
-
-	getNeighbors(x:number,y:number,z:number){
-		let bits=0;
-		if(this.getPixel(x-1,y-1,z)) bits|=128;
-		if(this.getPixel(x,y-1,z)) bits|=64;
-		if(this.getPixel(x+1,y-1,z)) bits|=32;
-		if(this.getPixel(x-1,y,z)) bits|=16;
-		if(this.getPixel(x+1,y,z)) bits|=8;
-		if(this.getPixel(x-1,y+1,z)) bits|=4;
-		if(this.getPixel(x,y+1,z)) bits|=2;
-		if(this.getPixel(x+1,y+1,z)) bits|=1;
-		return bits;
-	}
-
+	
+	// setters
+	
 	setPixel(x:number,y:number,layer:number,state:boolean){
 		const offset=layer*this.height*this.span+y*this.span+(x>>5);
 		const mask=1<<(x&31);
@@ -144,46 +107,6 @@ export class BitGrid {
 			word&=~mask;
 		}
 		this.data[offset]=word
-	}
-
-// grid stuff
-
-	// heatmap methods
-
-	cool(falloff){
-		let index=0;
-		for(let y=0;y<this.height;y++){
-			for(let x=0;x<this.width;x++){
-				this.heatmap[index++]*=falloff;
-			}
-		}
-	}
-
-	heat(layer,value){
-		let offset=layer*this.height*this.span;
-		let index=0;
-		let word=0;
-		for(let y=0;y<this.height;y++){
-			for(let x=0;x<this.width;x++){
-				if((x&31)==0){
-					word=this.data[offset++];
-				}
-				const mask=1<<(x&31);
-				if(word&mask) this.heatmap[index]+=value;
-				index++;
-			}
-		}
-	}
-
-	drawMask(strings,maskChar,x,y,layer){
-		for(const text of strings){
-			for(let i=0;i<text.length;i++){
-				const char=text[i];
-				const state=(char==maskChar);//(char=="O");
-				this.setPixel(x+i,y,layer,state);
-			}
-			y++;
-		}
 	}
 
 	rect(x,y,width,height,layer=0){
@@ -197,18 +120,52 @@ export class BitGrid {
 		}    
 	}
 
-	drawGrid(skipx=20,skipy=10,layer=0){
-		let w=this.width;
-		let h=this.height;
-		for(let x=0;x<w;x+=skipx){
-			this.rect(x,2,1,h-2,layer);
-		}
-		this.rect(w-3,3,2,h-4,layer);
-		for(let y=0;y<h;y+=skipy){
-			this.rect(0,y,w,1,layer);
-		}
-		this.rect(3,h-3,w-4,2,layer);
+	// getters
+
+	getPixel(x:number,y:number,layer:number){
+		// x,y toroidal wrap around getter
+		x = (x + this.width) % this.width;
+		y = (y + this.height) % this.height;
+		const offset = layer*this.height*this.span;
+		const wordIndex = y*this.span+(x>>5);
+		const bitIndex = x&31;
+		const word=this.data[offset+wordIndex];
+		return (word&(1<<bitIndex))!=0;
 	}
+
+	countNeighbors(x:number, y:number, layer:number):number {
+		let count=0;
+		if (this.getPixel(x-1, y-1, layer)) count++;
+		if (this.getPixel(x, y-1, layer)) count++;
+		if (this.getPixel(x+1, y-1, layer)) count++;
+		if (this.getPixel(x-1, y, layer)) count++;
+		if (this.getPixel(x+1, y, layer)) count++;
+		if (this.getPixel(x-1, y+1, layer)) count++;
+		if (this.getPixel(x, y+1, layer)) count++;
+		if (this.getPixel(x+1, y+1, layer)) count++;
+		return count;
+	}
+
+	getNeighbors(x:number,y:number,z:number):number{
+		let bits=0;
+		if(this.getPixel(x-1,y-1,z)) bits|=128;
+		if(this.getPixel(x,y-1,z)) bits|=64;
+		if(this.getPixel(x+1,y-1,z)) bits|=32;
+		if(this.getPixel(x-1,y,z)) bits|=16;
+		if(this.getPixel(x+1,y,z)) bits|=8;
+		if(this.getPixel(x-1,y+1,z)) bits|=4;
+		if(this.getPixel(x,y+1,z)) bits|=2;
+		if(this.getPixel(x+1,y+1,z)) bits|=1;
+		return bits;
+	}
+
+	// maze methods
+
+	mazeBinaryTree(seed:number,layer:number){
+
+	}
+
+	// sprites
 
 	writePixels(pixels,x,y,layer){
 		let offset=layer*this.height*this.span+y*this.span+(x>>5);
@@ -230,7 +187,58 @@ export class BitGrid {
 		this.data[offset]=word
 	}
 
-	stepConwayLife(readLayer, writeLayer) {
+	// heatmap methods
+
+	cool(falloff:number){
+		let index=0;
+		for(let y=0;y<this.height;y++){
+			for(let x=0;x<this.width;x++){
+				this.heatmap[index++]*=falloff;
+			}
+		}
+	}
+
+	heat(layer:number,value:number){
+		let offset=layer*this.height*this.span;
+		let index=0;
+		let word=0;
+		for(let y=0;y<this.height;y++){
+			for(let x=0;x<this.width;x++){
+				if((x&31)==0){
+					word=this.data[offset++];
+				}
+				const mask=1<<(x&31);
+				if(word&mask) this.heatmap[index]+=value;
+				index++;
+			}
+		}
+	}
+
+	drawMask(strings:string[],maskChar:string,x:number,y:number,layer:number){
+		for(const text of strings){
+			for(let i=0;i<text.length;i++){
+				const char=text[i];
+				const state=(char==maskChar);//(char=="O");
+				this.setPixel(x+i,y,layer,state);
+			}
+			y++;
+		}
+	}
+
+	drawGrid(skipx=20,skipy=10,layer=0){
+		let w=this.width;
+		let h=this.height;
+		for(let x=0;x<w;x+=skipx){
+			this.rect(x,2,1,h-2,layer);
+		}
+		this.rect(w-3,3,2,h-4,layer);
+		for(let y=0;y<h;y+=skipy){
+			this.rect(0,y,w,1,layer);
+		}
+		this.rect(3,h-3,w-4,2,layer);
+	}
+
+	stepConwayLife(readLayer:number, writeLayer:number) {
 		let entropy=0;
 		const w = this.width;
 		const h = this.height;
@@ -249,26 +257,32 @@ export class BitGrid {
 		return entropy;
 	}
 
-	copyLayer(readLayer, writeLayer) {
+	copyLayer(readLayer:number, writeLayer:number) {
 		const wordsPerLayer = this.height * this.span;
 		const readOffset = readLayer * wordsPerLayer;
 		const writeOffset = writeLayer * wordsPerLayer;
 		this.data.copyWithin(writeOffset, readOffset, readOffset + wordsPerLayer);
 	}
 
-	countNeighbors(x, y, layer) {
-		let count=0;
-		if (this.getPixel(x-1, y-1, layer)) count++;
-		if (this.getPixel(x, y-1, layer)) count++;
-		if (this.getPixel(x+1, y-1, layer)) count++;
-		if (this.getPixel(x-1, y, layer)) count++;
-		if (this.getPixel(x+1, y, layer)) count++;
-		if (this.getPixel(x-1, y+1, layer)) count++;
-		if (this.getPixel(x, y+1, layer)) count++;
-		if (this.getPixel(x+1, y+1, layer)) count++;
-		return count;
+	static fromLines(lines: string[], truth: string): BitGrid {
+		const height = lines.length;
+		const width = lines[0].length;
+		const grid = new BitGrid(width*2+5, height*2+5, 2);
+		for(let y=0;y<height;y++){
+			const line=lines[y];
+			for(let x=0;x<width;x++){
+				if(line.charAt(x)==truth) {
+					grid.setPixel(3+x*2,3+y*2,0,true);
+				}
+			}
+		}
+		return grid;
 	}
 }
+
+
+// example code to be moved to tabletop.ts
+/*
 
 // return bordered version of lines with char per cell spacing
 
@@ -346,3 +360,4 @@ for(const bits of badBits){
 }
 
 
+*/

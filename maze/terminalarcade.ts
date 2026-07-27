@@ -10,23 +10,26 @@
 // pollKeypad
 // runTerminal pollTerminal stopTerminal 
 
+// axis pumps
+
+const UPDOWN=0;
+const LEFTRIGHT=1;
 
 const UpBit=1;
 const DownBit=2;
 const LeftBit=4;
 const RightBit=8;
+
 const SpaceBit=16;
 const BackspaceBit=32;
 const QuitBit=64;
 
-const MouseLeftBit=1;
-const MouseRightBit=2;
+// mouse bits << 10
+
+const LeftMouseBit=1;
+const RightMouseBit=2;
 const MouseMotionBit=4;
 
-
-// pumps
-
-enum axis {UPDOWN, LEFTRIGHT};
 const pump:number[]=[0,0];
 
 function fadePumps():number[]{
@@ -41,13 +44,12 @@ function fadePumps():number[]{
 }
 
 function updatePumps(keys:number){
-	if(keys&1) pump[axis.UPDOWN]-=100;
-	if(keys&2) pump[axis.UPDOWN]+=100;
-	if(keys&4) pump[axis.LEFTRIGHT]-=72;
-	if(keys&8) pump[axis.LEFTRIGHT]+=72;
+	if(keys&UpBit) pump[UPDOWN]-=100;
+	if(keys&DownBit) pump[UPDOWN]+=100;
+	if(keys&LeftBit) pump[LEFTRIGHT]-=72;
+	if(keys&RightBit) pump[LEFTRIGHT]+=72;
 	fadePumps();
 }
-
 
 // writeConsole text
 
@@ -73,7 +75,10 @@ export function replaceText(text: string, search: string, replace: string, leftT
 const resetConsole="\x1b[0m";
 const enableCursor="\x1b[?25h";
 const disableCursor="\x1b[?25l";
+
 let blinkFrame=0;
+let mouseX=0;
+let mouseY=0;
 
 export function setCursor(col: number,row: number): string {
 	let code=`\x1b[${row};${col}H`;
@@ -141,7 +146,9 @@ async function runInputTask(enableMouse:boolean=false) {
 				keyboardQueue.push(payload);
 			}
 		}catch(e){ // operation canceled code EINTR
-			console.log("[E]",e);
+			if(e.code!="EINTR"){
+				console.log("[E]",e);
+			}
 			running=false;
 		}
 	}
@@ -168,12 +175,7 @@ export function pollTerminalKeys(): number {
 	return 0;
 }
 
-export interface KeypadState {
-  hitBits: number;
-  x: number,
-  y: number
-}
-
+export interface KeypadState {hitBits:number; axisX:number, axisY:number, mouseX:number, mouseY:number}
 
 const decoder = new TextDecoder();
 let keyPad=0;
@@ -198,8 +200,8 @@ export function pollKeypad():KeypadState{
 						//35;53;11M")
 						const m3=sequence.substring(2).split(";");
 						const b=parseInt(m3[0]);
-						const x=parseInt(m3[1]);
-						const y=parseInt(m3[2]);
+						mouseX=parseInt(m3[1]);
+						mouseY=parseInt(m3[2]);
 						switch(b){
 							case 0:mouseButtons^=1;break;
 							case 32:mouseButtons^=2;break;
@@ -218,9 +220,9 @@ export function pollKeypad():KeypadState{
 					}
 //					console.log("[ESC]",{keyPad,sequence});
 				}else{
-					console.log("Escape!");
+//					console.log("Escape!");
 					keyPad|=QuitBit;
-					stopTerminal();
+//					stopTerminal();
 				}
 				// onEscape
 				break;
@@ -230,5 +232,6 @@ export function pollKeypad():KeypadState{
 	mouseButtons=0;
 	keyPad=0;
 	updatePumps(hitBits);
-	return {hitBits,x:pump[axis.UPDOWN],y:pump[axis.LEFTRIGHT]};
+	const pad0=	{hitBits,axisX:pump[LEFTRIGHT],axisY:pump[UPDOWN],mouseX,mouseY};
+	return pad0;
 }

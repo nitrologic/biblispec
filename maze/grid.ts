@@ -2,36 +2,42 @@
 
 // - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
 
-import { 
-	pollKeypad, 
-	sleep, 
-	pollTerminal, 
-	isRunning, 
-	stopRunning,
-	stopTerminal, 
-	writeConsole, 
-	setCursor, 
-	replaceText, 
-	runTerminal  
-} from "./terminalarcade.ts";
-
 import conway from "../books/conway.json" with { type: "json" };
 import { BitGrid } from "./table.ts";
+
+import { sleep, 
+	runTerminal, isRunning, stopRunning, stopTerminal, 
+	pollKeypad, pollTerminal, 
+	writeConsole, setCursor, replaceText, 
+} from "./terminalarcade.ts";
+
+// grid block display is 1:1 char per pixel resolution
+
+const gridBlocks=" ▣▥▤▦▢";
+
+const cursorHome="\x1b[H";
+const cursorClear="\x1b[2J\x1b[1;1H";
+
+let appWidth=0;
+let appHeight=0;
+
+function pollSize(){
+	const { columns, rows } = Deno.consoleSize();
+	// todo clamp to minimum 40 25
+	vidWidth=columns-6;
+	vidHeight=rows-6;
+	if(vidWidth!=appWidth||vidHeight!=appHeight){
+		appWidth=vidWidth;
+		appHeight=vidHeight;
+		console.log(cursorClear);
+	}
+}
 
 let hasMidi=false;
 let hasKeys=false;
 
 let vidWidth=40;
 let vidHeight=25;
-/*
-if(Deno.build.os === "windows"){
-// deno Foreign Function Interface
-	const ffiPath = Deno.build.os === "darwin"  ? "./macosffi.ts" : "./win32ffi.ts";
-	const { pollKeyboard, pollMouse, initMidi, pollMidi, closeMidi } = await import(ffiPath);
-	hasMidi=initMidi();
-	hasKeys=true;
-}
-*/
 
 const gridTitle="☰ nitrologic grid 0.7.5 - Arrows, Space, Esc to Quit "+(hasMidi?"midi":"nomidi");
 
@@ -69,29 +75,6 @@ function range(startChar = 'A',endChar = 'Z'){
 // * 1x1 wide unicode codepoints
 //   2x2 quad block character
 //   1x2 true color block
-
-
-// grid block display is 1:1 char per pixel resolution
-
-const gridBlocks=" ▣▥▤▦▢";
-
-const cursorHome="\x1b[H";
-const cursorClear="\x1b[2J\x1b[1;1H";
-
-let appWidth=0;
-let appHeight=0;
-
-function pollSize(){
-	const { columns, rows } = Deno.consoleSize();
-	// todo clamp to minimum 40 25
-	vidWidth=columns-6;
-	vidHeight=rows-6;
-	if(vidWidth!=appWidth||vidHeight!=appHeight){
-		appWidth=vidWidth;
-		appHeight=vidHeight;
-		console.log(cursorClear);
-	}
-}
 
 let gridWidth=22*8*2;
 let gridHeight=23*8;
@@ -170,7 +153,7 @@ let cursorVX=0;
 let cursorY=0;
 let cursorVY=0;
 
-function updateCursor(x,y){
+function updateCursor(x:number,y:number){
 	cursorVX+=(x)/400;
 	cursorVY+=(y)/400;
 
@@ -450,12 +433,11 @@ while(isRunning()){
 
 	const keypad=pollKeypad();
 	const keys=keypad.hitBits;
-
 	if((keys&16)&&!(oldKeys&16)) hitSpace();
 	if((keys&32)&&!(oldKeys&32)) hitBackspace();
 	if((keys&64)&&!(oldKeys&64)) stopRunning();
 	oldKeys=keys;
-	updateCursor(keypad.x,keypad.y);
+	updateCursor(keypad.axisX,keypad.axisY);
 }
 
 //const code1=setCursor(1,vidHeight+2);
