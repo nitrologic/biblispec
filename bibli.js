@@ -24,11 +24,11 @@ function pollSize(pre) {
 	const styles=Object.values(style);
 	for(const alpha of alphabet){
 		alphaStyles=styles.filter(word=>word.startsWith(alpha));
-		console.log("[bibli] style",alpha,alphaStyles);
+//		console.log("[bibli] style",alpha,alphaStyles);
 	}
 
-	const width=50;
 	const height=parseFloat(style.fontSize); 
+	const width=height/2;
 	const w=pre.clientWidth;   // Usable internal width
 	const h=pre.clientHeight; // Usable internal height
 
