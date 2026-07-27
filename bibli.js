@@ -24,7 +24,8 @@ function emit(content){
 	terminalPre.textContent=content;
 }
 
-function pollSize(pre) {
+function onSize() {
+	const pre=terminalPre;
 	const style = window.getComputedStyle(pre);
 	const styles=Object.values(style);
 	for(const alpha of alphabet){
@@ -65,8 +66,8 @@ async function onLoad(){
 	console.log("[bibli] pre",pre); 
 	terminalPre=pre;
 	
-	append("dimensioning pre");
-	pollSize(pre);
+	append("dimensioning");
+	onSize();
 
 	append("reading bibli");
 	const spec=await fetchBibli("./biblispec.json");
@@ -79,4 +80,4 @@ async function onLoad(){
 }
 
 window.onload=onLoad;
-window.addEventListener("resize",pollSize);
+window.addEventListener("resize",onSize);
