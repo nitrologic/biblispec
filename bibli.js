@@ -43,7 +43,7 @@ function onSize() {
 	if((appWidth!=cols)||(appHeight|=rows)){
 		appWidth=cols;
 		appHeight=rows;
-		console.log("[bibli] resize",{appWidth,appHeight});
+		console.log("[bibli] onSize",{appWidth,appHeight});
 	}
 }
 
