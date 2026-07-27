@@ -1,3 +1,29 @@
+CSSStyleDeclaration {
+	0: 'accent-color', 1: 'align-content', 2: 'align-items', 3: 'align-self', 4: 'alignment-baseline', 
+	5: 'anchor-name', 6: 'anchor-scope', 7: 'animation-composition', 8: 'animation-delay', 9: 'animation-direction', 
+	10: 'animation-duration', 11: 'animation-fill-mode', 12: 'animation-iteration-count', 13: 'animation-name', 14: 'animation-play-state', 
+	15: 'animation-range-end', 16: 'animation-range-start', 17: 'animation-timeline', 18: 'animation-timing-function', 19: 'animation-trigger', 
+	20: 'app-region', 21: 'appearance', 22: 'aspect-ratio', 23: 'backdrop-filter', 24: 'backface-visibility', 
+	25: 'background-attachment', 26: 'background-blend-mode', 27: 'background-clip', 28: 'background-color', 29: 'background-image', 
+	30: 'background-origin', 31: 'background-position', 32: 'background-repeat', 33: 'background-size', 34: 'baseline-shift', 
+	35: 'baseline-source', 36: 'block-size', 37: 'border-block-end-color', 38: 'border-block-end-style', 39: 'border-block-end-width', 
+	40: 'border-block-start-color', 41: 'border-block-start-style', 42: 'border-block-start-width', 43: 'border-bottom-color', 44: 'border-bottom-left-radius', 
+	45: 'border-bottom-right-radius', 46: 'border-bottom-style', 47: 'border-bottom-width', 48: 'border-collapse', 49: 'border-end-end-radius', 
+	50: 'border-end-start-radius', 51: 'border-image-outset', 52: 'border-image-repeat', 53: 'border-image-slice', 54: 'border-image-source', 
+	55: 'border-image-width', 56: 'border-inline-end-color', 57: 'border-inline-end-style', 58: 'border-inline-end-width', 59: 'border-inline-start-color', 
+	60: 'border-inline-start-style', 61: 'border-inline-start-width', 62: 'border-left-color', 63: 'border-left-style', 64: 'border-left-width', 
+	65: 'border-right-color', 66: 'border-right-style', 67: 'border-right-width', 68: 'border-shape', 69: 'border-start-end-radius', 
+	70: 'border-start-start-radius', 71: 'border-top-color', 72: 'border-top-left-radius', 73: 'border-top-right-radius', 74: 'border-top-style', 
+	75: 'border-top-width', 76: 'bottom', 77: 'box-decoration-break', 78: 'box-shadow', 79: 'box-sizing', 
+	80: 'break-after', 81: 'break-before', 82: 'break-inside', 83: 'buffered-rendering', 84: 'caption-side', 
+	85: 'caret-animation', 86: 'caret-color', 87: 'caret-shape', 88: 'clear', 89: 'clip', 
+	90: 'clip-path', 91: 'clip-rule', 92: 'color', 93: 'color-interpolation', 94: 'color-interpolation-filters', 
+	95: 'color-rendering', 96: 'color-scheme', 97: 'column-count', 98: 'column-fill', 99: 'column-gap', …}
+}
+
+
+
+
 Valid JSON
 63.78 KB • 1641 keys • depth 8 • 334 objects • 250 arrays
 
