@@ -1,4 +1,4 @@
-let terminalDiv;
+let terminalPre;
 let spec;
 
 let appWidth=40;
@@ -39,8 +39,9 @@ function append(text){
 	terminalDiv.textContent+=text;
 }
 async function onLoad(){
-	terminalDiv=document.getElementById("terminal");
+	const pre=document.getElementById("terminal");
 	console.log("[bibli] pre",pre); 
+	terminalPre=pre;
 	append("dimensioning pre");
 	pollSize(pre);
 	append("reading bibli");
