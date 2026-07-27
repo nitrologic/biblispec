@@ -3,9 +3,19 @@
 
 A living document of linguistic latitude.
 
-# ⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉
+
+# Recent Additions
+
+## ⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉
 
 Math Symbols
+
+## nitrologic.github.io biblispec page view
+
+A work in progress web view of the primary json payload.
+
+ https://nitrologic.github.io/biblispec
+
 
 # What is bibli spec?
 

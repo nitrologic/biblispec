@@ -3,6 +3,11 @@
 // biblispec MIT License 
 // https://opensource.org/licenses/MIT
 
+// https://nitrologic.github.io/biblispec
+
+// todo: module support
+// import spec from './biblispec.json' with { type: 'json' };
+
 let terminalPre;
 let bibliSpec;
 
@@ -74,6 +79,3 @@ async function onLoad(){
 }
 
 window.onload=onLoad;
-
-// https://nitrologic.github.io/biblispec
-// import spec from './biblispec.json' with { type: 'json' };
