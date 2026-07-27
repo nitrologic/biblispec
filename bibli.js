@@ -1,4 +1,4 @@
-//import spec from './biblispec.json' with { type: 'json' };
+import spec from './biblispec.json' with { type: 'json' };
 //console.log("[bibli]",data); 
 //console.log("[bibli]",data.name);
 
@@ -13,3 +13,5 @@ function onLoad(){
 }
 
 window.onload=onLoad;
+
+// https://nitrologic.github.io/biblispec
