@@ -9,6 +9,10 @@ let bibliSpec;
 let appWidth=40;
 let appHeight=25;
 
+function append(text){
+	terminalPre.textContent+=text;
+}
+
 function pollSize(pre) {
 	const style = window.getComputedStyle(pre);
 	console.log("[bibli] style",style);
@@ -40,9 +44,7 @@ async function fetchBibli(path){
 		console.error("[bibli] fetch error", error);
 	}
 }
-function append(text){
-	terminalDiv.textContent+=text;
-}
+
 async function onLoad(){
 	const pre=document.getElementById("terminal");
 	console.log("[bibli] pre",pre); 
