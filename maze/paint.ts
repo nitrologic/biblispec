@@ -2,10 +2,8 @@
 // (C) 2026 nitrologic
 // All Rights Reserved
 
-import { pollKeypad, sleep, pollTerminal, isRunning, stopTerminal, writeConsole, setCursor, replaceText, runTerminal  } from "./terminalarcade.ts";
+import { pollKeypad, sleep, pollTerminal, isRunning, stopRunning, stopTerminal, writeConsole, setCursor, replaceText, runTerminal  } from "./terminalarcade.ts";
 import { BitGrid } from "./table.ts";
-
-const encoder=new TextEncoder();
 
 const paintTitle="☰ paint 0.1 - Arrows Space Q to quit";
 const paintMillis=20;
@@ -86,7 +84,6 @@ function updateInput(){
 	const queue:Uint8Array=pollInput();
 	const n=queue?.length;
 	if(n) console.log("[INPUT]",n,queue)
-
 }
 
 
@@ -159,9 +156,8 @@ await runTerminal(true);
 while(isRunning()){
     pollSize();
     updateShots();
-    let pad=pollKeyboard();
+    let pad=pollKeypad();
     await sleep(paintMillis);
 }
 
-stopTerminal();
-console.log("bye!");
+stopRunning();
