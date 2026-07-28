@@ -1,6 +1,7 @@
 // nitrologic.js
 // (c) 2026 nitrologic
 
+// fullWidth(text) and fullWidthShapes[]
 // Braille 
 // Quad
 // BitGrid (width,height,layers) setPixel(x,y,layer,state) getPixel(x,y,layer)
@@ -30,6 +31,12 @@ function fullWidth(text){
 	}
 	return result.join("");
 }
+
+const fullWidthShapes=[
+	"⬛⬜🟨🟥🟧🟩🟦🟪🟫",
+	"⚫⚪🟡🔴🟠🟢🔵🟣🟤",
+	"🖤🤍💛❤️🧡💚💙💜🤎"
+];
 
 // Braille Lines
 

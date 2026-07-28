@@ -367,6 +367,8 @@ let layer=0;
 let count=0;
 let entropy=0;
 
+let pattern=friends;
+
 function conwayLifeFrame(){
 	count++;
 	if(true){//((count++)&7)==5){
@@ -377,7 +379,7 @@ function conwayLifeFrame(){
 	bitgrid.cool(0.95);
 	let panx=cursorX>>1;
 	let pany=cursorY>>2;
-	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,vidWidth/dotBlockWide,vidHeight);
+	let blocks=gridDotWindowLayer(bitgrid,pattern,panx,pany,vidWidth/dotBlockWide,vidHeight);
 	return blocks.join("\n");
 }
 
