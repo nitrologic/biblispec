@@ -21,11 +21,11 @@ function append(text){
 }
 
 function emit(content){
-	// "https://github.com/nitrologic/biblispec"
+	const uri="\"https://";
 	const result=[];
 	let index=0;
 	while(index<content.length){
-		link=content.indexOf("\"https://github.com",index);
+		link=content.indexOf(uri,index);
 		if(link==-1) break;
 		close=content.indexOf("\"",link+1);
 		if(close==-1) break;
@@ -35,7 +35,8 @@ function emit(content){
 		index=close+1;
 	}
 	result.push(content.slice(index));
-	terminalPre.innerHTML=result.join("");//textContent=content;
+	terminalPre.innerHTML=result.join("");
+	//textContent=content;
 }
 
 function onSize() {
