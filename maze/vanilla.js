@@ -7,6 +7,8 @@
 
 "use strict"
 
+let bibliTitle=fullWidth("nitrologic 2026 project bibli");
+
 // uses nitrologic.js for helpers
 
 // vidConsole located as textarea element named console
@@ -126,7 +128,9 @@ function tick(timestamp) {
 		previousFrame=frame;
 	}
 
-	if(refresh) vidConsole.value=conwayLifeFrame();
+	if(refresh) {
+		vidConsole.value=conwayLifeFrame()+"\n"+bibliTitle;
+	}
 
 //	pollDimensions();
 	const keys=

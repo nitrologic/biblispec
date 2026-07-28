@@ -10,13 +10,17 @@ canvas {
 	height: 80%;
 }
 
+#banner{
+	margin: 12px;
+}
+#code{
+	margin: 12px;
+	font-size: x-small;
+}
+
 #terminal{
 	display: block;
 	width: 100%;
 	height: 80%;
 	margin: 32px;
-}
-
-div {
-	height: 50%;
 }

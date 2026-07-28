@@ -6,6 +6,31 @@
 // BitGrid (width,height,layers) setPixel(x,y,layer,state) getPixel(x,y,layer)
 // Gui
 
+// full width codepoints for ascii strings
+
+const fullWidthAscii =
+  "　" +                          // 32 space
+  "！＂＃＄％＆＇（）＊＋，－．／" + // 33-47
+  "０１２３４５６７８９" +         // 48-57
+  "：；＜＝＞？＠" +               // 58-64
+  "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ" + // 65-90
+  "［＼］＾＿｀" +                 // 91-96
+  "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ" + // 97-122
+  "｛｜｝～";                     // 123-126
+
+function fullWidth(text){
+	const result=[];
+	const n=text.length;
+	for(let pos=0;pos<n;pos++){
+		const char=text.charCodeAt(pos);
+//		const code=text.codePointAt(pos);
+		if(char>=32&&char<128) {
+			result.push(fullWidthAscii[char-32]);
+		}
+	}
+	return result.join("");
+}
+
 // Braille Lines
 
 const brailleCode=[
