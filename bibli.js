@@ -31,7 +31,8 @@ function emit(content){
 		if(close==-1) break;
 		url=content.substring(link,close+1);
 		result.push(content.slice(index,link));
-		result.push(link);
+		const anchor="<a href="+url+">"+url+"</a>";
+		result.push(anchor);
 		index=close+1;
 	}
 	result.push(content.slice(index));
