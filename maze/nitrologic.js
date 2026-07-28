@@ -1,8 +1,80 @@
-// bitgrid.js
+// nitrologic.js
+// (c) 2026 nitrologic
 
-//  - width height layers of single bit pixels
-//  - 32 bit data words contained in single Uint32Array
-//	- drawShape stepConwayLife cellular automata functions incoming
+// Braille 
+// Quad
+// BitGrid (width,height,layers) setPixel(x,y,layer,state) getPixel(x,y,layer)
+// Gui
+
+// Braille Lines
+
+const brailleCode=[
+	"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿",
+	"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿",
+	"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿",
+	"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿"];
+
+function brailleLines(grid){
+	const result=[];
+	const w=grid.width;
+	const h=grid.height;
+	const span=grid.span;
+	for(let y=0;y<h;y+=4){
+		const line=[];
+		const y0=y*span*4;
+		const y1=y0+span*1;
+		const y2=y0+span*2;
+		const y3=y0+span*3;
+		for(let x=0;x<w;x+=32){
+			const col=x>>5;
+			let w0=grid.data[y0+col];
+			let w1=grid.data[y1+col];
+			let w2=grid.data[y2+col];
+			let w3=grid.data[y3+col];
+			for(let i=0;i<16;i++){
+				const index=(w0&3)|((w1&3)<<2)|((w2&3)<<4);
+				line.push(brailleCode[w3&3][index]);
+				w0>>=2;w1>>=2;w2>>=2;w3>>=2;
+			}
+		}
+		result.push(line.join(""));
+	}
+	return result;
+}
+
+// Quad Lines
+
+const quadCode=" ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█";
+
+function quadLines(grid){
+	const result=[];
+	const w=grid.width;
+	const h=grid.height;
+	const span=grid.span;
+	for(let y=0;y<h;y+=2){
+		const line=[];
+		const y0=y*span*2;
+		const y1=y0+span;
+		for(let x=0;x<w;x+=32){
+			const col=x>>5;
+			let w0=grid.data[y0+col];
+			let w1=grid.data[y1+col];
+			for(let i=0;i<16;i++){
+				const index=(w0&3)|((w1&3)<<2);
+				line.push(quadCode[index]);
+				w0>>=2;
+				w1>>=2;
+			}
+		}
+		result.push(line.join(""));
+	}
+	return result;
+}
+
+// BitGrid
+// - public js version of bitgrid.ts and friends
+// - width height layers of single bit pixels
+// - 32 bit data words contained in single Uint32Array
 
 //export 
 class BitGrid {
@@ -16,7 +88,7 @@ class BitGrid {
 		this.heatmap=new Uint16Array(width*height);
 	}
 
-	// bit pixel
+	// get set pixel
 
 	getPixel(x,y,layer){
 		// x,y toroidal wrap around getter
@@ -39,6 +111,29 @@ class BitGrid {
 			word&=~mask;
 		}
 		this.data[offset]=word
+	}
+
+	// non optimal nominal code
+
+	rectOr(x,y,width,height,layer=0){
+		const offset=layer*this.height*this.span;
+		for (let row = y; row < y + height; row++) {
+			for (let col = x; col < x + width; col++) {
+				const wordIndex = row * this.span + (col >> 5);
+				const bitIndex = col & 31;
+				this.data[offset+wordIndex]|=(1 << bitIndex);
+			}
+		}    
+	}
+	rectNot(x,y,width,height,layer=0){
+		const offset=layer*this.height*this.span;
+		for (let row = y; row < y + height; row++) {
+			for (let col = x; col < x + width; col++) {
+				const wordIndex = row * this.span + (col >> 5);
+				const bitIndex = col & 31;
+				this.data[offset+wordIndex]&=~(1<<bitIndex);
+			}
+		}    
 	}
 
 	// heatmap methods
@@ -77,17 +172,6 @@ class BitGrid {
 			}
 			y++;
 		}
-	}
-
-	rect(x,y,width,height,layer=0){
-		const offset=layer*this.height*this.span;
-		for (let row = y; row < y + height; row++) {
-			for (let col = x; col < x + width; col++) {
-				const wordIndex = row * this.span + (col >> 5);
-				const bitIndex = col & 31;
-				this.data[offset+wordIndex] |= (1 << bitIndex);
-			}
-		}    
 	}
 
 	drawGrid(skipx=20,skipy=10,layer=0){

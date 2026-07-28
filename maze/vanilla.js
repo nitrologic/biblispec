@@ -2,12 +2,14 @@
 // (c)2026 nitrologic
 // biblispec MIT License 
 // https://opensource.org/licenses/MIT
-
 // https://nitrologic.github.io/biblispec
+// initGrid animationframe on tick
 
 "use strict"
 
-// located as textarea element named console
+// uses nitrologic.js for helpers
+
+// vidConsole located as textarea element named console
 
 let vidConsole;
 
@@ -18,7 +20,7 @@ let displayDirty=false;
 function pollDimensions(){
 	const w=vidConsole.clientWidth;
 	const h=vidConsole.clientHeight;
-	let vw=((w/18)|0)-2;	//10
+	let vw=((w/18)|0)-2;
 	let vh=((h/30)|0)-2;
 	if((vidWidth!=vw)||(vidHeight!=vh)){
 		vidWidth=vw;
@@ -30,16 +32,30 @@ function pollDimensions(){
 let gridWidth=22*8*4;
 let gridHeight=23*8;
 
-const UPDOWN=0;
-const LEFTRIGHT=1;
-
-const pump=[0,0];
+// "codes": " ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█",
 
 let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","💙","💜","🤎"];
 const dotBlockWide=2;
 
 const friendEmoji="🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
 const friends=[...friendEmoji];
+
+
+
+// vanillaGui
+
+function cursorPos(x,y){
+	return "\x1b["+(y||1)+";"+(x||1)+"H";
+}
+
+function cursorHor(x){
+	return "\x1b["+(x||1)+"G";
+}
+
+const pump=[0,0];
+
+const UPDOWN=0;
+const LEFTRIGHT=1;
 
 const pressedKeys={};
 
@@ -72,18 +88,15 @@ function onMouseMove(e){
 		const y=e.movementY*4;
 		pump[1]+=x;
 		pump[0]+=y;
-		console.log({x,y});
+//		console.log("[vanilla]",{x,y});
 	}
 }
 
-function initGrid(){
-	const terminal=document.getElementById("console");
-//	terminal.value+="\n123\n"+friends[1]+"\n";
-	console.log("[vanilla]","initGrid");
-	vidConsole=terminal;
-	pollDimensions();
-	terminal.value=testFrame();
-	requestAnimationFrame(tick);
+let startTime = null;
+let tickTime = null;
+
+function initGui(terminal){
+	console.log("[vanilla]","initGui");
 	terminal.addEventListener("mousedown",onMouse);
 	terminal.addEventListener("mousemove",onMouseMove);
 	terminal.addEventListener("mouseup",onMouse);
@@ -91,14 +104,31 @@ function initGrid(){
 	terminal.addEventListener("keyup",onKeyUp);
 }
 
-let startTime = null;
+let tickCount=0;
+let governor=4;
+let previousFrame=0;
 
 function tick(timestamp) {
-	if (!startTime) startTime = timestamp;
-	const elapsed = timestamp - startTime;
-//	pollDimensions();
-	vidConsole.value=testFrame();
+	if (!startTime) {
+		startTime = timestamp;
+		tickTime = timestamp;
+	}
+	const elapsed = timestamp - tickTime;
+	tickTime = timestamp;
+
 	requestAnimationFrame(tick);
+
+	let refresh=true;
+	tickCount++;
+	if(governor){
+		let frame=(tickCount/governor)|0;
+		if(frame==previousFrame) refresh=false;
+		previousFrame=frame;
+	}
+
+	if(refresh) vidConsole.value=conwayLifeFrame();
+
+//	pollDimensions();
 	const keys=
 		(pressedKeys["ArrowUp"]?1:0)|
 		(pressedKeys["ArrowDown"]?2:0)|
@@ -106,6 +136,14 @@ function tick(timestamp) {
 		(pressedKeys["ArrowLeft"]?4:0);
 	updatePumps(keys);
 	updateCursor();
+}
+
+function initGrid(){
+	const terminal=document.getElementById("console");
+	initGui(terminal);
+	vidConsole=terminal;
+	pollDimensions();
+	requestAnimationFrame(tick);
 }
 
 function mirror(shape){
@@ -125,6 +163,10 @@ function axis(glider){
 		mirror(glider).toReversed()
 	];
 }
+
+
+
+
 
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
 
@@ -321,7 +363,7 @@ let layer=0;
 let count=0;
 let entropy=0;
 
-function testFrame(){
+function conwayLifeFrame(){
 	count++;
 	if(true){//((count++)&7)==5){
 		layer=1-layer;
