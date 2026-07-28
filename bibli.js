@@ -21,22 +21,21 @@ function append(text){
 }
 
 function emit(content){
-	const prefix="\"https://github.com";
+	// "https://github.com/nitrologic/biblispec"
 	const result=[];
 	let index=0;
 	while(index<content.length){
-		link=content.indexOf(prefix,index);
+		link=content.indexOf("\"https://github.com",index);
 		if(link==-1) break;
 		close=content.indexOf("\"",link+1);
 		if(close==-1) break;
 		url=content.substring(link,close+1);
 		result.push(content.slice(index,link));
-		const anchor="<a href="+url+">"+url+"</a>";
-		result.push(anchor);
+		result.push(link);
 		index=close+1;
 	}
 	result.push(content.slice(index));
-	terminalPre.textContent=result.join("");//content;
+	terminalPre.innerHTML=result.join("");//textContent=content;
 }
 
 function onSize() {
@@ -90,7 +89,7 @@ async function onLoad(){
 	console.log("[bibli] spec.name",spec.name);
 	bibliSpec=spec;
 
-	json=await JSON.stringify(spec, null, 2);
+	const json=JSON.stringify(spec, null, 2);
 	emit(json);
 }
 
