@@ -13,12 +13,18 @@ let vidConsole;
 
 let vidWidth=72*2;
 let vidHeight=22;
+let displayDirty=false;
 
 function pollDimensions(){
 	const w=vidConsole.clientWidth;
 	const h=vidConsole.clientHeight;
-	vidWidth=(w/16)|0;
-	vidHeight=(h/32)|0
+	let vw=((w/12)|0)-12;	//10
+	let vh=((h/24)|0)-2;
+	if((vidWidth!=vw)||(vidHeight!=vh)){
+		vidWidth=vw;
+		vidHeight=vh;
+		displayDirty=true;
+	}
 }
 
 let gridWidth=22*8*4;
