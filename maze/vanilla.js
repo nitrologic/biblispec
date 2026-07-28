@@ -1,15 +1,25 @@
+// vanilla.js
+// (c)2026 nitrologic
+// biblispec MIT License 
+// https://opensource.org/licenses/MIT
+
+// https://nitrologic.github.io/biblispec
+
 "use strict"
+
+// located as textarea element named console
+
+let vidConsole;
 
 let vidWidth=72*2;
 let vidHeight=22;
 
-function resizeTerminal(){
-	const w=terminal.clientWidth;
-	const h=terminal.clientHeight;
+function onSize(){
+	const w=vidConsole.clientWidth;
+	const h=vidConsole.clientHeight;
 	vidWidth=(w/16)|0;
 	vidHeight=(h/32)|0
 }
-
 
 let gridWidth=22*8*4;
 let gridHeight=23*8;
@@ -18,8 +28,6 @@ const UPDOWN=0;
 const LEFTRIGHT=1;
 
 const pump=[0,0];
-
-let terminal;
 
 let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","💙","💜","🤎"];
 const dotBlockWide=2;
@@ -63,10 +71,11 @@ function onMouseMove(e){
 }
 
 function initGrid(){
-	terminal=document.getElementById("terminal");
+	const terminal=document.getElementById("console");
 //	terminal.value+="\n123\n"+friends[1]+"\n";
-	console.log("initGrid");
-	resizeTerminal();
+	console.log("[vanilla]","initGrid");
+	vidConsole=terminal;
+	resizeConsole();
 	terminal.value=testFrame();
 	requestAnimationFrame(tick);
 	terminal.addEventListener("mousedown",onMouse);
@@ -82,7 +91,7 @@ function tick(timestamp) {
 	if (!startTime) startTime = timestamp;
 	const elapsed = timestamp - startTime;
 	resizeTerminal();
-	terminal.value=testFrame();
+	vidConsole.value=testFrame();
 	requestAnimationFrame(tick);
 	const keys=
 		(pressedKeys["ArrowUp"]?1:0)|
@@ -319,3 +328,6 @@ function testFrame(){
 	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,vidWidth/dotBlockWide,vidHeight);
 	return blocks.join("\n");
 }
+
+window.onload=initGrid;
+window.addEventListener("resize",onSize);
