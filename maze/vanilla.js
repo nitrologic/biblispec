@@ -14,7 +14,7 @@ let vidConsole;
 let vidWidth=72*2;
 let vidHeight=22;
 
-function onSize(){
+function pollDimensions(){
 	const w=vidConsole.clientWidth;
 	const h=vidConsole.clientHeight;
 	vidWidth=(w/16)|0;
@@ -75,7 +75,7 @@ function initGrid(){
 //	terminal.value+="\n123\n"+friends[1]+"\n";
 	console.log("[vanilla]","initGrid");
 	vidConsole=terminal;
-	resizeConsole();
+	pollDimensions();
 	terminal.value=testFrame();
 	requestAnimationFrame(tick);
 	terminal.addEventListener("mousedown",onMouse);
@@ -330,4 +330,4 @@ function testFrame(){
 }
 
 window.onload=initGrid;
-window.addEventListener("resize",onSize);
+window.addEventListener("resize",pollDimensions);
