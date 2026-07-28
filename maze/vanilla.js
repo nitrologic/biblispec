@@ -90,7 +90,7 @@ let startTime = null;
 function tick(timestamp) {
 	if (!startTime) startTime = timestamp;
 	const elapsed = timestamp - startTime;
-	resizeTerminal();
+//	pollDimensions();
 	vidConsole.value=testFrame();
 	requestAnimationFrame(tick);
 	const keys=
