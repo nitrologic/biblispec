@@ -18,8 +18,8 @@ let displayDirty=false;
 function pollDimensions(){
 	const w=vidConsole.clientWidth;
 	const h=vidConsole.clientHeight;
-	let vw=((w/16)|0)-12;	//10
-	let vh=((h/28)|0)-2;
+	let vw=((w/15)|0)-12;	//10
+	let vh=((h/30)|0)-2;
 	if((vidWidth!=vw)||(vidHeight!=vh)){
 		vidWidth=vw;
 		vidHeight=vh;
