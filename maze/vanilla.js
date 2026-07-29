@@ -12,7 +12,7 @@
 
 "use strict"
 
-const friendEmoji="🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
+const friendEmoji="🟩🟦🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
 const friends=[...friendEmoji];
 
 const dotBlockWide=2;
