@@ -1,4 +1,4 @@
-// nitrologic.js
+// bitgrid.js
 // (c) 2026 nitrologic
 
 // fullWidth(text) and fullWidthShapes[]

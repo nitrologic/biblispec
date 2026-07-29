@@ -3,11 +3,17 @@
 // biblispec MIT License 
 // https://opensource.org/licenses/MIT
 // https://nitrologic.github.io/biblispec
-// initGrid animationframe on tick
+
+// runs life on bitgrid 
+// see initGrid for animationframe on tick
 
 "use strict"
 
-let bibliTitle=fullWidth("nitrologic 2026 project bibli");
+let bibliTitle=fullWidth("bitgrid demo 1");
+
+function statusFrame(){
+	return bibliTitle;
+}
 
 // uses nitrologic.js for helpers
 
@@ -41,8 +47,6 @@ const dotBlockWide=2;
 
 const friendEmoji="🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
 const friends=[...friendEmoji];
-
-
 
 // vanillaGui
 
@@ -106,49 +110,6 @@ function initGui(terminal){
 	terminal.addEventListener("keyup",onKeyUp);
 }
 
-let tickCount=0;
-let governor=4;
-let previousFrame=0;
-
-function tick(timestamp) {
-	if (!startTime) {
-		startTime = timestamp;
-		tickTime = timestamp;
-	}
-	const elapsed = timestamp - tickTime;
-	tickTime = timestamp;
-
-	requestAnimationFrame(tick);
-
-	let refresh=true;
-	tickCount++;
-	if(governor){
-		let frame=(tickCount/governor)|0;
-		if(frame==previousFrame) refresh=false;
-		previousFrame=frame;
-	}
-
-	if(refresh) {
-		vidConsole.value=conwayLifeFrame()+"\n"+bibliTitle;
-	}
-
-//	pollDimensions();
-	const keys=
-		(pressedKeys["ArrowUp"]?1:0)|
-		(pressedKeys["ArrowDown"]?2:0)|
-		(pressedKeys["ArrowRight"]?8:0)|
-		(pressedKeys["ArrowLeft"]?4:0);
-	updatePumps(keys);
-	updateCursor();
-}
-
-function initGrid(){
-	const terminal=document.getElementById("console");
-	initGui(terminal);
-	vidConsole=terminal;
-	pollDimensions();
-	requestAnimationFrame(tick);
-}
 
 function mirror(shape){
 	let result=[];
@@ -167,10 +128,6 @@ function axis(glider){
 		mirror(glider).toReversed()
 	];
 }
-
-
-
-
 
 const bitgrid = new BitGrid(gridWidth,gridHeight,4);
 
@@ -381,6 +338,50 @@ function conwayLifeFrame(){
 	let pany=cursorY>>2;
 	let blocks=gridDotWindowLayer(bitgrid,pattern,panx,pany,vidWidth/dotBlockWide,vidHeight);
 	return blocks.join("\n");
+}
+
+let tickCount=0;
+let governor=4;
+let previousFrame=0;
+
+function tick(timestamp) {
+	if (!startTime) {
+		startTime = timestamp;
+		tickTime = timestamp;
+	}
+	const elapsed = timestamp - tickTime;
+	tickTime = timestamp;
+
+	requestAnimationFrame(tick);
+
+	let refresh=true;
+	tickCount++;
+	if(governor){
+		let frame=(tickCount/governor)|0;
+		if(frame==previousFrame) refresh=false;
+		previousFrame=frame;
+	}
+
+	if(refresh) {
+		vidConsole.value=conwayLifeFrame()+"\n"+statusFrame();
+	}
+
+//	pollDimensions();
+	const keys=
+		(pressedKeys["ArrowUp"]?1:0)|
+		(pressedKeys["ArrowDown"]?2:0)|
+		(pressedKeys["ArrowRight"]?8:0)|
+		(pressedKeys["ArrowLeft"]?4:0);
+	updatePumps(keys);
+	updateCursor();
+}
+
+function initGrid(){
+	const terminal=document.getElementById("console");
+	initGui(terminal);
+	vidConsole=terminal;
+	pollDimensions();
+	requestAnimationFrame(tick);
 }
 
 window.onload=initGrid;

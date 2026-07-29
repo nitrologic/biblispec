@@ -1,6 +1,6 @@
 // gridscript.ts
 
-import "./nitrologic.js";
+import "./bitgrid.js";
 
 declare const BitGrid: any;
 
