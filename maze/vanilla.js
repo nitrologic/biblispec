@@ -352,8 +352,8 @@ function initGrid(){
 	vidConsole=terminal;
 	initGui(terminal);
 	pollDimensions();
+	window.addEventListener("resize",pollDimensions);
 	requestAnimationFrame(tick);
 }
 
 window.onload=initGrid;
-window.addEventListener("resize",pollDimensions);
