@@ -349,8 +349,8 @@ function tick(timestamp) {
 function initGrid(){
 	statusDiv=document.getElementById("status");
 	const terminal=document.getElementById("console");
-	initGui(terminal);
 	vidConsole=terminal;
+	initGui(terminal);
 	pollDimensions();
 	requestAnimationFrame(tick);
 }
