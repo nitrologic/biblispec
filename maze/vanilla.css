@@ -7,14 +7,22 @@ html, body {
     overflow: hidden;
 }
 
-#console {
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
+#header {
+    background-color: #131;
     color: #080;
     caret-color: #580;
-    font-size: 24px;
+    width: 100%;
+    height: 32px;
+}
+
+#console {
+    font-size: 14px;
     line-height: 1.2;
+    background-color: #246;
+    width: 100%;
+    height: 80%;
+    color: #080;
+    caret-color: #580;
     font-family:
         "Cascadia Mono",
         "DejaVu Sans Mono",
@@ -30,6 +38,16 @@ html, body {
 
     white-space: pre;
 }
+
+#status {
+    background-color: #440;
+    color: #aa0;
+    caret-color: #840;
+    width: 100%;
+    height: 32px;
+    font-size:x-small;
+}
+
 
 a:link {
   color: green;

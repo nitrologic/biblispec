@@ -1,3 +1,108 @@
+cute
+
+
+furr
+
+
+┌─────────────────────────────────────┐
+│  ╔═══════════════════════════════╗  │
+│  ║      ▓▓▓  LITTLE-K            ║  │
+│  ║     ▓▓▓ ▓▓  MONK      ▓▓▓▓    ║  │
+│  ║   ▓▓ ▓▓ ▓   LVL 5    ▓ ▓▓▓▓   ║  │
+│  ║   ▓▓ ▓ ▓▓▓         ▓▓▓▓▓▓▓▓   ║  │
+│  ║  ▓▓▓  ▓▓▓▓  ZEN      ▓▓  ▓▓▓  ║  │
+│  ║   ▓▓▓ ▓▓▓   GARDEN  ▓▓▓▓▓▓    ║  │
+│  ║    ▓▓ ▓             ▓▓▓▓▓     ║  │
+│  ╠═══════════════════════════════╣  │
+│  │  DEX ████████████████████ 18  │  │
+│  │  WIS ███████████████░░░░░ 16  │  │
+│  │  INT █████████████░░░░░░░ 14  │  │
+│  │  CON █████████░░░░░░░░░░░ 12  │  │
+│  │  STR ████████░░░░░░░░░░░░ 10  │  │
+│  │  CHA █████░░░░░░░░░░░░░░░  8  │  │
+│  ╠═══════════════════════════════╣  │
+│  │  >> FLURRY OF BLOWS           │  │
+│  │  >> STUNNING STRIKE           │  │
+│  │  >> DEFLECT MISSILES          │  │
+│  │  >> SLOW FALL                 │  │
+│  ╠═══════════════════════════════╣  │
+│  │  "the bug that can be         │  │
+│  │   spoken is not the true bug" │  │
+│  └───────────────────────────────┘  │
+│        **  RARE  **  18/20  **      │
+└─────────────────────────────────────┘
+
+
+┌─────────────────────────────────────┐
+│  ╔═══════════════════════════════╗  │
+│  ║ LITTLE-K                      ║  │
+│  ║    ⠻⣿⣿⣿⣿⣿⣿⠟   ZEN          ║  │
+│  ║     ⠙⣿⣿⣿⠋  GARDEN           ║  │
+│  ╠═══════════════════════════════╣  │
+│  │  DEX ████████████████████ 18  │  │
+│  │  WIS ███████████████░░░░░ 16  │  │
+│  │  INT █████████████░░░░░░░ 14  │  │
+│  │  CON █████████░░░░░░░░░░░ 12  │  │
+│  │  STR ████████░░░░░░░░░░░░ 10  │  │
+│  │  CHA █████░░░░░░░░░░░░░░░  8  │  │
+│  ╠═══════════════════════════════╣  │
+│  │  🍃 FLURRY OF BLOWS           │  │
+│  │  🍃 STUNNING STRIKE           │  │
+│  │  🍃 DEFLECT MISSILES          │  │
+│  │  🍃 SLOW FALL                 │  │
+│  ╠═══════════════════════════════╣  │
+│  │  "the bug that can be         │  │
+│  │   spoken is not the true bug" │  │
+│  └───────────────────────────────┘  │
+│        ☯︎  RARE  ☯︎  18/20  ☯︎       │
+└─────────────────────────────────────┘
+
+
+let mainMenu=false;//true;
+
+function menuWall(blocks){
+	let result=[];
+	for(let row of blocks){
+		result.push("*****"+row);
+	}
+	return result.join("\n")
+}
+
+
+//draw(beacon,10,10,2);
+//draw(pent,100,14,2);
+
+
+//bitgrid.rect(4,2,2,20);
+//bitgrid.rect(gridWidth/4-10,4,8,20);
+
+
+/*
+let keys=Object.keys(conway.shapes.still);
+let x=10;
+for(let index of keys){
+	const still=conway.shapes.still[index];
+	draw(still,x,80,2);
+	x+=12;
+}
+*/
+
+
+function cursorPos(x,y){
+	return "\x1b["+(y||1)+";"+(x||1)+"H";
+}
+
+function cursorHor(x){
+	return "\x1b["+(x||1)+"G";
+}
+
+
+// "codes": " ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█",
+
+let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","💙","💜","🤎"];
+const dotBlockWide=2;
+
+
 /*
 if(Deno.build.os === "windows"){
 // deno Foreign Function Interface

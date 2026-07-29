@@ -4,22 +4,21 @@
 // https://opensource.org/licenses/MIT
 // https://nitrologic.github.io/biblispec
 
-// runs life on bitgrid 
-// see initGrid for animationframe on tick
+// runs life in bitgrid - see biggrid.js for more info
+// vidConsole located as textarea element with id="console"
+// see initGrid for animationframe on tick update mechanism
+
+// backspace launches a new glider
 
 "use strict"
 
-let bibliTitle=fullWidth("bitgrid demo 1");
+const friendEmoji="🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
+const friends=[...friendEmoji];
 
-function statusFrame(){
-	return bibliTitle;
-}
-
-// uses nitrologic.js for helpers
-
-// vidConsole located as textarea element named console
+const dotBlockWide=2;
 
 let vidConsole;
+let statusDiv;
 
 let vidWidth=72*2;
 let vidHeight=22;
@@ -28,8 +27,8 @@ let displayDirty=false;
 function pollDimensions(){
 	const w=vidConsole.clientWidth;
 	const h=vidConsole.clientHeight;
-	let vw=((w/18)|0)-2;
-	let vh=((h/30)|0)-2;
+	let vw=((w/10)|0);
+	let vh=((h/18)|0);
 	if((vidWidth!=vw)||(vidHeight!=vh)){
 		vidWidth=vw;
 		vidHeight=vh;
@@ -40,23 +39,7 @@ function pollDimensions(){
 let gridWidth=22*8*4;
 let gridHeight=23*8;
 
-// "codes": " ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█",
-
-let dotBlocks=["⚫","🟠","🟡","🟢","🔴","🔵","🟣","🟤","🟧","🟨","🟩","🟥","🟦","🟪","🟫","🧡","💛","💚","💙","💜","🤎"];
-const dotBlockWide=2;
-
-const friendEmoji="🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
-const friends=[...friendEmoji];
-
 // vanillaGui
-
-function cursorPos(x,y){
-	return "\x1b["+(y||1)+";"+(x||1)+"H";
-}
-
-function cursorHor(x){
-	return "\x1b["+(x||1)+"G";
-}
 
 const pump=[0,0];
 
@@ -110,7 +93,6 @@ function initGui(terminal){
 	terminal.addEventListener("keyup",onKeyUp);
 }
 
-
 function mirror(shape){
 	let result=[];
 	for(let line of shape){
@@ -129,10 +111,9 @@ function axis(glider){
 	];
 }
 
-const bitgrid = new BitGrid(gridWidth,gridHeight,4);
+// create bitgrid, add bunch of conway elements, 4 gliders, and a grid of pulsars
 
-//bitgrid.rect(4,2,2,20);
-//bitgrid.rect(gridWidth/4-10,4,8,20);
+const bitgrid = new BitGrid(gridWidth,gridHeight,4);
 
 let blinker=conway.shapes.oscillators.blinker;
 let beacon=conway.shapes.oscillators.beacon;
@@ -146,16 +127,6 @@ function draw(shape,x,y,layer){
 	bitgrid.drawMask(shape,"O",x,y,layer);
 }
 
-/*
-let keys=Object.keys(conway.shapes.still);
-let x=10;
-for(let index of keys){
-	const still=conway.shapes.still[index];
-	draw(still,x,80,2);
-	x+=12;
-}
-*/
-
 let keys1=Object.keys(conway.shapes.oscillators);
 let x1=10;
 for(let index of keys1){
@@ -163,9 +134,6 @@ for(let index of keys1){
 	draw(shape,x1,100,2);
 	x1+=12;
 }
-
-//draw(beacon,10,10,2);
-//draw(pent,100,14,2);
 
 draw(glider[0],20,35,2);
 draw(glider[1],20,30,2);
@@ -178,7 +146,7 @@ for(let i=0;i<12;i++){
 	}
 }
 
-bitgrid.stepConwayLife(2,3);
+// swipe manager
 
 let cursorX=0;
 let cursorVX=0;
@@ -289,16 +257,6 @@ function updatePumps(keys){
 	fadePumps();
 }
 
-let mainMenu=false;//true;
-
-function menuWall(blocks){
-	let result=[];
-	for(let row of blocks){
-		result.push("*****"+row);
-	}
-	return result.join("\n")
-}
-
 function backSpace(){
 //	mainMenu=!mainMenu;
 	draw(glider[0],20,35,2);
@@ -326,6 +284,8 @@ let entropy=0;
 
 let pattern=friends;
 
+// updates based on global cursorXY
+
 function conwayLifeFrame(){
 	count++;
 	if(true){//((count++)&7)==5){
@@ -334,15 +294,23 @@ function conwayLifeFrame(){
 		bitgrid.heat(3-layer,25);
 	}
 	bitgrid.cool(0.95);
-	let panx=cursorX>>1;
-	let pany=cursorY>>2;
-	let blocks=gridDotWindowLayer(bitgrid,pattern,panx,pany,vidWidth/dotBlockWide,vidHeight);
+	const panx=cursorX>>1;
+	const pany=cursorY>>2;
+	const blocks=gridDotWindowLayer(bitgrid,pattern,panx,pany,vidWidth/dotBlockWide,vidHeight);
 	return blocks.join("\n");
 }
 
 let tickCount=0;
 let governor=4;
 let previousFrame=0;
+
+// initial frame generates layer 3 from layer 2
+
+bitgrid.stepConwayLife(2,3);
+
+function statusFrame(){
+	return {vidWidth,vidHeight,gridWidth,gridHeight};
+}
 
 function tick(timestamp) {
 	if (!startTime) {
@@ -363,20 +331,23 @@ function tick(timestamp) {
 	}
 
 	if(refresh) {
-		vidConsole.value=conwayLifeFrame()+"\n"+statusFrame();
+		const status=JSON.stringify(statusFrame());
+		const keys=JSON.stringify(pressedKeys);
+		statusDiv.innerText=status+"\n"+keys;
+		vidConsole.value=conwayLifeFrame()+"\n";
 	}
 
-//	pollDimensions();
 	const keys=
 		(pressedKeys["ArrowUp"]?1:0)|
 		(pressedKeys["ArrowDown"]?2:0)|
 		(pressedKeys["ArrowRight"]?8:0)|
 		(pressedKeys["ArrowLeft"]?4:0);
-	updatePumps(keys);
+		updatePumps(keys);
 	updateCursor();
 }
 
 function initGrid(){
+	statusDiv=document.getElementById("status");
 	const terminal=document.getElementById("console");
 	initGui(terminal);
 	vidConsole=terminal;

@@ -1,8 +1,9 @@
 // bibli.js
+// display engine for biblispec.json the primary payload
 // (c)2026 nitrologic
 // biblispec MIT License 
-// https://opensource.org/licenses/MIT
 
+// https://opensource.org/licenses/MIT
 // https://nitrologic.github.io/biblispec
 
 // todo: module support
