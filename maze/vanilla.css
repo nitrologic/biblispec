@@ -16,6 +16,7 @@ html, body {
 }
 
 #console {
+    padding:12px;
     font-size: 14px;
     line-height: 1.2;
     background-color: #246;

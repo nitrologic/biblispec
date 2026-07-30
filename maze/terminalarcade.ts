@@ -20,11 +20,16 @@ const DownBit=2;
 const LeftBit=4;
 const RightBit=8;
 
-const SpaceBit=16;
-const BackspaceBit=32;
-const QuitBit=64;
+const HomeBit=16;
+const EndBit=32;
+const DeleteBit=64;
+const InsertBit=128;
 
-// mouse bits << 10
+const PageUpBit=256;
+const PageDownBit=512;
+const EscapeBit=1024;
+
+// mouse bits << 16
 
 const LeftMouseBit=1;
 const RightMouseBit=2;

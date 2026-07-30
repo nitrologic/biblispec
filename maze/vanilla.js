@@ -1,16 +1,18 @@
 // vanilla.js
 // (c)2026 nitrologic
-// biblispec MIT License 
+// biblispec MIT License
 // https://opensource.org/licenses/MIT
 // https://nitrologic.github.io/biblispec
 
-// runs life in bitgrid - see biggrid.js for more info
-// vidConsole located as textarea element with id="console"
+// runs life in bitgrid - see bitgrid.js for more info
+// vidConsole is textarea element with id="console"
 // see initGrid for animationframe on tick update mechanism
 
 // backspace launches a new glider
 
 "use strict"
+
+console.log("biblispec vanilla life demo 0.2.1");
 
 const friendEmoji="🟩🟦🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
 const friends=[...friendEmoji];
@@ -183,7 +185,7 @@ function updateCursor(){
 	cursorVY *= 0.9;
 }
 
-function resetGrid(){	
+function resetGrid(){
 }
 
 function gridHeatmap12(){
@@ -227,7 +229,7 @@ function gridDotWindowLayer(grid,dots,wx,wy,ww,wh){
 	for(let y=0;y<wh;y++){
 		let offset=(wy+y)*w+wx;
 		let line=""
-		for(let x=0;x<ww;x++){  
+		for(let x=0;x<ww;x++){
 			const h=(heat[offset])|0;
 			const index=h?(1+(h%(n-1))):0;
 			line+=dots[index];
@@ -303,14 +305,29 @@ function conwayLifeFrame(){
 let tickCount=0;
 let governor=4;
 let previousFrame=0;
+let recentKeys=0;
 
 // initial frame generates layer 3 from layer 2
 
 bitgrid.stepConwayLife(2,3);
 
 function statusFrame(){
-	return {vidWidth,vidHeight,gridWidth,gridHeight};
+	return {vidWidth,vidHeight,gridWidth,gridHeight,governor,recentKeys};
 }
+
+const UpBit=1;
+const DownBit=2;
+const LeftBit=4;
+const RightBit=8;
+
+const HomeBit=16;
+const EndBit=32;
+const DeleteBit=64;
+const InsertBit=128;
+
+const PageUpBit=256;
+const PageDownBit=512;
+const EscapeBit=1024;
 
 function tick(timestamp) {
 	if (!startTime) {
@@ -331,18 +348,35 @@ function tick(timestamp) {
 	}
 
 	if(refresh) {
+		const start = vidConsole.selectionStart;
+		const end = vidConsole.selectionEnd;
+		vidConsole.value=conwayLifeFrame();
+		vidConsole.selectionStart = start;
+		vidConsole.selectionEnd = end;
 		const status=JSON.stringify(statusFrame());
 		const keys=JSON.stringify(pressedKeys);
 		statusDiv.innerText=status+"\n"+keys;
-		vidConsole.value=conwayLifeFrame()+"\n";
 	}
 
 	const keys=
-		(pressedKeys["ArrowUp"]?1:0)|
-		(pressedKeys["ArrowDown"]?2:0)|
-		(pressedKeys["ArrowRight"]?8:0)|
-		(pressedKeys["ArrowLeft"]?4:0);
-		updatePumps(keys);
+		(pressedKeys["ArrowUp"]?UpBit:0)|
+		(pressedKeys["ArrowDown"]?DownBit:0)|
+		(pressedKeys["ArrowRight"]?RightBit:0)|
+		(pressedKeys["ArrowLeft"]?LeftBit:0)|
+		(pressedKeys["Home"]?HomeBit:0)|
+		(pressedKeys["End"]?EndBit:0)|
+		(pressedKeys["Delete"]?DeleteBit:0)|
+		(pressedKeys["Insert"]?InsertBit:0)|
+		(pressedKeys["PageUp"]?PageUpBit:0)|
+		(pressedKeys["PageDown"]?PageDownBit:0)|
+		(pressedKeys["Escape"]?EscapeBit:0);
+
+	recentKeys=keys;
+
+	updatePumps(keys);
+
+//	pressedKeys["PageDown"]
+
 	updateCursor();
 }
 
