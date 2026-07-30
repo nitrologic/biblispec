@@ -27,7 +27,7 @@ const InsertBit=128;
 
 const PageUpBit=256;
 const PageDownBit=512;
-const EscapeBit=1024;
+const QuitBit=1024;
 
 // mouse bits << 16
 
@@ -192,12 +192,6 @@ export function pollKeypad():KeypadState{
 		let keys=queue[index];
 		const rawKey=keys[0];
 		switch(rawKey){
-			case 127:
-				keyPad|=BackspaceBit;
-				break;
-			case 32:
-				keyPad|=SpaceBit;
-				break;
 			case 27:
 				if(keys.length>1){
 					const sequence=decoder.decode(keys.subarray(1));
@@ -219,6 +213,12 @@ export function pollKeypad():KeypadState{
 						case "[B":keyPad|=DownBit;break;
 						case "[C":keyPad|=RightBit;break;
 						case "[D":keyPad|=LeftBit;break;
+						case "[2~":keyPad|=InsertBit;break;
+						case "[3~":keyPad|=DeleteBit;break;
+						case "[5~":keyPad|=PageUpBit;break;
+						case "[6~":keyPad|=PageDownBit;break;
+						case "[H":keyPad|=HomeBit;break;
+						case "[F":keyPad|=EndBit;break;
 						default:{
 							console.log("[ESC]",sequence);
 						}

@@ -327,7 +327,7 @@ const InsertBit=128;
 
 const PageUpBit=256;
 const PageDownBit=512;
-const EscapeBit=1024;
+const QuitBit=1024;
 
 function tick(timestamp) {
 	if (!startTime) {
@@ -369,7 +369,7 @@ function tick(timestamp) {
 		(pressedKeys["Insert"]?InsertBit:0)|
 		(pressedKeys["PageUp"]?PageUpBit:0)|
 		(pressedKeys["PageDown"]?PageDownBit:0)|
-		(pressedKeys["Escape"]?EscapeBit:0);
+		(pressedKeys["Escape"]?QuitBit:0);
 
 	recentKeys=keys;
 

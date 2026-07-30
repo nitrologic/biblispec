@@ -2,6 +2,21 @@
 
 // - an exploration of Surrogate Pair Breakage featuring Astral Plane Characters
 
+const UpBit=1;
+const DownBit=2;
+const LeftBit=4;
+const RightBit=8;
+
+const HomeBit=16;
+const EndBit=32;
+const DeleteBit=64;
+const InsertBit=128;
+
+const PageUpBit=256;
+const PageDownBit=512;
+const QuitBit=1024;
+
+
 import conway from "../books/conway.json" with { type: "json" };
 import { BitGrid } from "./table.ts";
 
@@ -342,11 +357,11 @@ function menuWall(blocks:string[]){
 	return result.join("\n")
 }
 
-function hitBackspace(){
+function toggleMenu(){
 	mainMenu=!mainMenu;
 }
 
-function hitSpace(){
+function drawGlider(){
 	draw(glider[0],20,35,2);
 }
 
@@ -387,7 +402,6 @@ await runTerminal(true);
 while(isRunning()){
 	pollSize();
 	let menuWide=mainMenu?menuChars.length:0;
-
 	let panx=(menuWide+cursorX)>>1;
 	let pany=cursorY>>2;
 //	let span=bitgrid.span;
@@ -399,23 +413,17 @@ while(isRunning()){
 		bitgrid.heat(3-layer,25);
 	}
 	bitgrid.cool(0.95);
-
 	let blocks=gridDotWindowLayer(bitgrid,dotBlocks,panx,pany,wide/dotBlockWide,vidHeight);
 //	let blocks=gridHalfWindowLayer(bitgrid,panx,pany,wide,vidHeight*2)
 //	let blocks=gridBlockWindowLayer(bitgrid,0,cursorX,pany,wide,vidHeight);
 //	let blocks=gridQuadWindowLayer(bitgrid,0,cursorX,pany,wide*2,vidHeight*2);
 //	let blocks=gridQuadWindow(bitgrid,[0,3-layer],cursorX,pany,wide*2,vidHeight*2);	//2,3
 	console.log(cursorHome);
-
 	const message=JSON.stringify(midiMessage);
-
 	const title=gridTitle+" ["+vidWidth+","+vidHeight+","+count+","+entropy+","+midiCount+"] message:"+message;
-	
 	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
-
-	//	const title=gridTitle+" ["+columns+","+rows+","+count+","+entropy+","+midiCount+"] message:"+message;
+//	const title=gridTitle+" ["+columns+","+rows+","+count+","+entropy+","+midiCount+"] message:"+message;
 //	console.log(title);//,"pumps:"+JSON.stringify(pump),"     ");
-
 	let wall=(mainMenu)?menuWall(blocks):blocks.join("\n");
 	console.log(wall);
 	let latest=status.slice(-13);
@@ -424,18 +432,17 @@ while(isRunning()){
 //	writeConsole(code);
 	console.log("\x1b[0m");
 	await sleep(gridMillis);
-
 	// {status: number;data1: number;data2: number;}
 	const midiEvents = hasMidi?pollMidi():[];
 	for (const event of midiEvents) {
 		onMidi(event.status, event.data1, event.data2);
 	}
-
 	const keypad=pollKeypad();
 	const keys=keypad.hitBits;
-	if((keys&16)&&!(oldKeys&16)) hitSpace();
-	if((keys&32)&&!(oldKeys&32)) hitBackspace();
-	if((keys&64)&&!(oldKeys&64)) stopRunning();
+
+	if((keys&InsertBit)&&!(oldKeys&InsertBit)) drawGlider();
+	if((keys&HomeBit)&&!(oldKeys&HomeBit)) toggleMenu();
+	if((keys&QuitBit)&&!(oldKeys&QuitBit)) stopRunning();
 	oldKeys=keys;
 	updateCursor(keypad.axisX,keypad.axisY);
 }
