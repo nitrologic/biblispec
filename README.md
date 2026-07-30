@@ -6,6 +6,10 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+New notes section
+
+![notes mazes](images/mazetypes.png)
+
 ## ⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉
 
 Math Symbols
