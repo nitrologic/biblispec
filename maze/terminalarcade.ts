@@ -209,8 +209,8 @@ export function pollKeypad():KeypadState{
 							case 32:mouseButtons^=2;break;
 							case 35:mouseButtons|=4;break;//console.log("[M]",{b,x,y});
 						}
-						mousePosition[0]=x;
-						mousePosition[1]=y;
+						mousePosition[0]=mouseX;
+						mousePosition[1]=mouseY;
 						continue;						
 					}
 					switch(sequence){
@@ -243,10 +243,5 @@ export function pollKeypad():KeypadState{
 	mouseButtons=0;
 	keyPad=0;
 	updatePumps(hitBits);
-	return {
-		hitBits,
-		x:pump[UPDOWN],y:pump[LEFTRIGHT],
-		mouse
-
-	};
+	return {hitBits,x:pump[UPDOWN],y:pump[LEFTRIGHT],mouse};
 }
