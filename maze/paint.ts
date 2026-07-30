@@ -109,7 +109,11 @@ function pew(){
 	shots.push({cycles:24,x:brushX,y:brushY});
 }
 
-function updateShots(){
+function updatePaint(){
+	const pad=pollKeypad();
+	drawRect(pad.mouse[0],2,"Hello World");
+	return;
+
 	const result:Array<shot>=[];
 	for(const shot of shots){
 //        grid.drawShape(" ",shot.x,shot.y);
@@ -153,9 +157,14 @@ function gridQuadWindowLayer(grid:BitGrid,layer:number,wx:number,wy:number,ww:nu
 
 await runTerminal(true);
 
+function drawRect(x:number,y:number,line:string){
+	const pos="\x1b["+x+";"+y+"H"+line;
+	console.log(pos);
+}
+
 while(isRunning()){
     pollSize();
-    updateShots();
+    updatePaint();
     let pad=pollKeypad();
     await sleep(paintMillis);
 }
