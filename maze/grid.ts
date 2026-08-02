@@ -439,7 +439,6 @@ while(isRunning()){
 	}
 	const keypad=pollKeypad();
 	const keys=keypad.hitBits;
-
 	if((keys&InsertBit)&&!(oldKeys&InsertBit)) drawGlider();
 	if((keys&HomeBit)&&!(oldKeys&HomeBit)) toggleMenu();
 	if((keys&QuitBit)&&!(oldKeys&QuitBit)) stopRunning();

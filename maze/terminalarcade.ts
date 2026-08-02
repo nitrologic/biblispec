@@ -37,6 +37,8 @@ const MouseMotionBit=4;
 
 const pump:number[]=[0,0];
 
+const mousePosition:number[]=[0,0];
+
 function fadePumps():number[]{
 	const previous = [...pump];
 	for(let index=0;index<pump.length;index++){
@@ -126,6 +128,7 @@ export async function runTerminal(withMouse:boolean){
 
 export function stopTerminal() {
 	if(!stopped){
+		Deno.stdin.setRaw(false);
 		Deno.stdout.writeSync(encoder.encode("\x1b[?1003l\x1b[?1006l\x1b[?25h"));	
 		console.log(resetConsole);
 		console.log("[SYSTEM] endInput");
@@ -152,7 +155,7 @@ async function runInputTask(enableMouse:boolean=false) {
 			}
 		}catch(e){ // operation canceled code EINTR
 			if(e.code!="EINTR"){
-				console.log("[E]",e);
+				console.log("[E]",e.code,e.message);
 			}
 			running=false;
 		}
@@ -206,6 +209,8 @@ export function pollKeypad():KeypadState{
 							case 32:mouseButtons^=2;break;
 							case 35:mouseButtons|=4;break;//console.log("[M]",{b,x,y});
 						}
+						mousePosition[0]=mouseX;
+						mousePosition[1]=mouseY;
 						continue;						
 					}
 					switch(sequence){
@@ -234,9 +239,9 @@ export function pollKeypad():KeypadState{
 		}
 	}    
 	const hitBits=(mouseButtons<<10)|(keyPad);
+	const mouse=mousePosition;
 	mouseButtons=0;
 	keyPad=0;
 	updatePumps(hitBits);
-	const pad0=	{hitBits,axisX:pump[LEFTRIGHT],axisY:pump[UPDOWN],mouseX,mouseY};
-	return pad0;
+	return {hitBits,x:pump[UPDOWN],y:pump[LEFTRIGHT],mouse};
 }
