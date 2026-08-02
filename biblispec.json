@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.5",
+	"version": "1.5.6",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -133,6 +133,7 @@
 		"fenced":{
 			"name":"code points of visual interest",
 			"code":{
+				"gender":"♂♀⚢⚣⚤⚥⚦⚧⚨⚩",
 				"geom":"⯅⯆⯇⯈⯀⯁◆◇◈⬥⬦⬠⬟⬡⬢⬣⬤◫◬◭◮",
 				"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌·",
 				"starChars":"✩✪✫✬✭✮✯✰✱✲✳✴✵✶✷✸✹✺✻✼✽✾✿❀❁",
@@ -169,6 +170,42 @@
 		"blocks":{
 			"name":"codepoints by index",
 			"rows":{
+				"268x": {
+					"⚀": "die face-1",
+					"⚁": "die face-2",
+					"⚂": "die face-3",
+					"⚃": "die face-4",
+					"⚄": "die face-5",
+					"⚅": "die face-6",
+					"⚆": "white circle with dot right",
+					"⚇": "white circle with two dots",
+					"⚈": "black circle with dot right",
+					"⚉": "black circle with two dots",
+					"⚊": "monogram for yang",
+					"⚋": "monogram for yin",
+					"⚌": "digram for greater yang",
+					"⚍": "digram for lesser yin",
+					"⚎": "digram for lesser yang",
+					"⚏": "digram for greater yin"
+				},
+				"26Ax": {
+					"⚠": "warning sign",
+					"⚡": "high voltage",
+					"⚢": "doubled female sign",
+					"⚣": "doubled male sign",
+					"⚤": "interlocked female and male sign",
+					"⚥": "male and female sign",
+					"⚦": "male with stroke sign",
+					"⚧": "male with female stroke sign",
+					"⚨": "vertical male with stroke sign",
+					"⚩": "horizontal male with stroke sign",
+					"⚪": "medium white circle",
+					"⚫": "medium black circle",
+					"⚬": "medium small white circle",
+					"⚭": "marriage symbol",
+					"⚮": "divorce symbol",
+					"⚯": "unmarried partnership symbol"
+				},
 				"u269x":{
 					"⚐": "flag outline",
 					"⚑":"flag solid",
