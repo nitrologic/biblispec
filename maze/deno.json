@@ -1,5 +1,6 @@
 {
 	"tasks":{
+		"keys": "deno run --allow-read --allow-write --allow-net --allow-run keytest.ts",		
 		"paint": "deno run paint.ts",
 		"buildrom": "deno run --allow-read buildrom.ts",
 		"table": "deno run --allow-run table.ts",
