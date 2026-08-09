@@ -1,20 +1,16 @@
 :root{
-	--code-bg: #f6f6f6;
+	--code-bg: #ccc;
 }
 html, body {
 	font-family: "EB Garamond", "Noto Sans", "Noto Sans Symbols2", sans-serif;
-	margin: 20px;
+	margin: 12px;
 	height: 100%;
 	overflow:auto;
-	font: 
 }
 canvas {
 	display: block;
 	width: 100%;
 	height: 80%;
-}
-pre{
-	 background-color: var(--code-bg);
 }
 #status{
 	text-align:right;

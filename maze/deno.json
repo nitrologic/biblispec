@@ -3,7 +3,7 @@
 		"keys": "deno run --allow-read --allow-write --allow-net --allow-run keytest.ts",		
 		"paint": "deno run paint.ts",
 		"buildrom": "deno run --allow-read buildrom.ts",
-		"table": "deno run --allow-run table.ts",
+		"table": "deno run --allow-run tabletop.ts",
 		"maze": "deno run --allow-run maze.ts",
 		"piano": "deno run --allow-ffi --allow-read piano.ts",
 		"grid": "deno run --allow-ffi --allow-read grid.ts",
