@@ -1,0 +1,39 @@
+{
+	"name": "PET 2001",
+	"description": "Original 6502 all in one.",
+	"version": "0.1.0",
+	"copyright": "(c)2026 nitrologic",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"sources": [
+		"https://en.wikipedia.org/wiki/Commodore_PET",
+		"https://www.zimmers.net/anonftp/pub/cbm/src/pet/index.html",
+		"https://www.masswerk.at/pet/manuals/Commodore_PET_ROM_Listing_Version_BASIC_3.00.pdf"
+	],
+	"system": {
+		"CPU": "6502 @ 1 MHz",
+		"Memory": "4–96 KB",
+		"ROM": "Commodore BASIC 1.0",
+		"Graphics": "Monochrome PETSCII semigraphic characters",
+		"Display": {"crystal": 17.734475,"cpu": 0.985248,"video": 50,"lines": 312,"vblank": 30},
+		"released": "January 1977",
+		"origin": "MOS Technology, Norristown, Pennsylvania, USA",
+		"manufactured": {"year": "1977-1985","units": "219k"},
+		"engineers": [
+			{"name": "Chuck Peddle","role": "PET system architect, lead designer and 6502 architecture"},
+			{"name": "Bill Mensch","role": "6502 CPU logic design and 6522 VIA"},
+			{"name": "Rod Orgill","role": "6502 CPU circuit and schematic design"},
+			{"name": "Harry Bawcom","role": "6502 layout and verification"},
+			{"name": "Wil Mathys","role": "6502 architecture (with Peddle & Orgill)"},
+			{"name": "Bill Seiler","role": "PET hardware production design"},
+			{"name": "John Feagans","role": "PET software"},
+			{"name": "Jack Tramiel","role": "Commodore founder / boss who green-lit the project"}
+		]
+	}
+}

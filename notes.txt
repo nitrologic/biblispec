@@ -1,3 +1,68 @@
+	"componenents":{
+		"memory": [
+			{"type": "6550", "function": "static ram", "quantity": 4, "labels": ["c-1", "c-2", "c-3", "c-4"]}
+		],
+		"buffers": [
+			{"type": "74ls244", "function": "octal buffer/line driver", "quantity": 2, "labels": ["b-1", "b-2"]}
+		],
+		"logic": [
+			{"type": "74ls138", "function": "3-to-8 decoder/demux", "labels": ["address decode"]},
+			{"type": "74ls00", "function": "quad 2-input nand", "labels": ["inverter section"]}
+		],
+		"power": [
+			{"type": "7805", "function": "5v voltage regulator"},
+			{"type": "7812", "function": "12v voltage regulator"},
+			{"type": "diode", "spec": "1n4002", "labels": ["d-1", "d-2"]}
+		],
+		"passives": [
+			{"type": "capacitor", "values": ["0.1µf", "10µf", "100µf"]},
+			{"type": "resistor", "values": ["2.2k", "4.7k", "10k"]}
+		],
+		"connectors": [
+			{"type": "edge connector", "labels": ["j-1", "j-2"]},
+			{"type": "test points", "labels": ["tpi-1", "tpi-2", "tpi-3", "tpi-4"]}
+		],
+		"jumpers": [
+			{"label": "w-1", "function": "8k/16k memory config"}
+		]
+	}
+
+
+}
+
+{
+	"name":"PET 2001",
+	"description":"Original 6502 all in one.",
+	"version":"0.1.0",
+	"copyright":"(c)2026 nitrologic",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"sources":[
+		"https://en.wikipedia.org/wiki/Commodore_PET",
+		"https://www.zimmers.net/anonftp/pub/cbm/src/pet/index.html"
+	],
+	"system":{
+		"origin":"MOS Technology, Norristown, Pennsylvania, USA",
+		"released":"January 1977",
+		"CPU":"6502 @ 1 MHz",
+		"Memory":"4–96 KB",
+		"ROM":"Commodore BASIC 4.0",
+		"Graphics":"Monochrome PETSCII semigraphic characters",
+		"Display":{"crystal":17.734475,"cpu":0.985248,"video":50,"lines":312,"vblank":30},
+		"credits":{
+			"engineers":[
+				{"name":"Bill Mensch","role":"6502 CPU Logic Design"},
+				{"name":"Rod Orgill","role":"6502 CPU Circuit Design"},
+				{"name":"Harry Bawcom","role":"6502 CPU Verification"},
+				{"name":"Charles Winterble", "role": "MOS Chip Engineering"},
+				{"name":"PET Team","role":"VIA Input/Output"},
+				{"name":"Jack Tramiel","role":"Commodore Boss"}
+			]
+		},
+		"manufactured":{"year":"1977-1985","units":"219k"}
+	},
+
+
 🪾 
 
 
