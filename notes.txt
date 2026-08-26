@@ -1,3 +1,31 @@
+
+// ECMAScript internationalization standard (ECMA-402) 
+
+/*
+Intl.ListFormat — "a, b, and c" vs "a, b und c" depending on locale
+Intl.RelativeTimeFormat — "2 hours ago" / "vor 2 Stunden"
+Intl.DisplayNames — localized names for languages, regions, scripts
+Intl.Locale — parse and manipulate locale tags programmatically
+Intl.Segmenter — what you're already using for grapheme/word/line boundaries
+*/
+/*
+
+"short"        // "GMT-4"
+"shortOffset"  // "GMT-4"
+"long"         // "Eastern Daylight Time"
+"longOffset"   // "GMT-04:00"
+"shortGeneric" // "ET"
+"longGeneric"  // "Eastern Time"
+
+*/
+
+
+{
+"lang": "und"
+}
+
+
+
 	"componenents":{
 		"memory": [
 			{"type": "6550", "function": "static ram", "quantity": 4, "labels": ["c-1", "c-2", "c-3", "c-4"]}
