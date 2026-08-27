@@ -97,6 +97,13 @@
 				"\u001b[15;%~","\u001b[17;%~","\u001b[18;%~","\u001b[19;%~",
 				"\u001b[20;%~","\u001b[21;%~","\u001b[23;%~","\u001b[24;%~"]
 		},
+		"symbols":{
+			"swords":"⚔",
+			"scales":"⚖",
+			"flower":"⚘",
+			"gear":"⚙",
+			"atom":"⚛"
+		},
 		"shortcode":{
 			"mushroom": "🍄", "anchor": "⚓", "wintertree": "🪾",
 			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
