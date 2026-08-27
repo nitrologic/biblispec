@@ -6,6 +6,9 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+Begun [codepoints book](books/codepoints.json) 
+
+
 New notes section
 
 ![notes mazes](images/mazetypes.png)

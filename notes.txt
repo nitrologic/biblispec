@@ -1,3 +1,10 @@
+{"Email Address": "Variable length, RFC 5322-compliant, unique communication identifier."},
+{"URI": "Variable length, RFC 3986, identifies resources on the web."},
+
+curl -L -O https://www.rfc-editor.org/rfc/rfc20.txt
+
+
+
 collation ["compat","emoji","eor","phonebk","pinyin","searchjl","stroke","trad","unihan","zhuyin"]
 				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
 

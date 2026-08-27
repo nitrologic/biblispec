@@ -1,8 +1,8 @@
 {
 	"name":"codepoints",
-	"version": "0.1",
-	"description": "unicode codepoints and names",
-	"copyright": "(C) 2026 nitrologic",
+	"version": "0.2.0",
+	"description": "named unicode codepoints",
+	"copyright": "(c)2026 nitrologic",
 	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
 	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
 	"rows":{
