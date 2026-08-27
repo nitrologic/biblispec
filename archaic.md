@@ -1,7 +1,7 @@
 
 ```
-"RFC2119":{
-	"keywords": [
+"archaic":{
+	"RFC2119keywords": [
 		"MUST",
 		"MUST_NOT",
 		"SHALL",
