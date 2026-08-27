@@ -168,65 +168,6 @@
 			"name": "Face on profiles",
 			"tags": ["face","emoji"]
 		},
-		"blocks":{
-			"name":"codepoints by index",
-			"rows":{
-				"268x": {
-					"⚀": "die face-1",
-					"⚁": "die face-2",
-					"⚂": "die face-3",
-					"⚃": "die face-4",
-					"⚄": "die face-5",
-					"⚅": "die face-6",
-					"⚆": "white circle with dot right",
-					"⚇": "white circle with two dots",
-					"⚈": "black circle with dot right",
-					"⚉": "black circle with two dots",
-					"⚊": "monogram for yang",
-					"⚋": "monogram for yin",
-					"⚌": "digram for greater yang",
-					"⚍": "digram for lesser yin",
-					"⚎": "digram for lesser yang",
-					"⚏": "digram for greater yin"
-				},
-				"26Ax": {
-					"⚠": "warning sign",
-					"⚡": "high voltage",
-					"⚢": "doubled female sign",
-					"⚣": "doubled male sign",
-					"⚤": "interlocked female and male sign",
-					"⚥": "male and female sign",
-					"⚦": "male with stroke sign",
-					"⚧": "male with female stroke sign",
-					"⚨": "vertical male with stroke sign",
-					"⚩": "horizontal male with stroke sign",
-					"⚪": "medium white circle",
-					"⚫": "medium black circle",
-					"⚬": "medium small white circle",
-					"⚭": "marriage symbol",
-					"⚮": "divorce symbol",
-					"⚯": "unmarried partnership symbol"
-				},
-				"u269x":{
-					"⚐": "flag outline",
-					"⚑":"flag solid",
-					"⚒": "hammer & pick",
-					"⚓": "anchor",
-					"⚔": "swords",
-					"⚕": "staff AESCULAPIUS",
-					"⚖": "scales",
-					"⚗": "alembic",
-					"⚘": "flower",
-					"⚙": "gear",
-					"⚚": "staff HERMES",
-					"⚛": "atom",
-					"⚜": "fleur-de-lis",
-					"⚝": "star outline",
-					"⚞": "3 lines left",
-					"⚟": "3 lines right"
-				}
-			}
-		},
 		"pheme":{
 			"pre61": {
 				"science18": "electro helio chrono cosmo crypto dendro etymo geo glotto graph hydr patho pheno rheu seismo speleo techno topo",
@@ -963,8 +904,8 @@
 			"akkadian": {
 				"name": "Akkadian",
 				"signs": {
-					"syllabic": ["𒀀","𒁀","𒂊","𒄀"], 
-					"logograms": ["𒀭","𒆳","𒈗"], 
+					"syllabic": ["𒀀","𒁀","𒂊","𒄀"],
+					"logograms": ["𒀭","𒆳","𒈗"],
 					"determinatives": ["𒀭","𒇽"]
 				},
 				"block": "Cuneiform",
