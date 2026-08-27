@@ -1,0 +1,500 @@
+rfc1 Host Software, the first ascii topology, DEL and NLS, graphics promised
+rfc2 Host Software, graphics deferred, nls in progress, checksums still broken
+rfc3 Documentation conventions, need not be complete, timely rather than polished
+rfc4 Network timetable, step by step setup
+rfc5 Decode Encode Language (DEL) console to packets, packets to trees, co-routines
+rfc6 Conversation with Bob Kahn, 6-bit 60s prepare overflows to 8 bit ascii 80s, BCD, SIXBIT, packed pdp
+rfc7 Host-IMP interface
+rfc8 404 ARPA Network Functional Specifications
+rfc9 404 Host Software
+rfc10 Documentation conventions rfc3 continued
+rfc11 implementation of a host to host software, wire protocol, packet message with leader marketing text checksum pad
+rfc12 IMP-Host interface flow diagrams
+rfc13 Zero Text Length EOF Message
+rfc14 Not Issued
+rfc15 Network subsystem for time sharing hosts
+rfc16 M.I.T scrap paper lost in translation
+rfc17 Some questions re: Host-IMP Protocol
+rfc18 IMP-IMP and HOST-HOST Control Links
+rfc19 Two protocol suggestions to reduce congestion at swap bound nodes
+rfc20 ASCII format for network interchange
+rfc21 Network meeting
+rfc22 Host-host control message formats
+rfc23 Transmission of Multiple Control Messages
+rfc24 Documentation Conventions
+rfc25 No High Link Numbers
+rfc26 Not Issued
+rfc27 Documentation Conventions
+rfc28 Time Standards
+rfc29 Response to RFC 28
+rfc30 Documentation Conventions
+rfc31 Binary Message Forms in Computer
+rfc32 Some Thoughts on SRI's Proposed Real Time Clock
+rfc33 New Host-Host Protocol
+rfc34 Some Brief Preliminary Notes on the Augmentation Research Center Clock
+rfc35 Network Meeting
+rfc36 Protocol Notes
+rfc37 Network Meeting Epilogue, etc
+rfc38 Comments on Network Protocol from NWG/RFC #36
+rfc39 Comments on Protocol Re: NWG/RFC #36
+rfc40 More Comments on the Forthcoming Protocol
+rfc41 IMP-IMP Teletype Communication
+rfc42 Message Data Types
+rfc43 Proposed Meeting
+rfc44 Comments on NWG/RFC 33 and 36
+rfc45 New Protocol is Coming
+rfc46 ARPA Network protocol notes
+rfc47 BBN's Comments on NWG/RFC #33
+rfc48 Possible protocol plateau
+rfc49 Conversations with S
+rfc50 Comments on the Meyer Proposal
+rfc51 Proposal for a Network Interchange Language
+rfc52 Updated distribution list
+rfc53 Official protocol mechanism
+rfc54 Official Protocol Proffering
+rfc55 Prototypical implementation of the NCP
+rfc56 Third Level Protocol: Logger Protocol
+rfc57 Thoughts and Reflections on NWG/RFC 54
+rfc58 Logical Message Synchronization
+rfc59 Flow Control - Fixed Versus Demand Allocation
+rfc60 A Simplified NCP Protocol
+rfc61 Note on Interprocess Communication in a Resource Sharing Computer Network
+rfc62 Systems for Interprocess Communication in a Resource Sharing Computer Network
+rfc63 Belated Network Meeting Report
+rfc64 Getting rid of marking
+rfc65 Comments on Host/Host Protocol document #1
+rfc66 NIC - third level ideas and other noise
+rfc67 Proposed Change to Host/IMP Spec to Eliminate Marking
+rfc68 Comments on Memory Allocation Control Commands: CEASE, ALL, GVB, RET, and RFNM
+rfc69 Distribution List Change for MIT
+rfc70 Note on Padding
+rfc71 Reallocation in Case of Input Error
+rfc72 Proposed Moratorium on Changes to Network Protocol
+rfc73 Response to NWG/RFC 67
+rfc74 Specifications for Network Use of the UCSB On-Line System
+rfc75 Network Meeting
+rfc76 Connection by name: User oriented protocol
+rfc77 Network meeting report
+rfc78 NCP Status Report: UCSB/Rand
+rfc79 Logger Protocol error
+rfc80 Protocols and Data Formats
+rfc81 Request for Reference Information
+rfc82 Network Meeting Notes
+rfc83 Language-machine for data reconfiguration
+rfc84 List of NWG/RFC's 1-80
+rfc85 Network Working Group meeting
+rfc86 Proposal for a Network Standard Format for a Data Stream to Control Graphics Display
+rfc87 Topic for Discussion at the Next Network Working Group Meeting
+rfc88 NETRJS: A third level protocol for Remote Job Entry
+rfc89 Some historic moments in networking
+rfc90 CCN as a Network Service Center
+rfc91 Proposed User-User Protocol
+rfc92 Not Issued
+rfc93 Initial Connection Protocol
+rfc94 Some thoughts on Network Graphics
+rfc95 Distribution of NWG/RFC's through the NIC
+rfc96 An Interactive Network Experiment to Study Modes of Access the Network Information Center
+rfc97 First Cut at a Proposed Telnet Protocol
+rfc98 Logger Protocol Proposal
+rfc99 Network Meeting
+rfc100 Categorization and guide to NWG/RFCs
+rfc101 Notes on the Network Working Group meeting, Urbana, Illinois, February 17, 1971
+rfc102 Output of the Host-Host Protocol glitch cleaning committee
+rfc103 Implementation of Interrupt Keys
+rfc104 Link 191
+rfc105 Network Specifications for Remote Job Entry and Remote Job Output Retrieval at UCSB
+rfc106 User/Server Site Protocol Network Host Questionnaire
+rfc107 Output of the Host-Host Protocol Glitch Cleaning Committee
+rfc108 Attendance list at the Urbana NWG meeting, February 17-19, 1971
+rfc109 Level III Server Protocol for the Lincoln Laboratory 360/67 Host
+rfc110 Conventions for Using an IBM 2741 Terminal as a User Console for Access to Network Server Hosts
+rfc111 Pressure from the Chairman
+rfc112 User/Server Site Protocol: Network Host Questionnaire
+rfc113 Network activity report: UCSB Rand
+rfc114 File Transfer Protocol
+rfc115 Some Network Information Center policies on handling documents
+rfc116 Structure of the May NWG Meeting
+rfc117 Some comments on the official protocol
+rfc118 Recommendations for facility documentation
+rfc119 Network Fortran Subprograms
+rfc120 Network PL1 subprograms
+rfc121 Network on-line operators
+rfc122 Network specifications for UCSB's Simple-Minded File System
+rfc123 Proffered Official ICP
+rfc124 Typographical error in RFC 107
+rfc125 Response to RFC 86: Proposal for Network Standard Format for a Graphics Data Stream
+rfc126 Graphics Facilities at Ames Research Center
+rfc127 Comments on RFC 123
+rfc128 Bytes
+rfc129 Request for comments on socket name structure
+rfc130 Response to RFC 111: Pressure from the chairman
+rfc131 Response to RFC 116: May NWG meeting
+rfc132 Typographical Error in RFC 107
+rfc133 File Transfer and Error Recovery
+rfc134 Network Graphics meeting
+rfc135 Response to NWG/RFC 110
+rfc136 Host accounting and administrative procedures
+rfc137 Telnet Protocol - a proposed document
+rfc138 Status report on proposed Data Reconfiguration Service
+rfc139 Discussion of Telnet Protocol
+rfc140 Agenda for the May NWG meeting
+rfc141 Comments on RFC 114: A File Transfer Protocol
+rfc142 Time-Out Mechanism in the Host-Host Protocol
+rfc143 Regarding proffered official ICP
+rfc144 Data sharing on computer networks
+rfc145 Initial Connection Protocol Control Commands
+rfc146 Views on issues relevant to data sharing on computer networks
+rfc147 Definition of a socket
+rfc148 Comments on RFC 123
+rfc149 Best Laid Plans
+rfc150 Use of IPC Facilities: A Working Paper
+rfc151 Comments on a proffered official ICP: RFCs 123, 127
+rfc152 SRI Artificial Intelligence status report
+rfc153 SRI ARC-NIC status
+rfc154 Exposition Style
+rfc155 ARPA Network mailing lists
+rfc156 Status of the Illinois site: Response to RFC 116
+rfc157 Invitation to the Second Symposium on Problems in the Optimization of Data Communications Systems
+rfc158 Telnet Protocol: A Proposed Document
+rfc159 Not Issued
+rfc160 RFC brief list
+rfc161 Solution to the race condition in the ICP
+rfc162 NETBUGGER3
+rfc163 Data transfer protocols
+rfc164 Minutes of Network Working Group meeting, 5/16 through 5/19/71
+rfc165 Proffered Official Initial Connection Protocol
+rfc166 Data Reconfiguration Service: An implementation specification
+rfc167 Socket conventions reconsidered
+rfc168 ARPA Network mailing lists
+rfc169 COMPUTER NETWORKS
+rfc170 RFC List by Number
+rfc171 The Data Transfer Protocol
+rfc172 The File Transfer Protocol
+rfc173 Network Data Management Committee Meeting Announcement
+rfc174 UCLA - Computer Science Graphics Overview
+rfc175 Comments on "Socket Conventions Reconsidered"
+rfc176 Comments on "Byte size for connections"
+rfc177 Device independent graphical display description
+rfc178 Network graphic attention handling
+rfc179 Link Number Assignments
+rfc180 File system questionnaire
+rfc181 Modifications to RFC 177
+rfc182 Compilation of list of relevant site reports
+rfc183 EBCDIC Codes and Their Mapping to ASCII
+rfc184 Proposed graphic display modes
+rfc185 NIC distribution of manuals and handbooks
+rfc186 Network graphics loader
+rfc187 Network/440 Protocol Concept
+rfc188 Data management meeting announcement
+rfc189 Interim NETRJS specifications
+rfc190 DEC PDP-10-IMLAC communications system
+rfc191 Graphics implementation and conceptualization at Augmentation Research Center
+rfc192 Some factors which a Network Graphics Protocol must consider
+rfc193 NETWORK CHECKOUT
+rfc194 The Data Reconfiguration Service -- Compiler/Interpreter Implementation Notes
+rfc195 Data computers-data descriptions and access language
+rfc196 Mail Box Protocol
+rfc197 Initial Connection Protocol - Reviewed
+rfc198 Site Certification - Lincoln Labs 360/67
+rfc199 Suggestions for a Network Data-Tablet Graphics Protocol
+rfc200 RFC list by number
+rfc201 Not Issued
+rfc202 Possible Deadlock in ICP
+rfc203 Achieving reliable communication
+rfc204 Sockets in use
+rfc205 NETCRT - a character display protocol
+rfc206 A User TELNET Description of an Initial Implementation
+rfc207 September Network Working Group meeting
+rfc208 Address tables
+rfc209 Host/IMP interface documentation
+rfc210 Improvement of Flow Control
+rfc211 ARPA Network Mailing Lists
+rfc212 NWG meeting on network usage
+rfc213 IMP System change notification
+rfc214 Network checkpoint
+rfc215 NCP, ICP, and Telnet: The Terminal IMP implementation
+rfc216 Telnet Access to UCSB's On-Line System
+rfc217 Specifications changes for OLS, RJE/RJOR, and SMFS
+rfc218 Changing the IMP status reporting facility
+rfc219 User's View of the Datacomputer
+rfc220 Not Issued
+rfc221 Mail Box Protocol: Version 2
+rfc222 Subject: System programmer's workshop
+rfc223 Network Information Center schedule for network users
+rfc224 Comments on Mailbox Protocol
+rfc225 Rand/UCSB network graphics experiment
+rfc226 Standardization of host mnemonics
+rfc227 Data transfer rates (Rand/UCLA)
+rfc228 Clarification
+rfc229 Standard host names
+rfc230 Toward reliable operation of minicomputer-based terminals on a TIP
+rfc231 Service center standards for remote usage: A user's view
+rfc232 Postponement of network graphics meeting
+rfc233 Standardization of host call letters
+rfc234 Network Working Group meeting schedule
+rfc235 Site status
+rfc236 Standard host names
+rfc237 NIC view of standard host names
+rfc238 Comments on DTP and FTP proposals
+rfc239 Host mnemonics proposed in RFC 226 (NIC 7625)
+rfc240 Site Status
+rfc241 Connecting computers to MLC ports
+rfc242 Data Descriptive Language for Shared Data
+rfc243 Network and data sharing bibliography
+rfc244 Not Issued
+rfc245 Reservations for Network Group meeting
+rfc246 Network Graphics meeting
+rfc247 Proffered set of standard host names
+rfc248 Not Issued
+rfc249 Coordination of equipment and supplies purchase
+rfc250 Some thoughts on file transfer
+rfc251 Weather data
+rfc252 Network host status
+rfc253 Second Network Graphics meeting details
+rfc254 Scenarios for using ARPANET computers
+rfc255 Status of network hosts
+rfc256 IMPSYS change notification
+rfc257 Not Issued
+rfc258 Not Issued
+rfc259 Not Issued
+rfc260 Not Issued
+rfc261 Not Issued
+rfc262 Not Issued
+rfc263 "Very Distant" Host interface
+rfc264 The Data Transfer Protocol
+rfc265 The File Transfer Protocol
+rfc266 Network host status
+rfc267 Network Host Status
+rfc268 Graphics facilities information
+rfc269 Some Experience with File Transfer
+rfc270 Correction to BBN Report No. 1822 (NIC NO 7958)
+rfc271 IMP System change notifications
+rfc272 Not Issued
+rfc273 More on standard host names
+rfc274 Establishing a local guide for network usage
+rfc275 Not Issued
+rfc276 NIC course
+rfc277 Not Issued
+rfc278 Revision of the Mail Box Protocol
+rfc279 Not Issued
+rfc280 A Draft of Host Names
+rfc281 Suggested addition to File Transfer Protocol
+rfc282 Graphics meeting report
+rfc283 NETRJT: Remote Job Service Protocol for TIPS
+rfc284 Not Issued
+rfc285 Network graphics
+rfc286 Network Library Information System
+rfc287 Status of Network Hosts
+rfc288 Network host status
+rfc289 What we hope is an official list of host names
+rfc290 Computer networks and data sharing: A bibliography
+rfc291 Data Management Meeting Announcement
+rfc292 Graphics Protocol: Level 0 only
+rfc293 Network Host Status
+rfc294 The Use of "Set Data Type" Transaction in File Transfer Protocol
+rfc295 Report of the Protocol Workshop, 12 October 1971
+rfc296 DS-1 Display System
+rfc297 TIP Message Buffers
+rfc298 Network host status
+rfc299 Information Management System
+rfc300 ARPA Network mailing lists
+rfc301 BBN IMP (#5) and NCC Schedule March 4, 1971
+rfc302 Exercising The ARPANET
+rfc303 ARPA Network mailing lists
+rfc304 Data Management System Proposal for the ARPA Network
+rfc305 Unknown Host Numbers
+rfc306 Network host status
+rfc307 Using network Remote Job Entry
+rfc308 ARPANET host availability data
+rfc309 Data and File Transfer Workshop Announcement
+rfc310 Another Look at Data and File Transfer Protocols
+rfc311 New Console Attachments to the USCB Host
+rfc312 Proposed Change in IMP-to-Host Protocol
+rfc313 Computer based instruction
+rfc314 Network Graphics Working Group Meeting
+rfc315 Network Host Status
+rfc316 ARPA Network Data Management Working Group
+rfc317 Official Host-Host Protocol Modification: Assigned Link Numbers
+rfc318 Telnet Protocols
+rfc319 Network Host Status
+rfc320 Workshop on Hard Copy Line Graphics
+rfc321 CBI Networking Activity at MITRE
+rfc322 Well known socket numbers
+rfc323 Formation of Network Measurement Group (NMG)
+rfc324 RJE Protocol meeting
+rfc325 Network Remote Job Entry program - NETRJS
+rfc326 Network Host Status
+rfc327 Data and File Transfer workshop notes
+rfc328 Suggested Telnet Protocol Changes
+rfc329 ARPA Network Mailing Lists
+rfc330 Network Host Status
+rfc331 IMP System Change Notification
+rfc332 Network Host Status
+rfc333 Proposed experiment with a Message Switching Protocol
+rfc334 Network Use on May 8
+rfc335 New Interface - IMP/360
+rfc336 Level 0 Graphic Input Protocol
+rfc337 Not Issued
+rfc338 EBCDIC/ASCII Mapping for Network RJE
+rfc339 MLTNET: A "Multi Telnet" Subsystem for Tenex
+rfc340 Proposed Telnet Changes
+rfc341 Not Issued
+rfc342 Network Host Status
+rfc343 IMP System change notification
+rfc344 Network Host Status
+rfc345 Interest in Mixed Integer Programming (MPSX on NIC 360/91 at CCN)
+rfc346 Satellite Considerations
+rfc347 Echo process
+rfc348 Discard Process
+rfc349 Proposed Standard Socket Numbers
+rfc350 User Accounts for UCSB On-Line System
+rfc351 Graphics information form for the ARPANET graphics resources notebook
+rfc352 TIP Site Information Form
+rfc353 Network host status
+rfc354 File Transfer Protocol
+rfc355 Response to NWG/RFC 346
+rfc356 ARPA Network Control Center
+rfc357 Echoing strategy for satellite links
+rfc358 Not Issued
+rfc359 Status of the Release of the New IMP System (2600)
+rfc360 Proposed Remote Job Entry Protocol
+rfc361 Deamon Processes on Host 106
+rfc362 Network Host Status
+rfc363 ARPA Network mailing lists
+rfc364 Serving remote users on the ARPANET
+rfc365 Letter to All TIP Users
+rfc366 Network Host Status
+rfc367 Network host status
+rfc368 Comments on "Proposed Remote Job Entry Protocol"
+rfc369 Evaluation of ARPANET services January-March, 1972
+rfc370 Network Host Status
+rfc371 Demonstration at International Computer Communications Conference
+rfc372 Notes on a Conversation with Bob Kahn on the ICCC
+rfc373 Arbitrary Character Sets
+rfc374 IMP System Announcement
+rfc375 Not Issued
+rfc376 Network Host Status
+rfc377 Using TSO via ARPA Network Virtual Terminal
+rfc378 Traffic statistics (July 1972)
+rfc379 Using TSO at CCN
+rfc380 Not Issued
+rfc381 Three aids to improved network operation
+rfc382 Mathematical Software on the ARPA Network
+rfc383 Not Issued
+rfc384 Official site idents for organizations in the ARPA Network
+rfc385 Comments on the File Transfer Protocol
+rfc386 Letter to TIP users-2
+rfc387 Some experiences in implementing Network Graphics Protocol Level 0
+rfc388 NCP statistics
+rfc389 UCLA Campus Computing Network Liaison Staff for ARPA Network
+rfc390 TSO Scenario
+rfc391 Traffic statistics (August 1972)
+rfc392 Measurement of host costs for transmitting network data
+rfc393 Comments on Telnet Protocol Changes
+rfc394 Two Proposed Changes to the IMP-Host Protocol
+rfc395 Switch Settings on IMPs and TIPs
+rfc396 Network Graphics Working Group Meeting - Second Iteration
+rfc397 Not Issued
+rfc398 UCSB Online Graphics
+rfc399 SMFS Login and Logout
+rfc400 Traffic Statistics (September 1972)
+rfc401 Conversion of NGP-0 Coordinates to Device Specific Coordinates
+rfc402 ARPA Network Mailing Lists
+rfc403 Desirability of a Network 1108 Service
+rfc404 Host Address Changes Involving Rand and ISI
+rfc405 Correction to RFC 404
+rfc406 Scheduled IMP Software Releases
+rfc407 Remote Job Entry Protocol
+rfc408 NETBANK
+rfc409 Tenex interface to UCSB's Simple-Minded File System
+rfc410 Removal of the 30-Second Delay When Hosts Come Up
+rfc411 New MULTICS Network Software Features
+rfc412 User FTP Documentation
+rfc413 Traffic statistics (October 1972)
+rfc414 File Transfer Protocol (FTP) status and further comments
+rfc415 Tenex bandwidth
+rfc416 ARC System Will Be Unavailable for Use During Thanksgiving Week
+rfc417 Link usage violation
+rfc418 Server File Transfer Under TSS/360 At NASA-Ames Research Center
+rfc419 To: Network liaisons and station agents
+rfc420 CCA ICCC weather demo
+rfc421 Software Consulting Service for Network Users
+rfc422 Traffic statistics (November 1972)
+rfc423 UCLA Campus Computing Network Liaison Staff for ARPANET
+rfc424 Not Issued
+rfc425 "But my NCP costs $500 a day"
+rfc426 Reconnection Protocol
+rfc427 Not Issued
+rfc428 Not Issued
+rfc429 Character Generator Process
+rfc430 Comments on File Transfer Protocol
+rfc431 Update on SMFS Login and Logout
+rfc432 Network logical map
+rfc433 Socket number list
+rfc434 IMP/TIP memory retrofit schedule
+rfc435 Telnet issues
+rfc436 Announcement of RJS at UCSB
+rfc437 Data Reconfiguration Service at UCSB
+rfc438 FTP server-server interaction
+rfc439 PARRY encounters the DOCTOR
+rfc440 Scheduled network software maintenance
+rfc441 Inter-Entity Communication - an experiment
+rfc442 Current flow-control scheme for IMPSYS
+rfc443 Traffic statistics (December 1972)
+rfc444 Not Issued
+rfc445 IMP/TIP preventive maintenance schedule
+rfc446 Proposal to consider a network program resource notebook
+rfc447 IMP/TIP memory retrofit schedule
+rfc448 Print files in FTP
+rfc449 Current flow-control scheme for IMPSYS
+rfc450 MULTICS sampling timeout change
+rfc451 Tentative proposal for a Unified User Level Protocol
+rfc452 TELNET Command at Host LL
+rfc453 Meeting announcement to discuss a network mail system
+rfc454 File Transfer Protocol - meeting announcement and a new proposed document
+rfc455 Traffic statistics (January 1973)
+rfc456 Memorandum: Date change of mail meeting
+rfc457 TIPUG
+rfc458 Mail retrieval via FTP
+rfc459 Network questionnaires
+rfc460 NCP survey
+rfc461 Telnet Protocol meeting announcement
+rfc462 Responding to user needs
+rfc463 FTP comments and response to RFC 430
+rfc464 Resource notebook framework
+rfc465 Not Issued
+rfc466 Telnet logger/server for host LL-67
+rfc467 Proposed change to Host-Host Protocol: Resynchronization of connection status
+rfc468 FTP data compression
+rfc469 Network mail meeting summary
+rfc470 Change in socket for TIP news facility
+rfc471 Workshop on multi-site executive programs
+rfc472 Illinois' reply to Maxwell's request for graphics information (NIC 14925)
+rfc473 MIX and MIXAL?
+rfc474 Announcement of NGWG meeting: Call for papers
+rfc475 FTP and Network Mail System
+rfc476 IMP/TIP memory retrofit schedule (rev 2)
+rfc477 Remote Job Service at UCSB
+rfc478 FTP server-server interaction - II
+rfc479 Use of FTP by the NIC Journal
+rfc480 Host-dependent FTP parameters
+rfc481 Not Issued
+rfc482 Traffic statistics (February 1973)
+rfc483 Cancellation of the resource notebook framework meeting
+rfc484 Not Issued
+rfc485 MIX and MIXAL at UCSB
+rfc486 Data transfer revisited
+rfc487 Free file transfer
+rfc488 NLS classes at network sites
+rfc489 Comment on resynchronization of connection status proposal
+rfc490 Surrogate RJS for UCLA-CCN
+rfc491 What is "Free"?
+rfc492 Response to RFC 467
+rfc493 GRAPHICS PROTOCOL
+rfc494 Availability of MIX and MIXAL in the Network
+rfc495 Telnet Protocol specifications
+rfc496 TNLS quick reference card is available
+rfc497 Traffic Statistics (March 1973)
+rfc498 On mail service to CCN
+rfc499 Harvard's network RJE
+rfc500 Integration of data management systems on a computer network

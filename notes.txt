@@ -1,3 +1,101 @@
+{
+  "rfc": 12,
+  "what": "IMP-HOST wire protocol, bit by bit",
+  "directions": {
+    "imp_to_host": {
+      "job": "receive message from IMP",
+      "loop": "wait for bit → grab bit → shift into register",
+      "signals": ["RFNIB (ready for next bit)", "IMP READY", "IMP BIT"],
+      "registers": ["PAD (padding flag)", "LAST (last bit flag)", "COUNTER (bit count)"],
+      "error": "IMP READY goes low mid-stream → IMPERR"
+    },
+    "host_to_imp": {
+      "job": "send message to IMP",
+      "loop": "load word → request send → push bits → check if last",
+      "signals": ["INREQST (input request)", "BTAVL (bit available)", "LIBIT (last bit)", "LSTWD (last word)"],
+      "end": "LAST=1 and all bits sent → clear counter, done"
+    }
+  },
+  "hardware_reality": "16-bit words, bit-serial lines, no DMA, CPU babysits every bit",
+  "padding": "IMP pads to fixed size, HOST ignores PAD=1 bits"
+}
+
+
+{
+  "rfc": 7,
+  "unsafe_propagation": {
+    "input": "imp → handler → network program → users",
+    "output": "users → network program → handler → imp",
+    "shared": "pool of buffers",
+    "interrupt": "async signal to handler",
+    "risk": "no locks visible, single buffer pool, interrupt-driven race conditions"
+  }
+}
+
+{
+  "rfc": 7,
+  "author": "michel deloche",
+  "date": "may 1969",
+  "host": "sigma 7",
+  "figures": [
+    {
+      "id": 1,
+      "title": "data flow",
+      "components": [
+        {"name": "users", "type": "source"},
+        {"name": "network program", "type": "process", "functions": ["multiplex", "distribution"]},
+        {"name": "handler program", "type": "driver"},
+        {"name": "host", "type": "hardware", "model": "sigma 7"},
+        {"name": "special/standard interface", "type": "adapter"},
+        {"name": "imp", "type": "network"}
+      ],
+      "data_flow": {
+        "output": "users → network program (multiplex) → handler → special/standard → imp",
+        "input": "imp → special/standard → handler → network program (distribution) → users"
+      },
+      "boundary": "//"
+    },
+    {
+      "id": 2,
+      "title": "control structure",
+      "components": [
+        {"name": "user's interface", "type": "entry"},
+        {"name": "network program", "type": "protocol_logic"},
+        {"name": "pool of buffers", "type": "memory"},
+        {"name": "interface table", "type": "lookup"},
+        {"name": "handler program", "type": "hardware_abstraction"},
+        {"name": "hardware interface", "type": "boundary"},
+        {"name": "interrupt", "type": "signal"},
+        {"name": "commands", "type": "control"}
+      ],
+      "arrow_types": {
+        "====>": "data",
+        "---->": "logical_information",
+        "----": "control"
+      }
+    }
+  ],
+  "pending": "gordo documentation for program-to-program communication"
+}
+
+
+"rfc16 M.I.T — unknown status, known restoration. walter's bracket is the legacy."
+
+
+[
+	"rfc1 Host Software", 
+	"rfc2 Host software", 
+	"rfc3 Documentation conventions", 
+	"rfc4 Network timetable",
+	"rfc5 Decode Encode Language (DEL)", 
+	"rfc6 Conversation with Bob Kahn", 
+	"rfc7 Host-IMP interface",
+	"rfc8 ARPA Network Functional Specifications",
+	"rfc9 Host Software", 
+	"rfc10 Documentation conventions",
+	"rfc9963 Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3"
+]
+
 curl -L -O https://www.rfc-editor.org/rfc/rfc2119.txt
 
 
