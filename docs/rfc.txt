@@ -497,4 +497,4 @@ rfc496 TNLS quick reference card is available
 rfc497 Traffic Statistics (March 1973)
 rfc498 On mail service to CCN
 rfc499 Harvard's network RJE
-rfc500 Integration of data management systems on a computer network
+rfc500 Integration of data management systems on a computer network (April 1973)

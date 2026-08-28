@@ -6,8 +6,21 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
-Begun [codepoints book](books/codepoints.json) 
+The history of the digital age owes grats to the Request For Comments guys.
 
+Steve Crocker from UCLA kicks off in April 1969. 
+
+
+```
+   The software for the ARPA Network exists partly in the IMPs and
+   partly in the respective HOSTs.  BB&N has specified the software of
+   the IMPs and it is the responsibility of the HOST groups to agree on
+   HOST software.
+```
+
+The 6 bit computing headaches become real in theses initial documents. Yuck.
+
+Also begun a [codepoints book](books/codepoints.json) to feed new symbols arrays in the main payload.
 
 New notes section
 
