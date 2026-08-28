@@ -1,3 +1,11 @@
+Brio Labyrinth
+Cretan Labyrinth
+Pac Man
+Chartres Labyrinth
+Hampton Court Palace Maze
+
+Death Star Trench Run
+
 
 ▤▢▢▢▢▢▣▢▢▢ ▣▣▣▢▢▣▢▢▢▣ ▣▣▢▢▣▢▢▣▢▢ ▢▣▣▣▢▢▢▢▣▢
 ▥▢▢▢▢▢▣▢▢▢ ▣▢▢▢▣▣▣▢▢▢ ▢▣▢▢▢▣▣▣▢▢ ▢▢▣▢▢▢▢▣▢▢

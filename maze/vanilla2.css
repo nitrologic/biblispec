@@ -8,9 +8,9 @@ html, body {
 }
 
 #header {
-    background-color: #111;
-    color: #444;
-    caret-color: #884;
+    background-color: #131;
+    color: #080;
+    caret-color: #580;
     width: 100%;
     height: 32px;
 }
@@ -19,11 +19,11 @@ html, body {
     padding:12px;
     font-size: 14px;
     line-height: 1.2;
-    background-color: #222;
+    background-color: #246;
     width: 100%;
     height: 80%;
-    color: #888;
-    caret-color: #884;
+    color: #080;
+    caret-color: #580;
     font-family:
         "Cascadia Mono",
         "DejaVu Sans Mono",
@@ -41,8 +41,8 @@ html, body {
 }
 
 #status {
-    background-color: #444;
-    color: #aaa;
+    background-color: #440;
+    color: #aa0;
     caret-color: #840;
     width: 100%;
     height: 32px;

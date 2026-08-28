@@ -14,7 +14,8 @@
 
 console.log("biblispec vanilla life demo 0.2.1");
 
-const friendEmoji="🟩🟦🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
+//const friendEmoji="🟩🟦🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
+const friendEmoji="⬛🟦🐨🐼🐸🐰🐭🐯🐱🐶🐵🐥🐷🦧🐺🦊🦝🦁🦉";
 const friends=[...friendEmoji];
 
 const dotBlockWide=2;
