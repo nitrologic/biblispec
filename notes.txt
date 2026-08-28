@@ -1,3 +1,6 @@
+curl -L -O https://www.rfc-editor.org/rfc/rfc491.txt
+
+
 {
   "rfc": 12,
   "what": "IMP-HOST wire protocol, bit by bit",
@@ -95,9 +98,6 @@
 	"rfc10 Documentation conventions",
 	"rfc9963 Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3"
 ]
-
-curl -L -O https://www.rfc-editor.org/rfc/rfc2119.txt
-
 
 The [RFC Editor](https://www.rfc-editor.org/) is the authoritative body responsible for editing, publishing, and archiving the Request for Comments (RFC) document series. This series contains the core technical foundations, protocols, and architectural standards of the Internet (such as HTTP, TCP/IP, and TLS). [1, 2, 3] 
 Historically managed for decades by a single internet pioneer, Jon Postel, the RFC Editor function has evolved into a structured multi-group framework defined by modern operational policies like RFC 9280. [4, 5] 
