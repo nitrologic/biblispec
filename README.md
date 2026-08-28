@@ -6,6 +6,8 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+[Language Codes](books/language.json)
+
 In 1997 RFC 2235 added official [Hobbes' Internet Timeline](docs/hobbes.txt)
 
 The history of the digital age owes grats to the Request For Comments guys.
