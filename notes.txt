@@ -1,5 +1,20 @@
+{
+	"ὑπόθεσις":{
+		"en":"idea",
+		"meaning":"hypothesis",
+		"transliteration":"hupóthesis"
+	}
+}
+
 curl -L -O https://www.rfc-editor.org/rfc/rfc491.txt
 
+
+scientific method
+
+1 hypothesis 
+2 proof
+
+ὑπόθεσις (hupóthesis)
 
 {
   "rfc": 12,
