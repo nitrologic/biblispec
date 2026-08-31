@@ -95,6 +95,60 @@
 			"⚽": "soccer ball",
 			"⚾": "baseball",
 			"⚿": "squared key"
-		}				
+		},
+		"26Cx": {
+			"⛀": "white draughts man",
+			"⛁": "white draughts king",
+			"⛂": "black draughts man",
+			"⛃": "black draughts king",
+			"⛄": "snowman without snow",
+			"⛅": "sun behind cloud",
+			"⛆": "rain",
+			"⛇": "heavy snow",
+			"⛈": "thunder cloud and rain",
+			"⛉": "white shogi piece",
+			"⛊": "black shogi piece",
+			"⛋": "white diamond in square",
+			"⛌": "crossing lanes",
+			"⛍": "disabled car",
+			"⛎": "ophiuchus",
+			"⛏": "pick"
+		},
+		"26Dx": {
+			"⛐": "car sliding",
+			"⛑": "helmet with white cross",
+			"⛒": "circled cross roadway sign",
+			"⛓": "chains",
+			"⛔": "no entry",
+			"⛕": "alternate one-way traffic",
+			"⛖": "two-way traffic",
+			"⛗": "congestion",
+			"⛘": "left lane merge",
+			"⛙": "right lane merge",
+			"⛚": "lane merge with right lane remaining",
+			"⛛": "inverted triangle",
+			"⛜": "closed entry",
+			"⛝": "squared saltire",
+			"⛞": "falling rocks",
+			"⛟": "black truck"
+		},
+		"26Ex": {
+			"⛠": "restricted left turn",
+			"⛡": "restricted right turn",
+			"⛢": "uranus",
+			"⛣": "japanese bank symbol",
+			"⛤": "interleaved pentagram",
+			"⛥": "right-side-up pentagram",
+			"⛦": "inverted pentagram",
+			"⛧": "strongly inverted pentagram",
+			"⛨": "hospital",
+			"⛩": "shinto shrine",
+			"⛪": "church",
+			"⛫": "castle",
+			"⛬": "historic site",
+			"⛭": "gear without hub",
+			"⛮": "gear with handles",
+			"⛯": "lighthouse"
+		}
 	}
 }

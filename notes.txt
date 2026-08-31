@@ -1,3 +1,26 @@
+new codepoints.json
+
+interesting bits from Unicode Version Added: 6.0 (October 2010)
+
+"26Cx": {
+	"⛀": "white draughts man",
+	"⛁": "white draughts king",
+	"⛂": "black draughts man",
+	"⛃": "black draughts king",
+	"⛄": "snowman without snow",
+	"⛅": "sun behind cloud",
+	"⛆": "rain",
+	"⛇": "black snowman",
+	"⛈": "thunder cloud and rain",
+	"⛉": "turned white shogi piece",
+	"⛊": "turned black shogi piece",
+	"⛋": "white diamond in square",
+	"⛌": "crossed swords",
+	"⛍": "disco symbol",
+	"⛎": "ophiuchus",
+	"⛏": "pick"
+}
+
 [
   {
     "tag": "pirate",

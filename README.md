@@ -6,6 +6,8 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+[Raw 026xx codepoint names](books/codepoints.json)
+
 [Language Codes](books/language.json)
 
 In 1997 RFC 2235 added official [Hobbes' Internet Timeline](docs/hobbes.txt)
