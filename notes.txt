@@ -1,3 +1,15 @@
+dice
+
+⚀ ⚁ ⚂ ⚃ ⚄ ⚅
+
+dots
+
+⚆ ⚇ ⚈ ⚉
+
+yang yin
+
+⚊ ⚋ ⚌ ⚍ ⚎ ⚏
+
 new codepoints.json
 
 interesting bits from Unicode Version Added: 6.0 (October 2010)
