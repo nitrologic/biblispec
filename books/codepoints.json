@@ -5,6 +5,7 @@
 	"copyright": "(c)2026 nitrologic",
 	"license":{"name": "MIT", "url": "https://opensource.org/licenses/MIT"},
 	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
+	"source":"Unicode Version 6.0, October, 2010",
 	"rows":{
 		"267x":{
 			"♰": "west syriac cross",
@@ -42,7 +43,7 @@
 			"⚎": "digram for lesser yang",
 			"⚏": "digram for greater yin"
 		},
-		"u269x":{
+		"269x":{
 			"⚐": "flag outline",
 			"⚑":"flag solid",
 			"⚒": "hammer & pick",
@@ -149,6 +150,24 @@
 			"⛭": "gear without hub",
 			"⛮": "gear with handles",
 			"⛯": "lighthouse"
-		}
+		},
+		"26Fx": {
+			"⛲": "fountain",
+			"⛳": "flag in hole",
+			"⛵": "sailboat",
+			"⛺": "tent",
+			"⛽": "fuel pump",
+			"⛶": "square position indicator",
+			"⛱": "umbrella on ground",
+			"⛲": "fountain variant",
+			"⛰": "mountain",
+			"⛱": "umbrella on ground variant",
+			"♨": "hot springs",
+			"⛻": "viewpoint",
+			"⛼": "cemetery",
+			"⚓": "anchor variant",
+			"⚔": "swords variant",
+			"⛽": "fuel pump variant"
+		}		
 	}
 }
