@@ -1,5 +1,9 @@
-// shortCode ✴ biblispec 2025
+// shortCode ✴ biblispec 2026
 const shortCode={
+			"mushroom": "🍄", "anchor": "⚓", "wintertree": "🪾",
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
+			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
+			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
 			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
 			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
 			"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","microphone":"🎤","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
