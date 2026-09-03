@@ -22,6 +22,21 @@
 		"digit2":{"url":"https://sketchfab.com/3d-models/agility-robotics-digit2-165a8e4dbf7e4336b84b2b0378bee8fe"},
 		"gr1":{"url":"https://github.com/FFTAI/Wiki-GRx-Models"}
 	},
+	"biped":[
+		{
+			"model": "Microduck",
+			"developer": "Pollen Robotics",
+			"price": "$399",
+			"url": "https://pollen-robotics.com",
+			"feature": "Open-source 25 cm biped trained via reinforcement learning in MuJoCo; features a 50 Hz onboard policy loop, camera, LiDAR, and dual IMUs.",
+			"connectivity": ["Wi-Fi", "Bluetooth LE", "NFC"],
+			"height": 0.25,
+			"mass": 0.8,
+			"dof": 15,
+			"year": 2026,
+			"topology": "microduck_biped_15dof"
+		}
+	],
 	"quadrupeds":[
 		{
 			"model": "Go2",
