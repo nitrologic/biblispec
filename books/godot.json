@@ -7,6 +7,18 @@
 	"latest": "4.7.2",
 	"repository":{"type": "git", "url": "https://github.com/nitrologic/biblispec"},
 	"curator": "Curated by nitrologic",
+	"guide":{
+		"Node": {
+			"description": "Base class for all scene tree nodes."
+		},
+		"Node2D": {
+			"description": "Base class for 2D nodes.",
+			"notes": [
+				"Provides a 2D transform.",
+				"Uses position, rotation, and scale."
+			]
+		}		
+	},
 	"variant": [
 		"AABB",
 		"Array",
