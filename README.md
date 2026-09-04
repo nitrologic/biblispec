@@ -6,6 +6,8 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+[Godot Engine internals](books/godot.json)
+
 [Raw 026xx codepoint names](books/codepoints.json)
 
 [Language Codes](books/language.json)
