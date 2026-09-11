@@ -1,3 +1,89 @@
+func getNodeSignatures(className: String) -> Array[String]:
+	var signatures: Array[String] = []
+	var methods: Array[Dictionary] = ClassDB.get_method_list(className)
+
+	for method in methods:
+		# Skip private/internal methods
+		if method.get("name", "").begins_with("_"):
+			continue
+
+		signatures.append(getSignature(method))
+
+	signatures.sort()
+	return signatures
+
+
+func build_schema_dictionary() -> Dictionary:
+	var all_classes: PackedStringArray = ClassDB.get_class_list()
+	var nodes: Array[String] = []
+	var resources: Array[String] = []
+	var objects: Array[String] = []
+	var editors: Array[String] = []
+
+	populate_categories(all_classes, nodes, resources, objects, editors)
+
+	var version_info: Dictionary = Engine.get_version_info()
+	var version_string: String = "%d.%d.%d" % [
+		version_info.get("major", 0),
+		version_info.get("minor", 0),
+		version_info.get("patch", 0)
+	]
+
+	# Build node signatures map
+	var node_signatures: Dictionary = {}
+	for node_class in nodes:
+		node_signatures[node_class] = getNodeSignatures(node_class)
+
+	var schema: Dictionary = {
+		"name": "godot",
+		"version": "0.1.0",
+		"description": "Godot Engine",
+		"latest": version_string,
+		"copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
+		"license": "CC BY 3.0",
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/nitrologic/biblispec"
+		},
+		"curator": "nitrologic",
+		"variant": get_variant_names(),
+		"globals": [
+				"@GDScript",
+				"@GlobalScope"
+		],
+		"node": nodes,
+		"node_signatures": node_signatures,
+		"resource": resources,
+		"object": objects,
+		"editor": editors
+	}
+
+	return schema
+
+
+• Changes:*
+- New `getNodeSignatures()` filters out private methods and returns sorted signatures
+- `build_schema_dictionary()` generates a `node_signatures` map keyed by class name
+- Each node maps to an array of method signatures with full type information
+
+• Output structure:*
+
+{
+	"node": ["Node", "Node2D", ...],
+	"node_signatures": {
+		"Node": [
+			"_exit_tree() -> void",
+			"add_child(node: Node, force_owned: bool = false) -> void",
+			...
+		],
+		"Node2D": [...]
+	}
+}
+
+
+
+
+
 https://docs.asciinema.org/manual/asciicast/v3/
 
 ascii cast v3
@@ -310,16 +396,16 @@ scientific method
       "id": 1,
       "title": "data flow",
       "components": [
-        {"name": "users", "type": "source"},
-        {"name": "network program", "type": "process", "functions": ["multiplex", "distribution"]},
-        {"name": "handler program", "type": "driver"},
-        {"name": "host", "type": "hardware", "model": "sigma 7"},
-        {"name": "special/standard interface", "type": "adapter"},
-        {"name": "imp", "type": "network"}
+	{"name": "users", "type": "source"},
+	{"name": "network program", "type": "process", "functions": ["multiplex", "distribution"]},
+	{"name": "handler program", "type": "driver"},
+	{"name": "host", "type": "hardware", "model": "sigma 7"},
+	{"name": "special/standard interface", "type": "adapter"},
+	{"name": "imp", "type": "network"}
       ],
       "data_flow": {
-        "output": "users → network program (multiplex) → handler → special/standard → imp",
-        "input": "imp → special/standard → handler → network program (distribution) → users"
+	"output": "users → network program (multiplex) → handler → special/standard → imp",
+	"input": "imp → special/standard → handler → network program (distribution) → users"
       },
       "boundary": "//"
     },
@@ -327,19 +413,19 @@ scientific method
       "id": 2,
       "title": "control structure",
       "components": [
-        {"name": "user's interface", "type": "entry"},
-        {"name": "network program", "type": "protocol_logic"},
-        {"name": "pool of buffers", "type": "memory"},
-        {"name": "interface table", "type": "lookup"},
-        {"name": "handler program", "type": "hardware_abstraction"},
-        {"name": "hardware interface", "type": "boundary"},
-        {"name": "interrupt", "type": "signal"},
-        {"name": "commands", "type": "control"}
+	{"name": "user's interface", "type": "entry"},
+	{"name": "network program", "type": "protocol_logic"},
+	{"name": "pool of buffers", "type": "memory"},
+	{"name": "interface table", "type": "lookup"},
+	{"name": "handler program", "type": "hardware_abstraction"},
+	{"name": "hardware interface", "type": "boundary"},
+	{"name": "interrupt", "type": "signal"},
+	{"name": "commands", "type": "control"}
       ],
       "arrow_types": {
-        "====>": "data",
-        "---->": "logical_information",
-        "----": "control"
+	"====>": "data",
+	"---->": "logical_information",
+	"----": "control"
       }
     }
   ],
@@ -651,8 +737,8 @@ Valid JSON
 ╰──────────────┴─────────────┴────────────────────────────────╯
 
 (⚘)
-        "➀➁➂➃➄➅➆➇➈",
-        "➊➋➌➍➎➏➐➑➒",
+	"➀➁➂➃➄➅➆➇➈",
+	"➊➋➌➍➎➏➐➑➒",
 
 𝗗𝗔
 
@@ -667,99 +753,99 @@ extends SceneTree
 
 
 func _init() -> void:
-        export_engine_schema("res://godot_api_schema.json")
-        quit()
+	export_engine_schema("res://godot_api_schema.json")
+	quit()
 
 
 func get_variant_names() -> Array[String]:
-        var names: Array[String] = ["Variant"]
-        for type_id in range(1, TYPE_MAX):
-                var type_name: String = type_string(type_id)
-                if not type_name.is_empty() and not names.has(type_name):
-                        names.append(type_name)
-        names.sort()
-        return names
+	var names: Array[String] = ["Variant"]
+	for type_id in range(1, TYPE_MAX):
+		var type_name: String = type_string(type_id)
+		if not type_name.is_empty() and not names.has(type_name):
+			names.append(type_name)
+	names.sort()
+	return names
 
 
 func is_editor_class(item_name: String) -> bool:
-        return item_name.begins_with("Editor") or item_name.begins_with("ResourceImporter")
+	return item_name.begins_with("Editor") or item_name.begins_with("ResourceImporter")
 
 
 func populate_categories(all_classes: PackedStringArray, nodes: Array[String], resources: Array[String], objects: Array[String], editors: Array[String]) -> void:
-        for registered_class in all_classes:
-                var current_name: String = str(registered_class)
+	for registered_class in all_classes:
+		var current_name: String = str(registered_class)
 
-                if ClassDB.is_parent_class(current_name, "Node"):
-                        nodes.append(current_name)
+		if ClassDB.is_parent_class(current_name, "Node"):
+			nodes.append(current_name)
 
-                if ClassDB.is_parent_class(current_name, "Resource"):
-                        resources.append(current_name)
+		if ClassDB.is_parent_class(current_name, "Resource"):
+			resources.append(current_name)
 
-                if ClassDB.is_parent_class(current_name, "Object"):
-                        objects.append(current_name)
+		if ClassDB.is_parent_class(current_name, "Object"):
+			objects.append(current_name)
 
-                if is_editor_class(current_name):
-                        editors.append(current_name)
+		if is_editor_class(current_name):
+			editors.append(current_name)
 
-        nodes.sort()
-        resources.sort()
-        objects.sort()
-        editors.sort()
+	nodes.sort()
+	resources.sort()
+	objects.sort()
+	editors.sort()
 
 
 func build_schema_dictionary() -> Dictionary:
-        var all_classes: PackedStringArray = ClassDB.get_class_list()
-        var nodes: Array[String] = []
-        var resources: Array[String] = []
-        var objects: Array[String] = []
-        var editors: Array[String] = []
+	var all_classes: PackedStringArray = ClassDB.get_class_list()
+	var nodes: Array[String] = []
+	var resources: Array[String] = []
+	var objects: Array[String] = []
+	var editors: Array[String] = []
 
-        populate_categories(all_classes, nodes, resources, objects, editors)
+	populate_categories(all_classes, nodes, resources, objects, editors)
 
-        var version_info: Dictionary = Engine.get_version_info()
-        var version_string: String = "%d.%d.%d" % [
-                version_info.get("major", 0),
-                version_info.get("minor", 0),
-                version_info.get("patch", 0)
-        ]
+	var version_info: Dictionary = Engine.get_version_info()
+	var version_string: String = "%d.%d.%d" % [
+		version_info.get("major", 0),
+		version_info.get("minor", 0),
+		version_info.get("patch", 0)
+	]
 
-        var schema: Dictionary = {
-                "name": "godot",
-                "version": "0.1.0",
-                "description": "Godot Engine",
-                "latest": version_string,
-                "copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
-                "license": "CC BY 3.0",
-                "repository": {
-                        "type": "git",
-                        "url": "https://github.com/nitrologic/biblispec"
-                },
-                "curator": "nitrologic",
-                "variant": get_variant_names(),
-                "globals": [
-                        "@GDScript",
-                        "@GlobalScope"
-                ],
-                "node": nodes,
-                "resource": resources,
-                "object": objects,
-                "editor": editors
-        }
+	var schema: Dictionary = {
+		"name": "godot",
+		"version": "0.1.0",
+		"description": "Godot Engine",
+		"latest": version_string,
+		"copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
+		"license": "CC BY 3.0",
+		"repository": {
+			"type": "git",
+			"url": "https://github.com/nitrologic/biblispec"
+		},
+		"curator": "nitrologic",
+		"variant": get_variant_names(),
+		"globals": [
+			"@GDScript",
+			"@GlobalScope"
+		],
+		"node": nodes,
+		"resource": resources,
+		"object": objects,
+		"editor": editors
+	}
 
-        return schema
+	return schema
 
 
 func export_engine_schema(target_path: String) -> void:
-        var schema: Dictionary = build_schema_dictionary()
-        var json_text: String = JSON.stringify(schema, "\t")
+	var schema: Dictionary = build_schema_dictionary()
+	var json_text: String = JSON.stringify(schema, "\t")
 
-        var file: FileAccess = FileAccess.open(target_path, FileAccess.WRITE)
-        if file != null:
-                file.store_string(json_text)
-                file.close()
-                print("Export completed: ", target_path)
-        else:
-                printerr("Failed to open path for writing: ", target_path)
+	var file: FileAccess = FileAccess.open(target_path, FileAccess.WRITE)
+	if file != null:
+		file.store_string(json_text)
+		file.close()
+		print("Export completed: ", target_path)
+	else:
+		printerr("Failed to open path for writing: ", target_path)
 
 
 
@@ -846,51 +932,51 @@ Would you like me to look up the history or context of any of the other early th
 {
 
     "digits":[
-        "０１２３４５６７８９",
-        "0123456789",
-        "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
-        "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
-        "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
-        "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
-        "①②③④⑤⑥⑦⑧⑨",
-        "⓪①②③④⑤⑥⑦⑧⑨",
-        "⓿❶❷❸❹❺❻❼❽❾",
-        "➀➁➂➃➄➅➆➇➈",
-        "➊➋➌➍➎➏➐➑➒",
-        "〇一二三四五六七八九",
-        "٠١٢٣٤٥٦٧٨٩",
-        "०१२३४५६७८९",
-        "০১২৩৪৫৬৭৮৯",
-        "੦੧੨੩੪੫੬੭੮੯",
-        "૦૧૨૩૪૫૬૭૮૯",
-        "୦୧୨୩୪୫୬୭୮୯",
-        "௦௧௨௩௪௫௬௭௮௯",
-        "౦౧౨౩౪౫౬౭౮౯",
-        "೦೧೨೩೪೫೬೭೮೯",
-        "൦൧൨൩൪൫൬൭൮൯",
-        "෦෧෨෩෪෫෬෭෮෯",
-        "๐๑๒๓๔๕๖๗๘๙",
-        "໐໑໒໓໔໕໖໗໘໙",
-        "༠༡༢༣༤༥༦༧༨༩",
-        "၀၁၂၃၄၅၆၇၈၉",
-        "႐႑႒႓႔႕႖႗႘႙",
-        "០១២៣៤៥៦៧៨៩",
-        "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
-        "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
-        "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
-        "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉",
-        "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
-        "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
-        "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
-        "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
-        "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
-        "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
-        "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
-        "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
-        "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
-        "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
-        "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
-        "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
+	"０１２３４５６７８９",
+	"0123456789",
+	"𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+	"𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+	"𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+	"𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+	"①②③④⑤⑥⑦⑧⑨",
+	"⓪①②③④⑤⑥⑦⑧⑨",
+	"⓿❶❷❸❹❺❻❼❽❾",
+	"➀➁➂➃➄➅➆➇➈",
+	"➊➋➌➍➎➏➐➑➒",
+	"〇一二三四五六七八九",
+	"٠١٢٣٤٥٦٧٨٩",
+	"०१२३४५६७८९",
+	"০১২৩৪৫৬৭৮৯",
+	"੦੧੨੩੪੫੬੭੮੯",
+	"૦૧૨૩૪૫૬૭૮૯",
+	"୦୧୨୩୪୫୬୭୮୯",
+	"௦௧௨௩௪௫௬௭௮௯",
+	"౦౧౨౩౪౫౬౭౮౯",
+	"೦೧೨೩೪೫೬೭೮೯",
+	"൦൧൨൩൪൫൬൭൮൯",
+	"෦෧෨෩෪෫෬෭෮෯",
+	"๐๑๒๓๔๕๖๗๘๙",
+	"໐໑໒໓໔໕໖໗໘໙",
+	"༠༡༢༣༤༥༦༧༨༩",
+	"၀၁၂၃၄၅၆၇၈၉",
+	"႐႑႒႓႔႕႖႗႘႙",
+	"០១២៣៤៥៦៧៨៩",
+	"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
+	"᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
+	"᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
+	"᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉",
+	"᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
+	"᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
+	"᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
+	"᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
+	"᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
+	"꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
+	"꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
+	"꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
+	"꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
+	"꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
+	"꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
+	"꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
     ]
 }
 
