@@ -1,5 +1,5 @@
 echo off
-pushd maze
+pushd ..\maze
 deno run piano
 rem deno run maze.ts
 rem deno run centipede

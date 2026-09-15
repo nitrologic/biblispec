@@ -33,7 +33,7 @@ Also begun a [codepoints book](books/codepoints.json) to feed new symbols arrays
 
 New notes section
 
-![notes mazes](images/mazetypes.png)
+![notes mazes](scratch/images/mazetypes.png)
 
 ## ⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉
 
@@ -567,7 +567,7 @@ All are not left facing - mirrored souls under observation
 				"arrowArcs":["↩↪","⤶⤷","⤾⤿","⤺⤻","👈👉"],
 ```
 
-
+<moved to scratch>
 
 [The entire unicode block of interest](hieroglyph.md)
 
