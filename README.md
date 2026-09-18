@@ -6,6 +6,38 @@ A living document of linguistic latitude.
 
 # Recent Additions
 
+## a mathvar object joins the unicode lexis spec
+
+```
+	"mathvar": {
+		"ℕ": "Set of all natural numbers (0, 1, 2, 3, ... or 1, 2, 3, ...).",
+		"ℤ": "Set of all integers (..., -2, -1, 0, 1, 2, ...).",
+		"ℚ": "Set of all rational numbers.",
+		"ℝ": "Set of all real numbers.",
+		"ℂ": "Set of all complex numbers.",
+		"ℍ": "Set of all quaternions.",
+		"𝕆": "Set of all octonions.",
+		"𝔽": "Generic field in algebra, or finite field.",
+		"ℙ": "Prime numbers, probability measure, or projective space.",
+		"𝕊": "Sphere or sedenions number system.",
+		"𝔹": "Boolean domain {0, 1}; switching algebra and digital logic.",
+		"𝔻": "Set of dyadic rationals (m / 2^n); fixed-point computer arithmetic.",
+		"𝕂": "Arbitrary scalar base field (typically ℝ or ℂ); control theory and state-space systems.",
+		"𝕋": "Circle group or 1D torus; DTFT frequency domain and angular state spaces.",
+		"𝕏": "System input space or underlying state space in control theory.",
+		"𝕐": "Sensor observation or measurement space in estimation theory.",
+		"𝕃": "Laplace domain, linear operator space, or Leech lattice.",
+		"𝔼": "Expectation operator in statistics and signal processing.",
+		"𝕍": "Variance operator in statistical analysis and measurement uncertainty.",
+		"𝕀": "Indicator function or identity operator.",
+		"𝟙": "Vector of all ones or characteristic function.",
+		"𝔸": "Affine space; kinematics, robotics, and origin-free coordinate frames.",
+		"𝕄": "Minkowski spacetime; relativistic electrodynamics and wave propagation.",
+		"𝔾": "Grassmannian manifold; subspace tracking and robotic visual odometry.",
+		"𝕎": "Walsh function space or Wiener process in stochastic systems."
+	},
+```
+
 [Godot Engine internals](books/godot.json)
 
 [Raw 026xx codepoint names](books/codepoints.json)
