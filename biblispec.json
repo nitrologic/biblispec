@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.5.8",
+	"version": "1.5.9",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -440,6 +440,18 @@
 					"codePoints": ["U+29C0", "U+29C9"],
 					"range": [10688, 10697],
 					"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
+				},
+				"mathvar":{
+					"ℕ": "The set of all natural numbers (0, 1, 2, 3, ... or 1, 2, 3, ...).",
+					"ℤ": "The set of all integers (..., -2, -1, 0, 1, 2, ...).",
+					"ℚ": "The set of all rational numbers (fractions of integers).",
+					"ℝ": "The set of all real numbers.",
+					"ℂ": "The set of all complex numbers.",
+					"ℍ": "The set of all quaternions (hypercomplex numbers).",
+					"𝕆": "The set of all octonions.",
+					"𝔽": "A generic field in algebra, or a finite field.",
+					"ℙ": "The prime numbers, a probability measure, or projective space.",
+					"𝕊": "A sphere or the sedenions number system."
 				},
 				"mathalpha": {
 					"name": "Mathematical Alphanumeric Symbols",

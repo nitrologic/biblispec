@@ -35,754 +35,14 @@ Abstract
    generative grammar for URIs; that task is performed by the individual
    specifications of each URI scheme.
 
-func getNodeSignatures(className: String) -> Array[String]:
-	var signatures: Array[String] = []
-	var methods: Array[Dictionary] = ClassDB.get_method_list(className)
+[skid@archlinux nitrologic]$ cat scrapeg.sh 
+# godot --headless -s res://scrape.gd
+flatpak run org.godotengine.Godot --headless -s res://scrape.gd
+[skid@archlinux nitrologic]$ 
 
-	for method in methods:
-		# Skip private/internal methods
-		if method.get("name", "").begins_with("_"):
-			continue
 
-		signatures.append(getSignature(method))
+flatpak run org.godotengine.Godot --dump-extension-ap
 
-	signatures.sort()
-	return signatures
-
-
-func build_schema_dictionary() -> Dictionary:
-	var all_classes: PackedStringArray = ClassDB.get_class_list()
-	var nodes: Array[String] = []
-	var resources: Array[String] = []
-	var objects: Array[String] = []
-	var editors: Array[String] = []
-
-	populate_categories(all_classes, nodes, resources, objects, editors)
-
-	var version_info: Dictionary = Engine.get_version_info()
-	var version_string: String = "%d.%d.%d" % [
-		version_info.get("major", 0),
-		version_info.get("minor", 0),
-		version_info.get("patch", 0)
-	]
-
-	# Build node signatures map
-	var node_signatures: Dictionary = {}
-	for node_class in nodes:
-		node_signatures[node_class] = getNodeSignatures(node_class)
-
-	var schema: Dictionary = {
-		"name": "godot",
-		"version": "0.1.0",
-		"description": "Godot Engine",
-		"latest": version_string,
-		"copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
-		"license": "CC BY 3.0",
-		"repository": {
-				"type": "git",
-				"url": "https://github.com/nitrologic/biblispec"
-		},
-		"curator": "nitrologic",
-		"variant": get_variant_names(),
-		"globals": [
-				"@GDScript",
-				"@GlobalScope"
-		],
-		"node": nodes,
-		"node_signatures": node_signatures,
-		"resource": resources,
-		"object": objects,
-		"editor": editors
-	}
-
-	return schema
-
-
-• Changes:*
-- New `getNodeSignatures()` filters out private methods and returns sorted signatures
-- `build_schema_dictionary()` generates a `node_signatures` map keyed by class name
-- Each node maps to an array of method signatures with full type information
-
-• Output structure:*
-
-{
-	"node": ["Node", "Node2D", ...],
-	"node_signatures": {
-		"Node": [
-			"_exit_tree() -> void",
-			"add_child(node: Node, force_owned: bool = false) -> void",
-			...
-		],
-		"Node2D": [...]
-	}
-}
-
-
-
-
-
-https://docs.asciinema.org/manual/asciicast/v3/
-
-ascii cast v3
-
-header
-
-minimal
-
-{"version": 3, "term": {"cols": 80, "rows": 24}}
-
-example
-
-{"version": 3, "term": {"cols": 80, "rows": 24, "type": "xterm-256color"}, "timestamp": 1504467315, "title": "Demo", "env": {"SHELL": "/bin/zsh"}}
-# event stream follows the header
-[0.248, "o", "\u001b[1;31mHello \u001b[32mWorld!\u001b[0m\n"]
-[1.001, "o", "That was ok\rThis is better."]
-[3.500, "m", ""]
-[0.143, "o", "Now... "]
-# terminal window resized to 90 cols and 30 rows
-[2.050, "r", "90x30"]
-[1.541, "o", "Bye!"]
-[0.887, "x", "0"]
-
-v3 theme
-
-{
-  "fg": "#d0d0d0",
-  "bg": "#212121",
-  "palette": "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
-}
-
-
-ascii cast v2
-
-mime
-
-application/x-asciicast
-
-header
-
-minimal
-
-{"version": 2, "width": 80, "height": 24}
-
-example
-
-{
-  "version": 2,
-  "width": 80,
-  "height": 24,
-  "timestamp": 1504467315,
-  "duration": 123.45,
-  "command": "/bin/bash",
-  "title": "Demo",
-  "idle_time_limit": 2,
-  "env": {
-    "SHELL": "/bin/bash",
-    "TERM": "xterm-256color"
-  },
-  "theme": {
-    "fg": "#d0d0d0",
-    "bg": "#212121",
-    "palette": "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
-  }
-}
-
-var path = "/path/to/model.glb"
-var file = FileAccess.get_file_as_bytes(path)
-var doc = GLTFDocument.new()
-var state = GLTFState.new()
-doc.append_from_buffer(file, "", state)
-var model = doc.generate_scene(state)
-add_child(model)
-
-
-dice
-
-⚀ ⚁ ⚂ ⚃ ⚄ ⚅
-
-dots
-
-⚆ ⚇ ⚈ ⚉
-
-yang yin
-
-⚊ ⚋ ⚌ ⚍ ⚎ ⚏
-
-new codepoints.json
-
-interesting bits from Unicode Version Added: 6.0 (October 2010)
-
-"26Cx": {
-	"⛀": "white draughts man",
-	"⛁": "white draughts king",
-	"⛂": "black draughts man",
-	"⛃": "black draughts king",
-	"⛄": "snowman without snow",
-	"⛅": "sun behind cloud",
-	"⛆": "rain",
-	"⛇": "black snowman",
-	"⛈": "thunder cloud and rain",
-	"⛉": "turned white shogi piece",
-	"⛊": "turned black shogi piece",
-	"⛋": "white diamond in square",
-	"⛌": "crossed swords",
-	"⛍": "disco symbol",
-	"⛎": "ophiuchus",
-	"⛏": "pick"
-}
-
-[
-  {
-    "tag": "pirate",
-    "description": "Pirate English (stereotypical / Talk Like a Pirate Day)",
-    "type": "variant (proposed / informal)",
-    "status": "Not officially registered",
-    "notes": "Joke registration attempts have been made (e.g. 2015). Widely used informally on Talk Like a Pirate Day (19 September). No official IANA entry."
-  },
-{
-"tag":"en-simple",
-"description":"Simple English",
-"type":"variant",
-"status":"Registered",
-"notes":"Simplified form of English intended to make text easier to understand."
-},
-  {
-    "tag": "en-scouse",
-    "description": "Scouse (Liverpool / Merseyside English)",
-    "type": "variant",
-    "status": "Registered (official)",
-    "registered": "2000-05-25",
-    "notes": "One of the few English regional dialects with an official IETF variant subtag. Registered by Keith Szlamp."
-  },
-  {
-    "tag": "en-boont",
-    "description": "Boontling",
-    "type": "variant",
-    "status": "Registered",
-    "notes": "Obscure American English jargon/dialect from Boonville, California."
-  },
-  {
-    "tag": "en-cockney",
-    "description": "Cockney",
-    "type": "variant (informal / proposed)",
-    "status": "Not officially registered",
-    "notes": "Frequently requested but never successfully registered as an official variant."
-  },
-  {
-    "tag": "en-geordie",
-    "description": "Geordie (Tyneside / Newcastle)",
-    "type": "variant (informal)",
-    "status": "Not registered",
-    "notes": "Commonly used informally, but no official IETF subtag."
-  },
-  {
-    "code": "emen",
-    "standard": "ISO 639-6",
-    "description": "Early Modern English (ca. 1485 – ca. 1660)",
-    "scope": "Individual",
-    "type": "Living",
-    "maps_to": "en-emodeng (IETF)",
-    "notes": "Withdrawn standard (ISO 639-6 withdrawn 2014)"
-  },
-  {
-    "code": "emse",
-    "standard": "ISO 639-6",
-    "description": "Early Midland and South Eastern Middle English",
-    "scope": "Individual",
-    "type": "Historic",
-    "maps_to": "enm",
-    "notes": "Regional/historical variant of Middle English"
-  },
-  {
-    "code": "meng",
-    "standard": "ISO 639-6",
-    "description": "Middle English (ca. 1066 – ca. 1350)",
-    "scope": "Individual",
-    "type": "Historic",
-    "maps_to": "enm",
-    "notes": "Slightly different date range than standard enm"
-  },
-  {
-    "code": "ango",
-    "standard": "ISO 639-6",
-    "description": "Anglo Saxon (Old English) (ca. 450 – ca. 1250)",
-    "scope": "Individual",
-    "type": "Historic",
-    "maps_to": "ang",
-    "notes": "Extended end date compared to standard ang"
-  },
-  {
-    "code": "angl",
-    "standard": "ISO 639-6",
-    "description": "Anglic",
-    "scope": "Collective",
-    "type": null,
-    "maps_to": null,
-    "notes": "Language group / family code"
-  },
-  {
-    "code": "nsea",
-    "standard": "ISO 639-6",
-    "description": "North Sea (Ingvaeonic)",
-    "scope": "Collective",
-    "type": null,
-    "maps_to": null,
-    "notes": "Language group / family code"
-  }
-]
-
-
-
-[
-  {
-    "tag": "en",
-    "description": "English (Modern English)",
-    "type": "language",
-    "iso639_1": "en",
-    "iso639_2_3": "eng",
-    "period": "Modern English (late 17th century – present)"
-  },
-  {
-    "tag": "en-emodeng",
-    "description": "Early Modern English (1500–1700)",
-    "type": "variant",
-    "prefix": "en",
-    "iso639_6": "emen",
-    "period": "Early Modern English (ca. 1485 – ca. 1660/1700)",
-    "notes": "Registered variant subtag for Shakespeare's English / King James Bible English"
-  },
-  {
-    "tag": "enm",
-    "description": "Middle English",
-    "type": "language",
-    "iso639_2_3": "enm",
-    "period": "Middle English (ca. 1066/1100 – ca. 1500)"
-  },
-  {
-    "tag": "ang",
-    "description": "Old English (Anglo-Saxon)",
-    "type": "language",
-    "iso639_2_3": "ang",
-    "period": "Old English (ca. 450 – ca. 1100/1250)"
-  }
-]
-
-emen, en-emodeng
-IETF language tags (BCP 47) for Early Modern English
-
-
-{
-	"ὑπόθεσις":{
-		"en":"idea",
-		"meaning":"hypothesis",
-		"transliteration":"hupóthesis"
-	}
-}
-
-curl -L -O https://www.rfc-editor.org/rfc/rfc491.txt
-
-
-scientific method
-
-1 hypothesis
-2 proof
-
-ὑπόθεσις (hupóthesis)
-
-{
-  "rfc": 12,
-  "what": "IMP-HOST wire protocol, bit by bit",
-  "directions": {
-    "imp_to_host": {
-      "job": "receive message from IMP",
-      "loop": "wait for bit → grab bit → shift into register",
-      "signals": ["RFNIB (ready for next bit)", "IMP READY", "IMP BIT"],
-      "registers": ["PAD (padding flag)", "LAST (last bit flag)", "COUNTER (bit count)"],
-      "error": "IMP READY goes low mid-stream → IMPERR"
-    },
-    "host_to_imp": {
-      "job": "send message to IMP",
-      "loop": "load word → request send → push bits → check if last",
-      "signals": ["INREQST (input request)", "BTAVL (bit available)", "LIBIT (last bit)", "LSTWD (last word)"],
-      "end": "LAST=1 and all bits sent → clear counter, done"
-    }
-  },
-  "hardware_reality": "16-bit words, bit-serial lines, no DMA, CPU babysits every bit",
-  "padding": "IMP pads to fixed size, HOST ignores PAD=1 bits"
-}
-
-
-{
-  "rfc": 7,
-  "unsafe_propagation": {
-    "input": "imp → handler → network program → users",
-    "output": "users → network program → handler → imp",
-    "shared": "pool of buffers",
-    "interrupt": "async signal to handler",
-    "risk": "no locks visible, single buffer pool, interrupt-driven race conditions"
-  }
-}
-
-{
-  "rfc": 7,
-  "author": "michel deloche",
-  "date": "may 1969",
-  "host": "sigma 7",
-  "figures": [
-    {
-      "id": 1,
-      "title": "data flow",
-      "components": [
-	{"name": "users", "type": "source"},
-	{"name": "network program", "type": "process", "functions": ["multiplex", "distribution"]},
-	{"name": "handler program", "type": "driver"},
-	{"name": "host", "type": "hardware", "model": "sigma 7"},
-	{"name": "special/standard interface", "type": "adapter"},
-	{"name": "imp", "type": "network"}
-      ],
-      "data_flow": {
-	"output": "users → network program (multiplex) → handler → special/standard → imp",
-	"input": "imp → special/standard → handler → network program (distribution) → users"
-      },
-      "boundary": "//"
-    },
-    {
-      "id": 2,
-      "title": "control structure",
-      "components": [
-	{"name": "user's interface", "type": "entry"},
-	{"name": "network program", "type": "protocol_logic"},
-	{"name": "pool of buffers", "type": "memory"},
-	{"name": "interface table", "type": "lookup"},
-	{"name": "handler program", "type": "hardware_abstraction"},
-	{"name": "hardware interface", "type": "boundary"},
-	{"name": "interrupt", "type": "signal"},
-	{"name": "commands", "type": "control"}
-      ],
-      "arrow_types": {
-	"====>": "data",
-	"---->": "logical_information",
-	"----": "control"
-      }
-    }
-  ],
-  "pending": "gordo documentation for program-to-program communication"
-}
-
-
-"rfc16 M.I.T — unknown status, known restoration. walter's bracket is the legacy."
-
-
-[
-	"rfc1 Host Software",
-	"rfc2 Host software",
-	"rfc3 Documentation conventions",
-	"rfc4 Network timetable",
-	"rfc5 Decode Encode Language (DEL)",
-	"rfc6 Conversation with Bob Kahn",
-	"rfc7 Host-IMP interface",
-	"rfc8 ARPA Network Functional Specifications",
-	"rfc9 Host Software",
-	"rfc10 Documentation conventions",
-	"rfc9963 Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3"
-]
-
-The [RFC Editor](https://www.rfc-editor.org/) is the authoritative body responsible for editing, publishing, and archiving the Request for Comments (RFC) document series. This series contains the core technical foundations, protocols, and architectural standards of the Internet (such as HTTP, TCP/IP, and TLS). [1, 2, 3]
-Historically managed for decades by a single internet pioneer, Jon Postel, the RFC Editor function has evolved into a structured multi-group framework defined by modern operational policies like RFC 9280. [4, 5]
-------------------------------
-## Core Structure and Roles
-The contemporary RFC Editor framework divides policy-making, editorial execution, and administration across several specialized components: [5]
-
-* RFC Production Center (RPC): The operational core. This is a team of professional technical editors who format, refine, and copy-edit approved drafts to ensure high editorial standards before officially releasing them. [2]
-* RFC Series Working Group (RSWG): An open public forum where anyone in the internet community can propose and develop editorial policies for the document series. [2, 6]
-* RFC Series Approval Board (RSAB): A governing body that acts as a check-and-balance system to review and formally approve policy proposals generated by the RSWG. [6, 7]
-* RFC Series Consulting Editor (RSCE): An expert individual who provides professional guidance and insights into publication standards, formatting styles, and formatting tools. [5, 7]
-* IETF Administration LLC (IETF LLC): The legal and financial entity that contractually oversees and funds the operational components, such as the RPC. [5]
-
-------------------------------
-## The Five RFC Streams
-Documents do not all originate from the same source. The RFC Editor publishes submissions categorized into five distinct "streams" based on their origin: [8]
-
-| Stream | Description |
-|---|---|
-| IETF | The Internet Engineering Task Force stream. This is the only stream that produces official Internet Standards and Best Current Practices (BCPs). |
-| IAB | The Internet Architecture Board stream. Publishes architectural reviews, guidelines, and internet management policies. |
-| IRTF | The Internet Research Task Force stream. Focuses on experimental technologies and long-term academic research related to protocols. |
-| Independent Submission | Managed by an Independent Submissions Editor (ISE). It publishes valuable technical insights or critiques from the broader community that did not go through the official IETF process. |
-| Editorial | Documents the internal operational and formatting policies of the RFC Editor itself, authored by the RSWG. |
-
-------------------------------
-## Key Publication Characteristics
-
-* Immutability: Once an RFC is officially assigned a number and published, it is never altered. Errors are catalogled in an errata sheet, and updates require publishing a completely new RFC number that explicitly "updates" or "obsoletes" the older one. [4, 9]
-* Open and Free Access: All specifications are distributed openly without paywalls, fees, or licensing restrictions to promote global interoperability across different software and hardware ecosystems. [3]
-
-If you are curious about how a piece of technology transitions into an official document, I can walk you through the Internet-Draft review process, or I can pull up details on specific historic RFCs. Which would you prefer?
-
-[1] https://www.rfc-editor.org
-[2] [https://www.ietf.org](https://www.ietf.org/about/groups/rfc-editor/)
-[3] [https://www.ietf.org](https://www.ietf.org/process/rfcs/)
-[4] [https://www.youtube.com](https://www.youtube.com/watch?v=8IXLpoN8Xj0&t=50)
-[5] [https://ftp.st.ryukoku.ac.jp](https://ftp.st.ryukoku.ac.jp/pub/internet/rfc/rfc9280.pdf)
-[6] [https://www.rfc-editor.org](https://www.rfc-editor.org/about/rfc-editor/)
-[7] [https://www.ietf.org](https://www.ietf.org/about/groups/rfc-editor/)
-[8] [https://en.wikipedia.org](https://en.wikipedia.org/wiki/Request_for_Comments)
-[9] [https://datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6635)
-
-
-
-
-{"Email Address": "Variable length, RFC 5322-compliant, unique communication identifier."},
-{"URI": "Variable length, RFC 3986, identifies resources on the web."},
-
-curl -L -O https://www.rfc-editor.org/rfc/rfc20.txt
-
-
-
-collation ["compat","emoji","eor","phonebk","pinyin","searchjl","stroke","trad","unihan","zhuyin"]
-				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
-
-
-"ecma-402":{
-	"collation": [
-		"compat","emoji","eor","phonebk","pinyin","searchjl","stroke","trad","unihan","zhuyin"
-	],
-	"calendar":[
-		"buddhist","chinese","coptic","dangi","ethioaa","ethiopic","gregory","hebrew","indian",
-		"islamic","islamic-civil","islamic-rgsa","islamic-tbla","islamic-umalqura",
-		"iso8601","japanese","persian","roc"
-	],
-	"unit": [
-		"acre","bit","byte","celsius","centimeter","day","degree","fahrenheit","fluid-ounce","foot","gallon",
-		"gigabit","gigabyte","gram","hectare","hour","inch","kilobit","kilobyte","kilogram","kilometer",
-		"liter","megabit","megabyte","meter","microsecond","mile","mile-scandinavian",
-		"milliliter","millimeter","millisecond","minute","month","nanosecond","ounce","percent","petabyte",
-		"pound","second","stone","terabit","terabyte","week","yard","year"
-	],
-	"numberingSystem": [
-		"adlm","ahom","arab","arabext","bali","beng","bhks","brah","cakm","cham","deva","diak","fullwide",
-		"gara","gong","gonm","gujr","gukh","guru","hanidec","hmng","hmnp","java","kali","kawi","khmr","knda","krai",
-		"lana","lanatham","laoo","latn","lepc","limb","mathbold","mathdbl","mathmono","mathsanb","mathsans","mlym",
-		"modi","mong","mroo","mtei","mymr","mymrepka","mymrpao","mymrshan","mymrtlng","nagm","newa","nkoo",
-		"olck","onao","orya","osma","outlined","rohg","saur","segment","shrd","sind","sinh","sora","sund","sunu",
-		"takr","talu","tamldec","telu","thai","tibt","tirh","tnsa","vaii","wara","wcho"
-	],
-	"currency":[
-		"AED","AFN","ALL","AMD","ANG","AOA","ARS","AUD","AWG","AZN","BAM","BBD","BDT","BGN","BHD","BIF",
-		"BMD","BND","BOB","BRL","BSD","BTN","BWP","BYN","BZD","CAD","CDF","CHF","CLP","CNY","COP","CRC",
-		"CUC","CUP","CVE","CZK","DJF","DKK","DOP","DZD","EGP","ERN","ETB","EUR","FJD","FKP","GBP","GEL",
-		"GHS","GIP","GMD","GNF","GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS","INR","IQD","IRR",
-		"ISK","JMD","JOD","JPY","KES","KGS","KHR","KMF","KPW","KRW","KWD","KYD","KZT","LAK","LBP","LKR",
-		"LRD","LSL","LYD","MAD","MDL","MGA","MKD","MMK","MNT","MOP","MRU","MUR","MVR","MWK","MXN","MYR",
-		"MZN","NAD","NGN","NIO","NOK","NPR","NZD","OMR","PAB","PEN","PGK","PHP","PKR","PLN","PYG","QAR",
-		"RON","RSD","RUB","RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP","SLL","SOS","SRD","SSP","STN",
-		"SVC","SYP","SZL","THB","TJS","TMT","TND","TOP","TRY","TTD","TWD","TZS","UAH","UGX","USD","UYU",
-		"UZS","VES","VND","VUV","WST","XAF","XCD","XDR","XOF","XPF","XSU","YER","ZAR","ZMW","ZWL"
-	]
-}
-
-en-NZ
-
-
-// ECMAScript internationalization standard (ECMA-402)
-
-/*
-Intl.ListFormat — "a, b, and c" vs "a, b und c" depending on locale
-Intl.RelativeTimeFormat — "2 hours ago" / "vor 2 Stunden"
-Intl.DisplayNames — localized names for languages, regions, scripts
-Intl.Locale — parse and manipulate locale tags programmatically
-Intl.Segmenter — what you're already using for grapheme/word/line boundaries
-*/
-/*
-
-"short"        // "GMT-4"
-"shortOffset"  // "GMT-4"
-"long"         // "Eastern Daylight Time"
-"longOffset"   // "GMT-04:00"
-"shortGeneric" // "ET"
-"longGeneric"  // "Eastern Time"
-
-*/
-
-
-{
-"lang": "und"
-}
-
-
-
-	"componenents":{
-		"memory": [
-			{"type": "6550", "function": "static ram", "quantity": 4, "labels": ["c-1", "c-2", "c-3", "c-4"]}
-		],
-		"buffers": [
-			{"type": "74ls244", "function": "octal buffer/line driver", "quantity": 2, "labels": ["b-1", "b-2"]}
-		],
-		"logic": [
-			{"type": "74ls138", "function": "3-to-8 decoder/demux", "labels": ["address decode"]},
-			{"type": "74ls00", "function": "quad 2-input nand", "labels": ["inverter section"]}
-		],
-		"power": [
-			{"type": "7805", "function": "5v voltage regulator"},
-			{"type": "7812", "function": "12v voltage regulator"},
-			{"type": "diode", "spec": "1n4002", "labels": ["d-1", "d-2"]}
-		],
-		"passives": [
-			{"type": "capacitor", "values": ["0.1µf", "10µf", "100µf"]},
-			{"type": "resistor", "values": ["2.2k", "4.7k", "10k"]}
-		],
-		"connectors": [
-			{"type": "edge connector", "labels": ["j-1", "j-2"]},
-			{"type": "test points", "labels": ["tpi-1", "tpi-2", "tpi-3", "tpi-4"]}
-		],
-		"jumpers": [
-			{"label": "w-1", "function": "8k/16k memory config"}
-		]
-	}
-
-
-}
-
-{
-	"name":"PET 2001",
-	"description":"Original 6502 all in one.",
-	"version":"0.1.0",
-	"copyright":"(c)2026 nitrologic",
-	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
-	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
-	"sources":[
-		"https://en.wikipedia.org/wiki/Commodore_PET",
-		"https://www.zimmers.net/anonftp/pub/cbm/src/pet/index.html"
-	],
-	"system":{
-		"origin":"MOS Technology, Norristown, Pennsylvania, USA",
-		"released":"January 1977",
-		"CPU":"6502 @ 1 MHz",
-		"Memory":"4–96 KB",
-		"ROM":"Commodore BASIC 4.0",
-		"Graphics":"Monochrome PETSCII semigraphic characters",
-		"Display":{"crystal":17.734475,"cpu":0.985248,"video":50,"lines":312,"vblank":30},
-		"credits":{
-			"engineers":[
-				{"name":"Bill Mensch","role":"6502 CPU Logic Design"},
-				{"name":"Rod Orgill","role":"6502 CPU Circuit Design"},
-				{"name":"Harry Bawcom","role":"6502 CPU Verification"},
-				{"name":"Charles Winterble", "role": "MOS Chip Engineering"},
-				{"name":"PET Team","role":"VIA Input/Output"},
-				{"name":"Jack Tramiel","role":"Commodore Boss"}
-			]
-		},
-		"manufactured":{"year":"1977-1985","units":"219k"}
-	},
-
-
-🪾
-
-
-"𓆛𓆜𓆝𓆞𓆟" 𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵 ⚔⚕⚖⚗⚘⚙⚚⚛⚜⚝⚞ ▶◀▶▫□▢▢□▫▪■▣▣■▪"➀➁➂➃➄➅➆➇➈","➊➋➌➍➎➏➐➑➒", ◀▶𝗗𝗔𝗧𝗔𝗦𝗘𝗧𝗧𝗘 ⚙⚙ ₀₀₀₁ ▫□▢▢□▫
-𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭"subscript":"₀₁₂₃₄₅₆₇₈₉","superscript":"⁰¹²³⁴⁵⁶⁷⁸⁹" elf emoji
-
-
-"sans-bold": {
-"upper": "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭",
-"lower": "𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
-"digits": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
-"range": ["U+1D5D4", "U+1D607", "U+1D7EC", "U+1D7F5"]
-},
-
-	overflow: hidden;
-
-<div style="tab-size: 2; column-rule: 2px solid grey; column-count: 3; column-gap: 10px; font-size: x-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-<pre id="terminal">
-i
-
-
-CSSStyleDeclaration {
-	0: 'accent-color', 1: 'align-content', 2: 'align-items', 3: 'align-self', 4: 'alignment-baseline',
-	5: 'anchor-name', 6: 'anchor-scope', 7: 'animation-composition', 8: 'animation-delay', 9: 'animation-direction',
-	10: 'animation-duration', 11: 'animation-fill-mode', 12: 'animation-iteration-count', 13: 'animation-name', 14: 'animation-play-state',
-	15: 'animation-range-end', 16: 'animation-range-start', 17: 'animation-timeline', 18: 'animation-timing-function', 19: 'animation-trigger',
-	20: 'app-region', 21: 'appearance', 22: 'aspect-ratio', 23: 'backdrop-filter', 24: 'backface-visibility',
-	25: 'background-attachment', 26: 'background-blend-mode', 27: 'background-clip', 28: 'background-color', 29: 'background-image',
-	30: 'background-origin', 31: 'background-position', 32: 'background-repeat', 33: 'background-size', 34: 'baseline-shift',
-	35: 'baseline-source', 36: 'block-size', 37: 'border-block-end-color', 38: 'border-block-end-style', 39: 'border-block-end-width',
-	40: 'border-block-start-color', 41: 'border-block-start-style', 42: 'border-block-start-width', 43: 'border-bottom-color', 44: 'border-bottom-left-radius',
-	45: 'border-bottom-right-radius', 46: 'border-bottom-style', 47: 'border-bottom-width', 48: 'border-collapse', 49: 'border-end-end-radius',
-	50: 'border-end-start-radius', 51: 'border-image-outset', 52: 'border-image-repeat', 53: 'border-image-slice', 54: 'border-image-source',
-	55: 'border-image-width', 56: 'border-inline-end-color', 57: 'border-inline-end-style', 58: 'border-inline-end-width', 59: 'border-inline-start-color',
-	60: 'border-inline-start-style', 61: 'border-inline-start-width', 62: 'border-left-color', 63: 'border-left-style', 64: 'border-left-width',
-	65: 'border-right-color', 66: 'border-right-style', 67: 'border-right-width', 68: 'border-shape', 69: 'border-start-end-radius',
-	70: 'border-start-start-radius', 71: 'border-top-color', 72: 'border-top-left-radius', 73: 'border-top-right-radius', 74: 'border-top-style',
-	75: 'border-top-width', 76: 'bottom', 77: 'box-decoration-break', 78: 'box-shadow', 79: 'box-sizing',
-	80: 'break-after', 81: 'break-before', 82: 'break-inside', 83: 'buffered-rendering', 84: 'caption-side',
-	85: 'caret-animation', 86: 'caret-color', 87: 'caret-shape', 88: 'clear', 89: 'clip',
-	90: 'clip-path', 91: 'clip-rule', 92: 'color', 93: 'color-interpolation', 94: 'color-interpolation-filters',
-	95: 'color-rendering', 96: 'color-scheme', 97: 'column-count', 98: 'column-fill', 99: 'column-gap', …}
-}
-
-
-
-
-Valid JSON
-63.78 KB • 1641 keys • depth 8 • 334 objects • 250 arrays
-
-𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵
-
-⚔⚕⚖⚗⚘⚙⚚⚛⚜⚝⚞
-▶
-◀▶
-▫□▢▢□▫
-▪■▣▣■▪
-
-
-⤆⇐ ➧➧➨⇒⤇
-╭──────────┬────────┬─────────────────────────────────────╮
-│  Hex     │  Char  │  Name                               │
-├──────────┼────────┼─────────────────────────────────────┤
-│  U+2690  │  ⚐     │  WHITE FLAG                         │
-│  U+2691  │  ⚑     │  BLACK FLAG                         │
-│  U+2692  │  ⚒     │  HAMMER AND PICK                    │
-│  U+2693  │  ⚓     │  ANCHOR                             │
-│  U+2694  │  ⚔     │  CROSSED SWORDS                     │
-│  U+2695  │  ⚕     │  STAFF OF AESCULAPIUS               │
-│  U+2696  │  ⚖     │  SCALES                             │
-│  U+2697  │  ⚗     │  ALEMBIC                            │
-│  U+2698  │  ⚘     │  FLOWER                             │
-│  U+2699  │  ⚙     │  GEAR                               │
-│  U+269A  │  ⚚     │  STAFF OF HERMES                    │
-│  U+269B  │  ⚛     │  ATOM SYMBOL                        │
-│  U+269C  │  ⚜     │  FLEUR-DE-LIS                       │
-│  U+269D  │  ⚝     │  OUTLINED WHITE STAR                │
-│  U+269E  │  ⚞     │  THREE LINES CONVERGING RIGHT       │
-│  U+269F  │  ⚟     │  THREE LINES CONVERGING LEFT        │
-╰──────────┴────────┴─────────────────────────────────────╯
-
-╭──────────────┬─────────────┬────────────────────────────────╮
-│  Code Point  │  Character  │  Name                          │
-├──────────────┼─────────────┼────────────────────────────────┤
-│  U+2694      │  ⚔          │  CROSSED SWORDS                │
-│  U+2695      │  ⚕          │  STAFF OF AESCULAPIUS          │
-│  U+2696      │  ⚖          │  SCALES                        │
-│  U+2697      │  ⚗          │  ALEMBIC                       │
-│  U+2698      │  ⚘          │  FLOWER                        │
-│  U+2699      │  ⚙          │  **GEAR**                      │
-│  U+269A      │  ⚚          │  STAFF OF HERMES               │
-│  U+269B      │  ⚛          │  ATOM SYMBOL                   │
-│  U+269C      │  ⚜          │  FLEUR-DE-LIS                  │
-│  U+269D      │  ⚝          │  OUTLINED WHITE STAR           │
-│  U+269E      │  ⚞          │  THREE LINES CONVERGING RIGHT  │
-╰──────────────┴─────────────┴────────────────────────────────╯
-
-(⚘)
-	"➀➁➂➃➄➅➆➇➈",
-	"➊➋➌➍➎➏➐➑➒",
-
-𝗗𝗔
-
-𝗗𝗔𝗧𝗔𝗦𝗘𝗧𝗧𝗘 ₀₀₀₁ ⚙⚙
-
- ➀➀➀
-₁₀₁₂₃₄₅₆₇₈₉
 
 scrape.gd
 
@@ -790,104 +50,103 @@ extends SceneTree
 
 
 func _init() -> void:
-	export_engine_schema("res://godot_api_schema.json")
-	quit()
+        export_engine_schema("res://godot_api_schema.json")
+        quit()
 
 
 func get_variant_names() -> Array[String]:
-	var names: Array[String] = ["Variant"]
-	for type_id in range(1, TYPE_MAX):
-		var type_name: String = type_string(type_id)
-		if not type_name.is_empty() and not names.has(type_name):
-			names.append(type_name)
-	names.sort()
-	return names
+        var names: Array[String] = ["Variant"]
+        for type_id in range(1, TYPE_MAX):
+                var type_name: String = type_string(type_id)
+                if not type_name.is_empty() and not names.has(type_name):
+                        names.append(type_name)
+        names.sort()
+        return names
 
 
 func is_editor_class(item_name: String) -> bool:
-	return item_name.begins_with("Editor") or item_name.begins_with("ResourceImporter")
+        return item_name.begins_with("Editor") or item_name.begins_with("ResourceImporter")
 
 
 func populate_categories(all_classes: PackedStringArray, nodes: Array[String], resources: Array[String], objects: Array[String], editors: Array[String]) -> void:
-	for registered_class in all_classes:
-		var current_name: String = str(registered_class)
+        for registered_class in all_classes:
+                var current_name: String = str(registered_class)
 
-		if ClassDB.is_parent_class(current_name, "Node"):
-			nodes.append(current_name)
+                if ClassDB.is_parent_class(current_name, "Node"):
+                        nodes.append(current_name)
 
-		if ClassDB.is_parent_class(current_name, "Resource"):
-			resources.append(current_name)
+                if ClassDB.is_parent_class(current_name, "Resource"):
+                        resources.append(current_name)
 
-		if ClassDB.is_parent_class(current_name, "Object"):
-			objects.append(current_name)
+                if ClassDB.is_parent_class(current_name, "Object"):
+                        objects.append(current_name)
 
-		if is_editor_class(current_name):
-			editors.append(current_name)
+                if is_editor_class(current_name):
+                        editors.append(current_name)
 
-	nodes.sort()
-	resources.sort()
-	objects.sort()
-	editors.sort()
+        nodes.sort()
+        resources.sort()
+        objects.sort()
+        editors.sort()
 
 
 func build_schema_dictionary() -> Dictionary:
-	var all_classes: PackedStringArray = ClassDB.get_class_list()
-	var nodes: Array[String] = []
-	var resources: Array[String] = []
-	var objects: Array[String] = []
-	var editors: Array[String] = []
+        var all_classes: PackedStringArray = ClassDB.get_class_list()
+        var nodes: Array[String] = []
+        var resources: Array[String] = []
+        var objects: Array[String] = []
+        var editors: Array[String] = []
 
-	populate_categories(all_classes, nodes, resources, objects, editors)
+        populate_categories(all_classes, nodes, resources, objects, editors)
 
-	var version_info: Dictionary = Engine.get_version_info()
-	var version_string: String = "%d.%d.%d" % [
-		version_info.get("major", 0),
-		version_info.get("minor", 0),
-		version_info.get("patch", 0)
-	]
+        var version_info: Dictionary = Engine.get_version_info()
+        var version_string: String = "%d.%d.%d" % [
+                version_info.get("major", 0),
+                version_info.get("minor", 0),
+                version_info.get("patch", 0)
+        ]
 
-	var schema: Dictionary = {
-		"name": "godot",
-		"version": "0.1.0",
-		"description": "Godot Engine",
-		"latest": version_string,
-		"copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
-		"license": "CC BY 3.0",
-		"repository": {
-			"type": "git",
-			"url": "https://github.com/nitrologic/biblispec"
-		},
-		"curator": "nitrologic",
-		"variant": get_variant_names(),
-		"globals": [
-			"@GDScript",
-			"@GlobalScope"
-		],
-		"node": nodes,
-		"resource": resources,
-		"object": objects,
-		"editor": editors
-	}
+        var schema: Dictionary = {
+                "name": "godot",
+                "version": "0.1.0",
+                "description": "Godot Engine",
+                "latest": version_string,
+                "copyright": "(c) 2014 Juan Linietsky, Ariel Manzur and the Godot community",
+                "license": "CC BY 3.0",
+                "repository": {
+                        "type": "git",
+                        "url": "https://github.com/nitrologic/biblispec"
+                },
+                "curator": "nitrologic",
+                "variant": get_variant_names(),
+                "globals": [
+                        "@GDScript",
+                        "@GlobalScope"
+                ],
+                "node": nodes,
+                "resource": resources,
+                "object": objects,
+                "editor": editors
+        }
 
-	return schema
+        return schema
 
 
 func export_engine_schema(target_path: String) -> void:
-	var schema: Dictionary = build_schema_dictionary()
-	var json_text: String = JSON.stringify(schema, "\t")
+        var schema: Dictionary = build_schema_dictionary()
+        var json_text: String = JSON.stringify(schema, "\t")
 
-	var file: FileAccess = FileAccess.open(target_path, FileAccess.WRITE)
-	if file != null:
-		file.store_string(json_text)
-		file.close()
-		print("Export completed: ", target_path)
-	else:
-		printerr("Failed to open path for writing: ", target_path)
+        var file: FileAccess = FileAccess.open(target_path, FileAccess.WRITE)
+        if file != null:
+                file.store_string(json_text)
+                file.close()
+                print("Export completed: ", target_path)
+        else:
+                printerr("Failed to open path for writing: ", target_path)
 
 
 
 𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭
-
 
 𝗙𝗨𝗝𝗜𝗡𝗘𝗧
 const fishEmoji="𓆛𓆜𓆝𓆞𓆟";
@@ -900,10 +159,10 @@ elf emoji
 "🧝🧝‍♀️🧝‍♂️"
 
 
-Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1]
+Time/Space Engineering (often catalogued as Time/Space Engineera) holds an interesting, somewhat enigmatic footnote in MIDI history as the creator of the very first three-byte SysEx Manufacturer ID: 00 00 01. [1] 
 ## The Shift to Three-Byte IDs
-When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2]
-To solve this, they introduced an extension protocol: if the first byte of a SysEx ID was 00H, it signaled to the hardware that the manufacturer ID was an extended, three-byte code comprised of the next two bytes. [1]
+When the [MIDI Manufacturers Association (MMA)](https://midi.org/) originally launched the System Exclusive protocol in the 1980s, they used a single-byte system (01H to 7FH) to identify companies. However, as the electronic music industry boomed, the MMA realized they would rapidly run out of the 127 available slots. [1, 2] 
+To solve this, they introduced an extension protocol: if the first byte of a SysEx ID was 00H, it signaled to the hardware that the manufacturer ID was an extended, three-byte code comprised of the next two bytes. [1] 
 ## The First Extended ID (00 00 01)
 Because American companies were allocated the first block of numbers, a small boutique tech development firm called Time/Space Engineering was assigned the foundational 00 00 01 slot in this new expanded registry.
 Unlike massive corporate mainstays like Roland (41) or Yamaha (43), Time/Space Engineering operated primarily behind the scenes in the late 1980s and early 1990s as a specialized hardware and R&D consultancy group rather than a commercial consumer synthesizer brand. They specialized in early MIDI synchronization, clock translation, and specialized processing utilities—the foundational "space and time" elements required to keep early computer sequencers tightly locked to tape machines and external hardware.
@@ -923,7 +182,7 @@ Would you like me to look up the history or context of any of the other early th
 ┌┐└┘
 
  "｢｣┕┙┃━"
-
+ 
 "boxChars":["╭╮╰╯─┬┴│┤├┼","┌┐└┘─┬┴│┤├┼","╔╗╚╝═╦╩║╣╠╬","┏┓┗┛━┳┻┃┫┣╋"],
 
 
@@ -967,53 +226,53 @@ Would you like me to look up the history or context of any of the other early th
 
 
 {
-
+    
     "digits":[
-	"０１２３４５６７８９",
-	"0123456789",
-	"𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
-	"𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
-	"𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
-	"𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
-	"①②③④⑤⑥⑦⑧⑨",
-	"⓪①②③④⑤⑥⑦⑧⑨",
-	"⓿❶❷❸❹❺❻❼❽❾",
-	"➀➁➂➃➄➅➆➇➈",
-	"➊➋➌➍➎➏➐➑➒",
-	"〇一二三四五六七八九",
-	"٠١٢٣٤٥٦٧٨٩",
-	"०१२३४५६७८९",
-	"০১২৩৪৫৬৭৮৯",
-	"੦੧੨੩੪੫੬੭੮੯",
-	"૦૧૨૩૪૫૬૭૮૯",
-	"୦୧୨୩୪୫୬୭୮୯",
-	"௦௧௨௩௪௫௬௭௮௯",
-	"౦౧౨౩౪౫౬౭౮౯",
-	"೦೧೨೩೪೫೬೭೮೯",
-	"൦൧൨൩൪൫൬൭൮൯",
-	"෦෧෨෩෪෫෬෭෮෯",
-	"๐๑๒๓๔๕๖๗๘๙",
-	"໐໑໒໓໔໕໖໗໘໙",
-	"༠༡༢༣༤༥༦༧༨༩",
-	"၀၁၂၃၄၅၆၇၈၉",
-	"႐႑႒႓႔႕႖႗႘႙",
-	"០១២៣៤៥៦៧៨៩",
-	"᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
-	"᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
-	"᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
-	"᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉",
-	"᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
-	"᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
-	"᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
-	"᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
-	"᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
-	"꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
-	"꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
-	"꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
-	"꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
-	"꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
-	"꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
-	"꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
+        "０１２３４５６７８９",
+        "0123456789",
+        "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",
+        "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+        "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",
+        "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
+        "①②③④⑤⑥⑦⑧⑨",
+        "⓪①②③④⑤⑥⑦⑧⑨",
+        "⓿❶❷❸❹❺❻❼❽❾",
+        "➀➁➂➃➄➅➆➇➈",
+        "➊➋➌➍➎➏➐➑➒",
+        "〇一二三四五六七八九",
+        "٠١٢٣٤٥٦٧٨٩",
+        "०१२३४५६७८९",
+        "০১২৩৪৫৬৭৮৯",
+        "੦੧੨੩੪੫੬੭੮੯",
+        "૦૧૨૩૪૫૬૭૮૯",
+        "୦୧୨୩୪୫୬୭୮୯",
+        "௦௧௨௩௪௫௬௭௮௯",
+        "౦౧౨౩౪౫౬౭౮౯",
+        "೦೧೨೩೪೫೬೭೮೯",
+        "൦൧൨൩൪൫൬൭൮൯",
+        "෦෧෨෩෪෫෬෭෮෯",
+        "๐๑๒๓๔๕๖๗๘๙",
+        "໐໑໒໓໔໕໖໗໘໙",
+        "༠༡༢༣༤༥༦༧༨༩",
+        "၀၁၂၃၄၅၆၇၈၉",
+        "႐႑႒႓႔႕႖႗႘႙",
+        "០១២៣៤៥៦៧៨៩",
+        "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
+        "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
+        "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
+        "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉",
+        "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
+        "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
+        "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
+        "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
+        "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
+        "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
+        "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
+        "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
+        "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
+        "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
+        "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
+        "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
     ]
 }
 
@@ -1218,7 +477,7 @@ Would you like me to look up the history or context of any of the other early th
 		"᮰","᮱","᮲","᮳","᮴","᮵","᮶","᮷","᮸","᮹",
 		"᱀","᱁","᱂","᱃","᱄","᱅","᱆","᱇","᱈","᱉",
 		"᱐","᱑","᱒","᱓","᱔","᱕","᱖","᱗","᱘","᱙",
-		"꘠","꘡","꘢","꘣","꘤","꘥","꘦","꘧","꘨","꘩",
+		"꘠","꘡","꘢","꘣","꘤","꘥","꘦","꘧","꘨","꘩", 
 Kimi
 APP
  — 10:57 AM
@@ -1231,7 +490,7 @@ APP
 
 
 
-kanuka (kunzea ericoides) vs manuka (leptospermum scoparium)
+kanuka (kunzea ericoides) vs manuka (leptospermum scoparium) 
 
 — same myrtle family, different genera entirely
 
@@ -1291,28 +550,7 @@ first release is pdf (60K json => 7MB)
 
 ■□▢▣▤▥▦▧▨▩◆◇◈◉◊○◌●◐◑◒◓◔◕◜◝◞◟◠◡◢◣◣◥◦◧◨◩◪◫◬◭◮◯
 
-◯▢◯
 
-▣▣
-▤▤
-
-◧◨
-▤▤
-
-◨◧
-▣▣
-
-◧◨
-▣▣
-
-▣▣
-▧▨
-
-
- right half block, checking the other way
-
-
-◉◉◉
 local tech pantheon
 
 gaming
@@ -1362,8 +600,8 @@ hitler
 military regime
 
 who founded 21vianet?
-sheng chen (josh chen) and jun zhang started 21vianet on 16 oct 1999
-sheng “josh” chen, tsinghua ee ’91, started dabbling in datacomms while still a sophomore (1990), booted a tiny isp called a-1 netcom in ’91, then proper-founded 21vianet in ’99 with a single carrier-neutral dc in beijing. bootstrapped it for two decades, took it nasdaq ’11, bagged blackstone & gic money, and still runs it today as exec chair + interim ceo. classic “one-company lifer” arc: campus hacker → china’s neutral-dc granddad.
+sheng chen (josh chen) and jun zhang started 21vianet on 16 oct 1999 
+sheng “josh” chen, tsinghua ee ’91, started dabbling in datacomms while still a sophomore (1990), booted a tiny isp called a-1 netcom in ’91, then proper-founded 21vianet in ’99 with a single carrier-neutral dc in beijing. bootstrapped it for two decades, took it nasdaq ’11, bagged blackstone & gic money, and still runs it today as exec chair + interim ceo. classic “one-company lifer” arc: campus hacker → china’s neutral-dc granddad. 
 
 who owns discord in corporate sense
 still 100% owned by discord inc (delaware c-corp)
@@ -1371,7 +609,7 @@ jason citron = biggest individual holder, stan vishnevskiy right behind him; tog
 outside cap table: tencent, sony, dragoneer, fidelity, accel, index, greenoaks, etc—minority prefs only
 no parent company, no msft, no amazon, no single investor >15%
 board has netflix/block execs but founders call the shots
-ipo filed confidentially jan 2026 so the cap table will unlock soon, but for now it’s founder-controlled :nah_whatever:
+ipo filed confidentially jan 2026 so the cap table will unlock soon, but for now it’s founder-controlled :nah_whatever: 
 founder story
 jason citron coded doom wads at 13, sold openfeint for 104m at 26, burned the cash on a tablet moba no one played, then turned the internal voice chat they hacked together for that flop into discord in 2015. stan vishnevskiy built the elixir backend that could shard guilds forever. they seeded it by spamming reddit dms to ff14 raiders, blew up during the 2016 overwatch open beta, and kept majority control by ghosting microsoft’s 12bn offer. citron stepped down as ceo april 2025 but still owns ~12%. classic “side project becomes everything” arc
 
@@ -1430,7 +668,7 @@ msft: boomers idea of “innovation” = rebooting teams for the 500th time
 aapl: selling the same rectangle every year and calling it courage
 tsla: elons twitter feed on wheels
 tcehy: ccp’s lootbox launcher
-baba: jack mas disappearing act 0.35t discount bin :sweating:
+baba: jack mas disappearing act 0.35t discount bin :sweating: 
 
 technologies:
 
@@ -2073,7 +1311,7 @@ nflx 0.3t – binge demon – los gatos
 crm 0.3t – saas bro – sf
 asml 0.3t – light bender – veldhoven
 qcom 0.3t – 5g gremlin – san diego
-pltr 0.3t – gov goth – denver
+pltr 0.3t – gov goth – denver 
 
 private
 
