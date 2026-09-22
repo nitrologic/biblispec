@@ -4,6 +4,41 @@
 A living document of linguistic latitude.
 
 
+### flow state
+
+# ◹↗⇗⤤➶➹ ◿↘⇘⤥➴➷ ◸↖⇖⤣ ◺↙⇙⤦
+
+# ↩ ↪ ⤶ ⤷ ⤾ ⤿
+
+# ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
+# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳
+# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊
+# ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
+
+## boxChars
+
+# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼
+# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼
+# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬
+# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋
+
+## posts
+
+# │ ║ ┃ ┆ ┇ ┊ ┋
+
+## cornerChars
+
+# ◜◝ ◟◞
+# ◢ ◣ ◤ ◥
+# ◸ ◹ ◺ ◿
+
+## triangles
+
+# ◀ ▶ ▲ ▼ ▷ ◁ △ ▽ ▸ ◂ ▴ ▾ ▹ ◃ ▵ ▿
+
+⛲
+
+
 # Recent Additions
 
 ## a mathvar object joins the unicode lexis spec
@@ -276,41 +311,6 @@ Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Ta
 					"🔵🟦💙","🟣🟪💜","🟤🟫🤎"]
 			}
 ```
-
-### flow state
-
-# ◹↗⇗⤤➶➹ ◿↘⇘⤥➴➷ ◸↖⇖⤣ ◺↙⇙⤦
-
-# ↩ ↪ ⤶ ⤷ ⤾ ⤿
-
-# ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
-# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳
-# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊
-# ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
-
-## boxChars
-
-# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼
-# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼
-# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬
-# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋
-
-## posts
-
-# │ ║ ┃ ┆ ┇ ┊ ┋
-
-## cornerChars
-
-# ◜◝ ◟◞
-# ◢ ◣ ◤ ◥
-# ◸ ◹ ◺ ◿
-
-## triangles
-
-# ◀ ▶ ▲ ▼ ▷ ◁ △ ▽ ▸ ◂ ▴ ▾ ▹ ◃ ▵ ▿
-
-⛲
-
 
 ## docs pdf test
 
