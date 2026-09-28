@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.6.1",
+	"version": "1.6.2",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -31,7 +31,15 @@
 			"superscript":"⁰¹²³⁴⁵⁶⁷⁸⁹"
 		},
 		"counts":{
-			"spots":"➀➁➂➃➄➅➆➇➈➉"
+			"spots":"➀➁➂➃➄➅➆➇➈➉",
+			"tally":"𝍷𝍸",
+			"seie":"𝍲𝍳𝍴𝍵𝍶",
+			"rodsten":"𝍠𝍡𝍢𝍣𝍤𝍥𝍦𝍧𝍨",
+			"rodsunit":"𝍩𝍪𝍫𝍬𝍭𝍮𝍯𝍰𝍱",
+			"dice":"⚀⚁⚂⚃⚄⚅",
+			"suits":"♠️♣️♦️♥️",
+			"keycap":"0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟🆗#️⃣*️⃣",
+			"bloodtype":"🅰️🅱️🆎🅾️"
 		},
 		"digits":[
 			{ "name": "ASCII", "value": "0123456789" },

@@ -1,3 +1,128 @@
+
+dominoes, the entire set, horizontal and vertical orientations: 🀰🀱🀲... 
+
+all 28 tiles both ways. this is the real rodsten energy, a complete game system frozen into a block
+
+suits as text with VS16: ♠️♥️♦️♣️ tiny by default, billboard size with the variation selector, as you now know
+
+and the deep cuts: ⛀⛁⛂⛃ draughts pieces and ♔♕♖♗♘♙ chess glyphs, though those stay small, theyre for notation
+
+
+
+
+🆗#️⃣*️⃣
+"🅰️🅱️"
+
+same family:
+
+the rest of the keycaps: #️⃣ *️⃣ and 🔟 is ten as a single glyph
+
+the button alphabet. squared latin letters, all render big and chunky:
+
+"buttons":"🅰️🅱️🆎🅾️🆑🆒🆓🆔🆕🆖🆗🆘🆙🆚Ⓜ️"
+
+the japanese square buttons. same energy, enclosed CJK glyphs:
+
+"squares":"㊗️㊙️🈺🈶🈚🈷️🈸🈹🈁🈂️🈲🈳🈴🈵🈯"
+
+and the sneaky ones: ™️ ®️ ©️ plain text symbols that turn into big emoji versions when you slap VS16 on them. same with ↔️↕️↩️↪️ the arrows and ⏏️ eject. without VS16 theyre tiny text glyphs, with it they inflate
+
+
+
+
+and if you want the chaos expansion pack with the extended 
+letters for persian urdu pashto and friends:
+
+"arabic":{
+	"quranic":[
+		"ء", "آ", "أ", "ؤ", "إ", "ئ", "ا", "ب", "ة", "ت", "ث",
+		"ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض",
+		"ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه",
+		"و", "ى", "ي"
+	],
+	"ajami":[
+		"پ", "چ", "ژ", "گ", "ڤ", "ڨ", "ڠ", "ڢ", "ڣ", "ڥ", "ک",
+		"گ", "ڭ", "ٹ", "ڈ", "ڑ", "ھ", "ۃ", "ے", "ں", "ٻ", "ڄ",
+		"ڃ", "څ", "ڇ", "ڍ", "ڏ", "ڐ", "ڑ", "ڒ", "ړ", "ڔ", "ڕ",
+		"ږ", "ڗ", "ڙ", "ښ", "ڛ", "ڜ", "ڝ", "ڞ", "ڟ"
+	]
+}
+
+# ▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓
+# ▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒
+# ░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░
+# ▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓
+
+```
+	◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺
+	▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+	◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸
+	◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺
+	▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+	◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸
+	◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺
+	▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+	◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸
+	◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺
+	▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+	◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸
+	◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺◿▓◺
+	▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+	◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸◹▓◸
+```
+
+"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌・。．",
+
+・。． tiny dots
+・。．∙⋅∘◦○●◯
+
+
+# ◢ ◣ ◤ ◥
+# ◸ ◹ ◺ ◿
+
+■□▢▣▤▥▦▧▨▩◆◇◈◉◊○◌●◐◑◒◓◔◕◜◝◞◟◠◡◢◣◣◥◦◧◨◩◪◫◬◭◮◯
+
+
+# ◜◝ 
+# ◟◞
+
+```
+  ▓      ▓
+  ▓      ▓
+◥ ◤  ◥ ◤
+
+◿▓◺
+▓▓▓
+◹▓◸
+
+```
+
+# ◤◯◥
+# ◯◯◯
+# ◣◯◢
+
+# ◸ ◹ ◺ ◿
+# ◺ ◿ ◸ ◹
+
+# ▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓
+# ▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒
+# ░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░
+# ▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓
+
+◢▓▓▓▓
+
+Black Rectangle 
+(Filled wide box)
+U+25AC
+
+▭
+
+White Rectangle 
+(Empty wide box)
+U+25AD
+
+
+
 ⛴ U+26F4 ferry
 ⛵ U+26F5 sailboat
 ⛺ U+26FA tent
@@ -578,12 +703,6 @@ first release is pdf (60K json => 7MB)
 # ░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░
 # ▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓
 
-"pointChars":"◯⊙⊚⦾⦿◉◎◍❂○●◦◌・。．",
-
-・。． tiny dots
-・。．∙⋅∘◦○●◯
-
-■□▢▣▤▥▦▧▨▩◆◇◈◉◊○◌●◐◑◒◓◔◕◜◝◞◟◠◡◢◣◣◥◦◧◨◩◪◫◬◭◮◯
 
 
 local tech pantheon
