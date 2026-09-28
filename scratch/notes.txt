@@ -1,3 +1,40 @@
+⛴ U+26F4 ferry
+⛵ U+26F5 sailboat
+⛺ U+26FA tent
+⛼ U+26FC graveyard headstone
+⛽ U+26FD fuel pump
+
+"vessel":"⛵⛴🚤🚢🚣🛥🛳🛶"
+
+⛵ U+26F5 and 
+⛴ U+26F4 are your unicode 5.2 flat glyph veterans, lorrys cousins from the same batch. on some platforms they render as plain glyphs unless you add the VS16 emoji selector, so ⛴ vs ⛴️ is a real difference. if they look thin and sad next to the others, add the ️
+🚤 🚢 🚣 are U+1F6xx block, the main emoji vehicle district
+🛥 🛳 🛶 are also U+1F6xx but transport and map symbols, slightly newer
+
+
+```
+{
+  "chip": "Apple A20 Pro",
+  "node": "TSMC 2nm (N2)",
+  "die": {
+    "mm2": 98.6,
+    "cores": "2P+4E CPU, 7G GPU, 32N NPU"
+  },
+  "package": {
+    "mm2": 600.0,
+    "type": "WMCM",
+    "layout": "Side-by-side memory"
+  },
+  "chamber": {
+    "mm2": 1800.0,
+    "matrix": "Steel, graphite, copper",
+    "fluid": "Deionised water + antifreeze",
+    "boil_c": 30.0
+  }
+}
+```
+
+
 Network Working Group                                     T. Berners-Lee
 Request for Comments: 3986                                       W3C/MIT
 STD: 66                                                      R. Fielding
@@ -194,8 +231,6 @@ Would you like me to look up the history or context of any of the other early th
 	"range": [10688, 10697],
 	"usage": "Left pointer, Right pointer, Knob center, Centered gauge, Upper limit, Lower limit, Protection block, Coaxial port, Enclosure layout, Dual layers"
 },
-
-
 
 "⧀⧁":{
 	"name": "Nested Less-Than and Greater-Than - Analog meter pointers",

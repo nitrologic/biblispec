@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -105,7 +105,7 @@
 			"atom":"⚛"
 		},
 		"shortcode":{
-			"bee":"🐝","honey":"🍯",
+			"tent":"⛺","bee":"🐝","honey":"🍯",
 			"mushroom": "🍄", "anchor": "⚓", "wintertree": "🪾",
 			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
 			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
@@ -165,7 +165,11 @@
 				"squareChars":"🔳🔲✅❎",
 				"colorChars":["⚫⬛🖤","⚪⬜🤍","🟡🟨💛","🔴🟥❤️","🟠🟧🧡","🟢🟩💚","🔵🟦💙","🟣🟪💜","🟤🟫🤎"],
 				"birds":"🕊️🦅🦜🐦🐦‍⬛🐦‍🔥🦤🦩🪿🦃🐓🦉🐧🦚🦢🦆",
-				"poultry":"🐓🐔🥚🐣🐤🐥"
+				"poultry":"🐓🐔🥚🐣🐤🐥",
+				"roaduser":"⛟🚗🚕🚙🚌🚎🏎️🚓🚑🚒🚐🛻🚚🚛🚜🛵🏍️🛺🚲🛴🚶",
+				"afloat":"⛴🚣🛶⛵🚤🚢🛥🛳",
+				"inspace":"🚀🛸🛰️",
+				"marine":"🐢🦭🐠🐟🐡🦈🐬🐳🐋🐙🦑🦀🦞🦐🐚🪼🪸"
 			}
 		},
 		"faces":{
