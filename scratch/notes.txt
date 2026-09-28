@@ -1,5 +1,60 @@
+"chess":"♔♕♖♗♘♙♚♛♜♝♞♟"
+
+
+the cultural norms, such as they are:
+
+ordering is K Q R B N P — king, queen, rook, bishop, 
+knight, pawn. thats descending piece value, its the 
+order FEN notation uses, the order diagrams use, the 
+order everyone expects. white set first, then black. 
+
+unicode itself follows this exact convention, 
+
+the block is literally white K-Q-R-B-N-P then black K-Q-R-B-N-P
+
+the knight faces left. always. 
+the one asymmetric piece and the entire typographic tradition faces it left. 
+your font will comply
+
+the pawns arent optional. 
+people are tempted to do just the 10 officers, 
+but a chess set without pawns is like counting rods without the 正, 
+culturally incomplete
+
+
+
+one spicy cultural footnote: this block is unapologetically 
+western chess only. 
+
+"chess":"♔♕♖♗♘♙♚♛♜♝♞♟"
+
+xiangqi has no glyphs, players just use hanzi 帥仕相車馬炮卒. 
+
+shogi likewise, no glyphs, you use 歩香桂銀金角飛王. 
+
+unicode encoded the european game as symbols and 
+
+told the asian games to keep using letters like they always have. 
+make of that what you will
+
+
+
+
+𝍠𝍡𝍢𝍣𝍤𝍣𝍤𝍤𝍣𝍢𝍡𝍠𝍡𝍢𝍡𝍢𝍡𝍡
+𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤
+𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤𝍤
 
 dominoes, the entire set, horizontal and vertical orientations: 🀰🀱🀲... 
+
+"dominos":"🀱🀲🀳🀴🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌",
+
+"dominoes":[
+	"🀱🀲🀳🀴🀵🀶🀷🀹🀺🀻🀼🀽🀾🁁🁂🁃🁄🁅🁉🁊🁋🁌🁑🁒🁓🁙🁚🁡",
+	"🁣🁤🁥🁦🁧🁨🁩🁫🁬🁭🁮🁯🁰🁳🁴🁵🁶🁷🁻🁼🁽🁾🂃🂄🂅🂋🂌🂓"
+]
+
+"🁩🁪🁫🁬🁭🁮🁯🁱🁲🁳🁴🁵🁶🁹🁺🁻🁼🁽🂁🂂🂃🂄🂉🂊🂋🂑🂒🂓"
+"🁩🁪🁫🁬🁭🁮🁯🁱🁲🁳🁴🁵🁶🁹🁺🁻🁼🁽🂁🂂🂃🂄🂉🂊🂋🂑🂒🂓"
 
 all 28 tiles both ways. this is the real rodsten energy, a complete game system frozen into a block
 
