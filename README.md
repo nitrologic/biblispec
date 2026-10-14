@@ -73,7 +73,9 @@ A living document of linguistic latitude.
 	},
 ```
 
-[Godot Engine internals](books/godot.json)
+[Discord v10 API](books/api/discordopenapi.json)
+
+[Godot Engine internals](books/api/godot.json)
 
 [Raw 026xx codepoint names](books/codepoints.json)
 

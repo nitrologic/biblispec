@@ -1,7 +1,7 @@
 {
 	"name": "biblispec",
 	"symbol": "✴",
-	"version": "1.6.2",
+	"version": "1.6.3",
 	"description": "Bibliographic index of specifications",
 	"status": "A living document of linguistic latitude",
 	"copyright": "(C) 2026 Simon Armstrong",
@@ -117,16 +117,20 @@
 			"atom":"⚛"
 		},
 		"shortcode":{
-			"tent":"⛺","bee":"🐝","honey":"🍯",
-			"mushroom": "🍄", "anchor": "⚓", "wintertree": "🪾",
-			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","desktop": "🖥️", "satellite": "🛰️",
+			"shovel":"🪏","splatter":"🫟","fingerprint":"🫆",
+			"alembic":"⚗","microscope":"🔬","telescope":"🔭","petri_dish":"🧫","dna":"🧬",
+			"test_tube":"🧪","magnet":"🧲","abacus":"🧮","scroll":"📜","amphora":"🏺","feather":"🪶",
+			"compass":"🧭","electric_plug":"🔌","battery":"🔋","lightbulb":"💡","flashlight":"🔦","wrench":"🔧",
+			"root_vegetable":"🫜","tent":"⛺","bee":"🐝","honey":"🍯","mushroom": "🍄", "anchor": "⚓", "wintertree": "🪾",
+			"telephone": "☎️","television": "📺","radio": "📻","laptop": "💻","computer": "🖥️", "satellite": "🛰️",
 			"pager": "📟","fax": "📠","printer": "🖨️","keyboard": "⌨️","mouse": "🖱️", "station": "📡",
 			"floppy_disk": "💾","computer_disk": "💽","optical_disc": "💿","video_camera": "📹","video_cassette": "📼",
 			"goose":"🪿","jellyfish":"🪼","lime":"🫒","family":"👨‍👩‍👧‍👦", "cat":"🐱","dog":"🐶","moose":"🫎","donkey":"🫏",
 			"pizza":"🍕","beer":"🍺","coffee":"☕","cake":"🎂", "beans":"🫘","jar":"🫙",
 			"maracas":"🪇","flute":"🪈","keys":"🎹","guitar":"🎸","drum":"🥁","saxophone":"🎷","trumpet":"🎺","violin":"🎻",
+			"harp":"🪉","accordion":"🪗","banjo":"🪕","long_drum":"🪘","bell":"🔔","postal_horn":"📯",
 			"mic":"🎙️","microphone":"🎤","headphones":"🎧",
-			"score":"🎼","music":"🎵","phone":"📱","computer":"💻","book":"📖","money":"💵",
+			"score":"🎼","music":"🎵","phone":"📱","book":"📖","money":"💵",
 			"plunger":"🪠","robot":"🤖","unicorn":"🦄",
 			"thumbsup":"👍","fire":"🔥","star":"⭐","eyes":"👀",
 			"trophy":"🏆","skull":"💀","clap":"👏","100":"💯",
@@ -141,9 +145,9 @@
 			"fingers_crossed":"🫰","rightwards_pushing_hand":"🫷","leftwards_pushing_hand":"🫸",
 			"palm_down_hand":"🫳","palm_up_hand":"🫴","pointing_finger":"🫵",
 			"nest_with_eggs":"🪺","empty_nest":"🪹","hook":"🪝","low_battery":"🪫","crutch":"🩼",
-			"khanda":"🪯","wireless":"🛜","phoenix":"🪶","broken_chain":"⛓️‍💥","ginger_root":"🫚",
+			"khanda":"🪯","wireless":"🛜","phoenix":"🐦‍🔥","broken_chain":"⛓️‍💥","ginger_root":"🫚",
 			"hair_pick":"🪮","folding_hand_fan":"🪭","pea_pod":"🫛","hyacinth":"🪻",
-			"shovel":"🫷","troll":"🧌","wing":"🪽","pouring_liquid":"🫗","fish":"🐟","ballot":"☑",
+			"troll":"🧌","wing":"🪽","pouring_liquid":"🫗","fish":"🐟","ballot":"☑",
 			"check":"✅","cross":"❎"
 		},
 		"hearts":{
@@ -156,7 +160,8 @@
 			"grinning":"😀","smiley":"😃","smile":"😄","grin":"😁","laughing":"😆",
 			"sweat_smile":"😅","rofl":"🤣","joy":"😂","melting_face":"🫠",
 			"face_with_peeking_eye":"🫢","saluting_face":"🫡","dotted_line_face":"🫥",
-			"face_with_diagonal_mouth":"🫣","shaking_face":"🫨"
+			"face_with_diagonal_mouth":"🫣","shaking_face":"🫨",
+			"face_with_bags_under_eyes":"🫩"
 		},
 		"fenced":{
 			"name":"code points of visual interest",
