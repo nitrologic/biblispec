@@ -1,9 +1,9 @@
 title: "biblispec: Bibliographic index of specifications"
 authors: [{ family-names: "Armstrong", given-names: "Simon", orcid: "https://orcid.org/0009-0002-4363-3900" }]
-version: "1.2.2"
-date-released: "2025-08-21"
-abstract: "The bibli spec is a living document of linguistic latitude, providing a bibliographic index of specifications."
+version: "1.6.5"
+date-released: "2026-10-16"
+abstract: "The biblispec is a living document of linguistic latitude, providing a bibliographic index of specifications."
 repository-code: "https://github.com/nitrologic/biblispec"
 license: "MIT"
-keywords: ["specifications", "unicode", "bibliographic", "index", "metadata"]
+keywords: ["specifications", "unicode", "bibliographic", "index", "metadata", "emoji", "divination"]
 cff-version: 1.2.0
