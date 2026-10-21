@@ -1,4 +1,71 @@
 {
+  "id": "nabla",
+  "symbol": "∇",
+  "aliases": ["del", "nabla"],
+  "domains": ["vector calculus", "EM", "fluid"],
+  "etymology": "harp-shaped operator joke with tenure",
+  "role": "gradient/div/curl trident",
+  "haunts": ["∇·E=ρ/ε0", "Navier-Stokes"],
+  "confusable_with": ["Δ", "∂"],
+  "danger": "coordinate-system incidents",
+  "sass": "points downhill professionally"
+}
+
+"glyphlore":
+{
+  "x": "Cartesian position coordinate; classical location label inherited from Descartes-style geometry.",
+  "q": "Generalized configuration coordinate in Lagrangian/Hamiltonian mechanics; the canonical knob that momentum answers.",
+  "p": "Canonical momentum conjugate to q; classically motion quantity, quantum mechanically phase-gradient generator.",
+  "[q,p]=iħ": "Canonical commutation relation; Hamiltonian bracket upgraded into quantum incompatibility.",
+  "ħ": "Reduced Planck constant h/2π; quantum of phase and the exchange rate between conjugate variables.",
+  "h": "Planck constant; quantization scale for action and energy-frequency conversion.",
+  "ψ": "Schrödinger wavefunction/state amplitude; chosen notation that became quantum ontology's main suspect.",
+  "H": "Hamiltonian; energy operator and generator of time evolution.",
+  "c": "Speed of light from celeritas; invariant conversion constant between space and time.",
+  "G": "Newtonian gravitational constant; strength knob for spacetime's attraction bookkeeping.",
+  "k_B": "Boltzmann constant; translates temperature into statistical disorder units.",
+  "Z": "Partition function from Zustandssumme, sum over states; normalizer, oracle, and statistical generator.",
+  "S": "Overloaded symbol: action in mechanics, entropy in thermodynamics, scattering matrix in quantum theory.",
+  "L": "Lagrangian density/function; kinetic minus potential pattern whose integral gives action.",
+  "U": "Unitary evolution operator; preserves norm so probability does not leak.",
+  "ρ": "Density matrix; probabilistic mixture of quantum states after purity is lost or ignored.",
+  "σ_x": "Pauli x matrix; bit-flip/left-right spin handshake.",
+  "σ_y": "Pauli y matrix; imaginary quarter-turn between x and z spin logic.",
+  "σ_z": "Pauli z matrix; computational basis ruler for spin up/down.",
+  "α": "Spin-up amplitude or fine-structure constant; small letter carrying both qubit probability and QED coupling.",
+  "β": "Spin-down amplitude, inverse temperature, or velocity over c; context decides.",
+  "φ": "Field, phase, potential, or scalar mode; overworked Greek intern of theoretical physics.",
+  "A_μ": "Electromagnetic four-potential; gauge-relative object whose curvature is physical field strength.",
+  "Λ": "Lorentz transformation in relativity or cosmological constant in gravity; scale-dependent ambiguity.",
+  "η": "Metric signature, efficiency, viscosity, or noise term; efficient little context gremlin.",
+  "Δ": "Difference, uncertainty width, or finite change; triangle marking variation.",
+  "∂": "Partial derivative; change with one variable while the others are held hostage.",
+  "∇": "Nabla operator; gradient, divergence, and curl in one trident.",
+  "i": "Imaginary unit; ninety-degree rotation smuggled into algebra.",
+  "|0⟩": "Qubit basis zero ket; ground/computational reference state.",
+  "|1⟩": "Qubit basis one ket; excited/computational flipped reference state.",
+  "⟨ψ|": "Bra; dual vector used to project states and extract amplitudes.",
+  "|ψ⟩": "Ket; state vector in Hilbert space.",
+  "⊗": "Tensor product; combines systems by multiplying Hilbert-space possibilities.",
+  "⊕": "Direct sum; stacks sectors without coherently mixing them.",
+  "†": "Hermitian adjoint/dagger; conjugate transpose pairing operators with measurements.",
+  "*": "Complex conjugate, convolution, dual, wildcard, or footnote; chaos asterisk requiring jurisdiction."
+}
+
+
+
+{
+  "syzygy_meta": {
+    "mediators": ["measurement", "interface", "compiler", "market", "protocol", "gauge", "regularization", "prior", "loss", "kernel"],
+    "invariants": ["action", "energy", "charge", "entropy production", "bayes evidence", "sample complexity", "causal structure", "homology", "symmetry"],
+    "transforms": ["fourier", "laplace", "legendre", "renormalization", "functor", "embedding", "quantization", "abstraction", "projection"],
+    "symmetry_breakers": ["boundary", "initial condition", "noise", "selection", "bias", "decoherence", "deadline", "scarcity", "attack", "distribution shift"],
+    "failure_modes": ["category error", "overfit", "leakage", "goodhart", "aliasing", "mode collapse", "deadlock", "cache poisoning", "confounding", "hallucination"],
+    "conservation_laws_of_attention": ["bandwidth", "latency", "memory", "energy", "trust", "interpretability budget", "review throughput"]
+  }
+}
+
+{
 	"syzygies": [
 		["symmetry", "conservation"],
 		["local", "global"],		

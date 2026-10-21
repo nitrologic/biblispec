@@ -115,7 +115,7 @@ A work in progress web view of the primary json payload.
  https://nitrologic.github.io/biblispec
 
 
-# What is bibli spec?
+# What is biblispec?
 
 A bibliographic index of specifications including Unicode codepoints of interest.
 
@@ -317,7 +317,7 @@ Spirit of Wine, Spirit of Salt, Spirit of Vitriol, Spirit of Niter, Spirit of Ta
 ## docs pdf test
 
 Frustrated with broken links and modern models continuing habit of making shit up project
-bibli creates a docs folder and adds the first wayback pdf.
+biblispec creates a docs folder and adds the first wayback pdf.
 
 The year is 1945 and John has been up all night...
 
@@ -363,7 +363,7 @@ A skirmish has errupted in machinespec.json that illustrates the two distinct st
 
 # Recent additions
 
-Please welcome these fresh additions to the bibli spec.
+Please welcome these fresh additions to the biblispec.
 
 ## ASCII ANSI lookups
 
@@ -508,7 +508,7 @@ Attributed to the mythical figure Ogma, the Celtic god of eloquence and learning
 
 # fountain dump
 
-The bibli project was begun to provide a source of truth for [Slop Fountain](https://github.com/nitrologic).
+The biblispec project was begun to provide a source of truth for [Slop Fountain](https://github.com/nitrologic).
 
 	[BIBLI]
 	[BIBLI] pheme pre61 suff28
