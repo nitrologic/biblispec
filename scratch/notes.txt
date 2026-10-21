@@ -1,3 +1,57 @@
+{
+	"syzygies": [
+		["symmetry", "conservation"],
+		["local", "global"],		
+		["time", "frequency"],
+		["time", "energy"],
+		["geometry", "energy"], 
+		["position", "velocity"],
+		["position", "momentum"],
+		["temperature", "entropy"],
+		["pressure", "volume"],
+		["voltage", "current"],
+		["charge", "flux"],
+		["electric", "magnetic"],
+		["primal", "dual"],
+		["signal", "cepstrum"],
+		["genotype", "phenotype"],
+		["syntax", "semantics"],
+		["model", "evidence"],
+		["price", "quantity"],
+		["code", "data"],
+		["map", "territory"],
+		["mass", "curvature"],
+		["cause", "correlation"],
+		["entropy", "information"],
+		["energy", "stability"],
+		["noise", "signal"],
+		["supply", "latency"],
+		["exploration", "exploitation"],
+		["accuracy", "interpretability"],
+		["anonymity", "accountability"],
+		["wave", "particle"],
+		["micro", "macro"],
+		["discrete", "continuous"],
+		["compile", "run"],
+		["compression", "redundancy"],
+		["memorization", "generalization"],
+		["ontology", "epistemology"],
+		["structure", "agency"],
+		["space", "spectrum"], 
+		["angle", "spin"], 
+		["action", "phase"], 
+		["image", "spectrum"]
+	]
+}
+
+
+❤️🖤🤍🩷🩵🩶💖💔❤️‍🔥❤️‍🩹🤎💜💙💚💛🧡
+💗💓💞💕💘💝
+💟❣️
+💌🫶🫀💑💏🥰
+
+ Mending heart
+
 "chess":"♔♕♖♗♘♙♚♛♜♝♞♟"
 
 
