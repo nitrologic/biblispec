@@ -57,7 +57,7 @@ function onSize() {
 
 	const cols=(w/width)|0;
 	const rows=(h/height)|0;
-	if((appWidth!=cols)||(appHeight|=rows)){
+	if((appWidth!=cols)||(appHeight!=rows)){
 		appWidth=cols;
 		appHeight=rows;
 //		console.log("[bibli] onSize",{appWidth,appHeight});

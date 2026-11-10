@@ -772,6 +772,15 @@
 					"range": [65281, 65374],
 					"usage": "Fullwidth versions of ASCII punctuation and symbols for East Asian scripts"
 				},
+				"｟￦": {
+					"name": "Fullwidth Non-ASCII Punctuation and Symbols",
+					"block": "Halfwidth and Fullwidth Forms",
+					"codes": "｟｠￠￡￢￣￤￥￦",
+					"category": "Multiple",
+					"codePoints": ["U+FF5F", "U+FFE6"],
+					"range": [65375, 65510],
+					"usage": "Fullwidth typography modifications for non-ASCII math, currency, and structural symbols."
+				},
 				"㊀㊉": {
 					"name": "CJK Enclosed Digits",
 					"block": "CJK Symbols and Punctuation",

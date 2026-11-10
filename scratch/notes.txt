@@ -1,3 +1,43 @@
+[
+  "\uFF00！＂＃＄％＆＇（）＊＋，－．／",
+  "０１２３４５６７８９：；＜＝＞？",
+  "＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ",
+  "ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿",
+  "｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏ",
+  "ｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～｟",
+  "｠｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ",
+  "ｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ",
+  "ﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ",
+  "ﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ",
+  "ﾠﾡﾢﾣﾤﾥﾦﾧﾨﾩﾪﾫﾬﾭﾮﾯ",
+  "ﾰﾱﾲﾳﾴﾵﾶﾷﾸﾹﾺﾻﾼﾽﾾ\uFFBF",
+  "\uFFC0\uFFC1ￂￃￄￅￆￇ\uFFC8\uFFC9ￊￋￌￍￎￏ",
+  "\uFFD0\uFFD1ￒￓￔￕￖￗ\uFFD8\uFFD9ￚￛￜ\uFFDD\uFFDE\uFFDF",
+  "￠￡￢￣￤￥￦\uFFE7￨￩￪￫￬￭￮\uFFEF",
+  "\uFFF0\uFFF1\uFFF2\uFFF3\uFFF4\uFFF5\uFFF6\uFFF7\uFFF9\uFFFA\uFFFB￼\uFFFE\uFFFF"
+]
+
+• 𜰵 (U+1CC35): Upper Left Quarter Circle (replaces ◸)
+• 𜰶 (U+1CC36): Upper Right Quarter Circle (replaces ◹)
+• 𜰹 (U+1CC39): Lower Left Quarter Circle (replaces ◺)
+• 𜰺 (U+1CC3A): Lower Right Quarter Circle (replaces ◿)
+
+# ╭╮╰╯
+# ◜◝ ◟◞
+# ◢ ◣ ◤ ◥
+# ◸ ◹ ◺ ◿
+
+"dir":["◹↗⇗⤤➶➹","◸↖⇖⤣","◿↘⇘⤥➴➷","◺↙⇙⤦"],
+"outer":"◜◝◟◞",
+
+
+◜    ◝
+ ◜  ◝
+  ╭ ╮
+  ╰ ╯
+ ◟  ◞
+◟    ◞
+
 {
   "id": "nabla",
   "symbol": "∇",
