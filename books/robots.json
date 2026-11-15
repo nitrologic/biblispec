@@ -584,7 +584,7 @@
 			"ambulate": {
 				"cruise": { "mps": 1.6, "stepRate": 2.0 },
 				"hurry": { "mps": 2.9, "stepRate": 3.5 }
-			},
+			}
 		},
 		"g1": {
 			"ambulate": {

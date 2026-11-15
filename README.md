@@ -3,41 +3,51 @@
 
 A living document of linguistic latitude.
 
+# What is biblispec?
 
-### flow state
+A bibliographic index of specifications including Unicode codepoints of interest.
 
-# ◹↗⇗⤤➶➹ ◿↘⇘⤥➴➷ ◸↖⇖⤣ ◺↙⇙⤦
+* numbers and digits (new)
+* akkadian relay
+* led tech
+* network topology
+* unicode blocks
+* music scales
+* alphabets
+* machine specs
+* audio circuits
 
-# ↩ ↪ ⤶ ⤷ ⤾ ⤿
+> a grimoire of human communication - 🐋 deepseek-chat
 
-# ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
-# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳
-# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊
-# ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
+# About the biblispec.json file
 
-## boxChars
+The data payload for this project is [biblispec.json](biblispec.json)
 
-# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼
-# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼
-# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬
-# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋
+# Addendum appendum books
 
-## posts
+- ambulate [books/ambulate.json](books/ambulate.json)
+	- animal kingdom locomotion stats
+- robots [books/robots.json](books/robots.json)
+	- experimental low latency robot lists
+- phrases [books/phrases.json](books/phrases.json)
+	- "你好": "nǐ hǎo"
+- songs [books/songs.json](books/songs.json)
+	- songs of freedom - 3
+- stories [books/stories.json](books/stories.json)
+	- tales of narcissism - 4
+- machine spec 1.0.3 [books/machinespec.json](books/machinespec.json)
+	- software-architecture - 1 - transformers
+	- audio-ic - 22 integrated circuit solutions
+	- ai-voices - 17 providers 308 names
+- audio circuits 1.0.7 [books/audiocircuit.json](books/audiocircuit.json)
+	- 22 audio circuits from 1906 to 1981
+- tech pantheon 1.0.0 [books/techpantheon.json](books/techpantheon.json)
+	- 19 public, 11 private on planet mega chads 
 
-# │ ║ ┃ ┆ ┇ ┊ ┋
 
-## cornerChars
+Files are [JSON](https://www.json.org/json-en.html) format.
 
-# ◜◝ ◟◞
-# ◢ ◣ ◤ ◥
-# ◸ ◹ ◺ ◿
-
-## triangles
-
-# ◀ ▶ ▲ ▼ ▷ ◁ △ ▽ ▸ ◂ ▴ ▾ ▹ ◃ ▵ ▿
-
-⛲
-
+JSON where commentary is unwelcome - no comments allowed = careful attention to structure required!
 
 # Recent Additions
 
@@ -100,7 +110,41 @@ The [initial 500 rfc names](docs/rfc.txt).
 
 Also begun a [codepoints book](books/codepoints.json) to feed new symbols arrays in the main payload.
 
-New notes section
+# notes
+
+### flow state
+
+# ◹↗⇗⤤➶➹ ◿↘⇘⤥➴➷ ◸↖⇖⤣ ◺↙⇙⤦
+
+# ↩ ↪ ⤶ ⤷ ⤾ ⤿
+
+# ▸ → ↠ ↦ ↝ ⥽ ⇒ ⤇ ⟿ ➸ ➳ ➵ ➧ ➨
+# ◂ ← ↞ ↤ ↜ ⥼ ⇐ ⤆ ⬳
+# ▴ ↑ ↟ ↥ ⥾ ⇑ ⤊
+# ▾ ↓ ↡ ↧ ⥿ ⇓ ⤋
+
+## boxChars
+
+# ╭ ╮ ╰ ╯ ─ ┬ ┴ │ ┤ ├ ┼
+# ┌ ┐ └ ┘ ─ ┬ ┴ │ ┤ ├ ┼
+# ╔ ╗ ╚ ╝ ═ ╦ ╩ ║ ╣ ╠ ╬
+# ┏ ┓ ┗ ┛ ━ ┳ ┻ ┃ ┫ ┣ ╋
+
+## posts
+
+# │ ║ ┃ ┆ ┇ ┊ ┋
+
+## cornerChars
+
+# ◜◝ ◟◞
+# ◢ ◣ ◤ ◥
+# ◸ ◹ ◺ ◿
+
+## triangles
+
+# ◀ ▶ ▲ ▼ ▷ ◁ △ ▽ ▸ ◂ ▴ ▾ ▹ ◃ ▵ ▿
+
+⛲
 
 ![notes mazes](scratch/images/mazetypes.png)
 
@@ -113,54 +157,6 @@ Math Symbols
 A work in progress web view of the primary json payload.
 
  https://nitrologic.github.io/biblispec
-
-
-# What is biblispec?
-
-A bibliographic index of specifications including Unicode codepoints of interest.
-
-* numbers and digits (new)
-* akkadian relay
-* led tech
-* network topology
-* unicode blocks
-* music scales
-* alphabets
-* machine specs
-* audio circuits
-
-> a grimoire of human communication - 🐋 deepseek-chat
-
-# About the biblispec.json file
-
-The data payload for this project is [biblispec.json](biblispec.json)
-
-# Addendum appendum books
-
-- ambulate [books/ambulate.json](books/ambulate.json)
-	- animal kingdom locomotion stats
-- robots [books/robots.json](books/robots.json)
-	- experimental low latency robot lists
-- phrases [books/phrases.json](books/phrases.json)
-	- "你好": "nǐ hǎo"
-- songs [books/songs.json](books/songs.json)
-	- songs of freedom - 3
-- stories [books/stories.json](books/stories.json)
-	- tales of narcissism - 4
-- machine spec 1.0.3 [books/machinespec.json](books/machinespec.json)
-	- software-architecture - 1 - transformers
-	- audio-ic - 22 integrated circuit solutions
-	- ai-voices - 17 providers 308 names
-- audio circuits 1.0.7 [books/audiocircuit.json](books/audiocircuit.json)
-	- 22 audio circuits from 1906 to 1981
-- tech pantheon 1.0.0 [books/techpantheon.json](books/techpantheon.json)
-	- 19 public, 11 private on planet mega chads 
-
-
-Files are [JSON](https://www.json.org/json-en.html) format.
-
-JSON where commentary is unwelcome - no comments allowed = careful attention to structure required!
-
 
 # Chord Notation
 
