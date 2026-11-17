@@ -1,0 +1,57 @@
+{
+	"name":"autonomous AI agents",
+	"version":"1.0.0",
+	"description":"A field guide to autonomous AI agents",
+	"copyright":"(C) 2026 Simon Armstrong",
+	"credit":"Curated by Simon Armstrong with help from Google",
+	"license":{"name":"MIT","url":"https://opensource.org/licenses/MIT"},
+	"repository":{"type":"git","url":"https://github.com/nitrologic/biblispec"},
+	"bots":[
+		{
+			"name": "Dots",
+			"provider": "OpenAI"
+		},{
+			"name": "Muse",
+			"provider": "Meta"
+		},{
+			"name": "QwenWork",
+			"provider": "Alibaba"
+		},{
+			"name": "Kimi Swarm",
+			"provider": "Moonshot AI"
+		},{
+			"name": "WorkBuddy",
+			"provider": "Tencent"
+		},{
+			"name": "AutoClaw",
+			"provider": "Z.ai (Zhipu)"
+		},{
+			"name": "Coze",
+			"provider": "ByteDance"
+		},{
+			"name": "Claude Duet",
+			"provider": "Anthropic"
+		},{
+			"name": "Grok Bot",
+			"provider": "xAI"
+		},{
+			"name": "Google Gemini Task",
+			"provider": "Google"
+		},{
+			"name": "Perplexity Computer",
+			"provider": "Perplexity"
+		},{
+			"name": "Claude Cowork",
+			"provider": "Anthropic"
+		},{
+			"name": "Marblism",
+			"provider": "Marblism"
+		},{
+			"name": "OpenDots / OpenMuse",
+			"provider": "Open-Source Community"
+		},{
+			"name": "Hermes Agent / OpenClaw",
+			"provider": "Open-Source Community"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+commodore cassette games:
+
+{ "title": "Dinky Kong", "info": "Donkey Kong Dink", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly Kiwi Computer" },
+{ "title": "Zeron", "info": "Defender", "platform": "VIC-20", "media": "Cassette", "year": 1984, "credit": "Mark Sibly Kiwi Computer" },
+{ "title": "Star Warp", "info": "Stargate", "platform": "VIC-20 / C64?", "media": "Cassette", "year": 1984, "credit": "Mark Sibly" },
+{ "title": "Sproing", "info": "Crystal castles meets space flowers lost/unreleased", "platform": "C64", "media": "Disk", "year": "1984", "credit": "Mark Sibly Gowing Drive"},
+{ "title": "Tomb of Tarrabash", "info": "adventure/exploration", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
+{ "title": "Leapin' Louie", "info": "Sibly platform jumper", "platform": "C16 / Plus-4", "media": "Cassette", "year": 1985, "credit": "Mark Sibly Audiogenic UK Commodore NZ)" },
+{ "title": "Triple Jump", "info": "A mythical 1985 kiwi cartridge", "platform": "C16 / Plus-4", "media": "Cartridge", "year": 1985, "credit": "Mark Sibly Commodore NZ" }
+

@@ -1,3 +1,47 @@
+    "antonym": [
+      ["opponent", "supporter"],
+      ["enemy", "friend"],
+      ["foe", "friend"],
+      ["rival", "partner"],
+      ["antagonist", "protagonist"],
+      ["detractor", "advocate"],
+      ["competitor", "collaborator"],
+      ["adversary", "ally"],
+      ["expand", "contract"],
+      ["transparent", "opaque"]
+
+Hi! There are several books about Rewi Alley.
+
+• Biographies and studies*
+- A Learner in China: A Life of Rewi Alley by Willis Airey (1970) is an early and
+sympathetic biography.
+- Rewi Alley of China by Geoff Chapple (1980) was written with Alley's cooperation.
+- Friend of China: The Myth of Rewi Alley by Anne-Marie Brady (2002) is a critical academic
+reassessment of his public image and his relationship with the Chinese government.
+- A Communist in the Family: Searching for Rewi Alley by Elspeth Sandys (2019) is part
+biography, part memoir and travelogue, by a relative of Alley's.
+- Rewi Alley: From Canterbury to China by Philippa Reynolds (1997) is a shorter account
+aimed at younger readers. I am less certain of the details of this one.
+
+• His own account*
+- At 90: Memoirs of My China Years (1986) is his autobiography, also published as Rewi
+Alley: An Autobiography.
+
+• Related works*
+- Ocean Devil by James MacManus (2008) is a biography of George Hogg, who worked with Alley
+at the Shandan Bailie School. Alley features prominently.
+- I See a New China by George Hogg (1944) is a first-hand account of the Gung Ho
+cooperative movement Alley helped found.
+
+
+- Winchester's book on Joseph Needham is about a scientist who asked why China, having
+invented so much so early, did not have the industrial revolution first. Reading it now, with
+Chinese labs at the frontier of AI, makes for an interesting long view.
+- Nym Wales's China Builds for Democracy is about the cooperatives as an
+engineering and organisational effort: moving small-scale industry inland and getting it running
+under wartime conditions.
+
+
 [
   "\uFF00！＂＃＄％＆＇（）＊＋，－．／",
   "０１２３４５６７８９：；＜＝＞？",
