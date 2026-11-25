@@ -1,0 +1,97 @@
+{
+	"name": "solar system",
+	"version": "1.0.0",
+	"description": "Our place in space.",
+	"copyright": "(C) 2026 nitrologic",
+	"license": {
+		"name": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nitrologic/biblispec"
+	},
+	"spec": {
+		"id_convention": "lowercase_snake_case",
+		"distance_unit": "au",
+		"mass_unit": "kg",
+		"radius_unit": "km",
+		"epoch": "J2000",
+		"reference_frame": "ICRF"	
+	},
+	"entities":{
+		"sol": {
+			"names":["sol","helios","ra","surya"],
+			"type":"g2v main-sequence star",
+			"mass":1.9885e30,
+			"radius":695700
+		},
+		"mercury":{
+			"names":["hermes","sebegu","budha"],
+			"type":"terrestrial planet",
+			"distance":[0.387,0.307,0.467],
+			"mass":3.3011e23,
+			"radius":2439.7
+		},
+		"venus":{
+			"type":"terrestrial planet"
+		},
+		"earth":{
+			"type":"terrestrial planet",
+			"moons":[
+				"luna"
+			]
+		},
+		"mars":{
+			"type":"terrestrial planet",
+			"moons":["phobos","deimos"]
+		},
+		"asteroid_belt":{
+			"type":"circumstellar disc"
+		},
+		"ceres":{
+			"type":"major dwarf"
+		},
+		"jupiter":{
+			"type":"gas giant",
+			"moons":["io","europa","ganymede","callisto"]
+		},
+		"saturn":{
+			"type":"gas giant"
+		},
+		"uranus":{
+			"type":"ice giant",
+			"moons":["miranda","ariel","umbriel","titania","oberon"]
+		},
+		"neptune":{
+			"type":"ice giant"
+		},
+		"kuiper_belt":{
+			"type":"circumstellar disc"
+		},
+		"pluto":{
+			"type":"major dwarf"
+		},
+		"haumea":{
+			"type":"major dwarf"
+		},
+		"makemake":{
+			"type":"major dwarf"
+		},
+		"scattered_disc":{
+			"type":"circumstellar disc"
+		},
+		"eris":{
+			"type":"major dwarf"
+		},
+		"heliopause":{
+			"type":"heliospheric boundary"
+		},
+		"sedna":{
+			"type":"dwarf planet"
+		},
+		"oort_cloud":{
+			"type":"circumstellar disc"
+		}
+	}
+}
